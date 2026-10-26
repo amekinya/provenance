@@ -1,0 +1,39 @@
+{
+ "pages": [
+  {
+   "session": "S1",
+   "page": "451",
+   "tesseract": {
+    "gold_words": 316,
+    "wer": 0.038,
+    "speaker_attribution": 1.0
+   }
+  },
+  {
+   "session": "S2",
+   "page": "588",
+   "tesseract": {
+    "gold_words": 101,
+    "wer": 0.0495,
+    "speaker_attribution": 0.9901
+   }
+  },
+  {
+   "session": "S3",
+   "page": "795",
+   "tesseract": {
+    "gold_words": 270,
+    "wer": 0.0222,
+    "speaker_attribution": 1.0
+   }
+  }
+ ],
+ "overall": {
+  "tesseract": {
+   "words": 687,
+   "wer": 0.0335,
+   "speaker_attribution": 0.9985
+  }
+ },
+ "note": "Word error rate and speaker attribution against hand transcriptions; lower WER is better."
+}

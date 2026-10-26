@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       case: { description: "Case id (folder under data/cases)", required: true, default: "dassey" }
-      steps: { description: "Comma list: ingest,facts,tag", required: true, default: "ingest,tag" }
+      steps: { description: "Comma list: ingest,pageeval,facts,tag", required: true, default: "ingest,tag" }
       sessions: { description: "Only these sessions for ingest (e.g. S1,S2); blank = all", required: false, default: "" }
       max_pages: { description: "Limit pages per session for a quick test (0 = all)", required: false, default: "0" }
 permissions:
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils >/dev/null
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr >/dev/null
       - run: pip install -r requirements.txt
       - name: Pipeline
         env:
@@ -30,6 +30,7 @@ jobs:
           mkdir -p logs
           STEPS=",${{ inputs.steps }},"
           if [[ "$STEPS" == *",ingest,"* ]]; then python -m scripts.ingest "${{ inputs.case }}" --sessions "${{ inputs.sessions }}" --max-pages "${{ inputs.max_pages }}" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS" == *",pageeval,"* ]]; then python -m scripts.page_eval "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS" == *",facts,"* ]]; then python -m scripts.facts "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS" == *",tag,"* ]]; then python -m scripts.tag "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
           tail -20 logs/pipeline.txt >> "$GITHUB_STEP_SUMMARY"

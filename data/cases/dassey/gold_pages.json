@@ -1,0 +1,60 @@
+{
+ "about": "Hand transcriptions of three scanned transcript pages (one per recorded session), used only to measure page reading. Dotted runs mark inaudible portions in the original and are ignored in scoring. Speaker labels are normalized to the case roster.",
+ "pages": [
+  {"session": "S1", "file": "p-12", "page_label": "451", "turns": [
+   ["BRENDAN", "..............."],
+   ["FASSBENDER", "Let's go to the parts that ..................... clothes..... talk about......... whenever he talked.... got a feelin' that you saw something in the fire that you're trying to just ..................."],
+   ["WIEGERT", "It's not your fault. Remember that."],
+   ["FASSBENDER", "Yeah, it's not your fault................. Like I said, Mark and I are not going to leave you high and dry. I got a very, very important appointment at 3:00 today. Well I ain't leavin' for the appointment until I'm sure you're taken care of ..... telling the truth ........................ get this off your chest and get it out in the open ... so go ahead and talk to us about what you saw in the fire are killin' you right now............................ what you see. Go ahead, go ahead. .............. you've got to do this for yourself. I know you feel that it's gonna hurt Steven, but it's actually, actually gonna help Steven come to grips with what he needs to do. More important, this could help you. How long you thing ... are going to put up with this ... You know we found some flesh in that fire too. We know you saw some flesh. We found it after all that burned. I know you saw it ... Tell us. You don't have to worry about ............. you won't have to prove that in court. (phone rings) Tell us what you saw. You saw some body parts... You're shaking your head... tell us what you saw..."],
+   ["BRENDAN", "....."],
+   ["FASSBENDER", "You all right? You all right? What other parts did you see?"],
+   ["BRENDAN", "Toes"],
+   ["FASSBENDER", "... part of a foot too? What other parts of the body ... Did you see part of the arm, the legs? I know. It's all right ... Did you see part of her head? Skull?"],
+   ["BRENDAN", "I seen ....."],
+   ["FASSBENDER", "Okay ... a human body ... did you say anything to Steven? .... Was he hoping you didn't see that or what?"],
+   ["BRENDAN", "......"],
+   ["FASSBENDER", "Where? The body parts that you saw, were they on top of tires or underneath the tires, or?"],
+   ["BRENDAN", "............................."]
+  ]},
+  {"session": "S2", "file": "p-063", "page_label": "588", "turns": [
+   ["BRENDAN", "Yeah."],
+   ["WIEGERT", "Where did this happen?"],
+   ["BRENDAN", "Outside."],
+   ["WIEGERT", "Ouside? Before? Tell me when it happened?"],
+   ["BRENDAN", "When we brung her outside ta throw her in the fire."],
+   ["WIEGERT", "OK. So let's back up, OK? So I wanna go through this OK. So he stabs her (Brendan nods \"yes\") and chokes her?"],
+   ["BRENDAN", "mm huh."],
+   ["WIEGERT", "And then you do what?"],
+   ["BRENDAN", "I help tie her up."],
+   ["WIEGERT", "OK. And then what?"],
+   ["BRENDAN", "Then we"],
+   ["WIEGERT", "You cut her throat somewhere in there?"],
+   ["BRENDAN", "Yeah."],
+   ["WIEGERT", "Yes?"],
+   ["BRENDAN", "Yeah."],
+   ["WIEGERT", "And then what?"],
+   ["BRENDAN", "Cut off 'er, some of her hair."],
+   ["WIEGERT", "OK."],
+   ["BRENDAN", "Then we brung her outside and shot her."],
+   ["WIEGERT", "Was she alive when you shot her?"],
+   ["BRENDAN", "I don't know."]
+  ]},
+  {"session": "S3", "file": "p-040", "page_label": "795", "turns": [
+   ["WIEGERT", "Because we looked at the phone records. We've got all your phone records. We've got every record there is, everybody's phone, everybody who lived out by you, and every friend, every relative, every boss. I've got a file of your, as big as this room, three of 'em, full of information in this case, so I know when you're lying. You need to realize that. I know when you're lying. Did he actually call you? The details are easy Brendan."],
+   ["BRENDAN", "No"],
+   ["WIEGERT", "OK. Then why did you say he called?"],
+   ["BRENDAN", "Cuz one of the days he did."],
+   ["WIEGERT", "Did he call you that day?"],
+   ["BRENDAN", "No."],
+   ["WIEGERT", "Then why did you say it? I don't understand why you're lying. You told me you wanted to be truthful with me. You told me I could tell your mom that you were honest. Can I do that now? You just lied to me. So, the truth is you were over by Steve's earlier, that's the truth. Isn't it?"],
+   ["WIEGERT", "Yeah, what time did you go by Steve? You know what, you know what Brendan."],
+   ["BRENDAN", "Huh?"],
+   ["WIEGERT", "He's gonna tell his version of the story, you know what that version is gonna be? What do you think it's gonna be?"],
+   ["BRENDAN", "I don't know."],
+   ["WIEGERT", "It's gonna be that Brendan did all this, he doesn't want to go to prison, he doesn't give a shit about you. It's gonna be Brendan, Brendan, Brendan. So this is your opportunity to be honest and tell the truth. Are you gonna do that or not, yes or no?"],
+   ["BRENDAN", "Yes."],
+   ["WIEGERT", "OK, then tell me the truth."],
+   ["BRENDAN", "I went over there like at 4:00 o'clock."]
+  ]}
+ ]
+}

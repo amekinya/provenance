@@ -25,7 +25,7 @@ def case_dir(case_id: str) -> Path:
     return ROOT / "data" / "cases" / case_id
 
 
-def render(pdf: Path, out: Path, dpi: int = 110) -> list[Path]:
+def render(pdf: Path, out: Path, dpi: int = 150) -> list[Path]:
     out.mkdir(parents=True, exist_ok=True)
     if not any(out.glob("p-*.png")):
         subprocess.run(["pdftoppm", "-r", str(dpi), "-gray", "-png", str(pdf), str(out / "p")], check=True)
