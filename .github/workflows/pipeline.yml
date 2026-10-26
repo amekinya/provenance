@@ -1,7 +1,10 @@
 name: Run case pipeline (live models)
 # Actions tab -> "Run case pipeline" -> Run workflow. Reads transcripts with Nemotron 3.5 Super VL, drafts facts,
 # tags sentences with Nemotron 3.5 Lightning and verifies deciding lines with Nemotron 3 Ultra. Commits the results.
+# Also runs when .github/requests/pipeline.json changes: {"case": "dassey", "steps": "ingest", "sessions": "S2", "max_pages": "6"}.
 on:
+  push:
+    paths: [".github/requests/pipeline.json"]
   workflow_dispatch:
     inputs:
       case: { description: "Case id (folder under data/cases)", required: true, default: "dassey" }
@@ -16,6 +19,18 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+      - name: Which run
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            python3 - <<'PY' >> "$GITHUB_ENV"
+          import json
+          d = json.load(open(".github/requests/pipeline.json"))
+          print(f"CASE={d.get('case', 'dassey')}"); print(f"STEPS={d.get('steps', 'ingest,tag')}")
+          print(f"SESSIONS={d.get('sessions', '')}"); print(f"MAX_PAGES={d.get('max_pages', '0')}")
+          PY
+          else
+            { echo "CASE=${{ inputs.case }}"; echo "STEPS=${{ inputs.steps }}"; echo "SESSIONS=${{ inputs.sessions }}"; echo "MAX_PAGES=${{ inputs.max_pages }}"; } >> "$GITHUB_ENV"
+          fi
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr >/dev/null
@@ -28,18 +43,18 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p logs
-          STEPS=",${{ inputs.steps }},"
-          if [[ "$STEPS" == *",ingest,"* ]]; then python -m scripts.ingest "${{ inputs.case }}" --sessions "${{ inputs.sessions }}" --max-pages "${{ inputs.max_pages }}" 2>&1 | tee -a logs/pipeline.txt; fi
-          if [[ "$STEPS" == *",pageeval,"* ]]; then python -m scripts.page_eval "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
-          if [[ "$STEPS" == *",facts,"* ]]; then python -m scripts.facts "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
-          if [[ "$STEPS" == *",tag,"* ]]; then python -m scripts.tag "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
+          STEPS_=",$STEPS,"
+          if [[ "$STEPS_" == *",ingest,"* ]]; then python -m scripts.ingest "$CASE" --sessions "$SESSIONS" --max-pages "$MAX_PAGES" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS_" == *",pageeval,"* ]]; then python -m scripts.page_eval "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS_" == *",facts,"* ]]; then python -m scripts.facts "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS_" == *",tag,"* ]]; then python -m scripts.tag "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           tail -20 logs/pipeline.txt >> "$GITHUB_STEP_SUMMARY"
       - name: Commit results
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          mkdir -p "data/cases/${{ inputs.case }}/logs" && cp logs/pipeline.txt "data/cases/${{ inputs.case }}/logs/last_run.txt" 2>/dev/null || true
-          git add "data/cases/${{ inputs.case }}" || true
-          git commit -m "Pipeline results: ${{ inputs.case }} (${{ inputs.steps }})" || echo "No changes"
+          mkdir -p "data/cases/$CASE/logs" && cp logs/pipeline.txt "data/cases/$CASE/logs/last_run.txt" 2>/dev/null || true
+          git add "data/cases/$CASE" || true
+          git commit -m "Pipeline results: $CASE ($STEPS)" || echo "No changes"
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
