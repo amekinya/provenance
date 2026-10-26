@@ -37,7 +37,7 @@
   // ------------------------------------------------------------ rendering
   function render(rep) {
     $("#caseTitle").textContent = rep.case.title;
-    $("#caseSub").textContent = `${rep.case.suspect} · ${rep.sessions.filter((s) => s.recorded).length} recorded interviews · ${rep.utterance_count.toLocaleString()} turns of speech · ${rep.facts.length} key details checked`;
+    $("#caseSub").textContent = `${rep.case.suspect}: ${rep.sessions.filter((s) => s.recorded).length} recorded interviews, ${rep.utterance_count.toLocaleString()} turns of speech, ${rep.facts.length} key details checked`;
     $("#headline").textContent = rep.headline;
     renderCounts(rep);
     renderMap(rep);
@@ -115,7 +115,7 @@
     d.innerHTML = `<h3>${esc(f.fact.label)} <span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span></h3>
       <p class="why">${esc(f.why)}</p>
       ${stats.length ? `<div class="stats">${stats.map((s) => `<span>${s}</span>`).join("")}</div>` : ""}
-      ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail)}${f.fact.source ? ` · Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
+      ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail)}${f.fact.source ? `. Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
       <ol class="evlist">${f.events.map((ev, i) => evItem(ev, i, rep)).join("")}</ol>`;
     d.hidden = false;
     d.querySelectorAll("[data-ctx]").forEach((b) => (b.onclick = () => showContext(b)));
@@ -165,7 +165,7 @@
   function renderHow(rep) {
     const run = rep.run || {};
     const by = run.by_model || {};
-    const cost = (role) => (by[role] ? ` · ${by[role].calls} calls, $${by[role].cost_usd.toFixed(3)}` : "");
+    const cost = (role) => (by[role] ? ` (${by[role].calls} calls, $${by[role].cost_usd.toFixed(3)})` : "");
     $("#steps").innerHTML = `
       <li><b>Read the scanned transcripts.</b> <span class="m">Nemotron 3.5 Super VL</span> turned each page image into speaker-labeled lines${cost("super_vl")}.</li>
       <li><b>List the key details.</b> <span class="m">Nemotron 3 Ultra</span> drafted them from the case documents; we reviewed the list. Each has a source.</li>
