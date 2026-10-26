@@ -4,6 +4,17 @@
   const CHIP = { cannot_corroborate: "Can't corroborate", unclear: "Unclear", may_corroborate: "Suspect said it first", not_adopted: "Not adopted" };
   const ORDER = ["interrogator_first", "planted_adopted", "public", "prior_contact", "suspect_first", "never_adopted", "not_mentioned"];
   const KIND = { asks: "asks", asserts: "says", denies: "denies", assents: "agrees" };
+  // Reviewer marks live only in this browser (nothing is sent anywhere).
+  const reviewKey = (rep) => `provenance_review_${rep.case.id}`;
+  function reviews(rep) { try { return JSON.parse(localStorage.getItem(reviewKey(rep)) || "{}"); } catch (_) { return {}; } }
+  function saveReview(rep, id, val) {
+    const r = reviews(rep);
+    if (val) r[id] = val; else delete r[id];
+    try { localStorage.setItem(reviewKey(rep), JSON.stringify(r)); } catch (_) { /* private mode: marks last for this page view only */ }
+    memReview[id] = val;
+  }
+  const memReview = {};
+  const reviewOf = (rep, id) => (id in memReview ? memReview[id] : reviews(rep)[id]);
   const TACTIC = { we_already_know: "\"We already know\"", minimization: "Minimizing (\"it's OK\", \"not your fault\")", promises: "Promises or offers of help", demand_truth: "Demands to \"be honest\"" };
   let current = null; // {report, lines(id)->Promise}
 
@@ -47,6 +58,7 @@
     $("#detail").hidden = true;
     $("#csvBtn").onclick = () => exportCsv(rep);
     renderGuess(rep);
+    renderReviewCount(rep);
   }
 
   function renderGuess(rep) {
@@ -79,14 +91,22 @@
     });
   }
 
+  function renderReviewCount(rep) {
+    const r = reviews(rep), ids = rep.facts.map((f) => f.fact.id);
+    const done = ids.filter((id) => reviewOf(rep, id)).length, wrong = ids.filter((id) => (reviewOf(rep, id) || {}).status === "wrong").length;
+    $("#reviewCount").textContent = done ? `You've checked ${done} of ${ids.length} details${wrong ? `; ${wrong} marked for re-check` : ""}. Saved in this browser only.` : "";
+    void r;
+  }
+
   function exportCsv(rep) {
     const q = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
     const at = (ev) => (ev ? `${sessionLabel(rep, ev.session)}, p. ${ev.page || "?"}` : "");
     const head = ["Detail", "Origin", "Can it corroborate?", "First investigator mention", "Investigator words", "First suspect statement or agreement",
-      "Suspect words", "How (states/agrees)", "Investigator mentions before the suspect's", "Source for the detail"];
+      "Suspect words", "How (states/agrees)", "Investigator mentions before the suspect's", "Source for the detail", "Your review"];
     const rows = rep.facts.map((f) => [f.fact.label, f.origin_label, f.corroboration.replace(/_/g, " "), at(f.first_interrogator),
       (f.first_interrogator || {}).quote, at(f.first_suspect), (f.first_suspect || {}).quote, (f.first_suspect || {}).kind,
-      f.interrogator_mentions_before_suspect, f.fact.source]);
+      f.interrogator_mentions_before_suspect, f.fact.source,
+      (() => { const v = reviewOf(rep, f.fact.id); return v ? `${v.status === "ok" ? "checked" : "re-check"} ${v.at}` : ""; })()]);
     const csv = [head, ...rows].map((r) => r.map(q).join(",")).join("\r\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" }));
@@ -136,8 +156,9 @@
       const gap = fi && fs && fi.seq < fs.seq ? `<span class="gapline" style="left:${pos(fi)}%;width:${Math.max(0, pos(fs) - pos(fi))}%"></span>` : "";
       const sb = bands.map((b) => `<span class="sb ${b.recorded ? "" : "unrec"}" style="left:${b.x}%;width:${b.w}%"></span>`).join("");
       const label = `${f.fact.label}: ${CHIP[f.corroboration]}. ${f.origin_label}.`;
-      return `<div class="frow" role="row" tabindex="0" data-i="${i}" aria-label="${esc(label)}">
-        <div class="flabel" role="cell"><b>${esc(f.fact.label)}</b><span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span></div>
+      const rv = reviewOf(rep, f.fact.id);
+      return `<div class="frow" role="row" tabindex="0" data-i="${i}" data-fid="${esc(f.fact.id)}" aria-label="${esc(label)}">
+        <div class="flabel" role="cell"><b>${esc(f.fact.label)}</b><span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span><span class="rvmark">${rv ? (rv.status === "ok" ? "checked" : "re-check") : ""}</span></div>
         <div class="track" role="cell">${sb}${gap}${dots}</div></div>`;
     }).join("");
     const map = $("#map");
@@ -162,8 +183,31 @@
     d.innerHTML = `<h3>${esc(f.fact.label)} <span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span></h3>
       <p class="why">${esc(f.why)}</p>
       ${stats.length ? `<div class="stats">${stats.map((s) => `<span>${s}</span>`).join("")}</div>` : ""}
-      ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail)}${f.fact.source ? `. Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
-      <ol class="evlist">${f.events.map((ev, i) => evItem(ev, i, rep)).join("")}</ol>`;
+      ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail.replace(/\.$/, ""))}.${f.fact.source ? ` Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
+      <h4 class="evhead">The lines that decide it</h4>
+      <ol class="evlist">${f.events.map((ev, i) => [ev, i]).filter(([ev]) => ev.first).map(([ev, i]) => evItem(ev, i, rep)).join("") || "<li>No one said it in the recorded interviews.</li>"}</ol>
+      <div class="review" role="group" aria-label="Your review of this detail">
+        <span>Checked these lines against the transcript?</span>
+        <button type="button" class="ghost" data-rv="ok">Looks right</button>
+        <button type="button" class="ghost" data-rv="wrong">Something's wrong</button>
+        <span class="rvstate" aria-live="polite"></span>
+      </div>
+      ${f.events.length > f.events.filter((ev) => ev.first).length ? `<details class="allev"><summary>Every mention in order (${f.events.length})</summary>
+        <ol class="evlist">${f.events.map((ev, i) => evItem(ev, i, rep)).join("")}</ol></details>` : ""}`;
+    const paint = () => {
+      const v = reviewOf(rep, f.fact.id);
+      d.querySelectorAll("[data-rv]").forEach((b) => b.setAttribute("aria-pressed", String(v && v.status === b.dataset.rv)));
+      d.querySelector(".rvstate").textContent = v ? (v.status === "ok" ? "Marked as checked." : "Marked for re-check; it's flagged in the map and the citation table.") : "";
+      renderReviewCount(rep);
+      const row = document.querySelector(`.frow[data-fid="${f.fact.id}"] .rvmark`);
+      if (row) row.textContent = v ? (v.status === "ok" ? "checked" : "re-check") : "";
+    };
+    d.querySelectorAll("[data-rv]").forEach((b) => (b.onclick = () => {
+      const cur = reviewOf(rep, f.fact.id);
+      saveReview(rep, f.fact.id, cur && cur.status === b.dataset.rv ? null : { status: b.dataset.rv, at: new Date().toISOString().slice(0, 10) });
+      paint();
+    }));
+    paint();
     d.hidden = false;
     d.querySelectorAll("[data-ctx]").forEach((b) => (b.onclick = () => showContext(b)));
     d.querySelectorAll("[data-reveal]").forEach((b) => (b.onclick = () => { const q = b.previousElementSibling; q.textContent = q.dataset.full; q.classList.remove("masked"); b.remove(); }));

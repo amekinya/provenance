@@ -166,3 +166,13 @@ table.eval td.n { font-family: var(--mono); text-align: right; }
 .guessscore { font-weight: 600; margin: 10px 0 0; }
 .guesslist .gbtns button.picked { border-color: var(--ink); color: var(--ink); font-weight: 700; opacity: 1; }
 @media (max-width: 640px) { .guesslist li { grid-template-columns: 1fr; } }
+
+/* reviewer marks */
+.review { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; }
+.review button[aria-pressed="true"] { border-color: var(--ink); color: var(--ink); font-weight: 700; }
+.review .rvstate { color: var(--ink-2); }
+.rvmark { font-size: 12px; color: var(--ink-2); margin-left: 6px; }
+.rvmark:empty { display: none; }
+.evhead { font-size: 14px; margin: 14px 0 6px; }
+.allev { margin-top: 12px; }
+.allev summary { cursor: pointer; font-size: 14px; font-weight: 600; }
