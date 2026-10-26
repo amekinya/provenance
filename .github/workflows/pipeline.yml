@@ -26,7 +26,7 @@ jobs:
           import json
           d = json.load(open(".github/requests/pipeline.json"))
           print(f"CASE={d.get('case', 'dassey')}"); print(f"STEPS={d.get('steps', 'ingest,tag')}")
-          print(f"SESSIONS={d.get('sessions', '')}"); print(f"MAX_PAGES={d.get('max_pages', '0')}")
+          print(f"SESSIONS={d.get('sessions', '')}"); print(f"MAX_PAGES={d.get('max_pages', '0')}"); print(f"PAGES={d.get('pages', '')}")
           PY
           else
             { echo "CASE=${{ inputs.case }}"; echo "STEPS=${{ inputs.steps }}"; echo "SESSIONS=${{ inputs.sessions }}"; echo "MAX_PAGES=${{ inputs.max_pages }}"; } >> "$GITHUB_ENV"
@@ -44,7 +44,7 @@ jobs:
           set -o pipefail
           mkdir -p logs
           STEPS_=",$STEPS,"
-          if [[ "$STEPS_" == *",ingest,"* ]]; then python -m scripts.ingest "$CASE" --sessions "$SESSIONS" --max-pages "$MAX_PAGES" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS_" == *",ingest,"* ]]; then python -m scripts.ingest "$CASE" --sessions "$SESSIONS" --max-pages "$MAX_PAGES" ${PAGES:+--pages "$PAGES"} 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",pageeval,"* ]]; then python -m scripts.page_eval "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",facts,"* ]]; then python -m scripts.facts "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",tag,"* ]]; then python -m scripts.tag "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi

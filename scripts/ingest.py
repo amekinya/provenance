@@ -111,6 +111,7 @@ def main() -> None:
     ap.add_argument("case")
     ap.add_argument("--sessions", default="")
     ap.add_argument("--max-pages", type=int, default=0)
+    ap.add_argument("--pages", default="", help="a page range to read for a test, e.g. 60-66 (doesn't write utterances.json)")
     a = ap.parse_args()
     cd = case_dir(a.case)
     cfg = json.loads((cd / "case.json").read_text())
@@ -125,12 +126,19 @@ def main() -> None:
             imgs = render(cd / s["pdf"], Path(tmp) / s["id"])
             if a.max_pages:
                 imgs = imgs[: a.max_pages]
+            if a.pages:
+                lo, hi = (int(x) for x in a.pages.split("-"))
+                imgs = imgs[lo - 1: hi]
             pages = read_pages(imgs, cd / "pages" / s["id"], calls)
             utts = merge(s["id"], pages, roster, (idx + 1) * 100000)  # session order fixes the global order
             all_utts += utts
             roles = {r: sum(1 for u in utts if u["role"] == r) for r in ("interrogator", "suspect", "other")}
             print(f"{s['id']}: {len(imgs)} pages -> {len(utts)} utterances {roles}")
-    if not want:
+    if a.pages:
+        print("test range only; utterances.json not changed")
+        for u in all_utts[:40]:
+            print(f"  {u['speaker']:11s} {u['text'][:110]}")
+    elif not want:
         (cd / "utterances.json").write_text(json.dumps(all_utts, indent=1))
     else:  # merge into the existing file, replacing only the sessions we re-read
         old = json.loads((cd / "utterances.json").read_text()) if (cd / "utterances.json").exists() else []
