@@ -8,13 +8,13 @@
   "BRENDAN": "suspect", "DASSEY": "suspect"
  },
  "sessions": [
-  {"id": "S1", "label": "Feb 27, 2006 · Mishicot High School", "day": "2006-02-27", "pdf": "source/2006-02-27_mishicot_hs.pdf",
+  {"id": "S1", "label": "Feb 27, 2006, Mishicot High School", "day": "2006-02-27", "pdf": "source/2006-02-27_mishicot_hs.pdf",
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, Mishicot High School, 02/27/06"},
-  {"id": "S1b", "label": "Feb 27, 2006 · Two Rivers Police Dept. (transcript not public)", "day": "2006-02-27", "recorded": false,
+  {"id": "S1b", "label": "Feb 27, 2006, Two Rivers Police Dept. (transcript not public)", "day": "2006-02-27", "recorded": false,
    "source": "Referenced in the Mar 1 interview and in the federal habeas decision; no public transcript found"},
-  {"id": "S2", "label": "Mar 1, 2006 · Manitowoc County Sheriff's Dept.", "day": "2006-03-01", "pdf": "source/2006-03-01_manitowoc.pdf",
+  {"id": "S2", "label": "Mar 1, 2006, Manitowoc County Sheriff's Dept.", "day": "2006-03-01", "pdf": "source/2006-03-01_manitowoc.pdf",
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 03/01/06"},
-  {"id": "S3", "label": "May 13, 2006 · Sheboygan County Sheriff's Dept.", "day": "2006-05-13", "pdf": "source/2006-05-13_sheboygan.pdf",
+  {"id": "S3", "label": "May 13, 2006, Sheboygan County Sheriff's Dept.", "day": "2006-05-13", "pdf": "source/2006-05-13_sheboygan.pdf",
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"}
  ],
  "case_documents": ["source/2016-08-12_decision_and_order.pdf"],

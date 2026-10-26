@@ -45,6 +45,22 @@
     renderMemo(rep.memo);
     renderHow(rep);
     $("#detail").hidden = true;
+    $("#csvBtn").onclick = () => exportCsv(rep);
+  }
+
+  function exportCsv(rep) {
+    const q = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
+    const at = (ev) => (ev ? `${sessionLabel(rep, ev.session)}, p. ${ev.page || "?"}` : "");
+    const head = ["Detail", "Origin", "Can it corroborate?", "First investigator mention", "Investigator words", "First suspect statement or agreement",
+      "Suspect words", "How (states/agrees)", "Investigator mentions before the suspect's", "Source for the detail"];
+    const rows = rep.facts.map((f) => [f.fact.label, f.origin_label, f.corroboration.replace(/_/g, " "), at(f.first_interrogator),
+      (f.first_interrogator || {}).quote, at(f.first_suspect), (f.first_suspect || {}).quote, (f.first_suspect || {}).kind,
+      f.interrogator_mentions_before_suspect, f.fact.source]);
+    const csv = [head, ...rows].map((r) => r.map(q).join(",")).join("\r\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" }));
+    a.download = `provenance_${rep.case.id}_citations.csv`;
+    document.body.appendChild(a); a.click(); a.remove();
   }
 
   function renderCounts(rep) {
@@ -131,7 +147,7 @@
     return `<li class="ev ${cls}"><i class="mk ${mark}" aria-hidden="true" style="margin-top:6px"></i>
       <div><span class="who">${esc(ev.speaker)}</span> ${KIND[ev.kind] || esc(ev.kind)}${first}<br>${quote}
         <div><button data-ctx="${esc(ev.utterance)}">Read in context</button></div><div class="ctxbox"></div></div>
-      <span class="cite">${esc(sessionLabel(rep, ev.session).split(" · ")[0])}, p. ${esc(ev.page || "?")}</span></li>`;
+      <span class="cite">${esc(sessionLabel(rep, ev.session).split(", ").slice(0, 2).join(", "))}, p. ${esc(ev.page || "?")}</span></li>`;
   }
 
   async function showContext(btn) {
