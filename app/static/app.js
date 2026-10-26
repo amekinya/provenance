@@ -46,6 +46,37 @@
     renderHow(rep);
     $("#detail").hidden = true;
     $("#csvBtn").onclick = () => exportCsv(rep);
+    renderGuess(rep);
+  }
+
+  function renderGuess(rep) {
+    // A few details he stated or agreed to: some investigators said first, some he did. Deterministic picks.
+    const inv = rep.facts.filter((f) => f.origin === "interrogator_first").sort((a, b) => b.interrogator_mentions_before_suspect - a.interrogator_mentions_before_suspect);
+    const sus = rep.facts.filter((f) => f.origin === "suspect_first");
+    const picks = [inv[0], sus[0], inv[1], inv[2], sus[1]].filter(Boolean);
+    $("#guessSec").hidden = picks.length < 3;
+    if (picks.length < 3) return;
+    const who = rep.case.suspect.split(" ")[0];
+    let answered = 0, right = 0;
+    $("#guessScore").textContent = "";
+    $("#guessList").innerHTML = picks.map((f, i) => `<li data-i="${i}"><span class="gq">${esc(f.fact.label)}</span>
+      <span class="gbtns"><button type="button" class="ghost" data-a="interrogator">Investigators</button><button type="button" class="ghost" data-a="suspect">${esc(who)}</button></span>
+      <span class="gans" aria-live="polite"></span></li>`).join("");
+    $("#guessList").querySelectorAll("li").forEach((li) => {
+      const f = picks[+li.dataset.i];
+      li.querySelectorAll("button").forEach((b) => b.onclick = () => {
+        const truth = f.origin === "interrogator_first" ? "interrogator" : "suspect";
+        const ok = b.dataset.a === truth;
+        answered++; right += ok;
+        li.querySelectorAll("button").forEach((x) => { x.disabled = true; x.setAttribute("aria-pressed", String(x === b)); });
+        b.classList.add("picked");
+        const fi = f.first_interrogator, fs = f.first_suspect;
+        li.querySelector(".gans").innerHTML = `<b class="${ok ? "gok" : "gno"}">${ok ? "Right" : "Not quite"}.</b> ` + (truth === "interrogator"
+          ? `Investigators raised it ${f.interrogator_mentions_before_suspect} time${f.interrogator_mentions_before_suspect === 1 ? "" : "s"} first (${esc(sessionLabel(rep, fi.session).split(", ")[0])}, p. ${esc(fi.page)}); he ${fs.kind === "assents" ? "agreed to it" : "said it"} later.`
+          : `He said it first (${esc(sessionLabel(rep, fs.session).split(", ")[0])}, p. ${esc(fs.page)}).`);
+        if (answered === picks.length) $("#guessScore").textContent = `You got ${right} of ${picks.length}. Reading the confession alone, it's hard to tell. The map below shows every detail.`;
+      });
+    });
   }
 
   function exportCsv(rep) {
