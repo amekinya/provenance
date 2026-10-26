@@ -6,7 +6,7 @@
   "speaker": "UNKNOWN",
   "role": "other",
   "text": ". Page 05-0157-955  - a Mishicot High School 02/27/06 . Special Agent Tom Fassbender",
-  "page": "p-001",
+  "page": "p-01.png",
   "sensitive": false
  },
  {
@@ -16,7 +16,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Mark\u2019s obviously laying out a tape recorder on the table um we\u2019d like to \u00a9 tape the interview, um OK, no problem with that, if that\u2019s all right. Um, you\u2019re not under arrest, you know that. You\u2019re free to go at anytime you want. Ah, just listen to us, you don\u2019t have to answer any questions if you don\u2019t want to and stuff like that, OK? Um and I, I would really appreciate if you would just kinda relax and-open up with us. We\u2019re not here ta, ta jump in your face or get into ya or anything like that. I know that may have happened before and stuff like that, we\u2019re, we\u2019re not here to do that. We\u2019re here more ta maybe let you talk or talk to youa little about how you\u2019ve been feeling lately and stuff. I, I have a feeling there\u2019s some things on . . _ your mind and I just want to give you that opportunity to talk about um. I want you to talk to us, talk about what you\u2019re thinking about, feeling maybe. I know something\u2019s bothering ya, and-you know that, and it\u2019s gotta be laying real real heavy on ya.",
-  "page": "p-001",
+  "page": "p-01.png",
   "sensitive": false
  },
  {
@@ -26,7 +26,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "You\u2019ve had a tough go of it lately I\u2019d imagine hub? ;",
-  "page": "p-001",
+  "page": "p-01.png",
   "sensitive": false
  },
  {
@@ -36,7 +36,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah | . .",
-  "page": "p-001",
+  "page": "p-01.png",
   "sensitive": false
  },
  {
@@ -46,7 +46,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "' We definitely understand that. a",
-  "page": "p-001",
+  "page": "p-01.png",
   "sensitive": false
  },
  {
@@ -56,7 +56,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "We're not here to hurt anyone, we just, you know if you, you got a chance to meet Teresa\u2019s mother and stuff, you\u2019ve got to know them a little and you\u2019d know that they - were decent people too, and just like I think your brother\u2019s are and your mom is and people don\u2019t \u2014~ realize that because all the bad press and stuff. And that\u2019s all we\u2019re, we\u2019re thinking about, just to - bring justice, no matter how hard or how much it hurts. Ah, for, for Teresa. This feels pretty awkward, but go ahead and tell us what\u2019s been bothering ya. a Page 05-0157-955",
-  "page": "p-001",
+  "page": "p-01.png",
   "sensitive": false
  },
  {
@@ -1806,7 +1806,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "ceeeee",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1816,7 +1816,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Yes? Did you say yes or no? I\u2019m not sure.",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1826,7 +1826,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah.",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1836,7 +1836,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Yes",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1846,7 +1846,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "So all the body parts were pretty much connected then when you saw the toes, which means they were probably connected to the feet yet, correct? Which means the feet, foot is connected to both the legs, so I\u2019m just going to ask this question, you\u2019re saying that you seen body part. You\u2019re pretty much, you\u2019re seeing a body? Is that accurrate? You saw her body in there?",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1856,7 +1856,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Would you say yes or no for me BRENDAN?",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1866,7 +1866,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yes. ;",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1876,7 +1876,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "And then the shovel and the rake were used to do, to do what?",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1886,7 +1886,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Now you can tell me if you actually think ... you see that? ; .",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1896,7 +1896,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah.",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1906,7 +1906,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "But you did. And you never said anything to him. Have you told this to anyone? And is that what\u2019s been bothering you a lot? .",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1916,7 +1916,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yes",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1926,7 +1926,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "And, and I understand that, that\u2019s normal because you\u2019 ve done nothing wrong.",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1936,7 +1936,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Brendan, I\u2019m going to ask you a difficult question, OK? Did you help him put that body in the fire? If you did it\u2019s OK. a FASSBENDER: Was the body in the fire before you got out to the fire?",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -1946,7 +1946,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "There was like branches............. 05-0157-955",
-  "page": "p-014",
+  "page": "p-14.png",
   "sensitive": false
  },
  {
@@ -8696,7 +8696,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "All right. How you doin\u2019 buddy?",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8706,7 +8706,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Good",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8716,7 +8716,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Brendan, Brendan. Here you go. ;",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8726,7 +8726,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "I\u2019m just gonna shut this audio off, be-OK, \u2018cuz there\u2019s audio in the room (Brendan nods \u201cyes\u201d) here",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8736,7 +8736,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah.",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8746,7 +8746,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Just so you know. OK. Um, J just wanted to just, just go over this real quick again. Do you remember these rights, your Miranda Rights that I read to you? (Brendan nods \u201c\u2018yes\u201d)",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8756,7 +8756,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah. (nods \u201cyes\u201d)",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8766,7 +8766,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Um, you still want to talk to us.",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8776,7 +8776,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah. (nods \u201cyes\u2019\u2019)",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8786,7 +8786,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. Just wanted to make sure of that. (Brendan nods \u201c\u2018yes\u201d)",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8796,7 +8796,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Brendan, I want you ta, to relax. OK. Um, a little more comfortable here and stuff and what we\u2019d like, you had a couple days since we last talked now which was Monday and you had a chance to reflect and breathe, I imagine, this and (Brendan nods \u201cyes\u201d)",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8806,7 +8806,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "You have a pen on you?",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8816,7 +8816,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "We, um ;",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8826,7 +8826,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "I seem to have fost mine. Is this your only one. I",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8836,7 +8836,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "I got more here.",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -8846,7 +8846,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. STATE4610 05-0157-955",
-  "page": "p-014",
+  "page": "p-014.png",
   "sensitive": false
  },
  {
@@ -30456,7 +30456,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30466,7 +30466,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Then he stabbed her.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30476,7 +30476,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Then who stabbed her?",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30486,7 +30486,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "He did.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30496,7 +30496,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Who\u2019s he?",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30506,7 +30506,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Steven.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30516,7 +30516,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK, and then what?",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30526,7 +30526,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Then I cut her throat.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30536,7 +30536,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30546,7 +30546,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "And then he choked her and I cut off her hair.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30556,7 +30556,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. So he choked her after you cut her throat?",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30566,7 +30566,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "(nods \u201cyes\u201d) mm huh.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30576,7 +30576,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK, kinda show me like on your throat where you cut her.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30586,7 +30586,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Like right here.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30596,7 +30596,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "How deep?",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30606,7 +30606,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Just as long as the knife went through.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30616,7 +30616,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30626,7 +30626,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "With your finger, show me how deep you went into her throat.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30636,7 +30636,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "About that much.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30646,7 +30646,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "I mean like, like this like that, like that, like that.",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -30656,7 +30656,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Like that. STATE4728 7 Page 05-0157-955",
-  "page": "p-132",
+  "page": "p-132.png",
   "sensitive": false
  },
  {
@@ -43486,7 +43486,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "No. You really, i-if you know where the knife is, you have ta tell us. OK? Where is the knife?",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43496,7 +43496,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "J don\u2019t know where it is.",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43506,7 +43506,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Did he tell you what he did with the knife?",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43516,7 +43516,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "No.",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43526,7 +43526,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. So after you guys had done this and we come out there and we close off the property; remember? You guys go up north.",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43536,7 +43536,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Mm huh. .",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43546,7 +43546,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "And I was told you guys were talking about this up north. Right?",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43556,7 +43556,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Mm huh. .",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43566,7 +43566,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. So what did you guys talk about?",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43576,7 +43576,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Well, when the cops came up there he was tryin\u2019 ta hide and, and then grandpa said if he was hiding that he, he was acting like he did it.",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43586,7 +43586,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Mm huh. Well, what was the conversation like between you and him? I mean was he tellin\u2019 you, we can\u2019t tell anybody or what was he telling you?",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43596,7 +43596,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "That not ta talk to the cops.",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43606,7 +43606,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. What else did he tell you? Were you afraid that the cops were gonna be onta ya?",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43616,7 +43616,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah.",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43626,7 +43626,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "So how long before this, that well let\u2019s go back OK to the couple days prior to this happening. OK? You said you guys talked about this and planned this. Is that correct?",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43636,7 +43636,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Mm huh.",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43646,7 +43646,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. Did he tell you about Teresa, that he had met her before? _\u2014",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -43656,7 +43656,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah. ; * 05-0157-955",
-  "page": "p-059",
+  "page": "p-059.png",
   "sensitive": false
  },
  {
@@ -44406,7 +44406,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Cuz, you went through her purse, didn\u2019t you? So how did the money get out of her purse?",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44416,7 +44416,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "He gave it ta me.",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44426,7 +44426,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "How much did he give you?",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44436,7 +44436,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "A few dollars.",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44446,7 +44446,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Did ya see the purse in the house? .",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44456,7 +44456,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "No.",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44466,7 +44466,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Did he just tell ya that, that was her, her money, what?",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44476,7 +44476,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah.",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44486,7 +44486,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Is that true or are you lying again? 7",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44496,7 +44496,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "The truth.",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44506,7 +44506,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "And the truth is you put her purse and her cell phone and her camera in the , burn barrel. That\u2019s the truth? .",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44516,7 +44516,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "No.",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44526,7 +44526,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Well, is it the truth?",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44536,7 +44536,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "No. , \u2019",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44546,7 +44546,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK.",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44556,7 +44556,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Did you see that stuff in there?",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44566,7 +44566,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "No. (shakes head \u201cno\u201d)",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44576,7 +44576,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Do you remember telling us prior?",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44586,7 +44586,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "The last time that you saw that stuff in the burn barrel",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -44596,7 +44596,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah. 05-0157-955",
-  "page": "p-064",
+  "page": "p-064.png",
   "sensitive": false
  },
  {
@@ -52246,7 +52246,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "What time do they give you lunch usually up there, Brendan?",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52256,7 +52256,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "A little past 11:30.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52266,7 +52266,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Oh, I\u2019m sure they saved ya right? I imagine.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52276,7 +52276,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "seceeeeeereseeeeee With your mom too, OK? Tell her exactly what you told us.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52286,7 +52286,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "So that she can quit blaming us for everything, all right?",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52296,7 +52296,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Cuz, once she sees the tape, she\u2019s gonna know anyway.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52306,7 +52306,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "And just like I told ya with your attorneys that\u2019s, that\u2019s the only way she can help you too, is if she knows the truth and that she knows what type of help ta try and get you.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52316,7 +52316,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "At first my mom was really pissed off at my attorney.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52326,7 +52326,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Really, why is that?",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52336,7 +52336,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Cuz, like four weeks ago I called him and left a, an, um answering machine, a message on his answering machine but he never did what J told him to cuz I was giving him permission ta talk to my mom about what he\u2019s gonna be doing and that.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52346,7 +52346,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "OK. Is that better? I mean the attorney talks to ya now doesn\u2019t he and stuff?",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52356,7 +52356,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "He talks ta me but he don\u2019t talk ta my mom. ,",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52366,7 +52366,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "Have you told him that he can tell your mom stuff. :",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52376,7 +52376,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "\u2014 Not, I just left that message on his answering machine.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52386,7 +52386,7 @@
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "OK. If you want your mom to know, your gonna have ta tell him that.",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52396,7 +52396,7 @@
   "speaker": "FASSBENDER",
   "role": "interrogator",
   "text": "Tell him directly, don\u2019t leave messages. OK?",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
@@ -52406,7 +52406,7 @@
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Mm huh. (nods \u201cyes\u201d) 05-0157-955",
-  "page": "p-108",
+  "page": "p-108.png",
   "sensitive": false
  },
  {
