@@ -12,7 +12,7 @@ KINDS = ("asserts", "asks", "denies", "assents")
 @dataclass
 class Session:
     id: str
-    label: str            # "Feb 27, 2006 · Mishicot High School"
+    label: str            # "Feb 27, 2006, Mishicot High School"
     day: date
     recorded: bool = True  # False for a contact we only know about from later references
     source: str = ""       # citation, e.g. "Calumet County Sheriff's Dept. transcript, pp. 1-55"
