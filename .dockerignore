@@ -1,0 +1,13 @@
+.git
+.github
+__pycache__
+*.pyc
+.pytest_cache
+.env
+tests
+eval
+train
+docs
+data/cases/*/source
+data/cases/*/pages
+data/cases/_*

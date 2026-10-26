@@ -1,0 +1,44 @@
+name: Run case pipeline (live models)
+# Actions tab -> "Run case pipeline" -> Run workflow. Reads transcripts with Nemotron 3.5 Super VL, drafts facts,
+# tags sentences with Nemotron 3.5 Lightning and verifies deciding lines with Nemotron 3 Ultra. Commits the results.
+on:
+  workflow_dispatch:
+    inputs:
+      case: { description: "Case id (folder under data/cases)", required: true, default: "dassey" }
+      steps: { description: "Comma list: ingest,facts,tag", required: true, default: "ingest,tag" }
+      sessions: { description: "Only these sessions for ingest (e.g. S1,S2); blank = all", required: false, default: "" }
+      max_pages: { description: "Limit pages per session for a quick test (0 = all)", required: false, default: "0" }
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils >/dev/null
+      - run: pip install -r requirements.txt
+      - name: Pipeline
+        env:
+          NEBIUS_API_KEY: ${{ secrets.NEBIUS_API_KEY }}
+          DAILY_SPEND_CAP_USD: "15"
+          PYTHONUNBUFFERED: "1"
+        run: |
+          set -o pipefail
+          mkdir -p logs
+          STEPS=",${{ inputs.steps }},"
+          if [[ "$STEPS" == *",ingest,"* ]]; then python -m scripts.ingest "${{ inputs.case }}" --sessions "${{ inputs.sessions }}" --max-pages "${{ inputs.max_pages }}" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS" == *",facts,"* ]]; then python -m scripts.facts "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS" == *",tag,"* ]]; then python -m scripts.tag "${{ inputs.case }}" 2>&1 | tee -a logs/pipeline.txt; fi
+          tail -20 logs/pipeline.txt >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p "data/cases/${{ inputs.case }}/logs" && cp logs/pipeline.txt "data/cases/${{ inputs.case }}/logs/last_run.txt" 2>/dev/null || true
+          git add "data/cases/${{ inputs.case }}" || true
+          git commit -m "Pipeline results: ${{ inputs.case }} (${{ inputs.steps }})" || echo "No changes"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

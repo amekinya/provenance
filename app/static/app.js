@@ -1,0 +1,211 @@
+(() => {
+  const $ = (s, el = document) => el.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const CHIP = { cannot_corroborate: "Can't corroborate", unclear: "Unclear", may_corroborate: "Suspect said it first", not_adopted: "Not adopted" };
+  const ORDER = ["interrogator_first", "planted_adopted", "public", "prior_contact", "suspect_first", "never_adopted", "not_mentioned"];
+  const KIND = { asks: "asks", asserts: "says", denies: "denies", assents: "agrees" };
+  const TACTIC = { we_already_know: "\"We already know\"", minimization: "Minimizing (\"it's OK\", \"not your fault\")", promises: "Promises or offers of help", demand_truth: "Demands to \"be honest\"" };
+  let current = null; // {report, lines(id)->Promise}
+
+  // ------------------------------------------------------------ routing
+  async function boot() {
+    let cases = [];
+    try { cases = await (await fetch("/api/cases")).json(); } catch (e) { /* offline */ }
+    const nav = $("#caseNav");
+    nav.innerHTML = cases.map((c) => `<a href="#${esc(c.id)}" data-id="${esc(c.id)}">${esc(shortTitle(c))}</a>`).join("") + `<a href="#try" data-id="try">Try a transcript</a>`;
+    window.addEventListener("hashchange", () => route(cases));
+    route(cases);
+    $("#sampleBtn").onclick = fillSample;
+    $("#tryForm").onsubmit = runTry;
+  }
+  function shortTitle(c) { return c.suspect ? `${c.suspect.split(" ").slice(-1)[0]} case` : c.title; }
+  function route(cases) {
+    const id = location.hash.slice(1) || (cases[0] && cases[0].id) || "try";
+    document.querySelectorAll("#caseNav a").forEach((a) => (a.dataset.id === id ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
+    if (id === "try") { $("#try").scrollIntoView({ block: "start" }); return; }
+    loadCase(id);
+  }
+
+  async function loadCase(id) {
+    const r = await fetch(`/api/case/${encodeURIComponent(id)}`);
+    if (!r.ok) { $("#headline").textContent = "Couldn't load this case."; return; }
+    const rep = await r.json();
+    current = { report: rep, lines: (uid) => fetch(`/api/case/${encodeURIComponent(id)}/lines?around=${encodeURIComponent(uid)}`).then((x) => x.json()) };
+    render(rep);
+  }
+
+  // ------------------------------------------------------------ rendering
+  function render(rep) {
+    $("#caseTitle").textContent = rep.case.title;
+    $("#caseSub").textContent = `${rep.case.suspect} · ${rep.sessions.filter((s) => s.recorded).length} recorded interviews · ${rep.utterance_count.toLocaleString()} turns of speech · ${rep.facts.length} key details checked`;
+    $("#headline").textContent = rep.headline;
+    renderCounts(rep);
+    renderMap(rep);
+    renderSessions(rep);
+    renderMemo(rep.memo);
+    renderHow(rep);
+    $("#detail").hidden = true;
+  }
+
+  function renderCounts(rep) {
+    const c = rep.counts;
+    const parts = [["c-inv", c.interrogator_first + c.planted_adopted, "investigators first"], ["c-pub", c.public, "already public"],
+      ["c-unc", c.prior_contact, "unclear"], ["c-sus", c.suspect_first, "suspect first"], ["c-never", c.never_adopted + c.not_mentioned, "not adopted"]];
+    const total = parts.reduce((a, p) => a + p[1], 0) || 1;
+    $("#countbar").innerHTML = parts.filter((p) => p[1]).map(([cls, n, lab]) =>
+      `<span class="${cls}" style="flex:${n}" title="${n} ${lab}">${n} ${lab}</span>`).join("");
+    $("#countbar").setAttribute("aria-label", parts.filter((p) => p[1]).map(([, n, lab]) => `${n} ${lab}`).join(", ") + ` of ${total} details`);
+  }
+
+  function layout(rep) {
+    // Session bands: width proportional to turns; unrecorded sessions get a thin hatched band.
+    const st = rep.session_stats;
+    const weights = st.map((s) => (s.recorded && s.turns ? s.turns : Math.max(1, rep.utterance_count * 0.05)));
+    const total = weights.reduce((a, b) => a + b, 0);
+    let x = 0;
+    const bands = st.map((s, i) => { const w = (100 * weights[i]) / total; const b = { ...s, x, w }; x += w; return b; });
+    const pos = (ev) => {
+      const b = bands.find((bb) => bb.session === ev.session);
+      if (!b || b.first_seq == null) return 0;
+      const span = Math.max(1, b.last_seq - b.first_seq);
+      return b.x + b.w * (0.03 + 0.94 * ((ev.seq - b.first_seq) / span));
+    };
+    return { bands, pos };
+  }
+
+  function renderMap(rep) {
+    const { bands, pos } = layout(rep);
+    const facts = [...rep.facts].sort((a, b) => ORDER.indexOf(a.origin) - ORDER.indexOf(b.origin) ||
+      ((a.first_interrogator || a.first_suspect || {}).seq || 1e12) - ((b.first_interrogator || b.first_suspect || {}).seq || 1e12));
+    const axis = `<div class="axis" role="row"><div role="columnheader" style="padding:8px 12px">Detail</div><div class="bands" role="columnheader">${bands.map((b) =>
+      `<div class="band ${b.recorded ? "" : "unrec"}" style="width:${b.w}%" title="${esc(b.label)}">${esc(b.label)}</div>`).join("")}</div></div>`;
+    const rows = facts.map((f, i) => {
+      const fi = f.first_interrogator, fs = f.first_suspect;
+      const dots = f.events.map((ev) => {
+        const cls = ev.role === "interrogator" ? "inv" : ev.kind === "assents" ? "agr" : ev.kind === "denies" ? "den" : ev.role === "suspect" ? "sus" : "den";
+        const first = ev.first ? " first" : "";
+        return `<span class="dot ${cls}${first}" style="left:${pos(ev)}%" title="${esc(ev.speaker)} ${KIND[ev.kind] || ev.kind}: ${esc(ev.sensitive ? "[graphic passage hidden]" : ev.quote)} (p. ${esc(ev.page)})"></span>`;
+      }).join("");
+      const gap = fi && fs && fi.seq < fs.seq ? `<span class="gapline" style="left:${pos(fi)}%;width:${Math.max(0, pos(fs) - pos(fi))}%"></span>` : "";
+      const sb = bands.map((b) => `<span class="sb ${b.recorded ? "" : "unrec"}" style="left:${b.x}%;width:${b.w}%"></span>`).join("");
+      const label = `${f.fact.label}: ${CHIP[f.corroboration]}. ${f.origin_label}.`;
+      return `<div class="frow" role="row" tabindex="0" data-i="${i}" aria-label="${esc(label)}">
+        <div class="flabel" role="cell"><b>${esc(f.fact.label)}</b><span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span></div>
+        <div class="track" role="cell">${sb}${gap}${dots}</div></div>`;
+    }).join("");
+    const map = $("#map");
+    map.innerHTML = axis + rows;
+    map.querySelectorAll(".frow").forEach((row) => {
+      const open = () => { map.querySelectorAll(".frow").forEach((r) => r.removeAttribute("aria-selected")); row.setAttribute("aria-selected", "true"); showFact(facts[+row.dataset.i], rep); };
+      row.onclick = open;
+      row.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+        if (e.key === "ArrowDown") row.nextElementSibling?.focus(); if (e.key === "ArrowUp") row.previousElementSibling?.classList.contains("frow") && row.previousElementSibling.focus(); };
+    });
+  }
+
+  function sessionLabel(rep, id) { return (rep.sessions.find((s) => s.id === id) || {}).label || id; }
+
+  function showFact(f, rep) {
+    const d = $("#detail");
+    const stats = [];
+    if (f.interrogator_mentions_before_suspect) stats.push(`Investigators raised it <b>${f.interrogator_mentions_before_suspect}</b> time${f.interrogator_mentions_before_suspect > 1 ? "s" : ""} before he said it`);
+    if (f.adopted_by_assent) stats.push("He first adopted it by <b>agreeing</b> to a question");
+    if (f.crossed_sessions) stats.push("Supplied in an <b>earlier interview</b>");
+    if (f.fact.public_before) stats.push(`Public since <b>${esc(f.fact.public_before)}</b>`);
+    d.innerHTML = `<h3>${esc(f.fact.label)} <span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span></h3>
+      <p class="why">${esc(f.why)}</p>
+      ${stats.length ? `<div class="stats">${stats.map((s) => `<span>${s}</span>`).join("")}</div>` : ""}
+      ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail)}${f.fact.source ? ` · Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
+      <ol class="evlist">${f.events.map((ev, i) => evItem(ev, i, rep)).join("")}</ol>`;
+    d.hidden = false;
+    d.querySelectorAll("[data-ctx]").forEach((b) => (b.onclick = () => showContext(b)));
+    d.querySelectorAll("[data-reveal]").forEach((b) => (b.onclick = () => { const q = b.previousElementSibling; q.textContent = q.dataset.full; q.classList.remove("masked"); b.remove(); }));
+    d.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
+  }
+
+  function evItem(ev, i, rep) {
+    const cls = ev.role === "interrogator" ? "inv" : ev.role === "suspect" ? "sus" : "";
+    const mark = ev.role === "interrogator" ? "inv" : ev.kind === "assents" ? "agr" : ev.kind === "denies" ? "den" : "sus";
+    const first = ev.first ? `<span class="tag">first ${ev.first === "interrogator" ? "investigator mention" : "time he said it"}</span>` : "";
+    const quote = ev.sensitive ? `<q class="masked" data-full="${esc(ev.quote)}">Graphic passage hidden</q> <button data-reveal>Show</button>` : `<q>${esc(ev.quote)}</q>`;
+    return `<li class="ev ${cls}"><i class="mk ${mark}" aria-hidden="true" style="margin-top:6px"></i>
+      <div><span class="who">${esc(ev.speaker)}</span> ${KIND[ev.kind] || esc(ev.kind)}${first}<br>${quote}
+        <div><button data-ctx="${esc(ev.utterance)}">Read in context</button></div><div class="ctxbox"></div></div>
+      <span class="cite">${esc(sessionLabel(rep, ev.session).split(" · ")[0])}, p. ${esc(ev.page || "?")}</span></li>`;
+  }
+
+  async function showContext(btn) {
+    const box = btn.parentElement.nextElementSibling;
+    if (box.innerHTML) { box.innerHTML = ""; return; }
+    box.innerHTML = "<p class='fine'>Loading…</p>";
+    try {
+      const data = await current.lines(btn.dataset.ctx);
+      box.innerHTML = `<div class="ctx">${data.lines.map((l) => `<p class="${l.id === data.focus ? "focus" : ""}"><span class="spk">${esc(l.speaker)}</span>${l.sensitive ? "<span class='masked'>Graphic passage hidden</span>" : esc(l.text)}</p>`).join("")}</div>`;
+    } catch (e) { box.innerHTML = "<p class='err'>Couldn't load the lines.</p>"; }
+  }
+
+  function renderSessions(rep) {
+    $("#sessionCards").innerHTML = rep.session_stats.map((s) => s.recorded && s.turns ? `<div class="card"><h3>${esc(s.label)}</h3><dl>
+      <dt>Turns of speech</dt><dd>${s.turns}</dd>
+      <dt>Investigators' share of words</dt><dd>${Math.round(100 * s.interrogator_share_of_words)}%</dd>
+      <dt>Suspect's words per answer</dt><dd>${s.suspect_words_per_turn}</dd>
+      <dt>One-word answers ("yeah", "no")</dt><dd>${s.suspect_minimal_answers}</dd>
+      <dt>Questions that carried a detail</dt><dd>${s.questions_that_carry_facts} of ${s.questions}</dd>
+      ${Object.entries(s.tactics).map(([k, v]) => `<dt>${TACTIC[k] || k}</dt><dd>${v}</dd>`).join("")}</dl></div>`
+      : `<div class="card"><h3>${esc(s.label)}</h3><p class="unrec">No public transcript. Details discussed here can't be traced, so they're marked unclear when referred to later.</p></div>`).join("");
+  }
+
+  function renderMemo(m) {
+    $("#memoSec").hidden = !m;
+    if (!m) return;
+    $("#memo").innerHTML = `<p>${esc(m.summary)}</p><ul>${m.key_points.map((k) => `<li>${esc(k)}</li>`).join("")}</ul>
+      <p class="fine"><b>Limits:</b> ${m.limits.map(esc).join(" ")}</p><p class="fine">Written by Nemotron 3 Ultra from the findings above only.</p>`;
+  }
+
+  function renderHow(rep) {
+    const run = rep.run || {};
+    const by = run.by_model || {};
+    const cost = (role) => (by[role] ? ` · ${by[role].calls} calls, $${by[role].cost_usd.toFixed(3)}` : "");
+    $("#steps").innerHTML = `
+      <li><b>Read the scanned transcripts.</b> <span class="m">Nemotron 3.5 Super VL</span> turned each page image into speaker-labeled lines${cost("super_vl")}.</li>
+      <li><b>List the key details.</b> <span class="m">Nemotron 3 Ultra</span> drafted them from the case documents; we reviewed the list. Each has a source.</li>
+      <li><b>Label every sentence.</b> <span class="m">Nemotron 3.5 Lightning</span> marked which details each line carries and how (asks, says, denies, agrees), quoting the words${cost("lightning")}. Code throws out any label whose quote isn't in the line.</li>
+      <li><b>Decide who said it first.</b> Plain code walks the record in order. No model decides this.</li>
+      <li><b>Double-check what decides a verdict.</b> <span class="m">Nemotron 3 Ultra</span> re-reads every first-mention line; rejected ones are dropped and the order re-checked${cost("ultra")}.</li>
+      ${run.total_seconds ? `<li>Whole record: <b>${Math.round(run.total_seconds)} s</b>, <b>$${(run.cost_usd || 0).toFixed(2)}</b> in model costs.</li>` : ""}`;
+    const ev = rep.eval;
+    $("#evalBox").innerHTML = ev && ev.rows ? `<h3 style="margin-top:18px">Measured accuracy</h3><p class="fine">${esc(ev.note || "")}</p>
+      <table class="eval"><thead><tr><th>Method</th><th>Right first-mention speaker</th><th>Right line</th></tr></thead><tbody>
+      ${ev.rows.map((r) => `<tr><td>${esc(r.method)}</td><td class="n">${Math.round(100 * r.speaker_acc)}%</td><td class="n">${Math.round(100 * r.line_acc)}%</td></tr>`).join("")}</tbody></table>` : "";
+  }
+
+  // ------------------------------------------------------------ try your own
+  function fillSample() {
+    const f = $("#tryForm");
+    f.transcript.value = ["DET: Tell me what happened Saturday night.", "JORDAN: I was home playing games.", "DET: We know you were at the park. Was it near the swings?",
+      "JORDAN: I guess.", "DET: He had a red jacket on, didn't he?", "JORDAN: Yeah.", "DET: And the bottle, you threw it in the creek?", "JORDAN: Yeah, the creek.",
+      "DET: What did you do with the phone?", "JORDAN: I left it at my cousin's house on Elm."].join("\n");
+    f.facts.value = ["At the park near the swings", "Victim wore a red jacket", "Bottle thrown in the creek", "Phone left at a house on Elm"].join("\n");
+    f.suspect.value = "JORDAN"; f.interrogators.value = "DET";
+  }
+
+  async function runTry(e) {
+    e.preventDefault();
+    const f = e.target, btn = $("#tryBtn"), out = $("#tryOut");
+    btn.disabled = true; btn.textContent = "Running on Nemotron…"; out.innerHTML = "";
+    try {
+      const r = await fetch("/api/analyze", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ transcript: f.transcript.value, facts: f.facts.value, suspect: f.suspect.value, interrogators: f.interrogators.value }) });
+      const data = await r.json();
+      if (!r.ok) throw new Error(data.detail || "Something went wrong.");
+      const utts = data.utterances;
+      current = { report: data, lines: async (uid) => { const i = utts.findIndex((u) => u.id === uid); return { lines: utts.slice(Math.max(0, i - 4), i + 3), focus: uid }; } };
+      render(Object.assign(data, { memo: null, eval: null }));
+      out.innerHTML = `<p class="fine">Done in ${data.run.total_seconds} s for $${data.run.cost_usd.toFixed(3)}. Results are shown above.</p>`;
+      $("#hero").scrollIntoView({ block: "start" });
+    } catch (err) { out.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
+    finally { btn.disabled = false; btn.textContent = "Run the audit"; }
+  }
+
+  boot();
+})();

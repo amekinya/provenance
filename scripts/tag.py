@@ -1,0 +1,198 @@
+"""Label every sentence with the case details it carries, verify the sentences that decide verdicts, and save the audit.
+
+1. Nemotron 3.5 Lightning tags sentences in parallel chunks (with a few lines of context).
+2. Code drops any label whose quote isn't really in the sentence.
+3. The ledger (plain code) finds each detail's first investigator mention and first suspect adoption.
+4. Nemotron 3 Ultra re-reads only those deciding sentences; rejected ones are dropped and the ledger re-runs,
+   until every deciding sentence has been checked (at most 4 rounds).
+5. Ultra writes a memo from the ledger's findings only.
+Writes mentions.json, audit.json, memo.json and run.json (calls, cost, timings).
+Usage: python -m scripts.tag dassey [--chunk 18] [--no-memo]
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import time
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import asdict
+
+from app.ai import tasks
+from app.ai.client import CallRecord, LiveModelUnavailable
+from app.engine.ledger import audit, load_case
+from scripts.ingest import case_dir
+
+
+def load(cid: str) -> tuple[dict, list[dict], list[dict]]:
+    cd = case_dir(cid)
+    cfg = json.loads((cd / "case.json").read_text())
+    utts = json.loads((cd / "utterances.json").read_text())
+    facts = json.loads((cd / "facts.json").read_text())
+    return cfg, utts, facts
+
+
+def case_dict(cfg: dict, utts: list[dict], facts: list[dict], mentions: list[dict]) -> dict:
+    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted")
+    return {"id": cfg["id"], "title": cfg["title"], "suspect": cfg["suspect"], "notes": cfg.get("notes", []),
+            "sessions": [{k: s.get(k, d) for k, d in (("id", ""), ("label", ""), ("day", ""), ("recorded", True), ("source", ""))}
+                         for s in cfg["sessions"]],
+            "utterances": utts, "facts": [{k: f.get(k) for k in fact_fields if k in f} for f in facts], "mentions": mentions}
+
+
+def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRecord]) -> tuple[list[dict], dict[str, bool]]:
+    order = sorted(utts, key=lambda u: u["seq"])
+    jobs = []
+    for i in range(0, len(order), chunk):
+        sess = order[i]["session"]
+        tgt = [u for u in order[i:i + chunk]]
+        ctx = [u for u in order[max(0, i - 4):i] if u["session"] == sess]
+        jobs.append((tgt, ctx))
+
+    def run(job):
+        tgt, ctx = job
+        local: list[CallRecord] = []
+        slim = lambda xs: [{"id": u["id"], "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"]} for u in xs]  # noqa: E731
+        for attempt in range(2):
+            try:
+                rows = tasks.tag_mentions(slim(tgt), slim(ctx), facts, local)
+                return rows, local
+            except LiveModelUnavailable as e:
+                if attempt == 1:
+                    print(f"  chunk at {tgt[0]['id']} failed: {e}")
+        return [], local
+
+    mentions, graphic = [], {}
+    text_of = {u["id"]: u["text"] for u in utts}
+    dropped = 0
+    with ThreadPoolExecutor(8) as ex:
+        for rows, local in ex.map(run, jobs):
+            calls.extend(local)
+            for r in rows:
+                graphic[r["id"]] = bool(r.get("graphic"))
+                for m in r["mentions"]:
+                    if m["kind"] != "assents" and not tasks.quote_in(m["quote"], text_of[r["id"]]):
+                        dropped += 1  # code check: the quote isn't in the sentence
+                        continue
+                    mentions.append({"utterance": r["id"], "fact": m["fact"], "kind": m["kind"], "quote": m["quote"], "by": "model", "verified": None})
+    print(f"tagged {len(utts)} sentences in {len(jobs)} chunks: {len(mentions)} labels kept, {dropped} dropped (quote not in sentence)")
+    return mentions, graphic
+
+
+DENY = __import__("re").compile(r"^\W*(no\b|nope|nah|never|i don'?t know|i dunno|i didn'?t|i don'?t remember|not that i)", __import__("re").I)
+
+
+def tag_with_matcher(utts: list[dict], facts: list[dict], calls: list[CallRecord], threshold: float = 0.5) -> tuple[list[dict], dict[str, bool]]:
+    """Our fine-tuned matcher (Nebius endpoint) scores every sentence x detail pair; code assigns the kind;
+    Ultra later verifies the sentences that decide verdicts, exactly as with the Lightning labeler."""
+    from app.ai import matcher  # noqa: PLC0415
+    from app.engine.ledger import ASSENT, spoken  # noqa: PLC0415
+    from scripts.build_pairs import passage, query  # noqa: PLC0415
+
+    order = sorted(utts, key=lambda u: u["seq"])
+    pairs, keys = [], []
+    for k, u in enumerate(order):
+        prev = order[k - 1] if k and order[k - 1]["session"] == u["session"] else None
+        for f in facts:
+            pairs.append((query(f), passage(prev, u)))
+            keys.append((u, f))
+    scores = matcher.score("provenance-matcher", pairs, calls)
+    mentions = []
+    for (u, f), sc in zip(keys, scores):
+        if sc < threshold:
+            continue
+        t = spoken(u["text"])
+        kind = ("asks" if "?" in u["text"] else "asserts") if u["role"] == "interrogator" else \
+            "assents" if ASSENT.match(t) else "denies" if DENY.match(t) else "asserts"
+        mentions.append({"utterance": u["id"], "fact": f["id"], "kind": kind, "quote": t[:160], "by": "matcher", "verified": None, "score": round(sc, 3)})
+    print(f"matcher scored {len(pairs)} pairs; {len(mentions)} above {threshold}")
+    return mentions, {}
+
+
+def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds: int = 4) -> None:
+    by_id = {u["id"]: u for u in utts}
+    order = sorted(utts, key=lambda u: u["seq"])
+    prev_of = {u["id"]: (order[i - 1]["text"] if i and order[i - 1]["session"] == u["session"] else "") for i, u in enumerate(order)}
+    fact_of = {f["id"]: f for f in facts}
+    for rnd in range(rounds):
+        rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+        deciding = set()
+        for f in rep["facts"]:
+            for ev in (f["first_interrogator"], f["first_suspect"]):
+                if ev:
+                    deciding.add((ev["utterance"], f["fact"]["id"]))
+        todo = [m for m in mentions if (m["utterance"], m["fact"]) in deciding and m["verified"] is None]
+        if not todo:
+            print(f"verification done after {rnd} round(s)")
+            return
+        items = [{"key": f"{m['utterance']}|{m['fact']}", "fact_label": fact_of[m["fact"]]["label"], "fact_detail": fact_of[m["fact"]].get("detail", ""),
+                  "speaker": f"{by_id[m['utterance']]['speaker']} ({by_id[m['utterance']]['role']})", "text": by_id[m["utterance"]]["text"],
+                  "prev": prev_of[m["utterance"]]} for m in todo]
+        results: dict[str, dict] = {}
+        batches = [items[i:i + 8] for i in range(0, len(items), 8)]
+
+        def run(b):
+            local: list[CallRecord] = []
+            try:
+                return tasks.verify(b, local), local
+            except LiveModelUnavailable:
+                return {}, local
+
+        with ThreadPoolExecutor(6) as ex:
+            for res, local in ex.map(run, batches):
+                calls.extend(local)
+                results.update(res)
+        rejected = 0
+        for m in todo:
+            r = results.get(f"{m['utterance']}|{m['fact']}")
+            if r is None:
+                continue
+            m["verified"] = bool(r["carries_detail"])
+            if m["verified"] and r["kind"] != m["kind"]:
+                m["kind"] = r["kind"]
+            rejected += not m["verified"]
+        print(f"round {rnd + 1}: checked {len(todo)} deciding labels, rejected {rejected}")
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("case")
+    ap.add_argument("--chunk", type=int, default=18)
+    ap.add_argument("--no-memo", action="store_true")
+    ap.add_argument("--labeler", default="lightning", choices=["lightning", "matcher"])
+    a = ap.parse_args()
+    cd = case_dir(a.case)
+    cfg, utts, facts = load(a.case)
+    calls: list[CallRecord] = []
+    t0 = time.perf_counter()
+    if a.labeler == "matcher":
+        mentions, graphic = tag_with_matcher(utts, facts, calls)
+    else:
+        mentions, graphic = tag_all(utts, facts, a.chunk, calls)
+    for u in utts:
+        u["sensitive"] = graphic.get(u["id"], u.get("sensitive", False))
+    (cd / "utterances.json").write_text(json.dumps(utts, indent=1))
+    t_tag = time.perf_counter() - t0
+    verify_deciding(cfg, utts, facts, mentions, calls)
+    (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
+    rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+    (cd / "audit.json").write_text(json.dumps(rep, indent=1))
+    print(rep["headline"])
+    if not a.no_memo:
+        try:
+            memo = tasks.write_memo(rep, calls)
+            (cd / "memo.json").write_text(json.dumps(memo, indent=1))
+        except LiveModelUnavailable as e:
+            print("memo unavailable:", e)
+    roles = {}
+    for c in calls:
+        r = roles.setdefault(c.role, {"model": c.model_id, "calls": 0, "seconds": 0.0, "cost_usd": 0.0})
+        r["calls"] += 1; r["seconds"] += c.seconds; r["cost_usd"] += c.cost_usd
+    run = {"tag_seconds": round(t_tag, 1), "total_seconds": round(time.perf_counter() - t0, 1),
+           "cost_usd": round(sum(c.cost_usd for c in calls), 4), "by_model": roles,
+           "calls": [asdict(c) | {"seconds": round(c.seconds, 2), "cost_usd": round(c.cost_usd, 5)} for c in calls]}
+    (cd / "run.json").write_text(json.dumps(run, indent=1))
+    print(f"done in {run['total_seconds']}s, {len(calls)} model calls, ${run['cost_usd']}")
+
+
+if __name__ == "__main__":
+    main()

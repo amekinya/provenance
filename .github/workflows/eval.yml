@@ -1,0 +1,40 @@
+name: Benchmark (live models)
+# Actions tab -> "Benchmark" -> Run workflow. Writes synthetic interrogations (if asked) and measures each method.
+on:
+  workflow_dispatch:
+    inputs:
+      synth: { description: "Generate N new synthetic interrogations first (0 = reuse)", required: true, default: "0" }
+      n: { description: "How many interrogations to score", required: true, default: "30" }
+      methods: { description: "keyword,one_prompt,provenance", required: true, default: "keyword,one_prompt,provenance" }
+permissions:
+  contents: write
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - name: Run
+        env:
+          NEBIUS_API_KEY: ${{ secrets.NEBIUS_API_KEY }}
+          MATCHER_URL: ${{ secrets.MATCHER_URL }}
+          MATCHER_TOKEN: ${{ secrets.MATCHER_TOKEN }}
+          DAILY_SPEND_CAP_USD: "15"
+          PYTHONUNBUFFERED: "1"
+        run: |
+          set -o pipefail
+          mkdir -p eval
+          if [ "${{ inputs.synth }}" != "0" ]; then python -m scripts.synth --n "${{ inputs.synth }}" 2>&1 | tee eval/synth_log.txt; fi
+          python -m eval.run_eval --n "${{ inputs.n }}" --methods "${{ inputs.methods }}" 2>&1 | tee eval/eval_log.txt
+          cat eval/RESULTS.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add eval data/synth 2>/dev/null || true
+          git commit -m "Benchmark results" || echo "No changes"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

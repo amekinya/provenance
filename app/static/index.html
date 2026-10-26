@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provenance: who said it first?</title>
+<meta name="description" content="A corroboration audit of police interrogations: which crime details the suspect said first, and which investigators supplied.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/" aria-label="Provenance home">
+      <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="8" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M13 14h11M19 9l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Provenance
+    </a>
+    <nav aria-label="Cases" id="caseNav"></nav>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <section class="hero" id="hero">
+    <p class="kicker">Corroboration audit of a police interrogation</p>
+    <h1 id="caseTitle">Who said it first?</h1>
+    <p class="sub" id="caseSub">A confession is treated as proof when it contains details "only the perpetrator could know." Provenance checks the record: for every key detail, did the suspect say it first, or did investigators?</p>
+    <p class="headline" id="headline" aria-live="polite"></p>
+    <div class="countbar" id="countbar" aria-label="How the details break down"></div>
+    <p class="guard"><strong>What this is not:</strong> it doesn't decide guilt or whether a confession is true. It shows where each detail first appears in the record, with page citations, so counsel can check.</p>
+  </section>
+
+  <section class="mapsec" aria-labelledby="mapH">
+    <div class="sec-head">
+      <h2 id="mapH">Where each detail came from</h2>
+      <div class="legend" aria-hidden="true">
+        <span><i class="mk inv"></i>Investigator says or asks it</span>
+        <span><i class="mk sus"></i>Suspect states it</span>
+        <span><i class="mk agr"></i>Suspect agrees ("yeah")</span>
+        <span><i class="mk first"></i>First time</span>
+      </div>
+    </div>
+    <div class="map" id="map" role="table" aria-label="Detail-by-detail timeline across the interviews"></div>
+    <p class="fine">Each row is one detail. Time runs left to right through the recorded interviews. Rows are sorted with details investigators said first at the top. Select a row to read the exact lines.</p>
+  </section>
+
+  <section class="detail" id="detail" hidden aria-live="polite"></section>
+
+  <section class="sessions" aria-labelledby="sessH">
+    <h2 id="sessH">How the interviews ran</h2>
+    <p class="fine">Counted by code from the transcript. Tactics follow the categories in Kassin et al., "Police-Induced Confessions" (2010).</p>
+    <div class="cards" id="sessionCards"></div>
+  </section>
+
+  <section class="memo" id="memoSec" hidden aria-labelledby="memoH">
+    <h2 id="memoH">Memo for counsel</h2>
+    <div id="memo"></div>
+  </section>
+
+  <section class="how" aria-labelledby="howH">
+    <h2 id="howH">How this was worked out</h2>
+    <ol class="steps" id="steps"></ol>
+    <div id="evalBox"></div>
+  </section>
+
+  <section class="try" id="try" aria-labelledby="tryH">
+    <h2 id="tryH">Try it on a transcript</h2>
+    <p class="fine">Paste lines like <code>DET: Where were you?</code> and <code>SUSPECT: At home.</code>, then list the key details, one per line. Runs live on NVIDIA Nemotron models; nothing is stored.</p>
+    <form id="tryForm" class="tryform">
+      <label>Transcript<textarea name="transcript" rows="10" required></textarea></label>
+      <div class="row2">
+        <label>Key details, one per line<textarea name="facts" rows="6" required></textarea></label>
+        <div class="col">
+          <label>Suspect's speaker label<input name="suspect" placeholder="e.g. SUSPECT or JORDAN"></label>
+          <label>Investigators' labels<input name="interrogators" placeholder="e.g. DET, SGT MILLER"></label>
+          <button type="button" class="ghost" id="sampleBtn">Fill in a short example</button>
+          <button type="submit" class="primary" id="tryBtn">Run the audit</button>
+        </div>
+      </div>
+    </form>
+    <div id="tryOut"></div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Provenance uses public court records. It is decision support for defense counsel and innocence organizations, not legal advice. Graphic passages are hidden unless you choose to show them.</p>
+  <p>Built with NVIDIA Nemotron on Nebius Token Factory · <a href="https://github.com/amekinya/provenance">Source and method</a></p>
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

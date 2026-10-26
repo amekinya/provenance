@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: provenance
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NEBIUS_API_KEY
+        sync: false
+      - key: DAILY_SPEND_CAP_USD
+        value: "2"

@@ -1,0 +1,7 @@
+data/cases/_*/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+data/cases/waukegan/source/
+eval/_*.jsonl
