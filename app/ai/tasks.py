@@ -249,34 +249,49 @@ def stance(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str
     return {c["key"]: c["stance"] for c in out.get("checks", [])}
 
 
+SENSE_VERSION = 2  # answers saved with an older version of this question are asked again
+SENSE_SCHEMA = {
+    "type": "object",
+    "properties": {"key": {"type": "string"},
+                   "about": {"type": "string", "description": "what his line is about, as these lines show: which thing or person, and whose"},
+                   "where": {"type": "string", "description": "the place his line puts it, in the lines' own words, or 'not said'"},
+                   "stance": {"type": "string", "enum": ["states", "agrees", "denies", "other"]}},
+    "required": ["key", "about", "where", "stance"], "additionalProperties": False,
+}
+
+
 def sense(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str, str]:
-    """The suspect-side check with the sense of the line: items [{key, label, must, before, question, between, text}] ->
-    {key: states|agrees|denies|other}. Code has already found the detail's key words in his line or in the question it
-    answers; the model judges only whether, read with that question and the 2 lines before it, he states or agrees to
-    THIS detail, or the words put it somewhere else or are about a different thing."""
-    def one(i):
-        return (f"[{i['key']}] Detail: {i['label']} (key words: " + " + ".join("(" + " | ".join(g) + ")" for g in i["must"]) + ")"
+    """The suspect-side check with the sense of the line, one line per call: items [{key, label, must, before,
+    question, between, text}] -> {key: states|agrees|denies|other}. Code has already found the detail's key words in
+    his line or in the question it answers. The model first writes what his line is about and where it puts it, as
+    the lines show, then compares that with the detail: a different thing or place is OTHER."""
+    out: dict[str, str] = {}
+    for i in items:
+        body = (f"Detail: {i['label']} (key words: " + " + ".join("(" + " | ".join(g) + ")" for g in i["must"]) + ")"
                 f"\nTwo lines before the question: {i['before'] or '(none)'}\nThe question he answers: {i['question'] or '(none)'}"
-                + (f"\nLines after the question: {i['between']}" if i.get("between") else "") + f"\nHis line: {i['text']}")
-    body = "\n\n".join(one(i) for i in items)
-    def ask(reasoning: bool) -> dict:
-        return chat_json(settings.ultra, [
-            {"role": "system", "content": "You read lines a suspect said in an interrogation. For each item, read his line with the question it "
-                                          "answers and the two lines before that question, and answer only: is he STATING this detail, AGREEING "
-                                          "to it, DENYING it, or OTHER? Answer OTHER when the line puts the detail somewhere else than the detail "
-                                          "says (near, by or outside a place instead of in or inside it), or is about a different object, person "
-                                          "or event (for example Avery's own Suzuki instead of her jeep, or the clothes being bloody instead of "
-                                          "burned), or he only asks or guesses aloud. A short answer to a question about the detail states it "
-                                          "('With the shovel.' to 'How did he break the bones?'). A line he reads from his own written statement "
-                                          "is his statement. Don't judge whether it's true or complete."},
-            {"role": "user", "content": body}],
-            schema=STANCE_SCHEMA, purpose="Suspect stance with sense", reasoning=reasoning, max_tokens=8000 if reasoning else 2000, calls=calls)
-    try:
-        out = ask(VERIFY_REASONING)
-    except LiveModelUnavailable as e:
-        print(f"  sense check (reasoning on) failed: {str(e)[:120]}; retrying without reasoning")
-        out = ask(False)
-    return {c["key"]: c["stance"] for c in out.get("checks", [])}
+                + (f"\nLines after the question: {i['between']}" if i.get("between") else "") + f"\nHis line: {i['text']}\nkey: {i['key']}")
+        msgs = [{"role": "system", "content": "You read one line a suspect said in an interrogation, with the question it answers and the two lines "
+                                              "before that question. First write what his line is about, as these lines show (which thing or person, "
+                                              "and whose: a vehicle named in the lines before is the one he means), and where his line puts it. Then "
+                                              "compare with the detail and answer: is he STATING this detail, AGREEING to it, DENYING it, or OTHER? "
+                                              "Answer OTHER when his line is about a different thing, person or event than the detail (for example "
+                                              "Avery's own Suzuki instead of her jeep, or clothes being bloody instead of burned), or puts it "
+                                              "somewhere else than the detail says (near, by, beside or outside a place instead of in or inside it), "
+                                              "or agrees to only part of it and leaves out the place or thing the detail names (there was a car, but "
+                                              "he doesn't know where it was, for a detail about where the car was), or he only asks or guesses aloud. A short answer to a question about the detail states it "
+                                              "('With the shovel.' to 'How did he break the bones?'). A line he reads from his own written statement "
+                                              "is his statement. Don't judge whether it's true."},
+                {"role": "user", "content": body}]
+        try:
+            r = chat_json(settings.ultra, msgs, schema=SENSE_SCHEMA, purpose="Suspect stance with sense", reasoning=VERIFY_REASONING,
+                          max_tokens=6000 if VERIFY_REASONING else 1500, calls=calls)
+        except LiveModelUnavailable as e:
+            print(f"  sense check failed for {i['key']}: {str(e)[:120]}")
+            continue
+        if r.get("stance") in ("states", "agrees", "denies", "other"):
+            out[i["key"]] = r["stance"]
+            out[i["key"] + "#why"] = f"{r.get('about', '')[:160]} | {r.get('where', '')[:80]}"
+    return out
 
 
 # ---------------------------------------------------------------------------------------------------------------------

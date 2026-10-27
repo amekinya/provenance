@@ -292,10 +292,30 @@ def _requote(ev: dict, text: str, must: list) -> dict:
         sp = _spans(body)
         best = next((x for x in sp if has_terms(x, must)), None) or next((x for x in sp if any(has_terms(x, [g]) for g in must)), None)
         if best:
-            ev["quote"] = best.strip()
+            ev["quote"] = _window(best.strip(), must)
     elif m:
         ev["quote"] = plain(body)[:200]
     return ev
+
+
+def _window(sp: str, must: list, width: int = 200) -> str:
+    """A long sentence cut to the words around the detail's key terms (the first word of each group), at word
+    boundaries, with '…' where it was cut, so the quote shows the detail, not the start of a run-on sentence."""
+    if len(sp) <= width:
+        return sp
+    low = plain(sp).lower()
+    hits = []
+    for g in must:
+        found = [m for a in g for m in [re.search(rf"\b{re.escape(a.lower())}", low)] if m]
+        if found:
+            hits.append(min(found, key=lambda m: m.start()))
+    if not hits:
+        return sp[:width] + " …"
+    a, b = max(0, min(m.start() for m in hits) - 60), min(len(sp), max(m.end() for m in hits) + 60)
+    a = sp.rfind(" ", 0, a) + 1 if a > 0 else 0
+    e = sp.find(" ", b)
+    b = len(sp) if e < 0 else e
+    return ("… " if a > 0 else "") + sp[a:b].strip() + (" …" if b < len(sp) else "")
 
 
 def _court_notes(fact: Fact, order: list) -> list[dict]:

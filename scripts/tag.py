@@ -316,7 +316,7 @@ def sense_check(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: i
             if not must:
                 continue
             ms = [m for m in mentions if m["fact"] == f["id"]]
-            checked = {m["utterance"] for m in ms if m.get("sense_checked")}
+            checked = {m["utterance"] for m in ms if m.get("sense_v") == tasks.SENSE_VERSION}
             labeled = {m["utterance"] for m in ms} | {u["id"] for u in order if u["role"] == "interrogator" and any(has_terms(u["text"], [g]) for g in must)}
             n = 0
             for i, u in enumerate(order):
@@ -341,8 +341,8 @@ def sense_check(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: i
             except LiveModelUnavailable as e:
                 print(f"  sense check failed: {str(e)[:140]}")
                 return {}, local
-        with ThreadPoolExecutor(4) as ex:
-            for res, local in ex.map(run, [items[i:i + 4] for i in range(0, len(items), 4)]):
+        with ThreadPoolExecutor(6) as ex:
+            for res, local in ex.map(run, [[it] for it in items]):
                 calls.extend(local)
                 results.update(res)
         if not results:
@@ -357,10 +357,12 @@ def sense_check(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: i
             hits = [m for m in mentions if m["utterance"] == uid and m["fact"] == fid]
             if hits:
                 for m in hits:
-                    m.update({"verified": ok, "sense": st, "sense_checked": True} | ({"kind": kinds[st]} if ok else {}))
+                    m.update({"verified": ok, "sense": st, "sense_checked": True, "sense_v": tasks.SENSE_VERSION,
+                              "sense_read": results.get(it["key"] + "#why", "")} | ({"kind": kinds[st]} if ok else {}))
             else:
                 mentions.append({"utterance": uid, "fact": fid, "kind": kinds.get(st, "denies"), "quote": by_id[uid]["text"][:160],
-                                 "by": "sense-search", "verified": ok, "sense": st, "sense_checked": True})
+                                 "by": "sense-search", "verified": ok, "sense": st, "sense_checked": True, "sense_v": tasks.SENSE_VERSION,
+                                 "sense_read": results.get(it["key"] + "#why", "")})
     print(f"sense check: {total} lines answered")
     return total
 
