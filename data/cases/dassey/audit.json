@@ -45,11 +45,11 @@
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"
   }
  ],
- "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first (1 of them in part), 5 were already public, 1 may trace to an earlier statement with no public transcript. 10 details came from him first in the record.",
+ "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 7 first (1 of them in part), 5 were already public, 2 may trace to an earlier statement with no public transcript. 10 details came from him first in the record.",
  "counts": {
-  "interrogator_first": 8,
+  "interrogator_first": 7,
   "suspect_first": 10,
-  "prior_contact": 1,
+  "prior_contact": 2,
   "public": 5,
   "planted_adopted": 0,
   "never_adopted": 1,
@@ -11572,7 +11572,7 @@
      "sensitive": false,
      "verified": null,
      "by": "model",
-     "kind_note": "repeats his words from the line before; an echo, not counted"
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S2-2766",
@@ -18663,7 +18663,7 @@
      "sensitive": false,
      "verified": null,
      "by": "model",
-     "kind_note": "repeats his words from the line before; an echo, not counted"
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S2-1341",
@@ -21395,20 +21395,20 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 594); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 596). The Decision lists related reports: 11 rifle casings were found in Avery's garage (Decision p. 69). A report the detail could be inferred from isn't a report of it, so the transcript decides.",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 596); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 596). The Decision lists related reports: 11 rifle casings were found in Avery's garage (Decision p. 69). A report the detail could be inferred from isn't a report of it, so the transcript decides.",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],
    "first_interrogator": {
-    "utterance": "S2-1401",
-    "seq": 401400,
+    "utterance": "S2-1440",
+    "seq": 401439,
     "session": "S2",
-    "page": "594",
+    "page": "596",
     "page_end": "",
     "role": "interrogator",
-    "speaker": "WIEGERT",
-    "kind": "asks",
-    "quote": "So, you when you carried her out of the house, and you put 'er by the garage, and Steve shoots her, then you put her on top of the fire that's already going?",
+    "speaker": "FASSBENDER",
+    "kind": "asserts",
+    "quote": "No, I mean where, in the garage",
     "sensitive": false,
     "verified": null,
     "by": "key words",
@@ -21430,15 +21430,6 @@
     "first": "suspect"
    },
    "investigator_lines_before": [
-    {
-     "utterance": "S2-1401",
-     "page": "594",
-     "page_end": "",
-     "session": "S2",
-     "speaker": "WIEGERT",
-     "quote": "So, you when you carried her out of the house, and you put 'er by the garage, and Steve shoots her, then you put her on top of the fire that's already going?",
-     "by": "key words"
-    },
     {
      "utterance": "S2-1440",
      "page": "596",
@@ -21513,25 +21504,10 @@
    "related_statements": [],
    "related_statements_total": 0,
    "his_responses": [],
-   "interrogator_mentions_before_suspect": 2,
+   "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
-    {
-     "utterance": "S2-1401",
-     "seq": 401400,
-     "session": "S2",
-     "page": "594",
-     "page_end": "",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "So, you when you carried her out of the house, and you put 'er by the garage, and Steve shoots her, then you put her on top of the fire that's already going?",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words",
-     "first": "interrogator"
-    },
     {
      "utterance": "S2-1440",
      "seq": 401439,
@@ -21544,7 +21520,8 @@
      "quote": "No, I mean where, in the garage",
      "sensitive": false,
      "verified": null,
-     "by": "key words"
+     "by": "key words",
+     "first": "interrogator"
     },
     {
      "utterance": "S2-1442",
@@ -24940,7 +24917,7 @@
      "sensitive": false,
      "verified": null,
      "by": "model",
-     "kind_note": "repeats his words from the line before; an echo, not counted"
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S2-2250",
@@ -31507,10 +31484,10 @@
     "not_reported": "",
     "court_notes": []
    },
-   "origin": "interrogator_first",
-   "origin_label": "Investigators said it first",
-   "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 547); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 551). The same line refers to an earlier conversation (\u201cI talked to ya the other night and you said nothing about Monte you said nothing about something getting punctured and leaking out.\u201d), but that sentence doesn't name the detail, so it isn't counted as one.",
+   "origin": "prior_contact",
+   "origin_label": "May trace to an earlier statement with no public transcript",
+   "corroboration": "unclear",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 547), in a turn that reports an earlier conversation with no public transcript: \u201cI talked to ya the other night and you said nothing about Monte you said nothing about something getting punctured and leaking out.\u201d \u2026 \u201cWe talked about cleaning somethin' up in that garage. You told me that you thought thinking back now there was blood.\u201d.",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],

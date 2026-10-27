@@ -7,7 +7,7 @@ confession is false; it says which details can't show inside knowledge, and why.
 from __future__ import annotations
 
 import re
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from datetime import date
 
 from app.engine.models import Case, Fact, Mention, Utterance
@@ -277,6 +277,48 @@ def _about(order: list, i: int, must: list) -> bool:
     return short and any(any(has_terms(_txt(x), [g]) for g in must) for x in turns_before(order, i, 2))
 
 
+IN_PLACE = {"in", "inside", "into", "on"}
+ELSEWHERE = {"by", "near", "beside", "outside", "behind", "next", "side", "around", "front", "toward", "towards", "past"}
+
+
+def place_groups(fact: Fact) -> set:
+    """Key-term groups that are the place the detail puts something in or on: a group word that follows 'in',
+    'inside', 'into' or 'on' (within 3 words) in the detail's own label ('Shot inside the garage')."""
+    toks = _tok(fact.label)
+    out = set()
+    for k, g in enumerate(fact.must):
+        for a in g:
+            at = _tok(a)
+            if len(at) == 1 and any(_matches(t, at[0]) and IN_PLACE & set(toks[max(0, j - 3):j]) for j, t in enumerate(toks)):
+                out.add(k)
+    return out
+
+
+def _mask_places(order: list, fact: Fact) -> list:
+    """The record with investigator lines' mentions of the detail's place removed where the line puts it elsewhere
+    (one of by, near, beside, outside, behind, next, side, around, front, toward, past within the 3 words before it)."""
+    groups = place_groups(fact)
+    if not groups:
+        return order
+    alts = [a for k in groups for a in fact.must[k] if len(_tok(a)) == 1]
+    out = []
+    for u in order:
+        if u.role != "interrogator" or not any(has_terms(u.text, [[a]]) for a in alts):
+            out.append(u)
+            continue
+        words = list(re.finditer(r"[A-Za-z0-9]+", plain(u.text)))
+        cut = [m for j, m in enumerate(words) if any(_matches(m.group(0).lower(), a) for a in alts)
+               and ELSEWHERE & {w.group(0).lower() for w in words[max(0, j - 3):j]}]
+        if not cut:
+            out.append(u)
+            continue
+        t = plain(u.text)
+        for m in reversed(cut):
+            t = t[:m.start()] + "elsewhere" + t[m.end():]
+        out.append(replace(u, text=t))
+    return out
+
+
 READ_ALOUD = re.compile(r"^\s*\(read aloud by (\w+) from (\w+)'s written statement; printed speaker: (\w+)\)\s*")
 
 
@@ -376,13 +418,16 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
     inv_part: dict[str, list] = {}  # investigator lines carrying some groups (code), echoes removed
     echoes: dict[str, list] = {}    # investigator lines repeating his words from the turn before
     if fact.must:
-        for i, u in enumerate(order):
+        # where the detail puts something in or on a place ('inside the garage'), an investigator line that puts it by,
+        # beside or outside that place doesn't name that part (the same place rule the suspect-side check applies)
+        order_m = _mask_places(order, fact)
+        for i, u in enumerate(order_m):
             if u.role != "interrogator":
                 continue
-            echo = _echo_groups(order, i, fact.must)
+            echo = _echo_groups(order_m, i, fact.must)
             if echo:
                 echoes[u.id] = echo
-            if carries(order, i, fact.must) and not echo:
+            if carries(order_m, i, fact.must) and not echo:
                 inv_full.add(u.id)
             else:
                 gs = [g for g in fact.must if has_terms(u.text, [g]) and g not in echo]
@@ -624,10 +669,39 @@ def _cue_sentences(text: str) -> list[str]:
     return list(dict.fromkeys(out))
 
 
+REPORT_VERB = re.compile(r"\b(talk(ed|in'?|ing)|spoke|spoken|told|said|mentioned)\b", re.I)
+
+
+def _prior_turn(text: str, must: list) -> tuple[str, str] | None:
+    """Does this investigator turn report an earlier conversation, and name the detail while doing so? A turn reports
+    one when it has a time-reference cue (the other night, last time, a weekday...) and a talk or report verb (talked,
+    spoke, told, said), so 'You ate that whole pizza the other night' doesn't. Then any sentence of the turn (or two
+    consecutive sentences, as everywhere) that carries the detail counts. Returns (the cue sentence, the detail's
+    sentences), or None."""
+    cues = _cue_sentences(text)
+    if not cues or not REPORT_VERB.search(plain(text)):
+        return None
+    span = next((sp.strip() for sp in _spans(text) if has_terms(sp, must)), None)
+    return (cues[0], span) if span else None
+
+
+def _turn_quote(cue: str, span: str) -> str:
+    return f"“{cue}”" if cue == span or span in cue else (f"“{span}”" if cue in span else f"“{cue}” … “{span}”")
+
+
 def _recorded_before(case: Case, fact: Fact, seq: int) -> bool:
-    """Does any earlier recorded line, by anyone, carry the detail (code, key terms)?"""
-    order = ordered(case)
-    return any(u.seq < seq and carries(order, i, fact.must) for i, u in enumerate(order))
+    """Does an earlier recorded line carry the detail? An investigator line, by its own words (key terms in one or two
+    consecutive sentences); a suspect line only if the ledger counts it as his statement (a short answer that only
+    borrows the question's words, or one the check rejected, isn't one)."""
+    counted = {m.utterance for m in case.mentions if m.fact == fact.id and m.verified is not False and m.kind in ("asserts", "assents")}
+    for u in ordered(case):
+        if u.seq >= seq:
+            break
+        if u.role == "interrogator" and any(has_terms(sp, fact.must) for sp in _spans(u.text)):
+            return True
+        if u.role == "suspect" and u.id in counted and any(has_terms(sp, fact.must) for sp in _spans(u.text)):
+            return True
+    return False
 
 
 def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | None, by_id: dict, sessions: dict,
@@ -680,17 +754,18 @@ def _origin_core(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict
     if inv_first:
         u = by_id[first_inv["utterance"]]
         if fact.must:
-            # an earlier conversation counts only if the sentence that refers to it names the detail itself, and no
-            # earlier recorded line (anyone's) carries it; otherwise the recorded lines decide by order
+            # an earlier conversation counts only if this turn reports one (a time cue and a talk or report verb) and
+            # names the detail in doing so, and no earlier recorded line (anyone's) carries it; otherwise the recorded
+            # lines decide by order
             cues = _cue_sentences(u.text)
-            hit = next((c for c in cues if has_terms(c, fact.must)), None)
+            hit = _prior_turn(u.text, fact.must)
             if hit and not _recorded_before(case, fact, first_inv["seq"]):
-                return "prior_contact", (f"Investigators first said it ({_cite(first_inv, sessions)}), in a sentence that refers to an earlier "
-                                         f"conversation with no public transcript: “{hit}”.")
+                return "prior_contact", (f"Investigators first said it ({_cite(first_inv, sessions)}), in a turn that reports an earlier "
+                                         f"conversation with no public transcript: {_turn_quote(*hit)}.")
             how = "by agreeing to a question" if first_sus["kind"] == "assents" else "after that"
             note = ""
             if cues and not hit:
-                note = (f" The same line refers to an earlier conversation (“{cues[0]}”), but that sentence doesn't name the detail, "
+                note = (f" The same line mentions an earlier time (“{cues[0]}”), but it doesn't report a conversation that named the detail, "
                         "so it isn't counted as one.")
             elif hit:
                 note = " The line refers to an earlier conversation, but an earlier recorded line already carries the detail, so the record decides."
@@ -705,10 +780,10 @@ def _origin_core(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict
                                       f"({_cite(first_sus, sessions)}).")
     cue = _prior_cue(case, first_sus, before=12)
     if cue and fact.must:
-        hit = next((c for c in _cue_sentences(cue.text) if has_terms(c, fact.must)), None)
+        hit = _prior_turn(cue.text, fact.must)
         if hit and not _recorded_before(case, fact, cue.seq):
             return "prior_contact", (f"The suspect said it first in the transcripts ({_cite(first_sus, sessions)}), but just before, an investigator "
-                                     f"referred to an earlier conversation with no public transcript in a sentence that names it: “{hit}”.")
+                                     f"reported an earlier conversation with no public transcript that named it ({pages_of(cue)}): {_turn_quote(*hit)}.")
     elif cue:
         return "prior_contact", (f"The suspect said it first in the transcripts ({_cite(first_sus, sessions)}), but just before, the investigator "
                                  f"may have referred to an earlier conversation with no public transcript ({pages_of(cue)}: {_cue_quote(cue.text, fact.must)}).")

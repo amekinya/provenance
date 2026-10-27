@@ -271,11 +271,11 @@ def test_pizza_chatter_and_told_us_last_time_are_not_prior_contact():
          Utterance("B2", "B", 11, "KID", "suspect", "He tied her up with rope.", "667")]
     rep = by_fact(audit(Case("t", "T", "KID", s, u, [rope], [Mention("B2", "F1", "asserts", verified=True)])))
     assert rep["F1"]["origin"] == "suspect_first"
-    # the cue names something else in another sentence of the line: investigators first, and the card says why it isn't one
-    u = [Utterance("B1", "B", 10, "DET", "interrogator", "I talked to ya the other night about school. Did he tie her up with a rope?", "667"),
+    # a time cue without a talk or report verb doesn't report a conversation: investigators first, and the card says why
+    u = [Utterance("B1", "B", 10, "DET", "interrogator", "You ate that whole pizza the other night. Did he tie her up with a rope?", "667"),
          Utterance("B2", "B", 11, "KID", "suspect", "Yeah.", "667")]
     rep = by_fact(audit(Case("t", "T", "KID", s, u, [rope], [Mention("B2", "F1", "assents", verified=True)])))
-    assert rep["F1"]["origin"] == "interrogator_first" and "doesn't name the detail" in rep["F1"]["why"]
+    assert rep["F1"]["origin"] == "interrogator_first" and "doesn't report a conversation" in rep["F1"]["why"]
     # "You told us last time ..." when last time was recorded: his recorded line decides by order
     carry = Fact("F2", "He helped carry her out of the bedroom", must=[["carry", "carried"], ["bedroom"]])
     u = [Utterance("A1", "A", 1, "KID", "suspect", "I helped carry her out of the bedroom.", "470"),
@@ -333,3 +333,20 @@ def test_memo_card_text_carries_label_words_and_his_answers():
     assert "he answered “uh uh” (p. 663) and “No but I don't know where it was.” (p. 663)." in t
     assert memo_problems(t, ["(shakes head “no”) uh uh", "No but I don't know where it was."]) == []
     assert memo_problems("Eight came from him first, with nothing earlier supplying them.", []) != []
+
+
+def test_prior_contact_reads_the_whole_turn_that_reports_the_conversation():
+    # S2-0366: the cue sentence is about Monte; the detail is two sentences later in the same reported conversation
+    s = _two_sessions()
+    blood = Fact("F1", "Blood on the garage floor", must=[["blood", "bloody"], ["floor", "garage"]])
+    line = ("OK. We're not gonna go any further in this cuz we need to get the truth out now. We know the fire was going. I talked to ya "
+            "the other night and you said nothing about Monte you said nothing about something getting punctured and leaking out. We "
+            "talked about cleaning somethin' up in that garage. You told me that you thought thinking back now there was blood. "
+            "What's goin' on?")
+    u = [Utterance("A1", "A", 1, "KID", "suspect", "...He had a shovel, ...", "450"),
+         Utterance("B1", "B", 10, "DET", "interrogator", line, "547"),
+         Utterance("B2", "B", 11, "KID", "suspect", "On the floor.", "551")]
+    m = [Mention("A1", "F1", "denies", verified=False), Mention("B2", "F1", "asserts", verified=True)]
+    r = by_fact(audit(Case("t", "T", "KID", s, u, [blood], m)))["F1"]
+    assert r["origin"] == "prior_contact"
+    assert "“I talked to ya the other night" in r["why"] and "there was blood.”" in r["why"]
