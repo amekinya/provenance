@@ -10,24 +10,8 @@
  {
   "utterance": "S1-0019",
   "fact": "F15",
-  "kind": "asserts",
-  "quote": "that seat out of a, the vehicle seat remember that one, brought it over and someone put it on the fire",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0019",
-  "fact": "F14",
   "kind": "asks",
-  "quote": "tend to a fire and stuff like that behind the garage",
-  "by": "model",
-  "verified": false
- },
- {
-  "utterance": "S1-0020",
-  "fact": "F15",
-  "kind": "asserts",
-  "quote": "We both did.",
+  "quote": "that seat out of a, the vehicle seat remember that one, brought it over and someone put it on the fire",
   "by": "model",
   "verified": null
  },
@@ -43,9 +27,9 @@
   "utterance": "S1-0022",
   "fact": "F14",
   "kind": "asserts",
-  "quote": "Some branches.....a cabinet and some tires..........",
+  "quote": "Some branches.....a cabinet and some tires",
   "by": "model",
-  "verified": true
+  "verified": false
  },
  {
   "utterance": "S1-0023",
@@ -64,10 +48,18 @@
   "verified": true
  },
  {
+  "utterance": "S1-0024",
+  "fact": "F15",
+  "kind": "asserts",
+  "quote": "Teresa's bones were intermingled in that seat. And the only way her bones were intermingled in that seat is if she was put on that seat or if the seat was put on top of her.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S1-0025",
   "fact": "F13",
-  "kind": "asserts",
-  "quote": "inadvertently saw some things that's what it would be, it wouldn't be that Brendan act- actually helped him dispose of this body",
+  "kind": "asks",
+  "quote": "What did you see in that fire?",
   "by": "model",
   "verified": null
  },
@@ -75,7 +67,7 @@
   "utterance": "S1-0026",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "some black..........some garbage bag on there.",
+  "quote": "some black..........some garbage bag on there",
   "by": "model",
   "verified": false
  },
@@ -84,46 +76,6 @@
   "fact": "F13",
   "kind": "asks",
   "quote": "what was in the garbage bag?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0029",
-  "fact": "F13",
-  "kind": "asserts",
-  "quote": "garbage bag and they were plastic? Plastic melts pretty quick right..........",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0030",
-  "fact": "F13",
-  "kind": "asserts",
-  "quote": "Well, I would burn the garbage",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0031",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "Where did you get those bags from?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0032",
-  "fact": "F13",
-  "kind": "asserts",
-  "quote": "from his garage ... he was saving it for a bonfire",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0035",
-  "fact": "F13",
-  "kind": "asserts",
-  "quote": "you saw him put some garbage bags on",
   "by": "model",
   "verified": null
  },
@@ -149,7 +101,7 @@
   "kind": "asks",
   "quote": "Her bones?",
   "by": "model",
-  "verified": true
+  "verified": false
  },
  {
   "utterance": "S1-0044",
@@ -168,32 +120,56 @@
   "verified": null
  },
  {
+  "utterance": "S1-0058",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "He had it outside, I just pushed it into the garage.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S1-0092",
   "fact": "F13",
-  "kind": "asserts",
-  "quote": "a fire",
+  "kind": "denies",
+  "quote": "Steven said there wasn't a fire that night. He denied that, denied that and denied that until enough witnesses came forward and said that had they seen a fire.",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S1-0098",
   "fact": "F13",
-  "kind": "asserts",
-  "quote": "fire",
+  "kind": "asks",
+  "quote": "Anyone else by the fire by you that night?",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S1-0101",
   "fact": "F13",
+  "kind": "asks",
+  "quote": "I find it quite difficult to believe that if there was a body in that Brendan that you wouldn't have seen something like a hand, or a foot, a head, hair, something.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0102",
+  "fact": "F13",
+  "kind": "asks",
+  "quote": "by the garage, by the house, by the fire pit. I know you saw something.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0113",
+  "fact": "F22",
   "kind": "asserts",
-  "quote": "body in that",
+  "quote": "some clothes like a blue shirt, some pants",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S1-0115",
-  "fact": "F01",
+  "fact": "F22",
   "kind": "asserts",
   "quote": "His garage.",
   "by": "model",
@@ -201,7 +177,7 @@
  },
  {
   "utterance": "S1-0119",
-  "fact": "F01",
+  "fact": "F22",
   "kind": "asserts",
   "quote": "in the back",
   "by": "model",
@@ -216,6 +192,22 @@
   "verified": null
  },
  {
+  "utterance": "S1-0122",
+  "fact": "F22",
+  "kind": "asks",
+  "quote": "Did you see some undergarments or anything like that? Bra?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0123",
+  "fact": "F22",
+  "kind": "asks",
+  "quote": "How about any shoes?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S1-0125",
   "fact": "F20",
   "kind": "asks",
@@ -225,7 +217,7 @@
  },
  {
   "utterance": "S1-0127",
-  "fact": "F22",
+  "fact": "F20",
   "kind": "asks",
   "quote": "Was there blood on those clothes?",
   "by": "model",
@@ -233,7 +225,7 @@
  },
  {
   "utterance": "S1-0128",
-  "fact": "F22",
+  "fact": "F20",
   "kind": "asserts",
   "quote": "A little bit",
   "by": "model",
@@ -241,7 +233,7 @@
  },
  {
   "utterance": "S1-0129",
-  "fact": "F22",
+  "fact": "F20",
   "kind": "asks",
   "quote": "Where was the blood?",
   "by": "model",
@@ -249,7 +241,7 @@
  },
  {
   "utterance": "S1-0131",
-  "fact": "F22",
+  "fact": "F20",
   "kind": "asks",
   "quote": "Blood on the shirt?",
   "by": "model",
@@ -257,9 +249,17 @@
  },
  {
   "utterance": "S1-0134",
-  "fact": "F22",
+  "fact": "F13",
   "kind": "asserts",
   "quote": "the fire",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0134",
+  "fact": "F24",
+  "kind": "asserts",
+  "quote": "said he was gonna bury it",
   "by": "model",
   "verified": null
  },
@@ -267,7 +267,7 @@
   "utterance": "S1-0135",
   "fact": "F13",
   "kind": "asks",
-  "quote": "When the fire pit got full, he was gonna bury that whole pit and start, did he have somewhere else? Where..........",
+  "quote": "When the fire pit got full, he was gonna bury that whole pit and start",
   "by": "model",
   "verified": null
  },
@@ -275,7 +275,7 @@
   "utterance": "S1-0137",
   "fact": "F13",
   "kind": "asks",
-  "quote": "So you had to move it from behind the garage to behind the house. Did he say why? Did you know why?",
+  "quote": "So you had to move it from behind the garage to behind the house",
   "by": "model",
   "verified": null
  },
@@ -299,7 +299,7 @@
   "utterance": "S1-0142",
   "fact": "F22",
   "kind": "asks",
-  "quote": "You now know better, they were girl clothes, weren't they?",
+  "quote": "they were girl clothes, weren't they?",
   "by": "model",
   "verified": null
  },
@@ -378,14 +378,6 @@
  {
   "utterance": "S1-0161",
   "fact": "F13",
-  "kind": "asks",
-  "quote": "Tell us what you saw. You saw some body parts",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0161",
-  "fact": "F13",
   "kind": "asserts",
   "quote": "We found some flesh in that fire too",
   "by": "model",
@@ -403,7 +395,7 @@
   "utterance": "S1-0161",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "We found it after all that burned",
+  "quote": "You saw some body parts",
   "by": "model",
   "verified": null
  },
@@ -425,9 +417,25 @@
  },
  {
   "utterance": "S1-0169",
-  "fact": "F14",
+  "fact": "F13",
   "kind": "asks",
   "quote": "Where? The body parts that you saw, were they on top of tires or underneath the tires, or?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0169",
+  "fact": "F14",
+  "kind": "asks",
+  "quote": "were they on top of tires or underneath the tires, or?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0172",
+  "fact": "F13",
+  "kind": "asserts",
+  "quote": "bottom of tires",
   "by": "model",
   "verified": null
  },
@@ -436,6 +444,14 @@
   "fact": "F14",
   "kind": "asserts",
   "quote": "bottom of tires",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0173",
+  "fact": "F13",
+  "kind": "asserts",
+  "quote": "Underneath the bottom of the tires.",
   "by": "model",
   "verified": null
  },
@@ -491,7 +507,7 @@
   "utterance": "S1-0184",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "a little it of flesch",
+  "quote": "a little it of flesch.",
   "by": "model",
   "verified": null
  },
@@ -589,11 +605,27 @@
   "kind": "asks",
   "quote": "you see the branches, the tires, the garbage, it's all on the fire already?",
   "by": "model",
+  "verified": true
+ },
+ {
+  "utterance": "S1-0217",
+  "fact": "F13",
+  "kind": "asks",
+  "quote": "it's all on the fire already? Is it burning already?",
+  "by": "model",
   "verified": null
  },
  {
   "utterance": "S1-0218",
   "fact": "F14",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": true
+ },
+ {
+  "utterance": "S1-0218",
+  "fact": "F13",
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
@@ -640,14 +672,6 @@
   "verified": null
  },
  {
-  "utterance": "S1-0235",
-  "fact": "F14",
-  "kind": "asserts",
-  "quote": "car seat",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0238",
   "fact": "F13",
   "kind": "asks",
@@ -660,6 +684,14 @@
   "fact": "F13",
   "kind": "asks",
   "quote": "You saw the hands and the forehead.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0244",
+  "fact": "F13",
+  "kind": "asks",
+  "quote": "did you ever see the body again then? What parts did you see this time?",
   "by": "model",
   "verified": null
  },
@@ -681,15 +713,15 @@
  },
  {
   "utterance": "S1-0251",
-  "fact": "F22",
+  "fact": "F04",
   "kind": "asks",
-  "quote": "Now earlier you said the clothes were not in the back on the far side, how did you tell that?",
+  "quote": "earlier you said the clothes were not in the back on the far side",
   "by": "model",
-  "verified": null
+  "verified": false
  },
  {
   "utterance": "S1-0252",
-  "fact": "F22",
+  "fact": "F04",
   "kind": "asserts",
   "quote": "Cuz he usually has them back there",
   "by": "model",
@@ -725,7 +757,7 @@
   "kind": "asks",
   "quote": "you saw the bones",
   "by": "model",
-  "verified": null
+  "verified": false
  },
  {
   "utterance": "S1-0271",
@@ -771,9 +803,9 @@
   "utterance": "S1-0281",
   "fact": "F04",
   "kind": "asks",
-  "quote": "Let's back up to when you go out there, did he tell you about Teresa right away or did you actually see the body before he told you?",
+  "quote": "did you actually see the body before he told you?",
   "by": "model",
-  "verified": false
+  "verified": null
  },
  {
   "utterance": "S1-0282",
@@ -784,34 +816,18 @@
   "verified": null
  },
  {
-  "utterance": "S1-0294",
-  "fact": "F02",
-  "kind": "assents",
-  "quote": "Yeah",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0294",
-  "fact": "F03",
-  "kind": "assents",
-  "quote": "Yeah",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0294",
-  "fact": "F06",
-  "kind": "assents",
-  "quote": "Yeah",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0296",
   "fact": "F01",
   "kind": "asserts",
-  "quote": ".....car...the...jeep....",
+  "quote": "car...the...jeep",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0297",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "What did he tell you he did in the jeep?",
   "by": "model",
   "verified": null
  },
@@ -819,7 +835,7 @@
   "utterance": "S1-0298",
   "fact": "F03",
   "kind": "asserts",
-  "quote": "That he tied her up",
+  "quote": "tied her up",
   "by": "model",
   "verified": null
  },
@@ -827,15 +843,7 @@
   "utterance": "S1-0298",
   "fact": "F06",
   "kind": "asserts",
-  "quote": "and stabbed her.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0302",
-  "fact": "F15",
-  "kind": "asserts",
-  "quote": "He said how he tried to hide it.",
+  "quote": "stabbed her",
   "by": "model",
   "verified": null
  },
@@ -921,19 +929,19 @@
  },
  {
   "utterance": "S1-0315",
-  "fact": "F04",
+  "fact": "F06",
   "kind": "asks",
-  "quote": "in the truck you said",
+  "quote": "And he stabbed her where, in the truck you said?",
   "by": "model",
-  "verified": false
+  "verified": null
  },
  {
   "utterance": "S1-0315",
-  "fact": "F06",
+  "fact": "F04",
   "kind": "asks",
-  "quote": "And he stabbed her where",
+  "quote": "in the truck you said?",
   "by": "model",
-  "verified": null
+  "verified": false
  },
  {
   "utterance": "S1-0316",
@@ -971,13 +979,13 @@
   "utterance": "S1-0319",
   "fact": "F04",
   "kind": "asks",
-  "quote": "instead of the truck",
+  "quote": "instead of the truck?",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S1-0321",
-  "fact": "F04",
+  "fact": "F02",
   "kind": "asks",
   "quote": "How do you know it's in there?",
   "by": "model",
@@ -985,7 +993,7 @@
  },
  {
   "utterance": "S1-0323",
-  "fact": "F01",
+  "fact": "F04",
   "kind": "asks",
   "quote": "Did he take you down and show you the jeep?",
   "by": "model",
@@ -1017,14 +1025,6 @@
  },
  {
   "utterance": "S1-0338",
-  "fact": "F23",
-  "kind": "asks",
-  "quote": "was there a fire burning out in front of the house in the burn barrel?",
-  "by": "model",
-  "verified": false
- },
- {
-  "utterance": "S1-0338",
   "fact": "F15",
   "kind": "asks",
   "quote": "what was he gonna do with the car?",
@@ -1043,7 +1043,7 @@
   "utterance": "S1-0342",
   "fact": "F15",
   "kind": "asks",
-  "quote": "Did he tell you anything else about the car besides that he put branches on it and, and a hood on it.",
+  "quote": "Did he ever tell you what he was gonna do with the car? Did he tell you anything else about the car besides that he put branches on it and, and a hood on it.",
   "by": "model",
   "verified": null
  },
@@ -1120,14 +1120,6 @@
   "verified": null
  },
  {
-  "utterance": "S1-0356",
-  "fact": "F20",
-  "kind": "asks",
-  "quote": "Did you see any blood on him at all?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0361",
   "fact": "F02",
   "kind": "asserts",
@@ -1176,14 +1168,6 @@
   "verified": null
  },
  {
-  "utterance": "S1-0369",
-  "fact": "F20",
-  "kind": "denies",
-  "quote": "No.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0371",
   "fact": "F02",
   "kind": "asks",
@@ -1224,10 +1208,10 @@
   "verified": true
  },
  {
-  "utterance": "S1-0377",
+  "utterance": "S1-0382",
   "fact": "F02",
   "kind": "asks",
-  "quote": "Tell us what he told you exactly?",
+  "quote": "he cut himself, while he was stabbing her",
   "by": "model",
   "verified": null
  },
@@ -1241,6 +1225,14 @@
  },
  {
   "utterance": "S1-0383",
+  "fact": "F02",
+  "kind": "assents",
+  "quote": "Yes",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0383",
   "fact": "F06",
   "kind": "assents",
   "quote": "Yes",
@@ -1249,9 +1241,25 @@
  },
  {
   "utterance": "S1-0384",
+  "fact": "F02",
+  "kind": "asks",
+  "quote": "him cutting himself",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0384",
   "fact": "F06",
   "kind": "asks",
-  "quote": "what he told you about him cutting himself",
+  "quote": "him cutting himself",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0393",
+  "fact": "F02",
+  "kind": "asserts",
+  "quote": "he stabbed her",
   "by": "model",
   "verified": null
  },
@@ -1265,9 +1273,25 @@
  },
  {
   "utterance": "S1-0394",
+  "fact": "F02",
+  "kind": "asks",
+  "quote": "Had he told you that?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0394",
   "fact": "F06",
   "kind": "asks",
-  "quote": "Had he told you that",
+  "quote": "Had he told you that?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0395",
+  "fact": "F02",
+  "kind": "assents",
+  "quote": "Yes",
   "by": "model",
   "verified": null
  },
@@ -1283,9 +1307,9 @@
   "utterance": "S1-0396",
   "fact": "F11",
   "kind": "asks",
-  "quote": "Did he say he had had a gun",
+  "quote": "a gun",
   "by": "model",
-  "verified": true
+  "verified": false
  },
  {
   "utterance": "S1-0398",
@@ -1336,14 +1360,6 @@
   "verified": null
  },
  {
-  "utterance": "S1-0404",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "inside the truck",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0405",
   "fact": "F06",
   "kind": "assents",
@@ -1352,24 +1368,8 @@
   "verified": null
  },
  {
-  "utterance": "S1-0405",
-  "fact": "F04",
-  "kind": "assents",
-  "quote": "Yeah",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0406",
   "fact": "F13",
-  "kind": "asks",
-  "quote": "put the truck in the pit",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0406",
-  "fact": "F15",
   "kind": "asks",
   "quote": "put the truck in the pit",
   "by": "model",
@@ -1384,24 +1384,8 @@
   "verified": null
  },
  {
-  "utterance": "S1-0407",
-  "fact": "F15",
-  "kind": "assents",
-  "quote": "Yes.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0408",
   "fact": "F13",
-  "kind": "asks",
-  "quote": "how did he get the truck in the pit",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0408",
-  "fact": "F15",
   "kind": "asks",
   "quote": "how did he get the truck in the pit",
   "by": "model",
@@ -1416,40 +1400,8 @@
   "verified": null
  },
  {
-  "utterance": "S1-0409",
-  "fact": "F15",
-  "kind": "asserts",
-  "quote": "He drove it.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0410",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "He drove it which way?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0410",
-  "fact": "F15",
-  "kind": "asks",
-  "quote": "He drove it which way?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S1-0411",
   "fact": "F13",
-  "kind": "asserts",
-  "quote": "Chuck's way, Chuck's, past Chuck's house.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S1-0411",
-  "fact": "F15",
   "kind": "asserts",
   "quote": "Chuck's way, Chuck's, past Chuck's house.",
   "by": "model",
@@ -1621,7 +1573,7 @@
   "kind": "asserts",
   "quote": "I seen the toes before we throw the wood and cabinet on the fire",
   "by": "model",
-  "verified": true
+  "verified": false
  },
  {
   "utterance": "S1-0491",
@@ -1715,7 +1667,7 @@
   "utterance": "S1-0520",
   "fact": "F13",
   "kind": "asks",
-  "quote": "what you saw in the fire and it was getting very difficult to write that, but I think it\u2019s important that you write not to just to tell what us the things that you saw in the fire about her and the clothing",
+  "quote": "what you saw in the fire and it was getting very difficult to write that, but I think it's important that you write not to just to tell what us the things that you saw in the fire about her and the clothing",
   "by": "model",
   "verified": null
  },
@@ -1723,7 +1675,7 @@
   "utterance": "S1-0520",
   "fact": "F22",
   "kind": "asks",
-  "quote": "what you saw in the fire and it was getting very difficult to write that, but I think it\u2019s important that you write not to just to tell what us the things that you saw in the fire about her and the clothing",
+  "quote": "about her and the clothing",
   "by": "model",
   "verified": null
  },
@@ -1816,6 +1768,14 @@
   "verified": null
  },
  {
+  "utterance": "S1-0531",
+  "fact": "F06",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S1-0533",
   "fact": "F15",
   "kind": "asks",
@@ -1840,6 +1800,102 @@
   "verified": null
  },
  {
+  "utterance": "S1-0537",
+  "fact": "F04",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0537",
+  "fact": "F06",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0537",
+  "fact": "F03",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0537",
+  "fact": "F13",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0537",
+  "fact": "F14",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0537",
+  "fact": "F15",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0539",
+  "fact": "F04",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0539",
+  "fact": "F06",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0539",
+  "fact": "F03",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0539",
+  "fact": "F13",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0539",
+  "fact": "F14",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S1-0539",
+  "fact": "F15",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S1-0540",
   "fact": "F03",
   "kind": "asserts",
@@ -1859,7 +1915,7 @@
   "utterance": "S1-0540",
   "fact": "F06",
   "kind": "asserts",
-  "quote": "and that's when he stabbed her.",
+  "quote": "and that's when he stabbed her",
   "by": "model",
   "verified": null
  },
@@ -1867,15 +1923,15 @@
   "utterance": "S1-0540",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "I seen the fingers and the belly and the forehead in the fire.",
+  "quote": "I seen the fingers and the belly and the forehead in the fire",
   "by": "model",
-  "verified": null
+  "verified": true
  },
  {
   "utterance": "S1-0540",
   "fact": "F14",
   "kind": "asserts",
-  "quote": "The body looked like it was together and it was under some tires and branches.",
+  "quote": "The body looked like it was together and it was under some tires and branches",
   "by": "model",
   "verified": null
  },
@@ -1883,7 +1939,7 @@
   "utterance": "S1-0540",
   "fact": "F15",
   "kind": "asserts",
-  "quote": "He hid the vehicle in the pit back in the tree area.",
+  "quote": "He hid the vehicle in the pit back in the tree area",
   "by": "model",
   "verified": null
  },
@@ -1929,7 +1985,7 @@
  },
  {
   "utterance": "S1-0547",
-  "fact": "F20",
+  "fact": "F22",
   "kind": "asserts",
   "quote": "Somblood.",
   "by": "model",
@@ -1937,7 +1993,7 @@
  },
  {
   "utterance": "S1-0549",
-  "fact": "F20",
+  "fact": "F22",
   "kind": "asserts",
   "quote": "Blood",
   "by": "model",
@@ -2032,14 +2088,6 @@
   "verified": null
  },
  {
-  "utterance": "S1-0570",
-  "fact": "F23",
-  "kind": "denies",
-  "quote": "No.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-0011",
   "fact": "F19",
   "kind": "asks",
@@ -2107,7 +2155,7 @@
   "utterance": "S2-0084",
   "fact": "F19",
   "kind": "asserts",
-  "quote": "You guys don't need to pick those jeans up, we picked 'em up. Yeah. Yup. At Brendan's house. Brendan gave us permission to go get 'em",
+  "quote": "Brendan gave us permission to go get 'em, he's with us right now",
   "by": "model",
   "verified": null
  },
@@ -2136,9 +2184,25 @@
   "verified": null
  },
  {
-  "utterance": "S2-0262",
+  "utterance": "S2-0258",
   "fact": "F19",
   "kind": "asserts",
+  "quote": "cleaned it up",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-0258",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "cleaned it up",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-0262",
+  "fact": "F19",
+  "kind": "asks",
   "quote": "helping him",
   "by": "model",
   "verified": null
@@ -2146,7 +2210,7 @@
  {
   "utterance": "S2-0262",
   "fact": "F20",
-  "kind": "asserts",
+  "kind": "asks",
   "quote": "helping him",
   "by": "model",
   "verified": null
@@ -2196,14 +2260,6 @@
   "fact": "F01",
   "kind": "asserts",
   "quote": "her jeep there",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0288",
-  "fact": "F01",
-  "kind": "asks",
-  "quote": "So she's standing meaning she is Teresa?",
   "by": "model",
   "verified": null
  },
@@ -2323,17 +2379,17 @@
   "utterance": "S2-0366",
   "fact": "F20",
   "kind": "asserts",
-  "quote": "there was blood. It was red in color",
+  "quote": "You told me that you thought thinking back now there was blood. It was red in color",
   "by": "model",
   "verified": true
  },
  {
   "utterance": "S2-0366",
-  "fact": "F20",
+  "fact": "F19",
   "kind": "asserts",
-  "quote": "cleaning somethin' up in that garage",
+  "quote": "We talked about cleaning somethin' up in that garage.",
   "by": "model",
-  "verified": true
+  "verified": null
  },
  {
   "utterance": "S2-0380",
@@ -2564,14 +2620,6 @@
   "fact": "F03",
   "kind": "asserts",
   "quote": "the rope",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0427",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "Where was she?",
   "by": "model",
   "verified": null
  },
@@ -2824,24 +2872,8 @@
   "verified": null
  },
  {
-  "utterance": "S2-0485",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "get over into the garage",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-0486",
   "fact": "F01",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0486",
-  "fact": "F04",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d)Yeah.",
   "by": "model",
@@ -2888,6 +2920,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-0530",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "Teresa Halbach",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-0537",
   "fact": "F02",
   "kind": "asserts",
@@ -2897,7 +2937,7 @@
  },
  {
   "utterance": "S2-0538",
-  "fact": "F04",
+  "fact": "F01",
   "kind": "asserts",
   "quote": "back door of her truck",
   "by": "model",
@@ -2905,7 +2945,7 @@
  },
  {
   "utterance": "S2-0539",
-  "fact": "F04",
+  "fact": "F01",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d)",
   "by": "model",
@@ -3065,7 +3105,7 @@
  },
  {
   "utterance": "S2-0580",
-  "fact": "F13",
+  "fact": "F04",
   "kind": "asks",
   "quote": "did you carry her out there or did you use somethin' to get her back there?",
   "by": "model",
@@ -3075,31 +3115,47 @@
   "utterance": "S2-0581",
   "fact": "F04",
   "kind": "asserts",
-  "quote": "lifted her out of the jeep",
+  "quote": "we lifted her out of the jeep",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-0581",
-  "fact": "F13",
+  "fact": "F01",
   "kind": "asserts",
-  "quote": "put her on like a, like a wheeled thing",
+  "quote": "out of the jeep",
   "by": "model",
   "verified": null
  },
  {
-  "utterance": "S2-0585",
-  "fact": "F13",
-  "kind": "assents",
-  "quote": "Yeah. (nods \"yes\")",
+  "utterance": "S2-0587",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "is that creeper always kept in his garage?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-0588",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "he was borrowing it from the yard or somethin' like that.",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-0593",
   "fact": "F04",
-  "kind": "asks",
-  "quote": "So you guys lift her out of the truck,",
+  "kind": "asserts",
+  "quote": "lift her out of the truck",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-0593",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "out of the truck",
   "by": "model",
   "verified": null
  },
@@ -3108,54 +3164,6 @@
   "fact": "F04",
   "kind": "assents",
   "quote": "mm huh. (nods \"yes\")",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0595",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "And you got which part of her again?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0596",
-  "fact": "F04",
-  "kind": "asserts",
-  "quote": "Her feet.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0597",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "And what is Steve carrying?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0598",
-  "fact": "F04",
-  "kind": "asserts",
-  "quote": "Her head and her shoulders.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0599",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "And you put her on the creeper?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0600",
-  "fact": "F04",
-  "kind": "assents",
-  "quote": "Yeah. (nods \"yes\")",
   "by": "model",
   "verified": null
  },
@@ -3179,7 +3187,7 @@
   "utterance": "S2-0607",
   "fact": "F03",
   "kind": "asks",
-  "quote": "Describe that again how she was tied up, and again make it easy on yourself, just tell us the truth the first time.",
+  "quote": "Describe that again how she was tied up",
   "by": "model",
   "verified": null
  },
@@ -3204,14 +3212,6 @@
   "fact": "F03",
   "kind": "asserts",
   "quote": "Like, like right here.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0612",
-  "fact": "F03",
-  "kind": "asks",
-  "quote": "OK. What about her feet?",
   "by": "model",
   "verified": null
  },
@@ -3260,14 +3260,6 @@
   "fact": "F03",
   "kind": "asserts",
   "quote": "Like white and blue",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0626",
-  "fact": "F03",
-  "kind": "denies",
-  "quote": "(shakes head \u201cno\u201d) I don\u2019t remember.",
   "by": "model",
   "verified": null
  },
@@ -3369,33 +3361,9 @@
  },
  {
   "utterance": "S2-0672",
-  "fact": "F15",
+  "fact": "F01",
   "kind": "asserts",
   "quote": "he put her back in the jeep in the back",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0673",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "Was she dead then yet or not?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0676",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "Was she dead there then or not?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-0677",
-  "fact": "F13",
-  "kind": "assents",
-  "quote": "Yeah. (nods \u201cyes\u201d)",
   "by": "model",
   "verified": null
  },
@@ -3420,6 +3388,14 @@
   "fact": "F05",
   "kind": "asserts",
   "quote": "The house.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-0710",
+  "fact": "F05",
+  "kind": "asserts",
+  "quote": "went in the house",
   "by": "model",
   "verified": null
  },
@@ -3552,14 +3528,6 @@
   "verified": null
  },
  {
-  "utterance": "S2-0847",
-  "fact": "F20",
-  "kind": "asks",
-  "quote": "Any blood, at this time?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-0848",
   "fact": "F20",
   "kind": "denies",
@@ -3579,7 +3547,7 @@
   "utterance": "S2-0931",
   "fact": "F05",
   "kind": "asserts",
-  "quote": "she was chained up to the bed and, 'er she's faced up",
+  "quote": "That she was chained up to the bed and, 'er she's faced up.",
   "by": "model",
   "verified": null
  },
@@ -3628,6 +3596,14 @@
   "fact": "F05",
   "kind": "asserts",
   "quote": "Both.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-0947",
+  "fact": "F05",
+  "kind": "assents",
+  "quote": "(nods \"yes\")",
   "by": "model",
   "verified": null
  },
@@ -3752,6 +3728,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-1058",
+  "fact": "F06",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1059",
   "fact": "F06",
   "kind": "asks",
@@ -3764,6 +3748,14 @@
   "fact": "F06",
   "kind": "asserts",
   "quote": "Once.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1061",
+  "fact": "F06",
+  "kind": "asks",
+  "quote": "Then show me where.",
   "by": "model",
   "verified": null
  },
@@ -3800,6 +3792,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-1069",
+  "fact": "F07",
+  "kind": "asks",
+  "quote": "did she go unconscious",
+  "by": "model",
+  "verified": true
+ },
+ {
   "utterance": "S2-1070",
   "fact": "F07",
   "kind": "asserts",
@@ -3808,10 +3808,34 @@
   "verified": null
  },
  {
+  "utterance": "S2-1071",
+  "fact": "F07",
+  "kind": "asks",
+  "quote": "Did she fall asleep, go unconscious?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1072",
   "fact": "F07",
   "kind": "asserts",
   "quote": "Go unconscious.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1073",
+  "fact": "F06",
+  "kind": "asks",
+  "quote": "Is that before of after he stabbed her?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1073",
+  "fact": "F07",
+  "kind": "asks",
+  "quote": "Is that before of after he stabbed her?",
   "by": "model",
   "verified": null
  },
@@ -3835,7 +3859,7 @@
   "utterance": "S2-1075",
   "fact": "F06",
   "kind": "asks",
-  "quote": "So he stabs her, show me what he does. Just demonstrate for me.",
+  "quote": "So he stabs her",
   "by": "model",
   "verified": null
  },
@@ -3843,7 +3867,7 @@
   "utterance": "S2-1079",
   "fact": "F03",
   "kind": "asserts",
-  "quote": "That he was gonna tie her up, stab her and then choke like, choke her and that.",
+  "quote": "he was gonna tie her up",
   "by": "model",
   "verified": null
  },
@@ -3851,7 +3875,7 @@
   "utterance": "S2-1079",
   "fact": "F06",
   "kind": "asserts",
-  "quote": "That he was gonna tie her up, stab her and then choke like, choke her and that.",
+  "quote": "stab her",
   "by": "model",
   "verified": null
  },
@@ -3859,15 +3883,7 @@
   "utterance": "S2-1079",
   "fact": "F07",
   "kind": "asserts",
-  "quote": "That he was gonna tie her up, stab her and then choke like, choke her and that.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1081",
-  "fact": "F03",
-  "kind": "assents",
-  "quote": "Yeah.",
+  "quote": "choke like, choke her",
   "by": "model",
   "verified": null
  },
@@ -3880,18 +3896,18 @@
   "verified": null
  },
  {
-  "utterance": "S2-1081",
-  "fact": "F06",
+  "utterance": "S2-1083",
+  "fact": "F05",
   "kind": "assents",
-  "quote": "Yeah.",
+  "quote": "(nods \u201cyes\u201d)",
   "by": "model",
   "verified": null
  },
  {
-  "utterance": "S2-1081",
-  "fact": "F07",
-  "kind": "assents",
-  "quote": "Yeah.",
+  "utterance": "S2-1084",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "He went into the bedroom, what does he do?",
   "by": "model",
   "verified": null
  },
@@ -3979,7 +3995,7 @@
   "utterance": "S2-1095",
   "fact": "F03",
   "kind": "asks",
-  "quote": "So you helped unhook her hands?",
+  "quote": "So you helped unhook her hands? And what exactly did you do? Tell me exactly what you did.",
   "by": "model",
   "verified": null
  },
@@ -3987,7 +4003,7 @@
   "utterance": "S2-1095",
   "fact": "F05",
   "kind": "asks",
-  "quote": "So you helped unhook her hands?",
+  "quote": "So you helped unhook her hands? And what exactly did you do? Tell me exactly what you did.",
   "by": "model",
   "verified": null
  },
@@ -3995,7 +4011,7 @@
   "utterance": "S2-1096",
   "fact": "F03",
   "kind": "asserts",
-  "quote": "I got the key for the lock and unlocked it and after a, I grabbed her arm, put it on the side and tied her up",
+  "quote": "I got the key for the lock and unlocked it and after a, I grabbed her arm, put it on the side and tied her up.",
   "by": "model",
   "verified": null
  },
@@ -4003,7 +4019,7 @@
   "utterance": "S2-1096",
   "fact": "F05",
   "kind": "asserts",
-  "quote": "I got the key for the lock and unlocked it and after a, I grabbed her arm, put it on the side and tied her up",
+  "quote": "I got the key for the lock and unlocked it and after a, I grabbed her arm, put it on the side and tied her up.",
   "by": "model",
   "verified": null
  },
@@ -4088,6 +4104,126 @@
   "verified": null
  },
  {
+  "utterance": "S2-1118",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "Around the bottom, like where the",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1119",
+  "fact": "F03",
+  "kind": "asks",
+  "quote": "Show me on you where he does that, where you guys do that?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1120",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "Right here.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1121",
+  "fact": "F03",
+  "kind": "asks",
+  "quote": "Who ties her legs up?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1122",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "He does.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1123",
+  "fact": "F03",
+  "kind": "asks",
+  "quote": "Do you help? Otherwise she's gonna kick.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1124",
+  "fact": "F03",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1125",
+  "fact": "F03",
+  "kind": "asks",
+  "quote": "Did you help or not, yes or no?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1126",
+  "fact": "F03",
+  "kind": "assents",
+  "quote": "(nods \u201cyes\u201d) Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1127",
+  "fact": "F03",
+  "kind": "asks",
+  "quote": "OK, tell me how you did that.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1128",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "I held, I held her feet down.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1129",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "Held her feet down.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1130",
+  "fact": "F03",
+  "kind": "assents",
+  "quote": "(nods \u201cyes\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1131",
+  "fact": "F03",
+  "kind": "asks",
+  "quote": "And what did Steve do?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1132",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "He tied her legs up.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1133",
   "fact": "F05",
   "kind": "asks",
@@ -4133,7 +4269,7 @@
   "kind": "asks",
   "quote": "has he choked her already",
   "by": "model",
-  "verified": true
+  "verified": null
  },
  {
   "utterance": "S2-1140",
@@ -4504,6 +4640,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-1195",
+  "fact": "F09",
+  "kind": "assents",
+  "quote": "(nods \"yes\")",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1200",
   "fact": "F09",
   "kind": "asserts",
@@ -4545,7 +4689,7 @@
  },
  {
   "utterance": "S2-1205",
-  "fact": "F05",
+  "fact": "F09",
   "kind": "asks",
   "quote": "So she was alive yet right?",
   "by": "model",
@@ -4553,7 +4697,7 @@
  },
  {
   "utterance": "S2-1206",
-  "fact": "F05",
+  "fact": "F09",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d)",
   "by": "model",
@@ -4577,7 +4721,7 @@
  },
  {
   "utterance": "S2-1209",
-  "fact": "F09",
+  "fact": "F06",
   "kind": "asks",
   "quote": "Was that before or after Steve stabbed her?",
   "by": "model",
@@ -4585,7 +4729,7 @@
  },
  {
   "utterance": "S2-1209",
-  "fact": "F06",
+  "fact": "F09",
   "kind": "asks",
   "quote": "Was that before or after Steve stabbed her?",
   "by": "model",
@@ -4593,7 +4737,7 @@
  },
  {
   "utterance": "S2-1210",
-  "fact": "F09",
+  "fact": "F06",
   "kind": "asserts",
   "quote": "After.",
   "by": "model",
@@ -4601,7 +4745,7 @@
  },
  {
   "utterance": "S2-1210",
-  "fact": "F06",
+  "fact": "F09",
   "kind": "asserts",
   "quote": "After.",
   "by": "model",
@@ -4609,7 +4753,7 @@
  },
  {
   "utterance": "S2-1211",
-  "fact": "F09",
+  "fact": "F06",
   "kind": "asks",
   "quote": "It was after Steve stabbed her?",
   "by": "model",
@@ -4617,7 +4761,7 @@
  },
  {
   "utterance": "S2-1211",
-  "fact": "F06",
+  "fact": "F09",
   "kind": "asks",
   "quote": "It was after Steve stabbed her?",
   "by": "model",
@@ -4625,7 +4769,7 @@
  },
  {
   "utterance": "S2-1212",
-  "fact": "F09",
+  "fact": "F06",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d) mm-huh.",
   "by": "model",
@@ -4633,7 +4777,7 @@
  },
  {
   "utterance": "S2-1212",
-  "fact": "F06",
+  "fact": "F09",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d) mm-huh.",
   "by": "model",
@@ -4659,7 +4803,7 @@
   "utterance": "S2-1215",
   "fact": "F09",
   "kind": "asks",
-  "quote": "Did Steve tell you to do that?",
+  "quote": "She was breathing a little bit. Did Steve tell you to do that?",
   "by": "model",
   "verified": null
  },
@@ -4745,25 +4889,9 @@
  },
  {
   "utterance": "S2-1227",
-  "fact": "F06",
-  "kind": "asks",
-  "quote": "So Steve stabs her first and then you cut her neck?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1227",
   "fact": "F09",
   "kind": "asks",
-  "quote": "So Steve stabs her first and then you cut her neck?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1228",
-  "fact": "F06",
-  "kind": "assents",
-  "quote": "(nods \"yes\")",
+  "quote": "then you cut her neck?",
   "by": "model",
   "verified": null
  },
@@ -4794,10 +4922,10 @@
  {
   "utterance": "S2-1235",
   "fact": "F10",
-  "kind": "asserts",
+  "kind": "assents",
   "quote": "He did.",
   "by": "model",
-  "verified": false
+  "verified": true
  },
  {
   "utterance": "S2-1241",
@@ -4826,14 +4954,6 @@
  {
   "utterance": "S2-1243",
   "fact": "F11",
-  "kind": "assents",
-  "quote": "Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1243",
-  "fact": "F12",
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
@@ -4957,7 +5077,7 @@
   "kind": "asserts",
   "quote": "In the head.",
   "by": "model",
-  "verified": true
+  "verified": null
  },
  {
   "utterance": "S2-1268",
@@ -5048,15 +5168,47 @@
   "verified": null
  },
  {
+  "utterance": "S2-1279",
+  "fact": "F10",
+  "kind": "denies",
+  "quote": "Cuz I couldn't shoot no more.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1287",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "We're in the bedroom yet, OK?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1288",
+  "fact": "F05",
+  "kind": "assents",
+  "quote": "(nods \u201cyes\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1289",
   "fact": "F05",
   "kind": "asks",
   "quote": "She's handcuffed yet right?",
   "by": "model",
-  "verified": false
+  "verified": null
  },
  {
   "utterance": "S2-1290",
+  "fact": "F05",
+  "kind": "assents",
+  "quote": "(nods \u201cyes\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1292",
   "fact": "F05",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d)",
@@ -5267,15 +5419,7 @@
   "utterance": "S2-1341",
   "fact": "F10",
   "kind": "denies",
-  "quote": "No",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1342",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "carry her to the side of the garage",
+  "quote": "No.",
   "by": "model",
   "verified": null
  },
@@ -5283,31 +5427,23 @@
   "utterance": "S2-1343",
   "fact": "F13",
   "kind": "assents",
-  "quote": "mm huh",
+  "quote": "mm huh. (nods \u201cyes\u201d)",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-1344",
-  "fact": "F12",
+  "fact": "F01",
   "kind": "asks",
   "quote": "Was she ever in the garage?",
-  "by": "model",
-  "verified": false
- },
- {
-  "utterance": "S2-1345",
-  "fact": "F12",
-  "kind": "denies",
-  "quote": "No",
   "by": "model",
   "verified": null
  },
  {
-  "utterance": "S2-1346",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "carry her to the side of the garage",
+  "utterance": "S2-1345",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "No.",
   "by": "model",
   "verified": null
  },
@@ -5315,7 +5451,7 @@
   "utterance": "S2-1347",
   "fact": "F13",
   "kind": "assents",
-  "quote": "nods \u201cyes\u201d",
+  "quote": "(nods \u201cyes\u201d)",
   "by": "model",
   "verified": null
  },
@@ -5331,7 +5467,7 @@
   "utterance": "S2-1349",
   "fact": "F10",
   "kind": "asserts",
-  "quote": "He does",
+  "quote": "He does.",
   "by": "model",
   "verified": null
  },
@@ -5340,14 +5476,6 @@
   "fact": "F10",
   "kind": "asserts",
   "quote": "Steven.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1352",
-  "fact": "F10",
-  "kind": "asks",
-  "quote": "And who does Steven shoot?",
   "by": "model",
   "verified": null
  },
@@ -5370,7 +5498,7 @@
  {
   "utterance": "S2-1356",
   "fact": "F10",
-  "kind": "asserts",
+  "kind": "asks",
   "quote": "And he shoots her three times",
   "by": "model",
   "verified": null
@@ -5388,6 +5516,14 @@
   "fact": "F13",
   "kind": "asserts",
   "quote": "We carry her to the fire.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1361",
+  "fact": "F13",
+  "kind": "asserts",
+  "quote": "About 6:00, 6:30.",
   "by": "model",
   "verified": null
  },
@@ -5467,7 +5603,7 @@
   "utterance": "S2-1372",
   "fact": "F13",
   "kind": "asks",
-  "quote": "OK, so lets go back to outside, you carry her over, she's naked, right?",
+  "quote": "you carry her over, she's naked, right?",
   "by": "model",
   "verified": null
  },
@@ -5584,6 +5720,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-1384",
+  "fact": "F13",
+  "kind": "asks",
+  "quote": "Who's he?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1385",
   "fact": "F13",
   "kind": "asserts",
@@ -5683,7 +5827,7 @@
   "utterance": "S2-1401",
   "fact": "F13",
   "kind": "asks",
-  "quote": "put her on top of the fire that\u2019s already going",
+  "quote": "then you put her on top of the fire that\u2019s already going?",
   "by": "model",
   "verified": null
  },
@@ -5867,15 +6011,15 @@
   "utterance": "S2-1427",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "he set her back on the floor and then, that\u2019s when he threw her in the fire",
+  "quote": "he set her back on the floor and then, that's when he threw her in the fire",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-1429",
-  "fact": "F04",
+  "fact": "F01",
   "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)",
+  "quote": "(nods \"yes\")",
   "by": "model",
   "verified": null
  },
@@ -5890,8 +6034,8 @@
  {
   "utterance": "S2-1433",
   "fact": "F13",
-  "kind": "asks",
-  "quote": "Earlier you said this fire was going already.",
+  "kind": "asserts",
+  "quote": "Earlier you said this fire was going already",
   "by": "model",
   "verified": null
  },
@@ -5899,15 +6043,7 @@
   "utterance": "S2-1434",
   "fact": "F13",
   "kind": "assents",
-  "quote": "Yeah. (nods \u201cyes\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1435",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "It was?",
+  "quote": "Yeah. (nods \"yes\")",
   "by": "model",
   "verified": null
  },
@@ -5915,7 +6051,7 @@
   "utterance": "S2-1436",
   "fact": "F13",
   "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)",
+  "quote": "(nods \"yes\")",
   "by": "model",
   "verified": null
  },
@@ -5923,17 +6059,17 @@
   "utterance": "S2-1437",
   "fact": "F10",
   "kind": "asks",
-  "quote": "So you take her, when is she shot then?",
+  "quote": "when is she shot then?",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-1438",
-  "fact": "F12",
+  "fact": "F10",
   "kind": "asks",
   "quote": "Tell us where she was shot?",
   "by": "model",
-  "verified": false
+  "verified": null
  },
  {
   "utterance": "S2-1439",
@@ -5946,10 +6082,18 @@
  {
   "utterance": "S2-1440",
   "fact": "F12",
-  "kind": "asks",
+  "kind": "asserts",
   "quote": "No, I mean where, in the garage",
   "by": "model",
   "verified": false
+ },
+ {
+  "utterance": "S2-1442",
+  "fact": "F12",
+  "kind": "asks",
+  "quote": "Outside, in the house?",
+  "by": "model",
+  "verified": null
  },
  {
   "utterance": "S2-1443",
@@ -5961,7 +6105,7 @@
  },
  {
   "utterance": "S2-1445",
-  "fact": "F04",
+  "fact": "F12",
   "kind": "asks",
   "quote": "Was she on the garage floor or was she in the truck?",
   "by": "model",
@@ -5969,7 +6113,7 @@
  },
  {
   "utterance": "S2-1445",
-  "fact": "F12",
+  "fact": "F04",
   "kind": "asks",
   "quote": "Was she on the garage floor or was she in the truck?",
   "by": "model",
@@ -5997,7 +6141,7 @@
   "kind": "asks",
   "quote": "now where was she shot?",
   "by": "model",
-  "verified": null
+  "verified": true
  },
  {
   "utterance": "S2-1449",
@@ -6075,7 +6219,7 @@
   "utterance": "S2-1454",
   "fact": "F10",
   "kind": "asks",
-  "quote": "How many times? (pause) Remember weeee got a number of shell casings that we found in that garage. I'm not gonna tell ya how many but you need to tell me how many times, about, that she was shot.",
+  "quote": "how many times, about, that she was shot.",
   "by": "model",
   "verified": null
  },
@@ -6083,7 +6227,7 @@
   "utterance": "S2-1454",
   "fact": "F12",
   "kind": "asks",
-  "quote": "How many times? (pause) Remember weeee got a number of shell casings that we found in that garage. I'm not gonna tell ya how many but you need to tell me how many times, about, that she was shot.",
+  "quote": "shell casings that we found in that garage",
   "by": "model",
   "verified": null
  },
@@ -6155,7 +6299,7 @@
   "utterance": "S2-1463",
   "fact": "F04",
   "kind": "asks",
-  "quote": "And she was in the back of the truck or the SUV that whole time that he shot her?",
+  "quote": "she was in the back of the truck or the SUV that whole time that he shot her?",
   "by": "model",
   "verified": null
  },
@@ -6171,7 +6315,7 @@
   "utterance": "S2-1465",
   "fact": "F12",
   "kind": "asserts",
-  "quote": "She was on the garage floor, OK.",
+  "quote": "She was on the garage floor",
   "by": "model",
   "verified": null
  },
@@ -6179,7 +6323,7 @@
   "utterance": "S2-1468",
   "fact": "F01",
   "kind": "asks",
-  "quote": "So you bring her out of the ca-or the trailer, right?",
+  "quote": "you bring her out of the ca-or the trailer, right?",
   "by": "model",
   "verified": null
  },
@@ -6312,6 +6456,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-1485",
+  "fact": "F04",
+  "kind": "asserts",
+  "quote": "When he set her down on the, the ground, 'er in the garage.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1486",
   "fact": "F01",
   "kind": "asks",
@@ -6320,8 +6472,24 @@
   "verified": null
  },
  {
+  "utterance": "S2-1486",
+  "fact": "F04",
+  "kind": "asks",
+  "quote": "So you bring her into the garage, you set her on the garage floor?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1487",
   "fact": "F01",
+  "kind": "assents",
+  "quote": "(nods \"yes\") mm huh.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1487",
+  "fact": "F04",
   "kind": "assents",
   "quote": "(nods \"yes\") mm huh.",
   "by": "model",
@@ -6363,7 +6531,7 @@
   "utterance": "S2-1491",
   "fact": "F12",
   "kind": "asserts",
-  "quote": "We set ' er on the floor and he shoots her ten times maybe.",
+  "quote": "he shoots her ten times maybe.",
   "by": "model",
   "verified": null
  },
@@ -6456,8 +6624,24 @@
   "verified": null
  },
  {
+  "utterance": "S2-1500",
+  "fact": "F12",
+  "kind": "asks",
+  "quote": "he shoots her",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1501",
   "fact": "F10",
+  "kind": "assents",
+  "quote": "(nods \u201cyes\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1501",
+  "fact": "F12",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d)",
   "by": "model",
@@ -6467,7 +6651,7 @@
   "utterance": "S2-1503",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "put her in and take her over the fire and throw her on",
+  "quote": "We grab her and we put her in and take her over the fire and throw her on.",
   "by": "model",
   "verified": null
  },
@@ -6475,7 +6659,7 @@
   "utterance": "S2-1504",
   "fact": "F13",
   "kind": "asks",
-  "quote": "fires already burning",
+  "quote": "the fires already burning",
   "by": "model",
   "verified": null
  },
@@ -6499,7 +6683,7 @@
   "utterance": "S2-1507",
   "fact": "F14",
   "kind": "asserts",
-  "quote": "We threw some tires and some more branches on",
+  "quote": "We threw some tires and some more branches on.",
   "by": "model",
   "verified": null
  },
@@ -6515,7 +6699,7 @@
   "utterance": "S2-1510",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "We a, used that a thing",
+  "quote": "We a, used that a thing.",
   "by": "model",
   "verified": null
  },
@@ -6523,7 +6707,7 @@
   "utterance": "S2-1512",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "The thing we used ta get un-under the car",
+  "quote": "The thing we used ta get un-under the car?",
   "by": "model",
   "verified": null
  },
@@ -6546,7 +6730,7 @@
  {
   "utterance": "S2-1515",
   "fact": "F13",
-  "kind": "asks",
+  "kind": "asserts",
   "quote": "You didn\u2019t carry her out there.",
   "by": "model",
   "verified": null
@@ -6572,6 +6756,14 @@
   "fact": "F13",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1520",
+  "fact": "F13",
+  "kind": "assents",
+  "quote": "Yeah.",
   "by": "model",
   "verified": null
  },
@@ -6648,8 +6840,24 @@
   "verified": null
  },
  {
+  "utterance": "S2-1535",
+  "fact": "F15",
+  "kind": "asserts",
+  "quote": "He drove it down there",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1536",
   "fact": "F01",
+  "kind": "asks",
+  "quote": "Were you in the jeep with him?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1536",
+  "fact": "F15",
   "kind": "asks",
   "quote": "Were you in the jeep with him?",
   "by": "model",
@@ -6664,8 +6872,24 @@
   "verified": null
  },
  {
+  "utterance": "S2-1537",
+  "fact": "F15",
+  "kind": "assents",
+  "quote": "( nods \"yes\") mm huh.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1539",
   "fact": "F01",
+  "kind": "asserts",
+  "quote": "He drove.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1539",
+  "fact": "F15",
   "kind": "asserts",
   "quote": "He drove.",
   "by": "model",
@@ -6689,7 +6913,7 @@
  },
  {
   "utterance": "S2-1543",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "asserts",
   "quote": "Past Chuckie's house.",
   "by": "model",
@@ -6697,7 +6921,7 @@
  },
  {
   "utterance": "S2-1544",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "asks",
   "quote": "You did go past Chuckie's?",
   "by": "model",
@@ -6705,9 +6929,17 @@
  },
  {
   "utterance": "S2-1545",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "assents",
   "quote": "(nods \"yes\") mm huh.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1547",
+  "fact": "F15",
+  "kind": "denies",
+  "quote": "(shakes head \"no\") I don't know.",
   "by": "model",
   "verified": null
  },
@@ -6845,7 +7077,7 @@
   "kind": "asks",
   "quote": "Where in his room does he put it?",
   "by": "model",
-  "verified": false
+  "verified": true
  },
  {
   "utterance": "S2-1574",
@@ -6936,10 +7168,18 @@
   "verified": null
  },
  {
+  "utterance": "S2-1588",
+  "fact": "F16",
+  "kind": "asserts",
+  "quote": "He took the plates",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1590",
   "fact": "F17",
   "kind": "asks",
-  "quote": "Did he, did he, did he go and look at the engine, did he raise the hood at all or anything like that? To do something to that car?",
+  "quote": "did he, did he, did he go and look at the engine, did he raise the hood at all or anything like that?",
   "by": "model",
   "verified": true
  },
@@ -6963,7 +7203,7 @@
   "utterance": "S2-1596",
   "fact": "F17",
   "kind": "asserts",
-  "quote": "I don\u2019t know what he did, but I know he went under.",
+  "quote": "I know he went under",
   "by": "model",
   "verified": null
  },
@@ -7003,7 +7243,7 @@
   "utterance": "S2-1602",
   "fact": "F16",
   "kind": "denies",
-  "quote": "(shakes head \"no\") No.",
+  "quote": "(shakes head ",
   "by": "model",
   "verified": null
  },
@@ -7064,6 +7304,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-1611",
+  "fact": "F18",
+  "kind": "asserts",
+  "quote": "He had 'em in his house but I don't know after where he put 'em.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1612",
   "fact": "F16",
   "kind": "asks",
@@ -7117,7 +7365,7 @@
   "kind": "asks",
   "quote": "He put the key?",
   "by": "model",
-  "verified": false
+  "verified": null
  },
  {
   "utterance": "S2-1619",
@@ -7176,6 +7424,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-1624",
+  "fact": "F02",
+  "kind": "asks",
+  "quote": "It's not in the jeep now, where do you think it might be?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1625",
   "fact": "F01",
   "kind": "asserts",
@@ -7184,8 +7440,24 @@
   "verified": null
  },
  {
+  "utterance": "S2-1625",
+  "fact": "F02",
+  "kind": "asserts",
+  "quote": "I sure it was.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1626",
   "fact": "F01",
+  "kind": "asks",
+  "quote": "Did you see it in the jeep?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1626",
+  "fact": "F02",
   "kind": "asks",
   "quote": "Did you see it in the jeep?",
   "by": "model",
@@ -7349,7 +7621,7 @@
   "kind": "asks",
   "quote": "OK. And that was the key for what?",
   "by": "model",
-  "verified": false
+  "verified": null
  },
  {
   "utterance": "S2-1690",
@@ -7480,14 +7752,6 @@
   "verified": null
  },
  {
-  "utterance": "S2-1709",
-  "fact": "F22",
-  "kind": "denies",
-  "quote": "(shakes head \u201cno\u201d) mm uh.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-1710",
   "fact": "F22",
   "kind": "asks",
@@ -7515,7 +7779,7 @@
   "utterance": "S2-1715",
   "fact": "F20",
   "kind": "asks",
-  "quote": "earlier you told us the shirt had blood on it",
+  "quote": "Now the shirt, earlier you told us the shirt had blood on it, had a hole in it, was that not true then?",
   "by": "model",
   "verified": null
  },
@@ -7539,7 +7803,7 @@
   "utterance": "S2-1719",
   "fact": "F20",
   "kind": "asks",
-  "quote": "What kind of cleaning, what do you do, how do you do it?",
+  "quote": "So what\u2019d ya do in the ki-garage now? What kind of cleaning, what do you do, how do you do it?",
   "by": "model",
   "verified": null
  },
@@ -7547,7 +7811,7 @@
   "utterance": "S2-1720",
   "fact": "F19",
   "kind": "asserts",
-  "quote": "he went to bleach to get it off and like, he like, probably like, he went like he was spraying it like. I thought he got it on the floor and it splashed up on my pants or somethin\u2019.",
+  "quote": "We threw gas on it so he could get it off. Then he tried paint thinner and then he went to bleach to get it off and like, he like, probably like, he went like he was spraying it like. I thought he got it on the floor and it splashed up on my pants or somethin\u2019.",
   "by": "model",
   "verified": null
  },
@@ -7555,7 +7819,7 @@
   "utterance": "S2-1720",
   "fact": "F20",
   "kind": "asserts",
-  "quote": "We threw gas on it so he could get it off. Then he tried paint thinner and then he went to bleach to get it off",
+  "quote": "We threw gas on it so he could get it off. Then he tried paint thinner and then he went to bleach to get it off and like, he like, probably like, he went like he was spraying it like. I thought he got it on the floor and it splashed up on my pants or somethin\u2019.",
   "by": "model",
   "verified": null
  },
@@ -7563,7 +7827,7 @@
   "utterance": "S2-1721",
   "fact": "F20",
   "kind": "asks",
-  "quote": "How much blood was there on the floor, quite a bit?",
+  "quote": "How much bleach, no let me go back. How much blood was there on the floor, quite a bit?",
   "by": "model",
   "verified": null
  },
@@ -7573,7 +7837,7 @@
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d) mm huh.",
   "by": "model",
-  "verified": null
+  "verified": true
  },
  {
   "utterance": "S2-1723",
@@ -7682,7 +7946,7 @@
  {
   "utterance": "S2-1737",
   "fact": "F20",
-  "kind": "assents",
+  "kind": "asserts",
   "quote": "Yeah.",
   "by": "model",
   "verified": null
@@ -7700,6 +7964,38 @@
   "fact": "F19",
   "kind": "asserts",
   "quote": "In his house by, in his bathroom.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1743",
+  "fact": "F20",
+  "kind": "asks",
+  "quote": "Was Steven bleeding?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1744",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "On his finger, that\u2019s it.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1745",
+  "fact": "F20",
+  "kind": "asks",
+  "quote": "Did Steven know he was bleeding?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1746",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "Yeah.",
   "by": "model",
   "verified": null
  },
@@ -7760,10 +8056,26 @@
   "verified": null
  },
  {
+  "utterance": "S2-1870",
+  "fact": "F05",
+  "kind": "denies",
+  "quote": "I didn't.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-1874",
+  "fact": "F18",
+  "kind": "asserts",
+  "quote": "went into the garage to get the key to open the door",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-1875",
   "fact": "F01",
   "kind": "asks",
-  "quote": "you said you saw Teresa's vehicle in Steven's garage?",
+  "quote": "you saw Teresa's vehicle in Steven's garage?",
   "by": "model",
   "verified": null
  },
@@ -7803,7 +8115,7 @@
   "utterance": "S2-1880",
   "fact": "F01",
   "kind": "asserts",
-  "quote": "The front end was outta the door. (nods \u201cyes\u201d)",
+  "quote": "The front end was outta the door.",
   "by": "model",
   "verified": null
  },
@@ -7811,7 +8123,7 @@
   "utterance": "S2-1881",
   "fact": "F01",
   "kind": "asks",
-  "quote": "The front end was outta the door. So the big door was open I take it?",
+  "quote": "So the big door was open I take it?",
   "by": "model",
   "verified": null
  },
@@ -7824,34 +8136,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-1886",
+  "utterance": "S2-1924",
   "fact": "F01",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d) uh huh",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1890",
-  "fact": "F01",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d) Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1911",
-  "fact": "F07",
-  "kind": "asserts",
-  "quote": "Screaming like help me and that",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-1919",
-  "fact": "F07",
-  "kind": "assents",
-  "quote": "Yeah. (nods \"yes\")",
+  "kind": "asks",
+  "quote": "when you actually knock on Steven's door was the big garage door still open? Do you remember?",
   "by": "model",
   "verified": null
  },
@@ -8104,6 +8392,22 @@
   "verified": null
  },
  {
+  "utterance": "S2-2009",
+  "fact": "F23",
+  "kind": "asserts",
+  "quote": "Like right underneath there.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2013",
+  "fact": "F23",
+  "kind": "asserts",
+  "quote": "Well, if the bags like that far off the you know the top of the thing you can see though underneath it.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2017",
   "fact": "F23",
   "kind": "asserts",
@@ -8146,8 +8450,8 @@
  {
   "utterance": "S2-2060",
   "fact": "F05",
-  "kind": "asserts",
-  "quote": "Because we know now that you did and he watched while you did it.",
+  "kind": "asks",
+  "quote": "Because we know now that you did and he watched while you did it. Did you watch once or while he did it?",
   "by": "model",
   "verified": null
  },
@@ -8170,10 +8474,10 @@
  {
   "utterance": "S2-2067",
   "fact": "F05",
-  "kind": "asks",
+  "kind": "asserts",
   "quote": "You told us about going in there and having sex with her that she was handcuffed and, and chained, OK?",
   "by": "model",
-  "verified": true
+  "verified": null
  },
  {
   "utterance": "S2-2068",
@@ -8233,6 +8537,14 @@
  },
  {
   "utterance": "S2-2076",
+  "fact": "F13",
+  "kind": "asserts",
+  "quote": "we threw her in the fire",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2076",
   "fact": "F10",
   "kind": "asserts",
   "quote": "he shot her ten times",
@@ -8248,18 +8560,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-2076",
-  "fact": "F13",
-  "kind": "asserts",
-  "quote": "we threw her in the fire",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2079",
   "fact": "F08",
   "kind": "asks",
-  "quote": "he had you cut the hair off you said right?",
+  "quote": "he had you cut the hair off you said right",
   "by": "model",
   "verified": null
  },
@@ -8275,7 +8579,7 @@
   "utterance": "S2-2081",
   "fact": "F08",
   "kind": "asks",
-  "quote": "Where did ya put the hair?",
+  "quote": "Where did ya put the hair",
   "by": "model",
   "verified": null
  },
@@ -8283,7 +8587,7 @@
   "utterance": "S2-2082",
   "fact": "F08",
   "kind": "asserts",
-  "quote": "On the dresser.",
+  "quote": "On the dresser",
   "by": "model",
   "verified": null
  },
@@ -8291,15 +8595,7 @@
   "utterance": "S2-2083",
   "fact": "F08",
   "kind": "asks",
-  "quote": "Again tell us why he wanted you to do that?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2084",
-  "fact": "F08",
-  "kind": "denies",
-  "quote": "I don't know.",
+  "quote": "tell us why he wanted you to do that",
   "by": "model",
   "verified": null
  },
@@ -8307,15 +8603,15 @@
   "utterance": "S2-2085",
   "fact": "F08",
   "kind": "asks",
-  "quote": "What happened ta the hair after?",
+  "quote": "What happened ta the hair after",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-2086",
   "fact": "F08",
-  "kind": "denies",
-  "quote": "I never touched it.",
+  "kind": "asserts",
+  "quote": "I never touched it",
   "by": "model",
   "verified": null
  },
@@ -8323,15 +8619,15 @@
   "utterance": "S2-2087",
   "fact": "F08",
   "kind": "asks",
-  "quote": "Do you know where it went?",
+  "quote": "Do you know where it went",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-2088",
   "fact": "F08",
-  "kind": "denies",
-  "quote": "(shakes head \"no\") No.",
+  "kind": "asserts",
+  "quote": "(shakes head \"no\") No",
   "by": "model",
   "verified": null
  },
@@ -8416,42 +8712,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-2107",
-  "fact": "F10",
-  "kind": "asks",
-  "quote": "you think she's dead at this time",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2108",
-  "fact": "F10",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2109",
-  "fact": "F01",
-  "kind": "asks",
-  "quote": "carry her out that back door and into the garage",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2109",
   "fact": "F04",
   "kind": "asks",
-  "quote": "carry her out that back door and into the garage",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2110",
-  "fact": "F01",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)",
+  "quote": "you and Steven carry her out that back door and into the garage.",
   "by": "model",
   "verified": null
  },
@@ -8592,26 +8856,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-2129",
-  "fact": "F11",
-  "kind": "asks",
-  "quote": "If I'm laying in his bed, where is the where are the where is his gun?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2130",
   "fact": "F11",
   "kind": "asserts",
-  "quote": "Like, say like this is his bedroom and his bed was like right here, it would be on that wall.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2132",
-  "fact": "F11",
-  "kind": "assents",
-  "quote": "Yeah.",
+  "quote": "it would be on that wall.",
   "by": "model",
   "verified": null
  },
@@ -8619,31 +8867,7 @@
   "utterance": "S2-2136",
   "fact": "F11",
   "kind": "asserts",
-  "quote": "and your the guns would be right on that side.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2138",
-  "fact": "F05",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d) Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2139",
-  "fact": "F05",
-  "kind": "asks",
-  "quote": "As to what the bedroom if you'd put things in the bedroom",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2140",
-  "fact": "F05",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)",
+  "quote": "the guns would be right on that side.",
   "by": "model",
   "verified": null
  },
@@ -8688,14 +8912,6 @@
   "verified": null
  },
  {
-  "utterance": "S2-2162",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "the fire was going on at this time",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2163",
   "fact": "F13",
   "kind": "asserts",
@@ -8715,7 +8931,7 @@
   "utterance": "S2-2165",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "he was probably gettin' it ready",
+  "quote": "me and Blaine were gonna invite some friends over for ah a bonfire and he was probably gettin' it ready",
   "by": "model",
   "verified": null
  },
@@ -8732,14 +8948,6 @@
   "fact": "F13",
   "kind": "assents",
   "quote": "Yeah",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2168",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "are you sure about that",
   "by": "model",
   "verified": null
  },
@@ -8817,7 +9025,7 @@
  },
  {
   "utterance": "S2-2178",
-  "fact": "F11",
+  "fact": "F10",
   "kind": "asks",
   "quote": "What did he do",
   "by": "model",
@@ -8968,16 +9176,8 @@
   "verified": null
  },
  {
-  "utterance": "S2-2204",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "You mentioned then you took her, her back out",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2205",
-  "fact": "F03",
+  "fact": "F13",
   "kind": "denies",
   "quote": "No.",
   "by": "model",
@@ -8985,7 +9185,7 @@
  },
  {
   "utterance": "S2-2205",
-  "fact": "F13",
+  "fact": "F03",
   "kind": "denies",
   "quote": "No.",
   "by": "model",
@@ -9058,39 +9258,23 @@
  {
   "utterance": "S2-2223",
   "fact": "F22",
-  "kind": "assents",
+  "kind": "asserts",
   "quote": "(nods \u201cyes\u201d) Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2229",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "And then you put her on the fire you said,",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-2230",
   "fact": "F13",
-  "kind": "assents",
+  "kind": "asserts",
   "quote": "(nods \u201cyes\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2231",
-  "fact": "F14",
-  "kind": "asks",
-  "quote": "and you put other stuff over that over her you said.",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S2-2232",
   "fact": "F14",
-  "kind": "assents",
+  "kind": "asserts",
   "quote": "(nods \u201cyes\u201d) Yeah.",
   "by": "model",
   "verified": null
@@ -9224,6 +9408,22 @@
   "verified": null
  },
  {
+  "utterance": "S2-2283",
+  "fact": "F13",
+  "kind": "asks",
+  "quote": "Was he pushing her around at all?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2284",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "(shakes head \u201cno\u201d) uh uh.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2285",
   "fact": "F13",
   "kind": "asks",
@@ -9243,7 +9443,15 @@
   "utterance": "S2-2293",
   "fact": "F09",
   "kind": "asks",
-  "quote": "when you cut her on the neck",
+  "quote": "How much time did you think it took from when you cut her on the neck to the time you guys got her out in the garage?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2294",
+  "fact": "F09",
+  "kind": "asserts",
+  "quote": "'bout ten minutes.",
   "by": "model",
   "verified": null
  },
@@ -9251,7 +9459,7 @@
   "utterance": "S2-2295",
   "fact": "F13",
   "kind": "asks",
-  "quote": "she was put in fire",
+  "quote": "After, after the fire was, and she was put in fire, what time did you go home to your place that night?",
   "by": "model",
   "verified": null
  },
@@ -9259,7 +9467,7 @@
   "utterance": "S2-2300",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "he was gonna watch the fire until it burnt down a little bit more",
+  "quote": "Yeah. Cuz he said he was gonna watch the fire until it burnt down a little bit more.",
   "by": "model",
   "verified": null
  },
@@ -9275,7 +9483,7 @@
   "utterance": "S2-2302",
   "fact": "F13",
   "kind": "denies",
-  "quote": "I didn\u2019t, I didn\u2019t do nothin\u2019 with it",
+  "quote": "I don\u2019t know, I didn\u2019t, I didn\u2019t do nothin\u2019 with it.",
   "by": "model",
   "verified": null
  },
@@ -9291,7 +9499,7 @@
   "utterance": "S2-2304",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "Yeah, but I don\u2019t know what",
+  "quote": "Yeah, but I don\u2019t know what.",
   "by": "model",
   "verified": null
  },
@@ -9387,7 +9595,7 @@
   "utterance": "S2-2321",
   "fact": "F24",
   "kind": "denies",
-  "quote": "(shakes head ",
+  "quote": "(shakes head \"no\") I just heard that.",
   "by": "model",
   "verified": null
  },
@@ -9405,7 +9613,7 @@
   "kind": "asks",
   "quote": "he used the shovel to break up bones",
   "by": "model",
-  "verified": null
+  "verified": true
  },
  {
   "utterance": "S2-2325",
@@ -9459,7 +9667,7 @@
   "utterance": "S2-2331",
   "fact": "F24",
   "kind": "asserts",
-  "quote": "He told me that he threw some there",
+  "quote": "He told me that he threw some there.",
   "by": "model",
   "verified": null
  },
@@ -9475,7 +9683,7 @@
   "utterance": "S2-2333",
   "fact": "F24",
   "kind": "asserts",
-  "quote": "He had 'em in a bucket",
+  "quote": "He had 'em in a bucket.",
   "by": "model",
   "verified": null
  },
@@ -9491,7 +9699,7 @@
   "utterance": "S2-2335",
   "fact": "F24",
   "kind": "asserts",
-  "quote": "In like Radandt's pit",
+  "quote": "In like Radandt's pit.",
   "by": "model",
   "verified": null
  },
@@ -9499,7 +9707,7 @@
   "utterance": "S2-2336",
   "fact": "F24",
   "kind": "asserts",
-  "quote": "Radandt's pit",
+  "quote": "Oh, Radandt's pit,",
   "by": "model",
   "verified": null
  },
@@ -9512,10 +9720,26 @@
   "verified": null
  },
  {
+  "utterance": "S2-2338",
+  "fact": "F24",
+  "kind": "asks",
+  "quote": "not into your ah,",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2339",
   "fact": "F24",
   "kind": "denies",
   "quote": "(shakes head \u201cno\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2340",
+  "fact": "F24",
+  "kind": "asks",
+  "quote": "the salvage yard area?",
   "by": "model",
   "verified": null
  },
@@ -9528,42 +9752,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-2345",
-  "fact": "F24",
-  "kind": "denies",
-  "quote": "(shakes head \u201cno\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2346",
-  "fact": "F24",
-  "kind": "asks",
-  "quote": "that he told you or that you helped him, di-did you help him do any of this?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2347",
-  "fact": "F24",
-  "kind": "denies",
-  "quote": "(shakes head \u201cno\u201d) No.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2348",
   "fact": "F13",
   "kind": "asks",
   "quote": "Did he have anymore fires that week?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2349",
-  "fact": "F13",
-  "kind": "denies",
-  "quote": "(shakes head \u201cno\u201d) Not that I know of.",
   "by": "model",
   "verified": null
  },
@@ -9580,14 +9772,6 @@
   "fact": "F13",
   "kind": "asserts",
   "quote": "Just that it smelled bad.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2353",
-  "fact": "F13",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)",
   "by": "model",
   "verified": null
  },
@@ -9612,6 +9796,14 @@
   "fact": "F10",
   "kind": "asserts",
   "quote": "(shakes head \u201cno\u201d) N-no.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2374",
+  "fact": "F10",
+  "kind": "asserts",
+  "quote": "(shakes head \u201cno\u201d)",
   "by": "model",
   "verified": null
  },
@@ -9752,6 +9944,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-2407",
+  "fact": "F20",
+  "kind": "asks",
+  "quote": "None at all?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2408",
   "fact": "F20",
   "kind": "denies",
@@ -9761,7 +9961,7 @@
  },
  {
   "utterance": "S2-2409",
-  "fact": "F04",
+  "fact": "F20",
   "kind": "asks",
   "quote": "What about when you moved her?",
   "by": "model",
@@ -9769,7 +9969,7 @@
  },
  {
   "utterance": "S2-2410",
-  "fact": "F04",
+  "fact": "F20",
   "kind": "denies",
   "quote": "(shakes head \u201cno\u201d) No.",
   "by": "model",
@@ -9905,7 +10105,15 @@
  },
  {
   "utterance": "S2-2474",
-  "fact": "F12",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "You sure that she wasn't taken out to the garage alive and some of the stuff was done to her out there?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2474",
+  "fact": "F01",
   "kind": "asks",
   "quote": "You sure that she wasn't taken out to the garage alive and some of the stuff was done to her out there?",
   "by": "model",
@@ -9913,7 +10121,15 @@
  },
  {
   "utterance": "S2-2475",
-  "fact": "F12",
+  "fact": "F05",
+  "kind": "denies",
+  "quote": "(shakes head \"no\") No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2475",
+  "fact": "F01",
   "kind": "denies",
   "quote": "(shakes head \"no\") No.",
   "by": "model",
@@ -9921,7 +10137,15 @@
  },
  {
   "utterance": "S2-2476",
-  "fact": "F07",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "Hanging from a rafter, 'er anything like that?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2476",
+  "fact": "F01",
   "kind": "asks",
   "quote": "Hanging from a rafter, 'er anything like that?",
   "by": "model",
@@ -9929,15 +10153,47 @@
  },
  {
   "utterance": "S2-2477",
-  "fact": "F07",
+  "fact": "F05",
   "kind": "denies",
   "quote": "(shakes head \"no\") mm uh.",
   "by": "model",
   "verified": null
  },
  {
+  "utterance": "S2-2477",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "(shakes head \"no\") mm uh.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2478",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "Now the worst is over, you're not gonna shock us or anything by tellin' us if that happened. Cuz I-I just have a feeling that something may, may be there. Talk to me.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2478",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "Now the worst is over, you're not gonna shock us or anything by tellin' us if that happened. Cuz I-I just have a feeling that something may, may be there. Talk to me.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2479",
-  "fact": "F12",
+  "fact": "F05",
+  "kind": "denies",
+  "quote": "Nothin' happened in there.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2479",
+  "fact": "F01",
   "kind": "denies",
   "quote": "Nothin' happened in there.",
   "by": "model",
@@ -9987,7 +10243,7 @@
   "utterance": "S2-2489",
   "fact": "F05",
   "kind": "denies",
-  "quote": "No.",
+  "quote": "(shakes head \"no\") No.",
   "by": "model",
   "verified": null
  },
@@ -10048,26 +10304,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-2510",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "Cuz he wouldn\u2019t let the knife go. How do you know that?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2511",
   "fact": "F02",
   "kind": "asserts",
   "quote": "Cuz it was a pretty nice knife.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2512",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "Did he tell you that?",
   "by": "model",
   "verified": null
  },
@@ -10080,26 +10320,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-2514",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "Did he wash it off or anything or wipe it off or what did he do with the knife?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2515",
   "fact": "F02",
   "kind": "asserts",
   "quote": "He wiped it off.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2516",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "What did he use to do that with?",
   "by": "model",
   "verified": null
  },
@@ -10112,26 +10336,10 @@
   "verified": null
  },
  {
-  "utterance": "S2-2518",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "What happened to the paper towel?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2519",
   "fact": "F02",
   "kind": "asserts",
   "quote": "He burnt it.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2520",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "Can you describe the knife for us?",
   "by": "model",
   "verified": null
  },
@@ -10299,7 +10507,7 @@
   "utterance": "S2-2549",
   "fact": "F05",
   "kind": "asks",
-  "quote": "Why don't you draw out the bedroom, put the bed on there and show me where the dresser and everything was",
+  "quote": "Why don't you draw out the bedroom, put the bed on there and show me where the dresser and everything was, the best that you can, and where the door was and all that.",
   "by": "model",
   "verified": null
  },
@@ -10307,7 +10515,7 @@
   "utterance": "S2-2549",
   "fact": "F18",
   "kind": "asks",
-  "quote": "show me where the dresser and everything was",
+  "quote": "Why don't you draw out the bedroom, put the bed on there and show me where the dresser and everything was, the best that you can, and where the door was and all that.",
   "by": "model",
   "verified": null
  },
@@ -10323,7 +10531,7 @@
   "utterance": "S2-2554",
   "fact": "F02",
   "kind": "asks",
-  "quote": "anything else unique about that knife?",
+  "quote": "While you're doin' that Brendan, anything else unique about that knife?",
   "by": "model",
   "verified": null
  },
@@ -10347,7 +10555,7 @@
   "utterance": "S2-2559",
   "fact": "F05",
   "kind": "asks",
-  "quote": "where were the handcuffs?",
+  "quote": "and how she was laying on there. (pause) OK and where were the handcuffs?)",
   "by": "model",
   "verified": null
  },
@@ -10420,6 +10628,14 @@
   "fact": "F01",
   "kind": "asserts",
   "quote": "Like that area.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2594",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "OK, and it was sticking out the door you said?",
   "by": "model",
   "verified": null
  },
@@ -10667,7 +10883,7 @@
   "utterance": "S2-2632",
   "fact": "F13",
   "kind": "asks",
-  "quote": "And where did you put her body?",
+  "quote": "where did you put her body?",
   "by": "model",
   "verified": null
  },
@@ -10676,6 +10892,14 @@
   "fact": "F13",
   "kind": "asserts",
   "quote": "Right here.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2642",
+  "fact": "F24",
+  "kind": "asks",
+  "quote": "You said that he had taken some bones",
   "by": "model",
   "verified": null
  },
@@ -10720,6 +10944,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-2651",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "(shakes head \u201cno\u201d) uh uh.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2653",
   "fact": "F13",
   "kind": "asserts",
@@ -10744,42 +10976,18 @@
   "verified": null
  },
  {
-  "utterance": "S2-2685",
+  "utterance": "S2-2659",
   "fact": "F13",
-  "kind": "asks",
-  "quote": "the location of the burn pit is, is where? In relation to the garage and his house, etc?",
+  "kind": "denies",
+  "quote": "(shakes head \u201cno\u201d) uh uh",
   "by": "model",
   "verified": null
  },
  {
-  "utterance": "S2-2686",
-  "fact": "F13",
-  "kind": "asserts",
-  "quote": "In-n-n like where he used to park his car, like",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2687",
+  "utterance": "S2-2660",
   "fact": "F13",
   "kind": "asks",
-  "quote": "The burn pit, we-where",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2688",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "Oh the burn pit?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2689",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "Yeah, what you drew here. Where is that in relation to the garage?",
+  "quote": "You just set it there?",
   "by": "model",
   "verified": null
  },
@@ -10794,7 +11002,7 @@
  {
   "utterance": "S2-2691",
   "fact": "F11",
-  "kind": "asks",
+  "kind": "asserts",
   "quote": "we've got the gun",
   "by": "model",
   "verified": null
@@ -10835,7 +11043,7 @@
   "utterance": "S2-2695",
   "fact": "F12",
   "kind": "asks",
-  "quote": "if Teresa was, was dead when she was in the garage, why you would shoot or, why he would shoot a dead body.",
+  "quote": "if Teresa was, was dead when she was in the garage",
   "by": "model",
   "verified": null
  },
@@ -10867,7 +11075,7 @@
   "utterance": "S2-2699",
   "fact": "F10",
   "kind": "asserts",
-  "quote": "Your guess is that to make sure was dead.",
+  "quote": "your guess is that to make sure was dead",
   "by": "model",
   "verified": null
  },
@@ -10896,6 +11104,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-2708",
+  "fact": "F09",
+  "kind": "assents",
+  "quote": "(nods \"yes\")",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2715",
   "fact": "F09",
   "kind": "asks",
@@ -10906,7 +11122,7 @@
  {
   "utterance": "S2-2716",
   "fact": "F09",
-  "kind": "asserts",
+  "kind": "denies",
   "quote": "mm uh (shakes head \u201cno\u201d)",
   "by": "model",
   "verified": null
@@ -10916,14 +11132,6 @@
   "fact": "F09",
   "kind": "asks",
   "quote": "When you cut her throat.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2718",
-  "fact": "F09",
-  "kind": "asserts",
-  "quote": "Cuz when you scream a lot, you like, your, your breathing goes up or somethin\u2019.",
   "by": "model",
   "verified": null
  },
@@ -11064,10 +11272,34 @@
   "verified": null
  },
  {
+  "utterance": "S2-2744",
+  "fact": "F07",
+  "kind": "asks",
+  "quote": "he choked her after you cut her throat?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2744",
+  "fact": "F09",
+  "kind": "asks",
+  "quote": "he choked her after you cut her throat?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2745",
   "fact": "F07",
   "kind": "assents",
   "quote": "(nods \u201cyes\u201d) mm huh.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2746",
+  "fact": "F09",
+  "kind": "asks",
+  "quote": "kinda show me like on your throat where you cut her.",
   "by": "model",
   "verified": null
  },
@@ -11080,8 +11312,16 @@
   "verified": null
  },
  {
+  "utterance": "S2-2748",
+  "fact": "F09",
+  "kind": "asks",
+  "quote": "How deep?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2749",
-  "fact": "F02",
+  "fact": "F09",
   "kind": "asserts",
   "quote": "Just as long as the knife went through.",
   "by": "model",
@@ -11089,7 +11329,7 @@
  },
  {
   "utterance": "S2-2749",
-  "fact": "F09",
+  "fact": "F02",
   "kind": "asserts",
   "quote": "Just as long as the knife went through.",
   "by": "model",
@@ -11108,6 +11348,14 @@
   "fact": "F09",
   "kind": "asserts",
   "quote": "About that much.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2753",
+  "fact": "F09",
+  "kind": "asks",
+  "quote": "I mean like, like this like that, like that, like that.",
   "by": "model",
   "verified": null
  },
@@ -11196,6 +11444,22 @@
   "fact": "F06",
   "kind": "asserts",
   "quote": "About like that.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2762",
+  "fact": "F02",
+  "kind": "assents",
+  "quote": "(nods \"yes\")",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2762",
+  "fact": "F06",
+  "kind": "assents",
+  "quote": "(nods \"yes\")",
   "by": "model",
   "verified": null
  },
@@ -11352,22 +11616,6 @@
   "verified": null
  },
  {
-  "utterance": "S2-2787",
-  "fact": "F04",
-  "kind": "asserts",
-  "quote": "When we were bringing her outside.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S2-2789",
-  "fact": "F12",
-  "kind": "asserts",
-  "quote": "Out in the garage.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S2-2791",
   "fact": "F07",
   "kind": "asserts",
@@ -11384,10 +11632,18 @@
   "verified": null
  },
  {
-  "utterance": "S2-2796",
+  "utterance": "S2-2799",
   "fact": "F14",
-  "kind": "assents",
-  "quote": "(nods \u201cyes\u201d)",
+  "kind": "asks",
+  "quote": "When you went and got it, put it by the fire, did you throw it on the fire when it was time to throw it on the fire?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2800",
+  "fact": "F14",
+  "kind": "asserts",
+  "quote": "(nods \u201cyes\u201d) uh huh. With hi-him.",
   "by": "model",
   "verified": null
  },
@@ -11408,10 +11664,26 @@
   "verified": null
  },
  {
+  "utterance": "S2-2805",
+  "fact": "F14",
+  "kind": "asks",
+  "quote": "Who throw the cabinet on the fire?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-2806",
   "fact": "F14",
   "kind": "asserts",
   "quote": "He did.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S2-2807",
+  "fact": "F14",
+  "kind": "asks",
+  "quote": "Did you throw anything on the fire?",
   "by": "model",
   "verified": null
  },
@@ -11450,7 +11722,7 @@
  {
   "utterance": "S2-2865",
   "fact": "F25",
-  "kind": "asks",
+  "kind": "asserts",
   "quote": "We know that Teresa had a, a tattoo on her stomach, do you remember that?",
   "by": "model",
   "verified": true
@@ -11688,6 +11960,14 @@
   "verified": null
  },
  {
+  "utterance": "S2-3127",
+  "fact": "F02",
+  "kind": "asks",
+  "quote": "You have like a little pocket knife anything like that?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S2-3128",
   "fact": "F02",
   "kind": "denies",
@@ -11778,16 +12058,8 @@
  {
   "utterance": "S3-0100",
   "fact": "F13",
-  "kind": "asks",
-  "quote": "if I wanted ta come over ta bonfire",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0102",
-  "fact": "F13",
   "kind": "asserts",
-  "quote": "I go over there and we started to pick up the yard with the golf cart.",
+  "quote": "bonfire",
   "by": "model",
   "verified": null
  },
@@ -11795,23 +12067,7 @@
   "utterance": "S3-0106",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "I go right back by the bonfire.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0107",
-  "fact": "F13",
-  "kind": "asks",
-  "quote": "Is that where Steven is?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0108",
-  "fact": "F13",
-  "kind": "assents",
-  "quote": "mm huh.",
+  "quote": "bonfire",
   "by": "model",
   "verified": null
  },
@@ -11897,6 +12153,14 @@
  },
  {
   "utterance": "S3-0166",
+  "fact": "F03",
+  "kind": "asks",
+  "quote": "What is she tied up to.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0166",
   "fact": "F05",
   "kind": "asks",
   "quote": "What is she tied up to.",
@@ -11915,15 +12179,7 @@
   "utterance": "S3-0168",
   "fact": "F03",
   "kind": "asks",
-  "quote": "what, what did he use to tie her up?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0168",
-  "fact": "F05",
-  "kind": "asks",
-  "quote": "How is she tied up?",
+  "quote": "How is she tied up? Explain that to me. What is, what, what did he use to tie her up?",
   "by": "model",
   "verified": null
  },
@@ -11931,7 +12187,7 @@
   "utterance": "S3-0169",
   "fact": "F03",
   "kind": "asserts",
-  "quote": "Her hands were tied up with the rope",
+  "quote": "Her hands were tied up with the rope and her feet were cuffed.",
   "by": "model",
   "verified": null
  },
@@ -11939,7 +12195,7 @@
   "utterance": "S3-0169",
   "fact": "F05",
   "kind": "asserts",
-  "quote": "her feet were cuffed",
+  "quote": "Her hands were tied up with the rope and her feet were cuffed.",
   "by": "model",
   "verified": null
  },
@@ -11955,7 +12211,7 @@
   "utterance": "S3-0171",
   "fact": "F03",
   "kind": "asserts",
-  "quote": "it was just yellow, yellowish",
+  "quote": "Well it was just yellow, yellowish.",
   "by": "model",
   "verified": null
  },
@@ -12020,6 +12276,46 @@
   "fact": "F05",
   "kind": "asserts",
   "quote": "Steven's, I guess.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0205",
+  "fact": "F25",
+  "kind": "asks",
+  "quote": "do you recall seeing her, her breasts?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0207",
+  "fact": "F25",
+  "kind": "asks",
+  "quote": "Did you touch 'em.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0209",
+  "fact": "F25",
+  "kind": "asks",
+  "quote": "Did, did you have sex with her?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0210",
+  "fact": "F25",
+  "kind": "asserts",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0211",
+  "fact": "F25",
+  "kind": "asks",
+  "quote": "But you didn't touch her breasts?",
   "by": "model",
   "verified": null
  },
@@ -12136,14 +12432,6 @@
   "verified": null
  },
  {
-  "utterance": "S3-0265",
-  "fact": "F12",
-  "kind": "asserts",
-  "quote": "Like this",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-0266",
   "fact": "F12",
   "kind": "asks",
@@ -12162,8 +12450,8 @@
  {
   "utterance": "S3-0268",
   "fact": "F12",
-  "kind": "asserts",
-  "quote": "You told us last time you did. You told us last time you helped carry her out of the bedroom",
+  "kind": "asks",
+  "quote": "You told us last time you helped carry her out of the bedroom",
   "by": "model",
   "verified": null
  },
@@ -12301,7 +12589,7 @@
   "kind": "asks",
   "quote": "You said that he took the ri..the rifle down? The gun?",
   "by": "model",
-  "verified": null
+  "verified": true
  },
  {
   "utterance": "S3-0305",
@@ -12321,15 +12609,47 @@
  },
  {
   "utterance": "S3-0308",
+  "fact": "F04",
+  "kind": "asks",
+  "quote": "he carried a body and a gun at the same time out into the garage",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0308",
+  "fact": "F10",
+  "kind": "asks",
+  "quote": "he carried a body and a gun at the same time out into the garage",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0308",
   "fact": "F11",
   "kind": "asks",
-  "quote": "he carried a body and a gun at the same time",
+  "quote": "he carried a body and a gun at the same time out into the garage",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0308",
+  "fact": "F12",
+  "kind": "asks",
+  "quote": "he carried a body and a gun at the same time out into the garage",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-0309",
   "fact": "F04",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0309",
+  "fact": "F10",
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
@@ -12344,10 +12664,26 @@
   "verified": null
  },
  {
+  "utterance": "S3-0309",
+  "fact": "F12",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-0310",
   "fact": "F04",
   "kind": "asks",
-  "quote": "carried the body",
+  "quote": "Ain't that nearly impossible to do unless you gave her the gun and then you carried the body?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0310",
+  "fact": "F10",
+  "kind": "asks",
+  "quote": "Ain't that nearly impossible to do unless you gave her the gun and then you carried the body?",
   "by": "model",
   "verified": null
  },
@@ -12355,13 +12691,29 @@
   "utterance": "S3-0310",
   "fact": "F11",
   "kind": "asks",
-  "quote": "gave her the gun",
+  "quote": "Ain't that nearly impossible to do unless you gave her the gun and then you carried the body?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0310",
+  "fact": "F12",
+  "kind": "asks",
+  "quote": "Ain't that nearly impossible to do unless you gave her the gun and then you carried the body?",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-0311",
   "fact": "F04",
+  "kind": "denies",
+  "quote": "No. (shakes head \u201cno\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0311",
+  "fact": "F10",
   "kind": "denies",
   "quote": "No. (shakes head \u201cno\u201d)",
   "by": "model",
@@ -12376,26 +12728,18 @@
   "verified": null
  },
  {
-  "utterance": "S3-0312",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "how he did that",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0312",
-  "fact": "F11",
-  "kind": "asks",
-  "quote": "how he did that",
+  "utterance": "S3-0311",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "No. (shakes head \u201cno\u201d)",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-0313",
-  "fact": "F04",
+  "fact": "F10",
   "kind": "asserts",
-  "quote": "he went under her and she was like right here",
+  "quote": "he had the gun in his hands",
   "by": "model",
   "verified": null
  },
@@ -12411,7 +12755,7 @@
   "utterance": "S3-0315",
   "fact": "F22",
   "kind": "asks",
-  "quote": "where the bra and panties are",
+  "quote": "Where are the bra and the panties?",
   "by": "model",
   "verified": null
  },
@@ -12426,8 +12770,8 @@
  {
   "utterance": "S3-0317",
   "fact": "F22",
-  "kind": "asserts",
-  "quote": "They didn\u2019t just disappear",
+  "kind": "asks",
+  "quote": "They didn\u2019t just disappear, Brendan.",
   "by": "model",
   "verified": null
  },
@@ -12443,7 +12787,7 @@
   "utterance": "S3-0319",
   "fact": "F04",
   "kind": "asks",
-  "quote": "carry her out to the garage",
+  "quote": "So, she\u2019s alive when you carry her out to the garage?",
   "by": "model",
   "verified": null
  },
@@ -12451,7 +12795,7 @@
   "utterance": "S3-0324",
   "fact": "F05",
   "kind": "asserts",
-  "quote": "in the bedroom at eight, 8:15",
+  "quote": "we were inta the living, in the, in the bedroom at eight, 8:15.",
   "by": "model",
   "verified": null
  },
@@ -12497,25 +12841,9 @@
  },
  {
   "utterance": "S3-0337",
-  "fact": "F20",
+  "fact": "F04",
   "kind": "asserts",
-  "quote": "Bleeding",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0339",
-  "fact": "F01",
-  "kind": "assents",
-  "quote": "Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0341",
-  "fact": "F01",
-  "kind": "assents",
-  "quote": "Yeah.",
+  "quote": "Bleeding. So you can't say you didn't see the truck or know where the truck was because she had ta be in that truck after she was bleeding.",
   "by": "model",
   "verified": null
  },
@@ -12529,7 +12857,7 @@
  },
  {
   "utterance": "S3-0346",
-  "fact": "F05",
+  "fact": "F04",
   "kind": "asserts",
   "quote": "On the floor.",
   "by": "model",
@@ -12656,18 +12984,10 @@
   "verified": null
  },
  {
-  "utterance": "S3-0366",
-  "fact": "F12",
-  "kind": "asserts",
-  "quote": "Out in the garage.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-0367",
   "fact": "F02",
   "kind": "asks",
-  "quote": "So th-this knife is in the garage.",
+  "quote": "So th-this knife is in the garage. And you remember the drawing you made of that knife?",
   "by": "model",
   "verified": null
  },
@@ -12708,14 +13028,6 @@
   "fact": "F02",
   "kind": "asserts",
   "quote": "Black.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0373",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "Black handle?",
   "by": "model",
   "verified": null
  },
@@ -12778,16 +13090,8 @@
  {
   "utterance": "S3-0380",
   "fact": "F02",
-  "kind": "asks",
+  "kind": "asserts",
   "quote": "he goes and gets the knife",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0380",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "she's laying on the garage",
   "by": "model",
   "verified": null
  },
@@ -12800,50 +13104,10 @@
   "verified": null
  },
  {
-  "utterance": "S3-0382",
-  "fact": "F06",
-  "kind": "asks",
-  "quote": "How does he stab her?",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-0388",
   "fact": "F06",
   "kind": "asks",
-  "quote": "he stabs her in the chest",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0388",
-  "fact": "F25",
-  "kind": "asks",
-  "quote": "What's underneath there? What organ is in that area? Any organ in particular?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0389",
-  "fact": "F25",
-  "kind": "denies",
-  "quote": "Not that I know of.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0390",
-  "fact": "F25",
-  "kind": "asks",
-  "quote": "Where's your heart located?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0391",
-  "fact": "F25",
-  "kind": "asserts",
-  "quote": "Over here.",
+  "quote": "And he stabs her in the chest.",
   "by": "model",
   "verified": null
  },
@@ -12851,7 +13115,7 @@
   "utterance": "S3-0392",
   "fact": "F06",
   "kind": "asks",
-  "quote": "he stabbed her right in the middle of the chest",
+  "quote": "But he stabbed her right in the middle of the chest?",
   "by": "model",
   "verified": null
  },
@@ -12891,7 +13155,7 @@
   "utterance": "S3-0396",
   "fact": "F02",
   "kind": "asks",
-  "quote": "how do you get the knife?",
+  "quote": "So how do you get the knife?",
   "by": "model",
   "verified": null
  },
@@ -12947,7 +13211,7 @@
   "utterance": "S3-0409",
   "fact": "F06",
   "kind": "asserts",
-  "quote": "So you stabbed her in the stomach. Is she alive? You said Steven stabbed her first. Is she still alive when you stab her?",
+  "quote": "So you stabbed her in the stomach.",
   "by": "model",
   "verified": true
  },
@@ -12963,7 +13227,7 @@
   "utterance": "S3-0417",
   "fact": "F06",
   "kind": "asks",
-  "quote": "when Steven stabbed her?",
+  "quote": "when Steven stabbed her",
   "by": "model",
   "verified": null
  },
@@ -13009,9 +13273,25 @@
  },
  {
   "utterance": "S3-0425",
-  "fact": "F06",
+  "fact": "F02",
   "kind": "asks",
   "quote": "Did he tell you where ta stab her?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0425",
+  "fact": "F06",
+  "kind": "asks",
+  "quote": "where ta stab her",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0427",
+  "fact": "F02",
+  "kind": "asks",
+  "quote": "How deep did you put the knife in?",
   "by": "model",
   "verified": null
  },
@@ -13019,7 +13299,7 @@
   "utterance": "S3-0427",
   "fact": "F06",
   "kind": "asks",
-  "quote": "You just stabbed her in the stomach.",
+  "quote": "You just stabbed her in the stomach",
   "by": "model",
   "verified": null
  },
@@ -13051,7 +13331,7 @@
   "utterance": "S3-0431",
   "fact": "F06",
   "kind": "asks",
-  "quote": "when you went into her?",
+  "quote": "when you went into her",
   "by": "model",
   "verified": null
  },
@@ -13202,8 +13482,8 @@
  {
   "utterance": "S3-0459",
   "fact": "F10",
-  "kind": "asserts",
-  "quote": "I think you did.",
+  "kind": "asks",
+  "quote": "You sure? I think you did.",
   "by": "model",
   "verified": null
  },
@@ -13226,14 +13506,6 @@
  {
   "utterance": "S3-0461",
   "fact": "F10",
-  "kind": "asserts",
-  "quote": "The first time you told us ah 10 times, about 10 times, that you shot her. And you told us where he shot her.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0461",
-  "fact": "F11",
   "kind": "asserts",
   "quote": "The first time you told us ah 10 times, about 10 times, that you shot her. And you told us where he shot her.",
   "by": "model",
@@ -13242,7 +13514,7 @@
  {
   "utterance": "S3-0462",
   "fact": "F10",
-  "kind": "denies",
+  "kind": "asserts",
   "quote": "I was lying ah then.",
   "by": "model",
   "verified": null
@@ -13395,7 +13667,7 @@
   "utterance": "S3-0492",
   "fact": "F10",
   "kind": "asserts",
-  "quote": "I heard five shots",
+  "quote": "I heard five shots.",
   "by": "model",
   "verified": null
  },
@@ -13596,6 +13868,14 @@
   "fact": "F04",
   "kind": "asserts",
   "quote": "It was already open.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0522",
+  "fact": "F04",
+  "kind": "asks",
+  "quote": "Why did he put her in the back of the jeep?",
   "by": "model",
   "verified": null
  },
@@ -13816,14 +14096,6 @@
   "verified": null
  },
  {
-  "utterance": "S3-0564",
-  "fact": "F15",
-  "kind": "asserts",
-  "quote": "The van seat and the cabinet.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-0567",
   "fact": "F01",
   "kind": "asks",
@@ -13832,16 +14104,16 @@
   "verified": null
  },
  {
-  "utterance": "S3-0568",
-  "fact": "F01",
-  "kind": "asserts",
-  "quote": "He took it down in the pit.",
+  "utterance": "S3-0567",
+  "fact": "F15",
+  "kind": "asks",
+  "quote": "What happened to the RAV4?",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-0568",
-  "fact": "F13",
+  "fact": "F15",
   "kind": "asserts",
   "quote": "He took it down in the pit.",
   "by": "model",
@@ -13849,15 +14121,7 @@
  },
  {
   "utterance": "S3-0570",
-  "fact": "F01",
-  "kind": "denies",
-  "quote": "No. (shakes head \u201cno\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0570",
-  "fact": "F13",
+  "fact": "F15",
   "kind": "denies",
   "quote": "No. (shakes head \u201cno\u201d)",
   "by": "model",
@@ -13865,7 +14129,7 @@
  },
  {
   "utterance": "S3-0571",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "asserts",
   "quote": "Last time you told us you went with him.",
   "by": "model",
@@ -13873,7 +14137,7 @@
  },
  {
   "utterance": "S3-0572",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "asks",
   "quote": "How did your DNA get in the truck?",
   "by": "model",
@@ -13881,7 +14145,7 @@
  },
  {
   "utterance": "S3-0573",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "denies",
   "quote": "It ain't.",
   "by": "model",
@@ -13889,7 +14153,7 @@
  },
  {
   "utterance": "S3-0575",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "denies",
   "quote": "Cuz I never went in it.",
   "by": "model",
@@ -13897,7 +14161,7 @@
  },
  {
   "utterance": "S3-0576",
-  "fact": "F01",
+  "fact": "F15",
   "kind": "asks",
   "quote": "Do he drives the truck down there himself? I don't think so. Brendan, did you help him take the truck down there. If you did, so what.",
   "by": "model",
@@ -13955,7 +14219,7 @@
   "utterance": "S3-0589",
   "fact": "F15",
   "kind": "asserts",
-  "quote": "he didn't, didn't take the jeep down right away",
+  "quote": "Well he didn't, didn't take the jeep down right away.",
   "by": "model",
   "verified": null
  },
@@ -13971,7 +14235,7 @@
   "utterance": "S3-0591",
   "fact": "F15",
   "kind": "asserts",
-  "quote": "he told me he was gonna take it at nighttime",
+  "quote": "Well he told me he was gonna take it at nighttime.",
   "by": "model",
   "verified": null
  },
@@ -14040,6 +14304,30 @@
   "verified": null
  },
  {
+  "utterance": "S3-0610",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "My pants and my hands.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0611",
+  "fact": "F20",
+  "kind": "asks",
+  "quote": "How did you get that blood off your hands?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0612",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "Washed it off.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-0615",
   "fact": "F02",
   "kind": "asks",
@@ -14057,7 +14345,7 @@
  },
  {
   "utterance": "S3-0616",
-  "fact": "F01",
+  "fact": "F04",
   "kind": "asserts",
   "quote": "It was in the jeep.",
   "by": "model",
@@ -14066,8 +14354,16 @@
  {
   "utterance": "S3-0617",
   "fact": "F02",
-  "kind": "asks",
-  "quote": "What Steven say he did aft, he did with it after that?",
+  "kind": "asserts",
+  "quote": "It was in the jeep.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0617",
+  "fact": "F04",
+  "kind": "asserts",
+  "quote": "It was in the jeep.",
   "by": "model",
   "verified": null
  },
@@ -14081,7 +14377,7 @@
  },
  {
   "utterance": "S3-0621",
-  "fact": "F08",
+  "fact": "F02",
   "kind": "denies",
   "quote": "No I don't.",
   "by": "model",
@@ -14089,7 +14385,7 @@
  },
  {
   "utterance": "S3-0623",
-  "fact": "F08",
+  "fact": "F02",
   "kind": "denies",
   "quote": "I didn't see um.",
   "by": "model",
@@ -14099,7 +14395,7 @@
   "utterance": "S3-0624",
   "fact": "F08",
   "kind": "asks",
-  "quote": "The first time we talked to you or the second time you talked about cutting her hair off. Where did the hair go? Did you cut her hair off?",
+  "quote": "the second time you talked about cutting her hair off. Where did the hair go? Did you cut her hair off?",
   "by": "model",
   "verified": null
  },
@@ -14121,14 +14417,6 @@
  },
  {
   "utterance": "S3-0627",
-  "fact": "F08",
-  "kind": "asserts",
-  "quote": "In the, in the bedroom.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0627",
   "fact": "F05",
   "kind": "asserts",
   "quote": "In the, in the bedroom.",
@@ -14136,16 +14424,16 @@
   "verified": null
  },
  {
-  "utterance": "S3-0628",
+  "utterance": "S3-0627",
   "fact": "F08",
-  "kind": "asks",
-  "quote": "What ya cut the hair off with?",
+  "kind": "asserts",
+  "quote": "In the, in the bedroom.",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-0628",
-  "fact": "F02",
+  "fact": "F08",
   "kind": "asks",
   "quote": "What ya cut the hair off with?",
   "by": "model",
@@ -14177,17 +14465,17 @@
  },
  {
   "utterance": "S3-0632",
-  "fact": "F08",
+  "fact": "F02",
   "kind": "asks",
-  "quote": "Did you cut her hair off?",
+  "quote": "You took her out to the garage and that's when you got the knife.",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-0632",
-  "fact": "F02",
+  "fact": "F08",
   "kind": "asks",
-  "quote": "You took her out to the garage and that's when you got the knife.",
+  "quote": "Did you cut her hair off?",
   "by": "model",
   "verified": null
  },
@@ -14202,7 +14490,7 @@
  {
   "utterance": "S3-0634",
   "fact": "F08",
-  "kind": "asks",
+  "kind": "asserts",
   "quote": "Then why did you just tell us you did?",
   "by": "model",
   "verified": null
@@ -14240,6 +14528,14 @@
   "verified": null
  },
  {
+  "utterance": "S3-0666",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "were you involved with the murder of Teresa Halbach",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-0716",
   "fact": "F05",
   "kind": "asserts",
@@ -14272,6 +14568,22 @@
   "verified": null
  },
  {
+  "utterance": "S3-0770",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "if he got the girl, that you could get some? Was that the plan? Or was the plan just to kill her, or what was the plan?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0771",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "That he just wanted ta kill her.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-0793",
   "fact": "F05",
   "kind": "asserts",
@@ -14300,6 +14612,150 @@
   "fact": "F13",
   "kind": "asserts",
   "quote": "he had a bonfire",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0811",
+  "fact": "F05",
+  "kind": "asserts",
+  "quote": "To have sex with her.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0812",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "So you had sex with her at that time?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0813",
+  "fact": "F05",
+  "kind": "assents",
+  "quote": "mm huh.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0814",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "Did you take all your clothes off?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0815",
+  "fact": "F05",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0816",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "OK. Di-so then you like laid on top of her?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0817",
+  "fact": "F05",
+  "kind": "assents",
+  "quote": "Yeah.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0818",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "Did you kiss her?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0819",
+  "fact": "F05",
+  "kind": "denies",
+  "quote": "No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0820",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "Did you touch her breasts?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0821",
+  "fact": "F05",
+  "kind": "denies",
+  "quote": "No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0822",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "Did you lick her breasts?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0823",
+  "fact": "F05",
+  "kind": "denies",
+  "quote": "No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0824",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "What else did you do to her?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0825",
+  "fact": "F05",
+  "kind": "denies",
+  "quote": "Nothin'.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0826",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "Well tell me what you did with her.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0827",
+  "fact": "F05",
+  "kind": "asserts",
+  "quote": "Just had sex with her.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0828",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "When did Steve have sex with her?",
   "by": "model",
   "verified": null
  },
@@ -14352,14 +14808,6 @@
   "verified": null
  },
  {
-  "utterance": "S3-0866",
-  "fact": "F04",
-  "kind": "asserts",
-  "quote": "he sets her on the floor",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-0868",
   "fact": "F02",
   "kind": "asserts",
@@ -14379,7 +14827,7 @@
   "utterance": "S3-0870",
   "fact": "F02",
   "kind": "asserts",
-  "quote": "the knife he had in his pocket because the knife was the one that he uses for work.",
+  "quote": "Well the knife he had in his pocket because the knife was the one that he uses for work.",
   "by": "model",
   "verified": null
  },
@@ -14466,8 +14914,8 @@
  {
   "utterance": "S3-0881",
   "fact": "F02",
-  "kind": "asserts",
-  "quote": "So he took it out of his pocket.",
+  "kind": "asks",
+  "quote": "OK. So he took it out of his pocket.",
   "by": "model",
   "verified": null
  },
@@ -14562,6 +15010,14 @@
  {
   "utterance": "S3-0896",
   "fact": "F02",
+  "kind": "asserts",
+  "quote": "Then he stabs her.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0896",
+  "fact": "F06",
   "kind": "asserts",
   "quote": "Then he stabs her.",
   "by": "model",
@@ -14736,26 +15192,10 @@
   "verified": null
  },
  {
-  "utterance": "S3-0950",
-  "fact": "F13",
-  "kind": "assents",
-  "quote": "Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-0952",
-  "fact": "F13",
-  "kind": "assents",
-  "quote": "Yeah.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-0953",
   "fact": "F13",
   "kind": "asks",
-  "quote": "She was already on the fire, wasn't she?",
+  "quote": "She was already on the fire, wasn't she? Yes or no. I mean, tell me, was she or wasn't she?",
   "by": "model",
   "verified": null
  },
@@ -14843,7 +15283,7 @@
   "utterance": "S3-0962",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "We waited until most of its burned",
+  "quote": "most of its burned",
   "by": "model",
   "verified": null
  },
@@ -14851,7 +15291,7 @@
   "utterance": "S3-0962",
   "fact": "F24",
   "kind": "asserts",
-  "quote": "then he swishes it around",
+  "quote": "he swishes it around",
   "by": "model",
   "verified": null
  },
@@ -14867,7 +15307,7 @@
   "utterance": "S3-0964",
   "fact": "F24",
   "kind": "asserts",
-  "quote": "With a shovel and",
+  "quote": "With a shovel",
   "by": "model",
   "verified": null
  },
@@ -14891,7 +15331,7 @@
   "utterance": "S3-0967",
   "fact": "F24",
   "kind": "asks",
-  "quote": "And you helped him with that, right.",
+  "quote": "you helped him with that, right",
   "by": "model",
   "verified": null
  },
@@ -15041,17 +15481,17 @@
  },
  {
   "utterance": "S3-0993",
-  "fact": "F20",
+  "fact": "F22",
   "kind": "asks",
-  "quote": "clean up the blood",
+  "quote": "OK, so you clean up the blood with all of her clothes and what do you do with the clothes then?",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-0993",
-  "fact": "F22",
+  "fact": "F20",
   "kind": "asks",
-  "quote": "all of her clothes",
+  "quote": "OK, so you clean up the blood with all of her clothes and what do you do with the clothes then?",
   "by": "model",
   "verified": null
  },
@@ -15067,7 +15507,7 @@
   "utterance": "S3-0996",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "waited for that to go down",
+  "quote": "Then we waited for that to go down and then",
   "by": "model",
   "verified": null
  },
@@ -15075,7 +15515,7 @@
   "utterance": "S3-1002",
   "fact": "F13",
   "kind": "asserts",
-  "quote": "waited for the fire to go down",
+  "quote": "we waited for the fire to go down",
   "by": "model",
   "verified": null
  },
@@ -15089,7 +15529,7 @@
  },
  {
   "utterance": "S3-1004",
-  "fact": "F15",
+  "fact": "F01",
   "kind": "asserts",
   "quote": "He said that he would take care of it.",
   "by": "model",
@@ -15097,25 +15537,17 @@
  },
  {
   "utterance": "S3-1005",
-  "fact": "F15",
+  "fact": "F01",
   "kind": "asks",
-  "quote": "Did you help him?",
+  "quote": "I think you helped him. Did you help him? If you did, it's OK.",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-1006",
-  "fact": "F15",
+  "fact": "F01",
   "kind": "asserts",
-  "quote": "I helped him put the stuff in the jeep.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1007",
-  "fact": "F02",
-  "kind": "asks",
-  "quote": "What stuff?",
+  "quote": "Well, I helped him put the stuff in the jeep.",
   "by": "model",
   "verified": null
  },
@@ -15424,26 +15856,10 @@
   "verified": null
  },
  {
-  "utterance": "S3-1116",
-  "fact": "F23",
-  "kind": "asks",
-  "quote": "Why did you just tell me ya did? Brendan.",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-1120",
   "fact": "F23",
-  "kind": "asks",
-  "quote": "He gave you some money out of her purse, though. That I know. How much?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1122",
-  "fact": "F23",
-  "kind": "asks",
-  "quote": "Did he give you money?",
+  "kind": "asserts",
+  "quote": "He gave you some money out of her purse, though.",
   "by": "model",
   "verified": null
  },
@@ -15459,7 +15875,7 @@
   "utterance": "S3-1124",
   "fact": "F23",
   "kind": "asks",
-  "quote": "Brendan, who put that stuff in the burn barrel?",
+  "quote": "who put that stuff in the burn barrel?",
   "by": "model",
   "verified": null
  },
@@ -15475,15 +15891,15 @@
   "utterance": "S3-1128",
   "fact": "F23",
   "kind": "asserts",
-  "quote": "Cuz he told me that he was gonna do that.",
+  "quote": "he told me that he was gonna do that",
   "by": "model",
   "verified": null
  },
  {
-  "utterance": "S3-1129",
+  "utterance": "S3-1130",
   "fact": "F23",
-  "kind": "asks",
-  "quote": "Did ya see that stuff in the house?",
+  "kind": "denies",
+  "quote": "No.",
   "by": "model",
   "verified": null
  },
@@ -15491,7 +15907,7 @@
   "utterance": "S3-1131",
   "fact": "F23",
   "kind": "asks",
-  "quote": "you went through her purse, didn't you? So how did the money get out of her purse?",
+  "quote": "you went through her purse, didn't you?",
   "by": "model",
   "verified": null
  },
@@ -15500,14 +15916,6 @@
   "fact": "F23",
   "kind": "asserts",
   "quote": "He gave it ta me.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1133",
-  "fact": "F23",
-  "kind": "asks",
-  "quote": "How much did he give you?",
   "by": "model",
   "verified": null
  },
@@ -15728,6 +16136,582 @@
   "verified": null
  },
  {
+  "utterance": "S3-1194",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F02",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F04",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F05",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F06",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F07",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F08",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F09",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F10",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F11",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F12",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F13",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F14",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F15",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F16",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F17",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F18",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F19",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F21",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F22",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F23",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1194",
+  "fact": "F24",
+  "kind": "asserts",
+  "quote": "all the stuff I did was wrong",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F02",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F04",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F05",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F06",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F07",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F08",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F09",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F10",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F11",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F12",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F13",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F14",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F15",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F16",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F17",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F18",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F19",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F21",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F22",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F23",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1200",
+  "fact": "F24",
+  "kind": "asserts",
+  "quote": "what I did",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F02",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F03",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F04",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F05",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F06",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F07",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F08",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F09",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F10",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F11",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F12",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F13",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F14",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F15",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F16",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F17",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F18",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F19",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F20",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F21",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F22",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F23",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1202",
+  "fact": "F24",
+  "kind": "asserts",
+  "quote": "I did it just because Steven told me to",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-1217",
   "fact": "F18",
   "kind": "asks",
@@ -15784,6 +16768,14 @@
   "verified": null
  },
  {
+  "utterance": "S3-1225",
+  "fact": "F18",
+  "kind": "asks",
+  "quote": "He let the key where?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-1226",
   "fact": "F18",
   "kind": "asserts",
@@ -15824,6 +16816,14 @@
   "verified": null
  },
  {
+  "utterance": "S3-1241",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "He had the bed where the window was when Teresa was there?",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-1242",
   "fact": "F05",
   "kind": "assents",
@@ -15837,7 +16837,7 @@
   "kind": "asks",
   "quote": "could you draw out where the key was, or well let's just go back to the key. You said you see him take it out of the dresser?",
   "by": "model",
-  "verified": true
+  "verified": null
  },
  {
   "utterance": "S3-1246",
@@ -16083,7 +17083,7 @@
   "utterance": "S3-1289",
   "fact": "F15",
   "kind": "asks",
-  "quote": "You helped Steve put that cardboard on top of her car, didn\u2019t you?",
+  "quote": "You helped Steve put that cardboard on top of her car, didn't you?",
   "by": "model",
   "verified": null
  },
@@ -16107,7 +17107,7 @@
   "utterance": "S3-1292",
   "fact": "F15",
   "kind": "denies",
-  "quote": "I don\u2019t know.",
+  "quote": "I don't know.",
   "by": "model",
   "verified": null
  },
@@ -16139,7 +17139,7 @@
   "utterance": "S3-1296",
   "fact": "F01",
   "kind": "asserts",
-  "quote": "He said he\u2019ll smash it faster a day that he can do it.",
+  "quote": "He said he'll smash it faster a day that he can do it.",
   "by": "model",
   "verified": null
  },
@@ -16273,7 +17273,7 @@
  },
  {
   "utterance": "S3-1359",
-  "fact": "F04",
+  "fact": "F06",
   "kind": "asks",
   "quote": "When you saw Teresa in the house and up until she went to the garage, was she, did you ever see her bleeding? In the house?",
   "by": "model",
@@ -16289,7 +17289,7 @@
  },
  {
   "utterance": "S3-1360",
-  "fact": "F04",
+  "fact": "F06",
   "kind": "denies",
   "quote": "No. (shakes head \u201cno\u201d)",
   "by": "model",
@@ -16305,7 +17305,31 @@
  },
  {
   "utterance": "S3-1361",
-  "fact": "F04",
+  "fact": "F06",
+  "kind": "asks",
+  "quote": "Did anyone ever hit her or hurt her that you saw, in the house?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1361",
+  "fact": "F07",
+  "kind": "asks",
+  "quote": "Did anyone ever hit her or hurt her that you saw, in the house?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1361",
+  "fact": "F08",
+  "kind": "asks",
+  "quote": "Did anyone ever hit her or hurt her that you saw, in the house?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1361",
+  "fact": "F09",
   "kind": "asks",
   "quote": "Did anyone ever hit her or hurt her that you saw, in the house?",
   "by": "model",
@@ -16321,7 +17345,31 @@
  },
  {
   "utterance": "S3-1362",
-  "fact": "F04",
+  "fact": "F06",
+  "kind": "denies",
+  "quote": "No. (shakes head \u201cno\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1362",
+  "fact": "F07",
+  "kind": "denies",
+  "quote": "No. (shakes head \u201cno\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1362",
+  "fact": "F08",
+  "kind": "denies",
+  "quote": "No. (shakes head \u201cno\u201d)",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1362",
+  "fact": "F09",
   "kind": "denies",
   "quote": "No. (shakes head \u201cno\u201d)",
   "by": "model",
@@ -16552,6 +17600,14 @@
   "verified": null
  },
  {
+  "utterance": "S3-1414",
+  "fact": "F23",
+  "kind": "asserts",
+  "quote": "Cuz he told me.",
+  "by": "model",
+  "verified": null
+ },
+ {
   "utterance": "S3-1415",
   "fact": "F23",
   "kind": "asks",
@@ -16608,10 +17664,82 @@
   "verified": null
  },
  {
-  "utterance": "S3-1424",
+  "utterance": "S3-1431",
   "fact": "F23",
-  "kind": "asserts",
-  "quote": "That's all I can remember.",
+  "kind": "asks",
+  "quote": "That you guys took pictures of her.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1432",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1433",
+  "fact": "F23",
+  "kind": "asks",
+  "quote": "Did you take the pictures?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1434",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1435",
+  "fact": "F23",
+  "kind": "asks",
+  "quote": "Did Steve take pictures?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1436",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1437",
+  "fact": "F23",
+  "kind": "asks",
+  "quote": "Did you tell somebody you took pictures?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1438",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "No.",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1439",
+  "fact": "F23",
+  "kind": "asks",
+  "quote": "You told Travis that?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1440",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "No.",
   "by": "model",
   "verified": null
  },
@@ -16712,56 +17840,16 @@
   "verified": null
  },
  {
-  "utterance": "S3-1499",
-  "fact": "F01",
-  "kind": "asks",
-  "quote": "The girl that takes the pictures of cars for a magazine.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1510",
-  "fact": "F05",
-  "kind": "assents",
-  "quote": "mm huh",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1510",
-  "fact": "F20",
-  "kind": "assents",
-  "quote": "mm huh",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-1511",
   "fact": "F05",
   "kind": "asks",
-  "quote": "While you, while you went out, I asked him about, ah if-if he saw any blood on Teresa or Teresa bleeding at all while she was in that house and he said no. Ah, then you came in, we were talking about his injury. Brendan, when Teresa was on the bed, wh-where, what was on the bed, sheets, blankets, what was on the bed?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1511",
-  "fact": "F21",
-  "kind": "asks",
-  "quote": "when Teresa was on the bed, wh-where, what was on the bed, sheets, blankets, what was on the bed?",
+  "quote": "when Teresa was on the bed",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-1512",
   "fact": "F05",
-  "kind": "asserts",
-  "quote": "Pillows, blankets, sheets.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1512",
-  "fact": "F21",
   "kind": "asserts",
   "quote": "Pillows, blankets, sheets.",
   "by": "model",
@@ -16913,33 +18001,9 @@
  },
  {
   "utterance": "S3-1532",
-  "fact": "F04",
-  "kind": "asks",
-  "quote": "trying to hide somebody",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1532",
   "fact": "F22",
   "kind": "asks",
   "quote": "take their clothes off",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1533",
-  "fact": "F03",
-  "kind": "denies",
-  "quote": "No.",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1533",
-  "fact": "F04",
-  "kind": "denies",
-  "quote": "No.",
   "by": "model",
   "verified": null
  },
@@ -16993,15 +18057,15 @@
  },
  {
   "utterance": "S3-1541",
-  "fact": "F04",
+  "fact": "F01",
   "kind": "asks",
-  "quote": "get out in the garage or out of the house",
+  "quote": "who held the door open for him to get out in the garage or out of the house?",
   "by": "model",
   "verified": null
  },
  {
   "utterance": "S3-1542",
-  "fact": "F04",
+  "fact": "F01",
   "kind": "asserts",
   "quote": "I did.",
   "by": "model",
@@ -17011,7 +18075,7 @@
   "utterance": "S3-1543",
   "fact": "F19",
   "kind": "asks",
-  "quote": "did you wash any of your clothes",
+  "quote": "did you wash any of your clothes?",
   "by": "model",
   "verified": null
  },
@@ -17027,7 +18091,7 @@
   "utterance": "S3-1545",
   "fact": "F19",
   "kind": "asks",
-  "quote": "Were they washed from between the time you went home that night and the time we got them",
+  "quote": "Were they washed from between the time you went home that night and the time we got them?",
   "by": "model",
   "verified": null
  },
@@ -17059,7 +18123,7 @@
   "utterance": "S3-1554",
   "fact": "F15",
   "kind": "asks",
-  "quote": "helping Steven put the hood on the car and branches and stuff like that",
+  "quote": "helping Steven put the hood on the car and branches and stuff like that, did you help him do that?",
   "by": "model",
   "verified": null
  },
@@ -17105,7 +18169,7 @@
  },
  {
   "utterance": "S3-1561",
-  "fact": "F13",
+  "fact": "F15",
   "kind": "asserts",
   "quote": "the way we got down there was the back way where behind this cabin, and cuz there's a field right behind, there's trees behind them, there's a field there, there's a way back there.",
   "by": "model",
@@ -17171,7 +18235,7 @@
   "utterance": "S3-1580",
   "fact": "F16",
   "kind": "asks",
-  "quote": "what did you do with the plates? Again, Teresa's here and she's thanking you for being honest. Do you know what he did with the plates?",
+  "quote": "what did you do with the plates?",
   "by": "model",
   "verified": null
  },
@@ -17289,7 +18353,7 @@
  },
  {
   "utterance": "S3-1666",
-  "fact": "F23",
+  "fact": "F13",
   "kind": "asks",
   "quote": "the burn barrel",
   "by": "model",
@@ -17304,42 +18368,10 @@
   "verified": null
  },
  {
-  "utterance": "S3-1706",
-  "fact": "F01",
+  "utterance": "S3-1674",
+  "fact": "F13",
   "kind": "asks",
-  "quote": "the night that you were with Teresa",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1707",
-  "fact": "F01",
-  "kind": "denies",
-  "quote": "No. (shakes head \u201cno\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1708",
-  "fact": "F01",
-  "kind": "asks",
-  "quote": "You didn\u2019t see him like that that night?",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1709",
-  "fact": "F01",
-  "kind": "denies",
-  "quote": "No. (shakes head \u201cno\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1710",
-  "fact": "F01",
-  "kind": "asks",
-  "quote": "Was he calm, most of the night with her, all the night with Teresa?",
+  "quote": "after you guys killed Teresa",
   "by": "model",
   "verified": null
  },
@@ -17408,22 +18440,6 @@
   "verified": null
  },
  {
-  "utterance": "S3-1729",
-  "fact": "F08",
-  "kind": "denies",
-  "quote": "(nods \u201cyes\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
-  "utterance": "S3-1731",
-  "fact": "F08",
-  "kind": "denies",
-  "quote": "(shakes head \u201cno\u201d)",
-  "by": "model",
-  "verified": null
- },
- {
   "utterance": "S3-1792",
   "fact": "F01",
   "kind": "asks",
@@ -17435,7 +18451,31 @@
   "utterance": "S3-1792",
   "fact": "F15",
   "kind": "asks",
-  "quote": "which route you took with her jeep",
+  "quote": "you probably wanna draw like Steve's trailer your house, you know, mom and dads, Chuckie's, you know and then like the pits over here and you know which ever route you took",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1793",
+  "fact": "F01",
+  "kind": "assents",
+  "quote": "Mm huh. (nods \"yes\")",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1793",
+  "fact": "F15",
+  "kind": "assents",
+  "quote": "Mm huh. (nods \"yes\")",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1828",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "Where was it parked then when you parked it?",
   "by": "model",
   "verified": null
  },
@@ -17449,9 +18489,17 @@
  },
  {
   "utterance": "S3-1829",
-  "fact": "F15",
-  "kind": "asks",
+  "fact": "F01",
+  "kind": "asserts",
   "quote": "The RAV4, right?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1830",
+  "fact": "F01",
+  "kind": "asks",
+  "quote": "The jeep, yeah. When you drove it down here, where did you park it?",
   "by": "model",
   "verified": null
  },
@@ -17460,6 +18508,14 @@
   "fact": "F15",
   "kind": "asks",
   "quote": "The jeep, yeah. When you drove it down here, where did you park it?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1831",
+  "fact": "F01",
+  "kind": "asserts",
+  "quote": "Like right here.",
   "by": "model",
   "verified": null
  },
@@ -17481,9 +18537,25 @@
  },
  {
   "utterance": "S3-1851",
+  "fact": "F13",
+  "kind": "asks",
+  "quote": "Did you guys take any of the bones out of that burn pile?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1851",
   "fact": "F24",
   "kind": "asks",
   "quote": "Did you guys take any of the bones out of that burn pile?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1852",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "I didn\u2019t.",
   "by": "model",
   "verified": null
  },
@@ -17497,9 +18569,25 @@
  },
  {
   "utterance": "S3-1853",
+  "fact": "F13",
+  "kind": "asks",
+  "quote": "How about Steve?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1853",
   "fact": "F24",
   "kind": "asks",
   "quote": "How about Steve?",
+  "by": "model",
+  "verified": null
+ },
+ {
+  "utterance": "S3-1854",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "Not that I know of.",
   "by": "model",
   "verified": null
  },
@@ -17537,17 +18625,25 @@
  },
  {
   "utterance": "S2-0367",
+  "fact": "F19",
+  "kind": "assents",
+  "quote": "(nods \"yes\")",
+  "by": "code",
+  "verified": null
+ },
+ {
+  "utterance": "S2-0367",
   "fact": "F20",
   "kind": "assents",
   "quote": "(nods \"yes\")",
   "by": "code",
-  "verified": true
+  "verified": false
  },
  {
-  "utterance": "S2-1058",
-  "fact": "F06",
+  "utterance": "S2-0594",
+  "fact": "F01",
   "kind": "assents",
-  "quote": "Yeah.",
+  "quote": "mm huh.",
   "by": "code",
   "verified": null
  },
@@ -17560,10 +18656,18 @@
   "verified": null
  },
  {
-  "utterance": "S3-1117",
-  "fact": "F23",
+  "utterance": "S2-2745",
+  "fact": "F09",
   "kind": "assents",
-  "quote": "Mm huh.",
+  "quote": "mm huh.",
+  "by": "code",
+  "verified": null
+ },
+ {
+  "utterance": "S3-0667",
+  "fact": "F01",
+  "kind": "assents",
+  "quote": "Yes.",
   "by": "code",
   "verified": null
  },
@@ -17577,25 +18681,17 @@
  },
  {
   "utterance": "S3-1667",
-  "fact": "F23",
+  "fact": "F13",
   "kind": "assents",
   "quote": "Yeah.",
   "by": "code",
   "verified": null
  },
  {
-  "utterance": "S3-1793",
-  "fact": "F01",
+  "utterance": "S3-1729",
+  "fact": "F08",
   "kind": "assents",
-  "quote": "Mm huh.",
-  "by": "code",
-  "verified": null
- },
- {
-  "utterance": "S3-1793",
-  "fact": "F15",
-  "kind": "assents",
-  "quote": "Mm huh.",
+  "quote": "(nods \u201cyes\u201d)",
   "by": "code",
   "verified": null
  },
@@ -17645,14 +18741,30 @@
   "kind": "asks",
   "quote": "So, you when you carried her out of the house, and you put \u2018er by the garage, and Steve shoots her, then you put her on top of the fire that\u2019s already going?",
   "by": "search",
-  "verified": true
+  "verified": false
  },
  {
-  "utterance": "S1-0161",
-  "fact": "F23",
+  "utterance": "S1-0023",
+  "fact": "F14",
   "kind": "asks",
-  "quote": "Yeah, it's not your fault............Like I said, Mark and I are not going to leave you high and dry. I got a very, very important appointment at 3:00 today. We",
+  "quote": "mmhuh. Did you see any body parts?",
   "by": "search",
+  "verified": false
+ },
+ {
+  "utterance": "S2-0787",
+  "fact": "F05",
+  "kind": "asks",
+  "quote": "She was handcuffed to what?",
+  "by": "search-part",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0303",
+  "fact": "F15",
+  "kind": "asks",
+  "quote": "How did he try to hide it, what did he tell you?",
+  "by": "search-part",
   "verified": false
  }
 ]
