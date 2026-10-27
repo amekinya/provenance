@@ -20,6 +20,12 @@ def main() -> None:
           "| Fact | Label | Verdict | First investigator line | First suspect line | Note |", "|---|---|---|---|---|---|"]
     for f in rep["facts"]:
         note = f["why"] if f.get("partly_supplied") else ""
+        more = [x for x in f.get("investigator_lines_before", []) if not f["first_interrogator"] or x["utterance"] != f["first_interrogator"]["utterance"]]
+        if more:
+            note += (" " if note else "") + "Also before his first statement: " + "; ".join(f"{x['utterance']} (p. {x['page']})" for x in more) + "."
+        if f.get("related_statements"):
+            note += (" " if note else "") + "His related earlier statements: " + "; ".join(
+                f"{x['utterance']} (p. {x['page']}): {' '.join(x['quote'].split())[:70]}" for x in f["related_statements"]) + "."
         md.append(f"| {f['fact']['id']} | {f['fact']['label']} | {f['origin_label']} | {cell(f['first_interrogator'])} | {cell(f['first_suspect'])} | {note} |".replace("\n", " "))
     memo = cd / "memo.json"
     if memo.exists():

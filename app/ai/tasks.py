@@ -187,10 +187,14 @@ def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) 
         groups = i.get("must") or []
         return ("\nKey terms (one word from each group must be there; code checks the words): " +
                 " + ".join("(" + " | ".join(g) + ")" for g in groups)) if groups else ""
+    def stance(i):
+        return ("\nQuestion for this item: the words are there; is this the suspect STATING or AGREEING to this detail? Answer "
+                "carries_detail=false for a denial, a question, or the words in another sense; give kind asserts or assents when true.") if i.get("stance") else ""
+
     def part(i):
         return (f"\nQuestion for this item: does the sentence name {', '.join(repr(w) for w in i['part'])} as part of THIS detail (the same "
                 "object or event, in the same sense)? It need not convey the whole detail; carries_detail answers this question.") if i.get("part") else ""
-    body = "\n\n".join(f"[{i['key']}] Detail: {i['fact_label']} ({i['fact_detail']}){terms(i)}{part(i)}\nLines before it: {i.get('prev', '')}\n"
+    body = "\n\n".join(f"[{i['key']}] Detail: {i['fact_label']} ({i['fact_detail']}){terms(i)}{part(i)}{stance(i)}\nLines before it: {i.get('prev', '')}\n"
                        f"Sentence ({i['speaker']}): {i['text']}" for i in items)
     out = chat_json(settings.ultra, [
         {"role": "system", "content": "You double-check labels for a defense corroboration audit. For each item, decide strictly whether the "
@@ -226,6 +230,8 @@ MEMO_SCHEMA = {
 def write_memo(report: dict, calls: list[CallRecord] | None = None) -> dict:
     brief = {"headline": report["headline"], "counts": report["counts"],
              "facts": [{"label": f["fact"]["label"], "origin": f["origin_label"], "why": f["why"],
+                        "investigator_lines_before_his_first_statement": [f"p. {x['page']}: {x['quote'][:120]}" for x in f.get("investigator_lines_before", [])],
+                        "his_related_earlier_statements": [f"p. {x['page']}: {x['quote'][:120]}" for x in f.get("related_statements", [])],
                         "investigator_mentions_before_suspect": f["interrogator_mentions_before_suspect"],
                         "adopted_by_agreeing": f["adopted_by_assent"], "across_sessions": f["crossed_sessions"]} for f in report["facts"]],
              "sessions": report["session_stats"]}
@@ -236,7 +242,9 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None) -> dict:
                                       "investigators named in part, always state both halves with their pages, e.g. 'Investigators asked about the "
                                       "fire (p. 441); he named tires and branches (p. 442)'. Open by saying this is a draft for counsel's review, "
                                       "computed from the record with machine-checked lines (investigator lines matched by key words in code; the "
-                                      "suspect's lines labeled by a model and checked by code), and that borderline suspect-side calls need review."},
+                                      "suspect's lines labeled by a model and checked by code), and that borderline suspect-side calls need review. Say a "
+                                      "detail 'came from him first in the record'; never say he 'volunteered' it. Where findings list several "
+                                      "investigator lines before his first statement, or his related earlier statements, cite them with pages."},
         {"role": "user", "content": f"Findings: {json.dumps(brief)[:60000]}\n\nWrite: summary (3-4 sentences), key_points (4-6 bullets, most "
                                     "important first, each with its page cite), limits (2-4 bullets: what this audit can't tell)."}],
         schema=MEMO_SCHEMA, purpose="Write the memo", reasoning=True, max_tokens=5000, calls=calls)

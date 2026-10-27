@@ -274,10 +274,24 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
     is_part = bool(partial and origin == "interrogator_first" and not (first_inv and first_inv["seq"] < first_sus["seq"]))
     if is_part:
         first_inv = partial["event"]
+        if not any(e["utterance"] == first_inv["utterance"] for e in events):
+            events.append(first_inv)
+            events.sort(key=lambda e: e["seq"])
     if first_inv:
         first_inv["first"] = "interrogator"
     if first_sus:
         first_sus["first"] = "suspect"
+    # Up to 3 earliest investigator lines before his first statement (so a reader sees more than one), and his related
+    # earlier statements: lines labeled with the detail that carry some key-term groups but not all.
+    upto = first_sus["seq"] if first_sus else float("inf")
+    inv_lines = [e for e in events if e["role"] == "interrogator" and e["seq"] < upto and not e.get("kind_note")
+                 and (e["kind"] in ("asks", "asserts") or e.get("partial"))][:3]
+    related = []
+    if fact.must and first_sus:
+        for e in events:
+            if (e["role"] == "suspect" and e["seq"] < upto and e["kind"] != "denies" and e.get("kind_note", "").startswith("the line doesn't")
+                    and any(has_terms(by_id[e["utterance"]].text, [g]) for g in fact.must)):
+                related.append(e)
     adopted_by_assent = bool(first_sus and first_sus["kind"] == "assents")
     return {
         "fact": asdict(fact) | {"public_before": fact.public_before.isoformat() if fact.public_before else None},
@@ -285,6 +299,9 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
         "corroboration": CORROBORATION[origin], "why": why,
         "partly_supplied": is_part, "partial_words": partial["investigator_words"] if is_part else [],
         "first_interrogator": first_inv, "first_suspect": first_sus,
+        "investigator_lines_before": [{k: e[k] for k in ("utterance", "page", "session", "quote", "by")} for e in inv_lines],
+        "related_statements": [{k: e[k] for k in ("utterance", "page", "session", "quote")} for e in related[:3]],
+        "related_statements_total": len(related),
         "interrogator_mentions_before_suspect": inv_before if first_sus else None,
         "adopted_by_assent": adopted_by_assent,
         "crossed_sessions": bool(first_inv and first_sus and first_inv["seq"] < first_sus["seq"] and first_inv["session"] != first_sus["session"]),

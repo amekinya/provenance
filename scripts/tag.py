@@ -174,6 +174,75 @@ def context_before(order: list[dict]) -> dict[str, str]:
     return out
 
 
+def suspect_candidates(cfg, utts, facts, mentions, per_fact: int = 5) -> list[dict]:
+    """Suspect lines that carry every key-term group by code (read the same way the ledger reads them), with no saved
+    label the ledger uses for that detail, before his current first statement of it. Earliest first, at most `per_fact`
+    per detail."""
+    from app.engine.ledger import answers_labeled  # noqa: PLC0415
+
+    order = sorted(utts, key=lambda u: u["seq"])
+    rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+    first_seq = {f["fact"]["id"]: (f["first_suspect"] or {}).get("seq", float("inf")) for f in rep["facts"]}
+    prev_of = context_before(order)
+    out = []
+    for f in facts:
+        must = f.get("must")
+        if not must:
+            continue
+        # A line is already covered by a label the ledger uses (not rejected), or by an earlier stance check. A label the
+        # verifier rejected doesn't cover it: code now says the words are there, so only the stance question remains.
+        have = {m["utterance"] for m in mentions if m["fact"] == f["id"] and (m.get("verified") is not False or m.get("by") == "suspect-search")}
+        labeled = {m["utterance"] for m in mentions if m["fact"] == f["id"]} | {
+            u["id"] for u in order if u["role"] == "interrogator" and any(has_terms(u["text"], [g]) for g in must)}
+        n = 0
+        for i, u in enumerate(order):
+            if u["seq"] >= first_seq[f["id"]] or n >= per_fact:
+                break
+            if u["role"] != "suspect" or u["id"] in have or not re.search(r"[A-Za-z]", spoken(u["text"])):
+                continue  # a silent line ('......') states nothing
+            if carries(order, i, must, answers_labeled(order, i, labeled)):
+                out.append({"key": f"{u['id']}|{f['id']}", "fact_label": f["label"], "fact_detail": f.get("detail", ""), "must": must,
+                            "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"], "prev": prev_of[u["id"]], "stance": True})
+                n += 1
+    return out
+
+
+def search_suspect(cfg, utts, facts, mentions, calls: list[CallRecord]) -> int:
+    """Symmetric to the investigator side: code finds the suspect's lines that carry a detail's key terms but have no
+    label; Ultra (temperature 0) answers only whether each is him stating or agreeing to it (not a denial or another
+    sense). Answers are saved as labels (by 'suspect-search'), so later re-audits use them without new calls."""
+    items = suspect_candidates(cfg, utts, facts, mentions)
+    if not items:
+        return 0
+    results: dict[str, dict] = {}
+
+    def run(b):
+        local: list[CallRecord] = []
+        try:
+            return tasks.verify(b, local), local
+        except LiveModelUnavailable as e:
+            print(f"  suspect check failed: {str(e)[:140]}")
+            return {}, local
+    with ThreadPoolExecutor(4) as ex:
+        for res, local in ex.map(run, [items[i:i + 3] for i in range(0, len(items), 3)]):
+            calls.extend(local)
+            results.update(res)
+    by_id = {u["id"]: u for u in utts}
+    added = 0
+    for it in items:
+        r = results.get(it["key"])
+        if r is None:
+            continue
+        uid, fid = it["key"].split("|")
+        ok = bool(r["carries_detail"]) and r["kind"] in ("asserts", "assents")
+        mentions.append({"utterance": uid, "fact": fid, "kind": r["kind"] if ok else "denies", "quote": by_id[uid]["text"][:160],
+                         "by": "suspect-search", "verified": ok})
+        added += ok
+    print(f"suspect search: {len(items)} of his lines carry a detail's key terms without a label; {sum(1 for i in items if i['key'] in results)} "
+          f"answered, {added} are him stating or agreeing to it")
+    return added
+
+
 def search_partial(cfg, utts, facts, mentions, calls: list[CallRecord], before: int = 6) -> int:
     """Partial safety search. For a detail the suspect is credited with first, check the investigator lines in the 6
     lines before his first statement of it (same session) that contain part of its key terms (at least one group): the
@@ -416,6 +485,7 @@ def main() -> None:
     ap.add_argument("--no-memo", action="store_true")
     ap.add_argument("--reaudit", action="store_true", help="recompute the audit from the saved labels (mentions.json) with the current code; no labeling")
     ap.add_argument("--memo", action="store_true", help="with --reaudit: also rewrite the memo (one Ultra call)")
+    ap.add_argument("--suspect-search", action="store_true", help="with --reaudit: check his unlabeled lines that carry a detail's key terms (a few Ultra calls); answers are saved to mentions.json")
     ap.add_argument("--labeler", default="ultra", choices=["ultra", "lightning", "matcher"],
                     help="ultra (default): our diagnostic runs found Lightning missed about half of the suspect's adoptions")
     a = ap.parse_args()
@@ -431,6 +501,9 @@ def main() -> None:
                   and not text_of[m["utterance"]].startswith(m["quote"][:40]))]
         if stale:
             sys.exit(f"{len(stale)} saved labels don't match the current lines (ids moved?); run the full tag step instead")
+        if a.suspect_search:
+            search_suspect(cfg, utts, facts, mentions, calls)
+            (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
         (cd / "audit.json").write_text(json.dumps(rep, indent=1))
         print("re-audited from saved labels:", rep["headline"])

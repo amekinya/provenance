@@ -185,6 +185,8 @@
       <p class="why">${esc(f.why)}</p>
       ${stats.length ? `<div class="stats">${stats.map((s) => `<span>${s}</span>`).join("")}</div>` : ""}
       ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail.replace(/\.$/, ""))}.${f.fact.source ? ` Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
+      ${(f.investigator_lines_before || []).length ? `<p class="fine"><b>Investigator lines before his first statement</b> (earliest ${f.investigator_lines_before.length}): ${f.investigator_lines_before.map((x) => `p. ${esc(x.page)} “${esc(x.quote.slice(0, 110))}”${x.by === "key words" ? " (matched by key words)" : ""}`).join("; ")}</p>` : ""}
+      ${(f.related_statements || []).length ? `<p class="fine"><b>His related earlier statements</b> (part of the detail${f.related_statements_total > f.related_statements.length ? `; ${f.related_statements_total} in all` : ""}): ${f.related_statements.map((x) => `p. ${esc(x.page)} “${esc(x.quote.slice(0, 110))}”`).join("; ")}</p>` : ""}
       <h4 class="evhead">The lines that decide it</h4>
       <ol class="evlist">${f.events.map((ev, i) => [ev, i]).filter(([ev]) => ev.first).map(([ev, i]) => evItem(ev, i, rep)).join("") || "<li>No one said it in the recorded interviews.</li>"}</ol>
       <div class="review" role="group" aria-label="Your review of this detail">

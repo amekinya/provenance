@@ -77,7 +77,9 @@
   "source": "Decision and Order pp. 9-10, 14, citing ECF 19-25 at 26, 71-72.",
   "must": [
    [
-    "back",
+    "in the back",
+    "back of",
+    "the back",
     "rear",
     "cargo",
     "trunk"
@@ -424,9 +426,13 @@
     "taken",
     "remove",
     "removed",
-    "off",
     "pulled",
-    "unscrewed"
+    "unscrewed",
+    "took off",
+    "taken off",
+    "take off",
+    "came off",
+    "plates off"
    ]
   ]
  },
