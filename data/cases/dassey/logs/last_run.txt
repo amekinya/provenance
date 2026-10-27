@@ -1,54 +1,16 @@
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (8216 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (16216 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15458 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15693 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11958 chars): '{   "utterances": [     {       "id": "S2-2863",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (16216 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
-  chunk at S2-0595 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11913 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
   [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
   [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23911 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23958 chars): '{   "utterances": [     {       "id": "S2-2863",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11911 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (31645 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11985 chars): '{   "utterances": [     {       "id": "S3-1153",       "graphic": true,       "mentions": ' ... '         {           "fact": "F08",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15645 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (31645 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  chunk at S3-0181 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-tagged 5755 sentences in 321 chunks: 2269 labels kept, 40 dropped (quote not in sentence)
-code added 12 bare agreements that follow an investigator line carrying the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (42758 chars): 'The user wants me to analyze each sentence in the context of a specific detail and previou' ... "n. The rest are interrogator's questions. So kinds: asserts,"
-round 1: 49 deciding labels to check, 44 checked, 27 rejected
-round 2: 32 deciding labels to check, 32 checked, 22 rejected
-round 3: 22 deciding labels to check, 22 checked, 15 rejected
-round 4: 15 deciding labels to check, 15 checked, 12 rejected
-round 5: 13 deciding labels to check, 13 checked, 10 rejected
-round 6: 10 deciding labels to check, 10 checked, 7 rejected
-round 7: 7 deciding labels to check, 7 checked, 2 rejected
-round 8: 2 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-2 deciding line(s) not re-checked
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (40052 chars): 'The user wants me to analyze each sentence in the provided examples to determine if it con' ... 'as: [S2-0704|F05] Does not convey distinctive content. [S2-0'
-safety search: 101 earlier investigator lines checked, 90 answered, 9 carry the detail
-safety search: 6 earlier investigator lines checked, 5 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-round 1: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-Of 24 key details Brendan Dassey stated or agreed to, investigators said 12 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 7 details came from him first in the record.
-done in 527.7s, 394 model calls, $2.5629
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (40503 chars): 'The user wants me to analyze the interrogation transcript and for each crime detail (F01-F' ... 'back. Then he says that he knows a better way, that he would'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (88929 chars): 'The user wants me to analyze the interrogation transcript and identify for each crime deta' ... 'e?" BRENDAN: "(shakes head \'no\')" S2-3398 WIEGERT: "Wh-where'
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/provenance/provenance/scripts/one_prompt_case.py", line 93, in <module>
-    main()
-  File "/home/runner/work/provenance/provenance/scripts/one_prompt_case.py", line 56, in main
-    ans = ask(su, facts, calls)
-          ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/scripts/one_prompt_case.py", line 30, in ask
-    out = chat_json(settings.ultra, [{"role": "user", "content":
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/app/ai/client.py", line 160, in chat_json
-    raise LiveModelUnavailable(f"{spec.model_id} returned no valid JSON")
-app.ai.client.LiveModelUnavailable: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+tagged 5755 sentences in 321 chunks: 2175 labels kept, 34 dropped (quote not in sentence)
+round 1: 50 deciding labels to check, 44 checked, 10 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (36589 chars): 'The user wants me to analyze three items (S1-0538|F03, S1-0538|F04, S1-0543|F15) based on ' ... 't the kind for each. I\'ll write "asserts" for F03, "asserts"'
+round 2: 16 deciding labels to check, 15 checked, 6 rejected
+round 3: 7 deciding labels to check, 6 checked, 2 rejected
+round 4: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 4 round(s)
+safety search: 9 earlier investigator lines checked, 9 answered, 2 carry the detail
+verification done after 0 round(s)
+code added 21 bare agreements; the safety search found 2 earlier investigator lines
+Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 11 details came from him first in the record.
+done in 275.1s, 357 model calls, $1.8258
