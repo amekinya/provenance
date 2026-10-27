@@ -3753,5 +3753,6 @@
   }
  ],
  "investigator_side": "key words (code)",
- "reaudit": "audit recomputed by code from the saved labels, no new labeling"
+ "reaudit": "audit recomputed by code from the saved labels, no new labeling",
+ "memo_cost_usd": 0.011
 }
