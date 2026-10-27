@@ -606,7 +606,7 @@ def _report_phrase(r: dict) -> str:
 def _related_phrase(fact: Fact) -> str:
     if not fact.related_reports:
         return ""
-    items = "; ".join(f"{r['what']} (p. {r['page']})" if r.get("page") and r.get("source", "").startswith("Decision")
+    items = "; ".join(f"{r['what']} (Decision p. {r['page']})" if r.get("page") and r.get("source", "").startswith("Decision")
                       else f"{r['what']} ({r['source']}{', ' + format(date.fromisoformat(r['date']), '%b %-d, %Y') if r.get('date') else ''})"
                       for r in fact.related_reports)
     lead = "The Decision lists related reports" if all(r.get("source", "").startswith("Decision") for r in fact.related_reports) else "Related reports"

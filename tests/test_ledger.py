@@ -303,7 +303,7 @@ def test_public_only_when_reports_state_every_part():
     # a report it could only be inferred from: the transcript decides, and the card lists it
     f = Fact("F1", "Tires and branches on the fire", must=must, related_reports=[{"what": "tires were found", "source": "Decision and Order", "page": "69"}])
     r = by_fact(audit(Case("t", "T", "KID", s, u, [f], m)))["F1"]
-    assert r["origin"] != "public" and "The Decision lists related reports: tires were found (p. 69)" in r["why"]
+    assert r["origin"] != "public" and "The Decision lists related reports: tires were found (Decision p. 69)" in r["why"]
 
 
 def test_long_lines_quote_the_sentence_with_the_detail_and_court_notes_cite_pages():
