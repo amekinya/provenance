@@ -54,7 +54,8 @@ def case_dict(cfg: dict, utts: list[dict], facts: list[dict], mentions: list[dic
 GRAPHIC = re.compile(r"\b(stab\w*|throat|rap(e|ed|ing)|naked|blood\w*|bones?|flesh|body parts?|skull|toes?|choke\w*|cut (her|off)|shot her|kill\w*)\b", re.I)
 
 
-def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRecord], failed: list[str] | None = None) -> tuple[list[dict], dict[str, bool]]:
+def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRecord], failed: list[str] | None = None,
+            spec=None) -> tuple[list[dict], dict[str, bool]]:
     """Lightning labels the record in chunks that never cross a session boundary. Chunks that fail twice are listed in
     `failed`; their lines keep a code-based graphic flag so nothing graphic shows unmasked."""
     order = sorted(utts, key=lambda u: u["seq"])
@@ -76,7 +77,7 @@ def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRec
         slim = lambda xs: [{"id": u["id"], "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"]} for u in xs]  # noqa: E731
         for attempt in range(2):
             try:
-                rows = tasks.tag_mentions(slim(tgt), slim(ctx), facts, local)
+                rows = tasks.tag_mentions(slim(tgt), slim(ctx), facts, local, spec=spec)
                 return rows, local
             except LiveModelUnavailable as e:
                 if attempt == 1:
@@ -190,9 +191,10 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
             local: list[CallRecord] = []
             try:
                 return tasks.verify(b, local), local
-            except LiveModelUnavailable:
+            except LiveModelUnavailable as e:
+                print(f"  safety check failed: {str(e)[:140]}")
                 return {}, local
-        with ThreadPoolExecutor(6) as ex:
+        with ThreadPoolExecutor(4) as ex:
             for res, local in ex.map(run, [items[i:i + 5] for i in range(0, len(items), 5)]):
                 calls.extend(local)
                 results.update(res)
@@ -270,10 +272,11 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
             local: list[CallRecord] = []
             try:
                 return tasks.verify(b, local), local
-            except LiveModelUnavailable:
+            except LiveModelUnavailable as e:
+                print(f"  verifier failed: {str(e)[:140]}")
                 return {}, local
 
-        with ThreadPoolExecutor(6) as ex:
+        with ThreadPoolExecutor(4) as ex:
             for res, local in ex.map(run, batches):
                 calls.extend(local)
                 results.update(res)
@@ -302,7 +305,7 @@ def main() -> None:
     ap.add_argument("case")
     ap.add_argument("--chunk", type=int, default=18)
     ap.add_argument("--no-memo", action="store_true")
-    ap.add_argument("--labeler", default="lightning", choices=["lightning", "matcher"])
+    ap.add_argument("--labeler", default="lightning", choices=["lightning", "ultra", "matcher"])
     a = ap.parse_args()
     cd = case_dir(a.case)
     cfg, utts, facts = load(a.case)
@@ -312,7 +315,8 @@ def main() -> None:
     if a.labeler == "matcher":
         mentions, graphic = tag_with_matcher(utts, facts, calls)
     else:
-        mentions, graphic = tag_all(utts, facts, a.chunk, calls, failed)
+        from app.config import settings  # noqa: PLC0415
+        mentions, graphic = tag_all(utts, facts, a.chunk, calls, failed, spec=settings.ultra if a.labeler == "ultra" else None)
     print(f"code added {add_code_assents(utts, mentions)} bare agreements that follow an investigator line carrying the detail")
     if not utts:
         sys.exit("no utterances: run ingest first")

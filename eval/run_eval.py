@@ -130,6 +130,14 @@ def provenance(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     return _with_trace(rec, utts, facts, mentions, calls)
 
 
+def provenance_ultra(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+    from app.config import settings  # noqa: PLC0415
+
+    utts, facts = _inputs(rec)
+    mentions, _ = tag_all(utts, facts, 18, calls, spec=settings.ultra)
+    return _with_trace(rec, utts, facts, mentions, calls)
+
+
 def provenance_basic(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     """Ablation: Lightning labels + Ultra check only (no code agreements, no safety search), as before Oct 27."""
     utts, facts = _inputs(rec)
@@ -194,6 +202,7 @@ def main() -> None:
         t0 = time.perf_counter()
         fn = {"keyword": lambda r: keyword(r), "one_prompt": lambda r: one_prompt(r, calls), "provenance": lambda r: provenance(r, calls),
               "provenance_basic": lambda r: provenance_basic(r, calls),
+              "provenance_ultra": lambda r: provenance_ultra(r, calls),
               "provenance_matcher": lambda r: provenance_matcher(r, calls)}[m]
 
         def safe(r, fn=fn):
@@ -213,6 +222,7 @@ def main() -> None:
     names = {"keyword": "Keyword match (no model)", "one_prompt": "Nemotron 3 Ultra, one prompt per interview",
              "provenance": "Provenance: Lightning labels + code ledger + Ultra check + safety search",
              "provenance_basic": "Provenance without code agreements or safety search (ablation)",
+             "provenance_ultra": "Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search",
              "provenance_matcher": "Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check"}
     writers = sorted({r["generator"] for r in recs})
     who = " and ".join(writers) + (" (model families different from the training writer)" if a.split == "test" else " (the training writer; diagnostic split)")

@@ -98,10 +98,13 @@ TAG_SYSTEM = (
     "You label sentences from a police interrogation transcript for a defense corroboration audit. For each TARGET sentence, list which "
     "crime details (from the numbered list) it carries, and how:\n"
     "- asks: a question that names or implies the detail (e.g. 'Who shot her in the head?' carries 'shot in the head', even as a question)\n"
-    "- asserts: states the detail as true\n- denies: says it didn't happen or doesn't know about it\n"
+    "- asserts: states the detail as true, in any words: partially, in his own words ('the van' for 'a blue cargo van'), or as a short "
+    "answer to a question about it ('The bed.' answering 'She was handcuffed to what?')\n"
+    "- denies: says it didn't happen, isn't his, or he doesn't know about it\n"
     "- assents: a short agreement ('yeah', 'uh huh') to a question that carried the detail in the line just before\n"
-    "A sentence can carry several details or none. Only count a detail if the words really convey it; similar topics don't count. "
-    "Quote the exact words. Use the context lines only to understand the targets. Also flag graphic descriptions of sexual violence or gore."
+    "A sentence can carry several details or none. Favor recall: label every sentence that refers to a detail, even briefly; a separate "
+    "careful check reviews the lines that matter. Skip only sentences that don't refer to the detail at all (a merely similar topic doesn't "
+    "count). Quote the exact words. Use the context lines only to understand the targets. Also flag graphic descriptions of sexual violence or gore."
 )
 
 
@@ -148,7 +151,16 @@ VERIFY_SCHEMA = {
 
 
 def verify(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str, dict]:
-    """items: [{key, fact_label, fact_detail, speaker, text, prev}] -> {key: {carries_detail, kind, why}}."""
+    """items: [{key, fact_label, fact_detail, speaker, text, prev}] -> {key: {carries_detail, kind, why}}.
+    Ultra with reasoning; if that call fails (timeout, cut-off JSON), once more without reasoning."""
+    try:
+        return _verify(items, calls, True)
+    except LiveModelUnavailable as e:
+        print(f"  verifier (reasoning on) failed: {str(e)[:140]}; retrying without reasoning")
+        return _verify(items, calls, False)
+
+
+def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) -> dict[str, dict]:
     body = "\n\n".join(f"[{i['key']}] Detail: {i['fact_label']} ({i['fact_detail']})\nPrevious line: {i.get('prev', '')}\n"
                        f"Sentence ({i['speaker']}): {i['text']}" for i in items)
     out = chat_json(settings.ultra, [
@@ -156,7 +168,7 @@ def verify(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str
                                       "sentence itself conveys the detail (a question that names it counts; a vague or different topic doesn't; "
                                       "'yeah' counts as assent only if the previous line carried the detail). Give the kind: asks, asserts, denies, assents."},
         {"role": "user", "content": body}],
-        schema=VERIFY_SCHEMA, purpose="Verify deciding sentences", reasoning=True, max_tokens=10000, calls=calls)
+        schema=VERIFY_SCHEMA, purpose="Verify deciding sentences", reasoning=reasoning, max_tokens=10000 if reasoning else 3000, calls=calls)
     return {c["key"]: c for c in out.get("checks", [])}
 
 
