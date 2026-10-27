@@ -1,6 +1,1 @@
-sense check round 1: 64 of his lines
-sense check round 2: 12 of his lines
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (5005 chars): '{ "key": "S2-1560|F16", "about": "His line is about Steve removing the license plates (the' ... ' the person who performed the removal.", "where": "AGREEING"'
-sense check round 3: 1 of his lines
-sense check: 77 lines answered
 re-audited from saved labels: Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first (1 of them in part), 5 were already public, 1 may trace to an earlier statement with no public transcript. 10 details came from him first in the record.
