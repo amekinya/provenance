@@ -1,22 +1,11 @@
-  S1: labels not in the roster (role 'other'): {'FASASBENDER': 1}
-S1: 44 pages -> 650 utterances {'interrogator': 401, 'suspect': 248, 'other': 1}
-  S2: labels not in the roster (role 'other'): {'BARBJANDA': 53, 'UNKNOWNVOICE': 5, 'VOICE': 5, 'REMIKER': 2, 'DENNISJACOBS': 2, 'BACKGROUNDVOICE': 1}
-S2: 152 pages -> 3084 utterances {'interrogator': 1640, 'suspect': 1372, 'other': 72}
-  S3: labels not in the roster (role 'other'): {'UNRECOGNIZABLEVOICE': 8, 'WIEGERTFASSBENDERBOTHSPEAKINGATTHESAMETIME': 1, 'FASSBENDERWIEGERTSPEAKINGATTHESAMETIME': 1}
-S3: 109 pages -> 1839 utterances {'interrogator': 983, 'suspect': 845, 'other': 11}
-model calls this run: 300, $0.5343
-{'session': 'S1', 'page': '451', 'super_vl': {'gold_words': 316, 'wer': 0.0, 'speaker_attribution': 1.0}, 'tesseract': {'gold_words': 316, 'wer': 0.0316, 'speaker_attribution': 1.0}}
-{'session': 'S2', 'page': '588', 'super_vl': {'gold_words': 101, 'wer': 0.0099, 'speaker_attribution': 1.0}, 'tesseract': {'gold_words': 101, 'wer': 0.0495, 'speaker_attribution': 0.9901}}
-{'session': 'S3', 'page': '795', 'super_vl': {'gold_words': 270, 'wer': 0.0, 'speaker_attribution': 1.0}, 'tesseract': {'gold_words': 270, 'wer': 0.0222, 'speaker_attribution': 1.0}}
-{
- "super_vl": {
-  "words": 687,
-  "wer": 0.0015,
-  "speaker_attribution": 1.0
- },
- "tesseract": {
-  "words": 687,
-  "wer": 0.0305,
-  "speaker_attribution": 0.9985
- }
-}
+tagged 5755 sentences in 321 chunks: 498 labels kept, 94 dropped (quote not in sentence)
+round 1: 46 deciding labels to check, 8 checked, 2 rejected
+round 2: 40 deciding labels to check, 32 checked, 11 rejected
+round 3: 18 deciding labels to check, 8 checked, 4 rejected
+round 4: 14 deciding labels to check, 14 checked, 11 rejected
+round 5: 11 deciding labels to check, 11 checked, 6 rejected
+round 6: 5 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+5 deciding line(s) not re-checked
+Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 11 details came from him first in the record.
+done in 540.9s, 354 model calls, $0.7762

@@ -227,7 +227,7 @@
   "role": "interrogator",
   "text": "mmhuh. Did you see any body parts?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0024",
@@ -237,7 +237,7 @@
   "role": "interrogator",
   "text": "You know if you think you saw something in the fire, and it's bo, starting to bother you, or you're feelin' bad about it, the only way it's ever gonna end is if you talk about it. I, I gotta believe you did see something in the fire. You wanna know why I believe that? Because Teresa's bones were intermingled in that seat. And the only way her bones were intermingled in that seat is if she was put on that seat or if the seat was put on top of her.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0025",
@@ -247,7 +247,7 @@
   "role": "interrogator",
   "text": "As I said, we're not gonna say you did and we're not gonna say you didn't, we're not here to ... We're here to give you the opportunity to come forward, to talk to us about what you see, encountered out there that night. We want to know, a lot, a lot of the reason that we're doing this is because, how old are you 16, 17? You're a kid, you know and we got, we've got people back at the sheriff's dept., district attorney's office, and their lookin' at this now saying there's no way that Brendan Dassey was out there and didn't see something. They're talking about trying to link Brendan Dassey with this event. They're not saying that Brendan did it, they're saying that Brendan had something to do with it or the cover up of it which would mean Brendan Dassey could potentially be facing charges for that. And Mark & I are both going well ah he's a kid, he had nothing to do with this, and whether Steve got him out there to help build a fire and he inadvertently saw some things that's what it would be, it wouldn't be that Brendan act- actually helped him dispose of this body. And I'm looking at you Brendan and I know you saw something and that's what killing you more than anything else, knowing that Steven did this, it hurts. Whether it was an accident that Steven did it by, however it happened, he's, he's gotta deal with that. Truthfully, I don't believe Steven intended to kill her. I don't know how it happened, only Steven knows how it happened, and potentially you. Do you know how it happened? What did you see in that fire?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0026",
@@ -347,7 +347,7 @@
   "role": "interrogator",
   "text": "Yeah, I know how hard this is, you know that you saw him put some garbage bags on, but I can look, I can see in your eye, but by your look I can tell you know of something, you saw something or somebody, something's laying heavy on ya. We wouldn't be here bothering you if we didn't know that. We've gotten a lot of information and you know some people don't care, some people back there say no we'll just charge him. We said no, let us talk to him, give him the opportunity to come forward with the information that he has, and get it off of his chest. Now make it look, you can make it look however you want, ... really care, ............tell us what you knew that way you don't have to feel bad for Steven you have to tell the truth. You have no choice in that, someone had killed someone and like I said I don't think Steven intended to do it, but it happened. He still has to pay the price for that.......... I hope you understand that. He didn't do the right thing. How are you going to live with yourself the rest of your life knowing what you know. And I've got .. kids somewhat your age, I'm lookin' at you and I see you in him and I see him in you, I really do, and I know how that would hurt me too. I know how much he would hurt because of what he did know and how, how he felt for the person and what he saw and what he knows. I'm not here, like I said I'm not here to tell you..........I'm not, I here to give you the opportunity to get this off your chest. Mark and I, yeah we're cops, we're investigators and stuff like that, but I'm not right now. I'm a father that has a kid your age too. I wanna be here for you. There's nothing I'd like more than to come over and give you a hug cuz I know you're hurtin'. Yes I do wanna give justice to, to this and to the Halbachs too. You wanna tell me what you saw and what you heard, cuz I know that something is, it's intensely bothering you. Talk about it, we're not just going to let you high and dry, we're gonna talk to your mom after this and we'll deal with this, the best we can for your good OK? I promise I will not let you high and dry, I'll stand behind you.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0036",
@@ -377,7 +377,7 @@
   "role": "interrogator",
   "text": "... and that's nice to know. It's not something that, that I mean we knew that. I'm more interested in what you probably saw in that fire or something. We know she was put in that fire, there's no doubt about it. The evidence speaks for itself. And you were out there with him. And unfortunately I'm afraid you saw something that you wished you never would have seen. You know, I mean, and that's what we need to know. We get that off your chest and we can move forward. That's the important thing we need to, to get out right now, for you. Cuz you're having a tough go of it, and it's not just cuz' you can't see Steve but what you saw. Did (you see a hand, a foot, something in that fire? Her bones? Did you smell something that was not too right?)",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0039",
@@ -1247,7 +1247,7 @@
   "role": "interrogator",
   "text": "Was there blood on those clothes? Be honest Brendan. We know. We already know you know. Help us out. Think of yourself here. Help that family out.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0126",
@@ -1267,7 +1267,7 @@
   "role": "interrogator",
   "text": "Was there blood on those clothes?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0128",
@@ -1287,7 +1287,7 @@
   "role": "interrogator",
   "text": "OK. Where was the blood?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0130",
@@ -1307,7 +1307,7 @@
   "role": "interrogator",
   "text": "Blood on the shirt?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0132",
@@ -1447,7 +1447,7 @@
   "role": "interrogator",
   "text": "... pants and shirt and anything else you saw... Had blood on the shirt?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0146",
@@ -1457,7 +1457,7 @@
   "role": "interrogator",
   "text": "Where on the shirt was the blood? Where on the shirt was the blood?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0147",
@@ -1607,7 +1607,7 @@
   "role": "interrogator",
   "text": "Yeah, it's not your fault............Like I said, Mark and I are not going to leave you high and dry. I got a very, very important appointment at 3:00 today. Well I ain't leavin' for the appointment until I'm sure you're taken care of ....telling the truth ...............get this off your chest and get it out in the open ... so go ahead and talk to us about what you saw in the fire are killin' you right now...............what you see. Go ahead, go ahead. ............you've got to do this for yourself. I know you feel that it's gonna hurt Steven, but it's actually, actually gonna help Steven come to grips with what he needs to do. More important, this could help you. How long you thing ... are going to put up with this .. You know we found some flesh in that fire too. We know you saw some flesh. We found it after all that burned. I know you saw it ...Tell us. You don't have to worry about ............you won't have to prove that in court. (phone rings) Tell us what you saw. You saw some body parts... You're shaking your head . . tell us what you saw...",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0162",
@@ -1637,7 +1637,7 @@
   "role": "suspect",
   "text": "Toes",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0165",
@@ -1647,7 +1647,7 @@
   "role": "interrogator",
   "text": "... part of a foot too? What other parts of the body ... Did you see part of the arm, the legs? I know. It's all right ... Did you see part of her head? Skull?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0166",
@@ -1687,7 +1687,7 @@
   "role": "interrogator",
   "text": "Where? The body parts that you saw, were they on top of tires or underneath the tires, or?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0170",
@@ -1767,7 +1767,7 @@
   "role": "interrogator",
   "text": "All right, we got, we got a lot of important stuff out there now. Take a breath. Let's go over th-the parts that you mentioned, OK, so you mentioned toes, fingers, parts of hand and feet and then what you thought maybe was stomach area or midsection or torso. Did you see any parts of the legs.....parts of the legs or arms. You sure you didn't see her, her, now this is very hard, it's eas, not easy but it easier to say your saw a toe or a finger, but when you start saying to me or I saw a head or a face or hair or you know stuff like that, that's when it hurts though but I find it very hard that you didn't see a skull or the head. Did you see part of the head or face or skull?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0178",
@@ -1827,7 +1827,7 @@
   "role": "interrogator",
   "text": "When you say her forehead was it white bone already or was there still flesh on it?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0184",
@@ -1857,7 +1857,7 @@
   "role": "interrogator",
   "text": "Were all the body parts connected yet?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0187",
@@ -1907,7 +1907,7 @@
   "role": "interrogator",
   "text": "So all the body parts were pretty much connected then when you saw the toes, which means they were probably connected to the feet yet, correct? Which means the feet, foot is connected to both the legs, so I'm just going to ask this question, you're saying that you seen body part. You're pretty much, you're seeing a body? Is that accurate? You saw her body in there?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0192",
@@ -2317,7 +2317,7 @@
   "role": "interrogator",
   "text": "So then after you throw the seat on, what happens, when do you see the body parts?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0233",
@@ -2657,7 +2657,7 @@
   "role": "interrogator",
   "text": "What exactly did he say? He said he, you saw the bones and you said to him why did you do it? Or did you ask him if it was a body or how did that go?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0267",
@@ -2887,7 +2887,7 @@
   "role": "interrogator",
   "text": "I can't believe that he wouldn't have told you how it happened and how did he kill her....",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0290",
@@ -2977,7 +2977,7 @@
   "role": "suspect",
   "text": "That he tied her up and stabbed her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0299",
@@ -3067,7 +3067,7 @@
   "role": "interrogator",
   "text": "Did he say anything about shooting her. Tell me again how he said he killed her.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0308",
@@ -3077,7 +3077,7 @@
   "role": "suspect",
   "text": "He said he tied her up and stabbed her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0309",
@@ -3087,7 +3087,7 @@
   "role": "interrogator",
   "text": "Did he say where he stabbed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0310",
@@ -3107,7 +3107,7 @@
   "role": "interrogator",
   "text": "Did he say how he got, did he say he took her into the pit or did he kill her out by the garage or his house?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0312",
@@ -3147,7 +3147,7 @@
   "role": "interrogator",
   "text": "And he stabbed her where, in the truck you said?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0316",
@@ -3157,7 +3157,7 @@
   "role": "interrogator",
   "text": "Where's the knife that he used to stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0317",
@@ -3557,7 +3557,7 @@
   "role": "interrogator",
   "text": "Did you see any blood on him at all?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0357",
@@ -3637,7 +3637,7 @@
   "role": "interrogator",
   "text": "Did he say what he did with his clothes? Cuz there had to be blood on his clothes.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0365",
@@ -3747,7 +3747,7 @@
   "role": "interrogator",
   "text": "On the knife that he used to kill her, yes or no.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0376",
@@ -3817,7 +3817,7 @@
   "role": "interrogator",
   "text": "He said that he cut himself, while he was stabbing her? Yes or no.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0383",
@@ -3927,7 +3927,7 @@
   "role": "suspect",
   "text": "That he stabbed her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0394",
@@ -4037,7 +4037,7 @@
   "role": "interrogator",
   "text": "And then he stabbed her inside the truck.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0405",
@@ -4217,7 +4217,7 @@
   "role": "interrogator",
   "text": "Did he tell you how he got her bloody clothes?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0423",
@@ -4327,7 +4327,7 @@
   "role": "suspect",
   "text": "..........stab me too.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0434",
@@ -4337,7 +4337,7 @@
   "role": "interrogator",
   "text": "Or else he would stab you too?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0435",
@@ -4897,7 +4897,7 @@
   "role": "interrogator",
   "text": "OK, then I'm just going to read it and read what you wrote. OK? (Is I got off the bus at 3:45 and seen her jeep down at Steven's house. Then I went in my house and played Playstation 2 for three hours and then I eat at 8:00 and I watch TV and then got a phone call from Steven, if I wanted to come over to have a fire and I did and he told me to bring the golf cart and I did. So then we went driving around the yard and got to pick up the stuff around the house. Then we dropped the seats by the fire and went to get the wood and the cabinet and then went back to throw the seat on the fire and then we waited for it to go down and throw on the wood and cabinet. Then I seen the toes before we throw the wood and cabinet on the fire. When we did that he seen me that I seen the toes he told me not to say anything and he told me that he stabbed her in the stomach in the pit and he took the knife and put it under the seat in her jeep. Is that your statement Brendan?)",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0491",
@@ -4917,7 +4917,7 @@
   "role": "interrogator",
   "text": "Um, did you want to add anything in there about where he stabbed her and why he told you he stabbed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0493",
@@ -4927,7 +4927,7 @@
   "role": "suspect",
   "text": ".....Why he stabbed her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0494",
@@ -5057,7 +5057,7 @@
   "role": "interrogator",
   "text": "And you told me before that he said he did something else to her, you said he tied her up and he stabbed her in the truck. Is that right?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0507",
@@ -5257,7 +5257,7 @@
   "role": "interrogator",
   "text": "When he was telling you about how he stabbed her, was he laughing, enjoying it, or how was he putting it to you.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0527",
@@ -5377,7 +5377,7 @@
   "role": "interrogator",
   "text": "He was angry and that's why he did it. He told me he used rope to tie her up in the jeep and that's when he stabbed her. When he told me not to say anything, he threatened me a little bit. He said that she was pretty to him. I seen the fingers and the belly and the forehead in the fire. The body looked like it was together and it was under some tires and branches. He hid the vehicle in the pit back in the tree area.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0539",
@@ -5467,7 +5467,7 @@
   "role": "suspect",
   "text": "Blood",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0548",
@@ -5647,7 +5647,7 @@
   "role": "interrogator",
   "text": "Some clothes in the fire pit that was a blue shirt and some pants. On the shirt there was a blood on it and there was a hole in it in the stomach area and he said it was Teresa's shirt.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0566",
@@ -10527,7 +10527,7 @@
   "role": "interrogator",
   "text": "OK. We're not gonna go any further in this cuz we need to get the truth out now. We know the fire was going. We know that he had already had his altercation with Teresa. We don't believe there's a Monte in there. I talked to ya the other night and you said nothing about Monte you said nothing about something getting punctured and leaking out. We talked about cleaning somethin' up in that garage. You told me that you thought thinking back now there was blood. It was red in color plus you're at your house. You said six, six-thirty, I'll go that far with ya it might even been earlier. What's goin' on? Let's take it through honestly now.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0367",
@@ -11367,7 +11367,7 @@
   "role": "interrogator",
   "text": "Did Steve have any blood on him at that time?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0451",
@@ -11407,7 +11407,7 @@
   "role": "interrogator",
   "text": "Where did you see blood?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0455",
@@ -11497,7 +11497,7 @@
   "role": "suspect",
   "text": "That he stabbed her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0464",
@@ -12237,7 +12237,7 @@
   "role": "suspect",
   "text": "That he threatened me that if I would say anything that he would stab me like she, he did ta her and that, that, um, he was pissed off at her because of he wanted to get his Blazer in the thing that like that last time she was there and he couldn't.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0538",
@@ -12637,7 +12637,7 @@
   "role": "suspect",
   "text": "So we took her out in the back and put her in the fire pit.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0578",
@@ -13167,7 +13167,7 @@
   "role": "suspect",
   "text": "Like she was stabbed.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0631",
@@ -13177,7 +13177,7 @@
   "role": "interrogator",
   "text": "I don\u2019t necessary, I gonna tell you I don\u2019t know what it looks like when someone stabbed. OK, you gotta talk to someone that doesn\u2019t realize this. Tell us what you saw.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0632",
@@ -13217,7 +13217,7 @@
   "role": "interrogator",
   "text": "How much blood? Was the, show me on you the extent of the stain or the blood that you saw.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0636",
@@ -13297,7 +13297,7 @@
   "role": "interrogator",
   "text": "Could you see flesh or just shirt?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0644",
@@ -13307,7 +13307,7 @@
   "role": "suspect",
   "text": "A little bit of flesh.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0645",
@@ -13317,7 +13317,7 @@
   "role": "interrogator",
   "text": "How many times did he say he stabbed her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0646",
@@ -13367,7 +13367,7 @@
   "role": "suspect",
   "text": "Raped her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0651",
@@ -13427,7 +13427,7 @@
   "role": "suspect",
   "text": "That he ripped off her clothes and she refused and she tried to get away but he, he wa, he was too strong for her (pause) and he did it.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0657",
@@ -13447,7 +13447,7 @@
   "role": "suspect",
   "text": "Raped her",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0659",
@@ -14757,7 +14757,7 @@
   "role": "interrogator",
   "text": "Was she naked?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0790",
@@ -15337,7 +15337,7 @@
   "role": "interrogator",
   "text": "Any blood, at this time?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0848",
@@ -15727,7 +15727,7 @@
   "role": "suspect",
   "text": "RapIng her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0887",
@@ -16037,7 +16037,7 @@
   "role": "suspect",
   "text": "Her naked body.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0918",
@@ -17307,7 +17307,7 @@
   "role": "suspect",
   "text": "Then he went in, back in there and he stabbed her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1045",
@@ -17357,7 +17357,7 @@
   "role": "interrogator",
   "text": "Where did he stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1050",
@@ -17417,7 +17417,7 @@
   "role": "interrogator",
   "text": "Before or after he stabbed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1056",
@@ -17437,7 +17437,7 @@
   "role": "interrogator",
   "text": "When he stabbed her, did she scream or what?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1058",
@@ -17457,7 +17457,7 @@
   "role": "interrogator",
   "text": "How many times did he stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1060",
@@ -17507,7 +17507,7 @@
   "role": "suspect",
   "text": "He choked her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1065",
@@ -17557,7 +17557,7 @@
   "role": "interrogator",
   "text": "And did he choke her until what, did she go unconscious, what, tell me.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1070",
@@ -17597,7 +17597,7 @@
   "role": "interrogator",
   "text": "Is that before of after he stabbed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1074",
@@ -17617,7 +17617,7 @@
   "role": "interrogator",
   "text": "So he stabs her, show me what he does. Just demonstrate for me.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1076",
@@ -17657,7 +17657,7 @@
   "role": "suspect",
   "text": "That he was gonna tie her up, stab her and then choke like, choke her and that.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1080",
@@ -17717,7 +17717,7 @@
   "role": "suspect",
   "text": "That he gr, he grabs the rope that was on the side of the bed, tied her up, stabbed her like this and jumped on her and started choking her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1086",
@@ -17997,7 +17997,7 @@
   "role": "interrogator",
   "text": "Is he telling her that he's gonna kill her, is he telling her he's gonna let her go, what's he telling her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1114",
@@ -18007,7 +18007,7 @@
   "role": "suspect",
   "text": "That he was gonna kill her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1115",
@@ -18257,7 +18257,7 @@
   "role": "interrogator",
   "text": "OK, OK, you got her tied up, she's, when you're getting her tied up, is she, is she alive or has he choked her already?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1140",
@@ -18267,7 +18267,7 @@
   "role": "suspect",
   "text": "He choked her already.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1141",
@@ -18277,7 +18277,7 @@
   "role": "interrogator",
   "text": "Did he choke her when she had the handcuffs on?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1142",
@@ -18307,7 +18307,7 @@
   "role": "interrogator",
   "text": "When did he stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1145",
@@ -18317,7 +18317,7 @@
   "role": "suspect",
   "text": "When, before he choked her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1146",
@@ -18347,7 +18347,7 @@
   "role": "interrogator",
   "text": "So she's laying there, handcuffs on, and that's when Steve stabs her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1149",
@@ -18367,7 +18367,7 @@
   "role": "interrogator",
   "text": "And then, then he chokes her after that?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1151",
@@ -18407,7 +18407,7 @@
   "role": "interrogator",
   "text": "Where exactly did he stab her again?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1155",
@@ -18417,7 +18417,7 @@
   "role": "suspect",
   "text": "In the stomach.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1156",
@@ -18447,7 +18447,7 @@
   "role": "interrogator",
   "text": "An what did he use to stab her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1159",
@@ -18457,7 +18457,7 @@
   "role": "suspect",
   "text": "A knife.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1160",
@@ -18537,7 +18537,7 @@
   "role": "suspect",
   "text": "That he was gonna kill her by stabbing her and not lettin' her go.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1168",
@@ -18547,7 +18547,7 @@
   "role": "interrogator",
   "text": "What else did he do to her? We know something else was done. Tell us, and what else did you do? Come on. Something with the head. Brendan?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1169",
@@ -18617,7 +18617,7 @@
   "role": "suspect",
   "text": "That he cut off her hair.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1176",
@@ -18627,7 +18627,7 @@
   "role": "interrogator",
   "text": "He cut off her hair? In the house?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1177",
@@ -18867,7 +18867,7 @@
   "role": "suspect",
   "text": "Cut her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1201",
@@ -18877,7 +18877,7 @@
   "role": "interrogator",
   "text": "Cut her where?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1202",
@@ -18887,7 +18887,7 @@
   "role": "suspect",
   "text": "On her throat.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1203",
@@ -18897,7 +18897,7 @@
   "role": "interrogator",
   "text": "Cut her throat? Te-when did that happen?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1204",
@@ -18937,7 +18937,7 @@
   "role": "interrogator",
   "text": "So she's alive and you cut her throat?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1208",
@@ -18957,7 +18957,7 @@
   "role": "interrogator",
   "text": "Was that before or after Steve stabbed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1210",
@@ -18977,7 +18977,7 @@
   "role": "interrogator",
   "text": "It was after Steve stabbed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1212",
@@ -18997,7 +18997,7 @@
   "role": "interrogator",
   "text": "Was she a-how do you know she was alive? (pause) Tell me. When you cut her throat, how do you know she was alive?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1214",
@@ -19047,7 +19047,7 @@
   "role": "suspect",
   "text": "To go across her throat and pull it back.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1219",
@@ -19087,7 +19087,7 @@
   "role": "suspect",
   "text": "The same one he stabbed her with.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1223",
@@ -19097,7 +19097,7 @@
   "role": "interrogator",
   "text": "And how many times did he stab her again?",
   "page": "fasasbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1224",
@@ -19137,7 +19137,7 @@
   "role": "interrogator",
   "text": "So Steve stabs her first and then you cut her neck?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1228",
@@ -19207,7 +19207,7 @@
   "role": "interrogator",
   "text": "All right, I'm just gonna come out and ask you. Who shot her in the head?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1235",
@@ -19277,7 +19277,7 @@
   "role": "suspect",
   "text": "That he shot her with his .22.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1242",
@@ -19347,7 +19347,7 @@
   "role": "interrogator",
   "text": "OK. So let's back up, OK? So I wanna go through this OK. So he stabs her",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1249",
@@ -19367,7 +19367,7 @@
   "role": "interrogator",
   "text": "and chokes her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1251",
@@ -19427,7 +19427,7 @@
   "role": "interrogator",
   "text": "You cut her throat somewhere in there?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1257",
@@ -19477,7 +19477,7 @@
   "role": "suspect",
   "text": "Cut off 'er, some of her hair.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1262",
@@ -19497,7 +19497,7 @@
   "role": "suspect",
   "text": "Then we brung her outside and shot her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1264",
@@ -19507,7 +19507,7 @@
   "role": "interrogator",
   "text": "Was she alive when you shot her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1265",
@@ -19547,7 +19547,7 @@
   "role": "interrogator",
   "text": "Who shot her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1269",
@@ -19797,7 +19797,7 @@
   "role": "interrogator",
   "text": "While she's handcuffed and alive, he stabs her.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1294",
@@ -19817,7 +19817,7 @@
   "role": "interrogator",
   "text": "Chokes her? Right?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1296",
@@ -19857,7 +19857,7 @@
   "role": "interrogator",
   "text": "And then he has you cut her neck?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1300",
@@ -19867,7 +19867,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1301",
@@ -19877,7 +19877,7 @@
   "role": "interrogator",
   "text": "And then you cut some hair off.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1302",
@@ -19887,7 +19887,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d)",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1303",
@@ -20217,7 +20217,7 @@
   "role": "suspect",
   "text": "Then we, he puts the gun on the ground and we carry her into the fire.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1336",
@@ -20497,7 +20497,7 @@
   "role": "interrogator",
   "text": "Did he say, w-what did he say while he was shooting her? Or just before he shot her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1364",
@@ -20587,7 +20587,7 @@
   "role": "interrogator",
   "text": "OK, so lets go back to outside, you carry her over, she's naked, right?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1373",
@@ -21417,7 +21417,7 @@
   "role": "interrogator",
   "text": "We know you shot her too. Is that right?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1456",
@@ -21457,7 +21457,7 @@
   "role": "interrogator",
   "text": "Who shot her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1460",
@@ -21497,7 +21497,7 @@
   "role": "interrogator",
   "text": "And she was in the back of the truck or the SUV that whole time that he shot her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1464",
@@ -21787,7 +21787,7 @@
   "role": "interrogator",
   "text": "Did he say why he shot her again?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1493",
@@ -23667,7 +23667,7 @@
   "role": "interrogator",
   "text": "W-was there blood on the bedsheets?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1681",
@@ -23687,7 +23687,7 @@
   "role": "interrogator",
   "text": "Was it a lot of blood?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1683",
@@ -23837,7 +23837,7 @@
   "role": "suspect",
   "text": "When we went out there ta clean up that, the blood.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1698",
@@ -23897,7 +23897,7 @@
   "role": "suspect",
   "text": "The clothes, that's full of, the st, the blood that was like cleaned up.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1704",
@@ -24017,7 +24017,7 @@
   "role": "interrogator",
   "text": "Now the shirt, earlier you told us the shirt had blood on it, had a hole in it, was that not true then?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1716",
@@ -24077,7 +24077,7 @@
   "role": "interrogator",
   "text": "How much bleach, no let me go back. How much blood was there on the floor, quite a bit?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1722",
@@ -24117,7 +24117,7 @@
   "role": "interrogator",
   "text": "So if you had to say, some dimensions like 2 x 2, 2 feet by 2 feet, 10 X 10, how much blood do you think was there?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1726",
@@ -27317,7 +27317,7 @@
   "role": "suspect",
   "text": "That Teresa Halbach was back there. That she was on the bed naked with she was chained up ta the bed.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2046",
@@ -27627,7 +27627,7 @@
   "role": "suspect",
   "text": "We went in there, we tied her up and he stabbed her and he told me ta cut her throat and cut her hair off and then when we were done like that we took off the handcuffs and we took her outside ta the jeep, stuck her in the back, he said he would rather burn her than stick her back in there and we put her on the floor and then he shot her ten times and then we threw her in the fire.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2077",
@@ -27897,7 +27897,7 @@
   "role": "interrogator",
   "text": "Don't got none of the hair. Did you get any blood on you?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2104",
@@ -28657,7 +28657,7 @@
   "role": "suspect",
   "text": "He shot her ten times.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2180",
@@ -28667,7 +28667,7 @@
   "role": "interrogator",
   "text": "Tell me where he shot her.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2181",
@@ -28747,7 +28747,7 @@
   "role": "interrogator",
   "text": "and the when he shot her in the body, where in the body again?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2189",
@@ -28907,7 +28907,7 @@
   "role": "interrogator",
   "text": "OK. You mentioned then you took her, her back out, you shot her, did anything else happen in this garage that, that is noteworthy cuz remember, remember we've, we've seen the garage we've got the evidence from the garage, um, did you guys do anything else with her out in the garage?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2205",
@@ -29727,7 +29727,7 @@
   "role": "suspect",
   "text": "Just the forehead and the hands and the feet and a little bit of belly.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2287",
@@ -29797,7 +29797,7 @@
   "role": "interrogator",
   "text": "How much time did you think it took from when you cut her on the neck to the time you guys got her out in the garage?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2294",
@@ -29987,7 +29987,7 @@
   "role": "suspect",
   "text": "Like when the bones were left behind, he would like try to take the shovel and try to break the bones apart and he would bury 'em, like right in front of the fire almost.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2313",
@@ -30007,7 +30007,7 @@
   "role": "suspect",
   "text": "Like he dug a hole and he'd put the bones in there and he buried it.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2315",
@@ -30107,7 +30107,7 @@
   "role": "interrogator",
   "text": "Oh. So he told you that he used the shovel to break up bones?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2325",
@@ -30127,7 +30127,7 @@
   "role": "interrogator",
   "text": "And then buried some of the bones?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2327",
@@ -30147,7 +30147,7 @@
   "role": "interrogator",
   "text": "Did he take some of her bones some, anywhere else?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2329",
@@ -30167,7 +30167,7 @@
   "role": "interrogator",
   "text": "OK, we're gonna, we're in a little bit, we're gonna have you draw on some sketches and stuff and we're a, we're gonna wanna these places. How do you know that there were some bones there?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2331",
@@ -30307,7 +30307,7 @@
   "role": "interrogator",
   "text": "Anything else that you did with the bones",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2345",
@@ -30617,7 +30617,7 @@
   "role": "interrogator",
   "text": "So Jodi calls, you had already killed Teresa? Is that correct?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2376",
@@ -30657,7 +30657,7 @@
   "role": "interrogator",
   "text": "Why did you guys cut her hair?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2380",
@@ -30667,7 +30667,7 @@
   "role": "suspect",
   "text": "I don\u2019t know.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2381",
@@ -30687,7 +30687,7 @@
   "role": "suspect",
   "text": "(shakes head \u201cno\u201d) No.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2383",
@@ -30837,7 +30837,7 @@
   "role": "interrogator",
   "text": "You said that you had cut her throat.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2398",
@@ -30847,7 +30847,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d)",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2399",
@@ -30857,7 +30857,7 @@
   "role": "interrogator",
   "text": "Here\u2019s the thing Brendan, when you cut somebody\u2019s throat, they bleed a lot,",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2400",
@@ -30867,7 +30867,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d)",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2401",
@@ -30877,7 +30877,7 @@
   "role": "interrogator",
   "text": "OK? Am I right?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2402",
@@ -30887,7 +30887,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d) Yeah.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2403",
@@ -30897,7 +30897,7 @@
   "role": "interrogator",
   "text": "She bleed a lot,",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2404",
@@ -30907,7 +30907,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d)",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2405",
@@ -30917,7 +30917,7 @@
   "role": "interrogator",
   "text": "so I know you had blood on ya, it\u2019s pretty much impossible not to. Did you have blood on you?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2406",
@@ -30927,7 +30927,7 @@
   "role": "suspect",
   "text": "(shakes head \u201cno\u201d) No.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2407",
@@ -30937,7 +30937,7 @@
   "role": "interrogator",
   "text": "None at all?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2408",
@@ -30947,7 +30947,7 @@
   "role": "suspect",
   "text": "(shakes head \u201cno\u201d) uh uh.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2409",
@@ -30957,7 +30957,7 @@
   "role": "interrogator",
   "text": "What about when you moved her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2410",
@@ -30967,7 +30967,7 @@
   "role": "suspect",
   "text": "(shakes head \u201cno\u201d) No.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2411",
@@ -31547,7 +31547,7 @@
   "role": "interrogator",
   "text": "Brendan, when she's on the bed, was there a lot of blood?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2469",
@@ -31567,7 +31567,7 @@
   "role": "interrogator",
   "text": "Do you recall when the sheets were taken off the bed and stuff that the blood had soaked through to the mattress pad at all? Or mattress?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2471",
@@ -32687,7 +32687,7 @@
   "role": "interrogator",
   "text": "OK, why don't you label that. How much hair do you think you cut off of her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2583",
@@ -32907,7 +32907,7 @@
   "role": "interrogator",
   "text": "You know did he, when he shot her you said how many times.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2605",
@@ -32967,7 +32967,7 @@
   "role": "interrogator",
   "text": "Where was he standing when he shot her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2611",
@@ -33007,7 +33007,7 @@
   "role": "interrogator",
   "text": "OK put your initials there. Was there blood anywhere else?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2615",
@@ -33287,7 +33287,7 @@
   "role": "interrogator",
   "text": "OK. You said that he had taken some bones",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2643",
@@ -33837,7 +33837,7 @@
   "role": "interrogator",
   "text": "Did he say anything, why he shot her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2698",
@@ -33917,7 +33917,7 @@
   "role": "interrogator",
   "text": "Just gonna revisit one thing, when you're in the bedroom, an-an-and you cut her throat,",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2706",
@@ -34017,7 +34017,7 @@
   "role": "interrogator",
   "text": "When you cut her throat, was she screaming?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2716",
@@ -34037,7 +34037,7 @@
   "role": "interrogator",
   "text": "No. When you cut her throat.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2718",
@@ -34097,7 +34097,7 @@
   "role": "interrogator",
   "text": "When you cut her throat, what was she doing? If anything?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2724",
@@ -34117,7 +34117,7 @@
   "role": "interrogator",
   "text": "I wanna-wanna get that straight, she was screaming for help and crying when you cut her throat?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2726",
@@ -34137,7 +34137,7 @@
   "role": "interrogator",
   "text": "When did Steven choke her? Or strangle her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2728",
@@ -34217,7 +34217,7 @@
   "role": "suspect",
   "text": "Then he stabbed her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2736",
@@ -34227,7 +34227,7 @@
   "role": "interrogator",
   "text": "Then who stabbed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2737",
@@ -34277,7 +34277,7 @@
   "role": "suspect",
   "text": "Then I cut her throat.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2742",
@@ -34297,7 +34297,7 @@
   "role": "suspect",
   "text": "And then he choked her and I cut off her hair.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2744",
@@ -34307,7 +34307,7 @@
   "role": "interrogator",
   "text": "OK. So he choked her after you cut her throat?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2745",
@@ -34327,7 +34327,7 @@
   "role": "interrogator",
   "text": "OK, kinda show me like on your throat where you cut her.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2747",
@@ -34377,7 +34377,7 @@
   "role": "interrogator",
   "text": "With your finger, show me how deep you went into her throat.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2752",
@@ -34427,7 +34427,7 @@
   "role": "interrogator",
   "text": "When Steven stabbed her, tell me again where he stabbed her.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2757",
@@ -34497,7 +34497,7 @@
   "role": "interrogator",
   "text": "And then he, tell me how he choked her. Where was he when he choked her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2764",
@@ -34577,7 +34577,7 @@
   "role": "interrogator",
   "text": "He must have had a lot of blood on his hands then huh?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2772",
@@ -34657,7 +34657,7 @@
   "role": "interrogator",
   "text": "Did he wipe any blood up with anything?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2780",
@@ -34687,7 +34687,7 @@
   "role": "interrogator",
   "text": "After you cut her throat, was she still alive?",
   "page": "fassebender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2783",
@@ -35777,7 +35777,7 @@
   "role": "suspect",
   "text": "Cuz I thought he would try ta like, try ta kill me.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2892",
@@ -36047,7 +36047,7 @@
   "role": "interrogator",
   "text": "If Steven tells us that you did all of this, that, that yo-you ha-had started it and had killed her and stuff, is that true?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2919",
@@ -38747,7 +38747,7 @@
   "role": "suspect",
   "text": "Well I came home off the bus and then walked home into the house and I played Playstation 2 until 5:00 o'clock, called, called my friend and watched TV and then at 6:00 o'clock I got a phone call from Blaine's boss and I told him that Blaine was going trick or treating and at 7:00 o'clock I got a phone call from Steven to see if I wanted to come over to the bonfire. I had told him I would and then while I was getting' ready, he called again and seein' when I was, what was taking me so long and so I went over there. He went to go pick up some stuff around the yard then after that we, he asked me to come in the house cuz he wanted to show me somethin'. And he showed me that she was laying on the bed ta her hands were ro-roped up to the bed and that her legs were cufffed. And then he told me ta have sex with her and so I did because I thought I was not gonna get away from 'em cuz he was too strong, so I did what he said and then after that, he untied her and uncuffed her and then he brought her outside and before he went outside, he told me to grab her clothes and her shoes. So we went into the garage and before she went out, when before he took her outside, he ti, had tied up her hands and feet (and then was in the garage and he stabbed her and then he told me to. And, after that he wanted to make sure she was dead or somethin' so he shot her five times and while he was doing that I wasn't looking because I can't watch that stuff. So I was standing by the big door in the garage and then after that, he took her outside and we put her on the fire and we used her clothes ta clean up the, some of the blood. And, when we put her in the fire, and her clothes, we were standing right by the garage, to wait for it to get down so we threw some of that stuff on it after it went down. And then, 'bout 9:00 o'clock my mom came home and she called Steven on his cell phone to tell him that I was supposed to be home at 10:00 o'clock and she asked Steven if I had a sweater on. So while we waited for the fire to go down, by the time it did get down, it was probably close to 10:00 o'clock so he told me to go home, so I did, and then got in the house and I talked to my mom for a little bit, then I went to bed.)",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0043",
@@ -39967,7 +39967,7 @@
   "role": "interrogator",
   "text": "So she's totally naked?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0165",
@@ -40147,7 +40147,7 @@
   "role": "interrogator",
   "text": "Describe again, I know this is hard and we asked you yah the last time, describe her body for us, including the, her private areas.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0183",
@@ -40157,7 +40157,7 @@
   "role": "interrogator",
   "text": "Let's start with her hair. What color hair did she have?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0184",
@@ -40197,7 +40197,7 @@
   "role": "interrogator",
   "text": "Any, um, scars, marks, tattoos?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0188",
@@ -40307,7 +40307,7 @@
   "role": "interrogator",
   "text": "Her pubic area, did she have pubic hair?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0199",
@@ -40487,7 +40487,7 @@
   "role": "interrogator",
   "text": "Do you know what the body parts are called?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0217",
@@ -40857,7 +40857,7 @@
   "role": "suspect",
   "text": "That he said that he was gonna take her out ta the garage and stab her and shoot her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0254",
@@ -41807,7 +41807,7 @@
   "role": "suspect",
   "text": "And then he stabs her and then he tells me to and then he puts her inta the jeep and then he said he would rather burn her so then he put her back on the floor and then he shot her five times.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0349",
@@ -41817,7 +41817,7 @@
   "role": "interrogator",
   "text": "Where does he stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0350",
@@ -41857,7 +41857,7 @@
   "role": "interrogator",
   "text": "Where do you stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0354",
@@ -41877,7 +41877,7 @@
   "role": "interrogator",
   "text": "What does she say when you stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0356",
@@ -41977,7 +41977,7 @@
   "role": "interrogator",
   "text": "OK. Steven goes out and he puts her on the floor in the garage. Where does he get this knife that he stabs her with? Truthfully.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0366",
@@ -42137,7 +42137,7 @@
   "role": "suspect",
   "text": "He walks back over by her and then stabs her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0382",
@@ -42147,7 +42147,7 @@
   "role": "interrogator",
   "text": "How does he stab her? Does he get on top of her, 'er what does he do?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0383",
@@ -42207,7 +42207,7 @@
   "role": "interrogator",
   "text": "And he stabs her in the chest. And where you showing Mark and I that would be where? What's underneath there? What organ is in that area? Any organ in particular?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0389",
@@ -42247,7 +42247,7 @@
   "role": "interrogator",
   "text": "Over there. But he stabbed her right in the middle of the chest?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0393",
@@ -42277,7 +42277,7 @@
   "role": "suspect",
   "text": "He tells me ta, ta stab her and",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0396",
@@ -42307,7 +42307,7 @@
   "role": "interrogator",
   "text": "Is there blood on the knife?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0399",
@@ -42327,7 +42327,7 @@
   "role": "interrogator",
   "text": "You told us in another interview that you cut her throat. Did you cut her throat?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0401",
@@ -42397,7 +42397,7 @@
   "role": "suspect",
   "text": "That I stabbed her in the stomach.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0408",
@@ -42417,7 +42417,7 @@
   "role": "interrogator",
   "text": "Brendan, you know people get nervous when they, when they lie. OK. So you stabbed her in the stomach. Is she alive? You said Steven stabbed her first. Is she still alive when you stab her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0410",
@@ -42497,7 +42497,7 @@
   "role": "interrogator",
   "text": "How deep did the knife go in when Steven stabbed her? Do you know?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0418",
@@ -42537,7 +42537,7 @@
   "role": "interrogator",
   "text": "How do you know he stabbed her? (pause) Simple question.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0422",
@@ -42547,7 +42547,7 @@
   "role": "suspect",
   "text": "Cuz after then when he told me ta stab her there was a hole in her stomach.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0423",
@@ -42577,7 +42577,7 @@
   "role": "interrogator",
   "text": "Did he tell you where ta stab her?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0426",
@@ -42597,7 +42597,7 @@
   "role": "interrogator",
   "text": "You just stabbed her in the stomach. How deep did you put the knife in?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0428",
@@ -42847,7 +42847,7 @@
   "role": "suspect",
   "text": "And then (pause) after that he took the gun and shot her five times.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0453",
@@ -42897,7 +42897,7 @@
   "role": "interrogator",
   "text": "But you shot her too. Brendan, did you shoot her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0458",
@@ -42937,7 +42937,7 @@
   "role": "interrogator",
   "text": "The first time you told us ah 10 times, about 10 times, that you shot her. And you told us where he shot her. Were you lying then or are you lying now?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0462",
@@ -43707,7 +43707,7 @@
   "role": "suspect",
   "text": "We start to clean up the blood.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0539",
@@ -43737,7 +43737,7 @@
   "role": "interrogator",
   "text": "Okay, then whadda ya use to clean up the blood?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0542",
@@ -43777,7 +43777,7 @@
   "role": "interrogator",
   "text": "Was there a lot of blood on the floor? (pause) In your estimation, was there a lot of blood on the floor?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0546",
@@ -44347,7 +44347,7 @@
   "role": "interrogator",
   "text": "How much blood did you have on you?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0603",
@@ -44417,7 +44417,7 @@
   "role": "interrogator",
   "text": "Show me again. Grab, take this pen like it's the knife, OK. Tell me how you stabbed her and how hard you stabbed her. Right here. (Mark demonstrates) I mean, how (hard did you do it? (Brendan demonstrates) That's it? I don't think so. You do that you're not even gonna pierce the skin. Be honest here. How hard did you stab her? Show me. (Brendan demonstrates) OK. Now if you do that, you know what happens? Blood spurts out, right? So where did the blood go on you? Where did you have blood on ya?)",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0610",
@@ -44437,7 +44437,7 @@
   "role": "interrogator",
   "text": "How did you get that blood off your hands?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0612",
@@ -44567,7 +44567,7 @@
   "role": "interrogator",
   "text": "The first time we talked to you or the second time you talked about cutting her hair off. Where did the hair go? Did you cut her hair off?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0625",
@@ -44647,7 +44647,7 @@
   "role": "interrogator",
   "text": "It's impossible. You took her out to the garage and that's when you got the knife. Explain how that can be. (pause) Did you cut her hair off?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0633",
@@ -45867,7 +45867,7 @@
   "role": "suspect",
   "text": "That he was gonna to kill her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0755",
@@ -46027,7 +46027,7 @@
   "role": "interrogator",
   "text": "OK. So when you planned it, did you plan that, you know, if he got the girl, that you could get some? Was that the plan? Or was the plan just to kill her, or what was the plan? (pause) Tell me what the plan was. (pause) Tell me what the plan was.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0771",
@@ -46037,7 +46037,7 @@
   "role": "suspect",
   "text": "That he just wanted ta kill her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0772",
@@ -46047,7 +46047,7 @@
   "role": "interrogator",
   "text": "Why did he just want to kill her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0773",
@@ -46087,7 +46087,7 @@
   "role": "interrogator",
   "text": "He just said he wanted to kill her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0777",
@@ -46107,7 +46107,7 @@
   "role": "interrogator",
   "text": "OK. So he was pissed off that Jodi wasn't with him anymore so then he was gonna kill Teresa. Did he talk about a plan about having sex with her first, did he talk about that?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0779",
@@ -46127,7 +46127,7 @@
   "role": "interrogator",
   "text": "OK, so he was pissed off that Jodi was in jail so that's why he was gonna kill Teresa. So OK, you go over to the house about 4:00 o'clock and you already know she's there, that's what you told me, and what happens when you get ta the house?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0781",
@@ -47287,7 +47287,7 @@
   "role": "suspect",
   "text": "Then he stabs her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0897",
@@ -47297,7 +47297,7 @@
   "role": "interrogator",
   "text": "Now tell me again where he stabbed her.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0898",
@@ -47327,7 +47327,7 @@
   "role": "suspect",
   "text": "Then he tells me ta come over and stab her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0901",
@@ -47357,7 +47357,7 @@
   "role": "interrogator",
   "text": "And where do you stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0904",
@@ -47377,7 +47377,7 @@
   "role": "interrogator",
   "text": "Take this and pretend that's the knife. (Mark demonstrates) on the paper and hold it like this so you don't break it, do it on the paper like you, like you're stabbing somebody, like, like you stabbed her. Show me like you did it. How hard. (Brendan demonstrates)",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0906",
@@ -47487,7 +47487,7 @@
   "role": "suspect",
   "text": "Then he took her set her back on the floor and shot her 'bout five times.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0917",
@@ -47497,7 +47497,7 @@
   "role": "interrogator",
   "text": "Do you remember where he shot her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0918",
@@ -48037,7 +48037,7 @@
   "role": "interrogator",
   "text": "Were you choppin' up the bones?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0972",
@@ -48087,7 +48087,7 @@
   "role": "suspect",
   "text": "He would take the shovel and like bang on the, the bones.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0977",
@@ -48137,7 +48137,7 @@
   "role": "interrogator",
   "text": "OK. After it burns down, you take the shovel and the rake and bust up the bones, right? Is that what you said?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0982",
@@ -48187,7 +48187,7 @@
   "role": "suspect",
   "text": "And then we went inta the garage and cleaned up the blood and that.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0987",
@@ -48197,7 +48197,7 @@
   "role": "interrogator",
   "text": "And how did ya clean the blood up again? Tell me again.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0988",
@@ -48227,7 +48227,7 @@
   "role": "suspect",
   "text": "In some of the stuff that we used to clean up the blood.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0991",
@@ -48257,7 +48257,7 @@
   "role": "interrogator",
   "text": "OK, so you clean up the blood with all of her clothes and what do you do with the clothes then?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0994",
@@ -49007,7 +49007,7 @@
   "role": "suspect",
   "text": "That he would kill her.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1069",
@@ -49017,7 +49017,7 @@
   "role": "interrogator",
   "text": "Did he laugh about it or what? Why did, why did he say he was gonna kill her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1070",
@@ -49857,7 +49857,7 @@
   "role": "interrogator",
   "text": "So now you remember a little more clearly? OK. How much of her hair did you cut off?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1154",
@@ -49947,7 +49947,7 @@
   "role": "interrogator",
   "text": "Who shot her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1163",
@@ -49967,7 +49967,7 @@
   "role": "interrogator",
   "text": "Did you stab her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1165",
@@ -50027,7 +50027,7 @@
   "role": "interrogator",
   "text": "Did you cut her throat?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1171",
@@ -50957,7 +50957,7 @@
   "role": "interrogator",
   "text": "Come on, you just, you just killed a girl and you didn't talk about it at all? I don't believe that. You told me he was gonna get rid of that key. What was he gonna do with the key? Why did he go get the key that day?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1264",
@@ -51527,7 +51527,7 @@
   "role": "interrogator",
   "text": "And this is the hallway? OK. So now the bed\u2019s over here. He changed it after he killed her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1321",
@@ -51677,7 +51677,7 @@
   "role": "interrogator",
   "text": "OK. How's that relate to the key? Are you trying ta, are you trying to help us too much? The only way you can help us is by telling the truth, the facts. If you try to help us too much, that really doesn't help. You can try and help all these other people that tell you things, that doesn't help. You need to help yourself. And that's by tellin', that's by tellin' the truth. You have to be a little selfish here right now and not what worry about what might help us and not worry about what might help other people. You have to really be selfish right now and think what's gonna help me and I think you believe that that probably is the truth. You thought about two weeks after, you know, that you and Steven killed Teresa and you got feelin' really bad. And you probably felt really bad about the Halbachs because they were lookin and, and they probably knew now that their daughter was dead. That's a pretty serious thing to do, right? To kill someone?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1336",
@@ -52997,7 +52997,7 @@
   "role": "interrogator",
   "text": "How much blood did you have on you after she got stabbed? Do you remember?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1468",
@@ -53127,7 +53127,7 @@
   "role": "interrogator",
   "text": "Where else would I find blood if I was looking for blood? In the house? Tell me where I should look.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1481",
@@ -53227,7 +53227,7 @@
   "role": "interrogator",
   "text": "Did he talk a lot about killing people? (pause) Stay with me here. Did he talk a lot about killing people?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1491",
@@ -53247,7 +53247,7 @@
   "role": "interrogator",
   "text": "When was the first time he had mentioned killing somebody?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1493",
@@ -53277,7 +53277,7 @@
   "role": "suspect",
   "text": "Cuz we were watchin' TV and on the news there was someone that killed someone.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1496",
@@ -53297,7 +53297,7 @@
   "role": "suspect",
   "text": "That he was gonna plan to kill someone and.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1498",
@@ -53307,7 +53307,7 @@
   "role": "interrogator",
   "text": "And who did he say he was gonna plan to kill?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1499",
@@ -53437,7 +53437,7 @@
   "role": "interrogator",
   "text": "That's good. I think that's good, I really do. While you, while you went out, I asked him about, ah if-if he saw any blood on Teresa or Teresa bleeding at all while she was in that house and he said no. Ah, then you came in, we were talking about his injury. Brendan, when Teresa was on the bed, wh-where, what was on the bed, sheets, blankets, what was on the bed?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1512",
@@ -53537,7 +53537,7 @@
   "role": "interrogator",
   "text": "He did. Did she have her socks on? Da-think about it now and try to remember, was she totally naked or did she have her socks on, or anything like that? (pause) And if you can't remember or you don't know, you say that too.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1522",
@@ -55067,7 +55067,7 @@
   "role": "interrogator",
   "text": "After Teresa's, disa-or after you guys killed Teresa? Right? This last December?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1675",
@@ -55537,7 +55537,7 @@
   "role": "interrogator",
   "text": "Again, yo-you know this pretty much probably is gonna be your last time and, and I think we got Teresa\u2019s attention, and by gettin\u2019 her attention with what you\u2019re sayin\u2019, and we got the whole family\u2019s attention and they\u2019re gonna know if actually this all gonna come out, they\u2019re gonna know what you did for her after you did a very, very, very, very, very bad thing to her. But now you\u2019re tryin\u2019 to make up for that. I truly believe that. So we\u2019re gonna (give you an opportunity right now, again, is there anything else? You know all the stuff you told us. Um, even the little things are important to us, whether it's a pair of underwear that you know went somewhere or somethin' happened to it that i-it was, that the haircutting thing, an if......the facts, we never did get that clear. For Teresa, wh-did you, did anyone cut her hair off that night?)",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1722",
@@ -55557,7 +55557,7 @@
   "role": "interrogator",
   "text": "Where did you get that from? (pause) I mean it seems kinda strange that you just all of a sudden told us you had cut her hair off. Where did you get that from, if it's not true?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1724",
@@ -55587,7 +55587,7 @@
   "role": "interrogator",
   "text": "Brendan, didn't, did someone some one cut her hair off that night? Truthfully, for Teresa.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1727",
@@ -55677,7 +55677,7 @@
   "role": "interrogator",
   "text": "Just you and Steven. And you and Steven both were involved in killing her?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1736",
@@ -55697,7 +55697,7 @@
   "role": "interrogator",
   "text": "Did Steve ever tell you that he killed anybody else?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1738",
@@ -56837,7 +56837,7 @@
   "role": "interrogator",
   "text": "\u201906. I just got one question for you, Brendan, yet. Did you guys take any of the bones out of that burn pile?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1852",
