@@ -249,7 +249,7 @@ def stance(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str
     return {c["key"]: c["stance"] for c in out.get("checks", [])}
 
 
-SENSE_VERSION = 4  # answers saved with an older version of this question are asked again
+SENSE_VERSION = 5  # answers saved with an older version of this question are asked again
 SENSE_SCHEMA = {
     "type": "object",
     "properties": {"key": {"type": "string"},
@@ -263,31 +263,29 @@ SENSE_SCHEMA = {
 def sense(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str, str]:
     """The suspect-side check with the sense of the line, one line per call: items [{key, label, must, before,
     question, between, text}] -> {key: states|agrees|denies|other}. Code has already found the detail's key words in
-    his line or in the question it answers. The model first writes what his line is about and where it puts it, as
-    the lines show, then compares that with the detail: a different thing or place is OTHER."""
+    his line or in the question it answers. The model is given the detail's label and key words only (a longer
+    description added places and owners that caused wrong rejections), first writes what his line is about and where
+    it puts it, then compares: a different thing or place is OTHER."""
     out: dict[str, str] = {}
     for i in items:
         body = (f"Detail: {i['label']} (key words: " + " + ".join("(" + " | ".join(g) + ")" for g in i["must"]) + ")"
-                + (f"\nWhich thing, person and place it is about, as the fact list describes it: {i['detail']}" if i.get("detail") else "")
                 + f"\nTwo lines before the question: {i['before'] or '(none)'}\nThe question he answers: {i['question'] or '(none)'}"
                 + (f"\nLines after the question: {i['between']}" if i.get("between") else "") + f"\nHis line: {i['text']}\nkey: {i['key']}")
         msgs = [{"role": "system", "content": "You read one line a suspect said in an interrogation, with the question it answers and the two lines "
                                               "before that question. First write what his line is about, as these lines show (which thing or person, "
-                                              "and whose: a vehicle named in the lines before is the one he means), and where his line puts it. Then "
-                                              "compare with the detail and answer: is he STATING this detail, AGREEING to it, DENYING it, or OTHER? Use "
-                                              "the fact list's description only to tell which thing, person and place the detail is about; his line "
-                                              "doesn't need its other words. 'He', 'his' and 'him' in his line mean whoever the lines make them mean "
-                                              "(usually the person the question is about); 'I' and 'my' mean the suspect. A place in his line counts "
-                                              "against the detail only when the detail itself names a different place. "
-                                              "Answer OTHER when his line is about a different thing, person or event than the detail (for example "
-                                              "Avery's own Suzuki instead of her jeep, or clothes being bloody instead of burned), or puts it "
-                                              "somewhere else than the detail says (near, by, beside or outside a place instead of in or inside it), "
-                                              "or he denies or says he doesn't know a part the detail names (there was a car, but he doesn't know where "
-                                              "it was, for a detail about where the car was), or he only asks or guesses aloud. An answer that accepts "
-                                              "what the question takes for granted states it ('He did.' to 'Who cut the rope?' states that the rope "
-                                              "was cut). A short answer to a question about the detail states it "
-                                              "('With the shovel.' to 'How did he break the bones?'). A line he reads from his own written statement "
-                                              "is his statement. Don't judge whether it's true."},
+                                              "and whose), and where his line puts it. Then compare with the detail and answer: is he STATING this "
+                                              "detail, AGREEING to it, DENYING it, or OTHER? The detail's thing is the one its label and key words "
+                                              "name: a thing the lines call by another name that isn't among the key words (another make of vehicle, "
+                                              "someone else's car) is a different thing unless the lines say it is the same one. 'He', 'his' and "
+                                              "'him' mean whoever the lines make them mean (usually the person the question is about); 'I' and 'my' "
+                                              "mean the suspect. Answer OTHER when his line is about a different thing, person or event than the "
+                                              "detail, or puts it somewhere else than the detail's label says (near, by, beside or outside a place "
+                                              "instead of in or inside it), or he denies or says he doesn't know a part the detail names (there was a "
+                                              "car, but he doesn't know where it was, for a detail about where the car was), or he only asks or "
+                                              "guesses aloud. A short answer to a question about the detail states it ('With the shovel.' to 'How did "
+                                              "he break the bones?'), and so does an answer that names who did it ('He did.' to 'Who cut the rope?' "
+                                              "states that the rope was cut); 'I don't know' states nothing. A line he reads from his own written "
+                                              "statement is his statement. Don't judge whether it's true."},
                 {"role": "user", "content": body}]
         try:
             r = chat_json(settings.ultra, msgs, schema=SENSE_SCHEMA, purpose="Suspect stance with sense", reasoning=VERIFY_REASONING,

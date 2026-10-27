@@ -326,7 +326,7 @@ def sense_check(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: i
                     continue
                 if carries(order, i, must, answers_labeled(order, i, labeled)):
                     before, q, between = _question_context(order, i)
-                    items.append({"key": f"{u['id']}|{f['id']}", "label": f["label"], "detail": f.get("detail", ""), "must": must, "before": before, "question": q,
+                    items.append({"key": f"{u['id']}|{f['id']}", "label": f["label"], "must": must, "before": before, "question": q,
                                   "between": between, "text": u["text"][:1500]})
                     n += 1
         if not items:
