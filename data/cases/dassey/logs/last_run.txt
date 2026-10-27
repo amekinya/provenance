@@ -1,5 +1,9 @@
-sense check round 1: 54 of his lines
-sense check round 2: 14 of his lines
-sense check round 3: 5 of his lines
-sense check: 73 lines answered
-re-audited from saved labels: Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first (1 of them in part), 5 were already public, 1 may trace to an earlier statement with no public transcript. 10 details came from him first in the record.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/provenance/provenance/scripts/tag.py", line 27, in <module>
+    from app.ai import tasks
+  File "/home/runner/work/provenance/provenance/app/ai/tasks.py", line 270
+    body = (f"Detail: {i['label']} (key words: " + " + ".join("(" + " | ".join(g) + ")" for g in i["must"]) + ")"
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
