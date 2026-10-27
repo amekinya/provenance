@@ -6,7 +6,11 @@ Methods (same interrogations, same detail lists):
   provenance    Nemotron 3.5 Lightning labels lines -> code ledger -> Nemotron 3 Ultra verifies deciding lines
   provenance+matcher (when ENDPOINT_URL is set) our fine-tuned matcher proposes the labels instead of Lightning
 Metrics: first-mention speaker (investigator / suspect / never) and exact first line; plus the corroboration call.
-Usage: python -m eval.run_eval [--n 30] [--methods keyword,one_prompt,provenance]
+Gold: "interrogator" = investigators named the detail before the suspect stated or agreed to it; "suspect" = the suspect said
+it first; "never" = the suspect never stated or agreed to it.
+Splits: test (held out, different writer models; the published numbers) or dev / train / trainval (the training writer's
+interrogations, for diagnosing and tuning; never tune on test). Per-fact predictions go to eval/details_<split>.json.
+Usage: python -m eval.run_eval [--split test] [--n 30] [--methods keyword,one_prompt,provenance]
 """
 from __future__ import annotations
 
@@ -20,10 +24,10 @@ from pathlib import Path
 from app.ai import tasks
 from app.ai.client import CallRecord, LiveModelUnavailable
 from app.engine.ledger import audit, load_case
-from scripts.tag import case_dict, tag_all, verify_deciding
+from scripts.tag import add_code_assents, case_dict, search_investigator_first, tag_all, verify_deciding
 
 ROOT = Path(__file__).resolve().parent.parent
-SYNTH = ROOT / "data" / "synth" / "interrogations_test.jsonl"  # held out: never used to train the matcher
+SYNTH_DIR = ROOT / "data" / "synth"
 STOP = set("a an the of to in on at for with and or his her its their was were is be by from that this it he she they".split())
 
 
@@ -84,29 +88,72 @@ def keyword(rec: dict) -> dict[str, dict]:
 def one_prompt(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     rows = tasks.single_prompt([{"id": u["id"], "speaker": u["speaker"], "role": u["role"], "text": u["text"]} for u in rec["utterances"]],
                                rec["facts"], calls)
-    out = {f["id"]: {"first": "never", "line": None} for f in rec["facts"]}
+    out = {f["id"]: {"first": "never", "line": None, "answered": False} for f in rec["facts"]}
+    by_label = {f["label"].strip().lower(): f["id"] for f in rec["facts"]}
+    unmatched = []
     for r in rows:
-        if r["fact"] in out:
-            out[r["fact"]] = {"first": r["first_said_by"], "line": r["utterance_id"] or None}
+        fid = str(r.get("fact", "")).strip()
+        m = re.match(r"^(F\d+)\b", fid)
+        fid = m.group(1) if m else by_label.get(fid.lower(), fid)
+        if fid in out:
+            out[fid] = {"first": r["first_said_by"], "line": (r.get("utterance_id") or "").strip() or None, "answered": True}
+        else:
+            unmatched.append(r.get("fact"))
+    missing = [k for k, v in out.items() if not v["answered"]]
+    if missing or unmatched:
+        print(f"  one_prompt {rec['id']}: {len(rows)} rows; no answer for {missing}; unmatched ids {unmatched[:5]}")
     return out
 
 
-def provenance(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+TRACE: dict[str, list[dict]] = {}  # rec id -> the labels the method ended with (for eval/details_<split>.json)
+
+
+def _with_trace(rec, utts, facts, mentions, calls, full: bool = True):
+    if full:
+        add_code_assents(utts, mentions)
+    verify_deciding(_cfg(rec), utts, facts, mentions, calls, rounds=3)
+    if full and search_investigator_first(_cfg(rec), utts, facts, mentions, calls):
+        verify_deciding(_cfg(rec), utts, facts, mentions, calls, rounds=3)
+    TRACE[rec["id"]] = [{k: m.get(k) for k in ("utterance", "fact", "kind", "quote", "by", "verified")} for m in mentions]
+    return predict_from_report(audit(load_case(case_dict(_cfg(rec), utts, facts, mentions))))
+
+
+def _inputs(rec):
     utts = [{k: v for k, v in u.items() if k != "carries"} | {"page": "", "sensitive": False} for u in rec["utterances"]]
     facts = [{"id": f["id"], "label": f["label"], "detail": f["detail"], "aliases": []} for f in rec["facts"]]
+    return utts, facts
+
+
+def provenance(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+    utts, facts = _inputs(rec)
     mentions, _ = tag_all(utts, facts, 18, calls)
-    verify_deciding(_cfg(rec), utts, facts, mentions, calls, rounds=3)
-    return predict_from_report(audit(load_case(case_dict(_cfg(rec), utts, facts, mentions))))
+    return _with_trace(rec, utts, facts, mentions, calls)
+
+
+def provenance_basic(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+    """Ablation: Lightning labels + Ultra check only (no code agreements, no safety search), as before Oct 27."""
+    utts, facts = _inputs(rec)
+    mentions, _ = tag_all(utts, facts, 18, calls)
+    return _with_trace(rec, utts, facts, mentions, calls, full=False)
 
 
 def provenance_matcher(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     from scripts.tag import tag_with_matcher  # noqa: PLC0415
 
-    utts = [{k: v for k, v in u.items() if k != "carries"} | {"page": "", "sensitive": False} for u in rec["utterances"]]
-    facts = [{"id": f["id"], "label": f["label"], "detail": f["detail"], "aliases": []} for f in rec["facts"]]
+    utts, facts = _inputs(rec)
     mentions, _ = tag_with_matcher(utts, facts, calls)
-    verify_deciding(_cfg(rec), utts, facts, mentions, calls, rounds=3)
-    return predict_from_report(audit(load_case(case_dict(_cfg(rec), utts, facts, mentions))))
+    return _with_trace(rec, utts, facts, mentions, calls)
+
+
+def load_split(split: str) -> list[dict]:
+    from scripts.build_pairs import trainval_split  # noqa: PLC0415
+
+    f = SYNTH_DIR / ("interrogations_test.jsonl" if split == "test" else "interrogations_trainval.jsonl")
+    recs = [json.loads(x) for x in f.read_text().splitlines() if x.strip()] if f.exists() else []
+    if split in ("dev", "train"):
+        sp = trainval_split([r["id"] for r in recs])
+        recs = [r for r in recs if sp[r["id"]] == split]
+    return recs
 
 
 def score(golds: list[dict], preds: list[dict]) -> dict:
@@ -135,14 +182,18 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=30)
     ap.add_argument("--methods", default="keyword,one_prompt,provenance")
+    ap.add_argument("--split", default="test", choices=["test", "dev", "train", "trainval"])
     a = ap.parse_args()
-    recs = [json.loads(x) for x in SYNTH.read_text().splitlines() if x.strip()][: a.n]
+    recs = load_split(a.split)[: a.n]
+    if not recs:
+        raise SystemExit(f"no interrogations in split {a.split}")
     golds = [gold(r) for r in recs]
-    results, costs = {}, {}
+    results, costs, details = {}, {}, {}
     for m in a.methods.split(","):
         calls: list[CallRecord] = []
         t0 = time.perf_counter()
         fn = {"keyword": lambda r: keyword(r), "one_prompt": lambda r: one_prompt(r, calls), "provenance": lambda r: provenance(r, calls),
+              "provenance_basic": lambda r: provenance_basic(r, calls),
               "provenance_matcher": lambda r: provenance_matcher(r, calls)}[m]
 
         def safe(r, fn=fn):
@@ -151,23 +202,32 @@ def main() -> None:
             except LiveModelUnavailable as e:
                 print(f"  {m} failed on {r['id']}: {e}")
                 return None
+        TRACE.clear()
         with ThreadPoolExecutor(4 if m != "keyword" else 1) as ex:
             preds = list(ex.map(safe, recs))
         results[m] = score(golds, preds)
+        details[m] = [{"id": r["id"], "failed": p is None, "labels": TRACE.get(r["id"]),
+                       "facts": {fid: {"gold": g[fid], "pred": (p or {}).get(fid)} for fid in g}} for r, g, p in zip(recs, golds, preds)]
         costs[m] = {"seconds": round(time.perf_counter() - t0, 1), "cost_usd": round(sum(c.cost_usd for c in calls), 4), "calls": len(calls)}
         print(m, results[m], costs[m])
     names = {"keyword": "Keyword match (no model)", "one_prompt": "Nemotron 3 Ultra, one prompt per interview",
-             "provenance": "Provenance: Lightning labels + code ledger + Ultra check",
+             "provenance": "Provenance: Lightning labels + code ledger + Ultra check + safety search",
+             "provenance_basic": "Provenance without code agreements or safety search (ablation)",
              "provenance_matcher": "Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check"}
-    out = {"n_interrogations": len(recs), "generator": recs[0]["generator"] if recs else "", "results": results, "costs": costs,
+    writers = sorted({r["generator"] for r in recs})
+    who = " and ".join(writers) + (" (model families different from the training writer)" if a.split == "test" else " (the training writer; diagnostic split)")
+    out = {"split": a.split, "n_interrogations": len(recs), "generator": ", ".join(writers), "results": results, "costs": costs,
            "rows": [{"method": names.get(k, k), **v, **costs[k]} for k, v in results.items()],
-           "note": f"{len(recs)} synthetic interrogations written by {recs[0]['generator'] if recs else '?'} (a different model family), "
-                   f"{sum(len(g) for g in golds)} details with known first speakers."}
-    (ROOT / "eval" / "results.json").write_text(json.dumps(out, indent=1))
+           "note": f"{len(recs)} synthetic interrogations ({a.split} split) written by {who}, {sum(len(g) for g in golds)} details with known first speakers."}
+    suffix = "" if a.split == "test" else f"_{a.split}"
+    (ROOT / "eval" / f"results{suffix}.json").write_text(json.dumps(out, indent=1))
+    (ROOT / "eval" / f"details_{a.split}.json").write_text(json.dumps({"recs": {r["id"]: {"facts": r["facts"], "plan": r.get("plan"),
+                                                                                         "utterances": [{k: u[k] for k in ("id", "role", "text", "carries")} for u in r["utterances"]]}
+                                                                               for r in recs}, "methods": details}, indent=1))
     md = ["# Provenance benchmark", "", out["note"], "", "| Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |",
           "|---|---|---|---|---|---|"]
     md += [f"| {r['method']} | {r['speaker_acc']:.0%} | {r['line_acc']:.0%} | {r['investigator_first_called_suspect_first']} | {r['seconds']} s | ${r['cost_usd']:.3f} |" for r in out["rows"]]
-    (ROOT / "eval" / "RESULTS.md").write_text("\n".join(md) + "\n")
+    (ROOT / "eval" / f"RESULTS{suffix}.md").write_text("\n".join(md) + "\n")
     print("\n".join(md))
 
 

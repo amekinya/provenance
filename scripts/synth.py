@@ -4,7 +4,8 @@ Code draws a plan (which details investigators introduce, which the suspect volu
 from a DIFFERENT family than the ones Provenance uses writes a fictional, non-graphic interrogation that follows the plan
 and labels every line with the details it carries. Code then keeps only interrogations whose labels reproduce the plan,
 so the gold answers don't depend on trusting the writer.
-Usage: python -m scripts.synth --n 40 [--generator MODEL_ID]
+Usage: python -m scripts.synth --n 40 [--generator MODEL_ID] [--split trainval|test] [--append]
+  --append adds this writer's interrogations to the split's file (re-running a writer replaces its own).
 """
 from __future__ import annotations
 
@@ -111,6 +112,7 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--generator", default=None)
     ap.add_argument("--split", default="trainval", choices=["trainval", "test"])
+    ap.add_argument("--append", action="store_true")
     a = ap.parse_args()
     gen = pick_generator(a.generator)
     print("generator:", gen.model_id)
@@ -122,10 +124,18 @@ def main() -> None:
             calls += c
             if rec:
                 kept.append(rec)
+    tag = "" if gen.model_id.startswith("Qwen/") or a.split == "trainval" else gen.model_id.split("/")[-1][:3].upper()
     for r in kept:
         r["split"] = a.split
         if a.split == "test":
-            r["id"] = "T" + r["id"]
+            r["id"] = "T" + tag + r["id"]  # unique across test writers
+    if a.append and out_file.exists():
+        old = [json.loads(x) for x in out_file.read_text().splitlines() if x.strip()]
+        old = [r for r in old if r.get("generator") != gen.model_id]
+        print(f"keeping {len(old)} interrogations from other writers")
+        kept = old + kept
+    if not kept:
+        raise SystemExit("no interrogations kept; the file was left unchanged")
     out_file.write_text("\n".join(json.dumps(r) for r in kept) + "\n")
     print(f"kept {len(kept)}/{a.n} interrogations; {sum(len(r['utterances']) for r in kept)} lines; {len(calls)} calls")
 

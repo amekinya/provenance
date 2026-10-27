@@ -22,15 +22,20 @@ def passage(prev: dict | None, u: dict) -> str:
     return f"{head}{who(u)}: {u['text']}"
 
 
+def trainval_split(ids: list[str]) -> dict[str, str]:
+    """Interrogation id -> 'train' or 'dev' (20%, fixed seed). The benchmark's --split dev uses the same split."""
+    rng = random.Random(1)
+    ids = list(ids)
+    rng.shuffle(ids)
+    return {i: ("dev" if k < len(ids) * 0.2 else "train") for k, i in enumerate(ids)}
+
+
 def main() -> None:
     tv = ROOT / "data" / "synth" / "interrogations_trainval.jsonl"
     te = ROOT / "data" / "synth" / "interrogations_test.jsonl"
     recs = [json.loads(x) for x in tv.read_text().splitlines() if x.strip()]
     tests = [json.loads(x) for x in te.read_text().splitlines() if x.strip()] if te.exists() else []
-    rng = random.Random(1)
-    ids = [r["id"] for r in recs]
-    rng.shuffle(ids)
-    split = {i: ("dev" if k < len(ids) * 0.2 else "train") for k, i in enumerate(ids)}
+    split = trainval_split([r["id"] for r in recs])
     split |= {r["id"]: "test" for r in tests}  # test interrogations come from a different writer model
     recs += tests
     rows = []

@@ -1,11 +1,15 @@
 """Label every sentence with the case details it carries, verify the sentences that decide verdicts, and save the audit.
 
 1. Nemotron 3.5 Lightning tags sentences in parallel chunks (with a few lines of context).
-2. Code drops any label whose quote isn't really in the sentence.
+2. Code drops any label whose quote isn't really in the sentence, and adds the bare agreements: a suspect's "yeah"
+   right after an investigator line carrying a detail adopts that detail.
 3. The ledger (plain code) finds each detail's first investigator mention and first suspect adoption.
 4. Nemotron 3 Ultra re-reads only those deciding sentences; rejected ones are dropped and the ledger re-runs,
-   until every deciding sentence has been checked (at most 4 rounds).
-5. Ultra writes a memo from the ledger's findings only.
+   until every deciding sentence has been checked (at most 8 rounds).
+5. Safety search: before the suspect is credited with any detail, code searches EVERY earlier investigator line for the
+   detail's words and Ultra checks each candidate, so a labeler miss can't turn an investigator's detail into the
+   suspect's.
+6. Ultra writes a memo from the ledger's findings only.
 Writes mentions.json, audit.json, memo.json and run.json (calls, cost, timings).
 Usage: python -m scripts.tag dassey [--chunk 18] [--no-memo]
 """
@@ -90,17 +94,122 @@ def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRec
             for r in rows:
                 graphic[r["id"]] = bool(r.get("graphic")) or bool(GRAPHIC.search(text_of.get(r["id"], "")))
                 for m in r["mentions"]:
-                    if m["kind"] == "assents":
-                        # an agreement must be a bare agreement or a nod (code check, like the quote check below)
-                        if not is_assent_text(text_of[r["id"]]):
+                    if m["kind"] == "assents" and not is_assent_text(text_of[r["id"]]):
+                        # "Yeah, the red one" is a statement, not a bare agreement: keep it as one only if the quoted
+                        # words are really there and say more than "yeah"; otherwise drop it.
+                        if tasks.quote_in(m["quote"], text_of[r["id"]]) and not is_assent_text(m["quote"]):
+                            m["kind"] = "asserts"
+                        else:
                             dropped += 1
                             continue
-                    elif not tasks.quote_in(m["quote"], text_of[r["id"]]):
+                    if m["kind"] != "assents" and not tasks.quote_in(m["quote"], text_of[r["id"]]):
                         dropped += 1  # code check: the quote isn't in the sentence
                         continue
                     mentions.append({"utterance": r["id"], "fact": m["fact"], "kind": m["kind"], "quote": m["quote"], "by": "model", "verified": None})
     print(f"tagged {len(utts)} sentences in {len(jobs)} chunks: {len(mentions)} labels kept, {dropped} dropped (quote not in sentence)")
     return mentions, graphic
+
+
+def add_code_assents(utts: list[dict], mentions: list[dict]) -> int:
+    """A suspect's bare agreement right after an investigator line that carries a detail adopts that detail (the
+    labeler often leaves a lone 'yeah' unlabeled). Code adds these; the ledger still only counts an agreement that
+    follows the investigator's mention within 3 turns, and Ultra checks it if it decides a verdict."""
+    order = sorted(utts, key=lambda u: u["seq"])
+    carried: dict[str, set[str]] = {}
+    for m in mentions:
+        if m["kind"] in ("asks", "asserts") and m.get("verified") is not False:
+            carried.setdefault(m["utterance"], set()).add(m["fact"])
+    have = {(m["utterance"], m["fact"]) for m in mentions}
+    added = 0
+    for prev, u in zip(order, order[1:]):
+        if u["role"] != "suspect" or prev["role"] != "interrogator" or prev["session"] != u["session"] or not is_assent_text(u["text"]):
+            continue
+        for fid in sorted(carried.get(prev["id"], ())):
+            if (u["id"], fid) not in have:
+                mentions.append({"utterance": u["id"], "fact": fid, "kind": "assents", "quote": spoken(u["text"])[:80] or u["text"][:80],
+                                 "by": "code", "verified": None})
+                have.add((u["id"], fid))
+                added += 1
+    return added
+
+
+STOP = set("a an the of to in on at for with and or his her him its their was were is be by from that this it he she they there "
+           "then them out into onto over under about after before when what who did does had has have not off".split())
+
+
+def detail_stems(f: dict) -> list[str]:
+    """Distinctive word stems of a detail: its label and aliases, minus function words; 5-letter stems catch plurals."""
+    words = re.findall(r"[a-z0-9]+", " ".join([f.get("label", "")] + list(f.get("aliases") or [])).lower())
+    stems = {w[:5] for w in words if w not in STOP and (len(w) >= 3 or w.isdigit())}
+    return sorted(stems)
+
+
+def candidate_lines(utts: list[dict], f: dict, before_seq: int) -> list[dict]:
+    """Investigator lines before `before_seq` (any session) that contain one of the detail's distinctive stems. In a long
+    record, stems found on more than 2% of lines (names like the suspect's uncle) don't count as distinctive."""
+    stems = detail_stems(f)
+    if len(utts) >= 200:
+        texts = [plain(u["text"]).lower() for u in utts]
+        cap = max(5, int(0.02 * len(utts)))
+        stems = [s for s in stems if sum(1 for t in texts if re.search(rf"\b{re.escape(s)}", t)) <= cap]
+    if not stems:
+        return []
+    rx = re.compile(r"\b(" + "|".join(re.escape(s) for s in stems) + r")", re.I)
+    return [u for u in sorted(utts, key=lambda u: u["seq"]) if u["role"] == "interrogator" and u["seq"] < before_seq and rx.search(plain(u["text"]))]
+
+
+def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: int = 15, passes: int = 3) -> int:
+    """Safety search. For every detail the suspect stated or agreed to, look for an investigator line BEFORE the earliest
+    known mention that carries it: code finds candidates by the detail's words, earliest first; Ultra checks each one.
+    Confirmed lines are added as verified investigator mentions; rejected ones are kept as rejected so they're not
+    asked again. Returns how many investigator mentions were added."""
+    by_id = {u["id"]: u for u in utts}
+    order = sorted(utts, key=lambda u: u["seq"])
+    prev_of = {u["id"]: (order[i - 1]["text"] if i and order[i - 1]["session"] == u["session"] else "") for i, u in enumerate(order)}
+    fact_of = {f["id"]: f for f in facts}
+    added = 0
+    for _ in range(passes):
+        rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+        asked = {(m["utterance"], m["fact"]) for m in mentions}
+        items = []
+        for fl in rep["facts"]:
+            fs, fi = fl["first_suspect"], fl["first_interrogator"]
+            # Public, planted and prior-statement details get their verdict before investigator order is considered.
+            if not fs or fl["origin"] in ("public", "planted_adopted") or fl["fact"].get("prior_statement"):
+                continue
+            limit = min(fs["seq"], fi["seq"]) if fi else fs["seq"]
+            fid = fl["fact"]["id"]
+            cands = [u for u in candidate_lines(utts, fact_of[fid], limit) if (u["id"], fid) not in asked][:per_fact]
+            items += [{"key": f"{u['id']}|{fid}", "fact_label": fact_of[fid]["label"], "fact_detail": fact_of[fid].get("detail", ""),
+                       "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"], "prev": prev_of[u["id"]]} for u in cands]
+        if not items:
+            break
+        results: dict[str, dict] = {}
+
+        def run(b):
+            local: list[CallRecord] = []
+            try:
+                return tasks.verify(b, local), local
+            except LiveModelUnavailable:
+                return {}, local
+        with ThreadPoolExecutor(6) as ex:
+            for res, local in ex.map(run, [items[i:i + 5] for i in range(0, len(items), 5)]):
+                calls.extend(local)
+                results.update(res)
+        confirmed = 0
+        for it in items:
+            r = results.get(it["key"])
+            if r is None:
+                continue
+            uid, fid = it["key"].split("|")
+            ok = bool(r["carries_detail"]) and r["kind"] in ("asks", "asserts")
+            mentions.append({"utterance": uid, "fact": fid, "kind": r["kind"] if ok else "asks", "quote": by_id[uid]["text"][:160],
+                             "by": "search", "verified": ok})
+            confirmed += ok
+        added += confirmed
+        print(f"safety search: {len(items)} earlier investigator lines checked, {sum(1 for i in items if i['key'] in results)} answered, "
+              f"{confirmed} carry the detail")
+    return added
 
 
 DENY = __import__("re").compile(r"^\W*(no\b|nope|nah|never|i don'?t know|i dunno|i didn'?t|i don'?t remember|not that i)", __import__("re").I)
@@ -155,7 +264,7 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
                   "speaker": f"{by_id[m['utterance']]['speaker']} ({by_id[m['utterance']]['role']})", "text": by_id[m["utterance"]]["text"],
                   "prev": prev_of[m["utterance"]]} for m in todo]
         results: dict[str, dict] = {}
-        batches = [items[i:i + 8] for i in range(0, len(items), 8)]
+        batches = [items[i:i + 5] for i in range(0, len(items), 5)]
 
         def run(b):
             local: list[CallRecord] = []
@@ -204,6 +313,7 @@ def main() -> None:
         mentions, graphic = tag_with_matcher(utts, facts, calls)
     else:
         mentions, graphic = tag_all(utts, facts, a.chunk, calls, failed)
+    print(f"code added {add_code_assents(utts, mentions)} bare agreements that follow an investigator line carrying the detail")
     if not utts:
         sys.exit("no utterances: run ingest first")
     if failed and len(failed) > max(1, len(utts) // 400):
@@ -213,6 +323,9 @@ def main() -> None:
     (cd / "utterances.json").write_text(json.dumps(utts, indent=1))
     t_tag = time.perf_counter() - t0
     unverified = verify_deciding(cfg, utts, facts, mentions, calls)
+    searched = search_investigator_first(cfg, utts, facts, mentions, calls)
+    if searched:
+        unverified = verify_deciding(cfg, utts, facts, mentions, calls)
     (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
     rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
     (cd / "audit.json").write_text(json.dumps(rep, indent=1))
@@ -227,7 +340,7 @@ def main() -> None:
     for c in calls:
         r = roles.setdefault(c.role, {"model": c.model_id, "calls": 0, "seconds": 0.0, "cost_usd": 0.0})
         r["calls"] += 1; r["seconds"] += c.seconds; r["cost_usd"] += c.cost_usd
-    run = {"labeler": a.labeler, "read_by": "super_vl", "failed_chunks": failed, "unverified": unverified,
+    run = {"labeler": a.labeler, "read_by": "super_vl", "failed_chunks": failed, "unverified": unverified, "safety_search_added": searched,
            "tag_seconds": round(t_tag, 1), "total_seconds": round(time.perf_counter() - t0, 1),
            "cost_usd": round(sum(c.cost_usd for c in calls), 4), "by_model": roles,
            "calls": [asdict(c) | {"seconds": round(c.seconds, 2), "cost_usd": round(c.cost_usd, 5)} for c in calls]}

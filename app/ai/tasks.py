@@ -156,7 +156,7 @@ def verify(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str
                                       "sentence itself conveys the detail (a question that names it counts; a vague or different topic doesn't; "
                                       "'yeah' counts as assent only if the previous line carried the detail). Give the kind: asks, asserts, denies, assents."},
         {"role": "user", "content": body}],
-        schema=VERIFY_SCHEMA, purpose="Verify deciding sentences", reasoning=True, max_tokens=6000, calls=calls)
+        schema=VERIFY_SCHEMA, purpose="Verify deciding sentences", reasoning=True, max_tokens=10000, calls=calls)
     return {c["key"]: c for c in out.get("checks", [])}
 
 
@@ -192,18 +192,26 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None) -> dict:
 BASELINE_SCHEMA = {
     "type": "object",
     "properties": {"facts": {"type": "array", "items": {"type": "object", "properties": {
-        "fact": {"type": "string"}, "first_said_by": {"type": "string", "enum": ["interrogator", "suspect", "never"]},
-        "utterance_id": {"type": "string"}}, "required": ["fact", "first_said_by", "utterance_id"], "additionalProperties": False}}},
+        "fact": {"type": "string", "description": "the detail's id exactly as given, e.g. F1"},
+        "first_said_by": {"type": "string", "enum": ["interrogator", "suspect", "never"]},
+        "utterance_id": {"type": "string", "description": "the id of that first line, e.g. X007-012; empty for never"}},
+        "required": ["fact", "first_said_by", "utterance_id"], "additionalProperties": False}}},
     "required": ["facts"], "additionalProperties": False,
 }
 
 
 def single_prompt(utterances: list[dict], facts: list[dict], calls: list[CallRecord] | None = None) -> list[dict]:
+    """The baseline: one strong model, one prompt, the same question the ledger answers."""
     record = "\n".join(f"[{u['id']}] {u['speaker']} ({u['role']}): {u['text']}" for u in utterances)
     fact_list = "\n".join(f"{f['id']}: {f['label']}" for f in facts)
     out = chat_json(settings.ultra, [
-        {"role": "user", "content": f"Interrogation record:\n{record}\n\nCrime details:\n{fact_list}\n\nFor each detail, who said it FIRST in "
-                                    "this record (the interrogator, including inside a question, or the suspect), and the id of that line? "
-                                    "Use 'never' if nobody did."}],
-        schema=BASELINE_SCHEMA, purpose="Single-prompt baseline", reasoning=True, max_tokens=8000, calls=calls)
+        {"role": "user", "content": f"Interrogation record:\n{record}\n\nCrime details:\n{fact_list}\n\n"
+                                    "For EVERY detail id above, answer:\n"
+                                    "1. Did the SUSPECT ever state this detail or agree to it (agreeing includes a 'yeah' to a question that "
+                                    "named it)? If not, first_said_by is 'never' and utterance_id is empty.\n"
+                                    "2. If he did: who put the detail into the record FIRST, the interrogator (a question naming it counts) or "
+                                    "the suspect? utterance_id is the id of that first line: the interrogator's first line naming it if the "
+                                    "interrogator was first, otherwise the suspect's first line stating it.\n"
+                                    "Return one entry per detail id."}],
+        schema=BASELINE_SCHEMA, purpose="Single-prompt baseline", reasoning=True, max_tokens=12000, calls=calls)
     return out.get("facts", [])

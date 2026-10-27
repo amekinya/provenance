@@ -1,6 +1,10 @@
 name: Benchmark (live models)
 # Actions tab -> "Benchmark" -> Run workflow. Writes synthetic interrogations (if asked) and measures each method.
-# Also runs when .github/requests/eval.json changes: {"synth": "40", "n": "30", "methods": "keyword,one_prompt,provenance"}.
+# Also runs when .github/requests/eval.json changes, e.g.
+#   {"synth": "0", "test_synth": "40", "test_generator": "zai-org/GLM-5.2", "test_seed": "303", "append_test": "1",
+#    "split": "dev", "n": "30", "methods": "keyword,one_prompt,provenance"}
+# synth = new TRAINING interrogations (replaces them); test_synth = new TEST interrogations from test_generator
+# (append_test=1 keeps other writers' test interrogations); split = which interrogations to score (test|dev|train|trainval).
 on:
   push:
     paths: [".github/requests/eval.json"]
@@ -30,8 +34,11 @@ jobs:
               d = json.load(open(".github/requests/eval.json"))
           else:
               d = {"synth": os.environ["IN_SYNTH"], "n": os.environ["IN_N"], "methods": os.environ["IN_METHODS"]}
-          v = {"SYNTH": str(d.get("synth", "0")), "N": str(d.get("n", "30")), "METHODS": str(d.get("methods", "keyword,one_prompt,provenance"))}
-          ok = {"SYNTH": r"\d+", "N": r"\d+", "METHODS": r"[a-z_,]+"}
+          v = {"SYNTH": str(d.get("synth", "0")), "N": str(d.get("n", "30")), "METHODS": str(d.get("methods", "keyword,one_prompt,provenance")),
+               "TEST_SYNTH": str(d.get("test_synth", "0")), "TEST_GENERATOR": str(d.get("test_generator", "Qwen/Qwen3-30B-A3B-Instruct-2507")),
+               "TEST_SEED": str(d.get("test_seed", "101")), "APPEND_TEST": str(d.get("append_test", "0")), "SPLIT": str(d.get("split", "test"))}
+          ok = {"SYNTH": r"\d+", "N": r"\d+", "METHODS": r"[a-z_,]+", "TEST_SYNTH": r"\d+", "TEST_GENERATOR": r"[A-Za-z0-9._/-]+",
+                "TEST_SEED": r"\d+", "APPEND_TEST": r"[01]", "SPLIT": r"test|dev|train|trainval"}
           for k, x in v.items():
               if not re.fullmatch(ok[k], x):
                   sys.exit(f"bad value for {k}: {x!r}")
@@ -52,12 +59,15 @@ jobs:
           mkdir -p eval
           if [ "$SYNTH" != "0" ]; then
             python -m scripts.synth --n "$SYNTH" --split trainval --generator deepseek-ai/DeepSeek-V4.1-Flash-1017 2>&1 | tee -a eval/synth_log.txt
-            python -m scripts.synth --n 20 --split test --seed 101 --generator Qwen/Qwen3-30B-A3B-Instruct-2507 2>&1 | tee -a eval/synth_log.txt
-            python -m scripts.build_pairs 2>&1 | tee -a eval/synth_log.txt
           fi
+          if [ "$TEST_SYNTH" != "0" ]; then
+            python -m scripts.synth --n "$TEST_SYNTH" --split test --seed "$TEST_SEED" --generator "$TEST_GENERATOR" $([ "$APPEND_TEST" = "1" ] && echo --append) 2>&1 | tee -a eval/synth_log.txt
+          fi
+          if [ "$SYNTH" != "0" ] || [ "$TEST_SYNTH" != "0" ]; then python -m scripts.build_pairs 2>&1 | tee -a eval/synth_log.txt; fi
           if [ "$N" != "0" ]; then
-            python -m eval.run_eval --n "$N" --methods "$METHODS" 2>&1 | tee eval/eval_log.txt
-            cat eval/RESULTS.md >> "$GITHUB_STEP_SUMMARY"
+            SUF=$([ "$SPLIT" = "test" ] || echo "_$SPLIT")
+            python -m eval.run_eval --split "$SPLIT" --n "$N" --methods "$METHODS" 2>&1 | tee "eval/eval_log$SUF.txt"
+            cat "eval/RESULTS$SUF.md" >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Commit results
         if: always()
