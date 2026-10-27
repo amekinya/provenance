@@ -259,20 +259,26 @@
     const run = rep.run || {};
     const by = run.by_model || {};
     const cost = (role) => (by[role] ? ` (${by[role].calls} calls, $${by[role].cost_usd.toFixed(3)})` : "");
-    const labeler = run.labeler === "matcher" ? "our fine-tuned matcher (NVIDIA llama-nemotron-rerank-1b-v2 on Nebius)" : "Nemotron 3.5 Lightning";
+    const lab = run.labeler || (by.lightning ? "lightning" : by.matcher ? "matcher" : "ultra");
+    const labeler = lab === "matcher" ? "our fine-tuned matcher (NVIDIA llama-nemotron-rerank-1b-v2 on Nebius)" : lab === "lightning" ? "Nemotron 3.5 Lightning" : "Nemotron 3 Ultra";
+    const st = run.by_step || {};
+    const stepCost = (k, fallback) => (st[k] ? ` (${st[k].calls} calls, $${st[k].cost_usd.toFixed(3)})` : fallback);
     const steps = [];
     if (by.super_vl || run.read_by === "super_vl") steps.push(`<li><b>Read the scanned transcripts.</b> <span class="m">Nemotron 3.5 Super VL</span> turned each page image into speaker-labeled lines${cost("super_vl")}. Code merged continuation lines, matched speaker names to the case roster and split out the suspect's nods.</li>`);
     steps.push(`<li><b>List the key details.</b> Each detail, its source and any date it was already public were checked by hand against the court record and news reports.</li>`);
-    if (by.lightning || by.matcher) steps.push(`<li><b>Label every sentence.</b> ${labeler} marked which details each line carries and how (asks, says, denies, agrees)${cost(by.matcher ? "matcher" : "lightning")}. Code throws out any statement label whose quote isn't in the line, and counts a bare "yeah" only right after a question about that detail.</li>`);
+    if (run.by_model || run.by_step) steps.push(`<li><b>Label every sentence.</b> <span class="m">${labeler}</span> marked which details each line carries and how (asks, says, denies, agrees)${stepCost("label", lab === "lightning" ? cost("lightning") : lab === "matcher" ? cost("matcher") : "")}. Code throws out any label whose quoted words aren't in the line${run.code_agreements_added ? `, and added ${run.code_agreements_added} bare “yeah”s that directly answer a question carrying the detail` : ""}. A “yeah” only counts right after a question about that detail.</li>`);
     steps.push(`<li><b>Decide who said it first.</b> Plain code walks the record in order. No model decides this.</li>`);
-    if (by.ultra) steps.push(`<li><b>Double-check what decides a verdict.</b> <span class="m">Nemotron 3 Ultra</span> re-read the first-mention lines; rejected ones were dropped and the order re-checked${cost("ultra")}.${run.unverified ? ` ${run.unverified} deciding line${run.unverified === 1 ? " was" : "s were"} not re-checked and ${run.unverified === 1 ? "is" : "are"} marked.` : ""}</li>`);
+    if (by.ultra) steps.push(`<li><b>Double-check what decides a verdict.</b> <span class="m">Nemotron 3 Ultra</span>${run.verifier_reasoning ? " (with reasoning)" : ""} re-read every first-mention line and kept a label only if the line conveys the detail's distinctive part, not just the topic; rejected ones were dropped and the order re-checked${stepCost("check", lab === "ultra" ? "" : cost("ultra"))}.${run.unverified ? ` ${run.unverified} deciding line${run.unverified === 1 ? " was" : "s were"} not re-checked and ${run.unverified === 1 ? "is" : "are"} marked.` : ""}</li>`);
+    if (run.safety_search_added !== undefined) steps.push(`<li><b>Safety search before crediting the suspect.</b> For every detail he stated or agreed to, code searched all earlier investigator lines for the detail's words (and the questions right before his answer), and Ultra checked each candidate. It found ${run.safety_search_added} earlier investigator line${run.safety_search_added === 1 ? "" : "s"} the labels had missed.</li>`);
     if (!run.by_model) steps.push(`<li>This case's processing log isn't available, so the steps above describe the method, not this run.</li>`);
     if (run.total_seconds) steps.push(`<li>Whole record: <b>${Math.round(run.total_seconds)} s</b>, <b>$${(run.cost_usd || 0).toFixed(2)}</b> in model costs.</li>`);
     $("#steps").innerHTML = steps.join("");
     const ev = rep.eval;
     $("#evalBox").innerHTML = ev && ev.rows ? `<h3 style="margin-top:18px">Measured accuracy</h3><p class="fine">${esc(ev.note || "")}</p>
       <table class="eval"><thead><tr><th>Method</th><th>Right first-mention speaker</th><th>Right line</th></tr></thead><tbody>
-      ${ev.rows.map((r) => `<tr><td>${esc(r.method)}</td><td class="n">${Math.round(100 * r.speaker_acc)}%</td><td class="n">${Math.round(100 * r.line_acc)}%</td></tr>`).join("")}</tbody></table>` : "";
+      ${ev.rows.map((r) => `<tr><td>${esc(r.method)}</td><td class="n">${Math.round(100 * r.speaker_acc)}%</td><td class="n">${Math.round(100 * r.line_acc)}%</td></tr>`).join("")}</tbody></table>
+      ${ev.rows.some((r) => /one prompt/i.test(r.method)) ? `<p class="fine">On short synthetic interviews (30 to 50 lines), one Ultra prompt that reads the whole interview is a strong baseline. The real record is ${(rep.utterance_count || 0).toLocaleString()} lines across ${(rep.sessions || []).filter((x) => x.recorded).length} recorded sessions, and Provenance cites, and has Ultra re-check, every line a verdict rests on.</p>` : ""}
+      ${rep.one_prompt ? `<p class="fine">On this record, one Ultra prompt per session (code combining the sessions in order) gave the same first speaker as this audit for ${rep.one_prompt.agree} of ${rep.one_prompt.facts} details ($${rep.one_prompt.cost_usd.toFixed(2)}). Where they differ, the lines are in <code>one_prompt.json</code>.</p>` : ""}` : "";
   }
 
   // ------------------------------------------------------------ try your own

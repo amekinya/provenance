@@ -308,6 +308,30 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
     return left
 
 
+STEP_OF = {"Tag details in sentences": "label", "Verify deciding sentences": "check", "Write the memo": "memo", "Read a transcript page": "read"}
+
+
+def by_step(calls: list[CallRecord]) -> dict[str, dict]:
+    """Calls and cost per pipeline step (labeling and checking can both be Ultra, so the model alone doesn't say which)."""
+    out: dict[str, dict] = {}
+    for c in calls:
+        k = STEP_OF.get(c.purpose, c.role)
+        r = out.setdefault(k, {"model": c.model_id, "calls": 0, "seconds": 0.0, "cost_usd": 0.0})
+        r["calls"] += 1; r["seconds"] = round(r["seconds"] + c.seconds, 2); r["cost_usd"] = round(r["cost_usd"] + c.cost_usd, 5)
+    return out
+
+
+def check_labels(cfg, utts, facts, mentions, calls: list[CallRecord], rounds: int = 8) -> tuple[int, int, int]:
+    """Everything after labeling: code agreements, Ultra's check of the deciding lines, and the safety search.
+    Returns (agreements added, investigator lines found by the safety search, deciding lines left unchecked)."""
+    agreed = add_code_assents(utts, mentions)
+    unverified = verify_deciding(cfg, utts, facts, mentions, calls, rounds=rounds)
+    searched = search_investigator_first(cfg, utts, facts, mentions, calls)
+    if searched:
+        unverified = verify_deciding(cfg, utts, facts, mentions, calls, rounds=rounds)
+    return agreed, searched, unverified
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("case")
@@ -326,7 +350,6 @@ def main() -> None:
     else:
         from app.config import settings  # noqa: PLC0415
         mentions, graphic = tag_all(utts, facts, a.chunk, calls, failed, spec=settings.ultra if a.labeler == "ultra" else None)
-    print(f"code added {add_code_assents(utts, mentions)} bare agreements that follow an investigator line carrying the detail")
     if not utts:
         sys.exit("no utterances: run ingest first")
     if failed and len(failed) > max(1, len(utts) // 400):
@@ -335,10 +358,8 @@ def main() -> None:
         u["sensitive"] = graphic.get(u["id"], bool(GRAPHIC.search(u["text"])) or u.get("sensitive", False))
     (cd / "utterances.json").write_text(json.dumps(utts, indent=1))
     t_tag = time.perf_counter() - t0
-    unverified = verify_deciding(cfg, utts, facts, mentions, calls)
-    searched = search_investigator_first(cfg, utts, facts, mentions, calls)
-    if searched:
-        unverified = verify_deciding(cfg, utts, facts, mentions, calls)
+    agreed, searched, unverified = check_labels(cfg, utts, facts, mentions, calls)
+    print(f"code added {agreed} bare agreements; the safety search found {searched} earlier investigator lines")
     (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
     rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
     (cd / "audit.json").write_text(json.dumps(rep, indent=1))
@@ -354,6 +375,7 @@ def main() -> None:
         r = roles.setdefault(c.role, {"model": c.model_id, "calls": 0, "seconds": 0.0, "cost_usd": 0.0})
         r["calls"] += 1; r["seconds"] += c.seconds; r["cost_usd"] += c.cost_usd
     run = {"labeler": a.labeler, "read_by": "super_vl", "failed_chunks": failed, "unverified": unverified, "safety_search_added": searched,
+           "code_agreements_added": agreed, "verifier_reasoning": tasks.VERIFY_REASONING, "by_step": by_step(calls),
            "tag_seconds": round(t_tag, 1), "total_seconds": round(time.perf_counter() - t0, 1),
            "cost_usd": round(sum(c.cost_usd for c in calls), 4), "by_model": roles,
            "calls": [asdict(c) | {"seconds": round(c.seconds, 2), "cost_usd": round(c.cost_usd, 5)} for c in calls]}

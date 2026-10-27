@@ -41,10 +41,11 @@ The page also has:
 |---|---|---|
 | 1. Read scanned transcripts | **Nemotron 3.5 Super VL** turns each page image into speaker-labeled lines. Code merges continuation lines and matches names against the case roster | Nebius Token Factory |
 | 2. List key details | **Nemotron 3 Ultra** drafts them from the case documents. We reviewed each one and added a source (2016 federal habeas decision, page cites; public-news dates) | Nebius Token Factory |
-| 3. Label every sentence | **Nemotron 3.5 Lightning** marks which details each line carries and how: asks, states, denies, or agrees. Code discards any label whose quoted words aren't in the line | Nebius Token Factory |
+| 3. Label every sentence | **Nemotron 3 Ultra** (reasoning off) marks which details each line carries and how: asks, states, denies, or agrees. Code discards any label whose quoted words aren't in the line, and adds a suspect's bare "yeah" that directly answers a question carrying a detail. (Nemotron 3.5 Lightning is cheaper but missed about half of the suspect's adoptions on our training-writer interviews: 57% vs 87% right first speaker) | Nebius Token Factory |
 | 3b. Our matcher | NVIDIA **llama-nemotron-rerank-1b-v2**, fine-tuned to score whether a line carries a detail | Trained on a **Nebius Serverless Job**, served on a **Nebius Serverless Endpoint** |
 | 4. Decide who said it first | A plain-code ledger walks the record in order. No model decides | The app |
-| 5. Double-check the deciding lines | **Nemotron 3 Ultra** re-reads only the lines that decide a verdict. Rejected labels are dropped and the ledger re-runs | Nebius Token Factory |
+| 5. Double-check the deciding lines | **Nemotron 3 Ultra** (reasoning on) re-reads only the lines that decide a verdict and keeps a label only if the line conveys the detail's distinctive part ("in the stomach", not just "stabbed her"). Rejected labels are dropped and the ledger re-runs. Reasoning on beat reasoning off on our training-writer interviews (82% vs 73%) | Nebius Token Factory |
+| 6. Safety search before crediting the suspect | Before the suspect is credited with any detail, code searches every earlier investigator line for the detail's words, plus the questions just before his answer, and Ultra checks each candidate, so a labeling miss on an investigator's line is much less likely to hand the suspect a detail he was given | Code + Nebius Token Factory |
 
 ## Results
 

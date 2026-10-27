@@ -20,6 +20,7 @@ from app.engine.ledger import audit, load_case
 
 ROOT = Path(__file__).resolve().parent.parent
 STATIC = Path(__file__).resolve().parent / "static"
+BENCH = Path(__file__).resolve().parent.parent / "eval" / "results.json"
 CASES = ROOT / "data" / "cases"
 
 app = FastAPI(title="Provenance")
@@ -68,8 +69,12 @@ def case(cid: str):
     if not rep:
         raise HTTPException(404, "Unknown case.")
     run = _read(d / "run.json", {}) or {}
-    return rep | {"memo": _read(d / "memo.json"), "run": {k: run.get(k) for k in ("tag_seconds", "total_seconds", "cost_usd", "by_model")},
-                  "config": _read(d / "case.json"), "eval": _read(d / "eval.json")}
+    keep = ("tag_seconds", "total_seconds", "cost_usd", "by_model", "by_step", "labeler", "read_by", "unverified", "safety_search_added",
+            "code_agreements_added", "verifier_reasoning")
+    one = _read(d / "one_prompt.json")
+    return rep | {"memo": _read(d / "memo.json"), "run": {k: run.get(k) for k in keep},
+                  "config": _read(d / "case.json"), "eval": _read(d / "eval.json") or _read(BENCH),
+                  "one_prompt": {k: v for k, v in one.items() if k != "raw"} if one else None}
 
 
 @app.get("/api/case/{cid}/lines")
@@ -124,7 +129,7 @@ def parse_transcript(text: str, suspect: str, interrogators: str) -> list[dict]:
 
 @app.post("/api/analyze")
 def analyze(body: AnalyzeIn):
-    from scripts.tag import case_dict, tag_all, verify_deciding  # noqa: PLC0415
+    from scripts.tag import by_step, case_dict, check_labels, tag_all  # noqa: PLC0415
 
     utts = parse_transcript(body.transcript, body.suspect, body.interrogators)
     if len(utts) < 4:
@@ -142,13 +147,15 @@ def analyze(body: AnalyzeIn):
     calls: list[CallRecord] = []
     t0 = time.perf_counter()
     try:
-        mentions, graphic = tag_all(utts, facts, 18, calls)
+        mentions, graphic = tag_all(utts, facts, 18, calls, spec=settings.ultra)  # the same pipeline as the case audits
         for u in utts:
             u["sensitive"] = graphic.get(u["id"], False)
-        verify_deciding(cfg, utts, facts, mentions, calls, rounds=3)
+        agreed, searched, unverified = check_labels(cfg, utts, facts, mentions, calls, rounds=3)
     except LiveModelUnavailable as e:
         raise HTTPException(503, f"The model service isn't available right now ({e}).") from e
     rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
-    return JSONResponse(rep | {"utterances": utts, "run": {"total_seconds": round(time.perf_counter() - t0, 1),
+    return JSONResponse(rep | {"utterances": utts, "run": {"labeler": "ultra", "unverified": unverified, "safety_search_added": searched,
+                                                           "code_agreements_added": agreed, "by_step": by_step(calls),
+                                                           "total_seconds": round(time.perf_counter() - t0, 1),
                                                            "cost_usd": round(sum(c.cost_usd for c in calls), 4),
                                                            "calls": [asdict(c) | {"cost_usd": round(c.cost_usd, 5)} for c in calls]}})
