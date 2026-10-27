@@ -4,7 +4,7 @@ Methods (same interrogations, same detail lists):
   keyword       first line containing the detail's words (no model)
   one_prompt    Nemotron 3 Ultra reads the whole interrogation in one prompt and answers per detail
   provenance    Nemotron 3.5 Lightning labels lines -> code ledger -> Nemotron 3 Ultra verifies deciding lines
-  provenance+matcher (when MATCHER_URL is set) our fine-tuned matcher proposes the labels instead of Lightning
+  provenance+matcher (when ENDPOINT_URL is set) our fine-tuned matcher proposes the labels instead of Lightning
 Metrics: first-mention speaker (investigator / suspect / never) and exact first line; plus the corroboration call.
 Usage: python -m eval.run_eval [--n 30] [--methods keyword,one_prompt,provenance]
 """

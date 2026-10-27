@@ -34,8 +34,8 @@ class Settings:
     )
     tavily_api_key: str = field(default_factory=lambda: _env("TAVILY_API_KEY"))
     # Our own models on Nebius AI Cloud (Serverless Endpoint): the fine-tuned fact matcher and NVIDIA speech recognition.
-    matcher_url: str = field(default_factory=lambda: _env("MATCHER_URL"))
-    matcher_token: str = field(default_factory=lambda: _env("MATCHER_TOKEN"))
+    matcher_url: str = field(default_factory=lambda: _env("ENDPOINT_URL") or _env("MATCHER_URL"))
+    matcher_token: str = field(default_factory=lambda: _env("ENDPOINT_TOKEN") or _env("MATCHER_TOKEN"))
     # Hard cap on live model spend per day (USD) so judges' traffic can't drain credits.
     daily_spend_cap_usd: float = field(default_factory=lambda: float(_env("DAILY_SPEND_CAP_USD", "2.0")))
 

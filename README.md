@@ -71,7 +71,7 @@ uvicorn app.main:app --port 7860
 |---|---|
 | Nothing | The sample cases |
 | `NEBIUS_API_KEY` | Live analysis of a pasted transcript |
-| `MATCHER_URL` and `MATCHER_TOKEN` | Our Nebius endpoint |
+| `ENDPOINT_URL` and `ENDPOINT_TOKEN` | Our Nebius endpoint |
 
 GitHub Actions has two workflows:
 - **Run case pipeline:** ingest, facts, tag.

@@ -15,7 +15,7 @@ def available() -> bool:
 
 def score(model: str, pairs: list[tuple[str, str]], calls: list[CallRecord] | None = None) -> list[float]:
     if not available():
-        raise LiveModelUnavailable("MATCHER_URL not set")
+        raise LiveModelUnavailable("ENDPOINT_URL not set")
     headers = {"Authorization": f"Bearer {settings.matcher_token}"} if settings.matcher_token else {}
     out: list[float] = []
     t0 = time.perf_counter()
