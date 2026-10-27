@@ -14772,8 +14772,8 @@
        "line": "X020-003"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X020-004",
+       "first": "suspect",
+       "line": "X020-003",
        "answered": true
       }
      },
@@ -14794,8 +14794,8 @@
        "line": "X020-009"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X020-010",
+       "first": "suspect",
+       "line": "X020-009",
        "answered": true
       }
      },
@@ -14941,7 +14941,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X004-011",
+       "line": "X004-003",
        "answered": true
       }
      },
@@ -14962,8 +14962,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X004-017",
        "answered": true
       }
      },
@@ -14973,8 +14973,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X004-019",
        "answered": true
       }
      },
@@ -15013,8 +15013,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X005-031",
        "answered": true
       }
      },
@@ -15046,8 +15046,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X005-027",
        "answered": true
       }
      },
@@ -15057,8 +15057,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X005-013",
        "answered": true
       }
      },
@@ -15068,8 +15068,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X005-007",
        "answered": true
       }
      }
@@ -15086,8 +15086,8 @@
        "line": "X007-007"
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X007-007",
        "answered": true
       }
      },
@@ -15108,8 +15108,8 @@
        "line": "X007-017"
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X007-017",
        "answered": true
       }
      },
@@ -15130,8 +15130,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X007-023",
        "answered": true
       }
      },
@@ -15233,7 +15233,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X012-017]",
+       "line": "X012-017",
        "answered": true
       }
      },
@@ -15244,7 +15244,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X012-003]",
+       "line": "X012-003",
        "answered": true
       }
      },
@@ -15255,7 +15255,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X012-005]",
+       "line": "X012-005",
        "answered": true
       }
      },
@@ -15266,7 +15266,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X012-009]",
+       "line": "X012-009",
        "answered": true
       }
      },
@@ -15277,7 +15277,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X012-011]",
+       "line": "X012-011",
        "answered": true
       }
      },
@@ -15288,7 +15288,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X012-031]",
+       "line": "X012-031",
        "answered": true
       }
      },
@@ -15299,7 +15299,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "[X012-014]",
+       "line": "X012-014",
        "answered": true
       }
      },
@@ -15310,7 +15310,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X012-007]",
+       "line": "X012-007",
        "answered": true
       }
      }
@@ -15422,8 +15422,8 @@
        "line": "X015-011"
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X015-011",
        "answered": true
       }
      },
@@ -15433,8 +15433,8 @@
        "line": "X015-017"
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "suspect",
+       "line": "X015-016",
        "answered": true
       }
      },
@@ -15477,8 +15477,8 @@
        "line": "X015-035"
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X015-035",
        "answered": true
       }
      }
@@ -15675,7 +15675,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "[X019-004]",
+       "line": "X019-004",
        "answered": true
       }
      },
@@ -15686,7 +15686,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "[X019-010]",
+       "line": "X019-010",
        "answered": true
       }
      },
@@ -15697,7 +15697,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X019-019]",
+       "line": "X019-019",
        "answered": true
       }
      },
@@ -15708,7 +15708,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "[X019-022]",
+       "line": "X019-022",
        "answered": true
       }
      },
@@ -15719,7 +15719,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X019-035]",
+       "line": "X019-035",
        "answered": true
       }
      },
@@ -15730,7 +15730,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X019-015]",
+       "line": "X019-015",
        "answered": true
       }
      },
@@ -15741,7 +15741,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "[X019-031]",
+       "line": "X019-031",
        "answered": true
       }
      },
@@ -15752,7 +15752,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "[X019-040]",
+       "line": "X019-040",
        "answered": true
       }
      }
@@ -15791,8 +15791,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X020-013",
        "answered": true
       }
      },
@@ -15948,8 +15948,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X022-011",
        "answered": true
       }
      },
@@ -15981,8 +15981,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X022-027",
        "answered": true
       }
      },
@@ -16223,7 +16223,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "X028-007",
+       "line": "[X028-007]",
        "answered": true
       }
      },
@@ -16234,7 +16234,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X028-010",
+       "line": "[X028-010]",
        "answered": true
       }
      },
@@ -16245,7 +16245,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "X028-013",
+       "line": "[X028-013]",
        "answered": true
       }
      },
@@ -16267,7 +16267,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "X028-027",
+       "line": "[X028-027]",
        "answered": true
       }
      },
@@ -16591,8 +16591,8 @@
        "line": "X037-014"
       },
       "pred": {
-       "first": "never",
-       "line": null,
+       "first": "interrogator",
+       "line": "X037-013",
        "answered": true
       }
      },
@@ -16811,7 +16811,7 @@
       "kind": "asserts",
       "quote": "I saw the window was busted",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X007-002",
@@ -16819,7 +16819,7 @@
       "kind": "asks",
       "quote": "You saw the broken window? When exactly did you see it?",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X007-003",
@@ -16827,20 +16827,20 @@
       "kind": "asserts",
       "quote": "I saw the glass on the floor inside, like it had been smashed recently",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X007-004",
       "fact": "F1",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "You're saying you saw the glass on the floor? That's consistent with a forced entry.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X007-005",
       "fact": "F2",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a red hoodie near the back gate. You know anything about that?",
       "by": "model",
       "verified": true
@@ -16856,7 +16856,7 @@
      {
       "utterance": "X007-007",
       "fact": "F3",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "The digital watch on the nightstand\u2014silver, round face\u2014was gone. You ever see something like that?",
       "by": "model",
       "verified": true
@@ -16864,7 +16864,7 @@
      {
       "utterance": "X007-008",
       "fact": "F3",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "Yeah, I saw a watch like that. On the guy I passed earlier, but I didn't think much of it.",
       "by": "model",
       "verified": true
@@ -16888,7 +16888,7 @@
      {
       "utterance": "X007-011",
       "fact": "F4",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a boot print near the garden shed. Size 11, with a zigzag pattern. You wear anything like that?",
       "by": "model",
       "verified": true
@@ -16896,7 +16896,7 @@
      {
       "utterance": "X007-012",
       "fact": "F4",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "I wear size 11 boots, but not with a zigzag tread. I've got a pair with a flat sole, like work boots.",
       "by": "model",
       "verified": true
@@ -16920,7 +16920,7 @@
      {
       "utterance": "X007-015",
       "fact": "F5",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "The security system caught motion at 1:17 AM. A figure in dark clothes came toward the back door. You saw that?",
       "by": "model",
       "verified": true
@@ -16952,15 +16952,15 @@
      {
       "utterance": "X007-019",
       "fact": "F6",
-      "kind": "asks",
-      "quote": "A silver necklace with a blue stone was taken. You know anything about that?",
+      "kind": "asserts",
+      "quote": "A silver necklace with a blue stone was taken.",
       "by": "model",
       "verified": true
      },
      {
       "utterance": "X007-020",
       "fact": "F6",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "Yeah, I saw that necklace. On the woman who lives there. She wore it yesterday.",
       "by": "model",
       "verified": true
@@ -16984,7 +16984,7 @@
      {
       "utterance": "X007-023",
       "fact": "F7",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "The back door lock had a scratch\u2014fine, diagonal. Like something sharp was used on it. You ever use a tool on a lock?",
       "by": "model",
       "verified": true
@@ -16995,7 +16995,7 @@
       "kind": "denies",
       "quote": "I used a screwdriver on a jammed lock once, but not on that door. I don\u2019t even know how that scratch got there.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X007-025",
@@ -17011,7 +17011,7 @@
       "kind": "asserts",
       "quote": "A flathead, metal one. I keep it in my toolbox.",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X007-027",
@@ -17049,7 +17049,7 @@
       "utterance": "X007-031",
       "fact": "F1",
       "kind": "asks",
-      "quote": "You\u2019re aware that the broken window, the boot print, and the security footage all point to someone entering around 1:17. You were nearby at that time.",
+      "quote": "You\u2019re aware that the broken window, the boot print, and the security footage all point to someone entering around 1:17.",
       "by": "model",
       "verified": null
      },
@@ -17057,7 +17057,7 @@
       "utterance": "X007-031",
       "fact": "F4",
       "kind": "asks",
-      "quote": "You\u2019re aware that the broken window, the boot print, and the security footage all point to someone entering around 1:17. You were nearby at that time.",
+      "quote": "You\u2019re aware that the broken window, the boot print, and the security footage all point to someone entering around 1:17.",
       "by": "model",
       "verified": null
      },
@@ -17065,7 +17065,7 @@
       "utterance": "X007-031",
       "fact": "F5",
       "kind": "asks",
-      "quote": "You\u2019re aware that the broken window, the boot print, and the security footage all point to someone entering around 1:17. You were nearby at that time.",
+      "quote": "You\u2019re aware that the broken window, the boot print, and the security footage all point to someone entering around 1:17.",
       "by": "model",
       "verified": null
      },
@@ -17111,7 +17111,7 @@
      },
      {
       "utterance": "X007-034",
-      "fact": "F6",
+      "fact": "F4",
       "kind": "denies",
       "quote": "Fine. But I didn\u2019t take anything. I just saw the window.",
       "by": "model",
@@ -17142,18 +17142,42 @@
       "verified": false
      },
      {
+      "utterance": "X007-009",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "You saw a watch on someone? You\u2019re saying you saw the burglar?",
+      "by": "search",
+      "verified": false
+     },
+     {
       "utterance": "X007-011",
       "fact": "F5",
       "kind": "asks",
       "quote": "We found a boot print near the garden shed. Size 11, with a zigzag pattern. You wear anything like that?",
       "by": "search",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X007-017",
       "fact": "F6",
       "kind": "asks",
       "quote": "You saw a shadowy figure at 1:15? What did they look like?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-005",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "We found a red hoodie near the back gate. You know anything about that?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-015",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "The security system caught motion at 1:17 AM. A figure in dark clothes came toward the back door. You saw that?",
       "by": "search",
       "verified": false
      },
@@ -17198,7 +17222,7 @@
       },
       "pred": {
        "first": "suspect",
-       "line": "X007-001"
+       "line": "X007-003"
       }
      },
      "F2": {
@@ -17238,7 +17262,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X007-011"
+       "line": "X007-015"
       }
      },
      "F6": {
@@ -17257,8 +17281,8 @@
        "line": "X007-023"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X007-023"
       }
      },
      "F8": {
@@ -17280,7 +17304,7 @@
      {
       "utterance": "X008-001",
       "fact": "F1",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a red work glove at the scene\u2014burned, but identifiable. It was near the back wall, just inside where the ceiling collapsed.",
       "by": "model",
       "verified": true
@@ -17289,15 +17313,15 @@
       "utterance": "X008-002",
       "fact": "F1",
       "kind": "assents",
-      "quote": "That one was mine.",
+      "quote": "Yeah, I wear those. I\u2019ve got a whole box of them. That one was mine.",
       "by": "model",
       "verified": true
      },
      {
       "utterance": "X008-003",
       "fact": "F2",
-      "kind": "asks",
-      "quote": "we also found the garage door remote\u2014black, slim, with the battery cover popped open",
+      "kind": "asserts",
+      "quote": "we also found the garage door remote\u2014black, slim, with the battery cover popped open.",
       "by": "model",
       "verified": true
      },
@@ -17312,7 +17336,7 @@
      {
       "utterance": "X008-005",
       "fact": "F3",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a steel pipe near your workbench. It\u2019s coated in grease.",
       "by": "model",
       "verified": true
@@ -17515,7 +17539,7 @@
       "kind": "asks",
       "quote": "Good. Now, we also found the garage door remote\u2014black, slim, with the battery cover popped open. You keep that in your pocket, don\u2019t you?",
       "by": "search",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X008-005",
@@ -17571,8 +17595,8 @@
        "line": "X008-007"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X008-003"
+       "first": "suspect",
+       "line": "X008-007"
       }
      },
      "F5": {
@@ -17634,6 +17658,14 @@
       "verified": null
      },
      {
+      "utterance": "X016-004",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I was in a hurry. I didn\u2019t want to get caught in the mess.",
+      "by": "model",
+      "verified": null
+     },
+     {
       "utterance": "X016-005",
       "fact": "F2",
       "kind": "asserts",
@@ -17645,7 +17677,7 @@
       "utterance": "X016-006",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "We found a red plastic cup with the Brew & Bites logo near the alley entrance.",
+      "quote": "We found a red plastic cup with the Brew & Bites logo near the alley entrance. You were seen tossing it into the gutter.",
       "by": "model",
       "verified": true
      },
@@ -17668,7 +17700,7 @@
      {
       "utterance": "X016-009",
       "fact": "F3",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "You saw him in a white button-down shirt? It was stained when we found him.",
       "by": "model",
       "verified": true
@@ -17676,10 +17708,10 @@
      {
       "utterance": "X016-010",
       "fact": "F3",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "Yeah, I saw it. He looked like he\u2019d been hit or something. I didn\u2019t know he was hurt.",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X016-011",
@@ -17818,6 +17850,30 @@
       "verified": null
      },
      {
+      "utterance": "X016-001",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "We found a black leather jacket with a red zipper near the alley behind Brew & Bites. You were seen leaving the bar around 10:30, right?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X016-003",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "You were seen walking toward the alley after the fight. Can you explain why you\u2019d leave your jacket behind?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X016-006",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "That\u2019s right. We found a red plastic cup with the Brew & Bites logo near the alley entrance. You were seen tossing it into the gutter.",
+      "by": "search",
+      "verified": false
+     },
+     {
       "utterance": "X016-009",
       "fact": "F4",
       "kind": "asks",
@@ -17861,8 +17917,8 @@
        "line": "X016-008"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X016-009"
       }
      },
      "F4": {
@@ -17904,10 +17960,10 @@
      {
       "utterance": "X018-001",
       "fact": "F1",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a pair of black leather gloves near the display case.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X018-002",
@@ -17921,9 +17977,17 @@
       "utterance": "X018-003",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "the camera system had a blind spot\u201417 seconds\u2014between 8:14 and 8:15",
+      "quote": "And the camera system had a blind spot\u201417 seconds\u2014between 8:14 and 8:15.",
       "by": "model",
-      "verified": null
+      "verified": true
+     },
+     {
+      "utterance": "X018-003",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "That's when the alarm tripped.",
+      "by": "model",
+      "verified": true
      },
      {
       "utterance": "X018-004",
@@ -17931,7 +17995,15 @@
       "kind": "assents",
       "quote": "Yeah.",
       "by": "model",
-      "verified": null
+      "verified": true
+     },
+     {
+      "utterance": "X018-004",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": true
      },
      {
       "utterance": "X018-005",
@@ -17939,7 +18011,7 @@
       "kind": "asserts",
       "quote": "I saw a silver bracelet near the alley. Dented one.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X018-006",
@@ -17961,33 +18033,33 @@
       "utterance": "X018-008",
       "fact": "F4",
       "kind": "asserts",
-      "quote": "we found a green backpack near the same exit\u2014abandoned, no name, no tags",
+      "quote": "And we found a green backpack near the same exit\u2014abandoned, no name, no tags. You seen anything like that?",
       "by": "model",
       "verified": true
      },
      {
       "utterance": "X018-009",
       "fact": "F4",
-      "kind": "asserts",
-      "quote": "I remember seeing a green bag near the back door. Kinda looked like it had been dropped in a hurry.",
+      "kind": "assents",
+      "quote": "Yeah, I remember seeing a green bag near the back door. Kinda looked like it had been dropped in a hurry.",
       "by": "model",
       "verified": true
      },
      {
       "utterance": "X018-010",
       "fact": "F5",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "The register logs show the alarm triggered at 8:15 PM. That's when the theft happened.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X018-011",
       "fact": "F5",
-      "kind": "assents",
+      "kind": "asserts",
       "quote": "Yeah, that's right.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X018-012",
@@ -17995,13 +18067,13 @@
       "kind": "asserts",
       "quote": "We also found a rusted screwdriver under the display case. It was used to break the seal.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X018-013",
       "fact": "F6",
       "kind": "asserts",
-      "quote": "I saw a tool like that near the back\u2014something small, metal, old-looking.",
+      "quote": "I saw a tool like that near the back\u2014something small, metal, old-looking. I didn't touch it.",
       "by": "model",
       "verified": true
      },
@@ -18009,7 +18081,7 @@
       "utterance": "X018-014",
       "fact": "F7",
       "kind": "asserts",
-      "quote": "The manager's keycard was used at 8:13 PM to unlock the back door. But it wasn't in the system log.",
+      "quote": "The manager's keycard was used at 8:13 PM to unlock the back door. But it wasn't in the system log. That's not normal.",
       "by": "model",
       "verified": true
      },
@@ -18017,7 +18089,7 @@
       "utterance": "X018-016",
       "fact": "F3",
       "kind": "asks",
-      "quote": "saw a green bag, a dented bracelet",
+      "quote": "So you were near the back door at 8:15, saw a green bag, a dented bracelet, and a tool?",
       "by": "model",
       "verified": true
      },
@@ -18025,7 +18097,7 @@
       "utterance": "X018-016",
       "fact": "F4",
       "kind": "asks",
-      "quote": "saw a green bag, a dented bracelet",
+      "quote": "So you were near the back door at 8:15, saw a green bag, a dented bracelet, and a tool?",
       "by": "model",
       "verified": null
      },
@@ -18033,7 +18105,7 @@
       "utterance": "X018-016",
       "fact": "F5",
       "kind": "asks",
-      "quote": "at 8:15",
+      "quote": "So you were near the back door at 8:15, saw a green bag, a dented bracelet, and a tool?",
       "by": "model",
       "verified": null
      },
@@ -18041,7 +18113,39 @@
       "utterance": "X018-016",
       "fact": "F6",
       "kind": "asks",
-      "quote": "and a tool",
+      "quote": "So you were near the back door at 8:15, saw a green bag, a dented bracelet, and a tool?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-017",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "Yeah, I was just passing through. I didn't know it was stolen.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-017",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Yeah, I was just passing through. I didn't know it was stolen.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-017",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Yeah, I was just passing through. I didn't know it was stolen.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-017",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Yeah, I was just passing through. I didn't know it was stolen.",
       "by": "model",
       "verified": null
      },
@@ -18081,7 +18185,7 @@
       "utterance": "X018-022",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "The blind spot\u201417 seconds\u2014coincides with the alarm",
+      "quote": "The blind spot\u201417 seconds\u2014coincides with the alarm.",
       "by": "model",
       "verified": null
      },
@@ -18089,23 +18193,7 @@
       "utterance": "X018-023",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "Yeah, that\u2019s why I didn\u2019t see much",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X018-023",
-      "fact": "F4",
-      "kind": "asserts",
-      "quote": "Just the bag",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X018-023",
-      "fact": "F3",
-      "kind": "asserts",
-      "quote": "the bracelet after",
+      "quote": "Yeah, that\u2019s why I didn\u2019t see much.",
       "by": "model",
       "verified": null
      },
@@ -18144,10 +18232,10 @@
      {
       "utterance": "X018-003",
       "fact": "F3",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "Right. And the camera system had a blind spot\u201417 seconds\u2014between 8:14 and 8:15. That\u2019s when the alarm tripped.",
       "by": "search",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X018-006",
@@ -18158,28 +18246,12 @@
       "verified": false
      },
      {
-      "utterance": "X018-003",
-      "fact": "F5",
-      "kind": "asserts",
-      "quote": "Right. And the camera system had a blind spot\u201417 seconds\u2014between 8:14 and 8:15. That\u2019s when the alarm tripped.",
-      "by": "search",
-      "verified": true
-     },
-     {
-      "utterance": "X018-008",
+      "utterance": "X018-001",
       "fact": "F5",
       "kind": "asks",
-      "quote": "And we found a green backpack near the same exit\u2014abandoned, no name, no tags. You seen anything like that?",
+      "quote": "We found a pair of black leather gloves near the display case. You\u2019re aware of that, right?",
       "by": "search",
       "verified": false
-     },
-     {
-      "utterance": "X018-010",
-      "fact": "F6",
-      "kind": "asserts",
-      "quote": "The register logs show the alarm triggered at 8:15 PM. That\u2019s when the theft happened.",
-      "by": "search",
-      "verified": true
      }
     ],
     "facts": {
@@ -18209,8 +18281,8 @@
        "line": "X018-005"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X018-003"
+       "first": "suspect",
+       "line": "X018-005"
       }
      },
      "F4": {
@@ -18240,7 +18312,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X018-010"
+       "line": "X018-012"
       }
      },
      "F7": {
@@ -18273,7 +18345,7 @@
       "kind": "asserts",
       "quote": "Riverside Theatre parking lot",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X019-002",
@@ -18289,7 +18361,7 @@
       "kind": "assents",
       "quote": "Yeah.",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X019-003",
@@ -18297,7 +18369,7 @@
       "kind": "asserts",
       "quote": "alley off 5th Street",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X019-004",
@@ -18305,7 +18377,7 @@
       "kind": "asserts",
       "quote": "alley behind the theatre",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X019-005",
@@ -18314,6 +18386,22 @@
       "quote": "red leather jacket with a silver zipper",
       "by": "model",
       "verified": true
+     },
+     {
+      "utterance": "X019-005",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "where the bike was left",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X019-005",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "where the bike was left",
+      "by": "model",
+      "verified": null
      },
      {
       "utterance": "X019-006",
@@ -18375,9 +18463,17 @@
       "utterance": "X019-013",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "near the alley around that time",
+      "quote": "near the alley",
       "by": "model",
       "verified": null
+     },
+     {
+      "utterance": "X019-013",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "around that time",
+      "by": "model",
+      "verified": true
      },
      {
       "utterance": "X019-014",
@@ -18388,10 +18484,34 @@
       "verified": null
      },
      {
+      "utterance": "X019-015",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "The bike was stolen",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X019-015",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "spot where the chain was cut",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X019-016",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "unhooked it",
+      "by": "model",
+      "verified": null
+     },
+     {
       "utterance": "X019-017",
       "fact": "F3",
       "kind": "asks",
-      "quote": "And the jacket\u2014was it yours?",
+      "quote": "was it yours",
       "by": "model",
       "verified": null
      },
@@ -18414,10 +18534,18 @@
      {
       "utterance": "X019-020",
       "fact": "F5",
-      "kind": "assents",
+      "kind": "asserts",
       "quote": "So it was taken away from the lot after one-thirty? That's when the signal stopped.",
       "by": "model",
       "verified": true
+     },
+     {
+      "utterance": "X019-021",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "We're checking all traffic cams on 5th Street.",
+      "by": "model",
+      "verified": null
      },
      {
       "utterance": "X019-021",
@@ -18425,13 +18553,13 @@
       "kind": "asserts",
       "quote": "Someone matching your description was near the alley at 1:12.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X019-022",
-      "fact": "F4",
+      "fact": "F2",
       "kind": "denies",
-      "quote": "I wasn't even near there that night. I was at home.",
+      "quote": "I wasn't even near there that night.",
       "by": "model",
       "verified": null
      },
@@ -18500,16 +18628,24 @@
       "verified": null
      },
      {
-      "utterance": "X019-003",
-      "fact": "F3",
-      "kind": "asks",
-      "quote": "That lot\u2019s not monitored after midnight. You\u2019d have to go through the alley off 5th Street to get in.",
-      "by": "search",
-      "verified": false
+      "utterance": "X019-006",
+      "fact": "F1",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "code",
+      "verified": null
+     },
+     {
+      "utterance": "X019-006",
+      "fact": "F2",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "code",
+      "verified": null
      },
      {
       "utterance": "X019-003",
-      "fact": "F4",
+      "fact": "F3",
       "kind": "asks",
       "quote": "That lot\u2019s not monitored after midnight. You\u2019d have to go through the alley off 5th Street to get in.",
       "by": "search",
@@ -18520,6 +18656,14 @@
       "fact": "F4",
       "kind": "asks",
       "quote": "We found a blue 2018 Honda CBR600RR with a scratched left rear fender and a black rear fairing near the Riverside Theatre parking lot.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X019-003",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "That lot\u2019s not monitored after midnight. You\u2019d have to go through the alley off 5th Street to get in.",
       "by": "search",
       "verified": false
      },
@@ -18558,7 +18702,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X019-001"
+       "line": "X019-003"
       }
      },
      "F3": {
@@ -18621,12 +18765,12 @@
       "kind": "asserts",
       "quote": "I left my jacket behind\u2014my blue denim one\u2014near the food court.",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X020-004",
       "fact": "F1",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "Your jacket? The one with the ripped sleeve? We found it behind a potted plant near the electronics store.",
       "by": "model",
       "verified": true
@@ -18634,10 +18778,10 @@
      {
       "utterance": "X020-005",
       "fact": "F1",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "Oh, yeah. That\u2019s mine. I must\u2019ve dropped it when I was running to the bathroom. I didn\u2019t even know it was missing.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X020-006",
@@ -18650,10 +18794,10 @@
      {
       "utterance": "X020-007",
       "fact": "F2",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "Yeah, I remember that.",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X020-009",
@@ -18661,7 +18805,7 @@
       "kind": "asserts",
       "quote": "I remember the guy at the counter had a dog-shaped keychain on his keys.",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X020-010",
@@ -18677,7 +18821,7 @@
       "kind": "asserts",
       "quote": "Yeah, silver. Small dog. Kind of shiny. I remember because it looked like a toy.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X020-012",
@@ -18704,6 +18848,14 @@
       "verified": null
      },
      {
+      "utterance": "X020-015",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "We found a small bloodstain on the steering wheel of that car. It\u2019s not yours, is it?",
+      "by": "model",
+      "verified": true
+     },
+     {
       "utterance": "X020-016",
       "fact": "F5",
       "kind": "denies",
@@ -18714,8 +18866,8 @@
      {
       "utterance": "X020-017",
       "fact": "F6",
-      "kind": "asks",
-      "quote": "We\u2019ve got a black Honda Civic\u20142018 model\u2014stolen from the east parking section. Cracked windshield.",
+      "kind": "asserts",
+      "quote": "We\u2019ve got a black Honda Civic\u20142018 model\u2014stolen from the east parking section. Cracked windshield. You wouldn\u2019t happen to know anything about that, would you?",
       "by": "model",
       "verified": true
      },
@@ -18725,21 +18877,21 @@
       "kind": "assents",
       "quote": "Yeah.",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X020-023",
       "fact": "F3",
       "kind": "asks",
-      "quote": "We'll need to run your fingerprints against the glove compartment.",
+      "quote": "We\u2019ll need to run your fingerprints against the glove compartment.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X020-024",
-      "fact": "F6",
+      "fact": "F3",
       "kind": "denies",
-      "quote": "I didn't touch the car. I didn't even know it was stolen.",
+      "quote": "I didn\u2019t touch the car.",
       "by": "model",
       "verified": null
      },
@@ -18753,17 +18905,17 @@
      },
      {
       "utterance": "X020-025",
-      "fact": "F3",
+      "fact": "F4",
       "kind": "asserts",
-      "quote": "the keychain",
+      "quote": "the scent",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X020-025",
-      "fact": "F4",
+      "fact": "F3",
       "kind": "asserts",
-      "quote": "the scent",
+      "quote": "the keychain",
       "by": "model",
       "verified": null
      },
@@ -18778,24 +18930,24 @@
      {
       "utterance": "X020-027",
       "fact": "F3",
-      "kind": "asserts",
-      "quote": "the keychain",
+      "kind": "asks",
+      "quote": "We\u2019ll see what the lab says about the keychain.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X020-027",
       "fact": "F5",
-      "kind": "asserts",
-      "quote": "the blood",
+      "kind": "asks",
+      "quote": "And the blood.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X020-027",
       "fact": "F2",
-      "kind": "asserts",
-      "quote": "the timestamp",
+      "kind": "asks",
+      "quote": "And the timestamp.",
       "by": "model",
       "verified": null
      },
@@ -18816,10 +18968,10 @@
       "verified": false
      },
      {
-      "utterance": "X020-006",
-      "fact": "F3",
+      "utterance": "X020-004",
+      "fact": "F2",
       "kind": "asks",
-      "quote": "You were seen entering the electronics store at 7:43 p.m., according to the security footage. That\u2019s just two minutes before the break-in was reported.",
+      "quote": "Your jacket? The one with the ripped sleeve? We found it behind a potted plant near the electronics store.",
       "by": "search",
       "verified": false
      },
@@ -18828,6 +18980,14 @@
       "fact": "F4",
       "kind": "asks",
       "quote": "Interesting. The keychain you saw\u2014was it silver?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X020-015",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "You know, we found a small bloodstain on the steering wheel of that car. It\u2019s not yours, is it?",
       "by": "search",
       "verified": false
      }
@@ -18839,8 +18999,8 @@
        "line": "X020-003"
       },
       "pred": {
-       "first": "suspect",
-       "line": "X020-003"
+       "first": "interrogator",
+       "line": "X020-004"
       }
      },
      "F2": {
@@ -18849,8 +19009,8 @@
        "line": "X020-006"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X020-006"
       }
      },
      "F3": {
@@ -18859,8 +19019,8 @@
        "line": "X020-009"
       },
       "pred": {
-       "first": "suspect",
-       "line": "X020-009"
+       "first": "interrogator",
+       "line": "X020-010"
       }
      },
      "F4": {
@@ -18889,8 +19049,8 @@
        "line": "X020-017"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X020-017"
       }
      }
     }
@@ -18899,126 +19059,6 @@
     "id": "TGLMX001",
     "failed": false,
     "labels": [
-     {
-      "utterance": "X001-002",
-      "fact": "F1",
-      "kind": "asks",
-      "quote": "Were you carrying a crowbar when you went inside?",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X001-004",
-      "fact": "F1",
-      "kind": "asks",
-      "quote": "But you had the pry bar, didn't you?",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X001-005",
-      "fact": "F1",
-      "kind": "assents",
-      "quote": "Yeah.",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X001-006",
-      "fact": "F2",
-      "kind": "asks",
-      "quote": "How did you get in? Was it through the garage side door?",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X001-008",
-      "fact": "F2",
-      "kind": "asks",
-      "quote": "The side entry to the garage. That's how you got in, right?",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X001-009",
-      "fact": "F2",
-      "kind": "assents",
-      "quote": "Yeah.",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X001-010",
-      "fact": "F3",
-      "kind": "asks",
-      "quote": "A witness saw someone in a blue sweatshirt. Was that you?",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X001-011",
-      "fact": "F3",
-      "kind": "denies",
-      "quote": "I don't want to talk about what I was wearing.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X001-012",
-      "fact": "F3",
-      "kind": "asks",
-      "quote": "Come on. The blue top. Was it yours?",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X001-013",
-      "fact": "F3",
-      "kind": "asserts",
-      "quote": "It was my navy pullover.",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X001-014",
-      "fact": "F4",
-      "kind": "asks",
-      "quote": "Neighbors saw a white van parked out front. Was that your ride?",
-      "by": "model",
-      "verified": false
-     },
-     {
-      "utterance": "X001-015",
-      "fact": "F4",
-      "kind": "denies",
-      "quote": "No, I don't know anything about a vehicle like that.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X001-016",
-      "fact": "F4",
-      "kind": "asserts",
-      "quote": "You're sure? A pale colored commercial van.",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X001-017",
-      "fact": "F4",
-      "kind": "denies",
-      "quote": "I already told you I don't know.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X001-018",
-      "fact": "F5",
-      "kind": "asks",
-      "quote": "The homeowner says a kitchen knife was missing.",
-      "by": "model",
-      "verified": false
-     },
      {
       "utterance": "X001-019",
       "fact": "F5",
@@ -19049,7 +19089,7 @@
       "kind": "asks",
       "quote": "Were you there at 2:00 AM?",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X001-023",
@@ -19065,7 +19105,7 @@
       "kind": "asserts",
       "quote": "Two in the morning. That's when the alarm went off.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X001-025",
@@ -19097,15 +19137,15 @@
       "kind": "asserts",
       "quote": "And you had the crowbar with you.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X001-029",
       "fact": "F1",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "I already said yeah.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X001-030",
@@ -19113,7 +19153,7 @@
       "kind": "asserts",
       "quote": "You entered through the garage side door.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X001-031",
@@ -19129,7 +19169,7 @@
       "kind": "asserts",
       "quote": "And you were wearing the blue sweatshirt.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X001-033",
@@ -19137,7 +19177,7 @@
       "kind": "asserts",
       "quote": "I told you it was my pullover.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X001-034",
@@ -19145,7 +19185,7 @@
       "kind": "asserts",
       "quote": "But you deny the van.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X001-035",
@@ -19174,7 +19214,7 @@
      {
       "utterance": "X001-038",
       "fact": "F1",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "You had the pry bar.",
       "by": "model",
       "verified": null
@@ -19190,7 +19230,7 @@
      {
       "utterance": "X001-040",
       "fact": "F2",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "And you went in the side entry to the garage.",
       "by": "model",
       "verified": null
@@ -19201,12 +19241,12 @@
       "kind": "assents",
       "quote": "Yeah.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X001-042",
       "fact": "F6",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "At two in the morning.",
       "by": "model",
       "verified": null
@@ -19218,6 +19258,62 @@
       "quote": "Yeah.",
       "by": "model",
       "verified": null
+     },
+     {
+      "utterance": "X001-002",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Were you carrying a crowbar when you went inside?",
+      "by": "search",
+      "verified": true
+     },
+     {
+      "utterance": "X001-026",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "So you were there at two.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X001-006",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "How did you get in? Was it through the garage side door?",
+      "by": "search",
+      "verified": true
+     },
+     {
+      "utterance": "X001-008",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "The side entry to the garage. That's how you got in, right?",
+      "by": "search",
+      "verified": true
+     },
+     {
+      "utterance": "X001-010",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "A witness saw someone in a blue sweatshirt. Was that you?",
+      "by": "search",
+      "verified": true
+     },
+     {
+      "utterance": "X001-012",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Come on. The blue top. Was it yours?",
+      "by": "search",
+      "verified": true
+     },
+     {
+      "utterance": "X001-030",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "You entered through the garage side door.",
+      "by": "search",
+      "verified": false
      }
     ],
     "facts": {
@@ -19278,7 +19374,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X001-024"
+       "line": "X001-022"
       }
      }
     }
@@ -19337,9 +19433,17 @@
      },
      {
       "utterance": "X004-008",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I found it",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X004-008",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "I found it by a white van.",
+      "quote": "by a white van",
       "by": "model",
       "verified": true
      },
@@ -19411,7 +19515,7 @@
       "utterance": "X004-019",
       "fact": "F6",
       "kind": "asserts",
-      "quote": "We found empty bottles of oxycodone on the floor.",
+      "quote": "empty bottles of oxycodone on the floor",
       "by": "model",
       "verified": true
      },
@@ -19426,10 +19530,10 @@
      {
       "utterance": "X004-022",
       "fact": "F7",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "I cut my forearm on a fence earlier, not breaking in anywhere.",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X004-023",
@@ -19442,10 +19546,10 @@
      {
       "utterance": "X004-024",
       "fact": "F7",
-      "kind": "asserts",
+      "kind": "denies",
       "quote": "Just a scrape. It's not a big deal.",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X004-025",
@@ -19461,7 +19565,15 @@
       "kind": "assents",
       "quote": "Yeah.",
       "by": "model",
-      "verified": false
+      "verified": true
+     },
+     {
+      "utterance": "X004-027",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "Yeah what? You were there?",
+      "by": "model",
+      "verified": null
      },
      {
       "utterance": "X004-028",
@@ -19469,7 +19581,7 @@
       "kind": "asserts",
       "quote": "that's about the time I was walking home",
       "by": "model",
-      "verified": false
+      "verified": null
      },
      {
       "utterance": "X004-029",
@@ -19515,7 +19627,7 @@
       "utterance": "X004-034",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "Right. That's where I picked it up.",
+      "quote": "That's where I picked it up.",
       "by": "model",
       "verified": null
      },
@@ -19523,7 +19635,7 @@
       "utterance": "X004-035",
       "fact": "F4",
       "kind": "asserts",
-      "quote": "And you were wearing the grey hoodie the whole time.",
+      "quote": "you were wearing the grey hoodie the whole time",
       "by": "model",
       "verified": null
      },
@@ -19553,6 +19665,14 @@
      },
      {
       "utterance": "X004-037",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "near the building",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X004-037",
       "fact": "F8",
       "kind": "asserts",
       "quote": "at 2:00 AM",
@@ -19560,34 +19680,10 @@
       "verified": null
      },
      {
-      "utterance": "X004-038",
-      "fact": "F1",
-      "kind": "denies",
-      "quote": "I didn't do what you're saying",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X004-038",
-      "fact": "F4",
-      "kind": "denies",
-      "quote": "I didn't do what you're saying",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X004-038",
-      "fact": "F8",
-      "kind": "denies",
-      "quote": "I didn't do what you're saying",
-      "by": "model",
-      "verified": null
-     },
-     {
       "utterance": "X004-039",
       "fact": "F1",
       "kind": "asserts",
-      "quote": "fingerprints on the crowbar",
+      "quote": "the crowbar",
       "by": "model",
       "verified": null
      },
@@ -19595,7 +19691,7 @@
       "utterance": "X004-040",
       "fact": "F1",
       "kind": "asserts",
-      "quote": "I touched it when I found it",
+      "quote": "it",
       "by": "model",
       "verified": null
      },
@@ -19620,14 +19716,6 @@
       "fact": "F7",
       "kind": "denies",
       "quote": "I cut my arm on a fence",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X004-043",
-      "fact": "F7",
-      "kind": "asks",
-      "quote": "We'll test the DNA. If it matches, you're looking at felony charges.",
       "by": "model",
       "verified": null
      },
@@ -19749,8 +19837,8 @@
        "line": "X004-003"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X004-003"
       }
      }
     }
@@ -19843,7 +19931,7 @@
       "utterance": "X005-019",
       "fact": "F2",
       "kind": "asks",
-      "quote": "how the intruder got in through the rear sliding glass",
+      "quote": "So you don't know how the intruder got in through the rear sliding glass?",
       "by": "model",
       "verified": null
      },
@@ -19859,15 +19947,15 @@
       "utterance": "X005-021",
       "fact": "F2",
       "kind": "asks",
-      "quote": "You agree you don't know about that entry point",
+      "quote": "You agree you don't know about that entry point?",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X005-022",
       "fact": "F2",
-      "kind": "asserts",
-      "quote": "I don't know anything about it",
+      "kind": "denies",
+      "quote": "Yeah, I don't know anything about it.",
       "by": "model",
       "verified": null
      },
@@ -19875,7 +19963,7 @@
       "utterance": "X005-023",
       "fact": "F3",
       "kind": "asks",
-      "quote": "Did you take it",
+      "quote": "The homeowner reported a silver necklace missing. Did you take it?",
       "by": "model",
       "verified": true
      },
@@ -19883,7 +19971,7 @@
       "utterance": "X005-024",
       "fact": "F3",
       "kind": "denies",
-      "quote": "I didn't take any jewelry",
+      "quote": "No, I didn't take any jewelry.",
       "by": "model",
       "verified": null
      },
@@ -19891,7 +19979,7 @@
       "utterance": "X005-025",
       "fact": "F3",
       "kind": "asks",
-      "quote": "You're saying you didn't steal that silver chain",
+      "quote": "You're saying you didn't steal that silver chain?",
       "by": "model",
       "verified": null
      },
@@ -19907,7 +19995,7 @@
       "utterance": "X005-027",
       "fact": "F4",
       "kind": "asks",
-      "quote": "Was that you",
+      "quote": "A witness saw someone wearing a blue hoodie near the scene. Was that you?",
       "by": "model",
       "verified": true
      },
@@ -19915,7 +20003,7 @@
       "utterance": "X005-028",
       "fact": "F4",
       "kind": "denies",
-      "quote": "I don't own a blue hooded sweatshirt",
+      "quote": "No, I don't own a blue hooded sweatshirt.",
       "by": "model",
       "verified": null
      },
@@ -19923,7 +20011,7 @@
       "utterance": "X005-029",
       "fact": "F4",
       "kind": "asks",
-      "quote": "You never wear that kind of jacket",
+      "quote": "You never wear that kind of jacket?",
       "by": "model",
       "verified": null
      },
@@ -19939,7 +20027,7 @@
       "utterance": "X005-031",
       "fact": "F1",
       "kind": "asks",
-      "quote": "Is that yours",
+      "quote": "We found a crowbar at the scene. Is that yours?",
       "by": "model",
       "verified": true
      },
@@ -19947,7 +20035,7 @@
       "utterance": "X005-032",
       "fact": "F1",
       "kind": "denies",
-      "quote": "I don't know anything about a pry bar",
+      "quote": "No, I don't know anything about a pry bar.",
       "by": "model",
       "verified": null
      },
@@ -19955,7 +20043,7 @@
       "utterance": "X005-033",
       "fact": "F1",
       "kind": "asks",
-      "quote": "You've never seen that tool before",
+      "quote": "You've never seen that tool before?",
       "by": "model",
       "verified": null
      },
@@ -19964,6 +20052,30 @@
       "fact": "F1",
       "kind": "denies",
       "quote": "No, never.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X005-035",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "you weren't there at half past ten",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X005-035",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "you didn't drive the green pickup",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X005-035",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "you didn't wear the blue hoodie",
       "by": "model",
       "verified": null
      },
@@ -19992,26 +20104,26 @@
       "verified": null
      },
      {
-      "utterance": "X005-035",
-      "fact": "F4",
-      "kind": "asks",
-      "quote": "you didn't wear the blue hoodie",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X005-035",
-      "fact": "F5",
-      "kind": "asks",
-      "quote": "you didn't drive the green pickup",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X005-035",
+      "utterance": "X005-036",
       "fact": "F6",
-      "kind": "asks",
-      "quote": "you weren't there at half past ten",
+      "kind": "denies",
+      "quote": "I wasn't there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X005-036",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "That's right.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X005-036",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "That's right.",
       "by": "model",
       "verified": null
      },
@@ -20019,49 +20131,25 @@
       "utterance": "X005-036",
       "fact": "F1",
       "kind": "denies",
-      "quote": "That's right. I wasn't there.",
+      "quote": "That's right.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X005-036",
       "fact": "F2",
-      "kind": "asserts",
-      "quote": "That's right. I wasn't there.",
+      "kind": "denies",
+      "quote": "That's right.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X005-036",
       "fact": "F3",
-      "kind": "asserts",
-      "quote": "That's right. I wasn't there.",
+      "kind": "denies",
+      "quote": "That's right.",
       "by": "model",
       "verified": null
-     },
-     {
-      "utterance": "X005-036",
-      "fact": "F4",
-      "kind": "denies",
-      "quote": "That's right. I wasn't there.",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X005-036",
-      "fact": "F5",
-      "kind": "asserts",
-      "quote": "That's right. I wasn't there.",
-      "by": "model",
-      "verified": false
-     },
-     {
-      "utterance": "X005-036",
-      "fact": "F6",
-      "kind": "asserts",
-      "quote": "That's right. I wasn't there.",
-      "by": "model",
-      "verified": false
      },
      {
       "utterance": "X005-037",
@@ -20204,18 +20292,10 @@
       "verified": true
      },
      {
-      "utterance": "X007-005",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "green sport bike",
-      "by": "model",
-      "verified": null
-     },
-     {
       "utterance": "X007-007",
       "fact": "F1",
       "kind": "asks",
-      "quote": "alley behind the Rusty Spoon diner",
+      "quote": "the alley behind the Rusty Spoon diner",
       "by": "model",
       "verified": true
      },
@@ -20231,7 +20311,7 @@
       "utterance": "X007-009",
       "fact": "F2",
       "kind": "asks",
-      "quote": "bolt cutter",
+      "quote": "a bolt cutter",
       "by": "model",
       "verified": true
      },
@@ -20247,7 +20327,7 @@
       "utterance": "X007-011",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "lock",
+      "quote": "prints on the lock",
       "by": "model",
       "verified": null
      },
@@ -20255,7 +20335,7 @@
       "utterance": "X007-012",
       "fact": "F6",
       "kind": "denies",
-      "quote": "That doesn't mean I took the bike.",
+      "quote": "I took the bike",
       "by": "model",
       "verified": null
      },
@@ -20289,13 +20369,13 @@
       "kind": "assents",
       "quote": "Yeah.",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X007-017",
       "fact": "F3",
       "kind": "asserts",
-      "quote": "black hoodie",
+      "quote": "a black hoodie",
       "by": "model",
       "verified": true
      },
@@ -20350,10 +20430,10 @@
      {
       "utterance": "X007-024",
       "fact": "F5",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "I fell down the stairs yesterday, it's not from any crime.",
       "by": "model",
-      "verified": null
+      "verified": false
      },
      {
       "utterance": "X007-025",
@@ -20389,8 +20469,8 @@
        "line": "X007-009"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X007-009"
+       "first": "never",
+       "line": null
       }
      },
      "F3": {
@@ -20450,10 +20530,10 @@
      {
       "utterance": "X009-005",
       "fact": "F1",
-      "kind": "asks",
+      "kind": "denies",
       "quote": "Nobody mentioned a pry bar. Why bring that up?",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X009-006",
@@ -20488,14 +20568,6 @@
       "verified": null
      },
      {
-      "utterance": "X009-010",
-      "fact": "F2",
-      "kind": "asserts",
-      "quote": "Then go look at your footage.",
-      "by": "model",
-      "verified": false
-     },
-     {
       "utterance": "X009-011",
       "fact": "F3",
       "kind": "asserts",
@@ -20509,13 +20581,13 @@
       "kind": "asserts",
       "quote": "A lot of people wear them winter hats with the holes, man. It was cold.",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X009-015",
       "fact": "F4",
-      "kind": "asks",
-      "quote": "You have a scraped knuckle.",
+      "kind": "asserts",
+      "quote": "Let's talk about your hand. You have a scraped knuckle.",
       "by": "model",
       "verified": true
      },
@@ -20589,7 +20661,7 @@
       "kind": "asserts",
       "quote": "I was home asleep at 2:00 AM, alright?",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X009-029",
@@ -20610,7 +20682,7 @@
      {
       "utterance": "X009-031",
       "fact": "F6",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "Nobody said what time the break-in happened.",
       "by": "model",
       "verified": null
@@ -20620,6 +20692,14 @@
       "fact": "F1",
       "kind": "asks",
       "quote": "Nobody said you did. We're just talking.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X009-009",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "We have footage of it.",
       "by": "search",
       "verified": false
      },
@@ -20644,14 +20724,6 @@
       "fact": "F6",
       "kind": "asks",
       "quote": "With your prints on it.",
-      "by": "search",
-      "verified": false
-     },
-     {
-      "utterance": "X009-027",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "Suit yourself. But let me ask you this.",
       "by": "search",
       "verified": false
      }
@@ -20683,8 +20755,8 @@
        "line": "X009-011"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X009-011"
       }
      },
      "F4": {
@@ -20735,7 +20807,7 @@
       "utterance": "X012-004",
       "fact": "F2",
       "kind": "denies",
-      "quote": "I don't even know where that storage facility is located.",
+      "quote": "I was at home. I don't even know where that storage facility is located.",
       "by": "model",
       "verified": null
      },
@@ -20759,7 +20831,7 @@
       "utterance": "X012-007",
       "fact": "F8",
       "kind": "asks",
-      "quote": "But this person was also wearing a black rain jacket. Do you own one like that?",
+      "quote": "this person was also wearing a black rain jacket. Do you own one like that?",
       "by": "model",
       "verified": true
      },
@@ -20767,7 +20839,7 @@
       "utterance": "X012-008",
       "fact": "F8",
       "kind": "denies",
-      "quote": "I didn't wear it last night.",
+      "quote": "I might have a dark coat somewhere, but I didn't wear it last night.",
       "by": "model",
       "verified": null
      },
@@ -20783,14 +20855,14 @@
       "utterance": "X012-010",
       "fact": "F4",
       "kind": "denies",
-      "quote": "My truck is blue, not red.",
+      "quote": "My truck is blue, not red. You've got the wrong guy.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X012-011",
       "fact": "F5",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "the break-in happened right at 2:00 AM",
       "by": "model",
       "verified": true
@@ -20822,7 +20894,7 @@
      {
       "utterance": "X012-017",
       "fact": "F1",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a crowbar at the scene. The handle had a unique grip. Have you ever owned one like that?",
       "by": "model",
       "verified": true
@@ -20830,10 +20902,10 @@
      {
       "utterance": "X012-018",
       "fact": "F1",
-      "kind": "denies",
-      "quote": "I didn't leave one at any warehouse.",
+      "kind": "asserts",
+      "quote": "I use a pry bar for construction work sometimes, but I didn't leave one at any warehouse.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X012-019",
@@ -20845,19 +20917,19 @@
      },
      {
       "utterance": "X012-020",
-      "fact": "F2",
-      "kind": "denies",
-      "quote": "I don't! I'm just saying I wouldn't take my crowbar there. I didn't do this.",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I'm just saying I wouldn't take my crowbar there.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X012-020",
-      "fact": "F1",
-      "kind": "denies",
-      "quote": "I don't! I'm just saying I wouldn't take my crowbar there. I didn't do this.",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "I'm just saying I wouldn't take my crowbar there.",
       "by": "model",
-      "verified": null
+      "verified": false
      },
      {
       "utterance": "X012-021",
@@ -20870,10 +20942,10 @@
      {
       "utterance": "X012-022",
       "fact": "F3",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "Yeah, I go skiing in the winter. Lots of people do.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X012-023",
@@ -20894,7 +20966,7 @@
      {
       "utterance": "X012-025",
       "fact": "F4",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We pulled you over because your vehicle matched the red Toyota pickup. The plate was captured on camera.",
       "by": "model",
       "verified": null
@@ -20918,8 +20990,8 @@
      {
       "utterance": "X012-028",
       "fact": "F4",
-      "kind": "denies",
-      "quote": "I don't know. It could have been stolen. I leave the keys in the ignition sometimes.",
+      "kind": "asserts",
+      "quote": "It could have been stolen. I leave the keys in the ignition sometimes.",
       "by": "model",
       "verified": null
      },
@@ -20934,7 +21006,7 @@
      {
       "utterance": "X012-030",
       "fact": "F5",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "I already told you I was asleep at two in the morning. I have to be up for work by six.",
       "by": "model",
       "verified": null
@@ -20973,43 +21045,43 @@
      },
      {
       "utterance": "X012-035",
-      "fact": "F7",
+      "fact": "F2",
       "kind": "asks",
-      "quote": "Let's go back to the stolen items. You mentioned copper wire spools. How did you know they were stolen from this specific location?",
+      "quote": "How did you know they were stolen from this specific location?",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X012-035",
-      "fact": "F2",
+      "fact": "F7",
       "kind": "asks",
-      "quote": "Let's go back to the stolen items. You mentioned copper wire spools. How did you know they were stolen from this specific location?",
+      "quote": "Let's go back to the stolen items. You mentioned copper wire spools.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X012-036",
+      "fact": "F2",
+      "kind": "denies",
+      "quote": "I didn't know they came from the Hartwell Logistics Warehouse.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X012-036",
       "fact": "F7",
-      "kind": "denies",
-      "quote": "I didn't know they came from the Hartwell Logistics Warehouse. I just heard guys talking about taking some spools. I assumed it was a scrapyard or something.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X012-036",
-      "fact": "F2",
-      "kind": "denies",
-      "quote": "I didn't know they came from the Hartwell Logistics Warehouse. I just heard guys talking about taking some spools. I assumed it was a scrapyard or something.",
+      "kind": "asserts",
+      "quote": "I just heard guys talking about taking some spools.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X012-038",
       "fact": "F2",
-      "kind": "assents",
+      "kind": "asserts",
       "quote": "the warehouse",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X012-039",
@@ -21084,6 +21156,14 @@
       "verified": null
      },
      {
+      "utterance": "X012-015",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Copper wire spools? That's very specific. Which diner was this?",
+      "by": "search",
+      "verified": false
+     },
+     {
       "utterance": "X012-009",
       "fact": "F5",
       "kind": "asks",
@@ -21097,7 +21177,7 @@
       "kind": "asks",
       "quote": "We'll check the registration. Now, the security feed shows the break-in happened right at 2:00 AM. Where were you then?",
       "by": "search",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X012-013",
@@ -21115,8 +21195,8 @@
        "line": "X012-017"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X012-017"
       }
      },
      "F2": {
@@ -21125,8 +21205,8 @@
        "line": "X012-003"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X012-003"
+       "first": "never",
+       "line": null
       }
      },
      "F3": {
@@ -21175,8 +21255,8 @@
        "line": "X012-014"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X012-011"
+       "first": "suspect",
+       "line": "X012-014"
       }
      },
      "F8": {
@@ -21206,7 +21286,7 @@
      {
       "utterance": "X014-003",
       "fact": "F1",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "You're saying you didn't fire the snub-nose we recovered from the alley?",
       "by": "model",
       "verified": true
@@ -21230,18 +21310,10 @@
      {
       "utterance": "X014-006",
       "fact": "F2",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "I've seen the dark blue import parked around my block, but it's not mine.",
       "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X014-007",
-      "fact": "F2",
-      "kind": "asserts",
-      "quote": "We have footage of that vehicle leaving the QuikStop convenience store right after the incident.",
-      "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X014-007",
@@ -21271,7 +21343,7 @@
       "utterance": "X014-011",
       "fact": "F4",
       "kind": "asks",
-      "quote": "A black ski mask? I didn't even bring that up yet. Why mention the facial covering?",
+      "quote": "Why mention the facial covering?",
       "by": "model",
       "verified": true
      },
@@ -21287,7 +21359,7 @@
       "utterance": "X014-013",
       "fact": "F4",
       "kind": "asserts",
-      "quote": "The news didn't release that detail. Only someone there would know about the knit face disguise.",
+      "quote": "Only someone there would know about the knit face disguise.",
       "by": "model",
       "verified": null
      },
@@ -21313,13 +21385,13 @@
       "kind": "asserts",
       "quote": "I was at home watching TV.",
       "by": "model",
-      "verified": null
+      "verified": false
      },
      {
-      "utterance": "X014-019",
+      "utterance": "X014-020",
       "fact": "F5",
-      "kind": "asserts",
-      "quote": "just before midnight",
+      "kind": "denies",
+      "quote": "I was home",
       "by": "model",
       "verified": null
      },
@@ -21406,7 +21478,7 @@
      {
       "utterance": "X014-031",
       "fact": "F4",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "ski mask",
       "by": "model",
       "verified": null
@@ -21414,10 +21486,26 @@
      {
       "utterance": "X014-031",
       "fact": "F1",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "revolver",
       "by": "model",
       "verified": null
+     },
+     {
+      "utterance": "X014-003",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Let's slow down. You're saying you didn't fire the snub-nose we recovered from the alley?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X014-009",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "The clerk at that store is lucky to be alive.",
+      "by": "search",
+      "verified": false
      }
     ],
     "facts": {
@@ -21437,8 +21525,8 @@
        "line": "X014-005"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X014-005"
       }
      },
      "F3": {
@@ -21467,8 +21555,8 @@
        "line": "X014-015"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X014-015"
+       "first": "never",
+       "line": null
       }
      },
      "F6": {
@@ -21493,7 +21581,7 @@
       "kind": "asks",
       "quote": "Were you carrying a folding pocket knife last night?",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X015-004",
@@ -21501,7 +21589,7 @@
       "kind": "asserts",
       "quote": "I always carry one. It's just a tool, you know?",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X015-006",
@@ -21509,7 +21597,7 @@
       "kind": "asserts",
       "quote": "I was just waiting at the Elm Street bus stop shelter.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X015-007",
@@ -21517,7 +21605,7 @@
       "kind": "asks",
       "quote": "That little glass enclosure on the corner?",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X015-008",
@@ -21541,7 +21629,7 @@
       "kind": "asks",
       "quote": "Did you take a blue canvas backpack from the scene?",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X015-012",
@@ -21619,7 +21707,7 @@
       "utterance": "X015-022",
       "fact": "F5",
       "kind": "denies",
-      "quote": "No",
+      "quote": "No.",
       "by": "model",
       "verified": null
      },
@@ -21656,6 +21744,22 @@
       "verified": true
      },
      {
+      "utterance": "X015-027",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "pretty late",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X015-028",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "night schedule runs late",
+      "by": "model",
+      "verified": null
+     },
+     {
       "utterance": "X015-030",
       "fact": "F7",
       "kind": "asserts",
@@ -21666,10 +21770,26 @@
      {
       "utterance": "X015-031",
       "fact": "F7",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "scraped knee",
       "by": "model",
       "verified": true
+     },
+     {
+      "utterance": "X015-033",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "How did you manage that?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X015-034",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "clumsy",
+      "by": "model",
+      "verified": null
      },
      {
       "utterance": "X015-035",
@@ -21683,7 +21803,7 @@
       "utterance": "X015-036",
       "fact": "F8",
       "kind": "denies",
-      "quote": "No, I didn't hear any mobile device making noise",
+      "quote": "No, I didn't hear any mobile device making noise.",
       "by": "model",
       "verified": null
      },
@@ -21928,6 +22048,22 @@
       "verified": null
      },
      {
+      "utterance": "X017-003",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Nobody said anything about a face covering yet.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X017-004",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "I didn't have a gun or anything.",
+      "by": "model",
+      "verified": null
+     },
+     {
       "utterance": "X017-005",
       "fact": "F8",
       "kind": "asks",
@@ -22013,13 +22149,21 @@
       "kind": "asserts",
       "quote": "The owner said the register drawer was left half-empty. The guy didn't even take all the cash.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X017-016",
       "fact": "F3",
       "kind": "assents",
       "quote": "Yeah.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X017-017",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Why do you think the thief would leave money behind?",
       "by": "model",
       "verified": null
      },
@@ -22029,15 +22173,15 @@
       "kind": "asserts",
       "quote": "I heard he had a shiny pistol, a real chrome revolver, but that wasn't me.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X017-019",
       "fact": "F5",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "A silver handgun? That's interesting. Where did you hear that?",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X017-021",
@@ -22069,14 +22213,6 @@
       "kind": "asserts",
       "quote": "We have witnesses who saw someone in a dark balaclava running from that gas station.",
       "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X017-025",
-      "fact": "F8",
-      "kind": "asserts",
-      "quote": "running from that gas station.",
-      "by": "model",
       "verified": null
      },
      {
@@ -22088,18 +22224,10 @@
       "verified": null
      },
      {
-      "utterance": "X017-026",
-      "fact": "F8",
-      "kind": "denies",
-      "quote": "I wasn't there.",
-      "by": "model",
-      "verified": null
-     },
-     {
       "utterance": "X017-027",
       "fact": "F8",
       "kind": "asserts",
-      "quote": "The QuikStop convenience store has excellent cameras, kid.",
+      "quote": "The QuikStop convenience store has excellent cameras, kid. We're going to find out who you are.",
       "by": "model",
       "verified": null
      },
@@ -22131,7 +22259,7 @@
       "utterance": "X017-032",
       "fact": "F6",
       "kind": "asserts",
-      "quote": "I heard about the clerk getting shot and I panicked.",
+      "quote": "I was scared. I heard about the clerk getting shot and I panicked.",
       "by": "model",
       "verified": null
      },
@@ -22186,10 +22314,10 @@
      {
       "utterance": "X017-015",
       "fact": "F5",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "We'll see about that. The owner said the register drawer was left half-empty. The guy didn't even take all the cash.",
       "by": "search",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X017-017",
@@ -22247,8 +22375,8 @@
        "line": "X017-018"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X017-015"
+       "first": "suspect",
+       "line": "X017-018"
       }
      },
      "F6": {
@@ -22376,6 +22504,142 @@
       "verified": null
      },
      {
+      "utterance": "X018-020",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "I was at home cleaning my white work van.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X018-021",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "Your white work van. That's the one parked in your driveway right now?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X018-022",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Yeah, that's the one.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-023",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "We can check the van for residue. You know that, right?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-024",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Go ahead. You won't find anything.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-025",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "When we brought you in, we found a cigarette lighter in your jacket pocket.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X018-026",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "It's not mine. I've never seen it before in my life.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-027",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "It was in your pocket.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-028",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I don't know how it got there. Maybe one of the officers dropped it.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-029",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Now, about that burn mark on your wrist. How did you get that?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X018-030",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "I burned it on the toaster this morning. It's nothing.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X018-031",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "A burn from a toaster looks different. This looks like a splash mark.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-032",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "I don't know what to tell you. It's a cooking accident.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-033",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "The guy in the red baseball cap walks right past the camera.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-034",
+      "fact": "F1",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X018-035",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "And you admit you own a green duffel bag like the one in the footage?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X018-036",
+      "fact": "F4",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": true
+     },
+     {
       "utterance": "X018-037",
       "fact": "F5",
       "kind": "asserts",
@@ -22408,20 +22672,44 @@
       "verified": null
      },
      {
-      "utterance": "X018-041",
-      "fact": "F2",
-      "kind": "asks",
-      "quote": "Are they going to match yours?",
-      "by": "model",
-      "verified": null
-     },
-     {
       "utterance": "X018-042",
       "fact": "F2",
       "kind": "denies",
       "quote": "That solvent bottle isn't mine. I never touched it.",
       "by": "model",
       "verified": null
+     },
+     {
+      "utterance": "X018-017",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "You're left handed, aren't you?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X018-019",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "The person in the video tosses the bag with their left hand.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X018-005",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Because that auto shop burned down last night. The owner is pretty upset.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X018-027",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "It was in your pocket.",
+      "by": "search",
+      "verified": false
      }
     ],
     "facts": {
@@ -22431,8 +22719,8 @@
        "line": "X018-007"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X018-007"
       }
      },
      "F2": {
@@ -22461,8 +22749,8 @@
        "line": "X018-011"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X018-011"
       }
      },
      "F5": {
@@ -22481,8 +22769,8 @@
        "line": "X018-020"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "suspect",
+       "line": "X018-020"
       }
      },
      "F7": {
@@ -22491,8 +22779,8 @@
        "line": null
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X018-029"
       }
      }
     }
@@ -22526,6 +22814,14 @@
       "verified": null
      },
      {
+      "utterance": "X019-009",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "Where exactly did you park?",
+      "by": "model",
+      "verified": false
+     },
+     {
       "utterance": "X019-010",
       "fact": "F6",
       "kind": "asserts",
@@ -22536,10 +22832,10 @@
      {
       "utterance": "X019-011",
       "fact": "F6",
-      "kind": "asks",
-      "quote": "The gravel lot outside the gate. Why didn't you go in?",
+      "kind": "asserts",
+      "quote": "The gravel lot outside the gate.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X019-015",
@@ -22561,7 +22857,7 @@
       "utterance": "X019-019",
       "fact": "F3",
       "kind": "asks",
-      "quote": "11:40 PM on the night of the fire",
+      "quote": "And you were there at 11:40 PM on the night of the fire. Is that correct?",
       "by": "model",
       "verified": true
      },
@@ -22569,7 +22865,7 @@
       "utterance": "X019-020",
       "fact": "F3",
       "kind": "assents",
-      "quote": "Yeah",
+      "quote": "Yeah.",
       "by": "model",
       "verified": true
      },
@@ -22577,7 +22873,7 @@
       "utterance": "X019-022",
       "fact": "F7",
       "kind": "asserts",
-      "quote": "a padlock with a green body",
+      "quote": "I had a padlock with a green body on the shelf of the truck, so I took that with me.",
       "by": "model",
       "verified": true
      },
@@ -22585,7 +22881,7 @@
       "utterance": "X019-023",
       "fact": "F7",
       "kind": "asks",
-      "quote": "A green-bodied padlock",
+      "quote": "A green-bodied padlock. You always carry that?",
       "by": "model",
       "verified": true
      },
@@ -22598,10 +22894,26 @@
       "verified": null
      },
      {
+      "utterance": "X019-025",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "So you walked up to the unit?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X019-026",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Right. I went up to put the lock on and check the door.",
+      "by": "model",
+      "verified": null
+     },
+     {
       "utterance": "X019-031",
       "fact": "F4",
       "kind": "asks",
-      "quote": "a red plastic gas can",
+      "quote": "Let me ask you about a red plastic gas can. We found one near the scene. Do you know anything about that?",
       "by": "model",
       "verified": true
      },
@@ -22625,7 +22937,7 @@
       "utterance": "X019-035",
       "fact": "F5",
       "kind": "asks",
-      "quote": "a gray hooded sweatshirt",
+      "quote": "We have you on camera in a gray hooded sweatshirt. Is that yours?",
       "by": "model",
       "verified": true
      },
@@ -22656,7 +22968,7 @@
      {
       "utterance": "X019-041",
       "fact": "F8",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "A scrape on the right elbow",
       "by": "model",
       "verified": true
@@ -22706,14 +23018,6 @@
       "fact": "F1",
       "kind": "asserts",
       "quote": "walked back to the truck",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X019-049",
-      "fact": "F3",
-      "kind": "asks",
-      "quote": "What time was that",
       "by": "model",
       "verified": null
      },
@@ -22790,14 +23094,6 @@
       "verified": false
      },
      {
-      "utterance": "X019-009",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "Where exactly did you park?",
-      "by": "search",
-      "verified": true
-     },
-     {
       "utterance": "X019-019",
       "fact": "F7",
       "kind": "asks",
@@ -22818,6 +23114,14 @@
       "fact": "F8",
       "kind": "asks",
       "quote": "Do you still have it?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X019-039",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "We'll come by for it. Now, you said you went up to check the door. What happened next?",
       "by": "search",
       "verified": false
      }
@@ -22879,8 +23183,8 @@
        "line": "X019-010"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X019-009"
+       "first": "suspect",
+       "line": "X019-010"
       }
      },
      "F7": {
@@ -22912,10 +23216,10 @@
      {
       "utterance": "X020-003",
       "fact": "F2",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "Elm Street bus shelter",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X020-004",
@@ -22931,7 +23235,7 @@
       "kind": "asks",
       "quote": "transit stop on Elm",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X020-006",
@@ -22968,10 +23272,10 @@
      {
       "utterance": "X020-010",
       "fact": "F4",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "Maybe",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X020-011",
@@ -22987,7 +23291,7 @@
       "kind": "assents",
       "quote": "Yeah",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X020-013",
@@ -23041,7 +23345,7 @@
       "utterance": "X020-019",
       "fact": "F1",
       "kind": "asks",
-      "quote": "The victim said you threatened him with a black pocketknife.",
+      "quote": "black pocketknife",
       "by": "model",
       "verified": null
      },
@@ -23057,7 +23361,7 @@
       "utterance": "X020-021",
       "fact": "F5",
       "kind": "asks",
-      "quote": "Did you drive away in a green sedan?",
+      "quote": "green sedan",
       "by": "model",
       "verified": true
      },
@@ -23073,7 +23377,7 @@
       "utterance": "X020-023",
       "fact": "F5",
       "kind": "asserts",
-      "quote": "We have a green car parked near your house.",
+      "quote": "green car parked near your house",
       "by": "model",
       "verified": null
      },
@@ -23089,7 +23393,7 @@
       "utterance": "X020-025",
       "fact": "F7",
       "kind": "asserts",
-      "quote": "I scraped my left elbow getting out of there, that's all.",
+      "quote": "scraped my left elbow",
       "by": "model",
       "verified": true
      },
@@ -23097,7 +23401,7 @@
       "utterance": "X020-026",
       "fact": "F7",
       "kind": "asks",
-      "quote": "How did you scrape that elbow?",
+      "quote": "scrape that elbow",
       "by": "model",
       "verified": true
      },
@@ -23105,7 +23409,7 @@
       "utterance": "X020-027",
       "fact": "F7",
       "kind": "asserts",
-      "quote": "I tripped on the curb.",
+      "quote": "tripped on the curb",
       "by": "model",
       "verified": null
      },
@@ -23113,7 +23417,7 @@
       "utterance": "X020-028",
       "fact": "F6",
       "kind": "asks",
-      "quote": "Was this around 11:40 PM?",
+      "quote": "11:40 PM",
       "by": "model",
       "verified": true
      },
@@ -23129,7 +23433,7 @@
       "utterance": "X020-030",
       "fact": "F6",
       "kind": "asserts",
-      "quote": "The timestamp shows just before midnight, so 11:40 fits.",
+      "quote": "timestamp shows just before midnight, so 11:40 fits",
       "by": "model",
       "verified": null
      },
@@ -23145,7 +23449,7 @@
       "utterance": "X020-032",
       "fact": "F8",
       "kind": "asks",
-      "quote": "Did you take a silver smartphone?",
+      "quote": "silver smartphone",
       "by": "model",
       "verified": true
      },
@@ -23161,7 +23465,7 @@
       "utterance": "X020-034",
       "fact": "F8",
       "kind": "asserts",
-      "quote": "We found a silver phone in your pocket.",
+      "quote": "silver phone in your pocket",
       "by": "model",
       "verified": null
      },
@@ -23172,6 +23476,14 @@
       "quote": "Yeah.",
       "by": "model",
       "verified": true
+     },
+     {
+      "utterance": "X020-007",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "We have you on camera near that covered waiting area.",
+      "by": "search",
+      "verified": false
      },
      {
       "utterance": "X020-026",
@@ -23216,7 +23528,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X020-005"
+       "line": "X020-003"
       }
      },
      "F3": {
@@ -23288,10 +23600,10 @@
      {
       "utterance": "X021-004",
       "fact": "F2",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "Something about that school, I guess.",
       "by": "model",
-      "verified": null
+      "verified": false
      },
      {
       "utterance": "X021-006",
@@ -23304,7 +23616,7 @@
      {
       "utterance": "X021-007",
       "fact": "F1",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "Your red pry bar? We found it in the bushes near the gym.",
       "by": "model",
       "verified": true
@@ -23387,7 +23699,7 @@
       "kind": "assents",
       "quote": "Yeah.",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X021-020",
@@ -23400,7 +23712,7 @@
      {
       "utterance": "X021-022",
       "fact": "F4",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "It's a pale truck, not a van, and I was just turning around.",
       "by": "model",
       "verified": null
@@ -23467,7 +23779,7 @@
       "kind": "asserts",
       "quote": "I already told you, that's at my house.",
       "by": "model",
-      "verified": true
+      "verified": null
      },
      {
       "utterance": "X021-037",
@@ -23476,6 +23788,30 @@
       "quote": "We have your prints on that too.",
       "by": "model",
       "verified": null
+     },
+     {
+      "utterance": "X021-024",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "The cameras show the figure at 11:45 PM.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X021-025",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "That's almost midnight. Were you there at that time?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X021-027",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "What happened next?",
+      "by": "search",
+      "verified": false
      },
      {
       "utterance": "X021-016",
@@ -23516,30 +23852,6 @@
       "quote": "Okay. Let's move on.",
       "by": "search",
       "verified": false
-     },
-     {
-      "utterance": "X021-024",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "The cameras show the figure at 11:45 PM.",
-      "by": "search",
-      "verified": false
-     },
-     {
-      "utterance": "X021-025",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "That's almost midnight. Were you there at that time?",
-      "by": "search",
-      "verified": false
-     },
-     {
-      "utterance": "X021-027",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "What happened next?",
-      "by": "search",
-      "verified": false
      }
     ],
     "facts": {
@@ -23569,8 +23881,8 @@
        "line": "X021-014"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X021-014"
+       "first": "never",
+       "line": null
       }
      },
      "F4": {
@@ -23687,7 +23999,7 @@
       "kind": "asks",
       "quote": "The motel on Route 4?",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X022-018",
@@ -23709,7 +24021,7 @@
       "utterance": "X022-021",
       "fact": "F4",
       "kind": "asks",
-      "quote": "were you carrying a black duffel bag last night",
+      "quote": "were you carrying a black duffel bag last night?",
       "by": "model",
       "verified": true
      },
@@ -23717,7 +24029,7 @@
       "utterance": "X022-022",
       "fact": "F4",
       "kind": "assents",
-      "quote": "Yeah",
+      "quote": "Yeah.",
       "by": "model",
       "verified": true
      },
@@ -23725,7 +24037,7 @@
       "utterance": "X022-023",
       "fact": "F4",
       "kind": "asks",
-      "quote": "What was in it",
+      "quote": "What was in it?",
       "by": "model",
       "verified": null
      },
@@ -23733,7 +24045,7 @@
       "utterance": "X022-024",
       "fact": "F4",
       "kind": "asserts",
-      "quote": "Just my clothes and stuff",
+      "quote": "Just my clothes and stuff.",
       "by": "model",
       "verified": null
      },
@@ -23741,7 +24053,7 @@
       "utterance": "X022-025",
       "fact": "F4",
       "kind": "asks",
-      "quote": "Anything else in that dark gym bag",
+      "quote": "Anything else in that dark gym bag?",
       "by": "model",
       "verified": null
      },
@@ -23749,7 +24061,7 @@
       "utterance": "X022-026",
       "fact": "F4",
       "kind": "denies",
-      "quote": "No, that's it",
+      "quote": "No, that's it.",
       "by": "model",
       "verified": null
      },
@@ -23757,7 +24069,7 @@
       "utterance": "X022-027",
       "fact": "F5",
       "kind": "asks",
-      "quote": "Did you see a green Kawasaki around there",
+      "quote": "Did you see a green Kawasaki around there?",
       "by": "model",
       "verified": true
      },
@@ -23765,7 +24077,7 @@
       "utterance": "X022-028",
       "fact": "F5",
       "kind": "denies",
-      "quote": "I don't know what kind of bike that is",
+      "quote": "I don't know what kind of bike that is.",
       "by": "model",
       "verified": null
      },
@@ -23773,7 +24085,7 @@
       "utterance": "X022-029",
       "fact": "F5",
       "kind": "asserts",
-      "quote": "The green Kawasaki is the bike that got stolen",
+      "quote": "The green Kawasaki is the bike that got stolen.",
       "by": "model",
       "verified": null
      },
@@ -23781,7 +24093,7 @@
       "utterance": "X022-030",
       "fact": "F5",
       "kind": "denies",
-      "quote": "I didn't see any green motorcycle",
+      "quote": "I didn't see any green motorcycle.",
       "by": "model",
       "verified": null
      },
@@ -23789,7 +24101,7 @@
       "utterance": "X022-031",
       "fact": "F6",
       "kind": "asks",
-      "quote": "Were you out there at 2 AM",
+      "quote": "Were you out there at 2 AM?",
       "by": "model",
       "verified": true
      },
@@ -23797,7 +24109,7 @@
       "utterance": "X022-032",
       "fact": "F6",
       "kind": "denies",
-      "quote": "I don't remember the exact time",
+      "quote": "Maybe. I don't remember the exact time.",
       "by": "model",
       "verified": null
      },
@@ -23805,7 +24117,7 @@
       "utterance": "X022-033",
       "fact": "F3",
       "kind": "asserts",
-      "quote": "The motel clerk says he saw you leave around two in the morning",
+      "quote": "The motel clerk says he saw you leave around two in the morning.",
       "by": "model",
       "verified": null
      },
@@ -23813,23 +24125,15 @@
       "utterance": "X022-033",
       "fact": "F6",
       "kind": "asserts",
-      "quote": "around two in the morning",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X022-034",
-      "fact": "F3",
-      "kind": "asserts",
-      "quote": "If he says I left at two, I guess I did",
+      "quote": "The motel clerk says he saw you leave around two in the morning.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X022-034",
       "fact": "F6",
-      "kind": "assents",
-      "quote": "If he says I left at two, I guess I did",
+      "kind": "asserts",
+      "quote": "If he says I left at two, I guess I did.",
       "by": "model",
       "verified": true
      },
@@ -23852,10 +24156,10 @@
      {
       "utterance": "X022-013",
       "fact": "F3",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "The busted lock was on the ground when we arrived.",
       "by": "search",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X022-015",
@@ -23901,8 +24205,8 @@
        "line": "X022-016"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X022-013"
+       "first": "suspect",
+       "line": "X022-016"
       }
      },
      "F4": {
@@ -23992,7 +24296,7 @@
      {
       "utterance": "X025-008",
       "fact": "F4",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "Lots of people drive vehicles like that.",
       "by": "model",
       "verified": null
@@ -24064,7 +24368,7 @@
      {
       "utterance": "X025-016",
       "fact": "F6",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "That's just a coincidence.",
       "by": "model",
       "verified": null
@@ -24313,7 +24617,7 @@
       "utterance": "X027-001",
       "fact": "F1",
       "kind": "asserts",
-      "quote": "We need to talk about the sapphire tennis bracelet.",
+      "quote": "the sapphire tennis bracelet",
       "by": "model",
       "verified": true
      },
@@ -24329,7 +24633,7 @@
       "utterance": "X027-005",
       "fact": "F2",
       "kind": "asks",
-      "quote": "Then how did you get in through the rear fire exit?",
+      "quote": "the rear fire exit",
       "by": "model",
       "verified": true
      },
@@ -24345,7 +24649,7 @@
       "utterance": "X027-007",
       "fact": "F3",
       "kind": "asserts",
-      "quote": "The camera shows a man in a gray hoodie.",
+      "quote": "a man in a gray hoodie",
       "by": "model",
       "verified": true
      },
@@ -24361,7 +24665,15 @@
       "utterance": "X027-009",
       "fact": "F3",
       "kind": "asks",
-      "quote": "Do you own a sweatshirt like that?",
+      "quote": "a sweatshirt like that",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X027-010",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Lots of people do.",
       "by": "model",
       "verified": null
      },
@@ -24377,7 +24689,7 @@
       "utterance": "X027-016",
       "fact": "F5",
       "kind": "asserts",
-      "quote": "I missed my ride and fell, got a chipped tooth.",
+      "quote": "got a chipped tooth",
       "by": "model",
       "verified": true
      },
@@ -24385,9 +24697,17 @@
       "utterance": "X027-017",
       "fact": "F5",
       "kind": "asks",
-      "quote": "Let me see that broken tooth.",
+      "quote": "broken tooth",
       "by": "model",
       "verified": true
+     },
+     {
+      "utterance": "X027-018",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Open my mouth?",
+      "by": "model",
+      "verified": null
      },
      {
       "utterance": "X027-020",
@@ -24403,7 +24723,7 @@
       "kind": "asks",
       "quote": "What was inside that gym sack?",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X027-023",
@@ -24736,7 +25056,7 @@
      {
       "utterance": "X028-020",
       "fact": "F2",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "We have evidence that places you at unit 42 that night.",
       "by": "model",
       "verified": null
@@ -24752,7 +25072,7 @@
      {
       "utterance": "X028-022",
       "fact": "F6",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We also have a report of a blue sedan speeding away from the scene. Was that you?",
       "by": "model",
       "verified": true
@@ -24824,7 +25144,7 @@
      {
       "utterance": "X028-032",
       "fact": "F7",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "We'll need to take a look at it later.",
       "by": "model",
       "verified": null
@@ -24840,7 +25160,7 @@
      {
       "utterance": "X028-034",
       "fact": "F8",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a lighter with an eagle logo at the scene. Does that sound familiar?",
       "by": "model",
       "verified": true
@@ -24862,18 +25182,10 @@
       "verified": null
      },
      {
-      "utterance": "X028-037",
-      "fact": "F8",
-      "kind": "denies",
-      "quote": "It's not mine.",
-      "by": "model",
-      "verified": null
-     },
-     {
       "utterance": "X028-038",
       "fact": "F1",
-      "kind": "asserts",
-      "quote": "The white box van.",
+      "kind": "asks",
+      "quote": "Let's go back to the van. The white box van.",
       "by": "model",
       "verified": null
      },
@@ -24886,10 +25198,26 @@
       "verified": null
      },
      {
+      "utterance": "X028-040",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "you were at the facility that night",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X028-041",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Yes, I told you.",
+      "by": "model",
+      "verified": false
+     },
+     {
       "utterance": "X028-042",
       "fact": "F4",
       "kind": "asserts",
-      "quote": "the mask was yours",
+      "quote": "you admit the mask was yours",
       "by": "model",
       "verified": null
      },
@@ -24905,7 +25233,7 @@
       "utterance": "X028-044",
       "fact": "F2",
       "kind": "asserts",
-      "quote": "unit 42",
+      "quote": "A fire starts in unit 42, and you were there.",
       "by": "model",
       "verified": null
      },
@@ -24947,7 +25275,7 @@
       "kind": "asks",
       "quote": "A red plastic gas can? That's interesting. We found a container just like that near the scene. Did you leave it there?",
       "by": "search",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X028-010",
@@ -25020,7 +25348,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X028-008"
+       "line": "X028-010"
       }
      },
      "F5": {
@@ -25083,7 +25411,7 @@
       "kind": "asks",
       "quote": "You wear that dark coat often?",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X034-006",
@@ -25121,7 +25449,7 @@
       "utterance": "X034-010",
       "fact": "F2",
       "kind": "denies",
-      "quote": "Well, they're lying. I stayed inside the whole time, until I left.",
+      "quote": "I stayed inside the whole time, until I left.",
       "by": "model",
       "verified": null
      },
@@ -25147,7 +25475,7 @@
       "kind": "asks",
       "quote": "You broke the stick?",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X034-016",
@@ -25231,16 +25559,8 @@
      },
      {
       "utterance": "X034-027",
-      "fact": "F5",
-      "kind": "asks",
-      "quote": "His wrist timepiece caused the bleeding?",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X034-027",
       "fact": "F6",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "His wrist timepiece caused the bleeding?",
       "by": "model",
       "verified": true
@@ -25438,10 +25758,10 @@
      {
       "utterance": "X035-001",
       "fact": "F6",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "Crescent Mall parking garage",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X035-002",
@@ -25455,15 +25775,15 @@
       "utterance": "X035-003",
       "fact": "F6",
       "kind": "asserts",
-      "quote": "we have you on camera at 7:15 PM",
+      "quote": "we have you on camera",
       "by": "model",
-      "verified": false
+      "verified": null
      },
      {
       "utterance": "X035-003",
       "fact": "F7",
       "kind": "asserts",
-      "quote": "7:15 PM",
+      "quote": "at 7:15 PM",
       "by": "model",
       "verified": true
      },
@@ -25529,7 +25849,7 @@
       "kind": "asks",
       "quote": "what happened to the laptop computer",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X035-012",
@@ -25543,9 +25863,9 @@
       "utterance": "X035-013",
       "fact": "F4",
       "kind": "asserts",
-      "quote": "missing from their car",
+      "quote": "The victim reported it missing from their car.",
       "by": "model",
-      "verified": false
+      "verified": null
      },
      {
       "utterance": "X035-014",
@@ -25567,7 +25887,7 @@
       "utterance": "X035-020",
       "fact": "F6",
       "kind": "asserts",
-      "quote": "Yeah, I was at the Crescent Mall parking garage.",
+      "quote": "I was at the Crescent Mall parking garage.",
       "by": "model",
       "verified": true
      },
@@ -25641,7 +25961,7 @@
       "kind": "asserts",
       "quote": "I found a blue gym bag on the ground next to the car and picked it up.",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X035-031",
@@ -25657,7 +25977,7 @@
       "kind": "asserts",
       "quote": "I left it by the trash cans near the elevator.",
       "by": "model",
-      "verified": null
+      "verified": false
      },
      {
       "utterance": "X035-034",
@@ -25688,14 +26008,6 @@
       "fact": "F3",
       "kind": "asks",
       "quote": "You mentioned you were nervous earlier. What made you nervous?",
-      "by": "search",
-      "verified": false
-     },
-     {
-      "utterance": "X035-017",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "If you cooperate, things will go easier for you.",
       "by": "search",
       "verified": false
      }
@@ -25758,7 +26070,7 @@
       },
       "pred": {
        "first": "interrogator",
-       "line": "X035-019"
+       "line": "X035-001"
       }
      },
      "F7": {
@@ -25799,7 +26111,7 @@
       "kind": "asserts",
       "quote": "My brother's",
       "by": "model",
-      "verified": true
+      "verified": false
      },
      {
       "utterance": "X036-008",
@@ -25839,7 +26151,7 @@
       "kind": "asserts",
       "quote": "That timepiece was an heirloom",
       "by": "model",
-      "verified": false
+      "verified": true
      },
      {
       "utterance": "X036-015",
@@ -25853,7 +26165,7 @@
       "utterance": "X036-016",
       "fact": "F4",
       "kind": "asserts",
-      "quote": "fibers from a grey hoodie",
+      "quote": "fibers from a grey hoodie snagged on the back gate",
       "by": "model",
       "verified": true
      },
@@ -25892,10 +26204,10 @@
      {
       "utterance": "X036-021",
       "fact": "F5",
-      "kind": "denies",
-      "quote": "My lip got busted playing basketball yesterday.",
+      "kind": "asserts",
+      "quote": "My lip got busted",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X036-024",
@@ -25916,7 +26228,7 @@
      {
       "utterance": "X036-026",
       "fact": "F6",
-      "kind": "denies",
+      "kind": "asserts",
       "quote": "Just rumors.",
       "by": "model",
       "verified": null
@@ -26021,7 +26333,7 @@
       "utterance": "X036-034",
       "fact": "F6",
       "kind": "denies",
-      "quote": "I don't know anything about any watch or bag or window",
+      "quote": "I don't know anything about any watch or bag or window.",
       "by": "model",
       "verified": null
      },
@@ -26050,18 +26362,18 @@
       "verified": false
      },
      {
-      "utterance": "X036-011",
-      "fact": "F3",
-      "kind": "asks",
-      "quote": "Did you see what was inside that dark gym sack?",
-      "by": "search",
-      "verified": false
-     },
-     {
       "utterance": "X036-014",
       "fact": "F4",
       "kind": "asks",
       "quote": "That timepiece was an heirloom, very hard to fence.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-018",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "You own one like that?",
       "by": "search",
       "verified": false
      },
@@ -26089,8 +26401,8 @@
        "line": "X036-003"
       },
       "pred": {
-       "first": "interrogator",
-       "line": "X036-003"
+       "first": "never",
+       "line": null
       }
      },
      "F2": {
@@ -26129,8 +26441,8 @@
        "line": "X036-020"
       },
       "pred": {
-       "first": "never",
-       "line": null
+       "first": "interrogator",
+       "line": "X036-020"
       }
      },
      "F6": {
@@ -26354,14 +26666,6 @@
       "verified": null
      },
      {
-      "utterance": "X037-030",
-      "fact": "F1",
-      "kind": "denies",
-      "quote": "I don't know.",
-      "by": "model",
-      "verified": null
-     },
-     {
       "utterance": "X037-031",
       "fact": "F6",
       "kind": "asks",
@@ -26394,6 +26698,14 @@
       "verified": null
      },
      {
+      "utterance": "X037-036",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "Around midnight.",
+      "by": "model",
+      "verified": null
+     },
+     {
       "utterance": "X037-037",
       "fact": "F7",
       "kind": "asserts",
@@ -26405,7 +26717,7 @@
       "utterance": "X037-038",
       "fact": "F7",
       "kind": "asserts",
-      "quote": "by three AM",
+      "quote": "home by three AM",
       "by": "model",
       "verified": true
      },
@@ -26557,7 +26869,7 @@
       "utterance": "X039-005",
       "fact": "F1",
       "kind": "asserts",
-      "quote": "That dark knapsack matches what our witness described",
+      "quote": "That dark knapsack matches what our witness described.",
       "by": "model",
       "verified": true
      },
@@ -26565,15 +26877,15 @@
       "utterance": "X039-006",
       "fact": "F1",
       "kind": "asserts",
-      "quote": "Lots of people have bags like that",
+      "quote": "Lots of people have bags like that.",
       "by": "model",
       "verified": null
      },
      {
       "utterance": "X039-007",
       "fact": "F2",
-      "kind": "asks",
-      "quote": "let's talk about the shattered window",
+      "kind": "asserts",
+      "quote": "let's talk about the shattered window.",
       "by": "model",
       "verified": true
      },
@@ -26620,7 +26932,7 @@
      {
       "utterance": "X039-013",
       "fact": "F3",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "We found a crowbar nearby. Was that yours?",
       "by": "model",
       "verified": true
@@ -26636,7 +26948,7 @@
      {
       "utterance": "X039-015",
       "fact": "F3",
-      "kind": "asserts",
+      "kind": "asks",
       "quote": "The pry bar had blood on it.",
       "by": "model",
       "verified": null
@@ -26800,6 +27112,22 @@
       "quote": "I told you, that's mine, but I didn't steal nothing.",
       "by": "model",
       "verified": null
+     },
+     {
+      "utterance": "X039-001",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Have a seat, Marcus. We need to talk.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X039-003",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Which part of the mall were you in?",
+      "by": "search",
+      "verified": false
      }
     ],
     "facts": {
@@ -26896,7 +27224,7 @@
      {
       "utterance": "X040-006",
       "fact": "F2",
-      "kind": "asks",
+      "kind": "asserts",
       "quote": "Let's talk about the red pickup truck parked out front.",
       "by": "model",
       "verified": true
@@ -26982,124 +27310,12 @@
       "verified": null
      },
      {
-      "utterance": "X040-020",
-      "fact": "F4",
-      "kind": "asks",
-      "quote": "You were wearing a black leather jacket that night, weren't you?",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X040-021",
-      "fact": "F4",
-      "kind": "denies",
-      "quote": "No, I don't own a dark leather coat.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-022",
-      "fact": "F4",
-      "kind": "asserts",
-      "quote": "We have footage of you in that black leather outerwear.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-023",
-      "fact": "F4",
-      "kind": "denies",
-      "quote": "That footage is wrong.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-024",
-      "fact": "F5",
-      "kind": "asks",
-      "quote": "Were you there at 2:00 AM?",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X040-025",
-      "fact": "F5",
-      "kind": "denies",
-      "quote": "I left the place way before two in the morning.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-026",
-      "fact": "F5",
-      "kind": "asks",
-      "quote": "Are you sure you didn't stick around until two o'clock?",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-027",
-      "fact": "F5",
-      "kind": "denies",
-      "quote": "Positive. I was already home by two AM.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-029",
-      "fact": "F6",
-      "kind": "asks",
-      "quote": "Did you notice he had a bruised left cheek?",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X040-030",
-      "fact": "F6",
-      "kind": "denies",
-      "quote": "I never saw any mark on his face.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-031",
-      "fact": "F6",
-      "kind": "asserts",
-      "quote": "The medical report says he had a swollen left cheek.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-032",
-      "fact": "F6",
-      "kind": "denies",
-      "quote": "Then someone else gave him that bruise on his left side, not me.",
-      "by": "model",
-      "verified": null
-     },
-     {
-      "utterance": "X040-035",
-      "fact": "F7",
-      "kind": "asserts",
-      "quote": "I also want to point out that I lost my green knit beanie somewhere.",
-      "by": "model",
-      "verified": true
-     },
-     {
-      "utterance": "X040-036",
-      "fact": "F7",
-      "kind": "asks",
-      "quote": "A dark green winter hat?",
-      "by": "model",
-      "verified": true
-     },
-     {
       "utterance": "X040-037",
       "fact": "F7",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "I couldn't find it when I left.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X040-038",
@@ -27107,15 +27323,15 @@
       "kind": "asserts",
       "quote": "We found a green wool cap near the scene.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X040-039",
       "fact": "F7",
-      "kind": "asserts",
+      "kind": "assents",
       "quote": "That's probably mine.",
       "by": "model",
-      "verified": null
+      "verified": true
      },
      {
       "utterance": "X040-042",
@@ -27158,20 +27374,12 @@
       "verified": false
      },
      {
-      "utterance": "X040-031",
+      "utterance": "X040-036",
       "fact": "F7",
       "kind": "asks",
-      "quote": "The medical report says he had a swollen left cheek.",
+      "quote": "A dark green winter hat?",
       "by": "search",
-      "verified": false
-     },
-     {
-      "utterance": "X040-033",
-      "fact": "F7",
-      "kind": "asks",
-      "quote": "Is that your final answer?",
-      "by": "search",
-      "verified": false
+      "verified": true
      }
     ],
     "facts": {
@@ -27241,8 +27449,8 @@
        "line": "X040-035"
       },
       "pred": {
-       "first": "suspect",
-       "line": "X040-035"
+       "first": "interrogator",
+       "line": "X040-036"
       }
      }
     }

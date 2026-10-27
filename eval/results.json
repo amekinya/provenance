@@ -23,34 +23,35 @@
   "one_prompt": {
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.818,
-   "line_acc": 0.749,
-   "investigator_first_called_suspect_first": 1,
+   "speaker_acc": 0.798,
+   "line_acc": 0.768,
+   "investigator_first_called_suspect_first": 2,
    "confusion": {
-    "suspect->suspect": 53,
-    "never->never": 22,
-    "interrogator->interrogator": 91,
-    "interrogator->never": 14,
-    "suspect->never": 3,
-    "suspect->interrogator": 7,
-    "never->interrogator": 11,
-    "interrogator->suspect": 1,
+    "suspect->suspect": 55,
+    "never->never": 12,
+    "interrogator->interrogator": 95,
+    "interrogator->never": 9,
+    "suspect->never": 2,
+    "suspect->interrogator": 6,
+    "never->interrogator": 21,
+    "interrogator->suspect": 2,
     "never->suspect": 1
    }
   },
   "provenance": {
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.734,
-   "line_acc": 0.69,
+   "speaker_acc": 0.773,
+   "line_acc": 0.759,
    "investigator_first_called_suspect_first": 1,
    "confusion": {
-    "suspect->suspect": 43,
-    "never->never": 34,
-    "interrogator->interrogator": 72,
-    "interrogator->never": 33,
-    "suspect->interrogator": 11,
-    "suspect->never": 9,
+    "suspect->suspect": 47,
+    "never->never": 33,
+    "interrogator->interrogator": 77,
+    "suspect->never": 7,
+    "suspect->interrogator": 9,
+    "interrogator->never": 28,
+    "never->interrogator": 1,
     "interrogator->suspect": 1
    }
   }
@@ -62,14 +63,14 @@
    "calls": 0
   },
   "one_prompt": {
-   "seconds": 85.1,
-   "cost_usd": 0.2671,
+   "seconds": 53.9,
+   "cost_usd": 0.2468,
    "calls": 29
   },
   "provenance": {
-   "seconds": 343.4,
-   "cost_usd": 1.9795,
-   "calls": 339
+   "seconds": 541.7,
+   "cost_usd": 2.2643,
+   "calls": 252
   }
  },
  "rows": [
@@ -98,43 +99,44 @@
    "method": "Nemotron 3 Ultra, one prompt per interview",
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.818,
-   "line_acc": 0.749,
-   "investigator_first_called_suspect_first": 1,
+   "speaker_acc": 0.798,
+   "line_acc": 0.768,
+   "investigator_first_called_suspect_first": 2,
    "confusion": {
-    "suspect->suspect": 53,
-    "never->never": 22,
-    "interrogator->interrogator": 91,
-    "interrogator->never": 14,
-    "suspect->never": 3,
-    "suspect->interrogator": 7,
-    "never->interrogator": 11,
-    "interrogator->suspect": 1,
+    "suspect->suspect": 55,
+    "never->never": 12,
+    "interrogator->interrogator": 95,
+    "interrogator->never": 9,
+    "suspect->never": 2,
+    "suspect->interrogator": 6,
+    "never->interrogator": 21,
+    "interrogator->suspect": 2,
     "never->suspect": 1
    },
-   "seconds": 85.1,
-   "cost_usd": 0.2671,
+   "seconds": 53.9,
+   "cost_usd": 0.2468,
    "calls": 29
   },
   {
    "method": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.734,
-   "line_acc": 0.69,
+   "speaker_acc": 0.773,
+   "line_acc": 0.759,
    "investigator_first_called_suspect_first": 1,
    "confusion": {
-    "suspect->suspect": 43,
-    "never->never": 34,
-    "interrogator->interrogator": 72,
-    "interrogator->never": 33,
-    "suspect->interrogator": 11,
-    "suspect->never": 9,
+    "suspect->suspect": 47,
+    "never->never": 33,
+    "interrogator->interrogator": 77,
+    "suspect->never": 7,
+    "suspect->interrogator": 9,
+    "interrogator->never": 28,
+    "never->interrogator": 1,
     "interrogator->suspect": 1
    },
-   "seconds": 343.4,
-   "cost_usd": 1.9795,
-   "calls": 339
+   "seconds": 541.7,
+   "cost_usd": 2.2643,
+   "calls": 252
   }
  ],
  "note": "29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers."

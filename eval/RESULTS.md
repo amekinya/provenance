@@ -5,5 +5,5 @@
 | Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
 |---|---|---|---|---|---|
 | Keyword match (no model) | 56% | 55% | 3 | 0.1 s | $0.000 |
-| Nemotron 3 Ultra, one prompt per interview | 82% | 75% | 1 | 85.1 s | $0.267 |
-| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 73% | 69% | 1 | 343.4 s | $1.980 |
+| Nemotron 3 Ultra, one prompt per interview | 80% | 77% | 2 | 53.9 s | $0.247 |
+| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 77% | 76% | 1 | 541.7 s | $2.264 |
