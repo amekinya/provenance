@@ -244,3 +244,92 @@ def test_prior_contact_quote_is_the_cue_sentence_and_the_detail_sentence():
     assert "“We talked about cleaning somethin' up in that garage. You told me there was blood.”" in q
     # every quoted part is printed in the line as is
     assert all(part in line for part in q.replace("”", "").split(" … “") for part in [part.lstrip("“")])
+
+
+def _two_sessions():
+    return [Session("A", "Day 1", date(2006, 2, 27)), Session("B", "Day 3", date(2006, 3, 1))]
+
+
+def test_prior_contact_only_when_the_cue_sentence_names_it_and_nothing_recorded_did():
+    burn = Fact("F1", "Things burned in the burn barrel", must=[["burn", "burned"], ["barrel"]])
+    cue = Utterance("B1", "B", 10, "DET", "interrogator", "OK. We talked last er Monday we talked a little about some things a burn "
+                    "barrel out front do you remember anything about that burn barrel?", "619")
+    said = Utterance("B2", "B", 11, "KID", "suspect", "He burned stuff in the barrel.", "620")
+    m = [Mention("B2", "F1", "asserts", verified=True)]
+    rep = by_fact(audit(Case("t", "T", "KID", _two_sessions(), [cue, said], [burn], m)))
+    assert rep["F1"]["origin"] == "prior_contact" and "We talked last er Monday" in rep["F1"]["why"]
+    # the same cue, but the recorded session already has it: the recorded line decides by order
+    early = Utterance("A1", "A", 1, "DET", "interrogator", "Was anything burned in the barrel?", "470")
+    rep = by_fact(audit(Case("t", "T", "KID", _two_sessions(), [early, cue, said], [burn], m)))
+    assert rep["F1"]["origin"] == "interrogator_first" and rep["F1"]["first_interrogator"]["utterance"] == "A1"
+
+
+def test_pizza_chatter_and_told_us_last_time_are_not_prior_contact():
+    s = _two_sessions()
+    rope = Fact("F1", "Tied up with rope", must=[["tie", "tied"], ["rope"]])
+    u = [Utterance("B1", "B", 10, "DET", "interrogator", "You ate that whole pizza the other night, and you sure you don't want another sandwich?", "667"),
+         Utterance("B2", "B", 11, "KID", "suspect", "He tied her up with rope.", "667")]
+    rep = by_fact(audit(Case("t", "T", "KID", s, u, [rope], [Mention("B2", "F1", "asserts", verified=True)])))
+    assert rep["F1"]["origin"] == "suspect_first"
+    # the cue names something else in another sentence of the line: investigators first, and the card says why it isn't one
+    u = [Utterance("B1", "B", 10, "DET", "interrogator", "I talked to ya the other night about school. Did he tie her up with a rope?", "667"),
+         Utterance("B2", "B", 11, "KID", "suspect", "Yeah.", "667")]
+    rep = by_fact(audit(Case("t", "T", "KID", s, u, [rope], [Mention("B2", "F1", "assents", verified=True)])))
+    assert rep["F1"]["origin"] == "interrogator_first" and "doesn't name the detail" in rep["F1"]["why"]
+    # "You told us last time ..." when last time was recorded: his recorded line decides by order
+    carry = Fact("F2", "He helped carry her out of the bedroom", must=[["carry", "carried"], ["bedroom"]])
+    u = [Utterance("A1", "A", 1, "KID", "suspect", "I helped carry her out of the bedroom.", "470"),
+         Utterance("B1", "B", 10, "DET", "interrogator", "You told us last time you helped carry her out of the bedroom. Remember that?", "771"),
+         Utterance("B2", "B", 11, "KID", "suspect", "Yeah.", "771")]
+    rep = by_fact(audit(Case("t", "T", "KID", s, u, [carry], [Mention("A1", "F2", "asserts", verified=True)])))
+    assert rep["F2"]["origin"] == "suspect_first" and rep["F2"]["first_suspect"]["utterance"] == "A1"
+
+
+def test_public_only_when_reports_state_every_part():
+    s = _two_sessions()
+    u = [Utterance("A1", "A", 1, "DET", "interrogator", "What did you put on the fire?", "442"),
+         Utterance("A2", "A", 2, "KID", "suspect", "Some branches and some tires.", "442")]
+    court = {"what": "Avery burned tires that night", "source": "Decision and Order", "page": "69", "court_list": True, "before": "2006-03-01"}
+    m = [Mention("A2", "F1", "asserts", verified=True)]
+    must = [["tire", "tires"], ["branch", "branches"], ["fire", "burn"]]
+    # tires and fire reported, branches not: the branches decide, and he named them first
+    f = Fact("F1", "Tires and branches on the fire", must=must, reports=[court | {"covers": [0, 2]}], not_reported="the branches")
+    r = by_fact(audit(Case("t", "T", "KID", s, u, [f], m)))["F1"]
+    assert r["origin"] == "suspect_first" and r["why"].startswith("Partly public: Avery burned tires that night, reported before March 1, 2006 (Decision p. 69)")
+    assert "Not reported: the branches" in r["why"] and "2005" not in r["why"]
+    # every part reported: public
+    f = Fact("F1", "Tires and branches on the fire", must=must, reports=[court | {"covers": [0, 1, 2]}])
+    assert by_fact(audit(Case("t", "T", "KID", s, u, [f], m)))["F1"]["origin"] == "public"
+    # a report it could only be inferred from: the transcript decides, and the card lists it
+    f = Fact("F1", "Tires and branches on the fire", must=must, related_reports=[{"what": "tires were found", "source": "Decision and Order", "page": "69"}])
+    r = by_fact(audit(Case("t", "T", "KID", s, u, [f], m)))["F1"]
+    assert r["origin"] != "public" and "The Decision lists related reports: tires were found (p. 69)" in r["why"]
+
+
+def test_long_lines_quote_the_sentence_with_the_detail_and_court_notes_cite_pages():
+    s = [Session("A", "Day 1", date(2006, 2, 27))]
+    stmt = ("(read aloud by Wiegert from Brendan's written statement; printed speaker: WIEGERT) Is I got off the bus at 3:45 and seen "
+            "her jeep down at Steven's house. Then I went in my house and played Playstation. Then he stabbed her in the stomach.")
+    u = [Utterance("A1", "A", 1, "DET", "interrogator", "Something with the head. What else?", "584"),
+         Utterance("A2", "A", 2, "KID", "suspect", stmt, "470")]
+    f = Fact("F1", "Stabbed in the stomach", must=[["stomach"], ["stab", "stabbed"]],
+             court_notes=[{"page": "70", "text": "notes the prompt “Something with the head” before he said it", "quotes": ["Something with the head"]}])
+    r = by_fact(audit(Case("t", "T", "KID", s, u, [f], [Mention("A2", "F1", "asserts", verified=True)])))["F1"]
+    assert r["first_suspect"]["quote"] == "Then he stabbed her in the stomach."
+    assert r["first_suspect"]["read_aloud"].startswith("read aloud by Wiegert from Brendan's written statement")
+    assert r["court_notes"][0]["text"] == "The Decision (p. 70) notes the prompt “Something with the head” (p. 584) before he said it."
+
+
+def test_memo_card_text_carries_label_words_and_his_answers():
+    from app.ai.tasks import card_text, memo_problems
+    f = {"why": "The suspect said it first (Day 1, p. 579).", "origin": "suspect_first", "court_notes": [],
+         "label_words_from_investigators": [{"word": "unconscious", "lines": [{"utterance": "A3", "page": "579", "speaker": "WIEGERT"}]}]}
+    t = card_text(f)
+    assert "“unconscious”, a word of the detail, came from investigators near his statement: Wiegert (p. 579)." in t
+    g = {"why": "Investigators raised it (Day 3, p. 662), but the suspect never stated or agreed to it.", "origin": "never_adopted",
+         "his_responses": [{"utterance": "B2", "page": "663", "quote": "(shakes head “no”) uh uh"},
+                           {"utterance": "B3", "page": "663", "quote": "No but I don't know where it was."}]}
+    t = card_text(g)
+    assert "he answered “uh uh” (p. 663) and “No but I don't know where it was.” (p. 663)." in t
+    assert memo_problems(t, ["(shakes head “no”) uh uh", "No but I don't know where it was."]) == []
+    assert memo_problems("Eight came from him first, with nothing earlier supplying them.", []) != []

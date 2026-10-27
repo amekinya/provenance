@@ -3,7 +3,7 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const CHIP = { cannot_corroborate: "Can't corroborate", unclear: "Unclear", may_corroborate: "Suspect said it first", not_adopted: "Not adopted" };
   const pg = (x) => (x && x.page_end && x.page_end !== x.page ? `pp. ${esc(x.page)}\u2013${esc(x.page_end)}` : /^PDF/.test((x && x.page) || "") ? esc(x.page) : `p. ${esc((x && x.page) || "?")}`);
-  const lineList = (xs, n) => xs.slice(0, n).map((x) => `${pg(x)} “${esc((x.quote || "").slice(0, 110))}”${x.by === "key words" ? " (matched by key words)" : ""}`).join("; ");
+  const lineList = (xs, n) => xs.slice(0, n).map((x) => `${pg(x)} ${x.read_aloud ? `[${esc(x.read_aloud)}] ` : ""}“${esc((x.quote || "").slice(0, 110))}”${x.by === "key words" ? " (matched by key words)" : ""}`).join("; ");
 
   const ORDER = ["interrogator_first", "planted_adopted", "public", "prior_contact", "suspect_first", "never_adopted", "not_mentioned"];
   const KIND = { asks: "asks", asserts: "says", denies: "denies", assents: "agrees" };
@@ -184,12 +184,15 @@
     if (f.adopted_by_assent) stats.push("He first adopted it by <b>agreeing</b> to a question");
     if (f.crossed_sessions) stats.push("Supplied in an <b>earlier interview</b>");
     if (f.fact.public_before) stats.push(`Public since <b>${esc(f.fact.public_before)}</b>`);
+    if (f.origin !== "public" && (f.fact.reports || []).length) stats.push("<b>Partly public</b>");
     d.innerHTML = `<h3>${esc(f.fact.label)} <span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span></h3>
       <p class="why">${esc(f.why)}</p>
       ${stats.length ? `<div class="stats">${stats.map((s) => `<span>${s}</span>`).join("")}</div>` : ""}
       ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail.replace(/\.$/, ""))}.${f.fact.source ? ` Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
       ${(f.investigator_lines_before || []).length ? `<p class="fine"><b>Investigator lines before his first statement</b> (earliest ${f.investigator_lines_before.length}): ${lineList(f.investigator_lines_before, 3)}</p>` : ""}
       ${(f.nearby_prompts || []).length ? `<p class="fine"><b>Nearby investigator prompts</b> (within 10 turns before his first statement, naming part of it): ${lineList(f.nearby_prompts, 5)}</p>` : ""}
+      ${(f.court_notes || []).map((n) => `<p class="fine"><b>The court's observation:</b> ${esc(n.text)}</p>`).join("")}
+      ${(f.earlier_related_mentions || []).length ? `<p class="fine"><b>Earlier related investigator mentions</b> (before his first statement, naming the detail's most specific part, not all of it): ${lineList(f.earlier_related_mentions, 3)}</p>` : ""}
       ${(f.label_words_from_investigators || []).map((w) => `<p class="fine"><b>“${esc(w.word)}”</b>, from the detail's wording, came from investigators near his statement: ${lineList(w.lines, 3)}</p>`).join("")}
       ${(f.related_statements || []).length ? `<p class="fine"><b>His related earlier statements</b> (part of the detail${f.related_statements_total > f.related_statements.length ? `; ${f.related_statements_total} in all` : ""}): ${lineList(f.related_statements, 3)}</p>` : ""}
       ${(f.his_responses || []).length ? `<p class="fine"><b>What he answered when it was put to him</b>: ${lineList(f.his_responses, 3)}</p>` : ""}
@@ -230,7 +233,7 @@
     const checked = ev.by === "key words" ? `<span class="vchk">matched by key words${ev.partial ? " (part of the detail)" : ""}</span>`
       : ev.first ? (ev.verified === true ? `<span class="vchk">re-checked by Nemotron 3 Ultra</span>` : ev.verified === null || ev.verified === undefined ? `<span class="vchk no">not re-checked</span>` : "") : "";
     const note = ev.kind_note ? `<span class="vchk no">${esc(ev.kind_note)}</span>` : "";
-    const quote = ev.sensitive ? `<q class="masked" data-full="${esc(ev.quote)}">Graphic passage hidden</q> <button data-reveal>Show</button>` : `<q>${esc(ev.quote)}</q>`;
+    const quote = (ev.read_aloud ? `<span class="vchk">${esc(ev.read_aloud)}</span><br>` : "") + (ev.sensitive ? `<q class="masked" data-full="${esc(ev.quote)}">Graphic passage hidden</q> <button data-reveal>Show</button>` : `<q>${esc(ev.quote)}</q>`);
     return `<li class="ev ${cls}"><i class="mk ${mark}" aria-hidden="true" style="margin-top:6px"></i>
       <div><span class="who">${esc(ev.speaker)}</span> ${KIND[ev.kind] || esc(ev.kind)}${first}${checked}${note}<br>${quote}
         <div><button data-ctx="${esc(ev.utterance)}">Read in context</button></div><div class="ctxbox"></div></div>
@@ -262,6 +265,7 @@
     $("#memoSec").hidden = !m;
     if (!m) return;
     $("#memo").innerHTML = `<p>${esc(m.summary)}</p><ul>${m.key_points.map((k) => `<li>${esc(k)}</li>`).join("")}</ul>
+      ${(m.details || []).length ? `<details><summary>Every detail, as its card states it (${m.details.length})</summary><ul>${m.details.map((k) => `<li>${esc(k)}</li>`).join("")}</ul></details>` : ""}
       <p class="fine"><b>Limits:</b> ${m.limits.map(esc).join(" ")}</p><p class="fine">${m.by === "ultra" || !m.by ? "Written by Nemotron 3 Ultra from the findings above only." : esc(m.by)}</p>`;
   }
 

@@ -249,11 +249,41 @@ def stance(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str
     return {c["key"]: c["stance"] for c in out.get("checks", [])}
 
 
+def sense(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str, str]:
+    """The suspect-side check with the sense of the line: items [{key, label, must, before, question, between, text}] ->
+    {key: states|agrees|denies|other}. Code has already found the detail's key words in his line or in the question it
+    answers; the model judges only whether, read with that question and the 2 lines before it, he states or agrees to
+    THIS detail, or the words put it somewhere else or are about a different thing."""
+    def one(i):
+        return (f"[{i['key']}] Detail: {i['label']} (key words: " + " + ".join("(" + " | ".join(g) + ")" for g in i["must"]) + ")"
+                f"\nTwo lines before the question: {i['before'] or '(none)'}\nThe question he answers: {i['question'] or '(none)'}"
+                + (f"\nLines after the question: {i['between']}" if i.get("between") else "") + f"\nHis line: {i['text']}")
+    body = "\n\n".join(one(i) for i in items)
+    def ask(reasoning: bool) -> dict:
+        return chat_json(settings.ultra, [
+            {"role": "system", "content": "You read lines a suspect said in an interrogation. For each item, read his line with the question it "
+                                          "answers and the two lines before that question, and answer only: is he STATING this detail, AGREEING "
+                                          "to it, DENYING it, or OTHER? Answer OTHER when the line puts the detail somewhere else than the detail "
+                                          "says (near, by or outside a place instead of in or inside it), or is about a different object, person "
+                                          "or event (for example Avery's own Suzuki instead of her jeep, or the clothes being bloody instead of "
+                                          "burned), or he only asks or guesses aloud. A short answer to a question about the detail states it "
+                                          "('With the shovel.' to 'How did he break the bones?'). A line he reads from his own written statement "
+                                          "is his statement. Don't judge whether it's true or complete."},
+            {"role": "user", "content": body}],
+            schema=STANCE_SCHEMA, purpose="Suspect stance with sense", reasoning=reasoning, max_tokens=8000 if reasoning else 2000, calls=calls)
+    try:
+        out = ask(VERIFY_REASONING)
+    except LiveModelUnavailable as e:
+        print(f"  sense check (reasoning on) failed: {str(e)[:120]}; retrying without reasoning")
+        out = ask(False)
+    return {c["key"]: c["stance"] for c in out.get("checks", [])}
+
+
 # ---------------------------------------------------------------------------------------------------------------------
 # 5. Memo (Ultra), from findings only
 # ---------------------------------------------------------------------------------------------------------------------
 SUMMARY_SCHEMA = {"type": "object", "properties": {"summary": {"type": "string"}}, "required": ["summary"], "additionalProperties": False}
-BANNED = re.compile(r"\b(fact[- ]feeding|fed (him|to him)|volunteer\w*|repeated\w*)\b", re.I)
+BANNED = re.compile(r"\b(fact[- ]feeding|fed (him|to him)|volunteer\w*|repeated\w*|suppl(y|ied|ies|ying)|(no|nothing) earlier)\b", re.I)
 _QUOTE = re.compile(r"[\"\u201c]([^\"\u201d]{4,})[\"\u201d]")
 
 
@@ -273,31 +303,53 @@ def memo_problems(text: str, lines: list[str]) -> list[str]:
     return probs
 
 
+def card_text(f: dict) -> str:
+    """A detail's card in words, exactly as the page states it: the ledger's explanation, the words of the detail that
+    came from investigators near his statement, the court's own observations, and, for a detail he never adopted,
+    what he answered."""
+    from app.engine.ledger import pages_of, spoken  # noqa: PLC0415
+
+    parts = [f["why"]]
+    for w in f.get("label_words_from_investigators") or []:
+        who = "; ".join(f"{(l.get('speaker') or 'an investigator').title()} ({pages_of(l)})" for l in w["lines"])
+        parts.append(f"“{w['word']}”, a word of the detail, came from investigators near his statement: {who}.")
+    parts += [n["text"] for n in f.get("court_notes") or []]
+    if f["origin"] == "never_adopted" and f.get("his_responses"):
+        said = [f"“{spoken(r['quote'])}” ({pages_of(r)})" for r in f["his_responses"] if spoken(r["quote"])]
+        if said:
+            parts.append("When it was put to him he answered " + (", ".join(said[:-1]) + " and " + said[-1] if len(said) > 1 else said[0]) + ".")
+    return " ".join(parts)
+
+
 def memo_points(report: dict) -> tuple[list[str], list[str]]:
     """Key points and limits, written by code with a fixed rule so both directions are always covered: the 3 details
     investigators said first with the most investigator mentions before his first statement, then the first 3 details
-    that came from him first in the record (in fact-list order), then public and earlier-statement details, then the
-    detail he never adopted. Each point is the ledger's own explanation, with its page citations."""
+    that came from him first in the record (in fact-list order), then each public, earlier-statement and never-adopted
+    detail. Each point is the detail's card text (card_text), with its page citations and qualifiers."""
     facts = report["facts"]
     inv = sorted((f for f in facts if f["origin"] == "interrogator_first"),
                  key=lambda f: (-(f["interrogator_mentions_before_suspect"] or 0), f["fact"]["id"]))[:3]
     his = [f for f in facts if f["origin"] == "suspect_first"][:3]
-    pts = [f"Investigators first: {f['fact']['label']}. {f['why']}" for f in inv]
-    pts += [f"From him first in the record: {f['fact']['label']}. {f['why']}" for f in his]
-    pub = [f["fact"]["label"] for f in facts if f["origin"] == "public"]
-    if pub:
-        pts.append(f"Reported publicly before the interviews ({len(pub)}): " + "; ".join(pub) + ".")
-    prior = [f for f in facts if f["origin"] == "prior_contact"]
-    pts += [f"May trace to an earlier conversation with no public transcript: {f['fact']['label']}. {f['why']}" for f in prior]
-    never = [f for f in facts if f["origin"] in ("never_adopted",)]
-    pts += [f"Never adopted: {f['fact']['label']}. {f['why']}" for f in never]
+    pts = [f"Investigators first: {f['fact']['label']}. {card_text(f)}" for f in inv]
+    pts += [f"From him first in the record: {f['fact']['label']}. {card_text(f)}" for f in his]
+    pts += [f"Public before the interviews: {f['fact']['label']}. {card_text(f)}" for f in facts if f["origin"] == "public"]
+    pts += [f"May trace to an earlier conversation with no public transcript: {f['fact']['label']}. {card_text(f)}"
+            for f in facts if f["origin"] == "prior_contact"]
+    pts += [f"Never adopted: {f['fact']['label']}. {card_text(f)}" for f in facts if f["origin"] == "never_adopted"]
     limits = ["Draft for counsel's review: investigator lines are matched by key words in code; the suspect's lines were labeled by "
-              "Nemotron 3 Ultra and checked by code, and borderline calls on his side can change between runs.",
-              "Unrecorded contacts can't be traced; a detail that may come from one is marked unclear, and nothing is said about what "
-              "happened in them.",
-              "'Already public' relies on the reports the court listed and the news we could date.",
+              "Nemotron 3 Ultra, checked by code, and the lines that decide a detail re-checked by Ultra with the question they answer; "
+              "borderline calls on his side can change between runs.",
+              "Unrecorded contacts can't be traced; a detail counts as possibly from one only when an investigator's sentence about an "
+              "earlier conversation names it, or a court record reports such a statement, and nothing is said about what happened in them.",
+              "'Public' means the reports the court listed (Decision pp. 69-70) or news we could date state every part of the detail; a "
+              "report it could only be inferred from is shown as related, and the transcript decides.",
               "Key terms decide what counts as stating a detail; a reader should check each cited line."]
     return pts, limits
+
+
+def memo_details(report: dict) -> list[str]:
+    """Every detail, in fact-list order, as its card states it."""
+    return [f"{f['fact']['label']} ({f['origin_label']}). {card_text(f)}" for f in report["facts"]]
 
 
 def write_memo(report: dict, calls: list[CallRecord] | None = None, lines: list[str] | None = None) -> dict:
@@ -316,8 +368,11 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None, lines: list[
                                           "interrogation. Use ONLY the findings given. Open by saying it is a draft for counsel's review, computed "
                                           "from the record with machine-checked lines. Cover both directions: details investigators said first and "
                                           "details that came from him first in the record. Never claim the confession is false or true, never "
-                                          "describe what happened in unrecorded contacts, and don't use the words 'volunteered', 'fact-feeding' "
-                                          "or 'repeated' (say 'questions that named the detail'). Don't quote transcript lines."},
+                                          "describe what happened in unrecorded contacts, and don't use the words 'volunteered', 'fact-feeding', "
+                                          "'repeated' or 'supplied' (say 'questions that named the detail'). For details that came from him first, "
+                                          "say exactly that ('came from him first in the record'); never say nothing earlier supplied them. Call a "
+                                          "detail public only if the findings say 'Public:'; a 'Partly public' detail is partly public. Don't quote "
+                                          "transcript lines."},
             {"role": "user", "content": f"Findings: {json.dumps(brief)[:40000]}"}]
     summary, probs = "", ["not written"]
     for _ in range(2):
@@ -332,8 +387,10 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None, lines: list[
         summary = (f"Draft for counsel's review, computed from the record with machine-checked lines. {report['headline']} "
                    f"Investigators said {c['interrogator_first']} details first; {c['suspect_first']} came from him first in the record.")
     point_checks = [f"{x[:40]}…: {pr}" for x in pts for pr in memo_problems(x, lines or [])] if lines else []
-    return {"summary": summary, "key_points": pts, "limits": limits, "by": "summary: Nemotron 3 Ultra (checked by code); points: code",
-            "summary_checks": probs, "point_checks": point_checks}
+    details = memo_details(report)
+    point_checks += [f"{x[:40]}…: {pr}" for x in details for pr in memo_problems(x, lines or [])] if lines else []
+    return {"summary": summary, "key_points": pts, "details": details, "limits": limits,
+            "by": "summary: Nemotron 3 Ultra (checked by code); points and details: code", "summary_checks": probs, "point_checks": point_checks}
 
 
 # ---------------------------------------------------------------------------------------------------------------------

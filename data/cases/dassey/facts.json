@@ -74,7 +74,7 @@
    "in the back of the car",
    "the cargo area"
   ],
-  "source": "Decision and Order pp. 9-10, 14, citing ECF 19-25 at 26, 71-72. Public: 'Halbach's blood was found in the cargo area of the RAV4' was reported before March 1, 2006 (Decision and Order p. 70, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005).",
+  "source": "Decision and Order pp. 9-10, 14, citing ECF 19-25 at 26, 71-72. Public: 'Halbach's blood was found in the cargo area of the RAV4' was reported before March 1, 2006 (Decision and Order p. 70; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005).",
   "must": [
    [
     "in the back",
@@ -93,8 +93,15 @@
     "suv"
    ]
   ],
-  "public_before": "2005-12-07",
-  "public_what": "Halbach's blood in the cargo area of the RAV4 (Decision and Order p. 70)"
+  "public_before": null,
+  "public_what": "",
+  "related_reports": [
+   {
+    "what": "Halbach's blood was found in the cargo area of the RAV4",
+    "source": "Decision and Order",
+    "page": "70"
+   }
+  ]
  },
  {
   "id": "F05",
@@ -201,6 +208,16 @@
    [
     "hair"
    ]
+  ],
+  "court_notes": [
+   {
+    "page": "70",
+    "text": "notes that investigators told him again and again that they knew “something else was done” and “Something with the head” before he first said Avery cut off her hair",
+    "quotes": [
+     "something else was done",
+     "Something with the head"
+    ]
+   }
   ]
  },
  {
@@ -226,6 +243,13 @@
     "sliced",
     "knife"
    ]
+  ],
+  "court_notes": [
+   {
+    "page": "70",
+    "text": "notes that more prompting from the investigators led to his saying that, at Avery's direction, he cut her throat",
+    "quotes": []
+   }
   ]
  },
  {
@@ -250,6 +274,15 @@
    [
     "head"
    ]
+  ],
+  "court_notes": [
+   {
+    "page": "70–71",
+    "text": "notes that he didn't say it despite more prompting until Wiegert asked “Who shot her in the head?”",
+    "quotes": [
+     "Who shot her in the head?"
+    ]
+   }
   ]
  },
  {
@@ -261,7 +294,7 @@
    "his rifle",
    "the gun from the rack"
   ],
-  "source": "Decision and Order p. 14, citing ECF 19-25 at 63-67, 103. Firearms found in Avery's bedroom were reported (Badger Herald, Nov 16, 2005) but not linked to a shooting. Partly public: '11 rifle casings were found in Avery's garage' and 'two rifles were recovered from Avery's bedroom' were reported before March 1, 2006 (Decision and Order pp. 69–70, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005); the .22 caliber was not in that list.",
+  "source": "Decision and Order p. 14, citing ECF 19-25 at 63-67, 103. Firearms found in Avery's bedroom were reported (Badger Herald, Nov 16, 2005) but not linked to a shooting. Partly public: '11 rifle casings were found in Avery's garage' and 'two rifles were recovered from Avery's bedroom' were reported before March 1, 2006 (Decision and Order pp. 69–70; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005); the .22 caliber was not in that list.",
   "must": [
    [
     "shot",
@@ -277,8 +310,20 @@
     "twenty two"
    ]
   ],
-  "public_before": "2005-12-07",
-  "public_what": "rifle casings in Avery's garage and two rifles from his bedroom, not the .22 caliber (Decision and Order pp. 69–70)"
+  "public_before": null,
+  "public_what": "",
+  "related_reports": [
+   {
+    "what": "11 rifle casings were found in Avery's garage",
+    "source": "Decision and Order",
+    "page": "69"
+   },
+   {
+    "what": "two rifles were recovered from Avery's bedroom",
+    "source": "Decision and Order",
+    "page": "69–70"
+   }
+  ]
  },
  {
   "id": "F12",
@@ -289,7 +334,7 @@
    "on the garage floor",
    "shell casings in the garage"
   ],
-  "source": "Decision and Order pp. 14-15, citing ECF 19-25 at 72-73. Investigators told Dassey they had found shell casings in the garage (ECF 19-25 at 73). Public: '11 rifle casings were found in Avery's garage' was reported before March 1, 2006 (Decision and Order p. 69, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005).",
+  "source": "Decision and Order pp. 14-15, citing ECF 19-25 at 72-73. Investigators told Dassey they had found shell casings in the garage (ECF 19-25 at 73). Public: '11 rifle casings were found in Avery's garage' was reported before March 1, 2006 (Decision and Order p. 69; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005).",
   "must": [
    [
     "shot",
@@ -308,8 +353,24 @@
     "garage"
    ]
   ],
-  "public_before": "2005-12-07",
-  "public_what": "11 rifle casings found in Avery's garage (Decision and Order p. 69)"
+  "public_before": null,
+  "public_what": "",
+  "related_reports": [
+   {
+    "what": "11 rifle casings were found in Avery's garage",
+    "source": "Decision and Order",
+    "page": "69"
+   }
+  ],
+  "court_notes": [
+   {
+    "page": "71",
+    "text": "notes that he first said the shooting happened outdoors and that she was never in the garage, then said it happened in the garage, and that Fassbender said they “got a number of shell casings that we found in that garage” before he said Avery shot her about ten times on the garage floor",
+    "quotes": [
+     "got a number of shell casings that we found in that garage"
+    ]
+   }
+  ]
  },
  {
   "id": "F13",
@@ -323,8 +384,8 @@
    "body parts in the fire",
    "bones in the fire"
   ],
-  "public_before": "2005-11-16",
-  "source": "Decision and Order pp. 3, 7, 10, 14. Public: 'human teeth and bones in a burn pit behind Steven Avery's garage' (Badger Herald, Nov 16, 2005); 'an attempt was made to dispose of a body by an incendiary means' (CNN, Nov 10, 2005). Also listed as reported before March 1, 2006: 'her remains were found in Avery's burn pit along with remnants of clothing' (Decision and Order p. 69, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005).",
+  "public_before": null,
+  "source": "Decision and Order pp. 3, 7, 10, 14. Public: 'human teeth and bones in a burn pit behind Steven Avery's garage' (Badger Herald, Nov 16, 2005); 'an attempt was made to dispose of a body by an incendiary means' (CNN, Nov 10, 2005). Also listed as reported before March 1, 2006: 'her remains were found in Avery's burn pit along with remnants of clothing' (Decision and Order p. 69; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005).",
   "must": [
    [
     "body",
@@ -349,7 +410,29 @@
     "cooking"
    ]
   ],
-  "public_what": "remains in Avery's burn pit (Decision and Order p. 69; Badger Herald, Nov 16, 2005)"
+  "public_what": "",
+  "reports": [
+   {
+    "what": "her remains were found in Avery's burn pit",
+    "source": "Decision and Order",
+    "page": "69",
+    "court_list": true,
+    "before": "2006-03-01",
+    "covers": [
+     0,
+     1
+    ]
+   },
+   {
+    "what": "human teeth and bones were found in a burn pit behind Steven Avery's garage",
+    "source": "Badger Herald",
+    "date": "2005-11-16",
+    "covers": [
+     0,
+     1
+    ]
+   }
+  ]
  },
  {
   "id": "F14",
@@ -359,7 +442,7 @@
    "tires",
    "branches on the fire"
   ],
-  "source": "Decision and Order p. 14, citing ECF 19-25 at 68-69. Partly public: 'Avery burned tires on the night Halbach was last seen' was reported before March 1, 2006 (Decision and Order p. 69, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005); the branches on the fire were not in that list.",
+  "source": "Decision and Order p. 14, citing ECF 19-25 at 68-69. Partly public: 'Avery burned tires on the night Halbach was last seen' was reported before March 1, 2006 (Decision and Order p. 69; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005); the branches on the fire were not in that list.",
   "must": [
    [
     "tire",
@@ -381,8 +464,22 @@
     "on top"
    ]
   ],
-  "public_before": "2005-12-07",
-  "public_what": "Avery burned tires that night; the branches were not reported (Decision and Order p. 69)"
+  "public_before": null,
+  "public_what": "",
+  "reports": [
+   {
+    "what": "Avery burned tires on the night Halbach was last seen",
+    "source": "Decision and Order",
+    "page": "69",
+    "court_list": true,
+    "before": "2006-03-01",
+    "covers": [
+     0,
+     2
+    ]
+   }
+  ],
+  "not_reported": "the branches"
  },
  {
   "id": "F15",
@@ -393,7 +490,7 @@
    "put a hood on it",
    "hid the car"
   ],
-  "source": "Decision and Order pp. 1-2, 15, citing ECF 19-25 at 76-77. That the SUV was found on the property was public (CNN, Nov 10, 2005); how it was covered was not reported there. Public: the RAV4 'was found in the salvage yard partially concealed by branches and a car hood' was reported before March 1, 2006 (Decision and Order p. 69, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005).",
+  "source": "Decision and Order pp. 1-2, 15, citing ECF 19-25 at 76-77. That the SUV was found on the property was public (CNN, Nov 10, 2005); how it was covered was not reported there. Public: the RAV4 'was found in the salvage yard partially concealed by branches and a car hood' was reported before March 1, 2006 (Decision and Order p. 69; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005).",
   "must": [
    [
     "hid",
@@ -412,8 +509,21 @@
     "hood"
    ]
   ],
-  "public_before": "2005-12-07",
-  "public_what": "the RAV4 in the salvage yard partially concealed by branches and a car hood (Decision and Order p. 69)"
+  "public_before": null,
+  "public_what": "",
+  "reports": [
+   {
+    "what": "Halbach's RAV4 was found in the salvage yard partially concealed by branches and a car hood",
+    "source": "Decision and Order",
+    "page": "69",
+    "court_list": true,
+    "before": "2006-03-01",
+    "covers": [
+     0,
+     1
+    ]
+   }
+  ]
  },
  {
   "id": "F16",
@@ -424,7 +534,7 @@
    "license plates",
    "the plates"
   ],
-  "public_before": "2005-11-16",
+  "public_before": null,
   "source": "Decision and Order p. 16, citing ECF 19-25 at 77-78. Public: 'Halbach's license plates were found crumpled in a scrap vehicle at the salvage yard' (Badger Herald, Nov 16, 2005).",
   "must": [
    [
@@ -446,7 +556,18 @@
     "plates off"
    ]
   ],
-  "public_what": "license plates found crumpled in a scrap vehicle (Badger Herald, Nov 16, 2005)"
+  "public_what": "",
+  "reports": [
+   {
+    "what": "Halbach's license plates were found crumpled in a scrap vehicle at the salvage yard",
+    "source": "Badger Herald",
+    "date": "2005-11-16",
+    "covers": [
+     0,
+     1
+    ]
+   }
+  ]
  },
  {
   "id": "F17",
@@ -480,6 +601,16 @@
     "unhook",
     "unhooked"
    ]
+  ],
+  "court_notes": [
+   {
+    "page": "72",
+    "text": "calls Fassbender's questions highly leading: he agreed only after Fassbender asked “did he raise the hood at all or anything like that?”, and then could say only “I know he went under”",
+    "quotes": [
+     "did he raise the hood at all or anything like that?",
+     "I know he went under"
+    ]
+   }
   ]
  },
  {
@@ -491,8 +622,8 @@
    "dresser",
    "in his bedroom"
   ],
-  "public_before": "2005-11-10",
-  "source": "Decision and Order pp. 3, 16, citing ECF 19-25 at 78-79. Public: 'the ignition key to Ms. Halbach's car was found in Steven Avery's bedroom' (CNN, Nov 10, 2005). Also listed as reported before March 1, 2006: 'a key to Halbach's RAV4 was found in Avery's bedroom' (Decision and Order p. 70, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005).",
+  "public_before": null,
+  "source": "Decision and Order pp. 3, 16, citing ECF 19-25 at 78-79. Public: 'the ignition key to Ms. Halbach's car was found in Steven Avery's bedroom' (CNN, Nov 10, 2005). Also listed as reported before March 1, 2006: 'a key to Halbach's RAV4 was found in Avery's bedroom' (Decision and Order p. 70; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005).",
   "must": [
    [
     "key",
@@ -505,7 +636,29 @@
     "drawer"
    ]
   ],
-  "public_what": "the RAV4 key found in Avery's bedroom (CNN, Nov 10, 2005; Decision and Order p. 70)"
+  "public_what": "",
+  "reports": [
+   {
+    "what": "the ignition key to her car was found in Steven Avery's bedroom",
+    "source": "CNN",
+    "date": "2005-11-10",
+    "covers": [
+     0,
+     1
+    ]
+   },
+   {
+    "what": "a key to Halbach's RAV4 was found in Avery's bedroom",
+    "source": "Decision and Order",
+    "page": "70",
+    "court_list": true,
+    "before": "2006-03-01",
+    "covers": [
+     0,
+     1
+    ]
+   }
+  ]
  },
  {
   "id": "F19",
@@ -588,8 +741,8 @@
    "her clothes",
    "clothing on the fire"
   ],
-  "public_before": "2005-11-16",
-  "source": "Decision and Order p. 17, citing ECF 19-25 at 84. Public: 'Burned clothing and a partially burned shovel were found in a barrel near Avery's trailer' (Badger Herald, Nov 16, 2005). Also listed as reported before March 1, 2006: 'remnants of clothing' in the burn pit (Decision and Order p. 69, citing Herald Times Reporter, Nov. 16, 2005 and Dec. 7, 2005).",
+  "public_before": null,
+  "source": "Decision and Order p. 17, citing ECF 19-25 at 84. Public: 'Burned clothing and a partially burned shovel were found in a barrel near Avery's trailer' (Badger Herald, Nov 16, 2005). Also listed as reported before March 1, 2006: 'remnants of clothing' in the burn pit (Decision and Order p. 69; the court's examples ('see, e.g.') are Herald Times Reporter articles of Nov. 16 and Dec. 7, 2005).",
   "must": [
    [
     "clothes",
@@ -608,7 +761,29 @@
     "bonfire"
    ]
   ],
-  "public_what": "remnants of clothing in the burn pit; burned clothing in a barrel (Decision and Order p. 69; Badger Herald, Nov 16, 2005)"
+  "public_what": "",
+  "reports": [
+   {
+    "what": "her remains were found in Avery's burn pit along with remnants of clothing",
+    "source": "Decision and Order",
+    "page": "69",
+    "court_list": true,
+    "before": "2006-03-01",
+    "covers": [
+     0,
+     1
+    ]
+   },
+   {
+    "what": "burned clothing was found in a barrel near Avery's trailer",
+    "source": "Badger Herald",
+    "date": "2005-11-16",
+    "covers": [
+     0,
+     1
+    ]
+   }
+  ]
  },
  {
   "id": "F23",
@@ -669,7 +844,16 @@
    [
     "shovel"
    ]
-  ]
+  ],
+  "related_reports": [
+   {
+    "what": "a partially burned shovel was found in a barrel near Avery's trailer",
+    "source": "Badger Herald",
+    "date": "2005-11-16"
+   }
+  ],
+  "public_before": null,
+  "public_what": ""
  },
  {
   "id": "F25",

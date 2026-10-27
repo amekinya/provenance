@@ -277,8 +277,45 @@ def _about(order: list, i: int, must: list) -> bool:
     return short and any(any(has_terms(_txt(x), [g]) for g in must) for x in turns_before(order, i, 2))
 
 
+READ_ALOUD = re.compile(r"^\s*\(read aloud by (\w+) from (\w+)'s written statement; printed speaker: (\w+)\)\s*")
+
+
+def _requote(ev: dict, text: str, must: list) -> dict:
+    """Quote the part of a long line that carries the detail (all key-term groups in one or two consecutive sentences,
+    else the first sentence naming part of it), not the start of the line. A line read aloud from his written
+    statement keeps its disclosure in `read_aloud`."""
+    m = READ_ALOUD.match(text)
+    body = text[m.end():] if m else text
+    if m:
+        ev["read_aloud"] = f"read aloud by {m.group(1).title()} from {m.group(2).title()}'s written statement (printed speaker: {m.group(3).title()})"
+    if must and len(spoken(body).split()) > SHORT_WORDS:
+        sp = _spans(body)
+        best = next((x for x in sp if has_terms(x, must)), None) or next((x for x in sp if any(has_terms(x, [g]) for g in must)), None)
+        if best:
+            ev["quote"] = best.strip()
+    elif m:
+        ev["quote"] = plain(body)[:200]
+    return ev
+
+
+def _court_notes(fact: Fact, order: list) -> list[dict]:
+    """The court's own observations about how a detail came out, each quote followed by its transcript page (code finds
+    the line that prints it)."""
+    out = []
+    norm = lambda t: re.sub(r"\s+", " ", plain(t).replace("\u2019", "'").replace("\u2018", "'")).strip().lower()  # noqa: E731
+    for n in fact.court_notes:
+        text, lines = n["text"], []
+        for q in n.get("quotes", []):
+            u = next((x for x in order if norm(q) in norm(x.text)), None)
+            if u:
+                lines.append(_cite_dict(_line_ev(u)))
+                text = text.replace(f"“{q}”", f"“{q}” ({pages_of(u)})", 1)
+        out.append({"page": n["page"], "text": f"The Decision (p. {n['page']}) {text}.", "lines": lines})
+    return out
+
+
 def _cite_dict(e) -> dict:
-    return {k: e.get(k) for k in ("utterance", "page", "page_end", "session", "quote", "by") if k in e}
+    return {k: e.get(k) for k in ("utterance", "page", "page_end", "session", "speaker", "quote", "by", "read_aloud") if k in e}
 
 
 def _line_ev(u: Utterance, **extra) -> dict:
@@ -381,8 +418,10 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
                 else:
                     ev["kind_note"] = "agreement without a question about this detail just before it; not counted"
 
-    partial = _partly_supplied(fact, order, pos, by_id, inv_part, model_inv, ms, first_inv, first_sus)
-    origin, why = _origin(case, fact, first_inv, first_sus, by_id, sessions, partial)
+    ref = first_sus or first_inv
+    reported = reported_groups(fact, sessions[ref["session"]].day if ref and ref["session"] in sessions else None) if fact.must else set()
+    partial = _partly_supplied(fact, order, pos, by_id, inv_part, model_inv, ms, first_inv, first_sus, reported)
+    origin, why = _origin(case, fact, first_inv, first_sus, by_id, sessions, partial, reported)
     is_supplied = bool(partial and origin == "interrogator_first" and not (first_inv and first_inv["seq"] < first_sus["seq"]))
     is_part = is_supplied and not partial["all"]
     if is_supplied:
@@ -401,7 +440,10 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
                  and (e["kind"] in ("asks", "asserts") or e.get("partial"))]
     if is_supplied:
         inv_lines = sorted({e["utterance"]: e for e in inv_lines + partial["lines"]}.values(), key=lambda e: e["seq"])
-    related, nearby, label_words, responses = [], [], [], []
+    if fact.must:  # quote the part of each long line that carries the detail
+        for e in events + (partial["lines"] if partial else []):
+            _requote(e, by_id[e["utterance"]].text, fact.must)
+    related, nearby, label_words, responses, earlier = [], [], [], [], []
     if fact.must and first_sus:
         for e in events:
             if (e["role"] == "suspect" and e["seq"] < upto and e["kind"] != "denies" and e.get("kind_note", "").startswith("the line doesn't")
@@ -409,7 +451,18 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
                 related.append(e)
         p = pos[first_sus["utterance"]]
         shown = {e["utterance"] for e in inv_lines[:3]}
-        nearby = [_line_ev(x) for x in turns_before(order, p, NEARBY_TURNS) if x.id in inv_part and x.id not in shown]
+        nearby = [_requote(_line_ev(x), x.text, fact.must) for x in turns_before(order, p, NEARBY_TURNS) if x.id in inv_part and x.id not in shown]
+        # earlier related investigator mentions: the earliest investigator lines before his first statement that name
+        # the detail's most specific part (its key-term group on the fewest lines of the record, if that is at most 2%
+        # of them), up to 3, if not already shown
+        shown |= {e["utterance"] for e in nearby[:5]}
+        counts = [sum(1 for x in order if has_terms(x.text, [g])) for g in fact.must]
+        rare = [g for g, c in zip(fact.must, counts) if c == min(counts) and c <= 0.02 * len(order)]
+        for x in order:
+            if len(earlier) >= 3 or x.seq >= upto:
+                break
+            if x.id in inv_part and x.id not in shown and any(g in inv_part[x.id] for g in rare):
+                earlier.append(_requote(_line_ev(x), x.text, fact.must))
         # words of the detail's label that aren't key terms (degree words like 'unconscious'): who said them first nearby
         covered = {a for g in fact.must for a in g}
         extra_words = [w for w in derive_must(fact.label) if w[0] not in LONE_WORDS
@@ -423,7 +476,7 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
                 label_words.append({"word": w, "lines": [_cite_dict(_line_ev(x)) for x in said if x.role == "interrogator"][:3]})
     if fact.must and first_inv and not first_sus:  # never adopted: what he answered when it was put to him
         p = pos[first_inv["utterance"]]
-        responses = [_cite_dict(_line_ev(x)) for x in turns_after(order, p, 4) if x.role == "suspect"][:3]
+        responses = [_cite_dict(_requote(_line_ev(x), x.text, fact.must)) for x in turns_after(order, p, 4) if x.role == "suspect"][:3]
     adopted_by_assent = bool(first_sus and first_sus["kind"] == "assents")
     return {
         "fact": asdict(fact) | {"public_before": fact.public_before.isoformat() if fact.public_before else None},
@@ -435,6 +488,8 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
         "first_interrogator": first_inv, "first_suspect": first_sus,
         "investigator_lines_before": [_cite_dict(e) for e in inv_lines[:3]],
         "nearby_prompts": [_cite_dict(e) for e in nearby[:5]],
+        "earlier_related_mentions": [_cite_dict(e) for e in earlier],
+        "court_notes": _court_notes(fact, order),
         "label_words_from_investigators": label_words,
         "related_statements": [_cite_dict(e) for e in related[:3]],
         "related_statements_total": len(related),
@@ -447,13 +502,15 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
 
 
 def _partly_supplied(fact: Fact, order: list, pos: dict, by_id: dict, inv_part: dict, model_inv: set, ms: list,
-                     first_inv: dict | None, first_sus: dict | None) -> dict | None:
+                     first_inv: dict | None, first_sus: dict | None, reported: set | None = None) -> dict | None:
     """Did investigators name part of the detail (or every part, across separate lines) before he stated all of it?
     Candidates: investigator lines in the exchange leading up to his first statement (the stretch of questioning that
     keeps naming parts of the detail, with no more than 10 turns between such lines, and at least the last 6 turns)
     that carry some key-term groups (code), plus investigator lines the labeler tied to this detail anywhere earlier
     (extra evidence, which can only add investigator credit). A group counts as theirs unless he had said a word of it
-    first, in his lines labeled with this detail or in that exchange. Echoes of his previous turn are already removed."""
+    first, in his lines labeled with this detail or in that exchange. Echoes of his previous turn are already removed.
+    Groups a report before the interviews already stated (`reported`) are nobody's: only the rest decide."""
+    reported = reported or set()
     if not fact.must or not first_sus or (first_inv and first_inv["seq"] < first_sus["seq"]):
         return None
     p = pos[first_sus["utterance"]]
@@ -463,7 +520,9 @@ def _partly_supplied(fact: Fact, order: list, pos: dict, by_id: dict, inv_part: 
     his = [x for x in window if x.role == "suspect"] + [by_id[m.utterance] for m in ms if by_id[m.utterance].role == "suspect"
                                                        and m.kind != "denies" and by_id[m.utterance].seq < first_sus["seq"]]
     theirs: list[tuple] = []  # (line, group), the earliest investigator line for each group
-    for g in fact.must:
+    for k, g in enumerate(fact.must):
+        if k in reported:
+            continue
         lines = sorted((u for u in cands.values() if g in inv_part[u.id]), key=lambda u: u.seq)
         for u in lines:
             if not any(x.seq < u.seq and has_terms(x.text, [g]) for x in his):
@@ -478,8 +537,8 @@ def _partly_supplied(fact: Fact, order: list, pos: dict, by_id: dict, inv_part: 
         inv_words += [w for w in _said(u.text, g) if w not in inv_words]
     his_lines = [x for x in window if x.role == "suspect"] + [order[p]]
     his_words: list[str] = []
-    for g in fact.must:
-        if g in their_groups:
+    for k, g in enumerate(fact.must):
+        if g in their_groups or k in reported:
             continue
         for x in reversed(his_lines):  # his statement first, then his lines just before it
             ws = _said(x.text, g)
@@ -489,7 +548,7 @@ def _partly_supplied(fact: Fact, order: list, pos: dict, by_id: dict, inv_part: 
     evs = [_line_ev(u, kind="asks", verified=None, partial=True, by="key words") for u in lines]
     per_line = [(evs[k], [w for u2, g in theirs if u2.id == lines[k].id for w in _said(lines[k].text, g)]) for k in range(len(lines))]
     return {"event": evs[0], "lines": evs, "per_line": per_line, "investigator_words": inv_words, "his_words": his_words,
-            "all": len(set(map(tuple, their_groups))) == len(fact.must)}
+            "all": len(set(map(tuple, their_groups))) == len(fact.must) - len(reported)}
 
 
 def _said(text: str, group: list[str]) -> list[str]:
@@ -505,8 +564,67 @@ def _said(text: str, group: list[str]) -> list[str]:
     return list(dict.fromkeys(out))
 
 
+def reported_groups(fact: Fact, day) -> set:
+    """Indices of the key-term groups that reports before `day` state (the court's list counts as before every recorded
+    interview: it says these were reported 'long before' the March 1 confession)."""
+    out: set = set()
+    for r in fact.reports:
+        if r.get("court_list") or (r.get("date") and day and date.fromisoformat(r["date"]) < day):
+            out |= set(r.get("covers", []))
+    return out
+
+
+def _report_phrase(r: dict) -> str:
+    if r.get("court_list"):
+        when = f"before {date.fromisoformat(r['before']):%B %-d, %Y}" if r.get("before") else "before the interviews"
+        return f"{r['what']}, reported {when} (Decision p. {r['page']})"
+    if r.get("date"):
+        return f"{r['what']}, reported {date.fromisoformat(r['date']):%b %-d, %Y} ({r['source']})"
+    return f"{r['what']} ({r['source']})"
+
+
+def _related_phrase(fact: Fact) -> str:
+    if not fact.related_reports:
+        return ""
+    items = "; ".join(f"{r['what']} (p. {r['page']})" if r.get("page") and r.get("source", "").startswith("Decision")
+                      else f"{r['what']} ({r['source']}{', ' + format(date.fromisoformat(r['date']), '%b %-d, %Y') if r.get('date') else ''})"
+                      for r in fact.related_reports)
+    lead = "The Decision lists related reports" if all(r.get("source", "").startswith("Decision") for r in fact.related_reports) else "Related reports"
+    return f" {lead}: {items}. A report the detail could be inferred from isn't a report of it, so the transcript decides."
+
+
+def _cue_sentences(text: str) -> list[str]:
+    """The sentences of a line that refer to an earlier conversation."""
+    t = plain(text)
+    out = []
+    for m in PRIOR_CONTACT.finditer(t):
+        a = max(t.rfind(c, 0, m.start()) for c in ".?!") + 1
+        ends = [k for k in (t.find(c, m.end()) for c in ".?!") if k >= 0]
+        out.append(t[a:(min(ends) + 1 if ends else len(t))].strip())
+    return list(dict.fromkeys(out))
+
+
+def _recorded_before(case: Case, fact: Fact, seq: int) -> bool:
+    """Does any earlier recorded line, by anyone, carry the detail (code, key terms)?"""
+    order = ordered(case)
+    return any(u.seq < seq and carries(order, i, fact.must) for i, u in enumerate(order))
+
+
 def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | None, by_id: dict, sessions: dict,
-            partial: dict | None = None) -> tuple[str, str]:
+            partial: dict | None = None, reported: set | None = None) -> tuple[str, str]:
+    origin, why = _origin_core(case, fact, first_inv, first_sus, by_id, sessions, partial, reported or set())
+    if origin != "public" and fact.reports and reported and fact.must:
+        rs = [r for r in fact.reports if set(r.get("covers", [])) & reported]
+        nots = [g[0] for k, g in enumerate(fact.must) if k not in reported]
+        why = (f"Partly public: {'; '.join(_report_phrase(r) for r in rs)}. Not reported: {fact.not_reported or _and([f'“{w}”' for w in nots])}. "
+               f"The part that wasn't reported decides it: {why[0].lower()}{why[1:]}")
+    if origin != "public" and fact.related_reports:
+        why += _related_phrase(fact)
+    return origin, why
+
+
+def _origin_core(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | None, by_id: dict, sessions: dict,
+                 partial: dict | None, reported: set) -> tuple[str, str]:
     if first_inv is None and first_sus is None:
         return "not_mentioned", "Nobody mentions this detail in the transcripts."
     if first_sus is None:
@@ -517,22 +635,47 @@ def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | No
     inv_first = first_inv is not None and first_inv["seq"] < first_sus["seq"]
     also = f" Investigators also mentioned it before he did ({_cite(first_inv, sessions)})." if inv_first else ""
     s_day = sessions[first_sus["session"]].day if first_sus["session"] in sessions else min((s.day for s in sessions.values()), default=None)
-    if fact.public_before and s_day and fact.public_before < s_day:
+    if fact.reports and fact.must:
+        if reported >= set(range(len(fact.must))):
+            rs = [r for r in fact.reports if r.get("covers") and (r.get("court_list") or (r.get("date") and date.fromisoformat(r["date"]) < s_day))]
+            return "public", (f"Public: {'; '.join(_report_phrase(r) for r in rs)}. That was before the suspect first "
+                              f"said it ({_cite(first_sus, sessions)}).{also}")
+    elif fact.public_before and s_day and fact.public_before < s_day:
         what = f": {fact.public_what}" if fact.public_what else ""
         return "public", f"It was reported publicly by {fact.public_before:%b %d, %Y}{what}, before the suspect first said it ({_cite(first_sus, sessions)}).{also}"
-    if fact.prior_statement:
+    first_ev = first_inv if inv_first else first_sus
+    if fact.prior_statement and not (fact.must and _recorded_before(case, fact, first_ev["seq"])):
         return "prior_contact", (f"An earlier statement with no public transcript is reported outside the transcripts (we can't read it): {fact.prior_statement}. "
-                                 f"In the transcripts it first appears at {_cite(first_inv if inv_first else first_sus, sessions)}.")
+                                 f"In the transcripts it first appears at {_cite(first_ev, sessions)}.")
     if not inv_first and partial:
         named = "; ".join(f"{_and([f'“{w}”' for w in ws])} ({_cite(ev, sessions)})" for ev, ws in partial["per_line"] if ws)
         if partial["all"]:
-            return "interrogator_first", (f"Investigators named every part of it before he said it, in separate lines: {named}. "
+            part = "every part of it that wasn't reported" if reported else "every part of it"
+            return "interrogator_first", (f"Investigators named {part} before he said it, in separate lines: {named}. "
                                           f"He then said it ({_cite(first_sus, sessions)}).")
         his = _and([f"“{w}”" for w in partial["his_words"]])
         his_half = f"he named {his} ({_cite(first_sus, sessions)})" if his else f"he then stated the whole detail ({_cite(first_sus, sessions)})"
         return "interrogator_first", (f"Investigators named {named}; {his_half}. "
                                       "Counted as investigators first, because they named part of the detail before he said all of it.")
     if inv_first:
+        u = by_id[first_inv["utterance"]]
+        if fact.must:
+            # an earlier conversation counts only if the sentence that refers to it names the detail itself, and no
+            # earlier recorded line (anyone's) carries it; otherwise the recorded lines decide by order
+            cues = _cue_sentences(u.text)
+            hit = next((c for c in cues if has_terms(c, fact.must)), None)
+            if hit and not _recorded_before(case, fact, first_inv["seq"]):
+                return "prior_contact", (f"Investigators first said it ({_cite(first_inv, sessions)}), in a sentence that refers to an earlier "
+                                         f"conversation with no public transcript: “{hit}”.")
+            how = "by agreeing to a question" if first_sus["kind"] == "assents" else "after that"
+            note = ""
+            if cues and not hit:
+                note = (f" The same line refers to an earlier conversation (“{cues[0]}”), but that sentence doesn't name the detail, "
+                        "so it isn't counted as one.")
+            elif hit:
+                note = " The line refers to an earlier conversation, but an earlier recorded line already carries the detail, so the record decides."
+            return "interrogator_first", (f"Investigators first said it ({_cite(first_inv, sessions)}); the suspect first adopted it {how} "
+                                          f"({_cite(first_sus, sessions)}).{note}")
         cue = _prior_cue(case, first_inv)
         if cue:
             return "prior_contact", (f"Investigators first said it ({_cite(first_inv, sessions)}), but in words that may refer to something he said "
@@ -541,10 +684,15 @@ def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | No
         return "interrogator_first", (f"Investigators first said it ({_cite(first_inv, sessions)}); the suspect first adopted it {how} "
                                       f"({_cite(first_sus, sessions)}).")
     cue = _prior_cue(case, first_sus, before=12)
-    if cue:
+    if cue and fact.must:
+        hit = next((c for c in _cue_sentences(cue.text) if has_terms(c, fact.must)), None)
+        if hit and not _recorded_before(case, fact, cue.seq):
+            return "prior_contact", (f"The suspect said it first in the transcripts ({_cite(first_sus, sessions)}), but just before, an investigator "
+                                     f"referred to an earlier conversation with no public transcript in a sentence that names it: “{hit}”.")
+    elif cue:
         return "prior_contact", (f"The suspect said it first in the transcripts ({_cite(first_sus, sessions)}), but just before, the investigator "
                                  f"may have referred to an earlier conversation with no public transcript ({pages_of(cue)}: {_cue_quote(cue.text, fact.must)}).")
-    return "suspect_first", f"The suspect said it first ({_cite(first_sus, sessions)}), and nothing earlier in the transcripts supplies it."
+    return "suspect_first", f"The suspect said it first ({_cite(first_sus, sessions)})."
 
 
 def _prior_cue(case: Case, ev: dict, before: int = 2) -> Utterance | None:

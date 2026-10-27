@@ -45,7 +45,8 @@ def load(cid: str) -> tuple[dict, list[dict], list[dict]]:
 
 
 def case_dict(cfg: dict, utts: list[dict], facts: list[dict], mentions: list[dict]) -> dict:
-    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted", "prior_statement", "public_what", "must")
+    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted", "prior_statement", "public_what", "must",
+                   "reports", "related_reports", "not_reported", "court_notes")
     return {"id": cfg["id"], "title": cfg["title"], "suspect": cfg["suspect"], "notes": cfg.get("notes", []),
             "sessions": [{k: s.get(k, d) for k, d in (("id", ""), ("label", ""), ("day", ""), ("recorded", True), ("source", ""))}
                          for s in cfg["sessions"]],
@@ -269,6 +270,99 @@ def recheck_suspect(cfg, utts, facts, mentions, calls: list[CallRecord]) -> int:
                              "verified": ok, "stance": st, "stance_checked": True})
     print(f"stance re-check: {sum(1 for i in items if i['key'] in results)} answered, {yes} are him stating or agreeing")
     return yes
+
+
+def _question_context(order: list[dict], i: int) -> tuple[str, str, str]:
+    """For his line at i: the investigator question it answers (the nearest earlier investigator line with a question
+    mark within 6 printed turns, same session; else the line just before), the 2 lines before that question, and any
+    lines between the question and his line."""
+    u = order[i]
+    same = [k for k in range(i - 1, -1, -1) if order[k]["session"] == u["session"]]
+    q, turns = None, 0
+    for k in same:
+        if order[k]["role"] == "interrogator" and "?" in order[k]["text"]:
+            q = k
+            break
+        turns += 0 if order[k].get("split") else 1
+        if turns >= 6:
+            break
+    if q is None:
+        q = same[0] if same else None
+    if q is None:
+        return "", "", ""
+    fmt = lambda x: f"{x['speaker']} ({x['role']}): {x['text'][:600]}"  # noqa: E731
+    before = " / ".join(fmt(order[k]) for k in range(max(0, q - 2), q) if order[k]["session"] == u["session"])
+    between = " / ".join(fmt(order[k]) for k in range(q + 1, i))
+    return before, fmt(order[q]), between
+
+
+def sense_check(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: int = 6, rounds: int = 8) -> int:
+    """Re-check every suspect-side line that could decide a detail, in order, with the sense question: for each detail,
+    his lines that carry its key terms by code, from the start of the record up to and including his current first
+    statement, until one is confirmed. Answers are saved on the labels (sense_checked), so re-audits make no calls.
+    Returns how many lines were checked."""
+    from app.engine.ledger import answers_labeled  # noqa: PLC0415
+
+    order = sorted(utts, key=lambda u: u["seq"])
+    by_id = {u["id"]: u for u in utts}
+    kinds = {"states": "asserts", "agrees": "assents"}
+    total = 0
+    for rnd in range(rounds):
+        rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+        first_seq = {f["fact"]["id"]: (f["first_suspect"] or {}).get("seq", float("inf")) for f in rep["facts"]}
+        items = []
+        for f in facts:
+            must = f.get("must")
+            if not must:
+                continue
+            ms = [m for m in mentions if m["fact"] == f["id"]]
+            checked = {m["utterance"] for m in ms if m.get("sense_checked")}
+            labeled = {m["utterance"] for m in ms} | {u["id"] for u in order if u["role"] == "interrogator" and any(has_terms(u["text"], [g]) for g in must)}
+            n = 0
+            for i, u in enumerate(order):
+                if u["seq"] > first_seq[f["id"]] or n >= per_fact:
+                    break
+                if u["role"] != "suspect" or u["id"] in checked or not re.search(r"[A-Za-z]", spoken(u["text"])):
+                    continue
+                if carries(order, i, must, answers_labeled(order, i, labeled)):
+                    before, q, between = _question_context(order, i)
+                    items.append({"key": f"{u['id']}|{f['id']}", "label": f["label"], "must": must, "before": before, "question": q,
+                                  "between": between, "text": u["text"][:1500]})
+                    n += 1
+        if not items:
+            break
+        print(f"sense check round {rnd + 1}: {len(items)} of his lines")
+        results: dict[str, str] = {}
+
+        def run(b):
+            local: list[CallRecord] = []
+            try:
+                return tasks.sense(b, local), local
+            except LiveModelUnavailable as e:
+                print(f"  sense check failed: {str(e)[:140]}")
+                return {}, local
+        with ThreadPoolExecutor(4) as ex:
+            for res, local in ex.map(run, [items[i:i + 4] for i in range(0, len(items), 4)]):
+                calls.extend(local)
+                results.update(res)
+        if not results:
+            break
+        for it in items:
+            st = results.get(it["key"])
+            if st is None:
+                continue
+            total += 1
+            uid, fid = it["key"].split("|")
+            ok = st in ("states", "agrees")
+            hits = [m for m in mentions if m["utterance"] == uid and m["fact"] == fid]
+            if hits:
+                for m in hits:
+                    m.update({"verified": ok, "sense": st, "sense_checked": True} | ({"kind": kinds[st]} if ok else {}))
+            else:
+                mentions.append({"utterance": uid, "fact": fid, "kind": kinds.get(st, "denies"), "quote": by_id[uid]["text"][:160],
+                                 "by": "sense-search", "verified": ok, "sense": st, "sense_checked": True})
+    print(f"sense check: {total} lines answered")
+    return total
 
 
 def search_suspect(cfg, utts, facts, mentions, calls: list[CallRecord]) -> int:
@@ -550,6 +644,7 @@ def main() -> None:
     ap.add_argument("--reaudit", action="store_true", help="recompute the audit from the saved labels (mentions.json) with the current code; no labeling")
     ap.add_argument("--memo", action="store_true", help="with --reaudit: also rewrite the memo (one Ultra call)")
     ap.add_argument("--recheck-suspect", action="store_true", help="with --reaudit: re-ask rejected or unlabeled suspect lines that carry the key words, stance only (a few Ultra calls); saved to mentions.json")
+    ap.add_argument("--sense-check", action="store_true", help="with --reaudit: re-check his lines that could decide each detail, in order, with the question they answer and the 2 lines before it (Ultra); saved to mentions.json")
     ap.add_argument("--suspect-search", action="store_true", help="with --reaudit: check his unlabeled lines that carry a detail's key terms (a few Ultra calls); answers are saved to mentions.json")
     ap.add_argument("--labeler", default="ultra", choices=["ultra", "lightning", "matcher"],
                     help="ultra (default): our diagnostic runs found Lightning missed about half of the suspect's adoptions")
@@ -572,6 +667,13 @@ def main() -> None:
         if a.recheck_suspect:
             recheck_suspect(cfg, utts, facts, mentions, calls)
             (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
+        if a.sense_check:
+            sense_check(cfg, utts, facts, mentions, calls)
+            (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
+            run_file = cd / "run.json"
+            run = json.loads(run_file.read_text()) if run_file.exists() else {}
+            run["sense_check_cost_usd"] = round(sum(c.cost_usd for c in calls), 4)
+            run_file.write_text(json.dumps(run, indent=1))
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
         (cd / "audit.json").write_text(json.dumps(rep, indent=1))
         print("re-audited from saved labels:", rep["headline"])

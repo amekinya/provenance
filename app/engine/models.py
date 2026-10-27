@@ -44,6 +44,14 @@ class Fact:
     prior_statement: str = ""          # a documented earlier statement by the suspect with no public transcript (with source)
     public_what: str = ""                # what exactly was reported publicly, with its source
     must: list = field(default_factory=list)  # key-term groups: a line carries the fact only if it has one alternate from every group
+    # What was reported before the interviews, each with its source and the key-term groups (indices into `must`) whose
+    # part of the detail it states: {"what", "source", "page"?, "date"? (a dated report), "before"? and "court_list"? (the
+    # court's list of what was reported 'long before' the March 1 confession), "covers": [0, 1]}. Public only if they
+    # cover every group; otherwise the groups not covered decide by the transcript.
+    reports: list = field(default_factory=list)
+    related_reports: list = field(default_factory=list)  # reports the detail could be inferred from, not reports of it
+    not_reported: str = ""  # the part of the detail no report states, in words ("the branches")
+    court_notes: list = field(default_factory=list)  # the court's own observations: {"page", "text", "quotes": [...]}
 
 
 @dataclass

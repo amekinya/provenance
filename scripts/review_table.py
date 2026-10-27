@@ -14,16 +14,20 @@ def main() -> None:
     text = {u["id"]: u["text"] for u in json.loads((cd / "utterances.json").read_text())}
     run = json.loads((cd / "run.json").read_text()) if (cd / "run.json").exists() else {}
     from app.engine.ledger import pages_of  # noqa: PLC0415
-    cell = lambda ev: f"{ev['utterance']} ({pages_of(ev)}): {' '.join(text[ev['utterance']].split())[:160]}" if ev else "none"  # noqa: E731
+    cell = lambda ev: (f"{ev['utterance']} ({pages_of(ev)}): " + (f"[{ev['read_aloud']}] " if ev.get("read_aloud") else "")  # noqa: E731
+                       + " ".join((ev.get("quote") or text[ev["utterance"]]).split())[:160]) if ev else "none"
     md = [f"# Review table: {rep['case']['title']}", "", f"Headline: {rep['headline']}", "",
           f"Run: {run.get('total_seconds', '?')} s, ${run.get('cost_usd', '?')}, labeler {run.get('labeler', '?')}, "
           f"verifier reasoning {run.get('verifier_reasoning', '?')}, deciding lines not re-checked: {run.get('unverified', '?')}", "",
           "| Fact | Label | Verdict | First investigator line | First suspect line | Note |", "|---|---|---|---|---|---|"]
     for f in rep["facts"]:
-        note = f["why"] if f.get("partly_supplied") else ""
+        note = f["why"]  # the card's explanation, with its qualifiers
         more = [x for x in f.get("investigator_lines_before", []) if not f["first_interrogator"] or x["utterance"] != f["first_interrogator"]["utterance"]]
-        if f.get("supplied_across_lines"):
-            note += f["why"]
+        for n in f.get("court_notes", []):
+            note += " Court: " + n["text"]
+        if f.get("earlier_related_mentions"):
+            note += " Earlier related investigator mentions: " + "; ".join(
+                f"{x['utterance']} ({pages_of(x)}): {' '.join(x['quote'].split())[:60]}" for x in f["earlier_related_mentions"]) + "."
         if more:
             note += (" " if note else "") + "Also before his first statement: " + "; ".join(f"{x['utterance']} ({pages_of(x)})" for x in more) + "."
         if f.get("nearby_prompts"):
