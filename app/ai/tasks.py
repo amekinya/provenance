@@ -269,7 +269,7 @@ def sense(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str,
     for i in items:
         body = (f"Detail: {i['label']} (key words: " + " + ".join("(" + " | ".join(g) + ")" for g in i["must"]) + ")"
                 + (f"\nWhich thing, person and place it is about, as the fact list describes it: {i['detail']}" if i.get("detail") else "")
-                f"\nTwo lines before the question: {i['before'] or '(none)'}\nThe question he answers: {i['question'] or '(none)'}"
+                + f"\nTwo lines before the question: {i['before'] or '(none)'}\nThe question he answers: {i['question'] or '(none)'}"
                 + (f"\nLines after the question: {i['between']}" if i.get("between") else "") + f"\nHis line: {i['text']}\nkey: {i['key']}")
         msgs = [{"role": "system", "content": "You read one line a suspect said in an interrogation, with the question it answers and the two lines "
                                               "before that question. First write what his line is about, as these lines show (which thing or person, "
