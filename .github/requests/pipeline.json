@@ -1,1 +1,1 @@
-{"case": "dassey", "steps": "ingest,pageeval", "sessions": "S2", "pages": "60-66"}
+{"case": "dassey", "steps": "ingest,pageeval", "sessions": "", "max_pages": "0", "note": "full read of all three transcripts"}
