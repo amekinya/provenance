@@ -3,173 +3,89 @@
  "n_interrogations": 14,
  "generator": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
  "results": {
-  "keyword": {
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.537,
-   "line_acc": 0.516,
-   "investigator_first_called_suspect_first": 4,
-   "confusion": {
-    "suspect->suspect": 27,
-    "suspect->never": 13,
-    "interrogator->never": 20,
-    "never->never": 11,
-    "never->suspect": 2,
-    "interrogator->interrogator": 13,
-    "interrogator->suspect": 4,
-    "never->interrogator": 4,
-    "suspect->interrogator": 1
-   }
-  },
-  "one_prompt": {
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.895,
-   "line_acc": 0.811,
-   "investigator_first_called_suspect_first": 0,
-   "confusion": {
-    "suspect->suspect": 40,
-    "interrogator->interrogator": 35,
-    "never->never": 10,
-    "never->suspect": 1,
-    "interrogator->never": 2,
-    "never->interrogator": 6,
-    "suspect->interrogator": 1
-   }
-  },
-  "provenance_basic": {
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.568,
-   "line_acc": 0.526,
-   "investigator_first_called_suspect_first": 1,
-   "confusion": {
-    "suspect->never": 14,
-    "suspect->suspect": 25,
-    "interrogator->never": 24,
-    "never->never": 17,
-    "interrogator->interrogator": 12,
-    "interrogator->suspect": 1,
-    "suspect->interrogator": 2
-   }
-  },
   "provenance": {
    "n_facts": 95,
    "failed_interrogations": 0,
-   "speaker_acc": 0.684,
-   "line_acc": 0.653,
+   "speaker_acc": 0.568,
+   "line_acc": 0.558,
    "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->never": 11,
-    "suspect->suspect": 30,
-    "interrogator->never": 19,
+    "suspect->never": 18,
+    "suspect->suspect": 21,
+    "interrogator->interrogator": 16,
     "never->never": 17,
-    "interrogator->interrogator": 18
+    "interrogator->never": 21,
+    "suspect->interrogator": 2
+   }
+  },
+  "provenance_ultra": {
+   "n_facts": 95,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.874,
+   "line_acc": 0.874,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->never": 2,
+    "suspect->suspect": 36,
+    "interrogator->interrogator": 31,
+    "never->never": 16,
+    "interrogator->never": 6,
+    "suspect->interrogator": 3,
+    "never->interrogator": 1
    }
   }
  },
  "costs": {
-  "keyword": {
-   "seconds": 0.0,
-   "cost_usd": 0,
-   "calls": 0
-  },
-  "one_prompt": {
-   "seconds": 27.3,
-   "cost_usd": 0.1264,
-   "calls": 14
-  },
-  "provenance_basic": {
-   "seconds": 98.4,
-   "cost_usd": 0.309,
-   "calls": 68
-  },
   "provenance": {
-   "seconds": 271.2,
-   "cost_usd": 0.8854,
-   "calls": 86
+   "seconds": 276.5,
+   "cost_usd": 0.9889,
+   "calls": 100
+  },
+  "provenance_ultra": {
+   "seconds": 589.4,
+   "cost_usd": 2.7093,
+   "calls": 167
   }
  },
  "rows": [
   {
-   "method": "Keyword match (no model)",
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.537,
-   "line_acc": 0.516,
-   "investigator_first_called_suspect_first": 4,
-   "confusion": {
-    "suspect->suspect": 27,
-    "suspect->never": 13,
-    "interrogator->never": 20,
-    "never->never": 11,
-    "never->suspect": 2,
-    "interrogator->interrogator": 13,
-    "interrogator->suspect": 4,
-    "never->interrogator": 4,
-    "suspect->interrogator": 1
-   },
-   "seconds": 0.0,
-   "cost_usd": 0,
-   "calls": 0
-  },
-  {
-   "method": "Nemotron 3 Ultra, one prompt per interview",
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.895,
-   "line_acc": 0.811,
-   "investigator_first_called_suspect_first": 0,
-   "confusion": {
-    "suspect->suspect": 40,
-    "interrogator->interrogator": 35,
-    "never->never": 10,
-    "never->suspect": 1,
-    "interrogator->never": 2,
-    "never->interrogator": 6,
-    "suspect->interrogator": 1
-   },
-   "seconds": 27.3,
-   "cost_usd": 0.1264,
-   "calls": 14
-  },
-  {
-   "method": "Provenance without code agreements or safety search (ablation)",
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.568,
-   "line_acc": 0.526,
-   "investigator_first_called_suspect_first": 1,
-   "confusion": {
-    "suspect->never": 14,
-    "suspect->suspect": 25,
-    "interrogator->never": 24,
-    "never->never": 17,
-    "interrogator->interrogator": 12,
-    "interrogator->suspect": 1,
-    "suspect->interrogator": 2
-   },
-   "seconds": 98.4,
-   "cost_usd": 0.309,
-   "calls": 68
-  },
-  {
    "method": "Provenance: Lightning labels + code ledger + Ultra check + safety search",
    "n_facts": 95,
    "failed_interrogations": 0,
-   "speaker_acc": 0.684,
-   "line_acc": 0.653,
+   "speaker_acc": 0.568,
+   "line_acc": 0.558,
    "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->never": 11,
-    "suspect->suspect": 30,
-    "interrogator->never": 19,
+    "suspect->never": 18,
+    "suspect->suspect": 21,
+    "interrogator->interrogator": 16,
     "never->never": 17,
-    "interrogator->interrogator": 18
+    "interrogator->never": 21,
+    "suspect->interrogator": 2
    },
-   "seconds": 271.2,
-   "cost_usd": 0.8854,
-   "calls": 86
+   "seconds": 276.5,
+   "cost_usd": 0.9889,
+   "calls": 100
+  },
+  {
+   "method": "Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search",
+   "n_facts": 95,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.874,
+   "line_acc": 0.874,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->never": 2,
+    "suspect->suspect": 36,
+    "interrogator->interrogator": 31,
+    "never->never": 16,
+    "interrogator->never": 6,
+    "suspect->interrogator": 3,
+    "never->interrogator": 1
+   },
+   "seconds": 589.4,
+   "cost_usd": 2.7093,
+   "calls": 167
   }
  ],
  "note": "14 synthetic interrogations (trainval split) written by deepseek-ai/DeepSeek-V4.1-Flash-1017 (the training writer; diagnostic split), 95 details with known first speakers."

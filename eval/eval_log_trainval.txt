@@ -1,97 +1,194 @@
+tagged 38 sentences in 3 chunks: 12 labels kept, 0 dropped (quote not in sentence)
+tagged 44 sentences in 3 chunks: 11 labels kept, 1 dropped (quote not in sentence)
 tagged 42 sentences in 3 chunks: 18 labels kept, 0 dropped (quote not in sentence)
-tagged 44 sentences in 3 chunks: 15 labels kept, 1 dropped (quote not in sentence)
-tagged 38 sentences in 3 chunks: 25 labels kept, 0 dropped (quote not in sentence)
 tagged 39 sentences in 3 chunks: 15 labels kept, 0 dropped (quote not in sentence)
-round 1: 9 deciding labels to check, 9 checked, 0 rejected
+round 1: 7 deciding labels to check, 7 checked, 0 rejected
 verification done after 1 round(s)
+safety search: 2 earlier investigator lines checked, 2 answered, 1 carry the detail
+verification done after 0 round(s)
 round 1: 8 deciding labels to check, 8 checked, 0 rejected
 verification done after 1 round(s)
+tagged 45 sentences in 3 chunks: 10 labels kept, 1 dropped (quote not in sentence)
+round 1: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 12 labels kept, 0 dropped (quote not in sentence)
+round 1: 9 deciding labels to check, 9 checked, 1 rejected
+round 1: 6 deciding labels to check, 5 checked, 0 rejected
 safety search: 3 earlier investigator lines checked, 3 answered, 2 carry the detail
 verification done after 0 round(s)
-tagged 45 sentences in 3 chunks: 8 labels kept, 1 dropped (quote not in sentence)
-round 1: 5 deciding labels to check, 5 checked, 0 rejected
-verification done after 1 round(s)
-round 1: 14 deciding labels to check, 14 checked, 2 rejected
-round 1: 9 deciding labels to check, 9 checked, 1 rejected
-safety search: 3 earlier investigator lines checked, 3 answered, 1 carry the detail
-verification done after 0 round(s)
-tagged 46 sentences in 3 chunks: 11 labels kept, 1 dropped (quote not in sentence)
-tagged 41 sentences in 3 chunks: 9 labels kept, 1 dropped (quote not in sentence)
-round 1: 5 deciding labels to check, 5 checked, 0 rejected
-verification done after 1 round(s)
+tagged 41 sentences in 3 chunks: 10 labels kept, 1 dropped (quote not in sentence)
 round 1: 6 deciding labels to check, 5 checked, 0 rejected
+round 1: 7 deciding labels to check, 7 checked, 1 rejected
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
 round 2: 1 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 1 deciding line(s) not re-checked
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+safety search: 2 earlier investigator lines checked, 2 answered, 1 carry the detail
+round 1: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+tagged 47 sentences in 3 chunks: 21 labels kept, 3 dropped (quote not in sentence)
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 42 sentences in 3 chunks: 14 labels kept, 3 dropped (quote not in sentence)
+round 1: 7 deciding labels to check, 7 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 10 labels kept, 0 dropped (quote not in sentence)
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 16 labels kept, 2 dropped (quote not in sentence)
+round 1: 11 deciding labels to check, 10 checked, 0 rejected
+tagged 45 sentences in 3 chunks: 0 labels kept, 0 dropped (quote not in sentence)
+verification done after 0 round(s)
+tagged 46 sentences in 3 chunks: 8 labels kept, 0 dropped (quote not in sentence)
+round 1: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 1 round(s)
+tagged 40 sentences in 3 chunks: 18 labels kept, 6 dropped (quote not in sentence)
+round 1: 9 deciding labels to check, 9 checked, 1 rejected
+verification done after 1 round(s)
+round 1: 10 deciding labels to check, 10 checked, 0 rejected
+verification done after 1 round(s)
 safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
-Traceback (most recent call last):
-  File "/home/runner/work/provenance/provenance/app/ai/tasks.py", line 157, in verify
-    return _verify(items, calls, True)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/app/ai/tasks.py", line 166, in _verify
-    out = chat_json(settings.ultra, [
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/app/ai/client.py", line 158, in chat_json
-    raise LiveModelUnavailable(f"{spec.model_id} returned no valid JSON")
-app.ai.client.LiveModelUnavailable: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 2 earlier investigator lines checked, 2 answered, 2 carry the detail
+verification done after 0 round(s)
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+provenance {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.568, 'line_acc': 0.558, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 18, 'suspect->suspect': 21, 'interrogator->interrogator': 16, 'never->never': 17, 'interrogator->never': 21, 'suspect->interrogator': 2}} {'seconds': 276.5, 'cost_usd': 0.9889, 'calls': 100}
+tagged 44 sentences in 3 chunks: 32 labels kept, 6 dropped (quote not in sentence)
+tagged 39 sentences in 3 chunks: 32 labels kept, 0 dropped (quote not in sentence)
+tagged 42 sentences in 3 chunks: 25 labels kept, 0 dropped (quote not in sentence)
+tagged 38 sentences in 3 chunks: 27 labels kept, 0 dropped (quote not in sentence)
+round 1: 14 deciding labels to check, 14 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 45 sentences in 3 chunks: 37 labels kept, 0 dropped (quote not in sentence)
+round 1: 8 deciding labels to check, 8 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 28 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+verification done after 1 round(s)
+round 1: 13 deciding labels to check, 13 checked, 5 rejected
+round 1: 14 deciding labels to check, 14 checked, 7 rejected
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+round 2: 6 deciding labels to check, 5 checked, 1 rejected
+round 2: 7 deciding labels to check, 7 checked, 1 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 3: 2 deciding labels to check, 2 checked, 1 rejected
+0 deciding line(s) not re-checked
+round 1: 10 deciding labels to check, 10 checked, 1 rejected
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 41 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 47 sentences in 3 chunks: 38 labels kept, 0 dropped (quote not in sentence)
+round 1: 13 deciding labels to check, 13 checked, 2 rejected
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+round 2: 2 deciding labels to check, 2 checked, 0 rejected
+verification done after 2 round(s)
+tagged 42 sentences in 3 chunks: 41 labels kept, 0 dropped (quote not in sentence)
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+round 1: 13 deciding labels to check, 13 checked, 4 rejected
+round 2: 4 deciding labels to check, 4 checked, 0 rejected
+verification done after 2 round(s)
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+tagged 46 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 10 deciding labels to check, 10 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 34 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+round 2: 1 deciding labels to check, 1 checked, 0 rejected
+verification done after 2 round(s)
+tagged 45 sentences in 3 chunks: 31 labels kept, 0 dropped (quote not in sentence)
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+tagged 46 sentences in 3 chunks: 36 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 40 sentences in 3 chunks: 27 labels kept, 0 dropped (quote not in sentence)
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+round 1: 13 deciding labels to check, 13 checked, 0 rejected
+verification done after 1 round(s)
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+provenance_ultra {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.874, 'line_acc': 0.874, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 2, 'suspect->suspect': 36, 'interrogator->interrogator': 31, 'never->never': 16, 'interrogator->never': 6, 'suspect->interrogator': 3, 'never->interrogator': 1}} {'seconds': 589.4, 'cost_usd': 2.7093, 'calls': 167}
+# Provenance benchmark
 
-During handling of the above exception, another exception occurred:
+14 synthetic interrogations (trainval split) written by deepseek-ai/DeepSeek-V4.1-Flash-1017 (the training writer; diagnostic split), 95 details with known first speakers.
 
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/runner/work/provenance/provenance/eval/run_eval.py", line 245, in <module>
-    main()
-  File "/home/runner/work/provenance/provenance/eval/run_eval.py", line 216, in main
-    preds = list(ex.map(safe, recs))
-            ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
-    yield _result_or_cancel(fs.pop())
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
-    return fut.result(timeout)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 456, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
-    raise self._exception
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/eval/run_eval.py", line 210, in safe
-    return fn(r)
-           ^^^^^
-  File "/home/runner/work/provenance/provenance/eval/run_eval.py", line 203, in <lambda>
-    fn = {"keyword": lambda r: keyword(r), "one_prompt": lambda r: one_prompt(r, calls), "provenance": lambda r: provenance(r, calls),
-                                                                                                                 ^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/eval/run_eval.py", line 130, in provenance
-    return _with_trace(rec, utts, facts, mentions, calls)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/eval/run_eval.py", line 115, in _with_trace
-    if full and search_investigator_first(_cfg(rec), utts, facts, mentions, calls):
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/scripts/tag.py", line 198, in search_investigator_first
-    for res, local in ex.map(run, [items[i:i + 5] for i in range(0, len(items), 5)]):
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
-    yield _result_or_cancel(fs.pop())
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
-    return fut.result(timeout)
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 456, in result
-    return self.__get_result()
-           ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
-    raise self._exception
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/concurrent/futures/thread.py", line 59, in run
-    result = self.fn(*self.args, **self.kwargs)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/scripts/tag.py", line 193, in run
-    return tasks.verify(b, local), local
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/provenance/provenance/app/ai/tasks.py", line 158, in verify
-    except LiveModelUnavailable as e:
-           ^^^^^^^^^^^^^^^^^^^^
-NameError: name 'LiveModelUnavailable' is not defined
+| Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
+|---|---|---|---|---|---|
+| Provenance: Lightning labels + code ledger + Ultra check + safety search | 57% | 56% | 0 | 276.5 s | $0.989 |
+| Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search | 87% | 87% | 0 | 589.4 s | $2.709 |

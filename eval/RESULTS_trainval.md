@@ -4,7 +4,5 @@
 
 | Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
 |---|---|---|---|---|---|
-| Keyword match (no model) | 54% | 52% | 4 | 0.0 s | $0.000 |
-| Nemotron 3 Ultra, one prompt per interview | 90% | 81% | 0 | 27.3 s | $0.126 |
-| Provenance without code agreements or safety search (ablation) | 57% | 53% | 1 | 98.4 s | $0.309 |
-| Provenance: Lightning labels + code ledger + Ultra check + safety search | 68% | 65% | 0 | 271.2 s | $0.885 |
+| Provenance: Lightning labels + code ledger + Ultra check + safety search | 57% | 56% | 0 | 276.5 s | $0.989 |
+| Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search | 87% | 87% | 0 | 589.4 s | $2.709 |
