@@ -45,7 +45,7 @@
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"
   }
  ],
- "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 5 first (1 of them in part), 9 were already public, 2 may trace to an earlier statement with no public transcript. 8 details came from him first in the record.",
+ "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 5 first, 9 were already public, 2 may trace to an earlier statement with no public transcript. 8 details came from him first in the record.",
  "counts": {
   "interrogator_first": 5,
   "suspect_first": 8,
@@ -8175,34 +8175,7 @@
    },
    "investigator_lines_before": [],
    "nearby_prompts": [],
-   "label_words_from_investigators": [
-    {
-     "word": "back",
-     "lines": [
-      {
-       "utterance": "S2-0421",
-       "page": "549",
-       "page_end": "",
-       "session": "S2",
-       "quote": "Is it drove in or is it backed into the garage?"
-      },
-      {
-       "utterance": "S2-0429",
-       "page": "550",
-       "page_end": "",
-       "session": "S2",
-       "quote": "She was in the back of the jeep?"
-      },
-      {
-       "utterance": "S2-0435",
-       "page": "550",
-       "page_end": "",
-       "session": "S2",
-       "quote": "OK. What did you see in the back, now this is hard, but what did you see in the back of the jeep?"
-      }
-     ]
-    }
-   ],
+   "label_words_from_investigators": [],
    "related_statements": [
     {
      "utterance": "S1-0317",
@@ -34416,16 +34389,18 @@
     ]
    },
    "origin": "interrogator_first",
-   "origin_label": "Investigators named part of it first",
+   "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators named \u201cphone\u201d, \u201ccell\u201d, \u201ccamera\u201d and \u201cpurse\u201d (Feb 27, 2006, Mishicot High School, p. 474); he named \u201cburnt\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 620). Counted as investigators first, because they named part of the detail before he said all of it.",
-   "partly_supplied": true,
-   "supplied_across_lines": false,
+   "why": "Investigators named every part of it before he said it, in separate lines: \u201cphone\u201d, \u201ccell\u201d, \u201ccamera\u201d and \u201cpurse\u201d (Feb 27, 2006, Mishicot High School, p. 474); \u201cburn\u201d and \u201cbarrel\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 619). He then said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 620).",
+   "partly_supplied": false,
+   "supplied_across_lines": true,
    "partial_words": [
     "phone",
     "cell",
     "camera",
-    "purse"
+    "purse",
+    "burn",
+    "barrel"
    ],
    "first_interrogator": {
     "utterance": "S1-0557",
@@ -34465,6 +34440,14 @@
      "page_end": "",
      "session": "S1",
      "quote": "Did he tell ya anything about a, a, any of her other possessions like I imagine a woman would have a purse, she probably had her cell phone, a camera to take pictures. Did he tell you what he did with",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-1956",
+     "page": "619",
+     "page_end": "",
+     "session": "S2",
+     "quote": "OK. We talked last er Monday we talked a little about some things a burn barrel out front do you remember anything about that burn barrel? It's ah you might wanna be a little more truthful about now.",
      "by": "key words"
     }
    ],

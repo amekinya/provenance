@@ -232,6 +232,27 @@ def turns_before(order: list, p: int, n: int) -> list:
     return out[::-1]
 
 
+def exchange_before(order: list, p: int, must: list, gap: int = 10) -> list:
+    """The stretch of questioning about a detail that leads up to line p: walking back in the same session, the lines
+    that name part of it (any key-term group, either side), as long as no more than `gap` printed turns pass without
+    one. Always includes the last 6 turns."""
+    out, quiet = [], 0
+    for k in range(p - 1, -1, -1):
+        x = order[k]
+        if _sess(x) != _sess(order[p]):
+            break
+        out.append(x)
+        if any(has_terms(_txt(x), [g]) for g in must):
+            quiet = 0
+        elif not _split(x):
+            quiet += 1
+            if quiet > gap:
+                break
+    near = turns_before(order, p, PART_WINDOW)
+    keep = {(x.id if hasattr(x, "id") else x["id"]) for x in out} | {(x.id if hasattr(x, "id") else x["id"]) for x in near}
+    return [x for x in order[max(0, p - len(out) - len(near)):p] if (x.id if hasattr(x, "id") else x["id"]) in keep]
+
+
 def _echo_groups(order: list, i: int, must: list) -> list:
     """Groups an investigator line repeats from the suspect's turn just before it (an echo of his words, not a mention)."""
     u = order[i]
@@ -244,6 +265,7 @@ def _echo_groups(order: list, i: int, must: list) -> list:
 
 
 NEARBY_TURNS = 10  # investigator prompts this close to his first statement are shown on the card
+LONE_WORDS = {"back", "up", "down", "in", "out", "on", "off"}  # only meaningful inside a phrase (same rule as the key terms)
 
 
 def _cite_dict(e) -> dict:
@@ -381,7 +403,8 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
         nearby = [_line_ev(x) for x in turns_before(order, p, NEARBY_TURNS) if x.id in inv_part and x.id not in shown]
         # words of the detail's label that aren't key terms (degree words like 'unconscious'): who said them first nearby
         covered = {a for g in fact.must for a in g}
-        extra_words = [w for w in derive_must(fact.label) if not any(_matches(w[0], a) or _matches(a, w[0]) for a in covered)]
+        extra_words = [w for w in derive_must(fact.label) if w[0] not in LONE_WORDS
+                       and not any(_matches(w[0], t) or _matches(t, w[0]) for a in covered for t in _tok(a))]
         around = turns_before(order, p, NEARBY_TURNS) + [order[p]] + turns_after(order, p, NEARBY_TURNS)
         for (w,) in extra_words:
             said = [x for x in around if has_terms(x.text, [[w]])]
@@ -415,14 +438,15 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
 def _partly_supplied(fact: Fact, order: list, pos: dict, by_id: dict, inv_part: dict, model_inv: set, ms: list,
                      first_inv: dict | None, first_sus: dict | None) -> dict | None:
     """Did investigators name part of the detail (or every part, across separate lines) before he stated all of it?
-    Candidates: investigator lines in the last 6 printed turns before his first statement that carry some key-term
-    groups (code), plus investigator lines the labeler tied to this detail anywhere earlier that carry some groups
+    Candidates: investigator lines in the exchange leading up to his first statement (the stretch of questioning that
+    keeps naming parts of the detail, with no more than 10 turns between such lines, and at least the last 6 turns)
+    that carry some key-term groups (code), plus investigator lines the labeler tied to this detail anywhere earlier
     (extra evidence, which can only add investigator credit). A group counts as theirs unless he had said a word of it
-    first, in his lines labeled with this detail or in that window. Echoes of his previous turn are already removed."""
+    first, in his lines labeled with this detail or in that exchange. Echoes of his previous turn are already removed."""
     if not fact.must or not first_sus or (first_inv and first_inv["seq"] < first_sus["seq"]):
         return None
     p = pos[first_sus["utterance"]]
-    window = turns_before(order, p, PART_WINDOW)
+    window = exchange_before(order, p, fact.must)
     cands = {u.id: u for u in window if u.id in inv_part}
     cands |= {uid: by_id[uid] for uid in model_inv if uid in inv_part and by_id[uid].seq < first_sus["seq"]}
     his = [x for x in window if x.role == "suspect"] + [by_id[m.utterance] for m in ms if by_id[m.utterance].role == "suspect"

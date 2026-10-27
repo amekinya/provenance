@@ -211,3 +211,25 @@ def test_echo_borrowed_context_and_turn_window():
     f3 = rep["F3"]
     assert f3["origin"] == "interrogator_first" and f3["partly_supplied"] and f3["first_interrogator"]["utterance"] == "A5"
     assert "“shot”" in f3["why"] and "he named “22”" in f3["why"]
+
+
+def test_exchange_window_and_every_part_across_lines():
+    # investigators name "camera" and later "barrel", 9 quiet turns apart, then he says it: every part, across lines
+    s = [Session("A", "Day 1", date(2006, 3, 1))]
+    u = [Utterance("A1", "A", 1, "DET", "interrogator", "What happened to her camera?", "1")]
+    u += [Utterance(f"A{k}", "A", k, "DET" if k % 2 else "KID", "interrogator" if k % 2 else "suspect",
+                    "Tell us." if k % 2 else "I don't know.", "1") for k in range(2, 11)]
+    u += [Utterance("A11", "A", 11, "DET", "interrogator", "Was anything put in the barrel?", "2"),
+          Utterance("A12", "A", 12, "DET", "interrogator", "Tell us what.", "2"),
+          Utterance("A13", "A", 13, "KID", "suspect", "Her camera went in the barrel.", "2"),
+          Utterance("A14", "A", 14, "DET", "interrogator", "He backed into the garage, right?", "2"),
+          Utterance("A15", "A", 15, "KID", "suspect", "The jeep was in the back.", "2")]
+    f = [Fact("F1", "Her camera was put in the barrel", must=[["camera"], ["barrel"]]),
+         Fact("F2", "The jeep was in the back", must=[["in the back", "back of"], ["jeep"]])]
+    m = [Mention("A13", "F1", "asserts", verified=True), Mention("A15", "F2", "asserts", verified=True)]
+    rep = by_fact(audit(Case("t", "T", "KID", s, u, f, m)))
+    f1 = rep["F1"]
+    assert f1["origin"] == "interrogator_first" and f1["supplied_across_lines"] and not f1["partly_supplied"]
+    assert "every part of it" in f1["why"] and "“camera”" in f1["why"] and "“barrel”" in f1["why"]
+    # a lone 'back' (in 'backed') is never offered as a label word that came from investigators
+    assert all(w["word"] != "back" for w in rep["F2"]["label_words_from_investigators"])
