@@ -304,7 +304,12 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None, lines: list[
     """Ultra writes the summary only; code checks it (banned wording, quotations from a single line) and writes the key
     points and limits itself, so both directions are always covered and every citation is the ledger's."""
     pts, limits = memo_points(report)
-    brief = {"headline": report["headline"], "counts": report["counts"], "key_points": pts,
+    # details that may trace to an unrecorded conversation go to the model by label only, so the summary can't say what
+    # was said in it
+    told = [f"May trace to an earlier conversation with no public transcript: {f['fact']['label']}." for f in report["facts"]
+            if f["origin"] == "prior_contact"]
+    brief = {"headline": report["headline"], "counts": report["counts"],
+             "key_points": [x for x in pts if not x.startswith("May trace to an earlier conversation")] + told,
              "sessions": [{k: s[k] for k in ("label", "turns", "interrogator_share_of_words", "questions", "questions_that_carry_facts")}
                           for s in report["session_stats"]]}
     msgs = [{"role": "system", "content": "You write the 3-4 sentence summary of a memo for defense counsel about a corroboration audit of an "
@@ -326,8 +331,9 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None, lines: list[
         c = report["counts"]
         summary = (f"Draft for counsel's review, computed from the record with machine-checked lines. {report['headline']} "
                    f"Investigators said {c['interrogator_first']} details first; {c['suspect_first']} came from him first in the record.")
+    point_checks = [f"{x[:40]}…: {pr}" for x in pts for pr in memo_problems(x, lines or [])] if lines else []
     return {"summary": summary, "key_points": pts, "limits": limits, "by": "summary: Nemotron 3 Ultra (checked by code); points: code",
-            "summary_checks": probs}
+            "summary_checks": probs, "point_checks": point_checks}
 
 
 # ---------------------------------------------------------------------------------------------------------------------

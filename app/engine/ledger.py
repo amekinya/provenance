@@ -268,6 +268,15 @@ NEARBY_TURNS = 10  # investigator prompts this close to his first statement are 
 LONE_WORDS = {"back", "up", "down", "in", "out", "on", "off"}  # only meaningful inside a phrase (same rule as the key terms)
 
 
+def _about(order: list, i: int, must: list) -> bool:
+    """Is line i about this detail: does it name one of its key-term groups, or is it a short line whose 2 lines before
+    it (same session) do?"""
+    if any(has_terms(_txt(order[i]), [g]) for g in must):
+        return True
+    short = len(spoken(_txt(order[i])).split()) <= SHORT_WORDS
+    return short and any(any(has_terms(_txt(x), [g]) for g in must) for x in turns_before(order, i, 2))
+
+
 def _cite_dict(e) -> dict:
     return {k: e.get(k) for k in ("utterance", "page", "page_end", "session", "quote", "by") if k in e}
 
@@ -407,7 +416,9 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
                        and not any(_matches(w[0], t) or _matches(t, w[0]) for a in covered for t in _tok(a))]
         around = turns_before(order, p, NEARBY_TURNS) + [order[p]] + turns_after(order, p, NEARBY_TURNS)
         for (w,) in extra_words:
-            said = [x for x in around if has_terms(x.text, [[w]])]
+            # only lines about this detail: a line that names one of its key-term groups, or a short line (8 words or
+            # fewer) right after one, read with the 2 lines before it as everywhere else
+            said = [x for x in around if has_terms(x.text, [[w]]) and _about(order, pos[x.id], fact.must)]
             if said and said[0].role == "interrogator":
                 label_words.append({"word": w, "lines": [_cite_dict(_line_ev(x)) for x in said if x.role == "interrogator"][:3]})
     if fact.must and first_inv and not first_sus:  # never adopted: what he answered when it was put to him
@@ -510,7 +521,7 @@ def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | No
         what = f": {fact.public_what}" if fact.public_what else ""
         return "public", f"It was reported publicly by {fact.public_before:%b %d, %Y}{what}, before the suspect first said it ({_cite(first_sus, sessions)}).{also}"
     if fact.prior_statement:
-        return "prior_contact", (f"The record shows he described this earlier, in a statement with no public transcript: {fact.prior_statement}. "
+        return "prior_contact", (f"An earlier statement with no public transcript is reported outside the transcripts (we can't read it): {fact.prior_statement}. "
                                  f"In the transcripts it first appears at {_cite(first_inv if inv_first else first_sus, sessions)}.")
     if not inv_first and partial:
         named = "; ".join(f"{_and([f'“{w}”' for w in ws])} ({_cite(ev, sessions)})" for ev, ws in partial["per_line"] if ws)
@@ -525,14 +536,14 @@ def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | No
         cue = _prior_cue(case, first_inv)
         if cue:
             return "prior_contact", (f"Investigators first said it ({_cite(first_inv, sessions)}), but in words that may refer to something he said "
-                                     f"earlier with no public transcript (p. {cue.page or '?'}: \"{plain(cue.text)[:90]}\").")
+                                     f"earlier with no public transcript ({pages_of(cue)}: {_cue_quote(cue.text, fact.must)}).")
         how = "by agreeing to a question" if first_sus["kind"] == "assents" else "after that"
         return "interrogator_first", (f"Investigators first said it ({_cite(first_inv, sessions)}); the suspect first adopted it {how} "
                                       f"({_cite(first_sus, sessions)}).")
     cue = _prior_cue(case, first_sus, before=12)
     if cue:
         return "prior_contact", (f"The suspect said it first in the transcripts ({_cite(first_sus, sessions)}), but just before, the investigator "
-                                 f"may have referred to an earlier conversation with no public transcript (p. {cue.page or '?'}: \"{plain(cue.text)[:90]}\").")
+                                 f"may have referred to an earlier conversation with no public transcript ({pages_of(cue)}: {_cue_quote(cue.text, fact.must)}).")
     return "suspect_first", f"The suspect said it first ({_cite(first_sus, sessions)}), and nothing earlier in the transcripts supplies it."
 
 
@@ -540,6 +551,20 @@ def _prior_cue(case: Case, ev: dict, before: int = 2) -> Utterance | None:
     """An investigator line at or just before this event that points to an earlier conversation we can't read."""
     window = [u for u in ordered(case) if u.session == ev["session"] and ev["seq"] - before <= u.seq <= ev["seq"]]
     return next((u for u in reversed(window) if u.role == "interrogator" and PRIOR_CONTACT.search(plain(u.text))), None)
+
+
+def _cue_quote(text: str, must: list | None = None) -> str:
+    """The sentence of the investigator's line that refers to the earlier conversation, quoted exactly as printed, and,
+    when the detail's key terms are in other sentences of the same line, those sentences as a second quote."""
+    t = plain(text)
+    m = PRIOR_CONTACT.search(t)
+    if not m:
+        return f"“{t[:120]}”"
+    a = max(t.rfind(c, 0, m.start()) for c in ".?!") + 1
+    ends = [k for k in (t.find(c, m.end()) for c in ".?!") if k >= 0]
+    cue = t[a:(min(ends) + 1 if ends else len(t))].strip()
+    span = next((sp for sp in _spans(t) if must and has_terms(sp, must)), "")
+    return f"“{cue}”" + (f" … “{span.strip()}”" if span and cue not in span and span.strip() in t else "")
 
 
 def _and(xs: list[str]) -> str:

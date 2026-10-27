@@ -42,7 +42,8 @@ def main() -> None:
     if memo.exists():
         import re  # noqa: PLC0415
         pages = {str(u["page"]) for u in json.loads((cd / "utterances.json").read_text())}
-        cited = set(re.findall(r"pp?\. ?(\w+)", memo.read_text())) | set(re.findall(r"pp\. \w+\u2013(\w+)", memo.read_text()))
+        text = re.sub(r"Decision and Order,? pp?\. ?[\w\u2013-]+", "", memo.read_text())  # the court's pages, not the transcripts'
+        cited = set(re.findall(r"pp?\. ?(\w+)", text)) | set(re.findall(r"pp\. \w+\u2013(\w+)", text))
         md += ["", f"Memo page citations: {len(cited)} distinct; not in the transcripts: {sorted(cited - pages) or 'none'}"]
     (cd / "review_table.md").write_text("\n".join(md) + "\n")
     print("\n".join(md))

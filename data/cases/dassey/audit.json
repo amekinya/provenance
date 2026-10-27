@@ -30370,7 +30370,7 @@
    "origin": "prior_contact",
    "origin_label": "May trace to an earlier statement with no public transcript",
    "corroboration": "unclear",
-   "why": "The record shows he described this earlier, in a statement with no public transcript: on the evening of Feb 27, 2006 he told Fassbender he got bleach on his pants helping clean Avery's garage floor (Decision and Order p. 7, citing ECF 19-19 at 10-11). In the transcripts it first appears at Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 527.",
+   "why": "An earlier statement with no public transcript is reported outside the transcripts (we can't read it): on the evening of Feb 27, 2006 he told Fassbender he got bleach on his pants helping clean Avery's garage floor (Decision and Order p. 7, citing ECF 19-19 at 10-11). In the transcripts it first appears at Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 527.",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],
@@ -30416,20 +30416,7 @@
     }
    ],
    "nearby_prompts": [],
-   "label_words_from_investigators": [
-    {
-     "word": "floor",
-     "lines": [
-      {
-       "utterance": "S2-0019",
-       "page": "527",
-       "page_end": "",
-       "session": "S2",
-       "quote": "By the kitchen table, like laying on the floor or on a"
-      }
-     ]
-    }
-   ],
+   "label_words_from_investigators": [],
    "related_statements": [],
    "related_statements_total": 0,
    "his_responses": [],
@@ -31006,7 +30993,7 @@
    "origin": "prior_contact",
    "origin_label": "May trace to an earlier statement with no public transcript",
    "corroboration": "unclear",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 547), but in words that may refer to something he said earlier with no public transcript (p. 547: \"OK. We're not gonna go any further in this cuz we need to get the truth out now. We know t\").",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 547), but in words that may refer to something he said earlier with no public transcript (p. 547: \u201cI talked to ya the other night and you said nothing about Monte you said nothing about something getting punctured and leaking out.\u201d \u2026 \u201cWe talked about cleaning somethin' up in that garage. You told me that you thought thinking back now there was blood.\u201d).",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],

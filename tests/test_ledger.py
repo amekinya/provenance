@@ -233,3 +233,14 @@ def test_exchange_window_and_every_part_across_lines():
     assert "every part of it" in f1["why"] and "“camera”" in f1["why"] and "“barrel”" in f1["why"]
     # a lone 'back' (in 'backed') is never offered as a label word that came from investigators
     assert all(w["word"] != "back" for w in rep["F2"]["label_words_from_investigators"])
+
+
+def test_prior_contact_quote_is_the_cue_sentence_and_the_detail_sentence():
+    from app.engine.ledger import _cue_quote
+    line = ("OK. We know the fire was going. I talked to ya the other night and you said nothing about Monte. "
+            "We talked about cleaning somethin' up in that garage. You told me there was blood. What's goin' on?")
+    q = _cue_quote(line, [["blood"], ["garage"]])
+    assert q.startswith("“I talked to ya the other night and you said nothing about Monte.”")
+    assert "“We talked about cleaning somethin' up in that garage. You told me there was blood.”" in q
+    # every quoted part is printed in the line as is
+    assert all(part in line for part in q.replace("”", "").split(" … “") for part in [part.lstrip("“")])
