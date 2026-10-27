@@ -4895,9 +4895,9 @@
   "seq": 100489,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK, then I'm just going to read it and read what you wrote. OK? (Is I got off the bus at 3:45 and seen her jeep down at Steven's house. Then I went in my house and played Playstation 2 for three hours and then I eat at 8:00 and I watch TV and then got a phone call from Steven, if I wanted to come over to have a fire and I did and he told me to bring the golf cart and I did. So then we went driving around the yard and got to pick up the stuff around the house. Then we dropped the seats by the fire and went to get the wood and the cabinet and then went back to throw the seat on the fire and then we waited for it to go down and throw on the wood and cabinet. Then I seen the toes before we throw the wood and cabinet on the fire. When we did that he seen me that I seen the toes he told me not to say anything and he told me that he stabbed her in the stomach in the pit and he took the knife and put it under the seat in her jeep. Is that your statement Brendan?)",
+  "text": "OK, then I'm just going to read it and read what you wrote. OK?",
   "page": "469",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0491",
@@ -4905,9 +4905,10 @@
   "seq": 100490,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yes.",
-  "page": "470",
-  "sensitive": false
+  "text": "(written statement, read aloud by Wiegert) Is I got off the bus at 3:45 and seen her jeep down at Steven's house. Then I went in my house and played Playstation 2 for three hours and then I eat at 8:00 and I watch TV and then got a phone call from Steven, if I wanted to come over to have a fire and I did and he told me to bring the golf cart and I did. So then we went driving around the yard and got to pick up the stuff around the house. Then we dropped the seats by the fire and went to get the wood and the cabinet and then went back to throw the seat on the fire and then we waited for it to go down and throw on the wood and cabinet. Then I seen the toes before we throw the wood and cabinet on the fire. When we did that he seen me that I seen the toes he told me not to say anything and he told me that he stabbed her in the stomach in the pit and he took the knife and put it under the seat in her jeep.",
+  "page": "469",
+  "sensitive": false,
+  "read_aloud_by": "WIEGERT"
  },
  {
   "id": "S1-0492",
@@ -4915,9 +4916,9 @@
   "seq": 100491,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Um, did you want to add anything in there about where he stabbed her and why he told you he stabbed her?",
-  "page": "470",
-  "sensitive": true
+  "text": "Is that your statement Brendan?",
+  "page": "469",
+  "sensitive": false
  },
  {
   "id": "S1-0493",
@@ -4925,9 +4926,9 @@
   "seq": 100492,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": ".....Why he stabbed her.",
+  "text": "Yes.",
   "page": "470",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0494",
@@ -4935,9 +4936,9 @@
   "seq": 100493,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "You told me before that she was, that he was",
+  "text": "Um, did you want to add anything in there about where he stabbed her and why he told you he stabbed her?",
   "page": "470",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0495",
@@ -4945,7 +4946,7 @@
   "seq": 100494,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "He was angry.",
+  "text": ".....Why he stabbed her.",
   "page": "470",
   "sensitive": false
  },
@@ -4955,7 +4956,7 @@
   "seq": 100495,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "angry",
+  "text": "You told me before that she was, that he was",
   "page": "470",
   "sensitive": false
  },
@@ -4965,7 +4966,7 @@
   "seq": 100496,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "He was angry.",
   "page": "470",
   "sensitive": false
  },
@@ -4975,7 +4976,7 @@
   "seq": 100497,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Did you wanna add that into your statement? Yes or no?",
+  "text": "angry",
   "page": "470",
   "sensitive": false
  },
@@ -4985,7 +4986,7 @@
   "seq": 100498,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yes.",
+  "text": "Yeah.",
   "page": "470",
   "sensitive": false
  },
@@ -4995,7 +4996,7 @@
   "seq": 100499,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK.",
+  "text": "Did you wanna add that into your statement? Yes or no?",
   "page": "470",
   "sensitive": false
  },
@@ -5003,9 +5004,9 @@
   "id": "S1-0501",
   "session": "S1",
   "seq": 100500,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "We both may ask you some questions like that ah and then ah, you want to add it to your statement, you can do so. Based on what you told us there some things that we feel you should probably add to your statement, but that's up, that's up to you.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yes.",
   "page": "470",
   "sensitive": false
  },
@@ -5015,7 +5016,7 @@
   "seq": 100501,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Did he say what he was angry about?",
+  "text": "OK.",
   "page": "470",
   "sensitive": false
  },
@@ -5023,9 +5024,9 @@
   "id": "S1-0503",
   "session": "S1",
   "seq": 100502,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Not at all. That's a yes or no.",
+  "text": "We both may ask you some questions like that ah and then ah, you want to add it to your statement, you can do so. Based on what you told us there some things that we feel you should probably add to your statement, but that's up, that's up to you.",
   "page": "470",
   "sensitive": false
  },
@@ -5033,9 +5034,9 @@
   "id": "S1-0504",
   "session": "S1",
   "seq": 100503,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Did he say what he was angry about?",
   "page": "470",
   "sensitive": false
  },
@@ -5045,27 +5046,27 @@
   "seq": 100504,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "No?",
-  "page": "471",
+  "text": "Not at all. That's a yes or no.",
+  "page": "470",
   "sensitive": false
  },
  {
   "id": "S1-0506",
   "session": "S1",
   "seq": 100505,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "And you told me before that he said he did something else to her, you said he tied her up and he stabbed her in the truck. Is that right?",
-  "page": "471",
-  "sensitive": true
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "No.",
+  "page": "470",
+  "sensitive": false
  },
  {
   "id": "S1-0507",
   "session": "S1",
   "seq": 100506,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "No?",
   "page": "471",
   "sensitive": false
  },
@@ -5075,17 +5076,17 @@
   "seq": 100507,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Do you wanna add that to your statement? OK.",
+  "text": "And you told me before that he said he did something else to her, you said he tied her up and he stabbed her in the truck. Is that right?",
   "page": "471",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0509",
   "session": "S1",
   "seq": 100508,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "What did he use to tie her up with, did he say?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
   "page": "471",
   "sensitive": false
  },
@@ -5093,9 +5094,9 @@
   "id": "S1-0510",
   "session": "S1",
   "seq": 100509,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Rope",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Do you wanna add that to your statement? OK.",
   "page": "471",
   "sensitive": false
  },
@@ -5105,7 +5106,7 @@
   "seq": 100510,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Rope",
+  "text": "What did he use to tie her up with, did he say?",
   "page": "471",
   "sensitive": false
  },
@@ -5113,9 +5114,9 @@
   "id": "S1-0512",
   "session": "S1",
   "seq": 100511,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Did he say anything about duct tape?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Rope",
   "page": "471",
   "sensitive": false
  },
@@ -5123,9 +5124,9 @@
   "id": "S1-0513",
   "session": "S1",
   "seq": 100512,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "....",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "Rope",
   "page": "471",
   "sensitive": false
  },
@@ -5135,7 +5136,7 @@
   "seq": 100513,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "No. (pause)",
+  "text": "Did he say anything about duct tape?",
   "page": "471",
   "sensitive": false
  },
@@ -5143,9 +5144,9 @@
   "id": "S1-0515",
   "session": "S1",
   "seq": 100514,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "You told us that he talked to you about not talking and that he threatened you. That would probably be a good thing to add to your statement if you\u2019d like, specifically what he said to you. (pause)",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "....",
   "page": "471",
   "sensitive": false
  },
@@ -5155,7 +5156,7 @@
   "seq": 100515,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "You also told us that he said she was pretty. Do you wanna add that in the statement? Yes or no?",
+  "text": "No. (pause)",
   "page": "471",
   "sensitive": false
  },
@@ -5163,9 +5164,9 @@
   "id": "S1-0517",
   "session": "S1",
   "seq": 100516,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yes. (pause)",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "You told us that he talked to you about not talking and that he threatened you. That would probably be a good thing to add to your statement if you\u2019d like, specifically what he said to you. (pause)",
   "page": "471",
   "sensitive": false
  },
@@ -5173,11 +5174,11 @@
   "id": "S1-0518",
   "session": "S1",
   "seq": 100517,
-  "speaker": "FASSBENDER",
+  "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Brendan, I think you did a real good job about writing. You were, you were a little more detailed about what you saw in the fire and it was getting very difficult to write that, but I think it\u2019s important that you write not to just to tell what us the things that you saw in the fire about her and the clothing. Is that all right?",
+  "text": "You also told us that he said she was pretty. Do you wanna add that in the statement? Yes or no?",
   "page": "471",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0519",
@@ -5185,7 +5186,7 @@
   "seq": 100518,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "Yes. (pause)",
   "page": "471",
   "sensitive": false
  },
@@ -5195,27 +5196,27 @@
   "seq": 100519,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "OK, thank you. (pause)",
-  "page": "472",
-  "sensitive": false
+  "text": "Brendan, I think you did a real good job about writing. You were, you were a little more detailed about what you saw in the fire and it was getting very difficult to write that, but I think it\u2019s important that you write not to just to tell what us the things that you saw in the fire about her and the clothing. Is that all right?",
+  "page": "471",
+  "sensitive": true
  },
  {
   "id": "S1-0521",
   "session": "S1",
   "seq": 100520,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Brendan, I just got a question and I think Mark's gonna have some too. We didn't ask this before. Did he say anything about cutting her up or anything like that or did he put her body in there whole.......?",
-  "page": "472",
-  "sensitive": true
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
+  "page": "471",
+  "sensitive": false
  },
  {
   "id": "S1-0522",
   "session": "S1",
   "seq": 100521,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "He didn't say nothing.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "OK, thank you. (pause)",
   "page": "472",
   "sensitive": false
  },
@@ -5225,17 +5226,17 @@
   "seq": 100522,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Brendan, you told us earlier that what you saw was the whole body right? OK. Could you indicate that the body appeared to be whole or however you want to put it in your words. And where it was located, you had said under certain items. (pause)",
+  "text": "Brendan, I just got a question and I think Mark's gonna have some too. We didn't ask this before. Did he say anything about cutting her up or anything like that or did he put her body in there whole.......?",
   "page": "472",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0524",
   "session": "S1",
   "seq": 100523,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Did he say where he got the knife from, Brendan? Or who's knife it was? Did he say where he got it from? No?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "He didn't say nothing.",
   "page": "472",
   "sensitive": false
  },
@@ -5243,9 +5244,9 @@
   "id": "S1-0525",
   "session": "S1",
   "seq": 100524,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "Brendan, you told us earlier that what you saw was the whole body right? OK. Could you indicate that the body appeared to be whole or however you want to put it in your words. And where it was located, you had said under certain items. (pause)",
   "page": "472",
   "sensitive": false
  },
@@ -5255,9 +5256,9 @@
   "seq": 100525,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "When he was telling you about how he stabbed her, was he laughing, enjoying it, or how was he putting it to you.",
+  "text": "Did he say where he got the knife from, Brendan? Or who's knife it was? Did he say where he got it from? No?",
   "page": "472",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0527",
@@ -5265,7 +5266,7 @@
   "seq": 100526,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "He was just staring at the ground.",
+  "text": "No.",
   "page": "472",
   "sensitive": false
  },
@@ -5275,9 +5276,9 @@
   "seq": 100527,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Did he say he was sorry or anything? He just stared at the ground. Is that what you said? Yes or no.",
+  "text": "When he was telling you about how he stabbed her, was he laughing, enjoying it, or how was he putting it to you.",
   "page": "472",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0529",
@@ -5285,7 +5286,7 @@
   "seq": 100528,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "He was just staring at the ground.",
   "page": "472",
   "sensitive": false
  },
@@ -5295,7 +5296,7 @@
   "seq": 100529,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK.",
+  "text": "Did he say he was sorry or anything? He just stared at the ground. Is that what you said? Yes or no.",
   "page": "472",
   "sensitive": false
  },
@@ -5303,9 +5304,9 @@
   "id": "S1-0531",
   "session": "S1",
   "seq": 100530,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Another thing that you had talked to us about is where he put the vehicle in the pit and what he did to the vehicle. He talked about how he hid it. Could you add that? ..... (pause)",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
   "page": "472",
   "sensitive": false
  },
@@ -5315,7 +5316,7 @@
   "seq": 100531,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Did he tell you where he put her in the truck?",
+  "text": "OK.",
   "page": "472",
   "sensitive": false
  },
@@ -5323,10 +5324,10 @@
   "id": "S1-0533",
   "session": "S1",
   "seq": 100532,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
-  "page": "473",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "Another thing that you had talked to us about is where he put the vehicle in the pit and what he did to the vehicle. He talked about how he hid it. Could you add that? ..... (pause)",
+  "page": "472",
   "sensitive": false
  },
  {
@@ -5335,8 +5336,8 @@
   "seq": 100533,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK. Now let me read, this would be page two that you added here. Is that correct Brendan?",
-  "page": "473",
+  "text": "Did he tell you where he put her in the truck?",
+  "page": "472",
   "sensitive": false
  },
  {
@@ -5345,7 +5346,7 @@
   "seq": 100534,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "No.",
   "page": "473",
   "sensitive": false
  },
@@ -5355,7 +5356,7 @@
   "seq": 100535,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "I'll read this. Is that okay?",
+  "text": "OK. Now let me read, this would be page two that you added here. Is that correct Brendan?",
   "page": "473",
   "sensitive": false
  },
@@ -5375,44 +5376,14 @@
   "seq": 100537,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "He was angry and that's why he did it. He told me he used rope to tie her up in the jeep and that's when he stabbed her. When he told me not to say anything, he threatened me a little bit. He said that she was pretty to him. I seen the fingers and the belly and the forehead in the fire. The body looked like it was together and it was under some tires and branches. He hid the vehicle in the pit back in the tree area.",
+  "text": "I'll read this. Is that okay?",
   "page": "473",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0539",
   "session": "S1",
   "seq": 100538,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Can you, if you wish, add in there how he hid the vehicle? Did he put something on top of it? And if he did, what did he put on top of it? (pause)",
-  "page": "473",
-  "sensitive": false
- },
- {
-  "id": "S1-0540",
-  "session": "S1",
-  "seq": 100539,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Then you told us that he put some clothing on there. Can you add what you saw as it relates to that clothing? What you told us. (pause)",
-  "page": "473",
-  "sensitive": true
- },
- {
-  "id": "S1-0541",
-  "session": "S1",
-  "seq": 100540,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "OK, I'm gonna take that again and I'm gonna read what you just added Brendan. Is that okay?",
-  "page": "473",
-  "sensitive": false
- },
- {
-  "id": "S1-0542",
-  "session": "S1",
-  "seq": 100541,
   "speaker": "BRENDAN",
   "role": "suspect",
   "text": "Yeah.",
@@ -5420,12 +5391,43 @@
   "sensitive": false
  },
  {
+  "id": "S1-0540",
+  "session": "S1",
+  "seq": 100539,
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "(written statement, read aloud by Wiegert) He was angry and that's why he did it. He told me he used rope to tie her up in the jeep and that's when he stabbed her. When he told me not to say anything, he threatened me a little bit. He said that she was pretty to him. I seen the fingers and the belly and the forehead in the fire. The body looked like it was together and it was under some tires and branches. He hid the vehicle in the pit back in the tree area.",
+  "page": "473",
+  "sensitive": false,
+  "read_aloud_by": "WIEGERT"
+ },
+ {
+  "id": "S1-0541",
+  "session": "S1",
+  "seq": 100540,
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Can you, if you wish, add in there how he hid the vehicle? Did he put something on top of it? And if he did, what did he put on top of it? (pause)",
+  "page": "473",
+  "sensitive": false
+ },
+ {
+  "id": "S1-0542",
+  "session": "S1",
+  "seq": 100541,
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "Then you told us that he put some clothing on there. Can you add what you saw as it relates to that clothing? What you told us. (pause)",
+  "page": "473",
+  "sensitive": true
+ },
+ {
   "id": "S1-0543",
   "session": "S1",
   "seq": 100542,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "He hid the vehicle in the pit back in the tree area. He put some tree branches on the top of it and put the car hood on the top of it too. He put some clothes in the fire that was blue shirt and some pants.",
+  "text": "OK, I'm gonna take that again and I'm gonna read what you just added Brendan. Is that okay?",
   "page": "473",
   "sensitive": false
  },
@@ -5433,9 +5435,9 @@
   "id": "S1-0544",
   "session": "S1",
   "seq": 100543,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Did you see anything on that shirt at all?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
   "page": "473",
   "sensitive": false
  },
@@ -5445,9 +5447,10 @@
   "seq": 100544,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Somblood.",
+  "text": "(written statement, read aloud by Wiegert) He hid the vehicle in the pit back in the tree area. He put some tree branches on the top of it and put the car hood on the top of it too. He put some clothes in the fire that was blue shirt and some pants.",
   "page": "473",
-  "sensitive": false
+  "sensitive": false,
+  "read_aloud_by": "WIEGERT"
  },
  {
   "id": "S1-0546",
@@ -5455,7 +5458,7 @@
   "seq": 100545,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Some what?",
+  "text": "Did you see anything on that shirt at all?",
   "page": "473",
   "sensitive": false
  },
@@ -5465,9 +5468,9 @@
   "seq": 100546,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Blood",
-  "page": "474",
-  "sensitive": true
+  "text": "Somblood.",
+  "page": "473",
+  "sensitive": false
  },
  {
   "id": "S1-0548",
@@ -5475,17 +5478,17 @@
   "seq": 100547,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK, you wanna add that on there if you will?",
-  "page": "474",
+  "text": "Some what?",
+  "page": "473",
   "sensitive": false
  },
  {
   "id": "S1-0549",
   "session": "S1",
   "seq": 100548,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "You must have talked about something else ......to that shirt.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Blood",
   "page": "474",
   "sensitive": false
  },
@@ -5495,7 +5498,7 @@
   "seq": 100549,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Did he tell you who's shirt it was? Whose pants it was?",
+  "text": "OK, you wanna add that on there if you will?",
   "page": "474",
   "sensitive": false
  },
@@ -5503,9 +5506,9 @@
   "id": "S1-0551",
   "session": "S1",
   "seq": 100550,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "You must have talked about something else ......to that shirt.",
   "page": "474",
   "sensitive": false
  },
@@ -5515,7 +5518,7 @@
   "seq": 100551,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Whose did he tell you it was?",
+  "text": "Did he tell you who's shirt it was? Whose pants it was?",
   "page": "474",
   "sensitive": false
  },
@@ -5525,7 +5528,7 @@
   "seq": 100552,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Teresa's",
+  "text": "Yeah.",
   "page": "474",
   "sensitive": false
  },
@@ -5535,7 +5538,7 @@
   "seq": 100553,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK. (pause)",
+  "text": "Whose did he tell you it was?",
   "page": "474",
   "sensitive": false
  },
@@ -5543,9 +5546,9 @@
   "id": "S1-0555",
   "session": "S1",
   "seq": 100554,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Did he tell ya anything about a, a, any of her other possessions like I imagine a woman would have a purse, she probably had her cell phone, a camera to take pictures. Did he tell you what he did with those things?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Teresa's",
   "page": "474",
   "sensitive": false
  },
@@ -5553,9 +5556,9 @@
   "id": "S1-0556",
   "session": "S1",
   "seq": 100555,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "..........",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "OK. (pause)",
   "page": "474",
   "sensitive": false
  },
@@ -5565,7 +5568,7 @@
   "seq": 100556,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Are you sure?",
+  "text": "Did he tell ya anything about a, a, any of her other possessions like I imagine a woman would have a purse, she probably had her cell phone, a camera to take pictures. Did he tell you what he did with those things?",
   "page": "474",
   "sensitive": false
  },
@@ -5575,7 +5578,7 @@
   "seq": 100557,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "..........",
   "page": "474",
   "sensitive": false
  },
@@ -5585,7 +5588,7 @@
   "seq": 100558,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "What about, like the key to her car and stuff like that ....in there? OK.",
+  "text": "Are you sure?",
   "page": "474",
   "sensitive": false
  },
@@ -5593,9 +5596,9 @@
   "id": "S1-0560",
   "session": "S1",
   "seq": 100559,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "How about a camera? Did he say anything about a camera?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
   "page": "474",
   "sensitive": false
  },
@@ -5603,9 +5606,9 @@
   "id": "S1-0561",
   "session": "S1",
   "seq": 100560,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "What about, like the key to her car and stuff like that ....in there? OK.",
   "page": "474",
   "sensitive": false
  },
@@ -5615,7 +5618,7 @@
   "seq": 100561,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "No? OK.",
+  "text": "How about a camera? Did he say anything about a camera?",
   "page": "474",
   "sensitive": false
  },
@@ -5623,9 +5626,9 @@
   "id": "S1-0563",
   "session": "S1",
   "seq": 100562,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Let me just read this last part that you added to the statement. OK.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "No.",
   "page": "474",
   "sensitive": false
  },
@@ -5633,9 +5636,9 @@
   "id": "S1-0564",
   "session": "S1",
   "seq": 100563,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "No? OK.",
   "page": "474",
   "sensitive": false
  },
@@ -5645,37 +5648,38 @@
   "seq": 100564,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Some clothes in the fire pit that was a blue shirt and some pants. On the shirt there was a blood on it and there was a hole in it in the stomach area and he said it was Teresa's shirt.",
-  "page": "475",
-  "sensitive": true
+  "text": "Let me just read this last part that you added to the statement. OK.",
+  "page": "474",
+  "sensitive": false
  },
  {
   "id": "S1-0566",
   "session": "S1",
   "seq": 100565,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "OK.",
-  "page": "475",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
+  "page": "474",
   "sensitive": false
  },
  {
   "id": "S1-0567",
   "session": "S1",
   "seq": 100566,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Is there anything that you haven't told us that you think you need to tell us? That he said or that you saw.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "(written statement, read aloud by Wiegert) Some clothes in the fire pit that was a blue shirt and some pants. On the shirt there was a blood on it and there was a hole in it in the stomach area and he said it was Teresa's shirt.",
   "page": "475",
-  "sensitive": false
+  "sensitive": false,
+  "read_aloud_by": "WIEGERT"
  },
  {
   "id": "S1-0568",
   "session": "S1",
   "seq": 100567,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "OK.",
   "page": "475",
   "sensitive": false
  },
@@ -5685,7 +5689,7 @@
   "seq": 100568,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "You mentioned when he was up in there .......... that, that ah, he wanted to hide or leave and he that he said something to the effect, you said that he just wanted to go and get out of there and ..........get far away as he could, right? Would it be all right if you added that?",
+  "text": "Is there anything that you haven't told us that you think you need to tell us? That he said or that you saw.",
   "page": "475",
   "sensitive": false
  },
@@ -5693,9 +5697,9 @@
   "id": "S1-0570",
   "session": "S1",
   "seq": 100569,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "OK.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "No.",
   "page": "475",
   "sensitive": false
  },
@@ -5705,7 +5709,7 @@
   "seq": 100570,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "That's when the police were coming out there ............ (pause)",
+  "text": "You mentioned when he was up in there .......... that, that ah, he wanted to hide or leave and he that he said something to the effect, you said that he just wanted to go and get out of there and ..........get far away as he could, right? Would it be all right if you added that?",
   "page": "475",
   "sensitive": false
  },
@@ -5713,9 +5717,9 @@
   "id": "S1-0572",
   "session": "S1",
   "seq": 100571,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "..........finished.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "OK.",
   "page": "475",
   "sensitive": false
  },
@@ -5723,9 +5727,9 @@
   "id": "S1-0573",
   "session": "S1",
   "seq": 100572,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Let me take a look at it, if I could. I'm gonna continue reading what Brendan just added.",
+  "text": "That's when the police were coming out there ............ (pause)",
   "page": "475",
   "sensitive": false
  },
@@ -5733,9 +5737,9 @@
   "id": "S1-0574",
   "session": "S1",
   "seq": 100573,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "He said he was going to go and leave the house and try to get as far as far as he could.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "..........finished.",
   "page": "475",
   "sensitive": false
  },
@@ -5745,7 +5749,7 @@
   "seq": 100574,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK.",
+  "text": "Let me take a look at it, if I could. I'm gonna continue reading what Brendan just added.",
   "page": "475",
   "sensitive": false
  },
@@ -5753,9 +5757,9 @@
   "id": "S1-0576",
   "session": "S1",
   "seq": 100575,
-  "speaker": "FASSBENDER",
+  "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Brendan, this is your statement, the written part of it. I'm mean obviously we recorded you and have taken notes. Is there anything you want to add to that statement on, on how you felt during all this, how you feel. Feel free to add anything you want as it relates to that.",
+  "text": "He said he was going to go and leave the house and try to get as far as far as he could.",
   "page": "475",
   "sensitive": false
  },
@@ -5765,7 +5769,7 @@
   "seq": 100576,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Do you want to add anything? OK. (pause) Feel free to go to the next page if you have to. (pause)",
+  "text": "OK.",
   "page": "475",
   "sensitive": false
  },
@@ -5773,10 +5777,10 @@
   "id": "S1-0578",
   "session": "S1",
   "seq": 100577,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "OK, I'm gonna read to what you just added to the second page.",
-  "page": "476",
+  "text": "Brendan, this is your statement, the written part of it. I'm mean obviously we recorded you and have taken notes. Is there anything you want to add to that statement on, on how you felt during all this, how you feel. Feel free to add anything you want as it relates to that.",
+  "page": "475",
   "sensitive": false
  },
  {
@@ -5785,8 +5789,8 @@
   "seq": 100578,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "I felt sad that I had to be there and to be sorry for her family.",
-  "page": "476",
+  "text": "Do you want to add anything? OK. (pause) Feel free to go to the next page if you have to. (pause)",
+  "page": "475",
   "sensitive": false
  },
  {
@@ -5795,7 +5799,7 @@
   "seq": 100579,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Brendan, did we promise you anything prior to writing this statement?",
+  "text": "OK, I'm gonna read to what you just added to the second page.",
   "page": "476",
   "sensitive": false
  },
@@ -5803,9 +5807,9 @@
   "id": "S1-0581",
   "session": "S1",
   "seq": 100580,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "I felt sad that I had to be there and to be sorry for her family.",
   "page": "476",
   "sensitive": false
  },
@@ -5815,7 +5819,7 @@
   "seq": 100581,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "What did we promise you?",
+  "text": "Brendan, did we promise you anything prior to writing this statement?",
   "page": "476",
   "sensitive": false
  },
@@ -5825,7 +5829,7 @@
   "seq": 100582,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "That I could leave whenever, whenever I wanted, and I didn't have to answer any questions.",
+  "text": "Yeah.",
   "page": "476",
   "sensitive": false
  },
@@ -5835,7 +5839,7 @@
   "seq": 100583,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Right.",
+  "text": "What did we promise you?",
   "page": "476",
   "sensitive": false
  },
@@ -5843,9 +5847,9 @@
   "id": "S1-0585",
   "session": "S1",
   "seq": 100584,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Did we threaten you at all?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "That I could leave whenever, whenever I wanted, and I didn't have to answer any questions.",
   "page": "476",
   "sensitive": false
  },
@@ -5853,9 +5857,9 @@
   "id": "S1-0586",
   "session": "S1",
   "seq": 100585,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Right.",
   "page": "476",
   "sensitive": false
  },
@@ -5865,7 +5869,7 @@
   "seq": 100586,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Was your statement made of your own free will? (side one of tape ended, tape turned over for side two)",
+  "text": "Did we threaten you at all?",
   "page": "476",
   "sensitive": false
  },
@@ -5873,9 +5877,9 @@
   "id": "S1-0588",
   "session": "S1",
   "seq": 100587,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Do you want to add that in your statement? Yes or no.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "No.",
   "page": "476",
   "sensitive": false
  },
@@ -5883,9 +5887,9 @@
   "id": "S1-0589",
   "session": "S1",
   "seq": 100588,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yes.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "Was your statement made of your own free will? (side one of tape ended, tape turned over for side two)",
   "page": "476",
   "sensitive": false
  },
@@ -5895,7 +5899,7 @@
   "seq": 100589,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK. (pause)",
+  "text": "Do you want to add that in your statement? Yes or no.",
   "page": "476",
   "sensitive": false
  },
@@ -5903,9 +5907,9 @@
   "id": "S1-0591",
   "session": "S1",
   "seq": 100590,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "I, I'll read what you added to the statement. Is that okay?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yes.",
   "page": "476",
   "sensitive": false
  },
@@ -5913,9 +5917,9 @@
   "id": "S1-0592",
   "session": "S1",
   "seq": 100591,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "OK. (pause)",
   "page": "476",
   "sensitive": false
  },
@@ -5925,7 +5929,7 @@
   "seq": 100592,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "I make this statement and I did not get threatened to write it out and I What is that word?",
+  "text": "I, I'll read what you added to the statement. Is that okay?",
   "page": "476",
   "sensitive": false
  },
@@ -5935,7 +5939,7 @@
   "seq": 100593,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Could",
+  "text": "Yeah.",
   "page": "476",
   "sensitive": false
  },
@@ -5945,7 +5949,7 @@
   "seq": 100594,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "and I could leave when I wanted to and I didn't have to answer any questions.",
+  "text": "I make this statement and I did not get threatened to write it out and I What is that word?",
   "page": "476",
   "sensitive": false
  },
@@ -5953,20 +5957,20 @@
   "id": "S1-0596",
   "session": "S1",
   "seq": 100595,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Is that true?",
-  "page": "477",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Could",
+  "page": "476",
   "sensitive": false
  },
  {
   "id": "S1-0597",
   "session": "S1",
   "seq": 100596,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
-  "page": "477",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "and I could leave when I wanted to and I didn't have to answer any questions.",
+  "page": "476",
   "sensitive": false
  },
  {
@@ -5975,7 +5979,7 @@
   "seq": 100597,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK. What I'm gonna have you do Brenden, I'm gonna have you number the pages. This would be number one and the next page would be number two and then I'm gonna have you sign here. It says signature of person giving voluntary statement. If you could sign there. And I guess you could use script on this one. I've learned something new myself today.",
+  "text": "Is that true?",
   "page": "477",
   "sensitive": false
  },
@@ -5983,9 +5987,9 @@
   "id": "S1-0599",
   "session": "S1",
   "seq": 100598,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "What's it called, Brendan?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
   "page": "477",
   "sensitive": false
  },
@@ -5993,9 +5997,9 @@
   "id": "S1-0600",
   "session": "S1",
   "seq": 100599,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Cursive",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "OK. What I'm gonna have you do Brenden, I'm gonna have you number the pages. This would be number one and the next page would be number two and then I'm gonna have you sign here. It says signature of person giving voluntary statement. If you could sign there. And I guess you could use script on this one. I've learned something new myself today.",
   "page": "477",
   "sensitive": false
  },
@@ -6005,7 +6009,7 @@
   "seq": 100600,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Cursive",
+  "text": "What's it called, Brendan?",
   "page": "477",
   "sensitive": false
  },
@@ -6013,9 +6017,9 @@
   "id": "S1-0602",
   "session": "S1",
   "seq": 100601,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Cursive, is that what it was? All right. And then I'm going to sign it here and Tom will sign it there. I don't know where I got script from.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Cursive",
   "page": "477",
   "sensitive": false
  },
@@ -6025,7 +6029,7 @@
   "seq": 100602,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "It's just a new word for ya.",
+  "text": "Cursive",
   "page": "477",
   "sensitive": false
  },
@@ -6035,7 +6039,7 @@
   "seq": 100603,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "It must be.",
+  "text": "Cursive, is that what it was? All right. And then I'm going to sign it here and Tom will sign it there. I don't know where I got script from.",
   "page": "477",
   "sensitive": false
  },
@@ -6045,7 +6049,7 @@
   "seq": 100604,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Brendan, before I neglect to do this, I want to say that I'm extremely proud of you and what, what you did had to be very, very difficult and you're one hell of a kid because that had ta be the hardest thing you probably ever done in your life and I don't know if I could even feel what you hadda just do and I, I truly believe you're one hell of a kid. And you need to believe that too, okay, no matter what anyone says.",
+  "text": "It's just a new word for ya.",
   "page": "477",
   "sensitive": false
  },
@@ -6055,7 +6059,7 @@
   "seq": 100605,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "And that goes for both of us. We both believe that.",
+  "text": "It must be.",
   "page": "477",
   "sensitive": false
  },
@@ -6065,7 +6069,7 @@
   "seq": 100606,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "You told the truth. That's very hard for you to do.",
+  "text": "Brendan, before I neglect to do this, I want to say that I'm extremely proud of you and what, what you did had to be very, very difficult and you're one hell of a kid because that had ta be the hardest thing you probably ever done in your life and I don't know if I could even feel what you hadda just do and I, I truly believe you're one hell of a kid. And you need to believe that too, okay, no matter what anyone says.",
   "page": "477",
   "sensitive": false
  },
@@ -6075,7 +6079,7 @@
   "seq": 100607,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Do you feel better that you got that off your chest a little bit?",
+  "text": "And that goes for both of us. We both believe that.",
   "page": "477",
   "sensitive": false
  },
@@ -6083,9 +6087,9 @@
   "id": "S1-0609",
   "session": "S1",
   "seq": 100608,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "You told the truth. That's very hard for you to do.",
   "page": "477",
   "sensitive": false
  },
@@ -6093,9 +6097,9 @@
   "id": "S1-0610",
   "session": "S1",
   "seq": 100609,
-  "speaker": "FASSBENDER",
+  "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "I need to ask you one more question. We asked you before if you had told anyone about this. I think you need to really, you need to be honest one more time for me. Did you tell your mom?",
+  "text": "Do you feel better that you got that off your chest a little bit?",
   "page": "477",
   "sensitive": false
  },
@@ -6105,8 +6109,8 @@
   "seq": 100610,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "No.",
-  "page": "478",
+  "text": "Yeah.",
+  "page": "477",
   "sensitive": false
  },
  {
@@ -6115,8 +6119,8 @@
   "seq": 100611,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Are you sure?",
-  "page": "478",
+  "text": "I need to ask you one more question. We asked you before if you had told anyone about this. I think you need to really, you need to be honest one more time for me. Did you tell your mom?",
+  "page": "477",
   "sensitive": false
  },
  {
@@ -6125,7 +6129,7 @@
   "seq": 100612,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "No.",
   "page": "478",
   "sensitive": false
  },
@@ -6135,7 +6139,7 @@
   "seq": 100613,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Because everything you've told us today obviously can be used in court. You understand that, right?",
+  "text": "Are you sure?",
   "page": "478",
   "sensitive": false
  },
@@ -6155,7 +6159,7 @@
   "seq": 100615,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "And people are gonna look at your statement and stuff like that and they're gonna do some diggin' of their own and stuff and if they find out that you didn't tell us the truth about somethin' in all likelihood, you're gonna hear about it. You understand that. So you need to tell us everything now so there are no surprises and no secrets. Understand?",
+  "text": "Because everything you've told us today obviously can be used in court. You understand that, right?",
   "page": "478",
   "sensitive": false
  },
@@ -6175,7 +6179,7 @@
   "seq": 100617,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Is there anything else?",
+  "text": "And people are gonna look at your statement and stuff like that and they're gonna do some diggin' of their own and stuff and if they find out that you didn't tell us the truth about somethin' in all likelihood, you're gonna hear about it. You understand that. So you need to tell us everything now so there are no surprises and no secrets. Understand?",
   "page": "478",
   "sensitive": false
  },
@@ -6185,7 +6189,7 @@
   "seq": 100618,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "No.",
+  "text": "Yeah.",
   "page": "478",
   "sensitive": false
  },
@@ -6193,9 +6197,9 @@
   "id": "S1-0620",
   "session": "S1",
   "seq": 100619,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Did you tell any of your brothers?",
+  "text": "Is there anything else?",
   "page": "478",
   "sensitive": false
  },
@@ -6203,9 +6207,9 @@
   "id": "S1-0621",
   "session": "S1",
   "seq": 100620,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Any of your friends at school here?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "No.",
   "page": "478",
   "sensitive": false
  },
@@ -6213,9 +6217,9 @@
   "id": "S1-0622",
   "session": "S1",
   "seq": 100621,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Did you tell any of your brothers?",
   "page": "478",
   "sensitive": false
  },
@@ -6225,7 +6229,7 @@
   "seq": 100622,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "You hang out with, I know one kid in particular, who's that?",
+  "text": "Any of your friends at school here?",
   "page": "478",
   "sensitive": false
  },
@@ -6235,7 +6239,7 @@
   "seq": 100623,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Travis Fabian.",
+  "text": "No.",
   "page": "478",
   "sensitive": false
  },
@@ -6245,7 +6249,7 @@
   "seq": 100624,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Yeah. Did you tell Travis about this?",
+  "text": "You hang out with, I know one kid in particular, who's that?",
   "page": "478",
   "sensitive": false
  },
@@ -6255,7 +6259,7 @@
   "seq": 100625,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "No.",
+  "text": "Travis Fabian.",
   "page": "478",
   "sensitive": false
  },
@@ -6263,9 +6267,9 @@
   "id": "S1-0627",
   "session": "S1",
   "seq": 100626,
-  "speaker": "FASSBENDER",
+  "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "During the last several months were you afraid that Steven was gonna get out?",
+  "text": "Yeah. Did you tell Travis about this?",
   "page": "478",
   "sensitive": false
  },
@@ -6275,7 +6279,7 @@
   "seq": 100627,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Not really.",
+  "text": "No.",
   "page": "478",
   "sensitive": false
  },
@@ -6285,8 +6289,8 @@
   "seq": 100628,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "No. If ah, now that you've made this statement, are you afraid that he would get out, for your own safety?",
-  "page": "479",
+  "text": "During the last several months were you afraid that Steven was gonna get out?",
+  "page": "478",
   "sensitive": false
  },
  {
@@ -6295,8 +6299,8 @@
   "seq": 100629,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "I don't think he's gonna get out",
-  "page": "479",
+  "text": "Not really.",
+  "page": "478",
   "sensitive": false
  },
  {
@@ -6305,7 +6309,7 @@
   "seq": 100630,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "I know but if he did would, because of what he said to you, would you be afraid?",
+  "text": "No. If ah, now that you've made this statement, are you afraid that he would get out, for your own safety?",
   "page": "479",
   "sensitive": false
  },
@@ -6315,7 +6319,7 @@
   "seq": 100631,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "I don't think he's gonna get out",
   "page": "479",
   "sensitive": false
  },
@@ -6325,7 +6329,7 @@
   "seq": 100632,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "OK. Do you, um, why, I don't think we really have much choice, I think that I'm gonna do it no matter what you say. We need to call your mom, because I think she needs to be here, ah, t-to take you home.",
+  "text": "I know but if he did would, because of what he said to you, would you be afraid?",
   "page": "479",
   "sensitive": false
  },
@@ -6333,9 +6337,9 @@
   "id": "S1-0634",
   "session": "S1",
   "seq": 100633,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "You don't, do you want to go back to class?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
   "page": "479",
   "sensitive": false
  },
@@ -6343,9 +6347,9 @@
   "id": "S1-0635",
   "session": "S1",
   "seq": 100634,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "No.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "OK. Do you, um, why, I don't think we really have much choice, I think that I'm gonna do it no matter what you say. We need to call your mom, because I think she needs to be here, ah, t-to take you home.",
   "page": "479",
   "sensitive": false
  },
@@ -6355,7 +6359,7 @@
   "seq": 100635,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "I think maybe you wanna go home and rest a little bit. This couldn't a been easy. Well I'll tell you what, I need you to sign the second page. We'll call your ma and have her come here. OK?",
+  "text": "You don't, do you want to go back to class?",
   "page": "479",
   "sensitive": false
  },
@@ -6363,9 +6367,9 @@
   "id": "S1-0637",
   "session": "S1",
   "seq": 100636,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Do you, do you agree with that?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "No.",
   "page": "479",
   "sensitive": false
  },
@@ -6373,9 +6377,9 @@
   "id": "S1-0638",
   "session": "S1",
   "seq": 100637,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Well, I would like ta go to 8th hour.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "I think maybe you wanna go home and rest a little bit. This couldn't a been easy. Well I'll tell you what, I need you to sign the second page. We'll call your ma and have her come here. OK?",
   "page": "479",
   "sensitive": false
  },
@@ -6385,7 +6389,7 @@
   "seq": 100638,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Would you?",
+  "text": "Do you, do you agree with that?",
   "page": "479",
   "sensitive": false
  },
@@ -6395,7 +6399,7 @@
   "seq": 100639,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "Well, I would like ta go to 8th hour.",
   "page": "479",
   "sensitive": false
  },
@@ -6403,9 +6407,9 @@
   "id": "S1-0641",
   "session": "S1",
   "seq": 100640,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "What time does that start?",
+  "text": "Would you?",
   "page": "479",
   "sensitive": false
  },
@@ -6415,7 +6419,7 @@
   "seq": 100641,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "At 12:17.",
+  "text": "Yeah.",
   "page": "479",
   "sensitive": false
  },
@@ -6425,7 +6429,7 @@
   "seq": 100642,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "12:17.",
+  "text": "What time does that start?",
   "page": "479",
   "sensitive": false
  },
@@ -6435,7 +6439,7 @@
   "seq": 100643,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "I mean 2, 2:17.",
+  "text": "At 12:17.",
   "page": "479",
   "sensitive": false
  },
@@ -6445,7 +6449,7 @@
   "seq": 100644,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK.",
+  "text": "12:17.",
   "page": "479",
   "sensitive": false
  },
@@ -6453,9 +6457,9 @@
   "id": "S1-0646",
   "session": "S1",
   "seq": 100645,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "We have no problem with that. Are you all right? You all right? You're not gonna do anything to yourself or hurt yourself or anything like that. Right?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "I mean 2, 2:17.",
   "page": "479",
   "sensitive": false
  },
@@ -6465,8 +6469,8 @@
   "seq": 100646,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Time we ended is 2:10 p.m.",
-  "page": "480",
+  "text": "OK.",
+  "page": "479",
   "sensitive": false
  },
  {
@@ -6475,17 +6479,17 @@
   "seq": 100647,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Brendan, look at me. You all right? OK. You understand that we do need to talk to you're mom though. To let her know. So she can talk to you about this and you can talk to her or your dad, I don't care who, one of, one of your, one of your parents. Would you prefer your mom or your dad?",
-  "page": "480",
+  "text": "We have no problem with that. Are you all right? You all right? You're not gonna do anything to yourself or hurt yourself or anything like that. Right?",
+  "page": "479",
   "sensitive": false
  },
  {
   "id": "S1-0649",
   "session": "S1",
   "seq": 100648,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "My mom.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Time we ended is 2:10 p.m.",
   "page": "480",
   "sensitive": false
  },
@@ -6495,7 +6499,7 @@
   "seq": 100649,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "OK.",
+  "text": "Brendan, look at me. You all right? OK. You understand that we do need to talk to you're mom though. To let her know. So she can talk to you about this and you can talk to her or your dad, I don't care who, one of, one of your, one of your parents. Would you prefer your mom or your dad?",
   "page": "480",
   "sensitive": false
  },
@@ -6503,9 +6507,9 @@
   "id": "S1-0651",
   "session": "S1",
   "seq": 100650,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Is she at work right now?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "My mom.",
   "page": "480",
   "sensitive": false
  },
@@ -6513,9 +6517,9 @@
   "id": "S1-0652",
   "session": "S1",
   "seq": 100651,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "OK.",
   "page": "480",
   "sensitive": false
  },
@@ -6525,7 +6529,7 @@
   "seq": 100652,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "What time does she work 'till.",
+  "text": "Is she at work right now?",
   "page": "480",
   "sensitive": false
  },
@@ -6535,7 +6539,7 @@
   "seq": 100653,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Five.",
+  "text": "Yeah.",
   "page": "480",
   "sensitive": false
  },
@@ -6545,7 +6549,7 @@
   "seq": 100654,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Five.",
+  "text": "What time does she work 'till.",
   "page": "480",
   "sensitive": false
  },
@@ -6553,9 +6557,9 @@
   "id": "S1-0656",
   "session": "S1",
   "seq": 100655,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "What's that number? Do you have her work phone number or her cell phone number?",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Five.",
   "page": "480",
   "sensitive": false
  },
@@ -6563,9 +6567,9 @@
   "id": "S1-0657",
   "session": "S1",
   "seq": 100656,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Her cell phone is 973",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Five.",
   "page": "480",
   "sensitive": false
  },
@@ -6575,7 +6579,7 @@
   "seq": 100657,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Nine?",
+  "text": "What's that number? Do you have her work phone number or her cell phone number?",
   "page": "480",
   "sensitive": false
  },
@@ -6585,7 +6589,7 @@
   "seq": 100658,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "1740 ...",
+  "text": "Her cell phone is 973",
   "page": "480",
   "sensitive": false
  },
@@ -6593,9 +6597,9 @@
   "id": "S1-0660",
   "session": "S1",
   "seq": 100659,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Where does she work again?",
+  "text": "Nine?",
   "page": "480",
   "sensitive": false
  },
@@ -6605,7 +6609,7 @@
   "seq": 100660,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Woodland Face Veneer",
+  "text": "1740 ...",
   "page": "480",
   "sensitive": false
  },
@@ -6615,7 +6619,7 @@
   "seq": 100661,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Woodland Face Veneer. That's in Two Rivers, right? Could you put the date in there again?",
+  "text": "Where does she work again?",
   "page": "480",
   "sensitive": false
  },
@@ -6623,9 +6627,9 @@
   "id": "S1-0663",
   "session": "S1",
   "seq": 100662,
-  "speaker": "WIEGERT",
-  "role": "interrogator",
-  "text": "Good job. Do you have any questions, buddy? You sure? About how anything's gonna go or anything like that er. If you have any questions, now is a good time.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Woodland Face Veneer",
   "page": "480",
   "sensitive": false
  },
@@ -6633,9 +6637,9 @@
   "id": "S1-0664",
   "session": "S1",
   "seq": 100663,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "I don't have a question.",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "Woodland Face Veneer. That's in Two Rivers, right? Could you put the date in there again?",
   "page": "480",
   "sensitive": false
  },
@@ -6645,18 +6649,18 @@
   "seq": 100664,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "No questions. OK.",
-  "page": "481",
+  "text": "Good job. Do you have any questions, buddy? You sure? About how anything's gonna go or anything like that er. If you have any questions, now is a good time.",
+  "page": "480",
   "sensitive": false
  },
  {
   "id": "S1-0666",
   "session": "S1",
   "seq": 100665,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "Anytime, I want you to take those cards with ya. Anytime you do, you give us, either of us, a call. ......you to talk.",
-  "page": "481",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "I don't have a question.",
+  "page": "480",
   "sensitive": false
  },
  {
@@ -6665,7 +6669,7 @@
   "seq": 100666,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "I'm gonna, I'm gonna put my cell phone number on here, OK? But you gotta do me a favor. You can't give that ta anybody else except your mom if she wants it. OK? I answer that 24 hours a day, seven days a week, so if it's tonight at 3:00 in the morning and you can't sleep and you need somebody to talk to or if you forgot to tell me something or if you just need someone to talk to, you call me. If it's Saturday night, 8:00 at night needing someone to talk to, you call me. Anytime of the day or night, OK? If you just need somebody to come pick ya up, give you a ride somewhere, get you out of the house, I'd be willing to do that for ya too, OK? That's yours and this is Tom's. Do you have any questions? OK. Should we let you go back to 8th hour class, is that what you wanna do?",
+  "text": "No questions. OK.",
   "page": "481",
   "sensitive": false
  },
@@ -6673,9 +6677,9 @@
   "id": "S1-0668",
   "session": "S1",
   "seq": 100667,
-  "speaker": "BRENDAN",
-  "role": "suspect",
-  "text": "Yeah.",
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "Anytime, I want you to take those cards with ya. Anytime you do, you give us, either of us, a call. ......you to talk.",
   "page": "481",
   "sensitive": false
  },
@@ -6685,7 +6689,7 @@
   "seq": 100668,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "What class do you have?",
+  "text": "I'm gonna, I'm gonna put my cell phone number on here, OK? But you gotta do me a favor. You can't give that ta anybody else except your mom if she wants it. OK? I answer that 24 hours a day, seven days a week, so if it's tonight at 3:00 in the morning and you can't sleep and you need somebody to talk to or if you forgot to tell me something or if you just need someone to talk to, you call me. If it's Saturday night, 8:00 at night needing someone to talk to, you call me. Anytime of the day or night, OK? If you just need somebody to come pick ya up, give you a ride somewhere, get you out of the house, I'd be willing to do that for ya too, OK? That's yours and this is Tom's. Do you have any questions? OK. Should we let you go back to 8th hour class, is that what you wanna do?",
   "page": "481",
   "sensitive": false
  },
@@ -6695,7 +6699,7 @@
   "seq": 100669,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Earth science",
+  "text": "Yeah.",
   "page": "481",
   "sensitive": false
  },
@@ -6705,7 +6709,7 @@
   "seq": 100670,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Earth science, what's that about?",
+  "text": "What class do you have?",
   "page": "481",
   "sensitive": false
  },
@@ -6715,7 +6719,7 @@
   "seq": 100671,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "It's about rock and those kinda......",
+  "text": "Earth science",
   "page": "481",
   "sensitive": false
  },
@@ -6725,7 +6729,7 @@
   "seq": 100672,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Do you like that class?",
+  "text": "Earth science, what's that about?",
   "page": "481",
   "sensitive": false
  },
@@ -6735,7 +6739,7 @@
   "seq": 100673,
   "speaker": "BRENDAN",
   "role": "suspect",
-  "text": "Yeah.",
+  "text": "It's about rock and those kinda......",
   "page": "481",
   "sensitive": false
  },
@@ -6745,7 +6749,7 @@
   "seq": 100674,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "OK.",
+  "text": "Do you like that class?",
   "page": "481",
   "sensitive": false
  },
@@ -6753,9 +6757,9 @@
   "id": "S1-0676",
   "session": "S1",
   "seq": 100675,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "This is yours. I don't know if you throw it in your locker or whatever, but you're obviously free to take this so again, um, again we're, we're not gonna leave ya high and dry. We'll talk to your mom about this we wanna be there if ya need something. If you feel you need to talk to someone, counseling or anything like that, a counselor, there's nothing wrong with that. Absolutely nothing wrong with that. OK? You let her know and you call us.",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "Yeah.",
   "page": "481",
   "sensitive": false
  },
@@ -6763,8 +6767,8 @@
   "id": "S1-0677",
   "session": "S1",
   "seq": 100676,
-  "speaker": "BRENDAN",
-  "role": "suspect",
+  "speaker": "WIEGERT",
+  "role": "interrogator",
   "text": "OK.",
   "page": "481",
   "sensitive": false
@@ -6773,9 +6777,9 @@
   "id": "S1-0678",
   "session": "S1",
   "seq": 100677,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "Do you feel like you wanna hurt yourself or anything at this time? No? OK.",
+  "text": "This is yours. I don't know if you throw it in your locker or whatever, but you're obviously free to take this so again, um, again we're, we're not gonna leave ya high and dry. We'll talk to your mom about this we wanna be there if ya need something. If you feel you need to talk to someone, counseling or anything like that, a counselor, there's nothing wrong with that. Absolutely nothing wrong with that. OK? You let her know and you call us.",
   "page": "481",
   "sensitive": false
  },
@@ -6783,10 +6787,10 @@
   "id": "S1-0679",
   "session": "S1",
   "seq": 100678,
-  "speaker": "FASSBENDER",
-  "role": "interrogator",
-  "text": "You should be proud of yourself.",
-  "page": "482",
+  "speaker": "BRENDAN",
+  "role": "suspect",
+  "text": "OK.",
+  "page": "481",
   "sensitive": false
  },
  {
@@ -6795,8 +6799,8 @@
   "seq": 100679,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "You should be.",
-  "page": "482",
+  "text": "Do you feel like you wanna hurt yourself or anything at this time? No? OK.",
+  "page": "481",
   "sensitive": false
  },
  {
@@ -6805,7 +6809,7 @@
   "seq": 100680,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "I certainly would be if I was your parents.",
+  "text": "You should be proud of yourself.",
   "page": "482",
   "sensitive": false
  },
@@ -6813,9 +6817,9 @@
   "id": "S1-0682",
   "session": "S1",
   "seq": 100681,
-  "speaker": "FASSBENDER",
+  "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "Okay. It's the most difficult thing that you just did.",
+  "text": "You should be.",
   "page": "482",
   "sensitive": false
  },
@@ -6823,9 +6827,9 @@
   "id": "S1-0683",
   "session": "S1",
   "seq": 100682,
-  "speaker": "WIEGERT",
+  "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "I'm proud of you.",
+  "text": "I certainly would be if I was your parents.",
   "page": "482",
   "sensitive": false
  },
@@ -6835,7 +6839,7 @@
   "seq": 100683,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "All right, bud?",
+  "text": "Okay. It's the most difficult thing that you just did.",
   "page": "482",
   "sensitive": false
  },
@@ -6845,7 +6849,7 @@
   "seq": 100684,
   "speaker": "WIEGERT",
   "role": "interrogator",
-  "text": "You need something, call us. OK? All right. Why don't you take those along.",
+  "text": "I'm proud of you.",
   "page": "482",
   "sensitive": false
  },
@@ -6855,7 +6859,7 @@
   "seq": 100685,
   "speaker": "FASSBENDER",
   "role": "interrogator",
-  "text": "I go get your Dean of Students and then......",
+  "text": "All right, bud?",
   "page": "482",
   "sensitive": false
  },
@@ -6863,6 +6867,26 @@
   "id": "S1-0687",
   "session": "S1",
   "seq": 100686,
+  "speaker": "WIEGERT",
+  "role": "interrogator",
+  "text": "You need something, call us. OK? All right. Why don't you take those along.",
+  "page": "482",
+  "sensitive": false
+ },
+ {
+  "id": "S1-0688",
+  "session": "S1",
+  "seq": 100687,
+  "speaker": "FASSBENDER",
+  "role": "interrogator",
+  "text": "I go get your Dean of Students and then......",
+  "page": "482",
+  "sensitive": false
+ },
+ {
+  "id": "S1-0689",
+  "session": "S1",
+  "seq": 100688,
   "speaker": "WIEGERT",
   "role": "interrogator",
   "text": "We're ending the interview at 1414 hours. (This is the end of the interview.) (I then requested BRENDAN to fill out a written statement which BRENDAN did and signed both of the written statements. It should be noted there are two pages of written statements.) (After BRENDAN finished with the written statement, Special Agent FASSBENDER contacted BRENDAN's mother, BARBARA, and requested that she come to the high school to meet with us. It should be noted that BRENDAN requested that he be able to go back to his eighth hour class, which he was allowed to do. BRENDAN's mother, BARBARA, did show up at the school at which time an interview was conducted with BARBARA. For more information on that interview, please see Special Agent FASSBENDER's report.) (At approximately 1500 hours, BRENDAN did return to the conference room. We then asked BARBARA and BRENDAN if they would be willing to go to TWO RIVERS POLICE DEPT. with us to do a second videotaped interview. Both BRENDAN and BARBARA agreed. We then gave them a ride to the TWO RIVERS POLICE DEPT. We arrived at the TWO RIVERS POLICE DEPT. at approximately 1515 hours. Upon arrival at the police department, we asked BRENDAN and BARBARA if BRENDAN would like BARBARA to sit in the room during the interview and also asked BARBARA if she wished to sit in the interview. BARBARA stated that it was not necessary for her to sit in the interview room, and BRENDAN stated he did not care if his mother was there or not.)",

@@ -125,13 +125,42 @@ def test_key_terms_decide_what_counts():
     ]
     f = [Fact("F1", "Her hair was cut", must=[["cut", "chop"], ["hair"]]),
          Fact("F2", "Bones were broken up with a shovel", must=[["bone"], ["break", "broke", "broken"], ["shovel"]])]
-    m = [Mention("A1", "F1", "asks", verified=True), Mention("A4", "F1", "asserts", verified=True),
+    m = [Mention("A1", "F1", "asks", verified=False), Mention("A4", "F1", "asserts", verified=True),
          Mention("A5", "F2", "asks", verified=True), Mention("A6", "F2", "asserts", verified=True)]
     rep = by_fact(audit(Case("t", "T", "KID", s, u, f, m)))
-    # 'any hair in the fire' names hair but not cutting: it doesn't count, so the suspect said it first
+    # 'any hair in the fire' (rejected: hair in another sense) doesn't count, so the suspect said it first
     assert rep["F1"]["origin"] == "suspect_first" and rep["F1"]["first_suspect"]["utterance"] == "A4"
-    assert any(e.get("kind_note", "").startswith("the line doesn't contain") for e in rep["F1"]["events"])
-    # a short answer is read with the question before it: the investigator line lacks 'shovel', the answer has it
-    assert rep["F2"]["first_suspect"]["utterance"] == "A6" and rep["F2"]["first_interrogator"] is None
+    # if Ultra confirms the investigator named 'hair' in this detail's sense, investigators named part of it first
+    m[0] = Mention("A1", "F1", "asks", verified=True)
+    f1 = by_fact(audit(Case("t", "T", "KID", s, u, f, m)))["F1"]
+    assert f1["origin"] == "interrogator_first" and f1["partly_supplied"] and f1["partial_words"] == ["hair"]
+    assert f1["first_interrogator"]["utterance"] == "A1" and "“hair”" in f1["why"] and "“cut”" in f1["why"]
+    assert any(e.get("kind_note", "").startswith("the line doesn't contain") for e in f1["events"])
+    # a short answer is read with the question before it: the investigator line lacks 'shovel', the answer has it, so
+    # he stated the whole detail first, but investigators had named the bones and the breaking: partly supplied
+    f2 = rep["F2"]
+    assert f2["first_suspect"]["utterance"] == "A6" and f2["origin"] == "interrogator_first" and f2["partly_supplied"]
+    assert f2["partial_words"] == ["bones", "break"] and "“shovel”" in f2["why"]
     assert has_terms("He stabbed her in the belly", [["stomach", "belly"], ["stab"]]) and not has_terms("he stabbed her", [["stomach"], ["stab"]])
     assert derive_must("Red hoodie found near back gate") == [["red"], ["hoodie"], ["back"], ["gate"]]
+
+
+def test_read_aloud_statement_becomes_the_suspects_line():
+    from scripts.ingest import split_read_aloud
+
+    def u(spk, role, text):
+        return {"speaker": spk, "role": role, "text": text, "page": "469", "session": "S1"}
+    inline = [u("WIEGERT", "interrogator", "OK, then I'm just going to read it and read what you wrote. OK? (Is I got off the bus at 3:45 and "
+                "seen her jeep down at the house. He told me that he stabbed her in the stomach and put the knife under the seat. "
+                "Is that your statement Brendan?)"), u("BRENDAN", "suspect", "Yes.")]
+    out = split_read_aloud(inline, "BRENDAN")
+    assert [x["role"] for x in out] == ["interrogator", "suspect", "interrogator", "suspect"]
+    assert out[1]["text"].startswith("(written statement, read aloud by Wiegert) Is I got off the bus") and out[1]["page"] == "469"
+    assert out[2]["text"] == "Is that your statement Brendan?"
+    nextline = [u("WIEGERT", "interrogator", "Now let me read, this would be page two that you added here."), u("WIEGERT", "interrogator", "I'll read this. Is that okay?"),
+                u("BRENDAN", "suspect", "Yeah."), u("WIEGERT", "interrogator", "He was angry and that's why he did it. He told me he used rope to tie her up in the jeep.")]
+    out = split_read_aloud(nextline, "BRENDAN")
+    assert out[3]["role"] == "suspect" and out[3]["text"].startswith("(written statement, read aloud by Wiegert) He was angry")
+    miranda = [u("WIEGERT", "interrogator", "I'm going to read this form to you, it's your rights."), u("BRENDAN", "suspect", "OK."),
+               u("WIEGERT", "interrogator", "You have the right to remain silent and anything you say can be used against you in court.")]
+    assert [x["role"] for x in split_read_aloud(miranda, "BRENDAN")] == ["interrogator", "suspect", "interrogator"]

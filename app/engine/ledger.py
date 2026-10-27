@@ -189,7 +189,10 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
                     ev["kind_note"] = "agreement without a question about this detail just before it; not counted"
         events.append(ev)
 
-    origin, why = _origin(case, fact, first_inv, first_sus, by_id, sessions)
+    partial = _partly_supplied(fact, ms, by_id, order, pos, first_inv, first_sus)
+    origin, why = _origin(case, fact, first_inv, first_sus, by_id, sessions, partial)
+    if partial and origin == "interrogator_first" and not (first_inv and first_inv["seq"] < first_sus["seq"]):
+        first_inv = partial["event"]
     if first_inv:
         first_inv["first"] = "interrogator"
     if first_sus:
@@ -197,7 +200,10 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
     adopted_by_assent = bool(first_sus and first_sus["kind"] == "assents")
     return {
         "fact": asdict(fact) | {"public_before": fact.public_before.isoformat() if fact.public_before else None},
-        "origin": origin, "origin_label": ORIGINS[origin], "corroboration": CORROBORATION[origin], "why": why,
+        "origin": origin, "origin_label": "Investigators named part of it first" if partial and origin == "interrogator_first" and first_inv is partial["event"]
+        else ORIGINS[origin], "corroboration": CORROBORATION[origin], "why": why,
+        "partly_supplied": bool(partial and origin == "interrogator_first" and first_inv is partial["event"]),
+        "partial_words": partial["investigator_words"] if partial and origin == "interrogator_first" and first_inv is partial["event"] else [],
         "first_interrogator": first_inv, "first_suspect": first_sus,
         "interrogator_mentions_before_suspect": inv_before if first_sus else None,
         "adopted_by_assent": adopted_by_assent,
@@ -206,7 +212,49 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
     }
 
 
-def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | None, by_id: dict, sessions: dict) -> tuple[str, str]:
+def _partly_supplied(fact: Fact, ms: list, by_id: dict, order: list, pos: dict, first_inv: dict | None, first_sus: dict | None) -> dict | None:
+    """Did investigators name PART of the detail before the suspect stated all of it? For each key-term group, find who
+    said one of its words first: among the lines labeled with this detail before his first full statement (denials
+    excluded, rejected labels excluded), plus the lines his statement is read with. If an investigator was first for any
+    group, the detail was partly supplied. Returns the earliest such investigator line, the words they named first and
+    the words he added, or None."""
+    if not fact.must or not first_sus or (first_inv and first_inv["seq"] < first_sus["seq"]):
+        return None
+    lines = {}
+    for m in ms:
+        u = by_id[m.utterance]
+        if u.seq < first_sus["seq"] and m.kind != "denies" and (u.role == "suspect" or m.kind in ("asks", "asserts")):
+            lines[u.id] = u
+    p = pos[first_sus["utterance"]]
+    if term_window(order, p) != order[p].text:  # his statement was read with the lines just before it
+        for k in range(max(0, p - 2), p):
+            if order[k].session == order[p].session:
+                lines.setdefault(order[k].id, order[k])
+    lines[order[p].id] = order[p]
+    ordered_lines = sorted(lines.values(), key=lambda u: u.seq)
+    inv_first_groups, his_groups, earliest_inv = [], [], None
+    for g in fact.must:
+        first = next((u for u in ordered_lines if has_terms(u.text, [g])), None)
+        if first is None:
+            continue
+        alt = next((a for a in g if has_terms(first.text, [[a]])), g[0])
+        word = next((t for t in _tok(first.text) if len(_tok(alt)) == 1 and _matches(t, _tok(alt)[0])), alt)  # the word as said
+        if first.role == "interrogator":
+            inv_first_groups.append(word)
+            if earliest_inv is None or first.seq < earliest_inv.seq:
+                earliest_inv = first
+        else:
+            his_groups.append(word)
+    if not earliest_inv:
+        return None
+    u = earliest_inv
+    ev = {"utterance": u.id, "seq": u.seq, "session": u.session, "page": u.page, "role": u.role, "speaker": u.speaker, "kind": "asks",
+          "quote": u.text[:200], "sensitive": u.sensitive, "verified": None, "partial": True}
+    return {"event": ev, "investigator_words": inv_first_groups, "his_words": his_groups}
+
+
+def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | None, by_id: dict, sessions: dict,
+            partial: dict | None = None) -> tuple[str, str]:
     if first_inv is None and first_sus is None:
         return "not_mentioned", "Nobody mentions this detail in the transcripts."
     if first_sus is None:
@@ -222,6 +270,12 @@ def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | No
     if fact.prior_statement:
         return "prior_contact", (f"The record shows he described this earlier, in a statement with no public transcript: {fact.prior_statement}. "
                                  f"In the transcripts it first appears at {_cite(first_inv if inv_first else first_sus, sessions)}.")
+    if not inv_first and partial:
+        inv_words = ", ".join(f"“{w}”" for w in partial["investigator_words"])
+        his = ", ".join(f"“{w}”" for w in partial["his_words"])
+        return "interrogator_first", (f"Investigators named part of this detail first ({inv_words}; {_cite(partial['event'], sessions)}). "
+                                      f"He first stated the whole detail at {_cite(first_sus, sessions)}" + (f", adding {his}" if his else "") + ". "
+                                      "Counted as investigators first: a detail counts as coming from him only if investigators hadn't named any part of it.")
     if inv_first:
         cue = _prior_cue(case, first_inv)
         if cue:
@@ -291,8 +345,9 @@ def audit(case: Case) -> dict:
         extra.append(f"{n(counts['planted_adopted'], 'was a false detail', 'were false details')} he went along with")
     if counts["prior_contact"]:
         extra.append(f"{n(counts['prior_contact'], 'may trace', 'may trace')} to an earlier statement with no public transcript")
+    in_part = sum(1 for f in facts if f.get("partly_supplied"))
     headline = (f"Of {n(len(stated), 'key detail', 'key details')} {case.suspect or 'the suspect'} stated or agreed to, investigators said "
-                f"{counts['interrogator_first']} first" + "".join(f", {e}" for e in extra) +
+                f"{counts['interrogator_first']} first" + (f" ({in_part} of them in part)" if in_part else "") + "".join(f", {e}" for e in extra) +
                 f". {n(len(may), 'detail', 'details')} came from him first in the record.")
     return {"case": {"id": case.id, "title": case.title, "suspect": case.suspect, "notes": case.notes},
             "sessions": [asdict(s) | {"day": s.day.isoformat()} for s in case.sessions],

@@ -195,6 +195,7 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
             pool = {u["id"]: u for u in kw + [u for u in just_before if (u["id"], fid) not in asked]}
             cands = sorted(pool.values(), key=lambda u: u["seq"])
             items += [{"key": f"{u['id']}|{fid}", "fact_label": fact_of[fid]["label"], "fact_detail": fact_of[fid].get("detail", ""),
+                       "must": fact_of[fid].get("must") or [],
                        "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"], "prev": prev_of[u["id"]]} for u in cands]
         if not items:
             break
@@ -271,11 +272,13 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
             for ev in (f["first_interrogator"], f["first_suspect"]):
                 if ev:
                     deciding.add((ev["utterance"], f["fact"]["id"]))
+        part = {(f["first_interrogator"]["utterance"], f["fact"]["id"]): f["partial_words"] for f in rep["facts"] if f.get("partly_supplied")}
         todo = [m for m in mentions if (m["utterance"], m["fact"]) in deciding and m["verified"] is None]
         if not todo:
             print(f"verification done after {rnd} round(s)")
             return 0
         items = [{"key": f"{m['utterance']}|{m['fact']}", "fact_label": fact_of[m["fact"]]["label"], "fact_detail": fact_of[m["fact"]].get("detail", ""),
+                  "must": fact_of[m["fact"]].get("must") or [], "part": part.get((m["utterance"], m["fact"]), []),
                   "speaker": f"{by_id[m['utterance']]['speaker']} ({by_id[m['utterance']]['role']})", "text": by_id[m["utterance"]]["text"],
                   "prev": prev_of[m["utterance"]]} for m in todo]
         results: dict[str, dict] = {}
@@ -352,8 +355,12 @@ def main() -> None:
     if a.reaudit:
         mentions = json.loads((cd / "mentions.json").read_text())
         known = {u["id"] for u in utts}
-        if any(m["utterance"] not in known for m in mentions):
-            sys.exit("mentions.json refers to lines that aren't in utterances.json; run the full tag step instead")
+        text_of = {u["id"]: u["text"] for u in utts}
+        stale = [m for m in mentions if m["utterance"] not in known or
+                 (m.get("by") in ("model", "search") and m.get("quote") and not tasks.quote_in(m["quote"][:60], text_of[m["utterance"]])
+                  and not text_of[m["utterance"]].startswith(m["quote"][:40]))]
+        if stale:
+            sys.exit(f"{len(stale)} saved labels don't match the current lines (ids moved?); run the full tag step instead")
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
         (cd / "audit.json").write_text(json.dumps(rep, indent=1))
         print("re-audited from saved labels:", rep["headline"])
@@ -385,6 +392,7 @@ def main() -> None:
             (cd / "memo.json").write_text(json.dumps(memo, indent=1))
         except LiveModelUnavailable as e:
             print("memo unavailable:", e)
+            (cd / "memo.json").unlink(missing_ok=True)  # never leave a memo written from an older audit
     roles = {}
     for c in calls:
         r = roles.setdefault(c.role, {"model": c.model_id, "calls": 0, "seconds": 0.0, "cost_usd": 0.0})

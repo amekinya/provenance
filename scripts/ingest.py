@@ -145,6 +145,60 @@ def printed_pages(pages: list[dict]) -> list[str]:
     return out
 
 
+# An investigator reading the suspect's written statement aloud: the words are the suspect's, not the investigator's.
+READ_ANNOUNCE = re.compile(r"\bread (it|this|that)\b|\bread what you (wrote|just added|added)\b|\bread this last part\b", re.I)
+WROTE_CUE = re.compile(r"\byou wrote\b|\byou (just )?added\b|\byour statement\b|\bthe statement\b|\bwritten\b|\bwrite\b", re.I)
+CHECK_Q = re.compile(r"\s*((is|was) (that|this) (your|what you|right|correct|true)[^?]*\?)\s*$", re.I)
+
+
+def split_read_aloud(utts: list[dict], suspect_key: str) -> list[dict]:
+    """Where an investigator reads the suspect's written statement aloud, the statement becomes its own line: role
+    suspect, marked '(written statement, read aloud by X)', same page. Two layouts occur:
+    - inline: 'I'm going to read what you wrote. (Is I got off the bus ... Is that your statement Brendan?)'
+    - next line: 'I'll read this. Is that okay?' / 'Yeah.' / '<the statement text>' by the same investigator.
+    The announcement must refer to what the suspect wrote (its own words or the 2 lines before it), so reading a
+    Miranda form isn't mistaken for his statement."""
+    out: list[dict] = []
+    pending: dict | None = None  # an announcement waiting for the read text on a following line
+    for k, u in enumerate(utts):
+        cue_text = " ".join(x["text"] for x in utts[max(0, k - 2):k + 1])
+        announce = u["role"] == "interrogator" and READ_ANNOUNCE.search(u["text"]) and WROTE_CUE.search(cue_text)
+        if announce:
+            m = re.search(r"\(([^()]{80,})\)?\s*$", u["text"], re.S)
+            if m and len(m.group(1).split()) >= 15:  # inline layout
+                body = m.group(1).rstrip(") ")
+                q = CHECK_Q.search(body)
+                tail = q.group(1) if q else ""
+                body = body[: q.start()] if q else body
+                before = u["text"][: m.start()].strip()
+                if before:
+                    out.append(u | {"text": before})
+                out.append(_statement(u, body, suspect_key))
+                if tail:
+                    out.append(u | {"text": tail})
+                pending = None
+                continue
+            out.append(u)
+            pending = {"speaker": u["speaker"], "left": 3}
+            continue
+        if pending:
+            pending["left"] -= 1
+            if u["role"] == "interrogator" and u["speaker"] == pending["speaker"] and "?" not in u["text"] and len(u["text"].split()) >= 12:
+                out.append(_statement(u, u["text"], suspect_key))
+                pending = None
+                continue
+            if pending["left"] <= 0 or (u["role"] == "interrogator" and u["speaker"] != pending["speaker"]):
+                pending = None
+        out.append(u)
+    return out
+
+
+def _statement(u: dict, body: str, suspect_key: str) -> dict:
+    reader = u["speaker"].title()
+    return u | {"speaker": suspect_key, "role": "suspect", "text": f"(written statement, read aloud by {reader}) {body.strip()}",
+                "read_aloud_by": u["speaker"]}
+
+
 def merge(session_id: str, pages: list[dict], roster: dict[str, str], start_seq: int, page_offset: int | None = None) -> list[dict]:
     """Page lines -> utterances. A line without a speaker continues the previous turn (across page breaks too).
     Stage directions continue the current turn, except a suspect's nod or head shake, which becomes his own turn.
@@ -185,6 +239,7 @@ def merge(session_id: str, pages: list[dict], roster: dict[str, str], start_seq:
                     nm, rl = (name, role) if name else ("UNKNOWN", "other")
                 utts.append({"id": "", "session": session_id, "seq": 0, "speaker": nm, "role": rl, "text": chunk,
                              "page": str(label), "sensitive": False})
+    utts = split_read_aloud(utts, suspect_key)
     for i, u in enumerate(utts):
         u["id"] = f"{session_id}-{i + 1:04d}"
         u["seq"] = start_seq + i
@@ -235,8 +290,9 @@ def main() -> None:
         old = json.loads((cd / "utterances.json").read_text()) if (cd / "utterances.json").exists() else []
         # A re-read keeps the graphic-content flags the tag step set, for lines whose id and text haven't changed.
         flagged = {(u["id"], u["text"]) for u in old if u.get("sensitive")}
+        flagged_long = {(u["session"], u["text"]) for u in old if u.get("sensitive") and len(u["text"].split()) >= 8}  # ids can shift
         for u in all_utts:
-            u["sensitive"] = u.get("sensitive", False) or (u["id"], u["text"]) in flagged
+            u["sensitive"] = u.get("sensitive", False) or (u["id"], u["text"]) in flagged or (u["session"], u["text"]) in flagged_long
         keep = [u for u in old if want and u["session"] not in want]  # with --sessions, only those sessions are replaced
         (cd / "utterances.json").write_text(json.dumps(sorted(keep + all_utts, key=lambda u: u["seq"]), indent=1))
     cost = sum(c.cost_usd for c in calls)

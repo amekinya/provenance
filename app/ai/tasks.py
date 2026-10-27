@@ -183,7 +183,14 @@ def verify(items: list[dict], calls: list[CallRecord] | None = None, reasoning: 
 
 
 def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) -> dict[str, dict]:
-    body = "\n\n".join(f"[{i['key']}] Detail: {i['fact_label']} ({i['fact_detail']})\nPrevious line: {i.get('prev', '')}\n"
+    def terms(i):
+        groups = i.get("must") or []
+        return ("\nKey terms (one word from each group must be there; code checks the words): " +
+                " + ".join("(" + " | ".join(g) + ")" for g in groups)) if groups else ""
+    def part(i):
+        return (f"\nQuestion for this item: does the sentence name {', '.join(repr(w) for w in i['part'])} as part of THIS detail (the same "
+                "object or event, in the same sense)? It need not convey the whole detail; carries_detail answers this question.") if i.get("part") else ""
+    body = "\n\n".join(f"[{i['key']}] Detail: {i['fact_label']} ({i['fact_detail']}){terms(i)}{part(i)}\nPrevious line: {i.get('prev', '')}\n"
                        f"Sentence ({i['speaker']}): {i['text']}" for i in items)
     out = chat_json(settings.ultra, [
         {"role": "system", "content": "You double-check labels for a defense corroboration audit. For each item, decide strictly whether the "
@@ -194,8 +201,11 @@ def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) 
                                       "a different aspect doesn't count. When the detail is just an object or a fact ('a knife', 'her hair was cut'), "
                                       "naming it counts. A question that names the distinctive content counts. A short answer counts when, read with "
                                       "the previous line, it supplies the distinctive content, but not when it answers a question about something "
-                                      "else. 'Yeah' counts as assent only if the previous line carried the detail. Give the kind: asks, asserts, "
-                                      "denies, assents."},
+                                      "else. 'Yeah' counts as assent only if the previous line carried the detail. When an item lists key terms, "
+                                      "they were written by counsel and define the detail's distinctive content: a line that conveys every key-term "
+                                      "group in the detail's sense counts, and degree or extent words in the detail ('until unconscious', 'some of') "
+                                      "are NOT required. Reject only when the words are used in another sense, about a different event or object, or "
+                                      "negated. Give the kind: asks, asserts, denies, assents."},
         {"role": "user", "content": body}],
         schema=VERIFY_SCHEMA, purpose="Verify deciding sentences", reasoning=reasoning, max_tokens=10000 if reasoning else 3000, calls=calls)
     return {c["key"]: c for c in out.get("checks", [])}
