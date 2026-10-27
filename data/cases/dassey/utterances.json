@@ -1587,7 +1587,7 @@
   "role": "interrogator",
   "text": "Let's go to the parts that ............clothes...talk about.....whenever he talked...got a feelin' that you saw something in the fire that you're trying to just ..............",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0160",
@@ -1667,7 +1667,7 @@
   "role": "interrogator",
   "text": "Okay ... a human body ... did you say anything to Steven? .... Was he hoping you didn't see that or what?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0168",
@@ -2037,7 +2037,7 @@
   "role": "suspect",
   "text": "There was like branches..........",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0205",
@@ -2157,7 +2157,7 @@
   "role": "suspect",
   "text": "Branches, tires, tires, like a garbage bag, and....................",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0217",
@@ -2387,7 +2387,7 @@
   "role": "suspect",
   "text": "Then I looked around a little bit and I seen ..............",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0240",
@@ -2407,7 +2407,7 @@
   "role": "suspect",
   "text": "............",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0242",
@@ -2437,7 +2437,7 @@
   "role": "interrogator",
   "text": "When did you, did you ever see the body again then? What parts did you see this time?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0245",
@@ -3827,7 +3827,7 @@
   "role": "suspect",
   "text": "Yes",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0384",
@@ -3837,7 +3837,7 @@
   "role": "interrogator",
   "text": "Tell, just try to go through in your mind exactly what he told you about him cutting himself. Put it in your own words.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0385",
@@ -3937,7 +3937,7 @@
   "role": "interrogator",
   "text": "OK. Had he told you that? Yes or no?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0395",
@@ -3947,7 +3947,7 @@
   "role": "suspect",
   "text": "Yes",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0396",
@@ -5067,7 +5067,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0508",
@@ -5187,7 +5187,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0520",
@@ -5217,7 +5217,7 @@
   "role": "suspect",
   "text": "He didn't say nothing.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0523",
@@ -13267,7 +13267,7 @@
   "role": "suspect",
   "text": "Like damp.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0641",
@@ -15857,7 +15857,7 @@
   "role": "suspect",
   "text": "That if I wanted the girlfriend.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0900",
@@ -15877,7 +15877,7 @@
   "role": "suspect",
   "text": "That if, if he wanted me to have to get some pussy.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0902",
@@ -15907,7 +15907,7 @@
   "role": "suspect",
   "text": "That he said that if I wanted to I could go get some but not right now.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0905",
@@ -15947,7 +15947,7 @@
   "role": "interrogator",
   "text": "He asked if you want some, right?",
   "page": "faassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0909",
@@ -15987,7 +15987,7 @@
   "role": "interrogator",
   "text": "If you want some pussy,",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0913",
@@ -16017,7 +16017,7 @@
   "role": "suspect",
   "text": "I said I wasn\u2019t aged and so he took me back there and showed me some.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0916",
@@ -18637,7 +18637,7 @@
   "role": "suspect",
   "text": "mm huh.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1178",
@@ -18657,7 +18657,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1180",
@@ -18667,7 +18667,7 @@
   "role": "interrogator",
   "text": "What did he do with the hair?",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1181",
@@ -18677,7 +18677,7 @@
   "role": "suspect",
   "text": "He set it down on the counter.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1182",
@@ -18687,7 +18687,7 @@
   "role": "interrogator",
   "text": "The counter where?",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1183",
@@ -18697,7 +18697,7 @@
   "role": "suspect",
   "text": "Like a dresser.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1184",
@@ -18707,7 +18707,7 @@
   "role": "interrogator",
   "text": "What did he use to cut the hair off with?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1185",
@@ -18717,7 +18717,7 @@
   "role": "suspect",
   "text": "The knife.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1186",
@@ -18727,7 +18727,7 @@
   "role": "interrogator",
   "text": "Was she alive?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1187",
@@ -18737,7 +18737,7 @@
   "role": "suspect",
   "text": "(shakes head \"no\")",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1188",
@@ -18747,7 +18747,7 @@
   "role": "interrogator",
   "text": "Did he say why he did that?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1189",
@@ -19037,7 +19037,7 @@
   "role": "interrogator",
   "text": "How'd he tell you to do, how'd he tell you to do that? What'd he say?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1218",
@@ -19257,7 +19257,7 @@
   "role": "suspect",
   "text": "(nods \"yes\")",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1240",
@@ -20687,7 +20687,7 @@
   "role": "interrogator",
   "text": "Well who started the fire?",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1383",
@@ -20697,7 +20697,7 @@
   "role": "suspect",
   "text": "He did.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1384",
@@ -20707,7 +20707,7 @@
   "role": "interrogator",
   "text": "Who's he?",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1385",
@@ -20717,7 +20717,7 @@
   "role": "suspect",
   "text": "Steven.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1386",
@@ -20727,7 +20727,7 @@
   "role": "interrogator",
   "text": "What did he start it with?",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1387",
@@ -21137,7 +21137,7 @@
   "role": "suspect",
   "text": "We, he came up with burning her. So he set her back on the floor and then, that\u2019s when he threw her in the fire.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1428",
@@ -21257,7 +21257,7 @@
   "role": "suspect",
   "text": "In the head.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1440",
@@ -21897,7 +21897,7 @@
   "role": "suspect",
   "text": "We grab her and we put her in and take her over the fire and throw her on.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1504",
@@ -27037,7 +27037,7 @@
   "role": "suspect",
   "text": "like a cell phone, camera, purse",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2018",
@@ -27357,7 +27357,7 @@
   "role": "suspect",
   "text": "Like help me and not ta tell Steven not ta do this anymore.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2050",
@@ -27657,7 +27657,7 @@
   "role": "interrogator",
   "text": "In the ah, well in the bedroom, and he had you cut the hair off you said right?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2080",
@@ -28677,7 +28677,7 @@
   "role": "suspect",
   "text": "Like in the head and some in the belly and the stomach.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2182",
@@ -28687,7 +28687,7 @@
   "role": "interrogator",
   "text": "How many times did he shoot her in the head?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2183",
@@ -28697,7 +28697,7 @@
   "role": "suspect",
   "text": "Like three times.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2184",
@@ -28707,7 +28707,7 @@
   "role": "interrogator",
   "text": "Tell me where in the head. What sides?",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2185",
@@ -28717,7 +28717,7 @@
   "role": "suspect",
   "text": "Like the left side I think it was.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2186",
@@ -28727,7 +28727,7 @@
   "role": "interrogator",
   "text": "The left side of her head",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2187",
@@ -28737,7 +28737,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d)",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2188",
@@ -28757,7 +28757,7 @@
   "role": "suspect",
   "text": "Like right here.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2190",
@@ -29807,7 +29807,7 @@
   "role": "suspect",
   "text": "'bout ten minutes.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2295",
@@ -29867,7 +29867,7 @@
   "role": "suspect",
   "text": "Yeah. Cuz he said he was gonna watch the fire until it burnt down a little bit more.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2301",
@@ -30627,7 +30627,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d) Yeah.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2377",
@@ -30877,7 +30877,7 @@
   "role": "interrogator",
   "text": "OK? Am I right?",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2402",
@@ -30887,7 +30887,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d) Yeah.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2403",
@@ -30927,7 +30927,7 @@
   "role": "suspect",
   "text": "(shakes head \u201cno\u201d) No.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2407",
@@ -30937,7 +30937,7 @@
   "role": "interrogator",
   "text": "None at all?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2408",
@@ -30947,7 +30947,7 @@
   "role": "suspect",
   "text": "(shakes head \u201cno\u201d) uh uh.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2409",
@@ -31557,7 +31557,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d)Yeah.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2470",
@@ -33817,7 +33817,7 @@
   "role": "interrogator",
   "text": "Can you tell me why, i-if Teresa was, was dead when she was in the garage, why you would shoot or, why he would shoot a dead body.",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2696",
@@ -33827,7 +33827,7 @@
   "role": "suspect",
   "text": "I don't know. Probably to make sure she's dead or somethin'.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2697",
@@ -33857,7 +33857,7 @@
   "role": "interrogator",
   "text": "You're just sayin', yo-your guess is that to make sure was dead.",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2700",
@@ -33937,7 +33937,7 @@
   "role": "interrogator",
   "text": "previously you said that you thought she was alive.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2708",
@@ -33997,7 +33997,7 @@
   "role": "interrogator",
   "text": "She was screaming a lot or wasn't?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2714",
@@ -34007,7 +34007,7 @@
   "role": "suspect",
   "text": "She was.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2715",
@@ -34047,7 +34047,7 @@
   "role": "suspect",
   "text": "Cuz when you scream a lot, you like, your, your breathing goes up or somethin\u2019.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2719",
@@ -34127,7 +34127,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d) Yeah.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2727",
@@ -34397,7 +34397,7 @@
   "role": "interrogator",
   "text": "I mean like, like this like that, like that, like that.",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2754",
@@ -34717,7 +34717,7 @@
   "role": "suspect",
   "text": "Cuz she was breathing like little bit.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2786",
@@ -40437,7 +40437,7 @@
   "role": "interrogator",
   "text": "But you didn't touch her breasts?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0212",
@@ -41477,7 +41477,7 @@
   "role": "interrogator",
   "text": "We asked you before about the clothes, OK? You\u2019re lying to me when your tellin\u2019 me you don\u2019t know where the bra and panties are. OK. I can tell that. Where are the bra and the panties?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0316",
@@ -41847,7 +41847,7 @@
   "role": "suspect",
   "text": "Like right here.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0353",
@@ -41887,7 +41887,7 @@
   "role": "suspect",
   "text": "Ta stop what I was doin'.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0357",
@@ -41897,7 +41897,7 @@
   "role": "interrogator",
   "text": "What's that? Is she screaming?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0358",
@@ -41907,7 +41907,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0359",
@@ -41917,7 +41917,7 @@
   "role": "interrogator",
   "text": "Is she screaming and saying stop what you're doing? Is she swearing at you? Is she struggling or what? Tell us how that happened.",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0360",
@@ -41927,7 +41927,7 @@
   "role": "suspect",
   "text": "Just that she was crying a lot.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0361",
@@ -42257,7 +42257,7 @@
   "role": "suspect",
   "text": "Mm hum.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0394",
@@ -42907,7 +42907,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0459",
@@ -42917,7 +42917,7 @@
   "role": "interrogator",
   "text": "You sure? I think you did.",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0460",
@@ -42927,7 +42927,7 @@
   "role": "suspect",
   "text": "I never touched the gun.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0461",
@@ -42947,7 +42947,7 @@
   "role": "suspect",
   "text": "I was lying ah then.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0463",
@@ -44397,7 +44397,7 @@
   "role": "interrogator",
   "text": "What about your hands? (pause) What about your hands?",
   "page": "wiegert",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0608",
@@ -44587,7 +44587,7 @@
   "role": "interrogator",
   "text": "Where did that happen?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0627",
@@ -44597,7 +44597,7 @@
   "role": "suspect",
   "text": "In the, in the bedroom.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0628",
@@ -44607,7 +44607,7 @@
   "role": "interrogator",
   "text": "What ya cut the hair off with?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0629",
@@ -44617,7 +44617,7 @@
   "role": "suspect",
   "text": "The knife.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0630",
@@ -49887,7 +49887,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1157",
@@ -49917,7 +49917,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1160",
@@ -49937,7 +49937,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-1162",
@@ -51137,7 +51137,7 @@
   "role": "interrogator",
   "text": "OK. Did you cut any hair off?",
   "page": "wiegert",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-1282",
@@ -51147,7 +51147,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-1283",

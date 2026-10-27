@@ -1,332 +1,54 @@
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11926 chars): '{   "utterances": [     {       "id": "S2-1045",       "graphic": false,       "mentions":' ... '         {           "fact": "F06",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (8216 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (16216 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15458 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15693 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11958 chars): '{   "utterances": [     {       "id": "S2-2863",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (16216 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
+  chunk at S2-0595 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
   [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-tagged 5755 sentences in 321 chunks: 2261 labels kept, 36 dropped (quote not in sentence)
-code added 20 bare agreements that follow an investigator line carrying the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0055|F15",       "carries_detail": false,       "ki' ... '55|F15",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "S1-0317|F02",       "carries_detail": true,       "kin' ... '|F02",       "carries_detail": true,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0055|F15",       "carries_detail": false,       "ki' ... '55|F15",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12012 chars): '{   "checks": [     {       "key": "S1-0317|F02",       "carries_detail": true,       "kin' ... '|F02",       "carries_detail": true,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0342",       "carries_detail": false,       "kind":' ... '1-0342",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0400|F03",       "carries_detail": false,       "ki' ... '00|F03",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0121|F01: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0400|F03: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12031 chars): '{   "checks": [     {       "key": "hair was cut",       "carries_detail": false,       "k' ... 'as cut",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0521|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 1: 49 deciding labels to check, 41 checked, 23 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0021|F13",       "carries_detail": false,       "ki' ... '21|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0056|F15",       "carries_detail": false,       "ki' ... 'F15",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6016 chars): '{   "checks": [     {       "key": "S2-2865",       "carries_detail": true,       "kind": ' ... 'S2-2865",       "carries_detail": true,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0021|F13",       "carries_detail": false,       "ki' ... '21|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0056|F15",       "carries_detail": false,       "ki' ... 'F15",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12037 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'onveyed",       "carries_detail": true,       "kind": "asks"'
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6043 chars): '{   "checks": [     {       "key": "body burned in fire behind garage",       "carries_det' ... 'garage",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0121|F01",       "carries_detail": false,       "ki' ... '21|F01",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12047 chars): '{   "checks": [     {       "key": "body burned in fire behind garage",       "carries_det' ... 'garage",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0021|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0121|F01: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3061 chars): '{   "checks": [     {       "key": "S1-0030",       "carries_detail": false,       "kind":' ... '030",       "carries_detail": false,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6028 chars): '{   "checks": [     {       "key": "clothes_burned",       "carries_detail": false,       ' ... 'burned",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6031 chars): '{   "checks": [     {       "key": "blood_on_garage_floor",       "carries_detail": false,' ... '_floor",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "S1-0030",       "carries_detail": false,       "kind":' ... '030",       "carries_detail": false,       "kind": "asserts"'
-  verifier failed on S1-0030|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12031 chars): '{   "checks": [     {       "key": "blood_on_garage_floor",       "carries_detail": false,' ... '_floor",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0145|F20: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 31 deciding labels to check, 20 checked, 13 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0056|F15",       "carries_detail": false,       "ki' ... 'F15",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0021|F13",       "carries_detail": false,       "ki' ... '21|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0056|F15",       "carries_detail": false,       "ki' ... 'F15",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6016 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0021|F13",       "carries_detail": false,       "ki' ... '21|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6051 chars): '{   "checks": [     {       "key": "body burned in fire behind garage",       "carries_det' ... 'garage",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6061 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  verifier failed on S1-0056|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12051 chars): '{   "checks": [     {       "key": "body burned in fire behind garage",       "carries_det' ... 'garage",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0021|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3061 chars): '{   "checks": [     {       "key": "S1-0030",       "carries_detail": false,       "kind":' ... '030",       "carries_detail": false,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0121|F01: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "S1-0030",       "carries_detail": false,       "kind":' ... '030",       "carries_detail": false,       "kind": "asserts"'
-  verifier failed on S1-0030|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0122",       "carries_detail": false,       "kind":' ... '1-0122",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12028 chars): '{   "checks": [     {       "key": "clothes_burned",       "carries_detail": false,       ' ... 'burned",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0122|F22: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0145|F20",       "carries_detail": false,       "ki' ... '45|F20",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0145|F20",       "carries_detail": false,       "ki' ... '45|F20",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0145|F20: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 3: 24 deciding labels to check, 14 checked, 10 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0021|F13",       "carries_detail": false,       "ki' ... '21|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0056|F15",       "carries_detail": false,       "ki' ... 'F15",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0056|F15",       "carries_detail": false,       "ki' ... 'F15",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3082 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'yed",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  verifier failed on S1-0056|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6029 chars): '{   "checks": [     {       "key": "vehicle_in_avery_garage",       "carries_detail": fals' ... 'garage",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12029 chars): '{   "checks": [     {       "key": "vehicle_in_avery_garage",       "carries_detail": fals' ... 'garage",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0121|F01: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6031 chars): '{   "checks": [     {       "key": "blood_on_garage_floor",       "carries_detail": false,' ... '_floor",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0145|F20",       "carries_detail": false,       "ki' ... '45|F20",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0145|F20: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 4: 20 deciding labels to check, 15 checked, 9 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0023|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  verifier failed on S1-0056|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 5: 14 deciding labels to check, 9 checked, 8 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0023",       "carries_detail": false,       "kind":' ... '1-0023",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0023",       "carries_detail": false,       "kind":' ... '1-0023",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0023|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6016 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  verifier failed on S1-0056|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0057",       "carries_detail": false,       "kind":' ... '1-0057",       "carries_detail": false,       "kind": "asks"'
-round 6: 13 deciding labels to check, 8 checked, 7 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0023|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6016 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  verifier failed on S1-0056|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0057",       "carries_detail": false,       "kind":' ... '1-0057",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0057",       "carries_detail": false,       "kind":' ... '1-0057",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0057|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 7: 12 deciding labels to check, 7 checked, 4 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0023|F13: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3061 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6061 chars): '{   "checks": [     {       "key": "S1-0056",       "carries_detail": false,       "kind":' ... '056",       "carries_detail": false,       "kind": "assents"'
-  verifier failed on S1-0056|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0057",       "carries_detail": false,       "kind":' ... '1-0057",       "carries_detail": false,       "kind": "asks"'
-round 8: 9 deciding labels to check, 4 checked, 4 rejected
-9 deciding line(s) not re-checked
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0019|F01",       "carries_detail": false,       "ki' ... '19|F01",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6021 chars): '{   "checks": [     {       "key": "S1-0244",       "carries_detail": false,       "kind":' ... '1-0244",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0161|F07",       "carries_detail": false,       "ki' ... '61|F07",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0295|F03",       "carries_detail": false,       "ki' ... '95|F03",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12021 chars): '{   "checks": [     {       "key": "S1-0244",       "carries_detail": false,       "kind":' ... '1-0244",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6021 chars): '{   "checks": [     {       "key": "S1-0177",       "carries_detail": false,       "kind":' ... '1-0177",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0161|F07",       "carries_detail": false,       "ki' ... '61|F07",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0244|F04",       "carries_detail": false,       "ki' ... '44|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0295|F03",       "carries_detail": false,       "ki' ... '95|F03",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6038 chars): '{   "checks": [     {       "key": "strangled_until_unconscious",       "carries_detail": ' ... 'scious",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0295|F03",       "carries_detail": false,       "ki' ... '95|F03",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12021 chars): '{   "checks": [     {       "key": "S1-0177",       "carries_detail": false,       "kind":' ... '1-0177",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0177|F08",       "carries_detail": false,       "ki' ... '77|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0244|F04",       "carries_detail": false,       "ki' ... '44|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0244|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12037 chars): '{   "checks": [     {       "key": "strangled_until_unconscious",       "carries_detail": ' ... 'scious",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0161|F07: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12035 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0295|F03: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S2-1061|F07",       "carries_detail": false,       "ki' ... '61|F07",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0297|F03",       "carries_detail": false,       "ki' ... '97|F03",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0177|F08",       "carries_detail": false,       "ki' ... '77|F08",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0177|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12035 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0316|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12010 chars): '{   "checks": [     {       "key": "S2-1061|F07",       "carries_detail": false,       "ki' ... '61|F07",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1061|F07: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S2-0783|F05",       "carries_detail": false,       "ki' ... '83|F05",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0182|F08",       "carries_detail": false,       "ki' ... '82|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12014 chars): '{   "checks": [     {       "key": "S1-0297|F03",       "carries_detail": false,       "ki' ... '97|F03",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0297|F03: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S2-1063|F07",       "carries_detail": false,       "ki' ... '63|F07",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0023|F04",       "carries_detail": false,       "ki' ... '23|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S2-0783|F05",       "carries_detail": false,       "ki' ... '83|F05",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-0783|F05: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0182|F08",       "carries_detail": false,       "ki' ... '82|F08",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0182|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S2-1063|F07",       "carries_detail": false,       "ki' ... '63|F07",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1063|F07: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6035 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0101|F08",       "carries_detail": false,       "ki' ... '01|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0023|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S2-0767|F12",       "carries_detail": false,       "ki' ... '67|F12",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6067 chars): '{   "checks": [     {       "key": "Her body was in the back of the RAV4 (Halbach was plac' ... 'icle.)",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0362|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S1-0101|F08",       "carries_detail": false,       "ki' ... '01|F08",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0101|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S2-0767|F12",       "carries_detail": false,       "ki' ... '67|F12",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6010 chars): '{   "checks": [     {       "key": "S1-0101|F04",       "carries_detail": false,       "ki' ... '01|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0371|F08",       "carries_detail": false,       "ki' ... '71|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S2-0818|F12",       "carries_detail": false,       "ki' ... '18|F12",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S2-0241|F17",       "carries_detail": false,       "ki' ... 'F17",       "carries_detail": false,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12010 chars): '{   "checks": [     {       "key": "S1-0101|F04",       "carries_detail": false,       "ki' ... '01|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0101|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0371|F08",       "carries_detail": false,       "ki' ... '71|F08",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0371|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S2-0818|F12",       "carries_detail": false,       "ki' ... '18|F12",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-0818|F12: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S2-0241|F17",       "carries_detail": false,       "ki' ... 'F17",       "carries_detail": false,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0373|F08",       "carries_detail": false,       "ki' ... '73|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0356|F20",       "carries_detail": false,       "ki' ... '56|F20",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S2-1234|F12",       "carries_detail": false,       "ki' ... '34|F12",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0373",       "carries_detail": false,       "kind":' ... '1-0373",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0373|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6021 chars): '{   "checks": [     {       "key": "S1-0013",       "carries_detail": false,       "kind":' ... '1-0013",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12021 chars): '{   "checks": [     {       "key": "S1-0356|F20",       "carries_detail": false,       "ki' ... '56|F20",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1551|F17: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S2-1234|F12",       "carries_detail": false,       "ki' ... '34|F12",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1234|F12: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0127",       "carries_detail": false,       "kind":' ... '1-0127",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6014 chars): '{   "checks": [     {       "key": "S1-0356",       "carries_detail": false,       "kind":' ... '1-0356",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S2-1264|F12",       "carries_detail": false,       "ki' ... '64|F12",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12021 chars): '{   "checks": [     {       "key": "S1-0013",       "carries_detail": false,       "kind":' ... '1-0013",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0127",       "carries_detail": false,       "kind":' ... '1-0127",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0127|F20: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3083 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'yed",       "carries_detail": false,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "phone",       "carries_detail": false' ... ' [     {       "key": "phone",       "carries_detail": false'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S2-1264|F12",       "carries_detail": false,       "ki' ... '64|F12",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1264|F12: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0217",       "carries_detail": false,       "kind":' ... '1-0217",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S2-1268|F12",       "carries_detail": false,       "ki' ... '68|F12",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6075 chars): '{   "checks": [     {       "key": "bedsheets burned",       "carries_detail": false,     ' ... 'ned",       "carries_detail": false,       "kind": "asserts"'
-  verifier failed on S1-0487|F21: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0129|F20",       "carries_detail": false,       "ki' ... '29|F20",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0129|F20: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12014 chars): '{   "checks": [     {       "key": "S1-0217",       "carries_detail": false,       "kind":' ... '1-0217",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0217|F23: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1268|F12: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0477|F23",       "carries_detail": false,       "ki' ... '77|F23",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1673|F21: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0131|F20: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0477|F23",       "carries_detail": false,       "ki' ... '77|F23",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0477",       "carries_detail": false,       "kind":' ... '1-0477",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1675|F21: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0477",       "carries_detail": false,       "kind":' ... '1-0477",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0477|F23: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0490",       "carries_detail": false,       "kind":' ... '1-0490",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S1-0490",       "carries_detail": false,       "kind":' ... '1-0490",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0490|F23: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0148",       "carries_detail": false,       "kind":' ... '1-0148",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S1-0148",       "carries_detail": false,       "kind":' ... '1-0148",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0148|F24: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 92 earlier investigator lines checked, 47 answered, 6 carry the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0266",       "carries_detail": false,       "kind":' ... '1-0266",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0191|F04",       "carries_detail": false,       "ki' ... '91|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0177|F08",       "carries_detail": false,       "ki' ... '77|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S2-1673|F21",       "carries_detail": false,       "ki' ... '73|F21",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0191|F04",       "carries_detail": false,       "ki' ... '91|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12021 chars): '{   "checks": [     {       "key": "S1-0177",       "carries_detail": false,       "kind":' ... '1-0177",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12014 chars): '{   "checks": [     {       "key": "S2-1673|F21",       "carries_detail": false,       "ki' ... '73|F21",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "S1-0191|F04",       "carries_detail": true,       "kin' ... '191|F04",       "carries_detail": true,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0177|F08",       "carries_detail": false,       "ki' ... '77|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S2-1673|F21",       "carries_detail": false,       "ki' ... '73|F21",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0191|F04",       "carries_detail": false,       "ki' ... '91|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0191|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "S1-0177|F08",       "carries_detail": false,       "ki' ... '77|F08",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0177|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1673|F21: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0201",       "carries_detail": false,       "kind":' ... '1-0201",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0201|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0362|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-1675|F21: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0371|F08",       "carries_detail": false,       "ki' ... '71|F08",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0203|F04",       "carries_detail": false,       "ki' ... '03|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0203|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0371|F08",       "carries_detail": false,       "ki' ... '71|F08",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0371|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0232|F04",       "carries_detail": false,       "ki' ... '32|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0232",       "carries_detail": false,       "kind":' ... '1-0232",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0232|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "S1-0373|F08",       "carries_detail": false,       "ki' ... '73|F08",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0373|F08: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0244|F04",       "carries_detail": false,       "ki' ... '44|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12010 chars): '{   "checks": [     {       "key": "S1-0244|F04",       "carries_detail": false,       "ki' ... '44|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0244|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 41 earlier investigator lines checked, 20 answered, 2 carry the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "S1-0191|F04",       "carries_detail": true,       "kin' ... '191|F04",       "carries_detail": true,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6014 chars): '{   "checks": [     {       "key": "S2-1673|F21",       "carries_detail": false,       "ki' ... '73|F21",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0266",       "carries_detail": false,       "kind":' ... '1-0266",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0191",       "carries_detail": false,       "kind":' ... '1-0191",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0266",       "carries_detail": false,       "kind":' ... '1-0266",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "S1-0191|F04",       "carries_detail": true,       "kin' ... '191|F04",       "carries_detail": true,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6031 chars): '{   "checks": [     {       "key": "body in back of RAV4",       "carries_detail": false, ' ... 'f RAV4",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3059 chars): '{   "checks": [     {       "key": "S1-0201|F04",       "carries_detail": false,       "ki' ... '01|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6014 chars): '{   "checks": [     {       "key": "S1-0272",       "carries_detail": false,       "kind":' ... '1-0272",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12014 chars): '{   "checks": [     {       "key": "S1-0272",       "carries_detail": false,       "kind":' ... '1-0272",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0272|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S1-0201|F04",       "carries_detail": false,       "ki' ... '01|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0201|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "S1-0297|F04",       "carries_detail": false,       "ki' ... '97|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0232",       "carries_detail": false,       "kind":' ... '1-0232",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6038 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0232",       "carries_detail": false,       "kind":' ... '1-0232",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0232|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S1-0305|F04",       "carries_detail": false,       "ki' ... '05|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0305|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6010 chars): '{   "checks": [     {       "key": "S1-0244|F04",       "carries_detail": false,       "ki' ... '44|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6010 chars): '{   "checks": [     {       "key": "S1-0316|F04",       "carries_detail": false,       "ki' ... '16|F04",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12010 chars): '{   "checks": [     {       "key": "S1-0244|F04",       "carries_detail": false,       "ki' ... '44|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0244|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12010 chars): '{   "checks": [     {       "key": "S1-0316|F04",       "carries_detail": false,       "ki' ... '16|F04",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0316|F04: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 16 earlier investigator lines checked, 7 answered, 0 carry the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "S1-0023|F13",       "carries_detail": false,       "ki' ... '23|F13",       "carries_detail": false,       "kind": "asks"'
-round 1: 8 deciding labels to check, 8 checked, 6 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S2-2567|F11",       "carries_detail": false,       "ki' ... '67|F11",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "S2-2567|F11",       "carries_detail": false,       "ki' ... '67|F11",       "carries_detail": false,       "kind": "asks"'
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 6 deciding labels to check, 5 checked, 4 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "S1-0065|F15",       "carries_detail": false,       "ki' ... '65|F15",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "S1-0065|F15",       "carries_detail": false,       "ki' ... '65|F15",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0065",       "carries_detail": false,       "kind":' ... '1-0065",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S1-0065",       "carries_detail": false,       "kind":' ... '1-0065",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0065|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S1-0141",       "carries_detail": false,       "kind":' ... '1-0141",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S1-0141",       "carries_detail": false,       "kind":' ... '1-0141",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S1-0141|F22: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6036 chars): '{   "checks": [     {       "key": "hidden in salvage yard",       "carries_detail": false' ... 'ard",       "carries_detail": false,       "kind": "asserts"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12036 chars): '{   "checks": [     {       "key": "hidden in salvage yard",       "carries_detail": false' ... 'ard",       "carries_detail": false,       "kind": "asserts"'
-  verifier failed on S1-0302|F15: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3058 chars): '{   "checks": [     {       "key": "S2-2567",       "carries_detail": false,       "kind":' ... '2-2567",       "carries_detail": false,       "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6058 chars): '{   "checks": [     {       "key": "S2-2567",       "carries_detail": false,       "kind":' ... '2-2567",       "carries_detail": false,       "kind": "asks"'
-  verifier failed on S2-2567|F11: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 3: 5 deciding labels to check, 0 checked, 0 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23911 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23958 chars): '{   "utterances": [     {       "id": "S2-2863",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11911 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (31645 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11985 chars): '{   "utterances": [     {       "id": "S3-1153",       "graphic": true,       "mentions": ' ... '         {           "fact": "F08",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15645 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (31645 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  chunk at S3-0181 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+tagged 5755 sentences in 321 chunks: 2269 labels kept, 40 dropped (quote not in sentence)
+code added 12 bare agreements that follow an investigator line carrying the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (42758 chars): 'The user wants me to analyze each sentence in the context of a specific detail and previou' ... "n. The rest are interrogator's questions. So kinds: asserts,"
+round 1: 49 deciding labels to check, 44 checked, 27 rejected
+round 2: 32 deciding labels to check, 32 checked, 22 rejected
+round 3: 22 deciding labels to check, 22 checked, 15 rejected
+round 4: 15 deciding labels to check, 15 checked, 12 rejected
+round 5: 13 deciding labels to check, 13 checked, 10 rejected
+round 6: 10 deciding labels to check, 10 checked, 7 rejected
+round 7: 7 deciding labels to check, 7 checked, 2 rejected
+round 8: 2 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
-5 deciding line(s) not re-checked
-Of 24 key details Brendan Dassey stated or agreed to, investigators said 10 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 9 details came from him first in the record.
-done in 1285.6s, 651 model calls, $4.6973
+2 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (40052 chars): 'The user wants me to analyze each sentence in the provided examples to determine if it con' ... 'as: [S2-0704|F05] Does not convey distinctive content. [S2-0'
+safety search: 101 earlier investigator lines checked, 90 answered, 9 carry the detail
+safety search: 6 earlier investigator lines checked, 5 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+Of 24 key details Brendan Dassey stated or agreed to, investigators said 12 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 7 details came from him first in the record.
+done in 527.7s, 394 model calls, $2.5629
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (40503 chars): 'The user wants me to analyze the interrogation transcript and for each crime detail (F01-F' ... 'back. Then he says that he knows a better way, that he would'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (88929 chars): 'The user wants me to analyze the interrogation transcript and identify for each crime deta' ... 'e?" BRENDAN: "(shakes head \'no\')" S2-3398 WIEGERT: "Wh-where'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/provenance/provenance/scripts/one_prompt_case.py", line 93, in <module>
+    main()
+  File "/home/runner/work/provenance/provenance/scripts/one_prompt_case.py", line 56, in main
+    ans = ask(su, facts, calls)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/provenance/provenance/scripts/one_prompt_case.py", line 30, in ask
+    out = chat_json(settings.ultra, [{"role": "user", "content":
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/provenance/provenance/app/ai/client.py", line 160, in chat_json
+    raise LiveModelUnavailable(f"{spec.model_id} returned no valid JSON")
+app.ai.client.LiveModelUnavailable: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
