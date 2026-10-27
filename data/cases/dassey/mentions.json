@@ -31,7 +31,9 @@
   "by": "model",
   "verified": true,
   "stance": "states",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0023",
@@ -73,7 +75,9 @@
   "by": "model",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0027",
@@ -409,7 +413,9 @@
   "kind": "asserts",
   "quote": "Toes",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0165",
@@ -857,7 +863,9 @@
   "kind": "asserts",
   "quote": "He tried to cover it with branches, a car hood",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0305",
@@ -963,7 +971,9 @@
   "by": "model",
   "verified": true,
   "stance": "states",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0317",
@@ -1475,7 +1485,9 @@
   "kind": "assents",
   "quote": "Yeah",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0428",
@@ -1571,7 +1583,9 @@
   "kind": "asserts",
   "quote": "he told me that he stabbed her in the stomach in the pit",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0491",
@@ -1661,7 +1675,9 @@
   "kind": "asserts",
   "quote": "Rope",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0513",
@@ -1701,7 +1717,9 @@
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "agrees",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0523",
@@ -2109,7 +2127,9 @@
   "kind": "assents",
   "quote": "Yeah",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "agrees",
+  "sense_checked": true
  },
  {
   "utterance": "S2-0050",
@@ -2445,7 +2465,9 @@
   "kind": "asserts",
   "quote": "In the garage",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-0387",
@@ -2637,7 +2659,9 @@
   "kind": "asserts",
   "quote": "In the back of the jeep.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-0429",
@@ -2789,7 +2813,9 @@
   "kind": "asserts",
   "quote": "On the floor.",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-0459",
@@ -3469,7 +3495,9 @@
   "kind": "asserts",
   "quote": "The bed.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-0790",
@@ -3781,7 +3809,9 @@
   "kind": "asserts",
   "quote": "He choked her.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1066",
@@ -4517,7 +4547,9 @@
   "kind": "asserts",
   "quote": "That he cut off her hair.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1176",
@@ -4677,7 +4709,9 @@
   "kind": "asserts",
   "quote": "On her throat.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1203",
@@ -4933,7 +4967,9 @@
   "kind": "assents",
   "quote": "He did.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "agrees",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1241",
@@ -4949,7 +4985,9 @@
   "kind": "asserts",
   "quote": "That he shot her with his .22.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1243",
@@ -5341,7 +5379,9 @@
   "kind": "denies",
   "quote": "Take her outside on the side of the garage and shoot her.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1329",
@@ -5365,7 +5405,9 @@
   "kind": "denies",
   "quote": "On the side of it, yeah.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1335",
@@ -6997,7 +7039,9 @@
   "kind": "denies",
   "quote": "I don't know.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1557",
@@ -7013,7 +7057,9 @@
   "kind": "denies",
   "quote": "No.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1559",
@@ -7029,7 +7075,9 @@
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "agrees",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1561",
@@ -7045,7 +7093,9 @@
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "agrees",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1567",
@@ -7077,7 +7127,9 @@
   "kind": "asserts",
   "quote": "Puts it in his, his room.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1573",
@@ -7197,7 +7249,9 @@
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "agrees",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1595",
@@ -7549,7 +7603,9 @@
   "kind": "asserts",
   "quote": "He took the, the bedsheets, took 'em outside and he burnt 'em.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1677",
@@ -8229,7 +8285,9 @@
   "kind": "denies",
   "quote": "I don't know what happened to it.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "denies",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1966",
@@ -8245,7 +8303,9 @@
   "kind": "denies",
   "quote": "I don't know.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "denies",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1968",
@@ -8349,7 +8409,9 @@
   "kind": "asserts",
   "quote": "He burnt 'em.",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1983",
@@ -9559,7 +9621,9 @@
   "kind": "asserts",
   "quote": "Like when the bones were left behind, he would like try to take the shovel and try to break the bones apart and he would bury 'em, like right in front of the fire almost.",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S2-2313",
@@ -11743,7 +11807,9 @@
   "kind": "denies",
   "quote": "(shakes head \u201cno\u201d) uh uh",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "denies",
+  "sense_checked": true
  },
  {
   "utterance": "S2-2867",
@@ -11756,10 +11822,12 @@
  {
   "utterance": "S2-2868",
   "fact": "F25",
-  "kind": "denies",
+  "kind": "assents",
   "quote": "No but I don't know where it was.",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "agrees",
+  "sense_checked": true
  },
  {
   "utterance": "S2-2887",
@@ -18783,7 +18851,9 @@
   "kind": "denies",
   "quote": "We both did.",
   "by": "suspect-search",
-  "verified": false
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0317",
@@ -18793,7 +18863,9 @@
   "by": "suspect-search",
   "verified": true,
   "stance": "states",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0344",
@@ -18821,7 +18893,9 @@
   "by": "suspect-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0039",
@@ -18831,7 +18905,9 @@
   "by": "suspect-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0022",
@@ -18841,7 +18917,9 @@
   "by": "suspect-search",
   "verified": true,
   "stance": "states",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "states",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0491",
@@ -18851,7 +18929,9 @@
   "by": "suspect-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0493",
@@ -18861,7 +18941,9 @@
   "by": "suspect-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0317",
@@ -18871,7 +18953,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S2-0351",
@@ -18881,7 +18965,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0324",
@@ -18901,7 +18987,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S2-1353",
@@ -18951,7 +19039,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0041",
@@ -18961,7 +19051,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0043",
@@ -18971,7 +19063,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0047",
@@ -18991,7 +19085,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0493",
@@ -19001,7 +19097,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0140",
@@ -19011,7 +19109,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0164",
@@ -19021,7 +19121,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0252",
@@ -19031,7 +19133,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0164",
@@ -19041,7 +19145,9 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
  },
  {
   "utterance": "S1-0166",
@@ -19051,6 +19157,78 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true
+ },
+ {
+  "utterance": "S2-1333",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "Like a little bit.",
+  "by": "sense-search",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
+ },
+ {
+  "utterance": "S2-1343",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "mm huh. (nods \u201cyes\u201d)",
+  "by": "sense-search",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
+ },
+ {
+  "utterance": "S2-1349",
+  "fact": "F12",
+  "kind": "asserts",
+  "quote": "He does.",
+  "by": "sense-search",
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true
+ },
+ {
+  "utterance": "S2-2871",
+  "fact": "F25",
+  "kind": "denies",
+  "quote": "uh uh (shakes head \u201cno\u201d)",
+  "by": "sense-search",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
+ },
+ {
+  "utterance": "S1-0022",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "Some branches.....a cabinet and some tires..........",
+  "by": "sense-search",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
+ },
+ {
+  "utterance": "S1-0060",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "Yeah.",
+  "by": "sense-search",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
+ },
+ {
+  "utterance": "S1-0277",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "At night",
+  "by": "sense-search",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true
  }
 ]
