@@ -1,36 +1,344 @@
-keyword {'n_facts': 39, 'failed_interrogations': 0, 'speaker_acc': 0.59, 'line_acc': 0.538, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 3, 'never->never': 4, 'interrogator->never': 10, 'interrogator->interrogator': 11, 'suspect->suspect': 8, 'suspect->interrogator': 2, 'never->interrogator': 1}} {'seconds': 0.0, 'cost_usd': 0, 'calls': 0}
-one_prompt {'n_facts': 39, 'failed_interrogations': 0, 'speaker_acc': 0.128, 'line_acc': 0.128, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 13, 'never->never': 5, 'interrogator->never': 21}} {'seconds': 32.0, 'cost_usd': 0.0617, 'calls': 7}
-tagged 31 sentences in 2 chunks: 10 labels kept, 0 dropped (quote not in sentence)
-tagged 30 sentences in 2 chunks: 18 labels kept, 4 dropped (quote not in sentence)
-tagged 28 sentences in 2 chunks: 15 labels kept, 4 dropped (quote not in sentence)
-tagged 34 sentences in 2 chunks: 9 labels kept, 1 dropped (quote not in sentence)
-round 1: 7 deciding labels to check, 7 checked, 4 rejected
+keyword {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.562, 'line_acc': 0.547, 'investigator_first_called_suspect_first': 3, 'confusion': {'suspect->never': 15, 'never->never': 27, 'interrogator->never': 58, 'interrogator->interrogator': 45, 'suspect->suspect': 42, 'suspect->interrogator': 6, 'never->interrogator': 7, 'interrogator->suspect': 3}} {'seconds': 0.1, 'cost_usd': 0, 'calls': 0}
+one_prompt {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.818, 'line_acc': 0.749, 'investigator_first_called_suspect_first': 1, 'confusion': {'suspect->suspect': 53, 'never->never': 22, 'interrogator->interrogator': 91, 'interrogator->never': 14, 'suspect->never': 3, 'suspect->interrogator': 7, 'never->interrogator': 11, 'interrogator->suspect': 1, 'never->suspect': 1}} {'seconds': 85.1, 'cost_usd': 0.2671, 'calls': 29}
+tagged 30 sentences in 2 chunks: 27 labels kept, 1 dropped (quote not in sentence)
+tagged 31 sentences in 2 chunks: 28 labels kept, 5 dropped (quote not in sentence)
+tagged 34 sentences in 2 chunks: 39 labels kept, 1 dropped (quote not in sentence)
+tagged 28 sentences in 2 chunks: 28 labels kept, 1 dropped (quote not in sentence)
+round 1: 10 deciding labels to check, 5 checked, 0 rejected
+round 2: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6020 chars): '{   "checks": [     {       "key": "X016-001|F1",       "carries_detail": true,       "kin' ... '1|F1",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6020 chars): '{   "checks": [     {       "key": "X018-001",       "carries_detail": true,       "kind":' ... '-001",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6020 chars): '{   "checks": [     {       "key": "X018-012",       "carries_detail": true,       "kind":' ... '-012",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6016 chars): '{   "checks": [     {       "key": "X007-001|F1",       "carries_detail": true,       "kin' ... '1|F1",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6030 chars): '{   "checks": [     {       "key": "DET (interrogator)",       "carries_detail": true,    ' ... 'tor)",       "carries_detail": true,       "kind": "asserts"'
+round 1: 15 deciding labels to check, 15 checked, 1 rejected
 round 2: 1 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 1 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6021 chars): '{   "checks": [     {       "key": "X008-001|F2",       "carries_detail": false,       "ki' ... '001|F2",       "carries_detail": false,       "kind": "asks"'
+safety search: 9 earlier investigator lines checked, 5 answered, 1 carry the detail
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 4 earlier investigator lines checked, 4 answered, 0 carry the detail
+round 1: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 33 sentences in 2 chunks: 30 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12020 chars): '{   "checks": [     {       "key": "X018-012",       "carries_detail": true,       "kind":' ... '-012",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12020 chars): '{   "checks": [     {       "key": "X018-001",       "carries_detail": true,       "kind":' ... '-001",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12030 chars): '{   "checks": [     {       "key": "DET (interrogator)",       "carries_detail": true,    ' ... 'tor)",       "carries_detail": true,       "kind": "asserts"'
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 11 deciding labels to check, 10 checked, 2 rejected
+round 2: 3 deciding labels to check, 3 checked, 1 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12021 chars): '{   "checks": [     {       "key": "X008-001|F2",       "carries_detail": false,       "ki' ... '001|F2",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X019-006|F3",       "carries_detail": true,       "kin' ... '6|F3",       "carries_detail": true,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X018-012|F6",       "carries_detail": true,       "kin' ... '2|F6",       "carries_detail": true,       "kind": "asserts"'
+round 1: 11 deciding labels to check, 10 checked, 1 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X018-001",       "carries_detail": true,       "kind":' ... '-001",       "carries_detail": true,       "kind": "asserts"'
+round 2: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "X016-001|F2",       "carries_detail": false,       "ki' ... '001|F2",       "carries_detail": false,       "kind": "asks"'
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6010 chars): '{   "checks": [     {       "key": "X008-003|F4",       "carries_detail": false,       "ki' ... '003|F4",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X018-002|F1",       "carries_detail": true,       "kin' ... '2|F1",       "carries_detail": true,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "X019-003|F3",       "carries_detail": false,       "ki' ... '|F3",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6021 chars): '{   "checks": [     {       "key": "X016-001|F2",       "carries_detail": false,       "ki' ... '001|F2",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12037 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'eyed",       "carries_detail": true,       "kind": "asserts"'
+  verifier failed on X018-012|F6: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X018-004|F2",       "carries_detail": true,       "kin' ... '4|F2",       "carries_detail": true,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12010 chars): '{   "checks": [     {       "key": "X008-003|F4",       "carries_detail": false,       "ki' ... '003|F4",       "carries_detail": false,       "kind": "asks"'
+  verifier failed on X008-003|F4: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6040 chars): '{   "checks": [     {       "key": "store manager\'s keycard used at 8:13 PM",       "carri' ... '3 PM",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "X019-003|F3",       "carries_detail": false,       "ki' ... '|F3",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12021 chars): '{   "checks": [     {       "key": "X016-001|F2",       "carries_detail": false,       "ki' ... '001|F2",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X008-005|F4",       "carries_detail": false,       "ki' ... '005|F4",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3062 chars): '{   "checks": [     {       "key": "X019-001",       "carries_detail": false,       "kind"' ... '001",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12012 chars): '{   "checks": [     {       "key": "X018-004|F2",       "carries_detail": true,       "kin' ... '4|F2",       "carries_detail": true,       "kind": "assents"'
+  verifier failed on X018-004|F2: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 13 deciding labels to check, 6 checked, 1 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3062 chars): '{   "checks": [     {       "key": "X016-009",       "carries_detail": false,       "kind"' ... '16-009",       "carries_detail": false,       "kind": "asks"'
+round 2: 8 deciding labels to check, 3 checked, 0 rejected
+safety search: 4 earlier investigator lines checked, 2 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 3: 5 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+5 deciding line(s) not re-checked
+safety search: 7 earlier investigator lines checked, 7 answered, 3 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "X008-005|F4",       "carries_detail": false,       "ki' ... '005|F4",       "carries_detail": false,       "kind": "asks"'
+  verifier failed on X008-005|F4: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+tagged 29 sentences in 2 chunks: 25 labels kept, 2 dropped (quote not in sentence)
+round 1: 4 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+4 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "X019-001|F4",       "carries_detail": false,       "ki' ... '|F4",       "carries_detail": false,       "kind": "asserts"'
+  verifier failed on X019-001|F4: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3063 chars): '{   "checks": [     {       "key": "DET",       "carries_detail": false,       "kind": "as' ... 'DET",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6037 chars): '{   "checks": [     {       "key": "blood on steering wheel",       "carries_detail": fals' ... ' wheel",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3062 chars): '{   "checks": [     {       "key": "X019-005",       "carries_detail": false,       "kind"' ... '005",       "carries_detail": false,       "kind": "asserts"'
+tagged 46 sentences in 3 chunks: 40 labels kept, 0 dropped (quote not in sentence)
 round 1: 10 deciding labels to check, 10 checked, 3 rejected
-tagged 33 sentences in 2 chunks: 9 labels kept, 3 dropped (quote not in sentence)
-round 1: 5 deciding labels to check, 5 checked, 1 rejected
+round 2: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6063 chars): '{   "checks": [     {       "key": "DET",       "carries_detail": false,       "kind": "as' ... 'DET",       "carries_detail": false,       "kind": "asserts"'
+  verifier failed on X008-011|F6: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12029 chars): '{   "checks": [     {       "key": "DET (interrogator)",       "carries_detail": false,   ' ... 'gator)",       "carries_detail": false,       "kind": "asks"'
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 11 deciding labels to check, 10 checked, 3 rejected
+safety search: 4 earlier investigator lines checked, 4 answered, 1 carry the detail
+verification done after 0 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6018 chars): '{   "checks": [     {       "key": "X001-001",       "carries_detail": false,       "kind"' ... '01-001",       "carries_detail": false,       "kind": "asks"'
+round 2: 2 deciding labels to check, 2 checked, 0 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6062 chars): '{   "checks": [     {       "key": "X019-005",       "carries_detail": false,       "kind"' ... '005",       "carries_detail": false,       "kind": "asserts"'
+  verifier failed on X019-005|F4: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+tagged 44 sentences in 3 chunks: 43 labels kept, 1 dropped (quote not in sentence)
+round 1: 14 deciding labels to check, 14 checked, 4 rejected
+round 2: 4 deciding labels to check, 4 checked, 2 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6019 chars): '{   "checks": [     {       "key": "X020-001",       "carries_detail": false,       "kind"' ... '20-001",       "carries_detail": false,       "kind": "asks"'
+safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "X019-005|F5",       "carries_detail": false,       "ki' ... '|F5",       "carries_detail": false,       "kind": "asserts"'
+tagged 29 sentences in 2 chunks: 22 labels kept, 0 dropped (quote not in sentence)
+tagged 48 sentences in 3 chunks: 46 labels kept, 0 dropped (quote not in sentence)
+round 1: 9 deciding labels to check, 9 checked, 1 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12018 chars): '{   "checks": [     {       "key": "X001-001",       "carries_detail": false,       "kind"' ... '01-001",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 12 deciding labels to check, 12 checked, 2 rejected
+verification done after 1 round(s)
+tagged 32 sentences in 2 chunks: 22 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 10 checked, 3 rejected
+round 2: 2 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+2 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X007-020|F3",       "carries_detail": true,       "kin' ... '0|F3",       "carries_detail": true,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6018 chars): '{   "checks": [     {       "key": "X001-001",       "carries_detail": false,       "kind"' ... '01-001",       "carries_detail": false,       "kind": "asks"'
+safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6061 chars): '{   "checks": [     {       "key": "X019-005",       "carries_detail": false,       "kind"' ... '005",       "carries_detail": false,       "kind": "asserts"'
+  verifier failed on X019-005|F5: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 5 earlier investigator lines checked, 2 answered, 0 carry the detail
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+tagged 43 sentences in 3 chunks: 45 labels kept, 1 dropped (quote not in sentence)
+round 1: 13 deciding labels to check, 13 checked, 0 rejected
+tagged 32 sentences in 2 chunks: 28 labels kept, 2 dropped (quote not in sentence)
+round 1: 10 deciding labels to check, 10 checked, 3 rejected
 round 2: 1 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 1 deciding line(s) not re-checked
-round 1: 11 deciding labels to check, 11 checked, 1 rejected
-verification done after 1 round(s)
-tagged 29 sentences in 2 chunks: 3 labels kept, 2 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X007-020|F3",       "carries_detail": true,       "kin' ... '0|F3",       "carries_detail": true,       "kind": "assents"'
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12018 chars): '{   "checks": [     {       "key": "X001-001",       "carries_detail": false,       "kind"' ... '01-001",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3061 chars): '{   "checks": [     {       "key": "X012-022|F3",       "carries_detail": false,       "ki' ... '|F3",       "carries_detail": false,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "X014-009|F4",       "carries_detail": false,       "ki' ... '|F4",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6014 chars): '{   "checks": [     {       "key": "X007-005|F1",       "carries_detail": false,       "ki' ... '005|F1",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X001-001",       "carries_detail": false,       "kind"' ... '01-001",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6061 chars): '{   "checks": [     {       "key": "X012-022|F3",       "carries_detail": false,       "ki' ... '|F3",       "carries_detail": false,       "kind": "assents"'
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 3 earlier investigator lines checked, 3 answered, 1 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "X014-009|F4",       "carries_detail": false,       "ki' ... '|F4",       "carries_detail": false,       "kind": "asserts"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X007-005|F1",       "carries_detail": false,       "ki' ... '005|F1",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X001-001",       "carries_detail": false,       "kind"' ... '01-001",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3068 chars): '{   "checks": [     {       "key": "ski mask",       "carries_detail": false,       "kind"' ... 'ask",       "carries_detail": false,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6016 chars): '{   "checks": [     {       "key": "X014-009|F4",       "carries_detail": false,       "ki' ... '|F4",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X007-005|F1",       "carries_detail": false,       "ki' ... '005|F1",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11953 chars): '{   "utterances": [     {       "id": "X015-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+tagged 48 sentences in 3 chunks: 38 labels kept, 1 dropped (quote not in sentence)
+round 1: 15 deciding labels to check, 10 checked, 1 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "X014-009|F4",       "carries_detail": false,       "ki' ... '|F4",       "carries_detail": false,       "kind": "asserts"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6061 chars): '{   "checks": [     {       "key": "X012-022",       "carries_detail": false,       "kind"' ... '022",       "carries_detail": false,       "kind": "assents"'
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 2: 5 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+5 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X007-005|F1",       "carries_detail": false,       "ki' ... '005|F1",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 38 sentences in 3 chunks: 30 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6016 chars): '{   "checks": [     {       "key": "X014-009|F4",       "carries_detail": false,       "ki' ... '|F4",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6014 chars): '{   "checks": [     {       "key": "X015-029|F7",       "carries_detail": false,       "ki' ... '029|F7",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6017 chars): '{   "checks": [     {       "key": "X015-001|F1",       "carries_detail": false,       "ki' ... '001|F1",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X007-005|F1",       "carries_detail": false,       "ki' ... '005|F1",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X017-013|F7",       "carries_detail": true,       "kin' ... '3|F7",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "X014-009|F4",       "carries_detail": false,       "ki' ... '|F4",       "carries_detail": false,       "kind": "asserts"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X015-029|F7",       "carries_detail": false,       "ki' ... '029|F7",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 6 earlier investigator lines checked, 5 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X007-005|F1",       "carries_detail": false,       "ki' ... '005|F1",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 43 sentences in 3 chunks: 17 labels kept, 17 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12016 chars): '{   "checks": [     {       "key": "X017-013|F7",       "carries_detail": true,       "kin' ... '3|F7",       "carries_detail": true,       "kind": "asserts"'
 round 1: 6 deciding labels to check, 6 checked, 0 rejected
 verification done after 1 round(s)
-round 2: 1 deciding labels to check, 1 checked, 1 rejected
+tagged 55 sentences in 4 chunks: 30 labels kept, 1 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
+round 1: 15 deciding labels to check, 15 checked, 0 rejected
+verification done after 1 round(s)
+tagged 37 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+safety search: 11 earlier investigator lines checked, 10 answered, 1 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+verification done after 0 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X017-015|F3",       "carries_detail": true,       "kin' ... '5|F3",       "carries_detail": true,       "kind": "asserts"'
+tagged 38 sentences in 3 chunks: 24 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X020-003|F2",       "carries_detail": true,       "kin' ... '3|F2",       "carries_detail": true,       "kind": "asserts"'
+round 1: 10 deciding labels to check, 10 checked, 0 rejected
+verification done after 1 round(s)
+safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X015-029|F7",       "carries_detail": false,       "ki' ... '029|F7",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X017-016|F3",       "carries_detail": true,       "kin' ... '6|F3",       "carries_detail": true,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11987 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6014 chars): '{   "checks": [     {       "key": "X015-029|F7",       "carries_detail": false,       "ki' ... '029|F7",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12012 chars): '{   "checks": [     {       "key": "X020-003|F2",       "carries_detail": true,       "kin' ... '3|F2",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X017-016|F3",       "carries_detail": true,       "kin' ... '6|F3",       "carries_detail": true,       "kind": "assents"'
+  verifier failed on X017-016|F3: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12014 chars): '{   "checks": [     {       "key": "X015-029|F7",       "carries_detail": false,       "ki' ... '029|F7",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 24 sentences in 2 chunks: 22 labels kept, 0 dropped (quote not in sentence)
+round 1: 15 deciding labels to check, 10 checked, 0 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23987 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X020-009|F4",       "carries_detail": true,       "kin' ... '-009|F4",       "carries_detail": true,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6015 chars): '{   "checks": [     {       "key": "X017-019",       "carries_detail": false,       "kind"' ... '17-019",       "carries_detail": false,       "kind": "asks"'
+round 2: 5 deciding labels to check, 5 checked, 0 rejected
 verification done after 2 round(s)
+tagged 40 sentences in 3 chunks: 30 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12039 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
+  verifier failed on X020-009|F4: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 9 deciding labels to check, 9 checked, 0 rejected
+verification done after 1 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6021 chars): '{   "checks": [     {       "key": "X025-015|F7",       "carries_detail": false,       "ki' ... '|F7",       "carries_detail": false,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X020-012|F4",       "carries_detail": true,       "kin' ... '2|F4",       "carries_detail": true,       "kind": "assents"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X022-013|F3",       "carries_detail": true,       "kin' ... '3|F3",       "carries_detail": true,       "kind": "asserts"'
+safety search: 3 earlier investigator lines checked, 3 answered, 1 carry the detail
+verification done after 0 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "X017-019",       "carries_detail": false,       "kind"' ... '17-019",       "carries_detail": false,       "kind": "asks"'
+  verifier failed on X017-019|F5: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 14 deciding labels to check, 10 checked, 0 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12017 chars): '{   "checks": [     {       "key": "X025-015|F7",       "carries_detail": false,       "ki' ... '|F7",       "carries_detail": false,       "kind": "asserts"'
+tagged 36 sentences in 2 chunks: 20 labels kept, 0 dropped (quote not in sentence)
+round 2: 4 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+4 deciding line(s) not re-checked
+round 1: 12 deciding labels to check, 12 checked, 0 rejected
+verification done after 1 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12012 chars): '{   "checks": [     {       "key": "X020-012|F4",       "carries_detail": true,       "kin' ... '2|F4",       "carries_detail": true,       "kind": "assents"'
+  verifier failed on X020-012|F4: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "X025-015|F7",       "carries_detail": false,       "ki' ... '|F7",       "carries_detail": false,       "kind": "asserts"'
+tagged 47 sentences in 3 chunks: 37 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "X017-009|F6",       "carries_detail": false,       "ki' ... '009|F6",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X020-013|F3",       "carries_detail": true,       "kin' ... '-013|F3",       "carries_detail": true,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X028-028|F7",       "carries_detail": true,       "kin' ... '-028|F7",       "carries_detail": true,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X028-004|F1",       "carries_detail": true,       "kin' ... '-004|F1",       "carries_detail": true,       "kind": "asks"'
+round 1: 12 deciding labels to check, 12 checked, 0 rejected
+verification done after 1 round(s)
+safety search: 8 earlier investigator lines checked, 8 answered, 1 carry the detail
+verification done after 0 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12013 chars): '{   "checks": [     {       "key": "X025-015|F7",       "carries_detail": false,       "ki' ... '|F7",       "carries_detail": false,       "kind": "asserts"'
+  verifier failed on X025-015|F7: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+tagged 36 sentences in 2 chunks: 27 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X017-009|F6",       "carries_detail": false,       "ki' ... '009|F6",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 6 earlier investigator lines checked, 5 answered, 1 carry the detail
+round 1: 12 deciding labels to check, 12 checked, 2 rejected
+verification done after 1 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6059 chars): '{   "checks": [     {       "key": "X020-013|F3",       "carries_detail": false,       "ki' ... '013|F3",       "carries_detail": false,       "kind": "asks"'
+  verifier failed on X020-013|F3: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 15 deciding labels to check, 12 checked, 1 rejected
+safety search: 9 earlier investigator lines checked, 9 answered, 0 carry the detail
+round 2: 4 deciding labels to check, 4 checked, 0 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X025-017|F8",       "carries_detail": false,       "ki' ... '017|F8",       "carries_detail": false,       "kind": "asks"'
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+tagged 48 sentences in 3 chunks: 30 labels kept, 7 dropped (quote not in sentence)
+round 1: 11 deciding labels to check, 11 checked, 3 rejected
+tagged 36 sentences in 2 chunks: 31 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "X017-009|F6",       "carries_detail": false,       "ki' ... '009|F6",       "carries_detail": false,       "kind": "asks"'
+round 2: 3 deciding labels to check, 3 checked, 2 rejected
+round 1: 13 deciding labels to check, 13 checked, 1 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6012 chars): '{   "checks": [     {       "key": "X036-033|F3",       "carries_detail": true,       "kin' ... '3|F3",       "carries_detail": true,       "kind": "asserts"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X025-017|F8",       "carries_detail": false,       "ki' ... '017|F8",       "carries_detail": false,       "kind": "asks"'
+  verifier failed on X025-017|F8: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X017-009|F6",       "carries_detail": false,       "ki' ... '009|F6",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (3060 chars): '{   "checks": [     {       "key": "X025-019|F8",       "carries_detail": false,       "ki' ... '019|F8",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6013 chars): '{   "checks": [     {       "key": "X017-009|F6",       "carries_detail": false,       "ki' ... '009|F6",       "carries_detail": false,       "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6081 chars): '{   "checks": [     {       "key": "distinctive_content_conveyed",       "carries_detail":' ... 'nveyed",       "carries_detail": false,       "kind": "asks"'
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12015 chars): '{   "checks": [     {       "key": "X036-033|F3",       "carries_detail": true,       "kin' ... '3|F3",       "carries_detail": true,       "kind": "asserts"'
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 7 earlier investigator lines checked, 7 answered, 0 carry the detail
+tagged 44 sentences in 3 chunks: 34 labels kept, 0 dropped (quote not in sentence)
+tagged 35 sentences in 2 chunks: 32 labels kept, 0 dropped (quote not in sentence)
+round 1: 10 deciding labels to check, 10 checked, 2 rejected
+round 2: 2 deciding labels to check, 2 checked, 0 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6060 chars): '{   "checks": [     {       "key": "X025-019|F8",       "carries_detail": false,       "ki' ... '019|F8",       "carries_detail": false,       "kind": "asks"'
+  verifier failed on X025-019|F8: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 13 earlier investigator lines checked, 10 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6020 chars): '{   "checks": [     {       "key": "X037-001|F8",       "carries_detail": true,       "kin' ... '1|F8",       "carries_detail": true,       "kind": "asserts"'
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+verification done after 1 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (12014 chars): '{   "checks": [     {       "key": "X017-009|F6",       "carries_detail": false,       "ki' ... '009|F6",       "carries_detail": false,       "kind": "asks"'
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
 round 1: 3 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 3 deciding line(s) not re-checked
-provenance {'n_facts': 39, 'failed_interrogations': 0, 'speaker_acc': 0.436, 'line_acc': 0.385, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->suspect': 8, 'never->never': 5, 'interrogator->never': 17, 'interrogator->interrogator': 4, 'suspect->never': 5}} {'seconds': 117.2, 'cost_usd': 0.2885, 'calls': 29}
+tagged 47 sentences in 3 chunks: 35 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6021 chars): '{   "checks": [     {       "key": "X025-015|F7",       "carries_detail": false,       "ki' ... '|F7",       "carries_detail": false,       "kind": "asserts"'
+round 1: 9 deciding labels to check, 9 checked, 0 rejected
+verification done after 1 round(s)
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+provenance {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.734, 'line_acc': 0.69, 'investigator_first_called_suspect_first': 1, 'confusion': {'suspect->suspect': 43, 'never->never': 34, 'interrogator->interrogator': 72, 'interrogator->never': 33, 'suspect->interrogator': 11, 'suspect->never': 9, 'interrogator->suspect': 1}} {'seconds': 343.4, 'cost_usd': 1.9795, 'calls': 339}
 # Provenance benchmark
 
-6 synthetic interrogations written by Qwen/Qwen3-30B-A3B-Instruct-2507 (a different model family), 39 details with known first speakers.
+29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers.
 
 | Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
 |---|---|---|---|---|---|
-| Keyword match (no model) | 59% | 54% | 0 | 0.0 s | $0.000 |
-| Nemotron 3 Ultra, one prompt per interview | 13% | 13% | 0 | 32.0 s | $0.062 |
-| Provenance: Lightning labels + code ledger + Ultra check | 44% | 38% | 0 | 117.2 s | $0.288 |
+| Keyword match (no model) | 56% | 55% | 3 | 0.1 s | $0.000 |
+| Nemotron 3 Ultra, one prompt per interview | 82% | 75% | 1 | 85.1 s | $0.267 |
+| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 73% | 69% | 1 | 343.4 s | $1.980 |

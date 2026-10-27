@@ -1,122 +1,141 @@
 {
- "n_interrogations": 6,
- "generator": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+ "split": "test",
+ "n_interrogations": 29,
+ "generator": "Qwen/Qwen3-30B-A3B-Instruct-2507, zai-org/GLM-5.2",
  "results": {
   "keyword": {
-   "n_facts": 39,
+   "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.59,
-   "line_acc": 0.538,
-   "investigator_first_called_suspect_first": 0,
+   "speaker_acc": 0.562,
+   "line_acc": 0.547,
+   "investigator_first_called_suspect_first": 3,
    "confusion": {
-    "suspect->never": 3,
-    "never->never": 4,
-    "interrogator->never": 10,
-    "interrogator->interrogator": 11,
-    "suspect->suspect": 8,
-    "suspect->interrogator": 2,
-    "never->interrogator": 1
+    "suspect->never": 15,
+    "never->never": 27,
+    "interrogator->never": 58,
+    "interrogator->interrogator": 45,
+    "suspect->suspect": 42,
+    "suspect->interrogator": 6,
+    "never->interrogator": 7,
+    "interrogator->suspect": 3
    }
   },
   "one_prompt": {
-   "n_facts": 39,
+   "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.128,
-   "line_acc": 0.128,
-   "investigator_first_called_suspect_first": 0,
+   "speaker_acc": 0.818,
+   "line_acc": 0.749,
+   "investigator_first_called_suspect_first": 1,
    "confusion": {
-    "suspect->never": 13,
-    "never->never": 5,
-    "interrogator->never": 21
+    "suspect->suspect": 53,
+    "never->never": 22,
+    "interrogator->interrogator": 91,
+    "interrogator->never": 14,
+    "suspect->never": 3,
+    "suspect->interrogator": 7,
+    "never->interrogator": 11,
+    "interrogator->suspect": 1,
+    "never->suspect": 1
    }
   },
   "provenance": {
-   "n_facts": 39,
+   "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.436,
-   "line_acc": 0.385,
-   "investigator_first_called_suspect_first": 0,
+   "speaker_acc": 0.734,
+   "line_acc": 0.69,
+   "investigator_first_called_suspect_first": 1,
    "confusion": {
-    "suspect->suspect": 8,
-    "never->never": 5,
-    "interrogator->never": 17,
-    "interrogator->interrogator": 4,
-    "suspect->never": 5
+    "suspect->suspect": 43,
+    "never->never": 34,
+    "interrogator->interrogator": 72,
+    "interrogator->never": 33,
+    "suspect->interrogator": 11,
+    "suspect->never": 9,
+    "interrogator->suspect": 1
    }
   }
  },
  "costs": {
   "keyword": {
-   "seconds": 0.0,
+   "seconds": 0.1,
    "cost_usd": 0,
    "calls": 0
   },
   "one_prompt": {
-   "seconds": 32.0,
-   "cost_usd": 0.0617,
-   "calls": 7
+   "seconds": 85.1,
+   "cost_usd": 0.2671,
+   "calls": 29
   },
   "provenance": {
-   "seconds": 117.2,
-   "cost_usd": 0.2885,
-   "calls": 29
+   "seconds": 343.4,
+   "cost_usd": 1.9795,
+   "calls": 339
   }
  },
  "rows": [
   {
    "method": "Keyword match (no model)",
-   "n_facts": 39,
+   "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.59,
-   "line_acc": 0.538,
-   "investigator_first_called_suspect_first": 0,
+   "speaker_acc": 0.562,
+   "line_acc": 0.547,
+   "investigator_first_called_suspect_first": 3,
    "confusion": {
-    "suspect->never": 3,
-    "never->never": 4,
-    "interrogator->never": 10,
-    "interrogator->interrogator": 11,
-    "suspect->suspect": 8,
-    "suspect->interrogator": 2,
-    "never->interrogator": 1
+    "suspect->never": 15,
+    "never->never": 27,
+    "interrogator->never": 58,
+    "interrogator->interrogator": 45,
+    "suspect->suspect": 42,
+    "suspect->interrogator": 6,
+    "never->interrogator": 7,
+    "interrogator->suspect": 3
    },
-   "seconds": 0.0,
+   "seconds": 0.1,
    "cost_usd": 0,
    "calls": 0
   },
   {
    "method": "Nemotron 3 Ultra, one prompt per interview",
-   "n_facts": 39,
+   "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.128,
-   "line_acc": 0.128,
-   "investigator_first_called_suspect_first": 0,
+   "speaker_acc": 0.818,
+   "line_acc": 0.749,
+   "investigator_first_called_suspect_first": 1,
    "confusion": {
-    "suspect->never": 13,
-    "never->never": 5,
-    "interrogator->never": 21
+    "suspect->suspect": 53,
+    "never->never": 22,
+    "interrogator->interrogator": 91,
+    "interrogator->never": 14,
+    "suspect->never": 3,
+    "suspect->interrogator": 7,
+    "never->interrogator": 11,
+    "interrogator->suspect": 1,
+    "never->suspect": 1
    },
-   "seconds": 32.0,
-   "cost_usd": 0.0617,
-   "calls": 7
+   "seconds": 85.1,
+   "cost_usd": 0.2671,
+   "calls": 29
   },
   {
-   "method": "Provenance: Lightning labels + code ledger + Ultra check",
-   "n_facts": 39,
+   "method": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
+   "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.436,
-   "line_acc": 0.385,
-   "investigator_first_called_suspect_first": 0,
+   "speaker_acc": 0.734,
+   "line_acc": 0.69,
+   "investigator_first_called_suspect_first": 1,
    "confusion": {
-    "suspect->suspect": 8,
-    "never->never": 5,
-    "interrogator->never": 17,
-    "interrogator->interrogator": 4,
-    "suspect->never": 5
+    "suspect->suspect": 43,
+    "never->never": 34,
+    "interrogator->interrogator": 72,
+    "interrogator->never": 33,
+    "suspect->interrogator": 11,
+    "suspect->never": 9,
+    "interrogator->suspect": 1
    },
-   "seconds": 117.2,
-   "cost_usd": 0.2885,
-   "calls": 29
+   "seconds": 343.4,
+   "cost_usd": 1.9795,
+   "calls": 339
   }
  ],
- "note": "6 synthetic interrogations written by Qwen/Qwen3-30B-A3B-Instruct-2507 (a different model family), 39 details with known first speakers."
+ "note": "29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers."
 }
