@@ -12637,7 +12637,7 @@
   "role": "suspect",
   "text": "So we took her out in the back and put her in the fire pit.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-0578",
@@ -13427,7 +13427,7 @@
   "role": "suspect",
   "text": "That he ripped off her clothes and she refused and she tried to get away but he, he wa, he was too strong for her (pause) and he did it.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-0657",
@@ -19887,7 +19887,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d)",
   "page": "fassbender",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1303",
@@ -30667,7 +30667,7 @@
   "role": "suspect",
   "text": "I don\u2019t know.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2381",
@@ -30687,7 +30687,7 @@
   "role": "suspect",
   "text": "(shakes head \u201cno\u201d) No.",
   "page": "brendan",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2383",
@@ -35517,7 +35517,7 @@
   "role": "interrogator",
   "text": "OK. (pause) We know that Teresa had a, a tattoo on her stomach, do you remember that?",
   "page": "fassbender",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2866",
@@ -42567,7 +42567,7 @@
   "role": "suspect",
   "text": "In the chest.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0425",
@@ -42607,7 +42607,7 @@
   "role": "suspect",
   "text": "Like three inches.",
   "page": "brendan",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0429",

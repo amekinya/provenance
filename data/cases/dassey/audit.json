@@ -45,10 +45,10 @@
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"
   }
  ],
- "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 11 details came from him first in the record.",
+ "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 13 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 6 details came from him first in the record.",
  "counts": {
-  "interrogator_first": 8,
-  "suspect_first": 11,
+  "interrogator_first": 13,
+  "suspect_first": 6,
   "prior_contact": 1,
   "public": 4,
   "planted_adopted": 0,
@@ -146,7 +146,7 @@
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "asserts",
+     "kind": "asks",
      "quote": "her car was over there",
      "sensitive": false,
      "verified": null
@@ -159,7 +159,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "her jeep there",
+     "quote": "her jeep there and I walked in the house",
      "sensitive": false,
      "verified": null
     },
@@ -170,32 +170,20 @@
      "page": "wiegert",
      "role": "interrogator",
      "speaker": "WIEGERT",
-     "kind": "asserts",
+     "kind": "asks",
      "quote": "she is Teresa",
      "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S2-0478",
-     "seq": 400477,
+     "utterance": "S2-0289",
+     "seq": 400288,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "I don't know",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0479",
-     "seq": 400478,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Did you help him?",
+     "kind": "assents",
+     "quote": "Uh huh.",
      "sensitive": false,
      "verified": null
     },
@@ -207,7 +195,7 @@
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asserts",
-     "quote": "the garage door is open, her truck is in the garage",
+     "quote": "her truck is in the garage",
      "sensitive": false,
      "verified": null
     },
@@ -248,6 +236,66 @@
      "verified": null
     },
     {
+     "utterance": "S2-1475",
+     "seq": 401474,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1621",
+     "seq": 401620,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He left it in the jeep.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1623",
+     "seq": 401622,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He left it in the jeep.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1627",
+     "seq": 401626,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Yeah, cuz he set it on the floor.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1629",
+     "seq": 401628,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "In the middle of the seats.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S2-1730",
      "seq": 401729,
      "session": "S2",
@@ -272,26 +320,38 @@
      "verified": null
     },
     {
-     "utterance": "S2-2286",
-     "seq": 402285,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Just the forehead and the hands and the feet and a little bit of belly.",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0748",
-     "seq": 500747,
+     "utterance": "S3-0344",
+     "seq": 500343,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "Teresa",
+     "quote": "It was backed into the garage.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0449",
+     "seq": 500448,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "What jeep?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0450",
+     "seq": 500449,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Hers.",
      "sensitive": false,
      "verified": null
     },
@@ -304,6 +364,78 @@
      "speaker": "WIEGERT",
      "kind": "asks",
      "quote": "What about the truck? Her jeep?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1004",
+     "seq": 501003,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He said that he would take care of it.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1293",
+     "seq": 501292,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "What was Steve gonna do with her jeep?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1294",
+     "seq": 501293,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Crush it.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1295",
+     "seq": 501294,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "When was he gonna do that?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1296",
+     "seq": 501295,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He said he'll smash it faster a day that he can do it.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1391",
+     "seq": 501390,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Did you ride down in her jeep to that pit?",
      "sensitive": false,
      "verified": null
     }
@@ -320,21 +452,21 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Feb 27, 2006, Mishicot High School, p. brendan), and nothing earlier in the transcripts supplies it.",
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. wiegert); the suspect first adopted it after that (Feb 27, 2006, Mishicot High School, p. brendan).",
    "first_interrogator": {
-    "utterance": "S2-0425",
-    "seq": 400424,
-    "session": "S2",
-    "page": "fassbender",
+    "utterance": "S1-0316",
+    "seq": 100315,
+    "session": "S1",
+    "page": "wiegert",
     "role": "interrogator",
-    "speaker": "FASSBENDER",
+    "speaker": "WIEGERT",
     "kind": "asks",
-    "quote": "What did you see and what did he tell you?",
-    "sensitive": false,
-    "verified": null,
+    "quote": "Where's the knife that he used to stab her?",
+    "sensitive": true,
+    "verified": true,
     "first": "interrogator"
    },
    "first_suspect": {
@@ -350,10 +482,23 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 0,
+   "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
+    {
+     "utterance": "S1-0316",
+     "seq": 100315,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Where's the knife that he used to stab her?",
+     "sensitive": true,
+     "verified": true,
+     "first": "interrogator"
+    },
     {
      "utterance": "S1-0317",
      "seq": 100316,
@@ -368,19 +513,6 @@
      "first": "suspect"
     },
     {
-     "utterance": "S2-0425",
-     "seq": 400424,
-     "session": "S2",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "What did you see and what did he tell you?",
-     "sensitive": false,
-     "verified": null,
-     "first": "interrogator"
-    },
-    {
      "utterance": "S2-0426",
      "seq": 400425,
      "session": "S2",
@@ -393,26 +525,26 @@
      "verified": null
     },
     {
-     "utterance": "S2-0431",
-     "seq": 400430,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Was she alive or dead at that time?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0432",
-     "seq": 400431,
+     "utterance": "S2-0480",
+     "seq": 400479,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Dead",
+     "kind": "denies",
+     "quote": "No",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-0482",
+     "seq": 400481,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "(shakes head \"no\")",
      "sensitive": false,
      "verified": null
     },
@@ -437,19 +569,19 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "Ripped off her clothes and she refused and she tried to get away but he, he wa, he was too strong for her (pause) and he did it.",
-     "sensitive": true,
+     "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S2-1142",
-     "seq": 401141,
+     "utterance": "S2-0658",
+     "seq": 400657,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah.",
-     "sensitive": false,
+     "kind": "asserts",
+     "quote": "Raped her",
+     "sensitive": true,
      "verified": null
     },
     {
@@ -486,7 +618,7 @@
      "kind": "asks",
      "quote": "Which knife did you use?",
      "sensitive": false,
-     "verified": null
+     "verified": true
     },
     {
      "utterance": "S2-1222",
@@ -525,38 +657,26 @@
      "verified": null
     },
     {
-     "utterance": "S2-2239",
-     "seq": 402238,
-     "session": "S2",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Where'd that stuff come from?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-2240",
-     "seq": 402239,
+     "utterance": "S2-2039",
+     "seq": 402038,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "He had it there already.",
+     "quote": "He asked me if I wanted ta fuck the girl and if I wanted to try it.",
      "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S2-2241",
-     "seq": 402240,
+     "utterance": "S2-2052",
+     "seq": 402051,
      "session": "S2",
      "page": "fassbender",
      "role": "interrogator",
      "speaker": "FASSBENDER",
-     "kind": "asserts",
-     "quote": "He did.",
+     "kind": "asks",
+     "quote": "What did he say he did to her?",
      "sensitive": false,
      "verified": null
     },
@@ -657,18 +777,6 @@
      "verified": null
     },
     {
-     "utterance": "S3-0365",
-     "seq": 500364,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Where does he get this knife that he stabs her with? Truthfully.",
-     "sensitive": true,
-     "verified": null
-    },
-    {
      "utterance": "S3-0366",
      "seq": 500365,
      "session": "S3",
@@ -681,26 +789,26 @@
      "verified": null
     },
     {
-     "utterance": "S3-0367",
-     "seq": 500366,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asserts",
-     "quote": "You remember the drawing you made of that knife?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0368",
-     "seq": 500367,
+     "utterance": "S3-0395",
+     "seq": 500394,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Mm hum.",
+     "kind": "asserts",
+     "quote": "He tells me ta, ta stab her and",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0396",
+     "seq": 500395,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "So how do you get the knife?",
      "sensitive": false,
      "verified": null
     },
@@ -753,6 +861,18 @@
      "verified": null
     },
     {
+     "utterance": "S3-0425",
+     "seq": 500424,
+     "session": "S3",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "Did he tell you where ta stab her?",
+     "sensitive": true,
+     "verified": null
+    },
+    {
      "utterance": "S3-0427",
      "seq": 500426,
      "session": "S3",
@@ -765,6 +885,18 @@
      "verified": null
     },
     {
+     "utterance": "S3-0437",
+     "seq": 500436,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Did you leave the knife in or did you pull the knife out or what?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S3-0438",
      "seq": 500437,
      "session": "S3",
@@ -772,7 +904,79 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "the knife",
+     "quote": "I pulled the knife out.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0441",
+     "seq": 500440,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "I gave it back to him.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0442",
+     "seq": 500441,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "And then what happened to the knife?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0443",
+     "seq": 500442,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He set it on the floor.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0444",
+     "seq": 500443,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Where is that knife now? Oh, you know. Just tell us where the knife is.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0446",
+     "seq": 500445,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "What did you guys do with the knife?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0447",
+     "seq": 500446,
+     "session": "S3",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "It's important.",
      "sensitive": false,
      "verified": null
     },
@@ -784,7 +988,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "the jeep",
+     "quote": "We put it inta the jeep.",
      "sensitive": false,
      "verified": null
     },
@@ -825,14 +1029,14 @@
      "verified": null
     },
     {
-     "utterance": "S3-0648",
-     "seq": 500647,
+     "utterance": "S3-0748",
+     "seq": 500747,
      "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Where is the knife? Where is the knife, Brendan?",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Teresa",
      "sensitive": false,
      "verified": null
     },
@@ -857,18 +1061,6 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "the knife was the one that he uses for work",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1008",
-     "seq": 501007,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "The knife and the gun.",
      "sensitive": false,
      "verified": null
     },
@@ -933,14 +1125,62 @@
      "verified": null
     },
     {
-     "utterance": "S3-1277",
-     "seq": 501276,
+     "utterance": "S3-1271",
+     "seq": 501270,
      "session": "S3",
      "page": "wiegert",
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asks",
-     "quote": "I think that's a lie. I can tell by your voice. Did you see him clean the knife? Don't lie.",
+     "quote": "Where did he clean it?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1272",
+     "seq": 501271,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Outside.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1273",
+     "seq": 501272,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "What did he use to clean it?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1274",
+     "seq": 501273,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Some soap and some water.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1276",
+     "seq": 501275,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
      "sensitive": false,
      "verified": null
     },
@@ -991,30 +1231,6 @@
      "quote": "Yeah.",
      "sensitive": false,
      "verified": null
-    },
-    {
-     "utterance": "S3-1367",
-     "seq": 501366,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "When did you first notice that scratch bleeding?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1368",
-     "seq": 501367,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "When I was over there the first time.",
-     "sensitive": false,
-     "verified": null
     }
    ]
   },
@@ -1029,40 +1245,126 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "interrogator_first",
-   "origin_label": "Investigators said it first",
-   "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. wiegert); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
+   "origin": "suspect_first",
+   "origin_label": "Suspect said it first",
+   "corroboration": "may_corroborate",
+   "why": "The suspect said it first (Feb 27, 2006, Mishicot High School, p. brendan), and nothing earlier in the transcripts supplies it.",
    "first_interrogator": {
-    "utterance": "S1-0538",
-    "seq": 100537,
+    "utterance": "S1-0506",
+    "seq": 100505,
     "session": "S1",
     "page": "wiegert",
     "role": "interrogator",
     "speaker": "WIEGERT",
-    "kind": "asserts",
-    "quote": "he used rope to tie her up in the jeep",
+    "kind": "asks",
+    "quote": "he tied her up and he stabbed her in the truck",
     "sensitive": true,
     "verified": true,
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-0426",
-    "seq": 400425,
-    "session": "S2",
+    "utterance": "S1-0298",
+    "seq": 100297,
+    "session": "S1",
     "page": "brendan",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "He showed me the knife and the rope.",
-    "sensitive": false,
-    "verified": null,
+    "quote": "tied her up and stabbed her",
+    "sensitive": true,
+    "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 1,
+   "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
-   "crossed_sessions": true,
+   "crossed_sessions": false,
    "events": [
+    {
+     "utterance": "S1-0298",
+     "seq": 100297,
+     "session": "S1",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "tied her up and stabbed her",
+     "sensitive": true,
+     "verified": true,
+     "first": "suspect"
+    },
+    {
+     "utterance": "S1-0308",
+     "seq": 100307,
+     "session": "S1",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He said he tied her up and stabbed her.",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S1-0506",
+     "seq": 100505,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "he tied her up and he stabbed her in the truck",
+     "sensitive": true,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S1-0507",
+     "seq": 100506,
+     "session": "S1",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S1-0509",
+     "seq": 100508,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "What did he use to tie her up with, did he say?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S1-0510",
+     "seq": 100509,
+     "session": "S1",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Rope",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S1-0511",
+     "seq": 100510,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asserts",
+     "quote": "Rope",
+     "sensitive": false,
+     "verified": null
+    },
     {
      "utterance": "S1-0538",
      "seq": 100537,
@@ -1073,8 +1375,7 @@
      "kind": "asserts",
      "quote": "he used rope to tie her up in the jeep",
      "sensitive": true,
-     "verified": true,
-     "first": "interrogator"
+     "verified": null
     },
     {
      "utterance": "S2-0426",
@@ -1086,8 +1387,43 @@
      "kind": "asserts",
      "quote": "He showed me the knife and the rope.",
      "sensitive": false,
-     "verified": null,
-     "first": "suspect"
+     "verified": null
+    },
+    {
+     "utterance": "S2-0440",
+     "seq": 400439,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah (nods \"yes\")",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-0441",
+     "seq": 400440,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asserts",
+     "quote": "She was clothed.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-0442",
+     "seq": 400441,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
+     "sensitive": false,
+     "verified": null
     },
     {
      "utterance": "S2-0443",
@@ -1144,44 +1480,8 @@
      "page": "fassbender",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "(nods \u201cyes\u201d)",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0480",
-     "seq": 400479,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No. (shakes head \"no\")",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0481",
-     "seq": 400480,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "If you helped him, it's OK, because he was telling you to do it",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0482",
-     "seq": 400481,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "(shakes head \"no\")",
+     "kind": "asserts",
+     "quote": "(nods \u201cyes\")",
      "sensitive": false,
      "verified": null
     },
@@ -1330,18 +1630,6 @@
      "verified": null
     },
     {
-     "utterance": "S2-1101",
-     "seq": 401100,
-     "session": "S2",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Did you tie her up in front or behind? Did you tie her, I guess I want to say did you tie her hands up?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
      "utterance": "S2-1102",
      "seq": 401101,
      "session": "S2",
@@ -1438,54 +1726,6 @@
      "verified": null
     },
     {
-     "utterance": "S3-0170",
-     "seq": 500169,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Describe the rope for us.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0243",
-     "seq": 500242,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "unravin' her",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0247",
-     "seq": 500246,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "ties up her hands and her feet and grabs her",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0847",
-     "seq": 500846,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He ties her up and then he-he grabs her and",
-     "sensitive": false,
-     "verified": null
-    },
-    {
      "utterance": "S3-0940",
      "seq": 500939,
      "session": "S3",
@@ -1493,7 +1733,43 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "had her hands and I had her feet",
+     "quote": "He had her hands and I had her feet.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1006",
+     "seq": 501005,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "I helped him put the stuff in the jeep.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1007",
+     "seq": 501006,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asserts",
+     "quote": "What stuff?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1165",
+     "seq": 501164,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Yeah.",
      "sensitive": false,
      "verified": null
     }
@@ -1513,17 +1789,17 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. wiegert); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. fassbender); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
    "first_interrogator": {
-    "utterance": "S2-0427",
-    "seq": 400426,
-    "session": "S2",
-    "page": "wiegert",
+    "utterance": "S1-0025",
+    "seq": 100024,
+    "session": "S1",
+    "page": "fassbender",
     "role": "interrogator",
-    "speaker": "WIEGERT",
-    "kind": "asks",
-    "quote": "Where was she? Come on we know this already. Be honest.",
-    "sensitive": false,
+    "speaker": "FASSBENDER",
+    "kind": "asserts",
+    "quote": "As I said, we're not gonna say you did and we're not gonna say you didn't, we're not here to ... We're here to give you the opportunity to come forward, to talk",
+    "sensitive": true,
     "verified": true,
     "first": "interrogator"
    },
@@ -1542,18 +1818,18 @@
    },
    "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": false,
-   "crossed_sessions": false,
+   "crossed_sessions": true,
    "events": [
     {
-     "utterance": "S2-0427",
-     "seq": 400426,
-     "session": "S2",
-     "page": "wiegert",
+     "utterance": "S1-0025",
+     "seq": 100024,
+     "session": "S1",
+     "page": "fassbender",
      "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Where was she? Come on we know this already. Be honest.",
-     "sensitive": false,
+     "speaker": "FASSBENDER",
+     "kind": "asserts",
+     "quote": "As I said, we're not gonna say you did and we're not gonna say you didn't, we're not here to ... We're here to give you the opportunity to come forward, to talk",
+     "sensitive": true,
      "verified": true,
      "first": "interrogator"
     },
@@ -1580,7 +1856,7 @@
      "kind": "asks",
      "quote": "what did you see in the back of the jeep?",
      "sensitive": false,
-     "verified": null
+     "verified": true
     },
     {
      "utterance": "S2-0436",
@@ -1595,38 +1871,14 @@
      "verified": null
     },
     {
-     "utterance": "S2-0440",
-     "seq": 400439,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah (nods \"yes\").",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0441",
-     "seq": 400440,
+     "utterance": "S2-0437",
+     "seq": 400436,
      "session": "S2",
      "page": "fassbender",
      "role": "interrogator",
      "speaker": "FASSBENDER",
-     "kind": "asserts",
-     "quote": "She was clothed.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0442",
-     "seq": 400441,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah (nods \"yes\").",
+     "kind": "asks",
+     "quote": "Do you remember where her head was?",
      "sensitive": false,
      "verified": null
     },
@@ -1643,14 +1895,14 @@
      "verified": null
     },
     {
-     "utterance": "S2-0494",
-     "seq": 400493,
+     "utterance": "S2-0478",
+     "seq": 400477,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "to get rid of the body",
+     "kind": "denies",
+     "quote": "I don't know",
      "sensitive": false,
      "verified": null
     },
@@ -1664,6 +1916,18 @@
      "kind": "asserts",
      "quote": "put her back in the jeep in the back",
      "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1044",
+     "seq": 401043,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "back in there and he stabbed her",
+     "sensitive": true,
      "verified": null
     },
     {
@@ -1703,50 +1967,14 @@
      "verified": null
     },
     {
-     "utterance": "S2-1486",
-     "seq": 401485,
+     "utterance": "S2-1465",
+     "seq": 401464,
      "session": "S2",
      "page": "wiegert",
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asserts",
-     "quote": "you bring her into the garage, you set her on the garage floor?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1487",
-     "seq": 401486,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "(nods \"yes\") mm huh.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1533",
-     "seq": 401532,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Go take the jeep down in the pit.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1541",
-     "seq": 401540,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He drove down there and he put it back by the trees and covered it with branches and a hood.",
+     "quote": "She was on the garage floor, OK.",
      "sensitive": false,
      "verified": null
     },
@@ -1775,6 +2003,18 @@
      "verified": null
     },
     {
+     "utterance": "S2-2076",
+     "seq": 402075,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "took her outside ta the jeep, stuck her in the back",
+     "sensitive": true,
+     "verified": null
+    },
+    {
      "utterance": "S2-2112",
      "seq": 402111,
      "session": "S2",
@@ -1799,6 +2039,18 @@
      "verified": null
     },
     {
+     "utterance": "S2-2159",
+     "seq": 402158,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S2-2170",
      "seq": 402169,
      "session": "S2",
@@ -1811,26 +2063,14 @@
      "verified": null
     },
     {
-     "utterance": "S3-0348",
-     "seq": 500347,
-     "session": "S3",
-     "page": "brendan",
+     "utterance": "S2-2171",
+     "seq": 402170,
+     "session": "S2",
+     "page": "fassbender",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "And then he stabs her and then he tells me to and then he puts her inta the jeep and then he said he would rather burn her so then he put her back on the floor and then he shot her five times.",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0377",
-     "seq": 500376,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "From in the back of the, in the, cuz he's got like a workshop in the back.",
+     "kind": "assents",
+     "quote": "(nods \u201cyes\u201d)",
      "sensitive": false,
      "verified": null
     },
@@ -1847,6 +2087,90 @@
      "verified": null
     },
     {
+     "utterance": "S3-0913",
+     "seq": 500912,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "In the back.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1164",
+     "seq": 501163,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Did you stab her?",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1165",
+     "seq": 501164,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1166",
+     "seq": 501165,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "By her? Who's her? What's her name?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1167",
+     "seq": 501166,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Teresa.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1168",
+     "seq": 501167,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Teresa what?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1169",
+     "seq": 501168,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Halbach.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S3-1284",
      "seq": 501283,
      "session": "S3",
@@ -1855,18 +2179,6 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "In the fire.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1391",
-     "seq": 501390,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Where he covered it up",
      "sensitive": false,
      "verified": null
     }
@@ -1883,40 +2195,77 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan), and nothing earlier in the transcripts supplies it.",
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. wiegert); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
    "first_interrogator": {
-    "utterance": "S2-0800",
-    "seq": 400799,
-    "session": "S2",
+    "utterance": "S1-0299",
+    "seq": 100298,
+    "session": "S1",
     "page": "wiegert",
     "role": "interrogator",
     "speaker": "WIEGERT",
     "kind": "asks",
-    "quote": "What was handcuffed? Her hands or her legs or both?",
+    "quote": "Where did he say he did this?",
     "sensitive": false,
-    "verified": null,
+    "verified": true,
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-0788",
-    "seq": 400787,
+    "utterance": "S2-0786",
+    "seq": 400785,
     "session": "S2",
     "page": "brendan",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "The bed.",
+    "quote": "she was handcuffed to a, the thing.",
     "sensitive": false,
-    "verified": null,
+    "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 0,
+   "interrogator_mentions_before_suspect": 3,
    "adopted_by_assent": false,
-   "crossed_sessions": false,
+   "crossed_sessions": true,
    "events": [
+    {
+     "utterance": "S1-0299",
+     "seq": 100298,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Where did he say he did this?",
+     "sensitive": false,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S1-0305",
+     "seq": 100304,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "The car you're talking about, her truck? Her jeep, he tried to cover it with what?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S1-0565",
+     "seq": 100564,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asserts",
+     "quote": "clothes in the fire pit that was a blue shirt and some pants. On the shirt there was a blood on it and there was a hole in it in the stomach area and he said it was Teresa's shirt.",
+     "sensitive": true,
+     "verified": null
+    },
     {
      "utterance": "S2-0784",
      "seq": 400783,
@@ -1931,6 +2280,19 @@
      "kind_note": "agreement without a question about this detail just before it; not counted"
     },
     {
+     "utterance": "S2-0786",
+     "seq": 400785,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "she was handcuffed to a, the thing.",
+     "sensitive": false,
+     "verified": true,
+     "first": "suspect"
+    },
+    {
      "utterance": "S2-0788",
      "seq": 400787,
      "session": "S2",
@@ -1939,31 +2301,6 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "The bed.",
-     "sensitive": false,
-     "verified": null,
-     "first": "suspect"
-    },
-    {
-     "utterance": "S2-0790",
-     "seq": 400789,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "(nods \u201cyes\u201d)",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-0792",
-     "seq": 400791,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah.",
      "sensitive": false,
      "verified": null
     },
@@ -1977,8 +2314,7 @@
      "kind": "asks",
      "quote": "What was handcuffed? Her hands or her legs or both?",
      "sensitive": false,
-     "verified": null,
-     "first": "interrogator"
+     "verified": null
     },
     {
      "utterance": "S2-0801",
@@ -1989,6 +2325,18 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "Both.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-0805",
+     "seq": 400804,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asserts",
+     "quote": "Of his bed?",
      "sensitive": false,
      "verified": null
     },
@@ -2053,114 +2401,6 @@
      "verified": null
     },
     {
-     "utterance": "S2-1215",
-     "seq": 401214,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Did Steve tell you to do that?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1216",
-     "seq": 401215,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1217",
-     "seq": 401216,
-     "session": "S2",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "How'd he tell you to do, how'd he tell you to do that? What'd he say?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1218",
-     "seq": 401217,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "To go across her throat and pull it back.",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1219",
-     "seq": 401218,
-     "session": "S2",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Did he say why he wanted you to do that?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1220",
-     "seq": 401219,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No. (shakes head \"no\")",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1264",
-     "seq": 401263,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Was she alive when you shot her?",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1265",
-     "seq": 401264,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "I don't know.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1335",
-     "seq": 401334,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "we carry her into the fire",
-     "sensitive": true,
-     "verified": null
-    },
-    {
      "utterance": "S2-1533",
      "seq": 401532,
      "session": "S2",
@@ -2170,6 +2410,30 @@
      "kind": "asserts",
      "quote": "Go take the jeep down in the pit.",
      "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1541",
+     "seq": 401540,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He drove down there and he put it back by the trees and covered it with branches and a hood.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2045",
+     "seq": 402044,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "That Teresa Halbach was back there. That she was on the bed naked with she was chained up ta the bed.",
+     "sensitive": true,
      "verified": null
     },
     {
@@ -2185,6 +2449,18 @@
      "verified": null
     },
     {
+     "utterance": "S3-0140",
+     "seq": 500139,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "she's laying on the bed",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S3-0146",
      "seq": 500145,
      "session": "S3",
@@ -2192,67 +2468,19 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "she was laying on the bed and he told me to have sex with her.",
+     "quote": "And then she was laying on the bed and he told me to have sex with her.",
      "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S3-0175",
-     "seq": 500174,
+     "utterance": "S3-0384",
+     "seq": 500383,
      "session": "S3",
      "page": "fassbender",
      "role": "interrogator",
      "speaker": "FASSBENDER",
      "kind": "asks",
-     "quote": "Describe me the cuffs for us.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0176",
-     "seq": 500175,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Silver and they were leg cuffs.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0177",
-     "seq": 500176,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "You're saying they were leg irons? They were designed for her legs?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1391",
-     "seq": 501390,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Did you ride down in her jeep to that pit?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1425",
-     "seq": 501424,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "How much money did you guys take from her?",
+     "quote": "Is she fighting now?",
      "sensitive": false,
      "verified": null
     }
@@ -2272,98 +2500,61 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. wiegert); the suspect first adopted it after that (Feb 27, 2006, Mishicot High School, p. brendan).",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. fassbender); the suspect first adopted it by agreeing to a question (Feb 27, 2006, Mishicot High School, p. brendan).",
    "first_interrogator": {
-    "utterance": "S1-0382",
-    "seq": 100381,
+    "utterance": "S1-0177",
+    "seq": 100176,
     "session": "S1",
-    "page": "wiegert",
+    "page": "fassbender",
     "role": "interrogator",
-    "speaker": "WIEGERT",
+    "speaker": "FASSBENDER",
     "kind": "asks",
-    "quote": "he cut himself, while he was stabbing her?",
+    "quote": "All right, we got, we got a lot of important stuff out there now. Take a breath. Let's go over th-the parts that you mentioned, OK, so you mentioned toes, finge",
     "sensitive": true,
     "verified": true,
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S1-0393",
-    "seq": 100392,
+    "utterance": "S1-0491",
+    "seq": 100490,
     "session": "S1",
     "page": "brendan",
     "role": "suspect",
     "speaker": "BRENDAN",
-    "kind": "asserts",
-    "quote": "That he stabbed her.",
-    "sensitive": true,
-    "verified": null,
+    "kind": "assents",
+    "quote": "Yes.",
+    "sensitive": false,
+    "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 2,
-   "adopted_by_assent": false,
+   "interrogator_mentions_before_suspect": 3,
+   "adopted_by_assent": true,
    "crossed_sessions": false,
    "events": [
     {
-     "utterance": "S1-0382",
-     "seq": 100381,
-     "session": "S1",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "he cut himself, while he was stabbing her?",
-     "sensitive": true,
-     "verified": true,
-     "first": "interrogator"
-    },
-    {
-     "utterance": "S1-0384",
-     "seq": 100383,
-     "session": "S1",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "try to go through in your mind exactly what he told you about him cutting himself",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S1-0393",
-     "seq": 100392,
-     "session": "S1",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "That he stabbed her.",
-     "sensitive": true,
-     "verified": null,
-     "first": "suspect"
-    },
-    {
-     "utterance": "S1-0394",
-     "seq": 100393,
+     "utterance": "S1-0177",
+     "seq": 100176,
      "session": "S1",
      "page": "fassbender",
      "role": "interrogator",
      "speaker": "FASSBENDER",
      "kind": "asks",
-     "quote": "Had he told you that? Yes or no?",
-     "sensitive": false,
-     "verified": null
+     "quote": "All right, we got, we got a lot of important stuff out there now. Take a breath. Let's go over th-the parts that you mentioned, OK, so you mentioned toes, finge",
+     "sensitive": true,
+     "verified": true,
+     "first": "interrogator"
     },
     {
-     "utterance": "S1-0395",
-     "seq": 100394,
+     "utterance": "S1-0309",
+     "seq": 100308,
      "session": "S1",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yes",
-     "sensitive": false,
-     "verified": null
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Did he say where he stabbed her?",
+     "sensitive": true,
+     "verified": true
     },
     {
      "utterance": "S1-0433",
@@ -2387,7 +2578,20 @@
      "kind": "asserts",
      "quote": "he told me that he stabbed her in the stomach in the pit",
      "sensitive": true,
-     "verified": null
+     "verified": true
+    },
+    {
+     "utterance": "S1-0491",
+     "seq": 100490,
+     "session": "S1",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yes.",
+     "sensitive": false,
+     "verified": true,
+     "first": "suspect"
     },
     {
      "utterance": "S1-0506",
@@ -2399,6 +2603,18 @@
      "kind": "asserts",
      "quote": "stabbed her in the truck",
      "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S1-0507",
+     "seq": 100506,
+     "session": "S1",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
+     "sensitive": false,
      "verified": null
     },
     {
@@ -2450,6 +2666,30 @@
      "verified": null
     },
     {
+     "utterance": "S2-0886",
+     "seq": 400885,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "RapIng her",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S2-0888",
+     "seq": 400887,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "fuck her so hard",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S2-1050",
      "seq": 401049,
      "session": "S2",
@@ -2493,7 +2733,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "When, before he choked her.",
+     "quote": "before he choked her",
      "sensitive": true,
      "verified": null
     },
@@ -2543,6 +2783,18 @@
      "kind": "asks",
      "quote": "Was that before or after Steve stabbed her?",
      "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1210",
+     "seq": 401209,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "After.",
+     "sensitive": false,
      "verified": null
     },
     {
@@ -2666,6 +2918,18 @@
      "verified": null
     },
     {
+     "utterance": "S2-2762",
+     "seq": 402761,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "(nods \"yes\")",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S3-0253",
      "seq": 500252,
      "session": "S3",
@@ -2738,27 +3002,27 @@
      "verified": null
     },
     {
-     "utterance": "S3-0382",
-     "seq": 500381,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "How does he stab her? Does he get on top of her, 'er what does he do?",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0388",
-     "seq": 500387,
+     "utterance": "S3-0392",
+     "seq": 500391,
      "session": "S3",
      "page": "fassbender",
      "role": "interrogator",
      "speaker": "FASSBENDER",
      "kind": "asserts",
-     "quote": "And he stabs her in the chest. And where you showing Mark and I that would be where? What's underneath there? What organ is in that area? Any organ in particular.",
+     "quote": "He stabbed her right in the middle of the chest.",
      "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0393",
+     "seq": 500392,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Mm hum.",
+     "sensitive": false,
      "verified": null
     },
     {
@@ -2774,15 +3038,51 @@
      "verified": null
     },
     {
-     "utterance": "S3-0408",
-     "seq": 500407,
+     "utterance": "S3-0422",
+     "seq": 500421,
      "session": "S3",
-     "page": "wiegert",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "there was a hole in her stomach.",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0423",
+     "seq": 500422,
+     "session": "S3",
+     "page": "fassbender",
      "role": "interrogator",
-     "speaker": "WIEGERT",
+     "speaker": "FASSBENDER",
      "kind": "asks",
-     "quote": "OK.",
+     "quote": "In her stomach?",
      "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0424",
+     "seq": 500423,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "In the chest.",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0428",
+     "seq": 500427,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Like three inches.",
+     "sensitive": true,
      "verified": null
     },
     {
@@ -2870,18 +3170,6 @@
      "verified": null
     },
     {
-     "utterance": "S3-1426",
-     "seq": 501425,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He only gave me like a few bucks.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
      "utterance": "S3-1467",
      "seq": 501466,
      "session": "S3",
@@ -2916,6 +3204,54 @@
      "quote": "There was like a little on my hands, and my pants.",
      "sensitive": false,
      "verified": null
+    },
+    {
+     "utterance": "S3-1470",
+     "seq": 501469,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "What happened with the stuff that was on your hands?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1471",
+     "seq": 501470,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "I washed it off.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1472",
+     "seq": 501471,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Where?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1473",
+     "seq": 501472,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Outside with the hose.",
+     "sensitive": false,
+     "verified": null
     }
    ]
   },
@@ -2930,37 +3266,37 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan), and nothing earlier in the transcripts supplies it.",
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. wiegert); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
    "first_interrogator": {
-    "utterance": "S2-1150",
-    "seq": 401149,
+    "utterance": "S2-1069",
+    "seq": 401068,
     "session": "S2",
     "page": "wiegert",
     "role": "interrogator",
     "speaker": "WIEGERT",
     "kind": "asks",
-    "quote": "He chokes her after that?",
+    "quote": "And did he choke her until what, did she go unconscious, what, tell me.",
     "sensitive": true,
     "verified": true,
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-1064",
-    "seq": 401063,
+    "utterance": "S2-1085",
+    "seq": 401084,
     "session": "S2",
     "page": "brendan",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "He choked her.",
+    "quote": "started choking her",
     "sensitive": true,
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 0,
+   "interrogator_mentions_before_suspect": 2,
    "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
@@ -2972,35 +3308,35 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "assents",
-     "quote": "Yeah. (nods ",
+     "quote": "Yeah",
      "sensitive": false,
      "verified": null,
      "kind_note": "agreement without a question about this detail just before it; not counted"
     },
     {
-     "utterance": "S2-1064",
-     "seq": 401063,
+     "utterance": "S2-1069",
+     "seq": 401068,
      "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He choked her.",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "And did he choke her until what, did she go unconscious, what, tell me.",
      "sensitive": true,
      "verified": true,
-     "first": "suspect"
+     "first": "interrogator"
     },
     {
-     "utterance": "S2-1079",
-     "seq": 401078,
+     "utterance": "S2-1071",
+     "seq": 401070,
      "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "choke her and that",
-     "sensitive": true,
-     "verified": null
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Yeah. Did she fall asleep, go unconscious?",
+     "sensitive": false,
+     "verified": true
     },
     {
      "utterance": "S2-1085",
@@ -3012,7 +3348,8 @@
      "kind": "asserts",
      "quote": "started choking her",
      "sensitive": true,
-     "verified": null
+     "verified": true,
+     "first": "suspect"
     },
     {
      "utterance": "S2-1140",
@@ -3027,21 +3364,8 @@
      "verified": null
     },
     {
-     "utterance": "S2-1150",
-     "seq": 401149,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "He chokes her after that?",
-     "sensitive": true,
-     "verified": true,
-     "first": "interrogator"
-    },
-    {
-     "utterance": "S2-1151",
-     "seq": 401150,
+     "utterance": "S2-1142",
+     "seq": 401141,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
@@ -3052,26 +3376,14 @@
      "verified": null
     },
     {
-     "utterance": "S2-1168",
-     "seq": 401167,
+     "utterance": "S2-1151",
+     "seq": 401150,
      "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Something with the head.",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1229",
-     "seq": 401228,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "What else happens to her in her head?",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
      "sensitive": false,
      "verified": null
     },
@@ -3088,14 +3400,14 @@
      "verified": null
     },
     {
-     "utterance": "S2-1277",
-     "seq": 401276,
+     "utterance": "S2-2049",
+     "seq": 402048,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "Zero.",
+     "kind": "asserts",
+     "quote": "Like help me and not ta tell Steven not ta do this anymore.",
      "sensitive": false,
      "verified": null
     },
@@ -3108,18 +3420,6 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "he choked her",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S2-2763",
-     "seq": 402762,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "And then he, tell me how he choked her. Where was he when he choked her?",
      "sensitive": true,
      "verified": null
     },
@@ -3157,7 +3457,7 @@
      "kind": "asks",
      "quote": "With your hands, show me what, pretend that her neck is there whatever, show me how he did it.",
      "sensitive": false,
-     "verified": null
+     "verified": true
     },
     {
      "utterance": "S2-2768",
@@ -3192,6 +3492,18 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "'bout two, three minutes.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2772",
+     "seq": 402771,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "(nods \"yes\")",
      "sensitive": false,
      "verified": null
     },
@@ -3251,7 +3563,7 @@
      "role": "interrogator",
      "speaker": "FASSBENDER",
      "kind": "asks",
-     "quote": "You said Steven stabbed her first. Is she still alive when you stab her?",
+     "quote": "Is she alive? You said Steven stabbed her first. Is she still alive when you stab her?",
      "sensitive": true,
      "verified": null
     },
@@ -3264,54 +3576,6 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "She wasn\u2019t movin\u2019.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0411",
-     "seq": 500410,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Was she talking, were her eyes open anything like that?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0412",
-     "seq": 500411,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No. (shakes head \"no\")",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0413",
-     "seq": 500412,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Did you see her breathing?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0414",
-     "seq": 500413,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No.",
      "sensitive": false,
      "verified": null
     },
@@ -3375,18 +3639,6 @@
    "crossed_sessions": false,
    "events": [
     {
-     "utterance": "S1-0389",
-     "seq": 100388,
-     "session": "S1",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
      "utterance": "S2-1002",
      "seq": 401001,
      "session": "S2",
@@ -3413,6 +3665,18 @@
      "first": "suspect"
     },
     {
+     "utterance": "S2-1249",
+     "seq": 401248,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "(nods \"yes\")",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S2-1261",
      "seq": 401260,
      "session": "S2",
@@ -3421,6 +3685,18 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "Cut off 'er, some of her hair.",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1300",
+     "seq": 401299,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "And then you cut some hair off.",
      "sensitive": true,
      "verified": null
     },
@@ -3445,8 +3721,8 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "assents",
-     "quote": "(nods \"yes\")",
-     "sensitive": true,
+     "quote": "(nods \u201cyes\u201d)",
+     "sensitive": false,
      "verified": null
     },
     {
@@ -3482,7 +3758,19 @@
      "speaker": "BRENDAN",
      "kind": "denies",
      "quote": "I don't know.",
-     "sensitive": true,
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2381",
+     "seq": 402380,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Did Steve ever say why he wanted you to do that?",
+     "sensitive": false,
      "verified": null
     },
     {
@@ -3494,7 +3782,31 @@
      "speaker": "BRENDAN",
      "kind": "denies",
      "quote": "No.",
-     "sensitive": true,
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2383",
+     "seq": 402382,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Do you know if he kept any of it?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2384",
+     "seq": 402383,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "I don't know.",
+     "sensitive": false,
      "verified": null
     },
     {
@@ -3546,14 +3858,14 @@
      "verified": null
     },
     {
-     "utterance": "S3-0348",
-     "seq": 500347,
+     "utterance": "S3-0382",
+     "seq": 500381,
      "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "And then he stabs her and then he tells me to and then he puts her inta the jeep and then he said he would rather burn her so then he put her back on the floor and then he shot her five times.",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "How does he stab her? Does he get on top of her, 'er what does he do?",
      "sensitive": true,
      "verified": null
     },
@@ -3594,18 +3906,6 @@
      "verified": null
     },
     {
-     "utterance": "S3-0634",
-     "seq": 500633,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asserts",
-     "quote": "you just tell us you did",
-     "sensitive": false,
-     "verified": null
-    },
-    {
      "utterance": "S3-1029",
      "seq": 501028,
      "session": "S3",
@@ -3613,7 +3913,7 @@
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asks",
-     "quote": "Did you cut the hair off like you said earlier or is that a lie.",
+     "quote": "What about the hair? Did you cut the hair off like you said earlier or is that a lie.",
      "sensitive": false,
      "verified": null
     },
@@ -3630,44 +3930,20 @@
      "verified": null
     },
     {
-     "utterance": "S3-1433",
-     "seq": 501432,
+     "utterance": "S3-1155",
+     "seq": 501154,
      "session": "S3",
      "page": "wiegert",
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asks",
-     "quote": "Did you take the pictures?",
+     "quote": "What's the truth? Did you cut some of her hair off?",
      "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S3-1434",
-     "seq": 501433,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No. (shakes head \"no\")",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1435",
-     "seq": 501434,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Did Steve take pictures?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1436",
-     "seq": 501435,
+     "utterance": "S3-1156",
+     "seq": 501155,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
@@ -3678,50 +3954,26 @@
      "verified": null
     },
     {
-     "utterance": "S3-1437",
-     "seq": 501436,
+     "utterance": "S3-1158",
+     "seq": 501157,
      "session": "S3",
      "page": "wiegert",
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asks",
-     "quote": "Did you tell somebody you took pictures?",
+     "quote": "Did you cut any of her hair off?",
      "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S3-1438",
-     "seq": 501437,
+     "utterance": "S3-1159",
+     "seq": 501158,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "denies",
-     "quote": "No. (shakes head \"no\")",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1439",
-     "seq": 501438,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "You told Travis that?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1440",
-     "seq": 501439,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No. (shakes head \"no\")",
+     "quote": "No.",
      "sensitive": false,
      "verified": null
     },
@@ -3753,17 +4005,17 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. wiegert); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. fassbender); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
    "first_interrogator": {
-    "utterance": "S2-1207",
-    "seq": 401206,
-    "session": "S2",
-    "page": "wiegert",
+    "utterance": "S1-0521",
+    "seq": 100520,
+    "session": "S1",
+    "page": "fassbender",
     "role": "interrogator",
-    "speaker": "WIEGERT",
+    "speaker": "FASSBENDER",
     "kind": "asks",
-    "quote": "So she's alive and you cut her throat?",
-    "sensitive": true,
+    "quote": "Brendan, I just got a question and I think Mark's gonna have some too. We didn't ask this before. Did he say anything about cutting her up or anything like that",
+    "sensitive": false,
     "verified": true,
     "first": "interrogator"
    },
@@ -3780,10 +4032,35 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 1,
+   "interrogator_mentions_before_suspect": 3,
    "adopted_by_assent": true,
-   "crossed_sessions": false,
+   "crossed_sessions": true,
    "events": [
+    {
+     "utterance": "S1-0521",
+     "seq": 100520,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "Brendan, I just got a question and I think Mark's gonna have some too. We didn't ask this before. Did he say anything about cutting her up or anything like that",
+     "sensitive": false,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S2-1203",
+     "seq": 401202,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Cut her throat? Te-when did that happen?",
+     "sensitive": true,
+     "verified": true
+    },
     {
      "utterance": "S2-1207",
      "seq": 401206,
@@ -3794,8 +4071,7 @@
      "kind": "asks",
      "quote": "So she's alive and you cut her throat?",
      "sensitive": true,
-     "verified": true,
-     "first": "interrogator"
+     "verified": true
     },
     {
      "utterance": "S2-1208",
@@ -3859,42 +4135,6 @@
      "verified": null
     },
     {
-     "utterance": "S2-1268",
-     "seq": 401267,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Who shot her?",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1299",
-     "seq": 401298,
-     "session": "S2",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "And then he has you cut her neck?",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1300",
-     "seq": 401299,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah.",
-     "sensitive": true,
-     "verified": null
-    },
-    {
      "utterance": "S2-2076",
      "seq": 402075,
      "session": "S2",
@@ -3904,6 +4144,30 @@
      "kind": "asserts",
      "quote": "cut her throat",
      "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2385",
+     "seq": 402384,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Where was her underwear?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2386",
+     "seq": 402385,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "I don't know.",
+     "sensitive": false,
      "verified": null
     },
     {
@@ -4075,18 +4339,6 @@
      "verified": null
     },
     {
-     "utterance": "S2-2705",
-     "seq": 402704,
-     "session": "S2",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asserts",
-     "quote": "when you're in the bedroom, an-an-and you cut her throat",
-     "sensitive": true,
-     "verified": null
-    },
-    {
      "utterance": "S2-2741",
      "seq": 402740,
      "session": "S2",
@@ -4195,63 +4447,15 @@
      "verified": null
     },
     {
-     "utterance": "S3-0402",
-     "seq": 500401,
+     "utterance": "S3-1170",
+     "seq": 501169,
      "session": "S3",
      "page": "wiegert",
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asks",
-     "quote": "Why did you tell us that? Brendan, why did you tell us that?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0403",
-     "seq": 500402,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Too nervous.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0404",
-     "seq": 500403,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "OK. Are you nervous now?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0405",
-     "seq": 500404,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "A little.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0406",
-     "seq": 500405,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Well, what\u2019s the truth? Tell me what the truth is.",
-     "sensitive": false,
+     "quote": "Did you cut her throat?",
+     "sensitive": true,
      "verified": null
     }
    ]
@@ -4364,6 +4568,18 @@
      "verified": null
     },
     {
+     "utterance": "S2-1357",
+     "seq": 401356,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "(nods \u201cyes\u201d)",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S2-1455",
      "seq": 401454,
      "session": "S2",
@@ -4383,7 +4599,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "denies",
-     "quote": "(shakes head \"no\")",
+     "quote": "(shakes head \u201cno\u201d)",
      "sensitive": false,
      "verified": null
     },
@@ -4432,18 +4648,6 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "About ten.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1491",
-     "seq": 401490,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Go put her on the fire.",
      "sensitive": false,
      "verified": null
     },
@@ -4563,7 +4767,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "shot her 'bout five times",
+     "quote": "shot her 'bout five times.",
      "sensitive": true,
      "verified": null
     },
@@ -4582,6 +4786,42 @@
     {
      "utterance": "S3-0918",
      "seq": 500917,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "No.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1006",
+     "seq": 501005,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "I helped him put the stuff in the jeep.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1160",
+     "seq": 501159,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Did you shoot her?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1161",
+     "seq": 501160,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
@@ -4640,14 +4880,26 @@
      "first": "suspect"
     },
     {
-     "utterance": "S2-1269",
-     "seq": 401268,
+     "utterance": "S2-1410",
+     "seq": 401409,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "He did.",
+     "quote": "From out of his room.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1416",
+     "seq": 401415,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "The .22.",
      "sensitive": false,
      "verified": null
     },
@@ -4688,18 +4940,6 @@
      "verified": null
     },
     {
-     "utterance": "S3-0374",
-     "seq": 500373,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "In the garage.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
      "utterance": "S3-0472",
      "seq": 500471,
      "session": "S3",
@@ -4712,26 +4952,38 @@
      "verified": null
     },
     {
-     "utterance": "S3-0476",
-     "seq": 500475,
+     "utterance": "S3-1006",
+     "seq": 501005,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "In the bedroom.",
+     "quote": "I helped him put the stuff in the jeep.",
      "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S3-0478",
-     "seq": 500477,
+     "utterance": "S3-1008",
+     "seq": 501007,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "In 'er on the wall.",
+     "quote": "The knife and the gun.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1163",
+     "seq": 501162,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Steven did.",
      "sensitive": false,
      "verified": null
     }
@@ -4748,23 +5000,11 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "interrogator_first",
-   "origin_label": "Investigators said it first",
-   "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. wiegert); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
-   "first_interrogator": {
-    "utterance": "S2-1278",
-    "seq": 401277,
-    "session": "S2",
-    "page": "wiegert",
-    "role": "interrogator",
-    "speaker": "WIEGERT",
-    "kind": "asks",
-    "quote": "Where did?",
-    "sensitive": false,
-    "verified": true,
-    "first": "interrogator"
-   },
+   "origin": "suspect_first",
+   "origin_label": "Suspect said it first",
+   "corroboration": "may_corroborate",
+   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan), and nothing earlier in the transcripts supplies it.",
+   "first_interrogator": null,
    "first_suspect": {
     "utterance": "S2-1443",
     "seq": 401442,
@@ -4778,34 +5018,22 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 2,
+   "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
     {
-     "utterance": "S2-1278",
-     "seq": 401277,
+     "utterance": "S2-1243",
+     "seq": 401242,
      "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Where did?",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
      "sensitive": false,
-     "verified": true,
-     "first": "interrogator"
-    },
-    {
-     "utterance": "S2-1368",
-     "seq": 401367,
-     "session": "S2",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "How does the car get in the garage?",
-     "sensitive": false,
-     "verified": null
+     "verified": null,
+     "kind_note": "agreement without a question about this detail just before it; not counted"
     },
     {
      "utterance": "S2-1443",
@@ -4830,18 +5058,6 @@
      "kind": "asserts",
      "quote": "In the garage.",
      "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-2076",
-     "seq": 402075,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "we put her on the floor and then he shot her ten times and then we threw her in the fire",
-     "sensitive": true,
      "verified": null
     },
     {
@@ -4881,14 +5097,14 @@
      "verified": null
     },
     {
-     "utterance": "S3-0376",
-     "seq": 500375,
+     "utterance": "S3-0377",
+     "seq": 500376,
      "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Where in the garage did you get the knife from?",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "From in the back of the, in the, cuz he's got like a workshop in the back.",
      "sensitive": false,
      "verified": null
     }
@@ -4908,37 +5124,63 @@
    "origin": "public",
    "origin_label": "Reported publicly before the interview",
    "corroboration": "cannot_corroborate",
-   "why": "It was reported publicly on Nov 16, 2005, before the suspect first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan). Investigators also mentioned it before he did (Feb 27, 2006, Mishicot High School, p. wiegert).",
+   "why": "It was reported publicly on Nov 16, 2005, before the suspect first said it (Feb 27, 2006, Mishicot High School, p. brendan).",
    "first_interrogator": {
-    "utterance": "S1-0538",
-    "seq": 100537,
+    "utterance": "S1-0161",
+    "seq": 100160,
     "session": "S1",
-    "page": "wiegert",
+    "page": "fassbender",
     "role": "interrogator",
-    "speaker": "WIEGERT",
-    "kind": "asserts",
-    "quote": "body looked like it was together and it was under some tires and branches",
+    "speaker": "FASSBENDER",
+    "kind": "asks",
+    "quote": "We found some flesh in that fire too. We know you saw some flesh. We found it after all that burned. I know you saw it ...Tell us. You don't have to worry about ............you won't have to prove that in court.",
     "sensitive": true,
     "verified": true,
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-0577",
-    "seq": 400576,
-    "session": "S2",
+    "utterance": "S1-0134",
+    "seq": 100133,
+    "session": "S1",
     "page": "brendan",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "put her in the fire pit",
-    "sensitive": true,
+    "quote": "the fire",
+    "sensitive": false,
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 1,
+   "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
-   "crossed_sessions": true,
+   "crossed_sessions": false,
    "events": [
+    {
+     "utterance": "S1-0134",
+     "seq": 100133,
+     "session": "S1",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "the fire",
+     "sensitive": false,
+     "verified": true,
+     "first": "suspect"
+    },
+    {
+     "utterance": "S1-0161",
+     "seq": 100160,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "We found some flesh in that fire too. We know you saw some flesh. We found it after all that burned. I know you saw it ...Tell us. You don't have to worry about ............you won't have to prove that in court.",
+     "sensitive": true,
+     "verified": true,
+     "first": "interrogator"
+    },
     {
      "utterance": "S1-0538",
      "seq": 100537,
@@ -4949,44 +5191,6 @@
      "kind": "asserts",
      "quote": "body looked like it was together and it was under some tires and branches",
      "sensitive": true,
-     "verified": true,
-     "first": "interrogator"
-    },
-    {
-     "utterance": "S2-0577",
-     "seq": 400576,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "put her in the fire pit",
-     "sensitive": true,
-     "verified": true,
-     "first": "suspect"
-    },
-    {
-     "utterance": "S2-1335",
-     "seq": 401334,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "into the fire",
-     "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S2-1359",
-     "seq": 401358,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "We carry her to the fire",
-     "sensitive": false,
      "verified": null
     },
     {
@@ -5002,14 +5206,14 @@
      "verified": null
     },
     {
-     "utterance": "S2-1491",
-     "seq": 401490,
+     "utterance": "S2-1453",
+     "seq": 401452,
      "session": "S2",
-     "page": "brendan",
+     "page": "fassbender",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Go put her on the fire.",
+     "kind": "assents",
+     "quote": "(nods \u201cyes\u201d)",
      "sensitive": false,
      "verified": null
     },
@@ -5026,6 +5230,18 @@
      "verified": null
     },
     {
+     "utterance": "S2-2076",
+     "seq": 402075,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "we put her on the floor and then he shot her ten times and then we threw her in the fire",
+     "sensitive": true,
+     "verified": null
+    },
+    {
      "utterance": "S2-2303",
      "seq": 402302,
      "session": "S2",
@@ -5034,6 +5250,18 @@
      "speaker": "FASSBENDER",
      "kind": "asks",
      "quote": "Did Steven do anything with it?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2304",
+     "seq": 402303,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Yeah, but I don\u2019t know what.",
      "sensitive": false,
      "verified": null
     },
@@ -5062,6 +5290,30 @@
      "verified": null
     },
     {
+     "utterance": "S3-0953",
+     "seq": 500952,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Was she or wasn't she?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0954",
+     "seq": 500953,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "No. He was burning tires.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S3-0994",
      "seq": 500993,
      "session": "S3",
@@ -5074,50 +5326,14 @@
      "verified": null
     },
     {
-     "utterance": "S3-1125",
-     "seq": 501124,
+     "utterance": "S3-1443",
+     "seq": 501442,
      "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
      "kind": "asserts",
-     "quote": "Steven did.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1128",
-     "seq": 501127,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Cuz he told me that he was gonna do that.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1294",
-     "seq": 501293,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Crush it.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1296",
-     "seq": 501295,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He said he'll smash it faster a day that he can do it.",
+     "quote": "you saw the body in the fire",
      "sensitive": false,
      "verified": null
     }
@@ -5134,11 +5350,23 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan), and nothing earlier in the transcripts supplies it.",
-   "first_interrogator": null,
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. fassbender); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
+   "first_interrogator": {
+    "utterance": "S1-0044",
+    "seq": 100043,
+    "session": "S1",
+    "page": "fassbender",
+    "role": "interrogator",
+    "speaker": "FASSBENDER",
+    "kind": "asks",
+    "quote": "And then were there tires on it before you got out there?",
+    "sensitive": false,
+    "verified": true,
+    "first": "interrogator"
+   },
    "first_suspect": {
     "utterance": "S2-1507",
     "seq": 401506,
@@ -5152,10 +5380,83 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 0,
+   "interrogator_mentions_before_suspect": 6,
    "adopted_by_assent": false,
-   "crossed_sessions": false,
+   "crossed_sessions": true,
    "events": [
+    {
+     "utterance": "S1-0044",
+     "seq": 100043,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "And then were there tires on it before you got out there?",
+     "sensitive": false,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S1-0169",
+     "seq": 100168,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "Where? The body parts that you saw, were they on top of tires or underneath the tires, or?",
+     "sensitive": true,
+     "verified": true
+    },
+    {
+     "utterance": "S1-0173",
+     "seq": 100172,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "Underneath the bottom of the tires.",
+     "sensitive": false,
+     "verified": true
+    },
+    {
+     "utterance": "S1-0217",
+     "seq": 100216,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "So you went there at 9:00, you see the branches, the tires, the garbage, it's all on the fire already? Is it burning already?",
+     "sensitive": false,
+     "verified": true
+    },
+    {
+     "utterance": "S1-0538",
+     "seq": 100537,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asserts",
+     "quote": "He was angry and that's why he did it. He told me he used rope to tie her up in the jeep and that's when he stabbed her. When he told me not to say anything, he",
+     "sensitive": true,
+     "verified": true
+    },
+    {
+     "utterance": "S2-1378",
+     "seq": 401377,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asserts",
+     "quote": "You threw tires and branches on her",
+     "sensitive": false,
+     "verified": true
+    },
     {
      "utterance": "S2-1507",
      "seq": 401506,
@@ -5182,6 +5483,18 @@
      "verified": null
     },
     {
+     "utterance": "S2-2244",
+     "seq": 402243,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "After we put the tires and the branches on",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S3-0042",
      "seq": 500041,
      "session": "S3",
@@ -5191,18 +5504,6 @@
      "kind": "asserts",
      "quote": "we used her clothes ta clean up the, some of the blood",
      "sensitive": true,
-     "verified": null
-    },
-    {
-     "utterance": "S3-0994",
-     "seq": 500993,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "We threw it on the fire.",
-     "sensitive": false,
      "verified": null
     }
    ]
@@ -5218,19 +5519,19 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Feb 27, 2006, Mishicot High School, p. brendon), and nothing earlier in the transcripts supplies it.",
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. fassbender); the suspect first adopted it after that (Feb 27, 2006, Mishicot High School, p. brendon).",
    "first_interrogator": {
-    "utterance": "S1-0305",
-    "seq": 100304,
+    "utterance": "S1-0272",
+    "seq": 100271,
     "session": "S1",
-    "page": "wiegert",
+    "page": "fassbender",
     "role": "interrogator",
-    "speaker": "WIEGERT",
+    "speaker": "FASSBENDER",
     "kind": "asks",
-    "quote": "The car you're talking about, her truck? Her jeep, he tried to cover it with what?",
+    "quote": "You saw her car didn't ya? Her RAV4. Where was it when you saw it?",
     "sensitive": false,
     "verified": true,
     "first": "interrogator"
@@ -5248,10 +5549,35 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 0,
+   "interrogator_mentions_before_suspect": 2,
    "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
+    {
+     "utterance": "S1-0272",
+     "seq": 100271,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "You saw her car didn't ya? Her RAV4. Where was it when you saw it?",
+     "sensitive": false,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S1-0303",
+     "seq": 100302,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "How did he try to hide it, what did he tell you?",
+     "sensitive": false,
+     "verified": true
+    },
     {
      "utterance": "S1-0304",
      "seq": 100303,
@@ -5266,19 +5592,6 @@
      "first": "suspect"
     },
     {
-     "utterance": "S1-0305",
-     "seq": 100304,
-     "session": "S1",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "The car you're talking about, her truck? Her jeep, he tried to cover it with what?",
-     "sensitive": false,
-     "verified": true,
-     "first": "interrogator"
-    },
-    {
      "utterance": "S1-0306",
      "seq": 100305,
      "session": "S1",
@@ -5291,18 +5604,6 @@
      "verified": null
     },
     {
-     "utterance": "S1-0538",
-     "seq": 100537,
-     "session": "S1",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asserts",
-     "quote": "he hid the vehicle in the pit back in the tree area",
-     "sensitive": true,
-     "verified": null
-    },
-    {
      "utterance": "S1-0543",
      "seq": 100542,
      "session": "S1",
@@ -5312,29 +5613,77 @@
      "kind": "asserts",
      "quote": "He put some tree branches on the top of it and put the car hood on the top of it too",
      "sensitive": false,
+     "verified": true
+    },
+    {
+     "utterance": "S2-1215",
+     "seq": 401214,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Did Steve tell you to do that?",
+     "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S2-0577",
-     "seq": 400576,
+     "utterance": "S2-1216",
+     "seq": 401215,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1217",
+     "seq": 401216,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "How'd he tell you to do, how'd he tell you to do that? What'd he say?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1218",
+     "seq": 401217,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "put her in the fire pit",
+     "quote": "To go across her throat and pull it back.",
      "sensitive": true,
      "verified": null
     },
     {
-     "utterance": "S2-1369",
-     "seq": 401368,
+     "utterance": "S2-1219",
+     "seq": 401218,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "Did he say why he wanted you to do that?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1220",
+     "seq": 401219,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He drives it in there.",
+     "kind": "denies",
+     "quote": "No. (shakes head \"no\")",
      "sensitive": false,
      "verified": null
     },
@@ -5358,19 +5707,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "After we put the tires and the branches on, we went to the house and went in there for a little bit and we went out and he was gonna take the jeep down in the pit so he did and that's when we covered it with branches and the hood.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S2-2250",
-     "seq": 402249,
-     "session": "S2",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "I went over to my house and got the, the golf cart and got, he went to go pick 'em up and we went over to get the car seat, and we put it by the fire, and waited for it to burn down, and we threw it on there, and we went to, to the jeep.",
+     "quote": "we covered it with branches and the hood",
      "sensitive": false,
      "verified": null
     },
@@ -5382,7 +5719,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "put her on the fire and we used her clothes",
+     "quote": "put her on the fire and we used her clothes ta clean up the, some of the blood",
      "sensitive": true,
      "verified": null
     },
@@ -5395,18 +5732,6 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "He took it down in the pit.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1294",
-     "seq": 501293,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "Crush it.",
      "sensitive": false,
      "verified": null
     }
@@ -5556,6 +5881,42 @@
      "verified": null
     },
     {
+     "utterance": "S2-1588",
+     "seq": 401587,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asserts",
+     "quote": "He took the plates and he, I believe he did something else in that car.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1601",
+     "seq": 401600,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "While he was raising the hood, did you take that license plates off?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1602",
+     "seq": 401601,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "No.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S2-1690",
      "seq": 401689,
      "session": "S2",
@@ -5580,14 +5941,26 @@
      "verified": null
     },
     {
-     "utterance": "S2-2244",
-     "seq": 402243,
-     "session": "S2",
+     "utterance": "S3-0042",
+     "seq": 500041,
+     "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "After we put the tires and the branches on, we went to the house and went in there for a little bit and we went out and he was gonna take the jeep down in the pit so he did and that's when we covered it with branches and the hood.",
+     "quote": "her clothes",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0648",
+     "seq": 500647,
+     "session": "S3",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "Where is the knife? Where is the knife, Brendan?",
      "sensitive": false,
      "verified": null
     },
@@ -5611,7 +5984,7 @@
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asserts",
-     "quote": "he took the license plates off",
+     "quote": "he took the license plates off.",
      "sensitive": false,
      "verified": null
     },
@@ -5623,7 +5996,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "he told me he took 'um off",
+     "quote": "he told me he took 'um off.",
      "sensitive": false,
      "verified": null
     },
@@ -5664,74 +6037,14 @@
      "verified": null
     },
     {
-     "utterance": "S3-1573",
-     "seq": 501572,
+     "utterance": "S3-1571",
+     "seq": 501570,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "Not that I know of.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1580",
-     "seq": 501579,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "On the way back up, what did you do with the plates? Again, Teresa's here and she's thanking you for being honest. Do you know what he did with the plates?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1581",
-     "seq": 501580,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1582",
-     "seq": 501581,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "You don't? Is that the truth?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1583",
-     "seq": 501582,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yes.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1584",
-     "seq": 501583,
-     "session": "S3",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "You say that right in front of Teresa now?",
+     "kind": "asserts",
+     "quote": "And he took the license plates off.",
      "sensitive": false,
      "verified": null
     }
@@ -5748,40 +6061,185 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan), and nothing earlier in the transcripts supplies it.",
-   "first_interrogator": null,
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. fassbender); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
+   "first_interrogator": {
+    "utterance": "S2-1590",
+    "seq": 401589,
+    "session": "S2",
+    "page": "fassbender",
+    "role": "interrogator",
+    "speaker": "FASSBENDER",
+    "kind": "asks",
+    "quote": "Did he go and look at the engine, did he raise the hood at all or anything like that?",
+    "sensitive": false,
+    "verified": true,
+    "first": "interrogator"
+   },
    "first_suspect": {
-    "utterance": "S2-2244",
-    "seq": 402243,
+    "utterance": "S2-1591",
+    "seq": 401590,
     "session": "S2",
     "page": "brendan",
     "role": "suspect",
     "speaker": "BRENDAN",
-    "kind": "asserts",
-    "quote": "After we put the tires and the branches on, we went to the house and went in there for a little bit and we went out and he was gonna take the jeep down in the pit so he did and that's when we covered it with branches and the hood.",
+    "kind": "assents",
+    "quote": "Yeah.",
     "sensitive": false,
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 0,
-   "adopted_by_assent": false,
+   "interrogator_mentions_before_suspect": 1,
+   "adopted_by_assent": true,
    "crossed_sessions": false,
    "events": [
     {
-     "utterance": "S2-2244",
-     "seq": 402243,
+     "utterance": "S2-1590",
+     "seq": 401589,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "Did he go and look at the engine, did he raise the hood at all or anything like that?",
+     "sensitive": false,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S2-1591",
+     "seq": 401590,
      "session": "S2",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "After we put the tires and the branches on, we went to the house and went in there for a little bit and we went out and he was gonna take the jeep down in the pit so he did and that's when we covered it with branches and the hood.",
+     "kind": "assents",
+     "quote": "Yeah.",
      "sensitive": false,
      "verified": true,
      "first": "suspect"
+    },
+    {
+     "utterance": "S2-1592",
+     "seq": 401591,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "What was that?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1593",
+     "seq": 401592,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "What did he do, Brendan?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1594",
+     "seq": 401593,
+     "session": "S2",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "It's OK, what did he do?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1595",
+     "seq": 401594,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "What did he do under the hood, if that's what he did?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1596",
+     "seq": 401595,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "I don't know what he did, but I know he went under.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1597",
+     "seq": 401596,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "He did raise the hood?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1598",
+     "seq": 401597,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "(nods \u201cyes\u201d)",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1599",
+     "seq": 401598,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "You remember that?",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-1600",
+     "seq": 401599,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0042",
+     "seq": 500041,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "put her on the fire",
+     "sensitive": true,
+     "verified": null
     }
    ]
   },
@@ -5802,14 +6260,14 @@
    "why": "It was reported publicly on Nov 10, 2005, before the suspect first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
    "first_interrogator": null,
    "first_suspect": {
-    "utterance": "S2-1688",
-    "seq": 401687,
+    "utterance": "S2-1686",
+    "seq": 401685,
     "session": "S2",
     "page": "brendan",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "In the dresser.",
+    "quote": "He hid the, that's when he hid the key and then",
     "sensitive": false,
     "verified": true,
     "first": "suspect"
@@ -5818,6 +6276,19 @@
    "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
+    {
+     "utterance": "S2-1686",
+     "seq": 401685,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He hid the, that's when he hid the key and then",
+     "sensitive": false,
+     "verified": true,
+     "first": "suspect"
+    },
     {
      "utterance": "S2-1688",
      "seq": 401687,
@@ -5828,8 +6299,7 @@
      "kind": "asserts",
      "quote": "In the dresser.",
      "sensitive": false,
-     "verified": true,
-     "first": "suspect"
+     "verified": null
     },
     {
      "utterance": "S2-2572",
@@ -5840,6 +6310,54 @@
      "speaker": "BRENDAN",
      "kind": "asserts",
      "quote": "In that middle a drawer.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-0042",
+     "seq": 500041,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "her clothes",
+     "sensitive": true,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1218",
+     "seq": 501217,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "In his bedroom",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1400",
+     "seq": 501399,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Yes.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S3-1404",
+     "seq": 501403,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "Cuz he was gonna get rid of it.",
      "sensitive": false,
      "verified": null
     }
@@ -5914,6 +6432,18 @@
      "quote": "In his house by, in his bathroom.",
      "sensitive": false,
      "verified": null
+    },
+    {
+     "utterance": "S3-0042",
+     "seq": 500041,
+     "session": "S3",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "her clothes",
+     "sensitive": true,
+     "verified": null
     }
    ]
   },
@@ -5931,16 +6461,16 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. wiegert); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. fassbender); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
    "first_interrogator": {
-    "utterance": "S2-1721",
-    "seq": 401720,
+    "utterance": "S2-0366",
+    "seq": 400365,
     "session": "S2",
-    "page": "wiegert",
+    "page": "fassbender",
     "role": "interrogator",
-    "speaker": "WIEGERT",
-    "kind": "asks",
-    "quote": "How much blood was there on the floor, quite a bit?",
+    "speaker": "FASSBENDER",
+    "kind": "asserts",
+    "quote": "OK. We're not gonna go any further in this cuz we need to get the truth out now. We know the fire was going. We know that he had already had his altercation wit",
     "sensitive": true,
     "verified": true,
     "first": "interrogator"
@@ -5958,10 +6488,23 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 1,
+   "interrogator_mentions_before_suspect": 2,
    "adopted_by_assent": true,
    "crossed_sessions": false,
    "events": [
+    {
+     "utterance": "S2-0366",
+     "seq": 400365,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asserts",
+     "quote": "OK. We're not gonna go any further in this cuz we need to get the truth out now. We know the fire was going. We know that he had already had his altercation wit",
+     "sensitive": true,
+     "verified": true,
+     "first": "interrogator"
+    },
     {
      "utterance": "S2-1681",
      "seq": 401680,
@@ -5985,8 +6528,7 @@
      "kind": "asks",
      "quote": "How much blood was there on the floor, quite a bit?",
      "sensitive": true,
-     "verified": true,
-     "first": "interrogator"
+     "verified": true
     },
     {
      "utterance": "S2-1722",
@@ -6009,7 +6551,7 @@
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "Like by the lawn mower and where the jeeps\u2019 tire was.",
+     "quote": "Like by the lawn mower and where the jeeps' tire was.",
      "sensitive": false,
      "verified": null
     },
@@ -6080,93 +6622,21 @@
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "denies",
+     "kind": "asserts",
      "quote": "With her clothes.",
      "sensitive": false,
      "verified": null
     },
     {
-     "utterance": "S3-1120",
-     "seq": 501119,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "He gave you some money out of her purse, though. That I know. How much?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1122",
-     "seq": 501121,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Did he give you money?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1123",
-     "seq": 501122,
+     "utterance": "S3-0990",
+     "seq": 500989,
      "session": "S3",
      "page": "brendan",
      "role": "suspect",
      "speaker": "BRENDAN",
      "kind": "asserts",
-     "quote": "A little bit.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1131",
-     "seq": 501130,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "Cuz, you went through her purse, didn't you? So how did the money get out of her purse?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1132",
-     "seq": 501131,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He gave it ta me.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1133",
-     "seq": 501132,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "How much did he give you?",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1134",
-     "seq": 501133,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "A few dollars.",
-     "sensitive": false,
+     "quote": "In some of the stuff that we used to clean up the blood.",
+     "sensitive": true,
      "verified": null
     }
    ]
@@ -6186,19 +6656,7 @@
    "origin_label": "Suspect said it first",
    "corroboration": "may_corroborate",
    "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan), and nothing earlier in the transcripts supplies it.",
-   "first_interrogator": {
-    "utterance": "S3-1474",
-    "seq": 501473,
-    "session": "S3",
-    "page": "wiegert",
-    "role": "interrogator",
-    "speaker": "WIEGERT",
-    "kind": "asks",
-    "quote": "What about the bed sheets, did he do anything with the bed sheets at all?",
-    "sensitive": false,
-    "verified": true,
-    "first": "interrogator"
-   },
+   "first_interrogator": null,
    "first_suspect": {
     "utterance": "S2-1676",
     "seq": 401675,
@@ -6230,31 +6688,6 @@
      "first": "suspect"
     },
     {
-     "utterance": "S3-1121",
-     "seq": 501120,
-     "session": "S3",
-     "page": "brendan",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "I don't remember.",
-     "sensitive": false,
-     "verified": null
-    },
-    {
-     "utterance": "S3-1474",
-     "seq": 501473,
-     "session": "S3",
-     "page": "wiegert",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "What about the bed sheets, did he do anything with the bed sheets at all?",
-     "sensitive": false,
-     "verified": true,
-     "first": "interrogator"
-    },
-    {
      "utterance": "S3-1475",
      "seq": 501474,
      "session": "S3",
@@ -6282,20 +6715,8 @@
    "origin": "public",
    "origin_label": "Reported publicly before the interview",
    "corroboration": "cannot_corroborate",
-   "why": "It was reported publicly on Nov 16, 2005, before the suspect first said it (May 13, 2006, Sheboygan County Sheriff's Dept., p. brendan). Investigators also mentioned it before he did (Feb 27, 2006, Mishicot High School, p. fassbender).",
-   "first_interrogator": {
-    "utterance": "S1-0540",
-    "seq": 100539,
-    "session": "S1",
-    "page": "fassbender",
-    "role": "interrogator",
-    "speaker": "FASSBENDER",
-    "kind": "asks",
-    "quote": "he put some clothing on there",
-    "sensitive": false,
-    "verified": true,
-    "first": "interrogator"
-   },
+   "why": "It was reported publicly on Nov 16, 2005, before the suspect first said it (May 13, 2006, Sheboygan County Sheriff's Dept., p. brendan).",
+   "first_interrogator": null,
    "first_suspect": {
     "utterance": "S3-0042",
     "seq": 500041,
@@ -6309,23 +6730,10 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 1,
+   "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
-   "crossed_sessions": true,
+   "crossed_sessions": false,
    "events": [
-    {
-     "utterance": "S1-0540",
-     "seq": 100539,
-     "session": "S1",
-     "page": "fassbender",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "he put some clothing on there",
-     "sensitive": false,
-     "verified": true,
-     "first": "interrogator"
-    },
     {
      "utterance": "S3-0042",
      "seq": 500041,
@@ -6364,19 +6772,19 @@
     "planted": false,
     "prior_statement": ""
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan), and nothing earlier in the transcripts supplies it.",
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. fassbender); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan).",
    "first_interrogator": {
-    "utterance": "S3-1106",
-    "seq": 501105,
-    "session": "S3",
-    "page": "wiegert",
+    "utterance": "S1-0555",
+    "seq": 100554,
+    "session": "S1",
+    "page": "fassbender",
     "role": "interrogator",
-    "speaker": "WIEGERT",
+    "speaker": "FASSBENDER",
     "kind": "asks",
-    "quote": "put her cell phone and camera and purse and stuff in the burn barrel",
+    "quote": "Did he tell ya anything about a, a, any of her other possessions like I imagine a woman would have a purse, she probably had her cell phone, a camera to take pi",
     "sensitive": false,
     "verified": true,
     "first": "interrogator"
@@ -6394,10 +6802,47 @@
     "verified": true,
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 0,
+   "interrogator_mentions_before_suspect": 3,
    "adopted_by_assent": false,
-   "crossed_sessions": false,
+   "crossed_sessions": true,
    "events": [
+    {
+     "utterance": "S1-0555",
+     "seq": 100554,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "Did he tell ya anything about a, a, any of her other possessions like I imagine a woman would have a purse, she probably had her cell phone, a camera to take pi",
+     "sensitive": false,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S1-0560",
+     "seq": 100559,
+     "session": "S1",
+     "page": "wiegert",
+     "role": "interrogator",
+     "speaker": "WIEGERT",
+     "kind": "asks",
+     "quote": "How about a camera? Did he say anything about a camera?",
+     "sensitive": false,
+     "verified": true
+    },
+    {
+     "utterance": "S1-0656",
+     "seq": 100655,
+     "session": "S1",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "What's that number? Do you have her work phone number or her cell phone number?",
+     "sensitive": false,
+     "verified": true
+    },
     {
      "utterance": "S2-1983",
      "seq": 401982,
@@ -6421,8 +6866,7 @@
      "kind": "asks",
      "quote": "put her cell phone and camera and purse and stuff in the burn barrel",
      "sensitive": false,
-     "verified": true,
-     "first": "interrogator"
+     "verified": true
     }
    ]
   },
@@ -6729,16 +7173,16 @@
    "origin": "never_adopted",
    "origin_label": "Suspect never adopted it",
    "corroboration": "not_adopted",
-   "why": "Investigators raised it (May 13, 2006, Sheboygan County Sheriff's Dept., p. fassbender), but the suspect never stated or agreed to it.",
+   "why": "Investigators raised it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. fassbender), but the suspect never stated or agreed to it.",
    "first_interrogator": {
-    "utterance": "S3-0187",
-    "seq": 500186,
-    "session": "S3",
+    "utterance": "S2-2865",
+    "seq": 402864,
+    "session": "S2",
     "page": "fassbender",
     "role": "interrogator",
     "speaker": "FASSBENDER",
     "kind": "asks",
-    "quote": "Any, um, scars, marks, tattoos?",
+    "quote": "We know that Teresa had a, a tattoo on her stomach, do you remember that?",
     "sensitive": true,
     "verified": true,
     "first": "interrogator"
@@ -6749,6 +7193,43 @@
    "crossed_sessions": false,
    "events": [
     {
+     "utterance": "S2-2865",
+     "seq": 402864,
+     "session": "S2",
+     "page": "fassbender",
+     "role": "interrogator",
+     "speaker": "FASSBENDER",
+     "kind": "asks",
+     "quote": "We know that Teresa had a, a tattoo on her stomach, do you remember that?",
+     "sensitive": true,
+     "verified": true,
+     "first": "interrogator"
+    },
+    {
+     "utterance": "S2-2866",
+     "seq": 402865,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "(shakes head \u201cno\u201d) uh uh",
+     "sensitive": false,
+     "verified": null
+    },
+    {
+     "utterance": "S2-2868",
+     "seq": 402867,
+     "session": "S2",
+     "page": "brendan",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "denies",
+     "quote": "No but I don't know where it was.",
+     "sensitive": false,
+     "verified": null
+    },
+    {
      "utterance": "S3-0187",
      "seq": 500186,
      "session": "S3",
@@ -6758,8 +7239,7 @@
      "kind": "asks",
      "quote": "Any, um, scars, marks, tattoos?",
      "sensitive": true,
-     "verified": true,
-     "first": "interrogator"
+     "verified": null
     },
     {
      "utterance": "S3-0188",
@@ -6788,7 +7268,7 @@
    "suspect_words_per_turn": 3.0,
    "suspect_minimal_answers": 76,
    "questions": 305,
-   "questions_that_carry_facts": 8,
+   "questions_that_carry_facts": 19,
    "tactics": {
     "we_already_know": 6,
     "minimization": 9,
@@ -6845,7 +7325,7 @@
    "suspect_words_per_turn": 5.4,
    "suspect_minimal_answers": 594,
    "questions": 1154,
-   "questions_that_carry_facts": 70,
+   "questions_that_carry_facts": 72,
    "tactics": {
     "we_already_know": 36,
     "minimization": 16,
@@ -6864,7 +7344,7 @@
    "suspect_words_per_turn": 6.0,
    "suspect_minimal_answers": 378,
    "questions": 847,
-   "questions_that_carry_facts": 59,
+   "questions_that_carry_facts": 58,
    "tactics": {
     "we_already_know": 10,
     "minimization": 5,
@@ -6874,5 +7354,5 @@
   }
  ],
  "utterance_count": 5755,
- "mention_count": 464
+ "mention_count": 505
 }

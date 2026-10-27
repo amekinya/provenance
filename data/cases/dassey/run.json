@@ -2,39 +2,40 @@
  "labeler": "lightning",
  "read_by": "super_vl",
  "failed_chunks": [],
- "unverified": 5,
- "tag_seconds": 253.3,
- "total_seconds": 540.9,
- "cost_usd": 0.7762,
+ "unverified": 0,
+ "safety_search_added": 20,
+ "tag_seconds": 281.1,
+ "total_seconds": 929.1,
+ "cost_usd": 1.8617,
  "by_model": {
   "lightning": {
    "model": "nvidia/Nemotron-3_5-Lightning",
-   "calls": 321,
-   "seconds": 2007.8529494169975,
-   "cost_usd": 0.07257156
+   "calls": 323,
+   "seconds": 2228.978913127,
+   "cost_usd": 0.07491354000000004
   },
   "ultra": {
    "model": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "calls": 33,
-   "seconds": 723.1965669029998,
-   "cost_usd": 0.7036080000000002
+   "calls": 75,
+   "seconds": 1776.9995380499997,
+   "cost_usd": 1.7867900000000003
   }
  },
  "calls": [
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.73,
+   "seconds": 6.0,
    "tokens_in": 2096,
-   "tokens_out": 480,
+   "tokens_out": 444,
    "cached_in": 0,
-   "cost_usd": 0.00024,
+   "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.33,
+   "seconds": 5.99,
    "tokens_in": 2903,
    "tokens_out": 444,
    "cached_in": 0,
@@ -44,17 +45,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.35,
+   "seconds": 6.47,
    "tokens_in": 2538,
-   "tokens_out": 444,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00026,
+   "cost_usd": 0.00027,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.81,
+   "seconds": 6.46,
    "tokens_in": 1780,
    "tokens_out": 480,
    "cached_in": 0,
@@ -64,7 +65,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.78,
+   "seconds": 6.48,
    "tokens_in": 1813,
    "tokens_out": 480,
    "cached_in": 0,
@@ -74,7 +75,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.78,
+   "seconds": 6.48,
    "tokens_in": 2433,
    "tokens_out": 480,
    "cached_in": 0,
@@ -84,7 +85,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.21,
+   "seconds": 2.78,
    "tokens_in": 1865,
    "tokens_out": 165,
    "cached_in": 0,
@@ -94,7 +95,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.8,
+   "seconds": 3.44,
    "tokens_in": 1838,
    "tokens_out": 227,
    "cached_in": 0,
@@ -104,17 +105,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.52,
+   "seconds": 7.99,
    "tokens_in": 2049,
-   "tokens_out": 509,
+   "tokens_out": 671,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.03,
+   "seconds": 5.91,
    "tokens_in": 2255,
    "tokens_out": 444,
    "cached_in": 0,
@@ -124,17 +125,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.61,
+   "seconds": 5.3,
    "tokens_in": 2027,
-   "tokens_out": 480,
+   "tokens_out": 444,
    "cached_in": 0,
-   "cost_usd": 0.00024,
+   "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.67,
+   "seconds": 5.78,
    "tokens_in": 1827,
    "tokens_out": 480,
    "cached_in": 0,
@@ -144,7 +145,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.63,
+   "seconds": 6.4,
    "tokens_in": 1806,
    "tokens_out": 480,
    "cached_in": 0,
@@ -154,7 +155,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.62,
+   "seconds": 6.58,
    "tokens_in": 1817,
    "tokens_out": 480,
    "cached_in": 0,
@@ -164,7 +165,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.73,
+   "seconds": 6.03,
    "tokens_in": 1871,
    "tokens_out": 444,
    "cached_in": 0,
@@ -184,17 +185,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.81,
+   "seconds": 9.29,
    "tokens_in": 1783,
-   "tokens_out": 682,
+   "tokens_out": 725,
    "cached_in": 0,
-   "cost_usd": 0.00027,
+   "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.18,
+   "seconds": 7.19,
    "tokens_in": 1820,
    "tokens_out": 565,
    "cached_in": 0,
@@ -204,7 +205,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.71,
+   "seconds": 5.61,
    "tokens_in": 1902,
    "tokens_out": 444,
    "cached_in": 0,
@@ -214,7 +215,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.79,
+   "seconds": 5.6,
    "tokens_in": 1847,
    "tokens_out": 444,
    "cached_in": 0,
@@ -224,7 +225,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
+   "seconds": 6.16,
    "tokens_in": 1820,
    "tokens_out": 480,
    "cached_in": 0,
@@ -234,27 +235,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.65,
+   "seconds": 7.23,
    "tokens_in": 1797,
-   "tokens_out": 743,
+   "tokens_out": 559,
    "cached_in": 0,
-   "cost_usd": 0.00029,
+   "cost_usd": 0.00024,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.43,
+   "seconds": 6.23,
    "tokens_in": 1720,
-   "tokens_out": 257,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00016,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.39,
+   "seconds": 6.32,
    "tokens_in": 1715,
    "tokens_out": 480,
    "cached_in": 0,
@@ -264,7 +265,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.25,
+   "seconds": 1.1,
    "tokens_in": 1830,
    "tokens_out": 60,
    "cached_in": 0,
@@ -274,7 +275,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.9,
+   "seconds": 5.83,
    "tokens_in": 1928,
    "tokens_out": 444,
    "cached_in": 0,
@@ -284,7 +285,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.99,
+   "seconds": 5.88,
    "tokens_in": 2123,
    "tokens_out": 444,
    "cached_in": 0,
@@ -294,7 +295,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.18,
+   "seconds": 2.27,
    "tokens_in": 2210,
    "tokens_out": 142,
    "cached_in": 0,
@@ -304,17 +305,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.97,
+   "seconds": 8.74,
    "tokens_in": 1962,
-   "tokens_out": 122,
+   "tokens_out": 671,
    "cached_in": 0,
-   "cost_usd": 0.00015,
+   "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.65,
+   "seconds": 9.55,
    "tokens_in": 2068,
    "tokens_out": 742,
    "cached_in": 0,
@@ -324,9 +325,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.01,
+   "seconds": 2.1,
    "tokens_in": 1971,
-   "tokens_out": 126,
+   "tokens_out": 132,
    "cached_in": 0,
    "cost_usd": 0.00015,
    "purpose": "Tag details in sentences"
@@ -334,9 +335,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.17,
+   "seconds": 7.1,
    "tokens_in": 1971,
-   "tokens_out": 545,
+   "tokens_out": 546,
    "cached_in": 0,
    "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
@@ -344,7 +345,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.79,
+   "seconds": 5.64,
    "tokens_in": 1887,
    "tokens_out": 444,
    "cached_in": 0,
@@ -354,7 +355,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.27,
+   "seconds": 6.1,
    "tokens_in": 1991,
    "tokens_out": 480,
    "cached_in": 0,
@@ -364,7 +365,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.2,
+   "seconds": 6.19,
    "tokens_in": 1855,
    "tokens_out": 480,
    "cached_in": 0,
@@ -374,7 +375,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.29,
+   "seconds": 6.28,
    "tokens_in": 1971,
    "tokens_out": 480,
    "cached_in": 0,
@@ -384,7 +385,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.37,
+   "seconds": 6.23,
    "tokens_in": 1893,
    "tokens_out": 480,
    "cached_in": 0,
@@ -394,7 +395,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.34,
+   "seconds": 6.19,
    "tokens_in": 2096,
    "tokens_out": 480,
    "cached_in": 0,
@@ -404,7 +405,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.55,
+   "seconds": 1.46,
    "tokens_in": 1784,
    "tokens_out": 84,
    "cached_in": 0,
@@ -414,7 +415,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.3,
+   "seconds": 6.36,
    "tokens_in": 2034,
    "tokens_out": 480,
    "cached_in": 0,
@@ -424,7 +425,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
+   "seconds": 6.3,
    "tokens_in": 1767,
    "tokens_out": 480,
    "cached_in": 0,
@@ -434,17 +435,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.12,
+   "seconds": 5.28,
    "tokens_in": 1826,
-   "tokens_out": 480,
+   "tokens_out": 403,
    "cached_in": 0,
-   "cost_usd": 0.00022,
+   "cost_usd": 0.00021,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.15,
+   "seconds": 6.24,
    "tokens_in": 1811,
    "tokens_out": 480,
    "cached_in": 0,
@@ -454,7 +455,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.14,
+   "seconds": 6.24,
    "tokens_in": 2014,
    "tokens_out": 480,
    "cached_in": 0,
@@ -464,258 +465,8 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.2,
+   "seconds": 6.18,
    "tokens_in": 1852,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.24,
-   "tokens_in": 1722,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.76,
-   "tokens_in": 1790,
-   "tokens_out": 444,
-   "cached_in": 0,
-   "cost_usd": 0.00021,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.17,
-   "tokens_in": 1852,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
-   "tokens_in": 2025,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00024,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
-   "tokens_in": 1735,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.19,
-   "tokens_in": 1751,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.3,
-   "tokens_in": 1835,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.8,
-   "tokens_in": 2929,
-   "tokens_out": 444,
-   "cached_in": 0,
-   "cost_usd": 0.00028,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.28,
-   "tokens_in": 1956,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.43,
-   "tokens_in": 1873,
-   "tokens_out": 584,
-   "cached_in": 0,
-   "cost_usd": 0.00025,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.28,
-   "tokens_in": 1882,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.24,
-   "tokens_in": 1917,
-   "tokens_out": 468,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.8,
-   "tokens_in": 1846,
-   "tokens_out": 444,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
-   "tokens_in": 1794,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
-   "tokens_in": 2003,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00024,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.29,
-   "tokens_in": 1809,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.3,
-   "tokens_in": 1799,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 10.19,
-   "tokens_in": 1741,
-   "tokens_out": 782,
-   "cached_in": 0,
-   "cost_usd": 0.00029,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 10.38,
-   "tokens_in": 1778,
-   "tokens_out": 790,
-   "cached_in": 0,
-   "cost_usd": 0.0003,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.8,
-   "tokens_in": 1768,
-   "tokens_out": 506,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 10.13,
-   "tokens_in": 1797,
-   "tokens_out": 757,
-   "cached_in": 0,
-   "cost_usd": 0.00029,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.52,
-   "tokens_in": 1880,
-   "tokens_out": 401,
-   "cached_in": 0,
-   "cost_usd": 0.00021,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.09,
-   "tokens_in": 1809,
-   "tokens_out": 374,
-   "cached_in": 0,
-   "cost_usd": 0.0002,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.82,
-   "tokens_in": 1867,
-   "tokens_out": 444,
-   "cached_in": 0,
-   "cost_usd": 0.00022,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
-   "tokens_in": 1840,
    "tokens_out": 480,
    "cached_in": 0,
    "cost_usd": 0.00023,
@@ -725,6 +476,256 @@
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
    "seconds": 6.26,
+   "tokens_in": 1722,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 5.79,
+   "tokens_in": 1790,
+   "tokens_out": 444,
+   "cached_in": 0,
+   "cost_usd": 0.00021,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.21,
+   "tokens_in": 1852,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.22,
+   "tokens_in": 2025,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00024,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.11,
+   "tokens_in": 1735,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.23,
+   "tokens_in": 1751,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.24,
+   "tokens_in": 1835,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 5.7,
+   "tokens_in": 2929,
+   "tokens_out": 444,
+   "cached_in": 0,
+   "cost_usd": 0.00028,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.31,
+   "tokens_in": 1956,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 7.57,
+   "tokens_in": 1873,
+   "tokens_out": 588,
+   "cached_in": 0,
+   "cost_usd": 0.00025,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.13,
+   "tokens_in": 1882,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.11,
+   "tokens_in": 1917,
+   "tokens_out": 468,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 5.75,
+   "tokens_in": 1846,
+   "tokens_out": 444,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.4,
+   "tokens_in": 1794,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.34,
+   "tokens_in": 2003,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00024,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.41,
+   "tokens_in": 1809,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.33,
+   "tokens_in": 1799,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 8.5,
+   "tokens_in": 1741,
+   "tokens_out": 651,
+   "cached_in": 0,
+   "cost_usd": 0.00026,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 10.59,
+   "tokens_in": 1778,
+   "tokens_out": 828,
+   "cached_in": 0,
+   "cost_usd": 0.00031,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.54,
+   "tokens_in": 1768,
+   "tokens_out": 506,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 9.55,
+   "tokens_in": 1797,
+   "tokens_out": 743,
+   "cached_in": 0,
+   "cost_usd": 0.00029,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.17,
+   "tokens_in": 1880,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 5.22,
+   "tokens_in": 1809,
+   "tokens_out": 374,
+   "cached_in": 0,
+   "cost_usd": 0.0002,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 5.59,
+   "tokens_in": 1867,
+   "tokens_out": 444,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.2,
+   "tokens_in": 1840,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00023,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.19,
    "tokens_in": 1795,
    "tokens_out": 480,
    "cached_in": 0,
@@ -734,17 +735,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.27,
+   "seconds": 1.58,
    "tokens_in": 1804,
-   "tokens_out": 224,
+   "tokens_out": 92,
    "cached_in": 0,
-   "cost_usd": 0.00016,
+   "cost_usd": 0.00013,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.23,
+   "seconds": 6.21,
    "tokens_in": 1767,
    "tokens_out": 480,
    "cached_in": 0,
@@ -754,7 +755,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.63,
+   "seconds": 9.72,
    "tokens_in": 1728,
    "tokens_out": 752,
    "cached_in": 0,
@@ -764,7 +765,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
+   "seconds": 6.19,
    "tokens_in": 1796,
    "tokens_out": 480,
    "cached_in": 0,
@@ -774,7 +775,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.59,
+   "seconds": 7.6,
    "tokens_in": 1832,
    "tokens_out": 585,
    "cached_in": 0,
@@ -784,9 +785,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.91,
+   "seconds": 4.7,
    "tokens_in": 1806,
-   "tokens_out": 357,
+   "tokens_out": 353,
    "cached_in": 0,
    "cost_usd": 0.00019,
    "purpose": "Tag details in sentences"
@@ -794,7 +795,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.81,
+   "seconds": 6.96,
    "tokens_in": 1746,
    "tokens_out": 525,
    "cached_in": 0,
@@ -804,7 +805,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.12,
+   "seconds": 6.33,
    "tokens_in": 1795,
    "tokens_out": 480,
    "cached_in": 0,
@@ -814,7 +815,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.05,
+   "seconds": 6.18,
    "tokens_in": 1804,
    "tokens_out": 468,
    "cached_in": 0,
@@ -824,7 +825,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.72,
+   "seconds": 5.82,
    "tokens_in": 1930,
    "tokens_out": 444,
    "cached_in": 0,
@@ -834,7 +835,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.18,
+   "seconds": 6.2,
    "tokens_in": 1900,
    "tokens_out": 480,
    "cached_in": 0,
@@ -844,17 +845,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.71,
+   "seconds": 6.87,
    "tokens_in": 1714,
-   "tokens_out": 605,
+   "tokens_out": 532,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.83,
+   "seconds": 7.81,
    "tokens_in": 1768,
    "tokens_out": 614,
    "cached_in": 0,
@@ -864,7 +865,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.87,
+   "seconds": 5.59,
    "tokens_in": 1912,
    "tokens_out": 444,
    "cached_in": 0,
@@ -874,7 +875,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.16,
+   "seconds": 6.08,
    "tokens_in": 1900,
    "tokens_out": 480,
    "cached_in": 0,
@@ -884,7 +885,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.66,
+   "seconds": 5.65,
    "tokens_in": 1795,
    "tokens_out": 444,
    "cached_in": 0,
@@ -894,7 +895,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.17,
+   "seconds": 6.11,
    "tokens_in": 1749,
    "tokens_out": 480,
    "cached_in": 0,
@@ -904,17 +905,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.69,
+   "seconds": 2.81,
    "tokens_in": 1783,
-   "tokens_out": 444,
+   "tokens_out": 206,
    "cached_in": 0,
-   "cost_usd": 0.00021,
+   "cost_usd": 0.00016,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.32,
+   "seconds": 6.21,
    "tokens_in": 1773,
    "tokens_out": 480,
    "cached_in": 0,
@@ -924,17 +925,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.5,
+   "seconds": 8.14,
    "tokens_in": 1832,
-   "tokens_out": 580,
+   "tokens_out": 619,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00026,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.15,
+   "seconds": 6.23,
    "tokens_in": 1789,
    "tokens_out": 480,
    "cached_in": 0,
@@ -944,7 +945,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.71,
+   "seconds": 5.69,
    "tokens_in": 1768,
    "tokens_out": 444,
    "cached_in": 0,
@@ -954,7 +955,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.75,
+   "seconds": 5.73,
    "tokens_in": 1754,
    "tokens_out": 444,
    "cached_in": 0,
@@ -964,7 +965,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.56,
+   "seconds": 6.64,
    "tokens_in": 1796,
    "tokens_out": 500,
    "cached_in": 0,
@@ -974,7 +975,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.71,
+   "seconds": 5.77,
    "tokens_in": 1801,
    "tokens_out": 444,
    "cached_in": 0,
@@ -984,9 +985,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.78,
+   "seconds": 6.11,
    "tokens_in": 1814,
-   "tokens_out": 444,
+   "tokens_out": 472,
    "cached_in": 0,
    "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
@@ -994,7 +995,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.9,
+   "seconds": 7.67,
    "tokens_in": 1754,
    "tokens_out": 606,
    "cached_in": 0,
@@ -1004,7 +1005,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.04,
+   "seconds": 8.01,
    "tokens_in": 1787,
    "tokens_out": 621,
    "cached_in": 0,
@@ -1014,7 +1015,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.59,
+   "seconds": 3.38,
    "tokens_in": 1885,
    "tokens_out": 247,
    "cached_in": 0,
@@ -1024,17 +1025,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.52,
+   "seconds": 6.55,
    "tokens_in": 1866,
-   "tokens_out": 648,
+   "tokens_out": 519,
    "cached_in": 0,
-   "cost_usd": 0.00027,
+   "cost_usd": 0.00024,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.85,
+   "seconds": 5.58,
    "tokens_in": 1762,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1044,19 +1045,19 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.83,
+   "seconds": 8.03,
    "tokens_in": 1772,
-   "tokens_out": 694,
+   "tokens_out": 638,
    "cached_in": 0,
-   "cost_usd": 0.00027,
+   "cost_usd": 0.00026,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.8,
+   "seconds": 6.59,
    "tokens_in": 1803,
-   "tokens_out": 518,
+   "tokens_out": 520,
    "cached_in": 0,
    "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
@@ -1064,7 +1065,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.91,
+   "seconds": 6.71,
    "tokens_in": 1793,
    "tokens_out": 532,
    "cached_in": 0,
@@ -1074,17 +1075,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.1,
+   "seconds": 8.41,
    "tokens_in": 1754,
-   "tokens_out": 132,
+   "tokens_out": 444,
    "cached_in": 0,
-   "cost_usd": 0.00014,
+   "cost_usd": 0.00021,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 12.6,
+   "seconds": 14.02,
    "tokens_in": 1804,
    "tokens_out": 976,
    "cached_in": 0,
@@ -1094,7 +1095,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.99,
+   "seconds": 10.6,
    "tokens_in": 1771,
    "tokens_out": 705,
    "cached_in": 0,
@@ -1104,7 +1105,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.85,
+   "seconds": 5.32,
    "tokens_in": 1711,
    "tokens_out": 205,
    "cached_in": 0,
@@ -1114,17 +1115,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.8,
+   "seconds": 8.9,
    "tokens_in": 1717,
-   "tokens_out": 766,
+   "tokens_out": 592,
    "cached_in": 0,
-   "cost_usd": 0.00029,
+   "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.19,
+   "seconds": 9.9,
    "tokens_in": 1802,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1134,17 +1135,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.61,
+   "seconds": 8.97,
    "tokens_in": 1810,
-   "tokens_out": 588,
+   "tokens_out": 508,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.12,
+   "seconds": 51.25,
+   "tokens_in": 1766,
+   "tokens_out": 4000,
+   "cached_in": 0,
+   "cost_usd": 0.00107,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.34,
    "tokens_in": 1766,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1154,9 +1165,19 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.58,
+   "seconds": 5.18,
    "tokens_in": 1793,
-   "tokens_out": 165,
+   "tokens_out": 63,
+   "cached_in": 0,
+   "cost_usd": 0.00012,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.9,
+   "tokens_in": 1784,
+   "tokens_out": 194,
    "cached_in": 0,
    "cost_usd": 0.00015,
    "purpose": "Tag details in sentences"
@@ -1164,19 +1185,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.75,
-   "tokens_in": 1784,
-   "tokens_out": 591,
-   "cached_in": 0,
-   "cost_usd": 0.00025,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.51,
+   "seconds": 1.87,
    "tokens_in": 1773,
-   "tokens_out": 89,
+   "tokens_out": 117,
    "cached_in": 0,
    "cost_usd": 0.00013,
    "purpose": "Tag details in sentences"
@@ -1184,7 +1195,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.42,
+   "seconds": 6.29,
    "tokens_in": 1794,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1194,17 +1205,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.91,
+   "seconds": 8.22,
    "tokens_in": 1954,
-   "tokens_out": 191,
+   "tokens_out": 629,
    "cached_in": 0,
-   "cost_usd": 0.00016,
+   "cost_usd": 0.00027,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.34,
+   "seconds": 1.22,
    "tokens_in": 1910,
    "tokens_out": 66,
    "cached_in": 0,
@@ -1214,9 +1225,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.28,
+   "seconds": 9.48,
    "tokens_in": 1785,
-   "tokens_out": 714,
+   "tokens_out": 729,
    "cached_in": 0,
    "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
@@ -1224,27 +1235,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.88,
+   "seconds": 9.44,
    "tokens_in": 1781,
-   "tokens_out": 684,
+   "tokens_out": 730,
    "cached_in": 0,
-   "cost_usd": 0.00027,
+   "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.66,
+   "seconds": 5.81,
    "tokens_in": 1838,
-   "tokens_out": 734,
+   "tokens_out": 444,
    "cached_in": 0,
-   "cost_usd": 0.00029,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.87,
+   "seconds": 7.86,
    "tokens_in": 1798,
    "tokens_out": 605,
    "cached_in": 0,
@@ -1254,9 +1265,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.34,
+   "seconds": 6.3,
    "tokens_in": 1762,
-   "tokens_out": 480,
+   "tokens_out": 481,
    "cached_in": 0,
    "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
@@ -1264,17 +1275,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.7,
+   "seconds": 8.41,
    "tokens_in": 1764,
-   "tokens_out": 583,
+   "tokens_out": 553,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00024,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.62,
+   "seconds": 9.89,
    "tokens_in": 1773,
    "tokens_out": 755,
    "cached_in": 0,
@@ -1284,7 +1295,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.25,
+   "seconds": 6.77,
    "tokens_in": 1797,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1294,37 +1305,47 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.27,
+   "seconds": 11.9,
    "tokens_in": 1876,
+   "tokens_out": 918,
+   "cached_in": 0,
+   "cost_usd": 0.00033,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.71,
+   "tokens_in": 1751,
    "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.7,
-   "tokens_in": 1751,
-   "tokens_out": 444,
-   "cached_in": 0,
-   "cost_usd": 0.00021,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.78,
+   "seconds": 7.53,
    "tokens_in": 1774,
-   "tokens_out": 509,
+   "tokens_out": 598,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.72,
+   "seconds": 52.59,
+   "tokens_in": 1767,
+   "tokens_out": 4000,
+   "cached_in": 0,
+   "cost_usd": 0.00107,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 5.9,
    "tokens_in": 1767,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1334,7 +1355,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
+   "seconds": 7.8,
    "tokens_in": 1794,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1344,27 +1365,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.92,
+   "seconds": 10.05,
    "tokens_in": 1769,
-   "tokens_out": 617,
+   "tokens_out": 653,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00026,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.71,
+   "seconds": 6.91,
    "tokens_in": 1796,
-   "tokens_out": 444,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00021,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.41,
+   "seconds": 9.61,
    "tokens_in": 1894,
    "tokens_out": 722,
    "cached_in": 0,
@@ -1374,7 +1395,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.83,
+   "seconds": 11.07,
    "tokens_in": 1790,
    "tokens_out": 666,
    "cached_in": 0,
@@ -1384,17 +1405,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.74,
+   "seconds": 4.41,
    "tokens_in": 1795,
-   "tokens_out": 506,
+   "tokens_out": 142,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00014,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.41,
+   "seconds": 7.02,
    "tokens_in": 1795,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1404,7 +1425,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.91,
+   "seconds": 7.11,
    "tokens_in": 1770,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1414,7 +1435,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.4,
+   "seconds": 6.29,
    "tokens_in": 1743,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1424,7 +1445,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.43,
+   "seconds": 7.69,
    "tokens_in": 1743,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1434,7 +1455,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.92,
+   "seconds": 7.7,
    "tokens_in": 1859,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1444,7 +1465,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.34,
+   "seconds": 6.22,
    "tokens_in": 2187,
    "tokens_out": 477,
    "cached_in": 0,
@@ -1454,7 +1475,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.78,
+   "seconds": 5.69,
    "tokens_in": 1927,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1464,7 +1485,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.78,
+   "seconds": 5.77,
    "tokens_in": 1872,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1474,17 +1495,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.7,
+   "seconds": 6.19,
    "tokens_in": 1906,
-   "tokens_out": 444,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00022,
+   "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.17,
+   "seconds": 6.21,
    "tokens_in": 1836,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1494,17 +1515,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.18,
+   "seconds": 5.7,
    "tokens_in": 1828,
-   "tokens_out": 480,
+   "tokens_out": 427,
    "cached_in": 0,
-   "cost_usd": 0.00022,
+   "cost_usd": 0.00021,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.32,
+   "seconds": 6.45,
    "tokens_in": 1855,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1514,7 +1535,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.77,
+   "seconds": 2.38,
    "tokens_in": 1805,
    "tokens_out": 111,
    "cached_in": 0,
@@ -1524,7 +1545,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.41,
+   "seconds": 7.24,
    "tokens_in": 1796,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1534,7 +1555,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.57,
+   "seconds": 6.42,
    "tokens_in": 1780,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1544,19 +1565,19 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.01,
+   "seconds": 11.04,
    "tokens_in": 2002,
-   "tokens_out": 205,
+   "tokens_out": 756,
    "cached_in": 0,
-   "cost_usd": 0.00017,
+   "cost_usd": 0.0003,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.18,
+   "seconds": 2.12,
    "tokens_in": 1851,
-   "tokens_out": 62,
+   "tokens_out": 61,
    "cached_in": 0,
    "cost_usd": 0.00013,
    "purpose": "Tag details in sentences"
@@ -1564,9 +1585,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.58,
+   "seconds": 5.7,
    "tokens_in": 1967,
-   "tokens_out": 322,
+   "tokens_out": 361,
    "cached_in": 0,
    "cost_usd": 0.0002,
    "purpose": "Tag details in sentences"
@@ -1574,7 +1595,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.1,
+   "seconds": 5.85,
    "tokens_in": 1818,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1584,7 +1605,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.01,
+   "seconds": 3.26,
    "tokens_in": 1808,
    "tokens_out": 193,
    "cached_in": 0,
@@ -1594,7 +1615,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.59,
+   "seconds": 1.66,
    "tokens_in": 1822,
    "tokens_out": 91,
    "cached_in": 0,
@@ -1604,9 +1625,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.37,
+   "seconds": 6.2,
    "tokens_in": 1817,
-   "tokens_out": 463,
+   "tokens_out": 464,
    "cached_in": 0,
    "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
@@ -1614,7 +1635,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.18,
+   "seconds": 4.2,
    "tokens_in": 1959,
    "tokens_out": 292,
    "cached_in": 0,
@@ -1624,7 +1645,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.93,
+   "seconds": 2.7,
    "tokens_in": 1799,
    "tokens_out": 117,
    "cached_in": 0,
@@ -1634,7 +1655,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.34,
+   "seconds": 7.12,
    "tokens_in": 1923,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1644,9 +1665,19 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.91,
+   "seconds": 6.64,
    "tokens_in": 1796,
-   "tokens_out": 444,
+   "tokens_out": 480,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.13,
+   "tokens_in": 1942,
+   "tokens_out": 390,
    "cached_in": 0,
    "cost_usd": 0.00021,
    "purpose": "Tag details in sentences"
@@ -1654,17 +1685,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 11.01,
-   "tokens_in": 1942,
-   "tokens_out": 869,
-   "cached_in": 0,
-   "cost_usd": 0.00033,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.35,
+   "seconds": 6.21,
    "tokens_in": 1893,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1674,27 +1695,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.63,
+   "seconds": 6.48,
    "tokens_in": 1877,
-   "tokens_out": 505,
+   "tokens_out": 447,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.63,
+   "seconds": 7.66,
    "tokens_in": 1901,
-   "tokens_out": 599,
+   "tokens_out": 575,
    "cached_in": 0,
-   "cost_usd": 0.00026,
+   "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.71,
+   "seconds": 10.86,
    "tokens_in": 1837,
    "tokens_out": 606,
    "cached_in": 0,
@@ -1704,7 +1725,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 12.5,
+   "seconds": 13.28,
    "tokens_in": 1857,
    "tokens_out": 1012,
    "cached_in": 0,
@@ -1714,7 +1735,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.08,
+   "seconds": 6.16,
    "tokens_in": 1823,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1724,27 +1745,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.05,
+   "seconds": 6.5,
    "tokens_in": 1780,
-   "tokens_out": 480,
+   "tokens_out": 427,
    "cached_in": 0,
-   "cost_usd": 0.00022,
+   "cost_usd": 0.00021,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.73,
+   "seconds": 9.65,
    "tokens_in": 1783,
-   "tokens_out": 606,
+   "tokens_out": 745,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00029,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 11.19,
+   "seconds": 12.21,
    "tokens_in": 1755,
    "tokens_out": 893,
    "cached_in": 0,
@@ -1754,7 +1775,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.63,
+   "seconds": 5.64,
    "tokens_in": 1738,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1764,7 +1785,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.12,
+   "seconds": 6.2,
    "tokens_in": 1752,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1774,7 +1795,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.82,
+   "seconds": 5.69,
    "tokens_in": 1778,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1784,7 +1805,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
+   "seconds": 6.34,
    "tokens_in": 1858,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1794,7 +1815,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.54,
+   "seconds": 7.78,
    "tokens_in": 1830,
    "tokens_out": 586,
    "cached_in": 0,
@@ -1804,7 +1825,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.29,
+   "seconds": 1.2,
    "tokens_in": 1779,
    "tokens_out": 62,
    "cached_in": 0,
@@ -1814,7 +1835,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.27,
+   "seconds": 6.44,
    "tokens_in": 1755,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1824,7 +1845,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.95,
+   "seconds": 7.91,
    "tokens_in": 1848,
    "tokens_out": 598,
    "cached_in": 0,
@@ -1834,7 +1855,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.1,
+   "seconds": 6.14,
    "tokens_in": 1853,
    "tokens_out": 471,
    "cached_in": 0,
@@ -1864,7 +1885,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.87,
+   "seconds": 5.78,
    "tokens_in": 1841,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1874,7 +1895,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.9,
+   "seconds": 5.79,
    "tokens_in": 1782,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1884,7 +1905,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.49,
+   "seconds": 6.31,
    "tokens_in": 1794,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1894,7 +1915,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.93,
+   "seconds": 5.9,
    "tokens_in": 1845,
    "tokens_out": 444,
    "cached_in": 0,
@@ -1904,7 +1925,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.34,
+   "seconds": 6.3,
    "tokens_in": 1871,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1914,9 +1935,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.7,
+   "seconds": 2.58,
    "tokens_in": 1833,
-   "tokens_out": 177,
+   "tokens_out": 167,
    "cached_in": 0,
    "cost_usd": 0.00015,
    "purpose": "Tag details in sentences"
@@ -1924,7 +1945,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.78,
+   "seconds": 2.7,
    "tokens_in": 1836,
    "tokens_out": 180,
    "cached_in": 0,
@@ -1934,7 +1955,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.35,
+   "seconds": 7.13,
    "tokens_in": 1719,
    "tokens_out": 556,
    "cached_in": 0,
@@ -1944,17 +1965,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 10.42,
+   "seconds": 10.62,
    "tokens_in": 1773,
-   "tokens_out": 796,
+   "tokens_out": 851,
    "cached_in": 0,
-   "cost_usd": 0.0003,
+   "cost_usd": 0.00031,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.1,
+   "seconds": 7.71,
    "tokens_in": 1733,
    "tokens_out": 613,
    "cached_in": 0,
@@ -1964,7 +1985,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.4,
+   "seconds": 6.09,
    "tokens_in": 1763,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1974,7 +1995,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.31,
+   "seconds": 6.05,
    "tokens_in": 1841,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1984,7 +2005,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.48,
+   "seconds": 6.07,
    "tokens_in": 1890,
    "tokens_out": 480,
    "cached_in": 0,
@@ -1994,7 +2015,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.92,
+   "seconds": 5.62,
    "tokens_in": 1800,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2004,17 +2025,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.4,
+   "seconds": 7.18,
    "tokens_in": 1817,
-   "tokens_out": 561,
+   "tokens_out": 574,
    "cached_in": 0,
-   "cost_usd": 0.00024,
+   "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.88,
+   "seconds": 5.59,
    "tokens_in": 1873,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2024,7 +2045,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.33,
+   "seconds": 6.03,
    "tokens_in": 1835,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2034,7 +2055,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.2,
+   "seconds": 6.09,
    "tokens_in": 1823,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2044,8 +2065,28 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.31,
+   "seconds": 5.61,
    "tokens_in": 1824,
+   "tokens_out": 444,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 5.63,
+   "tokens_in": 1877,
+   "tokens_out": 444,
+   "cached_in": 0,
+   "cost_usd": 0.00022,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 6.11,
+   "tokens_in": 1802,
    "tokens_out": 480,
    "cached_in": 0,
    "cost_usd": 0.00022,
@@ -2054,27 +2095,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.23,
-   "tokens_in": 1877,
-   "tokens_out": 480,
-   "cached_in": 0,
-   "cost_usd": 0.00023,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.85,
-   "tokens_in": 1802,
-   "tokens_out": 444,
-   "cached_in": 0,
-   "cost_usd": 0.00021,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.25,
+   "seconds": 7.09,
    "tokens_in": 1917,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2084,17 +2105,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.57,
+   "seconds": 9.01,
    "tokens_in": 2066,
-   "tokens_out": 506,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00024,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.7,
+   "seconds": 9.2,
    "tokens_in": 1783,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2104,7 +2125,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.26,
+   "seconds": 10.6,
    "tokens_in": 1815,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2114,7 +2135,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.17,
+   "seconds": 13.23,
    "tokens_in": 2029,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2124,7 +2145,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
+   "seconds": 13.1,
    "tokens_in": 2025,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2134,7 +2155,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.19,
+   "seconds": 14.57,
    "tokens_in": 1784,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2144,7 +2165,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
+   "seconds": 14.0,
    "tokens_in": 1919,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2154,7 +2175,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.98,
+   "seconds": 11.09,
    "tokens_in": 1788,
    "tokens_out": 376,
    "cached_in": 0,
@@ -2164,7 +2185,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.78,
+   "seconds": 2.99,
    "tokens_in": 1960,
    "tokens_out": 612,
    "cached_in": 0,
@@ -2174,7 +2195,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.8,
+   "seconds": 2.36,
    "tokens_in": 2030,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2184,17 +2205,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.31,
+   "seconds": 13.9,
    "tokens_in": 2625,
-   "tokens_out": 472,
+   "tokens_out": 938,
    "cached_in": 0,
-   "cost_usd": 0.00027,
+   "cost_usd": 0.00038,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
+   "seconds": 2.13,
    "tokens_in": 1759,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2204,7 +2225,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.92,
+   "seconds": 8.53,
    "tokens_in": 1824,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2214,7 +2235,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.78,
+   "seconds": 6.59,
    "tokens_in": 1783,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2224,7 +2245,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.33,
+   "seconds": 6.5,
    "tokens_in": 1994,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2234,19 +2255,19 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.89,
+   "seconds": 6.19,
    "tokens_in": 1838,
-   "tokens_out": 444,
+   "tokens_out": 375,
    "cached_in": 0,
-   "cost_usd": 0.00022,
+   "cost_usd": 0.0002,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.49,
+   "seconds": 6.5,
    "tokens_in": 1844,
-   "tokens_out": 481,
+   "tokens_out": 483,
    "cached_in": 0,
    "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
@@ -2254,17 +2275,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.52,
+   "seconds": 7.73,
    "tokens_in": 1787,
-   "tokens_out": 718,
+   "tokens_out": 597,
    "cached_in": 0,
-   "cost_usd": 0.00028,
+   "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.93,
+   "seconds": 10.83,
    "tokens_in": 1814,
    "tokens_out": 675,
    "cached_in": 0,
@@ -2274,7 +2295,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.41,
+   "seconds": 6.09,
    "tokens_in": 1810,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2284,7 +2305,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.36,
+   "seconds": 6.78,
    "tokens_in": 1760,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2294,17 +2315,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.02,
+   "seconds": 3.7,
    "tokens_in": 1784,
-   "tokens_out": 532,
+   "tokens_out": 274,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00017,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.2,
+   "seconds": 3.74,
    "tokens_in": 1837,
    "tokens_out": 137,
    "cached_in": 0,
@@ -2314,7 +2335,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.33,
+   "seconds": 7.61,
    "tokens_in": 1703,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2324,7 +2345,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.31,
+   "seconds": 6.07,
    "tokens_in": 1793,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2334,17 +2355,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.3,
+   "seconds": 5.89,
    "tokens_in": 1869,
-   "tokens_out": 480,
+   "tokens_out": 463,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.85,
+   "seconds": 5.75,
    "tokens_in": 2364,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2354,49 +2375,19 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 12.29,
+   "seconds": 11.0,
    "tokens_in": 1875,
-   "tokens_out": 959,
+   "tokens_out": 824,
    "cached_in": 0,
-   "cost_usd": 0.00034,
+   "cost_usd": 0.00031,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.3,
+   "seconds": 8.73,
    "tokens_in": 1795,
-   "tokens_out": 714,
-   "cached_in": 0,
-   "cost_usd": 0.00028,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.57,
-   "tokens_in": 1836,
-   "tokens_out": 577,
-   "cached_in": 0,
-   "cost_usd": 0.00025,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 12.72,
-   "tokens_in": 1794,
-   "tokens_out": 1000,
-   "cached_in": 0,
-   "cost_usd": 0.00035,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.27,
-   "tokens_in": 1809,
-   "tokens_out": 628,
+   "tokens_out": 635,
    "cached_in": 0,
    "cost_usd": 0.00026,
    "purpose": "Tag details in sentences"
@@ -2404,17 +2395,47 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.91,
-   "tokens_in": 1768,
-   "tokens_out": 443,
+   "seconds": 10.09,
+   "tokens_in": 1836,
+   "tokens_out": 696,
    "cached_in": 0,
-   "cost_usd": 0.00021,
+   "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.6,
+   "seconds": 11.36,
+   "tokens_in": 1794,
+   "tokens_out": 724,
+   "cached_in": 0,
+   "cost_usd": 0.00028,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 9.8,
+   "tokens_in": 1809,
+   "tokens_out": 760,
+   "cached_in": 0,
+   "cost_usd": 0.00029,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 9.71,
+   "tokens_in": 1768,
+   "tokens_out": 761,
+   "cached_in": 0,
+   "cost_usd": 0.00029,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 1.52,
    "tokens_in": 1799,
    "tokens_out": 94,
    "cached_in": 0,
@@ -2424,9 +2445,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.6,
+   "seconds": 9.97,
    "tokens_in": 1907,
-   "tokens_out": 667,
+   "tokens_out": 663,
    "cached_in": 0,
    "cost_usd": 0.00027,
    "purpose": "Tag details in sentences"
@@ -2434,7 +2455,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.27,
+   "seconds": 8.88,
    "tokens_in": 1828,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2444,7 +2465,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.58,
+   "seconds": 2.75,
    "tokens_in": 1824,
    "tokens_out": 90,
    "cached_in": 0,
@@ -2454,7 +2475,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.31,
+   "seconds": 6.93,
    "tokens_in": 1803,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2464,7 +2485,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.48,
+   "seconds": 1.8,
    "tokens_in": 1805,
    "tokens_out": 83,
    "cached_in": 0,
@@ -2474,7 +2495,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.1,
+   "seconds": 8.21,
    "tokens_in": 1849,
    "tokens_out": 538,
    "cached_in": 0,
@@ -2484,7 +2505,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.8,
+   "seconds": 6.6,
    "tokens_in": 1900,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2494,7 +2515,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.38,
+   "seconds": 6.41,
    "tokens_in": 1894,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2504,7 +2525,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.01,
+   "seconds": 8.07,
    "tokens_in": 1978,
    "tokens_out": 619,
    "cached_in": 0,
@@ -2514,17 +2535,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.98,
+   "seconds": 6.67,
    "tokens_in": 1896,
-   "tokens_out": 531,
+   "tokens_out": 503,
    "cached_in": 0,
-   "cost_usd": 0.00024,
+   "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.59,
+   "seconds": 1.56,
    "tokens_in": 2261,
    "tokens_out": 86,
    "cached_in": 0,
@@ -2534,7 +2555,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.33,
+   "seconds": 6.32,
    "tokens_in": 2009,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2544,11 +2565,11 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.77,
+   "seconds": 6.29,
    "tokens_in": 2109,
-   "tokens_out": 444,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00024,
    "purpose": "Tag details in sentences"
   },
   {
@@ -2564,7 +2585,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.24,
+   "seconds": 6.27,
    "tokens_in": 2262,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2574,7 +2595,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.9,
+   "seconds": 3.71,
    "tokens_in": 1838,
    "tokens_out": 275,
    "cached_in": 0,
@@ -2584,7 +2605,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.22,
+   "seconds": 6.11,
    "tokens_in": 1906,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2594,7 +2615,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.83,
+   "seconds": 5.71,
    "tokens_in": 1858,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2604,17 +2625,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 12.52,
+   "seconds": 8.79,
    "tokens_in": 1880,
-   "tokens_out": 990,
+   "tokens_out": 690,
    "cached_in": 0,
-   "cost_usd": 0.00035,
+   "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.27,
+   "seconds": 6.14,
    "tokens_in": 1715,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2624,7 +2645,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.24,
+   "seconds": 6.09,
    "tokens_in": 1759,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2634,17 +2655,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 1.4,
+   "seconds": 6.16,
    "tokens_in": 1810,
-   "tokens_out": 70,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00013,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.51,
+   "seconds": 3.4,
    "tokens_in": 1874,
    "tokens_out": 251,
    "cached_in": 0,
@@ -2654,7 +2675,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.16,
+   "seconds": 7.12,
    "tokens_in": 1792,
    "tokens_out": 557,
    "cached_in": 0,
@@ -2664,17 +2685,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.9,
+   "seconds": 8.49,
    "tokens_in": 1811,
-   "tokens_out": 610,
+   "tokens_out": 660,
    "cached_in": 0,
-   "cost_usd": 0.00026,
+   "cost_usd": 0.00027,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.72,
+   "seconds": 5.69,
    "tokens_in": 1750,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2684,17 +2705,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.39,
+   "seconds": 7.7,
    "tokens_in": 1812,
-   "tokens_out": 565,
+   "tokens_out": 593,
    "cached_in": 0,
-   "cost_usd": 0.00024,
+   "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.81,
+   "seconds": 5.82,
    "tokens_in": 1775,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2704,27 +2725,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.41,
+   "seconds": 7.92,
    "tokens_in": 1806,
-   "tokens_out": 576,
+   "tokens_out": 611,
    "cached_in": 0,
-   "cost_usd": 0.00025,
+   "cost_usd": 0.00026,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.5,
+   "seconds": 9.3,
    "tokens_in": 1850,
-   "tokens_out": 662,
+   "tokens_out": 723,
    "cached_in": 0,
-   "cost_usd": 0.00027,
+   "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.05,
+   "seconds": 8.99,
    "tokens_in": 1799,
    "tokens_out": 699,
    "cached_in": 0,
@@ -2734,9 +2755,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.69,
+   "seconds": 4.79,
    "tokens_in": 1816,
-   "tokens_out": 343,
+   "tokens_out": 348,
    "cached_in": 0,
    "cost_usd": 0.00019,
    "purpose": "Tag details in sentences"
@@ -2744,7 +2765,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.77,
+   "seconds": 5.73,
    "tokens_in": 1884,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2754,7 +2775,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.25,
+   "seconds": 6.36,
    "tokens_in": 1896,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2764,7 +2785,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.75,
+   "seconds": 5.76,
    "tokens_in": 1833,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2774,7 +2795,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.38,
+   "seconds": 5.08,
    "tokens_in": 1847,
    "tokens_out": 239,
    "cached_in": 0,
@@ -2784,17 +2805,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.62,
+   "seconds": 6.7,
    "tokens_in": 1791,
-   "tokens_out": 740,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00029,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.81,
+   "seconds": 6.82,
    "tokens_in": 1756,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2804,27 +2825,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.76,
+   "seconds": 10.99,
    "tokens_in": 1798,
-   "tokens_out": 444,
+   "tokens_out": 859,
    "cached_in": 0,
-   "cost_usd": 0.00021,
+   "cost_usd": 0.00031,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.8,
+   "seconds": 6.28,
    "tokens_in": 1774,
-   "tokens_out": 444,
+   "tokens_out": 480,
    "cached_in": 0,
-   "cost_usd": 0.00021,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.33,
+   "seconds": 6.6,
    "tokens_in": 1873,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2834,17 +2855,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.61,
+   "seconds": 5.45,
    "tokens_in": 1880,
-   "tokens_out": 334,
+   "tokens_out": 384,
    "cached_in": 0,
-   "cost_usd": 0.00019,
+   "cost_usd": 0.0002,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.82,
+   "seconds": 6.01,
    "tokens_in": 1827,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2854,19 +2875,29 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.28,
+   "seconds": 7.22,
    "tokens_in": 1795,
-   "tokens_out": 480,
+   "tokens_out": 444,
    "cached_in": 0,
-   "cost_usd": 0.00022,
+   "cost_usd": 0.00021,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 7.41,
+   "seconds": 8.6,
    "tokens_in": 1803,
-   "tokens_out": 574,
+   "tokens_out": 678,
+   "cached_in": 0,
+   "cost_usd": 0.00027,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 7.42,
+   "tokens_in": 1737,
+   "tokens_out": 588,
    "cached_in": 0,
    "cost_usd": 0.00025,
    "purpose": "Tag details in sentences"
@@ -2874,17 +2905,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.18,
-   "tokens_in": 1737,
-   "tokens_out": 630,
-   "cached_in": 0,
-   "cost_usd": 0.00026,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.2,
+   "seconds": 6.24,
    "tokens_in": 1838,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2894,7 +2915,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.63,
+   "seconds": 5.67,
    "tokens_in": 1846,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2904,7 +2925,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.79,
+   "seconds": 5.7,
    "tokens_in": 2100,
    "tokens_out": 444,
    "cached_in": 0,
@@ -2914,9 +2935,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.87,
+   "seconds": 8.49,
    "tokens_in": 1929,
-   "tokens_out": 702,
+   "tokens_out": 681,
    "cached_in": 0,
    "cost_usd": 0.00028,
    "purpose": "Tag details in sentences"
@@ -2924,27 +2945,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.12,
+   "seconds": 6.97,
    "tokens_in": 1851,
-   "tokens_out": 480,
+   "tokens_out": 444,
    "cached_in": 0,
-   "cost_usd": 0.00023,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 2.82,
+   "seconds": 9.51,
    "tokens_in": 1842,
-   "tokens_out": 198,
+   "tokens_out": 657,
    "cached_in": 0,
-   "cost_usd": 0.00016,
+   "cost_usd": 0.00027,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.25,
+   "seconds": 6.41,
    "tokens_in": 1776,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2954,18 +2975,8 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 10.21,
+   "seconds": 5.59,
    "tokens_in": 1723,
-   "tokens_out": 792,
-   "cached_in": 0,
-   "cost_usd": 0.00029,
-   "purpose": "Tag details in sentences"
-  },
-  {
-   "role": "lightning",
-   "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.69,
-   "tokens_in": 1740,
    "tokens_out": 444,
    "cached_in": 0,
    "cost_usd": 0.00021,
@@ -2974,17 +2985,27 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 8.17,
-   "tokens_in": 1761,
-   "tokens_out": 639,
+   "seconds": 6.28,
+   "tokens_in": 1740,
+   "tokens_out": 473,
    "cached_in": 0,
-   "cost_usd": 0.00026,
+   "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.19,
+   "seconds": 9.75,
+   "tokens_in": 1761,
+   "tokens_out": 775,
+   "cached_in": 0,
+   "cost_usd": 0.00029,
+   "purpose": "Tag details in sentences"
+  },
+  {
+   "role": "lightning",
+   "model_id": "nvidia/Nemotron-3_5-Lightning",
+   "seconds": 8.98,
    "tokens_in": 1818,
    "tokens_out": 480,
    "cached_in": 0,
@@ -2994,7 +3015,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.72,
+   "seconds": 5.76,
    "tokens_in": 1881,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3004,9 +3025,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.78,
+   "seconds": 7.34,
    "tokens_in": 1911,
-   "tokens_out": 444,
+   "tokens_out": 427,
    "cached_in": 0,
    "cost_usd": 0.00022,
    "purpose": "Tag details in sentences"
@@ -3014,7 +3035,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.34,
+   "seconds": 6.28,
    "tokens_in": 1821,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3024,9 +3045,9 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.91,
+   "seconds": 6.27,
    "tokens_in": 1983,
-   "tokens_out": 444,
+   "tokens_out": 480,
    "cached_in": 0,
    "cost_usd": 0.00023,
    "purpose": "Tag details in sentences"
@@ -3034,17 +3055,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 9.73,
+   "seconds": 6.62,
    "tokens_in": 1894,
-   "tokens_out": 746,
+   "tokens_out": 509,
    "cached_in": 0,
-   "cost_usd": 0.00029,
+   "cost_usd": 0.00024,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.94,
+   "seconds": 5.67,
    "tokens_in": 1930,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3054,7 +3075,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.37,
+   "seconds": 5.96,
    "tokens_in": 1880,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3064,7 +3085,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.91,
+   "seconds": 5.52,
    "tokens_in": 1857,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3074,7 +3095,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.31,
+   "seconds": 5.93,
    "tokens_in": 1795,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3084,7 +3105,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.89,
+   "seconds": 5.56,
    "tokens_in": 1964,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3094,7 +3115,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.8,
+   "seconds": 5.56,
    "tokens_in": 2105,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3104,7 +3125,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.84,
+   "seconds": 5.5,
    "tokens_in": 1832,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3114,7 +3135,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.38,
+   "seconds": 4.18,
    "tokens_in": 2080,
    "tokens_out": 323,
    "cached_in": 0,
@@ -3124,7 +3145,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.71,
+   "seconds": 5.52,
    "tokens_in": 2023,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3134,7 +3155,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
+   "seconds": 6.18,
    "tokens_in": 2141,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3144,17 +3165,17 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.19,
+   "seconds": 5.51,
    "tokens_in": 1754,
-   "tokens_out": 480,
+   "tokens_out": 444,
    "cached_in": 0,
-   "cost_usd": 0.00022,
+   "cost_usd": 0.00021,
    "purpose": "Tag details in sentences"
   },
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.72,
+   "seconds": 5.5,
    "tokens_in": 1900,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3164,7 +3185,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.79,
+   "seconds": 5.53,
    "tokens_in": 1901,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3174,7 +3195,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.21,
+   "seconds": 6.0,
    "tokens_in": 1815,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3184,7 +3205,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 6.2,
+   "seconds": 5.96,
    "tokens_in": 1923,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3194,7 +3215,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 5.9,
+   "seconds": 5.98,
    "tokens_in": 2012,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3204,7 +3225,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.51,
+   "seconds": 5.99,
    "tokens_in": 1833,
    "tokens_out": 480,
    "cached_in": 0,
@@ -3214,7 +3235,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 4.0,
+   "seconds": 4.82,
    "tokens_in": 1958,
    "tokens_out": 444,
    "cached_in": 0,
@@ -3224,7 +3245,7 @@
   {
    "role": "lightning",
    "model_id": "nvidia/Nemotron-3_5-Lightning",
-   "seconds": 3.29,
+   "seconds": 4.18,
    "tokens_in": 1754,
    "tokens_out": 348,
    "cached_in": 0,
@@ -3234,331 +3255,751 @@
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 19.84,
-   "tokens_in": 742,
-   "tokens_out": 6000,
+   "seconds": 35.83,
+   "tokens_in": 1275,
+   "tokens_out": 10000,
    "cached_in": 0,
-   "cost_usd": 0.01874,
+   "cost_usd": 0.03127,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 47.5,
-   "tokens_in": 742,
-   "tokens_out": 12000,
+   "seconds": 12.89,
+   "tokens_in": 1275,
+   "tokens_out": 3906,
    "cached_in": 0,
-   "cost_usd": 0.03674,
+   "cost_usd": 0.01299,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 21.04,
+   "seconds": 35.71,
+   "tokens_in": 470,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03047,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 44.6,
+   "tokens_in": 470,
+   "tokens_out": 14520,
+   "cached_in": 0,
+   "cost_usd": 0.04403,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 25.74,
+   "tokens_in": 509,
+   "tokens_out": 7095,
+   "cached_in": 0,
+   "cost_usd": 0.02179,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 36.63,
+   "tokens_in": 674,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03067,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 15.84,
+   "tokens_in": 674,
+   "tokens_out": 4904,
+   "cached_in": 0,
+   "cost_usd": 0.01539,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 36.44,
+   "tokens_in": 448,
+   "tokens_out": 9213,
+   "cached_in": 0,
+   "cost_usd": 0.02809,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 31.85,
+   "tokens_in": 403,
+   "tokens_out": 8067,
+   "cached_in": 0,
+   "cost_usd": 0.0246,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 30.84,
+   "tokens_in": 446,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03045,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 18.66,
+   "tokens_in": 446,
+   "tokens_out": 5710,
+   "cached_in": 0,
+   "cost_usd": 0.01758,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 4.15,
+   "tokens_in": 627,
+   "tokens_out": 1089,
+   "cached_in": 0,
+   "cost_usd": 0.00389,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 5.58,
+   "tokens_in": 1062,
+   "tokens_out": 1634,
+   "cached_in": 0,
+   "cost_usd": 0.00596,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 26.53,
+   "tokens_in": 285,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03028,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 5.78,
+   "tokens_in": 285,
+   "tokens_out": 1717,
+   "cached_in": 0,
+   "cost_usd": 0.00544,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 12.2,
+   "tokens_in": 647,
+   "tokens_out": 3785,
+   "cached_in": 0,
+   "cost_usd": 0.012,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 30.03,
+   "tokens_in": 617,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03062,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 24.27,
+   "tokens_in": 617,
+   "tokens_out": 8867,
+   "cached_in": 0,
+   "cost_usd": 0.02722,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 18.84,
+   "tokens_in": 399,
+   "tokens_out": 5930,
+   "cached_in": 0,
+   "cost_usd": 0.01819,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 8.07,
+   "tokens_in": 452,
+   "tokens_out": 2636,
+   "cached_in": 0,
+   "cost_usd": 0.00836,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 3.66,
+   "tokens_in": 156,
+   "tokens_out": 943,
+   "cached_in": 0,
+   "cost_usd": 0.00298,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 29.39,
+   "tokens_in": 436,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03044,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 42.6,
+   "tokens_in": 436,
+   "tokens_out": 14390,
+   "cached_in": 0,
+   "cost_usd": 0.04361,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 3.58,
+   "tokens_in": 397,
+   "tokens_out": 1111,
+   "cached_in": 0,
+   "cost_usd": 0.00373,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 22.11,
+   "tokens_in": 156,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03016,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 7.9,
+   "tokens_in": 156,
+   "tokens_out": 2189,
+   "cached_in": 0,
+   "cost_usd": 0.00672,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 25.82,
+   "tokens_in": 413,
+   "tokens_out": 9251,
+   "cached_in": 0,
+   "cost_usd": 0.02817,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 21.98,
+   "tokens_in": 639,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03064,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 23.64,
+   "tokens_in": 639,
+   "tokens_out": 8523,
+   "cached_in": 0,
+   "cost_usd": 0.02621,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 15.95,
+   "tokens_in": 503,
+   "tokens_out": 5792,
+   "cached_in": 0,
+   "cost_usd": 0.01788,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 23.46,
+   "tokens_in": 155,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03016,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 36.09,
+   "tokens_in": 155,
+   "tokens_out": 20000,
+   "cached_in": 0,
+   "cost_usd": 0.06016,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 27.09,
+   "tokens_in": 211,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03021,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 11.32,
+   "tokens_in": 211,
+   "tokens_out": 3202,
+   "cached_in": 0,
+   "cost_usd": 0.00982,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 31.58,
+   "tokens_in": 618,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03062,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 56.2,
+   "tokens_in": 618,
+   "tokens_out": 20000,
+   "cached_in": 0,
+   "cost_usd": 0.06062,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 29.45,
+   "tokens_in": 1282,
+   "tokens_out": 8274,
+   "cached_in": 0,
+   "cost_usd": 0.0261,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 35.36,
+   "tokens_in": 696,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.0307,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 61.98,
+   "tokens_in": 696,
+   "tokens_out": 20000,
+   "cached_in": 0,
+   "cost_usd": 0.0607,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 16.92,
+   "tokens_in": 538,
+   "tokens_out": 4380,
+   "cached_in": 0,
+   "cost_usd": 0.01368,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 12.59,
+   "tokens_in": 769,
+   "tokens_out": 3471,
+   "cached_in": 0,
+   "cost_usd": 0.01118,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 8.52,
+   "tokens_in": 749,
+   "tokens_out": 2328,
+   "cached_in": 0,
+   "cost_usd": 0.00773,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 15.49,
+   "tokens_in": 563,
+   "tokens_out": 4400,
+   "cached_in": 0,
+   "cost_usd": 0.01376,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 34.87,
+   "tokens_in": 470,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03047,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 3.3,
+   "tokens_in": 470,
+   "tokens_out": 1049,
+   "cached_in": 0,
+   "cost_usd": 0.00362,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 8.03,
+   "tokens_in": 443,
+   "tokens_out": 2121,
+   "cached_in": 0,
+   "cost_usd": 0.00681,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 6.23,
+   "tokens_in": 400,
+   "tokens_out": 1852,
+   "cached_in": 0,
+   "cost_usd": 0.00596,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 6.02,
+   "tokens_in": 564,
+   "tokens_out": 1643,
+   "cached_in": 0,
+   "cost_usd": 0.00549,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 37.18,
+   "tokens_in": 389,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03039,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 69.75,
+   "tokens_in": 389,
+   "tokens_out": 20000,
+   "cached_in": 0,
+   "cost_usd": 0.06039,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 31.92,
+   "tokens_in": 411,
+   "tokens_out": 8626,
+   "cached_in": 0,
+   "cost_usd": 0.02629,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 12.07,
+   "tokens_in": 523,
+   "tokens_out": 3346,
+   "cached_in": 0,
+   "cost_usd": 0.01056,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 27.78,
+   "tokens_in": 1060,
+   "tokens_out": 8053,
+   "cached_in": 0,
+   "cost_usd": 0.02522,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 25.27,
+   "tokens_in": 623,
+   "tokens_out": 10000,
+   "cached_in": 0,
+   "cost_usd": 0.03062,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 53.76,
+   "tokens_in": 623,
+   "tokens_out": 20000,
+   "cached_in": 0,
+   "cost_usd": 0.06062,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 31.05,
+   "tokens_in": 1191,
+   "tokens_out": 8999,
+   "cached_in": 0,
+   "cost_usd": 0.02819,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 35.39,
+   "tokens_in": 426,
+   "tokens_out": 9726,
+   "cached_in": 0,
+   "cost_usd": 0.0296,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 27.75,
+   "tokens_in": 508,
+   "tokens_out": 7078,
+   "cached_in": 0,
+   "cost_usd": 0.02174,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 7.25,
+   "tokens_in": 568,
+   "tokens_out": 2076,
+   "cached_in": 0,
+   "cost_usd": 0.0068,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 9.98,
+   "tokens_in": 956,
+   "tokens_out": 2868,
+   "cached_in": 0,
+   "cost_usd": 0.00956,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 13.55,
+   "tokens_in": 897,
+   "tokens_out": 3526,
+   "cached_in": 0,
+   "cost_usd": 0.01148,
+   "purpose": "Verify deciding sentences"
+  },
+  {
+   "role": "ultra",
+   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
+   "seconds": 11.09,
    "tokens_in": 765,
-   "tokens_out": 6000,
+   "tokens_out": 3561,
    "cached_in": 0,
-   "cost_usd": 0.01877,
+   "cost_usd": 0.01145,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 36.79,
-   "tokens_in": 765,
-   "tokens_out": 12000,
+   "seconds": 27.08,
+   "tokens_in": 969,
+   "tokens_out": 10000,
    "cached_in": 0,
-   "cost_usd": 0.03676,
+   "cost_usd": 0.03097,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 24.49,
-   "tokens_in": 995,
-   "tokens_out": 6000,
+   "seconds": 38.18,
+   "tokens_in": 969,
+   "tokens_out": 20000,
    "cached_in": 0,
-   "cost_usd": 0.019,
+   "cost_usd": 0.06097,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 38.28,
-   "tokens_in": 995,
-   "tokens_out": 12000,
+   "seconds": 2.73,
+   "tokens_in": 520,
+   "tokens_out": 838,
    "cached_in": 0,
-   "cost_usd": 0.037,
+   "cost_usd": 0.00303,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 23.24,
-   "tokens_in": 580,
-   "tokens_out": 6000,
+   "seconds": 36.36,
+   "tokens_in": 618,
+   "tokens_out": 10000,
    "cached_in": 0,
-   "cost_usd": 0.01858,
+   "cost_usd": 0.03062,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 23.14,
-   "tokens_in": 580,
-   "tokens_out": 6033,
+   "seconds": 23.55,
+   "tokens_in": 618,
+   "tokens_out": 8021,
    "cached_in": 0,
-   "cost_usd": 0.01868,
+   "cost_usd": 0.02468,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 6.86,
-   "tokens_in": 816,
-   "tokens_out": 2342,
+   "seconds": 13.12,
+   "tokens_in": 564,
+   "tokens_out": 4146,
    "cached_in": 0,
-   "cost_usd": 0.00784,
+   "cost_usd": 0.013,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 23.27,
-   "tokens_in": 1198,
-   "tokens_out": 6000,
+   "seconds": 40.64,
+   "tokens_in": 389,
+   "tokens_out": 10000,
    "cached_in": 0,
-   "cost_usd": 0.0192,
+   "cost_usd": 0.03039,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 42.02,
-   "tokens_in": 1198,
-   "tokens_out": 12000,
+   "seconds": 48.0,
+   "tokens_in": 389,
+   "tokens_out": 20000,
    "cached_in": 0,
-   "cost_usd": 0.0372,
+   "cost_usd": 0.06039,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 21.28,
-   "tokens_in": 742,
-   "tokens_out": 6000,
+   "seconds": 3.46,
+   "tokens_in": 623,
+   "tokens_out": 980,
    "cached_in": 0,
-   "cost_usd": 0.01874,
+   "cost_usd": 0.00356,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 38.1,
-   "tokens_in": 742,
-   "tokens_out": 12000,
+   "seconds": 23.84,
+   "tokens_in": 511,
+   "tokens_out": 10000,
    "cached_in": 0,
-   "cost_usd": 0.03674,
+   "cost_usd": 0.03051,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 20.07,
-   "tokens_in": 765,
-   "tokens_out": 6000,
+   "seconds": 14.52,
+   "tokens_in": 511,
+   "tokens_out": 4400,
    "cached_in": 0,
-   "cost_usd": 0.01877,
+   "cost_usd": 0.01371,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 21.53,
-   "tokens_in": 765,
-   "tokens_out": 7104,
+   "seconds": 25.54,
+   "tokens_in": 389,
+   "tokens_out": 8554,
    "cached_in": 0,
-   "cost_usd": 0.02208,
+   "cost_usd": 0.02605,
    "purpose": "Verify deciding sentences"
   },
   {
    "role": "ultra",
    "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 17.42,
-   "tokens_in": 995,
-   "tokens_out": 4622,
+   "seconds": 4.56,
+   "tokens_in": 4081,
+   "tokens_out": 1440,
    "cached_in": 0,
-   "cost_usd": 0.01486,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 17.87,
-   "tokens_in": 764,
-   "tokens_out": 5172,
-   "cached_in": 0,
-   "cost_usd": 0.01628,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 21.31,
-   "tokens_in": 1361,
-   "tokens_out": 6000,
-   "cached_in": 0,
-   "cost_usd": 0.01936,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 17.9,
-   "tokens_in": 1361,
-   "tokens_out": 6214,
-   "cached_in": 0,
-   "cost_usd": 0.02,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 15.52,
-   "tokens_in": 742,
-   "tokens_out": 6000,
-   "cached_in": 0,
-   "cost_usd": 0.01874,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 35.44,
-   "tokens_in": 742,
-   "tokens_out": 12000,
-   "cached_in": 0,
-   "cost_usd": 0.03674,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 16.73,
-   "tokens_in": 698,
-   "tokens_out": 6000,
-   "cached_in": 0,
-   "cost_usd": 0.0187,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 18.03,
-   "tokens_in": 698,
-   "tokens_out": 6100,
-   "cached_in": 0,
-   "cost_usd": 0.019,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 3.05,
-   "tokens_in": 238,
-   "tokens_out": 912,
-   "cached_in": 0,
-   "cost_usd": 0.00297,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 16.18,
-   "tokens_in": 742,
-   "tokens_out": 6000,
-   "cached_in": 0,
-   "cost_usd": 0.01874,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 21.31,
-   "tokens_in": 742,
-   "tokens_out": 7333,
-   "cached_in": 0,
-   "cost_usd": 0.02274,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 17.31,
-   "tokens_in": 521,
-   "tokens_out": 6000,
-   "cached_in": 0,
-   "cost_usd": 0.01852,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 20.58,
-   "tokens_in": 521,
-   "tokens_out": 7081,
-   "cached_in": 0,
-   "cost_usd": 0.02176,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 15.2,
-   "tokens_in": 676,
-   "tokens_out": 5927,
-   "cached_in": 0,
-   "cost_usd": 0.01846,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 6.49,
-   "tokens_in": 270,
-   "tokens_out": 2003,
-   "cached_in": 0,
-   "cost_usd": 0.00628,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 15.69,
-   "tokens_in": 440,
-   "tokens_out": 6000,
-   "cached_in": 0,
-   "cost_usd": 0.01844,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 33.64,
-   "tokens_in": 440,
-   "tokens_out": 12000,
-   "cached_in": 0,
-   "cost_usd": 0.03644,
-   "purpose": "Verify deciding sentences"
-  },
-  {
-   "role": "ultra",
-   "model_id": "nvidia/Nemotron-3-Ultra-550b-a55b",
-   "seconds": 6.08,
-   "tokens_in": 4021,
-   "tokens_out": 2239,
-   "cached_in": 0,
-   "cost_usd": 0.01074,
+   "cost_usd": 0.0084,
    "purpose": "Write the memo"
   }
  ]

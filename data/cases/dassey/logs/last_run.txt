@@ -1,11 +1,15 @@
-tagged 5755 sentences in 321 chunks: 498 labels kept, 94 dropped (quote not in sentence)
-round 1: 46 deciding labels to check, 8 checked, 2 rejected
-round 2: 40 deciding labels to check, 32 checked, 11 rejected
-round 3: 18 deciding labels to check, 8 checked, 4 rejected
-round 4: 14 deciding labels to check, 14 checked, 11 rejected
-round 5: 11 deciding labels to check, 11 checked, 6 rejected
-round 6: 5 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-5 deciding line(s) not re-checked
-Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 11 details came from him first in the record.
-done in 540.9s, 354 model calls, $0.7762
+tagged 5755 sentences in 321 chunks: 522 labels kept, 76 dropped (quote not in sentence)
+code added 11 bare agreements that follow an investigator line carrying the detail
+round 1: 48 deciding labels to check, 45 checked, 19 rejected
+round 2: 21 deciding labels to check, 18 checked, 10 rejected
+round 3: 11 deciding labels to check, 10 checked, 9 rejected
+round 4: 10 deciding labels to check, 10 checked, 8 rejected
+round 5: 6 deciding labels to check, 5 checked, 1 rejected
+round 6: 2 deciding labels to check, 2 checked, 1 rejected
+verification done after 6 round(s)
+safety search: 125 earlier investigator lines checked, 95 answered, 17 carry the detail
+safety search: 22 earlier investigator lines checked, 17 answered, 3 carry the detail
+safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
+verification done after 0 round(s)
+Of 24 key details Brendan Dassey stated or agreed to, investigators said 13 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 6 details came from him first in the record.
+done in 929.1s, 398 model calls, $1.8617

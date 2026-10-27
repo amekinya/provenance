@@ -1,17 +1,17 @@
 {
- "summary": "The corroboration audit of 24 key details from Brendan Dassey\u2019s interrogations shows that investigators introduced 8 details first, the suspect introduced 11 first, 4 were already public before any interview, and 1 may trace to an earlier unrecorded statement. One detail (tattoo on stomach) was raised by investigators but never adopted by the suspect. Across three recorded sessions, interrogators dominated the dialogue and repeatedly used tactics such as \u201cwe already know\u201d (52 times) and \u201cdemand truth\u201d (85 times).",
+ "summary": "Of 24 key details Brendan Dassey stated or agreed to across three recorded interviews, investigators introduced 13 first, four were already public before any interview, six originated with Dassey, and one (bleach on jeans) may trace to an earlier unrecorded statement. Five details were adopted by agreeing to investigator questions, and one detail (tattoo on stomach) was raised by investigators but never adopted. The record shows repeated use of \"we already know\" (52 instances), \"demand truth\" (85), and minimization (30) tactics across sessions.",
  "key_points": [
-  "8 of 24 key details were first stated by investigators (e.g., vehicle in garage, tied with rope, stabbed in stomach, throat cut, shot in head, shot in garage, blood on floor, body burned) \u2014 cited from investigator statements at Feb 27 Mishicot High School, p. fassbender/wiegert and Mar 1 Manitowoc, p. wiegert.",
-  "11 details originated with the suspect (e.g., knife, restrained on bed, strangled, hair cut, .22 rifle, tires/branches on fire, RAV4 hidden, hood raised, bedsheets burned, phone/camera/purse burned, bones broken) \u2014 cited from suspect statements at Feb 27 Mishicot High School, p. brendan and Mar 1 Manitowoc, p. brendan.",
-  "4 details were publicly reported before any interview (body burned, license plates removed, vehicle key in bedroom, clothes burned) \u2014 cited from public reports Nov 10/16, 2005 noted in Mar 1 Manitowoc, p. brendan and Feb 27 Mishicot, p. fassbender/wiegert.",
-  "1 detail (bleach on jeans) may trace to an earlier unrecorded statement with Fassbender on the evening of Feb 27, 2006 \u2014 cited from Decision and Order p. 7, citing ECF 19-19 at 10-11.",
-  "1 detail (tattoo on stomach) was raised by investigators but never adopted by the suspect \u2014 cited from May 13 Sheboygan, p. fassbender.",
-  "Interrogation dynamics: Session 1 (Feb 27) interrogators spoke 91.7% of words, suspect gave 76 minimal answers; Session 2 (Mar 1) interrogators 68.4%, 594 minimal answers; Session 3 (May 13) interrogators 73.3%, 378 minimal answers \u2014 cited from session data S1, S2, S3."
+  "Investigators stated 13 of 24 key details before Dassey did, including vehicle in garage (Feb 27, p. fassbender), knife (Feb 27, p. wiegert), body in RAV4 (Feb 27, p. fassbender), restrained on bed (Feb 27, p. wiegert), stabbed in stomach (Feb 27, p. fassbender), strangled (Mar 1, p. wiegert), throat cut (Feb 27, p. fassbender), shot in head (Mar 1, p. wiegert), tires/branches on fire (Feb 27, p. fassbender), RAV4 hidden (Feb 27, p. fassbender), license plates removed (Mar 1, p. wiegert), Avery raised hood (Mar 1, p. fassbender), and phone/camera/purse burned (Feb 27, p. fassbender).",
+  "Four details were publicly reported before any interview: body burned behind garage (Nov 16, 2005), license plates removed (Nov 16, 2005), vehicle key in bedroom (Nov 10, 2005), clothes burned (Nov 16, 2005).",
+  "Six details originated with Dassey in the record: tied up with rope (Feb 27, p. brendan), hair cut (Mar 1, p. brendan), shot with .22 rifle (Mar 1, p. brendan), shot inside garage (Mar 1, p. brendan), bedsheets burned (Mar 1, p. brendan), bones broken with shovel (Mar 1, p. brendan).",
+  "One detail (bleach on jeans) may trace to an earlier unrecorded statement on the evening of Feb 27, 2006 (Decision and Order p. 7, citing ECF 19-19 at 10-11); it first appears in transcripts at Mar 1, p. brendan.",
+  "Five details were adopted by agreeing to investigator questions: stabbed in stomach (Feb 27, p. brendan), throat cut (Mar 1, p. brendan), license plates removed (Mar 1, p. brendan), Avery raised hood (Mar 1, p. brendan), blood on garage floor (Mar 1, p. brendan).",
+  "Investigators raised a tattoo detail (Mar 1, p. fassbender) that Dassey never stated or agreed to."
  ],
  "limits": [
-  "This audit only tracks where details appear in the available transcripts; it cannot assess truthfulness or reliability of any detail.",
-  "Two sessions (Feb 27 evening with Fassbender, Feb 27 Two Rivers PD) have no public transcript, so possible earlier disclosures are not fully captured.",
-  "The audit does not evaluate whether the suspect\u2019s adoption of investigator-introduced details resulted from suggestion, coercion, or independent knowledge.",
-  "No assessment of the suspect\u2019s mental state, comprehension, or voluntariness is included."
+  "This audit only tracks where each detail first appears in the available transcripts and public records; it cannot assess whether Dassey had independent knowledge of any detail.",
+  "No public transcript exists for the Feb 27 evening session with Fassbender or the Two Rivers Police Dept. session; any disclosures there are not captured.",
+  "The audit does not evaluate the voluntariness or reliability of Dassey's statements, only their sequential origin in the record.",
+  "Counts reflect the 24 details selected for this audit; other statements in the interviews are not analyzed here."
  ]
 }
