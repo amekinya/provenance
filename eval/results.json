@@ -139,5 +139,66 @@
    "calls": 252
   }
  ],
- "note": "29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers."
+ "note": "29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers. This is the third run on held-out test data and the second on this 29-interrogation set, after the denial-of-guilt labeling fix and the reasoning verifier chosen on the training writer's interviews.",
+ "history": [
+  {
+   "generated": "2026-10-27 00:50 UTC",
+   "commit": "a787286",
+   "note": "Before the fixes: 6 Qwen-written test interrogations (39 details); the one-prompt baseline then asked a different question than the gold labels.",
+   "rows": [
+    {
+     "method": "Keyword match (no model)",
+     "speaker_acc": 0.59,
+     "line_acc": 0.538,
+     "investigator_first_called_suspect_first": 0,
+     "cost_usd": 0
+    },
+    {
+     "method": "Nemotron 3 Ultra, one prompt per interview",
+     "speaker_acc": 0.128,
+     "line_acc": 0.128,
+     "investigator_first_called_suspect_first": 0,
+     "cost_usd": 0.0617
+    },
+    {
+     "method": "Provenance: Lightning labels + code ledger + Ultra check",
+     "speaker_acc": 0.436,
+     "line_acc": 0.385,
+     "investigator_first_called_suspect_first": 0,
+     "cost_usd": 0.2885
+    }
+   ]
+  },
+  {
+   "generated": "2026-10-27 01:45 UTC",
+   "commit": "62e80c9",
+   "note": "First run on the 29-interrogation test set: Ultra labels, verifier without reasoning.",
+   "rows": [
+    {
+     "method": "Keyword match (no model)",
+     "speaker_acc": 0.562,
+     "line_acc": 0.547,
+     "investigator_first_called_suspect_first": 3,
+     "cost_usd": 0
+    },
+    {
+     "method": "Nemotron 3 Ultra, one prompt per interview",
+     "speaker_acc": 0.818,
+     "line_acc": 0.749,
+     "investigator_first_called_suspect_first": 1,
+     "cost_usd": 0.2671
+    },
+    {
+     "method": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
+     "speaker_acc": 0.734,
+     "line_acc": 0.69,
+     "investigator_first_called_suspect_first": 1,
+     "cost_usd": 1.9795
+    }
+   ]
+  }
+ ],
+ "run_number": 3,
+ "commit": "ab42836",
+ "generated": "2026-10-27 02:15 UTC"
 }

@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -255,6 +256,18 @@ def main() -> None:
            "rows": [{"method": names.get(k, k), **v, **costs[k]} for k, v in results.items()],
            "note": f"{len(recs)} synthetic interrogations ({a.split} split) written by {who}, {sum(len(g) for g in golds)} details with known first speakers."}
     suffix = "" if a.split == "test" else f"_{a.split}"
+    if a.split == "test":
+        # Every run on the held-out test is recorded, so a better number can't quietly replace a worse one.
+        prev_file = ROOT / "eval" / "results.json"
+        prev = json.loads(prev_file.read_text()) if prev_file.exists() else {}
+        history = prev.get("history", [])
+        if prev.get("rows"):
+            history.append({k: prev.get(k) for k in ("generated", "commit", "note")} | {"rows": [{k: r.get(k) for k in (
+                "method", "speaker_acc", "line_acc", "investigator_first_called_suspect_first", "cost_usd")} for r in prev["rows"]]})
+        out["history"] = history
+        out["run_number"] = len(history) + 1
+    out["generated"] = time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime())
+    out["commit"] = os.environ.get("GITHUB_SHA", "")[:7]
     (ROOT / "eval" / f"results{suffix}.json").write_text(json.dumps(out, indent=1))
     (ROOT / "eval" / f"details_{a.split}.json").write_text(json.dumps({"recs": {r["id"]: {"facts": r["facts"], "plan": r.get("plan"),
                                                                                          "utterances": [{k: u[k] for k in ("id", "role", "text", "carries")} for u in r["utterances"]]}
@@ -262,6 +275,12 @@ def main() -> None:
     md = ["# Provenance benchmark", "", out["note"], "", "| Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |",
           "|---|---|---|---|---|---|"]
     md += [f"| {r['method']} | {r['speaker_acc']:.0%} | {r['line_acc']:.0%} | {r['investigator_first_called_suspect_first']} | {r['seconds']} s | ${r['cost_usd']:.3f} |" for r in out["rows"]]
+    if out.get("history"):
+        md += ["", f"This is test run {out['run_number']}. Earlier runs on the held-out test, newest first:", ""]
+        for h in reversed(out["history"]):
+            md += [f"- {h.get('generated') or '?'} ({h.get('commit') or 'commit not recorded'}): {h.get('note') or ''}"]
+            md += [f"  - {r['method']}: {r['speaker_acc']:.0%} right first speaker, {r['line_acc']:.0%} right line, "
+                   f"{r['investigator_first_called_suspect_first']} investigator-supplied credited to the suspect" for r in h["rows"]]
     (ROOT / "eval" / f"RESULTS{suffix}.md").write_text("\n".join(md) + "\n")
     print("\n".join(md))
 
