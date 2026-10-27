@@ -32,4 +32,4 @@ Run: 327.0 s, $1.9358, labeler ultra, verifier reasoning True, deciding lines no
 | F24 | Bones were broken up with a shovel | Suspect said it first | S2-2324 (p. 637): Oh. So he told you that he used the shovel to break up bones? | S2-2312 (p. 637): Like when the bones were left behind, he would like try to take the shovel and try to break the bones apart and he would bury 'em, like right in front of the fi |  |
 | F25 | A tattoo on her stomach | Suspect never adopted it | S2-2865 (p. 662): OK. (pause) We know that Teresa had a, a tattoo on her stomach, do you remember that? | none |  |
 
-Memo page citations: 24 distinct; not in the transcripts: ['7']
+Memo page citations: 26 distinct; not in the transcripts: ['7']
