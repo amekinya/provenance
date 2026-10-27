@@ -52,7 +52,9 @@ def predict(model, tok, rows: list[dict], dev: str) -> list[float]:
     for i in range(0, len(rows), 128):
         b = rows[i:i + 128]
         enc = tok([template(r["query"], r["passage"]) for r in b], padding=True, truncation=True, max_length=MAX_LEN, return_tensors="pt").to(dev)
-        scores += torch.sigmoid(model(**enc).logits.float().view(-1)).tolist()
+        with torch.autocast(device_type=dev, dtype=torch.bfloat16, enabled=dev == "cuda"):
+            logits = model(**enc).logits
+        scores += torch.sigmoid(logits.float().view(-1)).tolist()
     return scores
 
 
@@ -85,7 +87,9 @@ def main() -> None:
     tok = AutoTokenizer.from_pretrained(BASE, trust_remote_code=True, padding_side="left")
     if tok.pad_token is None:
         tok.pad_token = tok.eos_token
-    model = AutoModelForSequenceClassification.from_pretrained(BASE, trust_remote_code=True, torch_dtype=torch.bfloat16).to(dev)
+    # fp32 master weights; the forward pass runs in bf16 under autocast. (Pure bf16 weights round away most AdamW
+    # updates at this learning rate.)
+    model = AutoModelForSequenceClassification.from_pretrained(BASE, trust_remote_code=True, dtype=torch.float32).to(dev)
     if model.config.pad_token_id is None:
         model.config.pad_token_id = tok.eos_token_id
 
@@ -110,7 +114,9 @@ def main() -> None:
             b = train[i:i + BATCH]
             enc = tok([template(r["query"], r["passage"]) for r in b], padding=True, truncation=True, max_length=MAX_LEN, return_tensors="pt").to(dev)
             y = torch.tensor([float(r["label"]) for r in b], device=dev)
-            logits = model(**enc).logits.float().view(-1)
+            with torch.autocast(device_type=dev, dtype=torch.bfloat16, enabled=dev == "cuda"):
+                logits = model(**enc).logits
+            logits = logits.float().view(-1)
             loss = lossf(logits, y)
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
@@ -138,10 +144,18 @@ def main() -> None:
               "threshold": th, "seconds": round(time.time() - t0, 1),
               "gpu": torch.cuda.get_device_name(0) if dev == "cuda" else "cpu"}
     OUT.mkdir(parents=True, exist_ok=True)
-    model.save_pretrained(OUT, safe_serialization=True)
-    tok.save_pretrained(OUT)
-    (OUT / "metrics.json").write_text(json.dumps(report, indent=1))
+    (OUT / "metrics.json").write_text(json.dumps(report, indent=1))  # metrics first, so a save problem can't lose them
     print("REPORT " + json.dumps(report), flush=True)
+    # transformers 5 refuses to save a config holding generation parameters; the reranker's remote code carries
+    # temperature=1.0, which the class default restores on load.
+    temp = getattr(model.config, "temperature", None)
+    if temp is not None:
+        del model.config.temperature
+    model.to(torch.bfloat16).save_pretrained(OUT)
+    if temp is not None:
+        model.config.temperature = temp
+    tok.save_pretrained(OUT)
+    print("saved", sorted(p.name for p in OUT.iterdir()), flush=True)
 
 
 if __name__ == "__main__":

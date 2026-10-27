@@ -11,8 +11,11 @@ first request isn't slow. Auth is handled by the endpoint's bearer token.
 from __future__ import annotations
 
 import base64
+import json
 import io
 import os
+import re
+import threading
 import time
 from pathlib import Path
 
@@ -31,25 +34,41 @@ _rerankers: dict[str, tuple] = {}
 
 def asr():
     global _asr
-    if _asr is None:
-        from transformers import pipeline
+    with _lock:
+        if _asr is None:
+            from transformers import pipeline
 
-        _asr = pipeline("automatic-speech-recognition", model=ASR_MODEL, device=0 if DEVICE == "cuda" else -1,
-                        torch_dtype=torch.bfloat16 if DEVICE == "cuda" else torch.float32)
+            _asr = pipeline("automatic-speech-recognition", model=ASR_MODEL, device=0 if DEVICE == "cuda" else -1,
+                            dtype=torch.bfloat16 if DEVICE == "cuda" else torch.float32)
     return _asr
 
 
+_lock = threading.Lock()
+NAMES = set(filter(None, os.environ.get("MODEL_NAMES", "faithful-checker,provenance-matcher,secondlook-matcher,base-reranker").split(",")))
+
+
 def reranker(name: str):
-    if name not in _rerankers:
+    """Load a reranker once (thread-safe). Only names on the allow-list; only 'base-reranker' means the untuned model.
+    A fine-tuned name whose weights are missing is an error, never a silent fallback to the base model."""
+    if name not in NAMES or not re.fullmatch(r"[a-z0-9-]+", name):
+        raise HTTPException(404, f"Unknown model {name!r}")
+    with _lock:
+        if name in _rerankers:
+            return _rerankers[name]
         from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
         path = MODELS_DIR / name
-        src = str(path) if (path / "config.json").exists() else BASE_RERANKER
+        if name == "base-reranker":
+            src = BASE_RERANKER
+        elif (path / "config.json").exists():
+            src = str(path)
+        else:
+            raise HTTPException(503, f"Fine-tuned weights for {name!r} aren't in {MODELS_DIR} yet")
         tok = AutoTokenizer.from_pretrained(src, trust_remote_code=True, padding_side="left")
         if tok.pad_token is None:
             tok.pad_token = tok.eos_token
         model = AutoModelForSequenceClassification.from_pretrained(src, trust_remote_code=True,
-                                                                   torch_dtype=torch.bfloat16 if DEVICE == "cuda" else torch.float32).to(DEVICE).eval()
+                                                                   dtype=torch.bfloat16 if DEVICE == "cuda" else torch.float32).to(DEVICE).eval()
         if model.config.pad_token_id is None:
             model.config.pad_token_id = tok.eos_token_id
         _rerankers[name] = (tok, model, src)
@@ -61,7 +80,7 @@ def template(q: str, p: str) -> str:
     return f"question:{q} \n \n passage:{p}"
 
 
-@app.on_event("startup")
+@app.on_event("startup")  # noqa: (deprecated hook, still supported; keeps this file self-contained)
 def _preload() -> None:
     import threading
 
@@ -82,6 +101,17 @@ def health():
             "available": sorted(p.name for p in MODELS_DIR.glob("*") if (p / "config.json").exists()) if MODELS_DIR.exists() else []}
 
 
+@app.get("/metrics/{name}")
+def metrics(name: str):
+    """The training job's report (metrics.json next to the weights), so results can be published without bucket access."""
+    if name not in NAMES or name == "base-reranker":
+        raise HTTPException(404, "unknown model")
+    f = MODELS_DIR / name / "metrics.json"
+    if not f.exists():
+        raise HTTPException(404, "no training report yet")
+    return json.loads(f.read_text())
+
+
 class AsrIn(BaseModel):
     audio_b64: str
 
@@ -91,12 +121,16 @@ def transcribe(body: AsrIn):
     import numpy as np
     import soundfile as sf
 
+    if len(body.audio_b64) > 8_000_000:
+        raise HTTPException(413, "Audio too large (about 60 s max).")
     try:
         data, sr = sf.read(io.BytesIO(base64.b64decode(body.audio_b64)), dtype="float32")
     except Exception as e:  # noqa: BLE001
         raise HTTPException(400, f"Couldn't read audio: {e}") from e
     if data.ndim > 1:
         data = data.mean(axis=1)
+    if len(data) > 90 * sr:
+        raise HTTPException(413, "Audio longer than 90 seconds.")
     if sr != 16000:
         import librosa
 
@@ -116,6 +150,8 @@ class ScoreIn(BaseModel):
 def score(body: ScoreIn):
     if not body.pairs or len(body.pairs) > 4096:
         raise HTTPException(400, "Send 1-4096 pairs.")
+    if any(len(p) != 2 or len(p[0]) + len(p[1]) > 6000 for p in body.pairs):
+        raise HTTPException(400, "Each pair is [query, passage], under 6000 characters together.")
     tok, model, src = reranker(body.model)
     t0 = time.perf_counter()
     scores: list[float] = []
@@ -125,7 +161,8 @@ def score(body: ScoreIn):
             enc = tok([template(q, p) for q, p in batch], padding=True, truncation=True, max_length=320, return_tensors="pt").to(DEVICE)
             logits = model(**enc).logits.float().view(-1)
             scores += torch.sigmoid(logits).tolist()
-    return {"scores": [round(s, 4) for s in scores], "model": src, "seconds": round(time.perf_counter() - t0, 3)}
+    return {"scores": [round(s, 4) for s in scores], "model": src, "fine_tuned": src != BASE_RERANKER, "name": body.model,
+            "seconds": round(time.perf_counter() - t0, 3)}
 
 
 if __name__ == "__main__":
