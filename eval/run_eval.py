@@ -130,12 +130,28 @@ def provenance_lightning(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     return _with_trace(rec, utts, facts, mentions, calls)
 
 
-def provenance(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+LABELS: dict[str, list[dict]] = {}  # rec id -> Ultra's labels, shared by the verifier variants (same labels, fair A/B)
+
+
+def _ultra_labels(rec, utts, facts, calls):
+    import copy  # noqa: PLC0415
+
     from app.config import settings  # noqa: PLC0415
 
+    if rec["id"] not in LABELS:
+        LABELS[rec["id"]], _ = tag_all(utts, facts, 18, calls, spec=settings.ultra)
+    return copy.deepcopy(LABELS[rec["id"]])
+
+
+def provenance(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     utts, facts = _inputs(rec)
-    mentions, _ = tag_all(utts, facts, 18, calls, spec=settings.ultra)
-    return _with_trace(rec, utts, facts, mentions, calls)
+    return _with_trace(rec, utts, facts, _ultra_labels(rec, utts, facts, calls), calls)
+
+
+def provenance_vr(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+    """Same pipeline with the verifier's reasoning switched on (reuses the labels of an earlier method in this run)."""
+    utts, facts = _inputs(rec)
+    return _with_trace(rec, utts, facts, _ultra_labels(rec, utts, facts, calls), calls)
 
 
 def provenance_basic(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
@@ -186,6 +202,11 @@ def score(golds: list[dict], preds: list[dict]) -> dict:
             "investigator_first_called_suspect_first": false_corrob, "confusion": conf}
 
 
+from app.ai import tasks as _t  # noqa: E402
+
+VERIFY_DEFAULT = _t.VERIFY_REASONING
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=30)
@@ -203,6 +224,7 @@ def main() -> None:
         fn = {"keyword": lambda r: keyword(r), "one_prompt": lambda r: one_prompt(r, calls), "provenance": lambda r: provenance(r, calls),
               "provenance_basic": lambda r: provenance_basic(r, calls),
               "provenance_lightning": lambda r: provenance_lightning(r, calls),
+              "provenance_vr": lambda r: provenance_vr(r, calls),
               "provenance_matcher": lambda r: provenance_matcher(r, calls)}[m]
 
         def safe(r, fn=fn):
@@ -212,6 +234,8 @@ def main() -> None:
                 print(f"  {m} failed on {r['id']}: {e}")
                 return None
         TRACE.clear()
+        _t.VERIFY_REASONING = True if m == "provenance_vr" else VERIFY_DEFAULT
+        print(f"{m}: verifier reasoning {'on' if _t.VERIFY_REASONING else 'off'}")
         with ThreadPoolExecutor(4 if m != "keyword" else 1) as ex:
             preds = list(ex.map(safe, recs))
         results[m] = score(golds, preds)
@@ -222,6 +246,7 @@ def main() -> None:
     names = {"keyword": "Keyword match (no model)", "one_prompt": "Nemotron 3 Ultra, one prompt per interview",
              "provenance": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
              "provenance_lightning": "Provenance with Nemotron 3.5 Lightning as the labeler (cheaper tier)",
+             "provenance_vr": "Provenance, verifier with reasoning on (same labels; cost excludes labeling)",
              "provenance_basic": "Provenance without code agreements or safety search (ablation)",
              "provenance_matcher": "Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check"}
     writers = sorted({r["generator"] for r in recs})
