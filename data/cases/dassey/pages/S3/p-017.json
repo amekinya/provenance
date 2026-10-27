@@ -1,0 +1,127 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 772",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "This one.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "This one meaning what?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "That he carried her.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "And what did you take out?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Her clothes.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What was she wearing?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Nothin'.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Well, what kind of clothes were they?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Pants.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What kind of pants? Or what color, er?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Blue jeans.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "And a T-shirt.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What color T-shirt?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Blue.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Are you guessing at that or do you know it was blue?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "It was blue.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. Anything else?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Just, some shoes.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What kind of shoes? Do you remember?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Just that they were black.",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-017.png",
+ "cost_usd": 0.00174
+}

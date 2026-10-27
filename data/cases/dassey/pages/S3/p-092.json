@@ -1,0 +1,127 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 847",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Oh OK. And what did you tell 'em when he did that?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I was tryin' ta get rid a, get 'em off me.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Yeah. Did you ever touch his?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FAASSBENDER",
+   "text": "Did he ask you to?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No. (shakes head \u201cno\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Did he ever show you his?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No. (shakes head \u201cno\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You sure?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yes.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Did he ask to see yours?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No. (shakes head \u201cno\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Just try ta ah grab yours through your pants a couple times or sometimes?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Is that accurate?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Did he ever say anything when he was doing that?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No. (shakes head \u201cno\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "And you told him no, or just tried to get him off you.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Just tryin' ta get him off me.",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-092.png",
+ "cost_usd": 0.0018
+}

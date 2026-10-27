@@ -1,0 +1,92 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 668 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "What do you think's gonna happen? What do you think should happen right now?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I don't know.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You know obviously that we're police officers. OK. (Brendan nods \"yes\") And be because of what you told us, we're gonna have ta arrest you. Did you kinda figure that was coming? For for what you did we wean't let you go right now. The law will not let us. And so you're not gonna be able to go home tonight. All right?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Does my mom know?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Your mom knows.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Your mom is here, OK? (Brendan nods \"yes\") Would you like ta talk to her?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Do you have ... before we bring her in, do you have any other questions right now? (Brendan shakes head \"no\") You do understand that you're under arrest now? (Brendan nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "So could I call my girlfriend and tell her that I couldn't come today?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "We'll give van opportunity ta to do that, OK? (Brendan nods \"yes\") Did you kinda, and be honestly the after telling us what you told us you kinda figured this was coming? (Brendan nods \"yes\") Yeah? (Brendan nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Is it only for one day or?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "We don't know that at this time, but let me tell ya something Brendan, you did the right thing. OK. (Brendan nods \"yes\") By being honest, you can at least sleep at night right now. Cuz, I'm sure you've had some difficulty with that. (Brendan nods \"yes\") So you did the right thing here, by telling us what happened. OK. (Brendan nods \"yes\") Just remember that in the future, OK, you need to be honest. (Brendan nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Your cooperation and help with us is gonna work in your favor. I can't say what its gonna do or where your gonna end up but its gonna work in your favor and we appreciate your continued cooperation. (Brendan nods \"yes\") We talked to your mom about going out to the house and going in the house and gettin' a few items and about you going out",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4739",
+   "kind": "header"
+  }
+ ],
+ "file": "p-143.png",
+ "cost_usd": 0.0019
+}

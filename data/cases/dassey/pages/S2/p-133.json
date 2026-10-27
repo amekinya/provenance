@@ -1,0 +1,127 @@
+{
+ "page_label": "1",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 658",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "About that far? (nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "When Steven stabbed her, tell me again where he stabbed her.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Like right here.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "How far in did the knife go?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Again with your hands, if you can.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "About like that.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. (Brendan nods \"yes\") And then he, tell me how he choked her. Where was he when he choked her?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "On the side of the bed.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "On the side of the bed. (Brendan nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "With your hands, show me what, pretend that her neck is there whatever, show me how he did it.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Like this.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "How long?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "'bout two, three minutes.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "He must have had a lot of blood on his hands then huh? (Brendan nods \"yes\") How did he get that off his hands?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Washin' it off.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Where?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the sink.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Which sink?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the bathroom.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Did he wipe any blood up with anything? (Brendan shakes head \"no\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4729",
+   "kind": "header"
+  }
+ ],
+ "file": "p-133.png",
+ "cost_usd": 0.00168
+}

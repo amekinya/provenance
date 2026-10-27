@@ -1,0 +1,117 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT Page 538 Complaint No. 05-0157-955 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "REMIKER",
+   "text": "Good. Come on in.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "This door Dave?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "VOICE",
+   "text": "Yup, take right. Up the stairs.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause and background voices)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Mornin'",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "VOICE",
+   "text": "Mornin'",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "VOICE",
+   "text": "Mornin'",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "VOICE",
+   "text": "Mark Anderson would like to chat with you if you had a chance.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Sure, absolutely.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "UNKNOWN VOICE",
+   "text": "Mornin', good to see ya.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Why don't you just, just you have a seat Brendan. Tom and I just gotta stop out for a minute and then we'll be right in, OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "INV. WIEGERT",
+   "text": "All right.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door open & closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "Background Voice",
+   "text": "You guys want coffee or anything? Water?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Soda? Water? (Brendan shakes head \"no\") You sure?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Well water maybe (nods \"yes\").",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4609",
+   "kind": "header"
+  }
+ ],
+ "file": "p-013.png",
+ "cost_usd": 0.00157
+}

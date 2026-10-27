@@ -1,0 +1,107 @@
+{
+ "page_label": "Page 550",
+ "lines": [
+  {
+   "speaker": "WIEGERT",
+   "text": "Now, let's be honest. What did he tell you? What did he show you?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "What did you see and what did he tell you?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "He showed me the knife and the rope.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Where was she? Come on we know this already. Be honest.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the back of the jeep.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "She was in the back of the jeep? (Brendan nods \"yes\") Was she alive or dead at that time?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Dead",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Are you sure? (Brendan nods \"yes\") OK. What did you see in the back, now this is hard, but what did you see in the back of the jeep?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "That she was laying there with like a small blanket over her.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Do you remember where her head was?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(shakes head \"no\") Not really.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Did she have clothes on?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah (nods \"yes\").",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "She was clothed.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Was she tied up already? Or did you help him do that? (Brendan shakes head \"no\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "She was tied up already.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Where? Tell me how she was tied up.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Like the rope was right here around her body.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "STATE4621",
+   "kind": "header"
+  }
+ ],
+ "file": "p-025.png",
+ "cost_usd": 0.00161
+}

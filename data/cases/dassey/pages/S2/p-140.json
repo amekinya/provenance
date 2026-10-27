@@ -1,0 +1,117 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 665 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Sometime.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Yeah? (Brendan nods \u201cyes\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Did you ever think about us coming over to talk with you? Did you worry about that at all?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \u201cyes\u201d) Yeah. I was scared the first time I had ta go, a, when I was up north talkin\u2019 to them people.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "mm huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I was sweating a lot.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Had Steven told you some things to tell, to say to the police?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "He just told me not to say anything, that a, that his lawyer said not to say anything.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "If Steven tells us that you did all of this, that, that yo-you ha-had started it and had killed her and stuff, is that true?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(shakes head \u201cno\u201d) No.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Don't forget your Pepsi down there. (Brendan nods \u201cyes\u201d) We're gonna step out for a couple of more minutes OK? (Brendan nods \u201cyes\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Do you need to use the restroom?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(shakes head \u201cno\u201d) uh uh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Do you want somethin\u2019 to eat?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "It don't matter.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "How about a sandwich?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Looks like you're a little hungry.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Should we get you a sandwich?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4736",
+   "kind": "header"
+  }
+ ],
+ "file": "p-140.png",
+ "cost_usd": 0.00182
+}

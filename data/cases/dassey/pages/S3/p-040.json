@@ -1,0 +1,102 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 795",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Because we looked at the phone records. We've got all your phone records. We've got every record there is, everybody's phone, everybody who lived out by you, and every friend, every relative, every boss. I've got a file of your, as big as this room, three of 'em, full of information in this case, so I know when you're lying. You need to realize that. I know when you're lying. Did he actually call you? The details are easy Brendan.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. Then why did you say he called?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Cuz one of the days he did.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Did he call you that day?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Then why did you say it? I don't understand why you're lying. You told me you wanted to be truthful with me. You told me I could tell your mom that you were honest. Can I do that now? You just lied to me. So, the truth is you were over by Steve's earlier, that's the truth. Isn't it?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Yeah, what time did you go by Steve? You know what, you know what Brendan.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Huh?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "He's gonna tell his version of the story, you know what that version is gonna be? What do you think it's gonna be?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I don't know.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "It's gonna be that Brendan did all this, he doesn't want to go to prison, he doesn't give a shit about you. It's gonna be Brendan, Brendan, Brendan. So this is your opportunity to be honest and tell the truth. Are you gonna do that or not, yes or no?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yes.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK, then tell me the truth.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I went over there like at 4:00 o'clock.",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-040.png",
+ "cost_usd": 0.00183
+}

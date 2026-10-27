@@ -1,0 +1,102 @@
+{
+ "page_label": "Page 758",
+ "lines": [
+  {
+   "speaker": "BRENDAN",
+   "text": "(shakes head \"no\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSEBENDER",
+   "text": "Do you understand each of these rights?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSEBENDER",
+   "text": "Realizing that you have these rights, are you now willing to answer questions or make a statement?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSEBENDER",
+   "text": "OK what I'd like you to do for me is, that is, do you understand, each of these rights, initial there, initial there that you are willing to make a statement and then I need your signature there, OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(BRENDAN signing documents)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "I heard you were gonna watch a movie last night. What movie did ya watch?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(FASSEBENDER signing documents)",
+   "kind": "note"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Well it wasn't a movie, it was, it was wrestling but I only got to watch 15 minutes of it.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "How come?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Cuz it ended at 9:00 o'clock and we got done at 8:45 almost.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Oh OK. (pause) Big wrestling fan?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSEBENDER",
+   "text": "Is it All Star wrestling?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(WIEGERT signing documents)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "I don't think there isn't anymore All Star wrestling.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSEBENDER",
+   "text": "So whatever they call that. Professional wrestling?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\")",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-003.png",
+ "cost_usd": 0.00158
+}

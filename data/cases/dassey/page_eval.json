@@ -3,6 +3,11 @@
   {
    "session": "S1",
    "page": "451",
+   "super_vl": {
+    "gold_words": 316,
+    "wer": 0.0,
+    "speaker_attribution": 1.0
+   },
    "tesseract": {
     "gold_words": 316,
     "wer": 0.0316,
@@ -26,6 +31,11 @@
   {
    "session": "S3",
    "page": "795",
+   "super_vl": {
+    "gold_words": 270,
+    "wer": 0.0,
+    "speaker_attribution": 1.0
+   },
    "tesseract": {
     "gold_words": 270,
     "wer": 0.0222,
@@ -35,8 +45,8 @@
  ],
  "overall": {
   "super_vl": {
-   "words": 101,
-   "wer": 0.0099,
+   "words": 687,
+   "wer": 0.0015,
    "speaker_attribution": 1.0
   },
   "tesseract": {

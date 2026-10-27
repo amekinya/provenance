@@ -1,53 +1,17 @@
-S2: 7 pages -> 138 utterances {'interrogator': 75, 'suspect': 61, 'other': 2}
-test range only; utterances.json not changed
-  WIEGERT     He cut off her hair? In the house?
-  BRENDAN     mm huh.
-  WIEGERT     Why did he do that? Was she alive?
-  BRENDAN     No.
-  WIEGERT     What did he do with the hair?
-  BRENDAN     He set it down on the counter.
-  WIEGERT     The counter where?
-  BRENDAN     Like a dresser.
-  FASSBENDER  What did he use to cut the hair off with?
-  BRENDAN     The knife.
-  FASSBENDER  Was she alive? (Brendan shakes head "no")
-  FASSBENDER  Did he say why he did that?
-  BRENDAN     No.
-  WIEGERT     OK, what else?
-  FASSBENDER  What else was done to her head?
-  BRENDAN     That he punched her.
-  WIEGERT     What else? (pause) What else?
-  FASSBENDER  He made you do somethin' to her, didn't he? So he-he would feel better about not bein' the only person, right?
-  WIEGERT     mm huh.
-  FASSBENDER  What did he make you do to her?
-  NOTE        (pause)
-  WIEGERT     What did he make you do Brendan? It's OK, what did he make you do?
-  BRENDAN     Cut her.
-  WIEGERT     Cut her where?
-  BRENDAN     On her throat.
-  WIEGERT     Cut her throat? Te-when did that happen?
-  BRENDAN     Before he picked her off the bed?
-  WIEGERT     So she was alive yet right? (Brendan nods “yes”)
-  WIEGERT     So she's alive and you cut her throat?
-  BRENDAN     mm huh.
-  WIEGERT     Was that before or after Steve stabbed her?
-  BRENDAN     After.
-  WIEGERT     It was after Steve stabbed her?
-  BRENDAN     (nods “yes”) mm-huh.
-  WIEGERT     Was she a-how do you know she was alive? (pause) Tell me. When you cut her throat, how do you know she was ali
-  BRENDAN     She was breathing a little bit.
-  WIEGERT     She was breathing a little bit. Did Steve tell you to do that?
-  BRENDAN     Yeah.
-  NOTE        (Fassbender and Wiegert speaking at the same time- cannot understand)
-  FASSBENDER  How'd he tell you to do, how'd he tell you to do that? What'd he say?
-model calls this run: 8, $0.0170
-{'session': 'S1', 'page': '451', 'tesseract': {'gold_words': 316, 'wer': 0.0316, 'speaker_attribution': 1.0}}
+  S1: labels not in the roster (role 'other'): {'FASASBENDER': 1}
+S1: 44 pages -> 650 utterances {'interrogator': 401, 'suspect': 248, 'other': 1}
+  S2: labels not in the roster (role 'other'): {'BARBJANDA': 53, 'UNKNOWNVOICE': 5, 'VOICE': 5, 'REMIKER': 2, 'DENNISJACOBS': 2, 'BACKGROUNDVOICE': 1}
+S2: 152 pages -> 3084 utterances {'interrogator': 1640, 'suspect': 1372, 'other': 72}
+  S3: labels not in the roster (role 'other'): {'UNRECOGNIZABLEVOICE': 8, 'WIEGERTFASSBENDERBOTHSPEAKINGATTHESAMETIME': 1, 'FASSBENDERWIEGERTSPEAKINGATTHESAMETIME': 1}
+S3: 109 pages -> 1839 utterances {'interrogator': 983, 'suspect': 845, 'other': 11}
+model calls this run: 300, $0.5343
+{'session': 'S1', 'page': '451', 'super_vl': {'gold_words': 316, 'wer': 0.0, 'speaker_attribution': 1.0}, 'tesseract': {'gold_words': 316, 'wer': 0.0316, 'speaker_attribution': 1.0}}
 {'session': 'S2', 'page': '588', 'super_vl': {'gold_words': 101, 'wer': 0.0099, 'speaker_attribution': 1.0}, 'tesseract': {'gold_words': 101, 'wer': 0.0495, 'speaker_attribution': 0.9901}}
-{'session': 'S3', 'page': '795', 'tesseract': {'gold_words': 270, 'wer': 0.0222, 'speaker_attribution': 1.0}}
+{'session': 'S3', 'page': '795', 'super_vl': {'gold_words': 270, 'wer': 0.0, 'speaker_attribution': 1.0}, 'tesseract': {'gold_words': 270, 'wer': 0.0222, 'speaker_attribution': 1.0}}
 {
  "super_vl": {
-  "words": 101,
-  "wer": 0.0099,
+  "words": 687,
+  "wer": 0.0015,
   "speaker_attribution": 1.0
  },
  "tesseract": {

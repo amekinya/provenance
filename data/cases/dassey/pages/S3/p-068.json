@@ -1,0 +1,117 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 823",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "When you gonna do that?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Probably tonight.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Don't ya think she has the right to know?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Yeah. I think she'd like to hear it coming from you rather than from me.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "And if she has any questions cuz I'm seeing her tomorrow.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. She's coming here tomorrow?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Mm huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Then maybe it be a good idea to call her and tell her before she gets here tonight. That's what I would do. Cuz, otherwise, she's gonna be really mad here tomorrow. Better on the phone, isn't it?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Mm huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "That's up to you though, that's your decision whether you want to do that or not. It's just a suggestion. Um, that key from the, from the jeep, from Teresa's jeep. Tell me about that key. Where did Steve have it hidden?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In his bedroom.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Where in his bedroom? He told you where it was. Did he tell you where it was?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK, where?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Well at first he had it in his room in his dresser.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "And he took it out because he was going to get rid of it, but he, he had to hurry up to get the phone because he had to answer it so he let the key there.",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-068.png",
+ "cost_usd": 0.00182
+}

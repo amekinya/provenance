@@ -1,0 +1,132 @@
+{
+ "page_label": "1",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 666",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(voices speaking in background)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Brendan there you go.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Thank you.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Your welcome.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(long pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "DENNIS JACOBS",
+   "text": "Do you need anything? No bathroom, no nothin'? Do you wanna cookie or somethin', another sandwich? (Brendan shakes head \"no\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "DENNIS JACOBS",
+   "text": "OK, they'll be with you shortly. (Brendan nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(long pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens and closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Hey bud, do you need anything? There's another sandwich out there. You sure? (Brendan shakes head \"no\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") mm huh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4737",
+   "kind": "header"
+  }
+ ],
+ "file": "p-141.png",
+ "cost_usd": 0.00159
+}

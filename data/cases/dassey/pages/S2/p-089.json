@@ -1,0 +1,102 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 614 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. We'll worry about that later, OK? (Brendan nods \"yes\") All right. I'll be back in a few minutes, OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes) (long pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "So do you need to use the bathroom or anything? (Brendan shakes head \"no\") No. Your good? (Brendan nods \"yes\") OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "How ya feeling Brendan?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") Pretty good.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Pretty good. (Brendan nods \"yes\") Got a lot of stuff off your chest, huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") uh huh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "A lot more stuff a lot of the truth. (Brendan nods \"yes\") Ah, what we do when, when we leave the room we kinda talk about stuff to make sure that we think we're we're all in the same page and that, that we're gettin' it you know the truth, the whole truth (Brendan nods \"yes\") and, and then we, we you know we think you're done' pretty good so far but there's some areas that we have ta revisit, OK, (Brendan nods \"yes\") and then some other questions. And and again don't make us work so so hard for this, don't make yourself work so hard for this, just get the truth out right away, cuz again we, we have a pretty good knowledge of what happened there. (Brendan nods \"yes\") All right?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") mh huh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "I wanna revisit when you went when you got home from school. (Brendan nods \"yes\") OK? You were with Blaine, is that correct?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK, and you said you walked down th the road to your house, (Brendan nods \"yes\") and you said that you saw Steven on the porch.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \"yes\") uh huh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4685",
+   "kind": "header"
+  }
+ ],
+ "file": "p-089.png",
+ "cost_usd": 0.00188
+}

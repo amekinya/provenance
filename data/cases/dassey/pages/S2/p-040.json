@@ -1,0 +1,107 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955 Page 565 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "He came over and asked you what?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "If I could help him move somethin'.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK, let's, to this point now, I think we're pretty close to the truth. How close are we Brendan?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Pretty close.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK, then give us the little parts that we don't have yet up ta that point. Does Steven? There's somethin' in there we're missin'. You heard her, I have a feelin' he saw you, you saw him somethin' in here that we're missin' cuz you know we're not idiots, I don't see him comin' over to the house and asking you to help him unless you knows you know somethin' so tell us what you knew that he knew.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "It's OK Brendan. We already know.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "I think you went over to his house and then he asked him to get his mail somethin' in here is missing.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Well, when I got the mail there was like a envelope in there with his name on it.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "All right.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK, now we're goin' so what did you do?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I knocked on the door and he answered it.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Yeah, and then what?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I gave it to him and then I left.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Come on now. You just heard screaming over there.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You're making this hard on us and yourself.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Be honest. You went inside, didn't you? (Brendan nods \u201cyes\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4636",
+   "kind": "header"
+  }
+ ],
+ "file": "p-040.png",
+ "cost_usd": 0.00182
+}

@@ -1,0 +1,117 @@
+{
+ "page_label": "1",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 612 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "FASSBENDER:",
+   "text": "We got some food up here, sandwich or anything, you want somethin'? (Brendan shakes head \"no\") Are you sure? (Brendan nods \"yes\") Bathroom? (Brendan shakes head \"no\") Nothin'. Just a soda? (Brendan nods \"yes\") All right Bud, hang in there.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens & closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(pause - break)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(long pause) (door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER:",
+   "text": "Here you go bud.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN:",
+   "text": "Thank you.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes) (long pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER:",
+   "text": "Would you like ta ah have a sandwich or anything? (Brendan shakes head \"no\") You sure?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN:",
+   "text": "Not hungry.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER:",
+   "text": "OK, (Brendan nods \"yes\") if you want something, just let somebody know.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN:",
+   "text": "(nods \"yes\") OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes) (long pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER:",
+   "text": "Doing OK? (Brendan nods \"yes\") Need anything? (Brendan shakes head \"no\") Need to go to the bathroom?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN:",
+   "text": "(shakes head \"no\") mh uh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER:",
+   "text": "Got your soda? (Brendan nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN:",
+   "text": "uh huh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4683",
+   "kind": "header"
+  }
+ ],
+ "file": "p-087.png",
+ "cost_usd": 0.00178
+}

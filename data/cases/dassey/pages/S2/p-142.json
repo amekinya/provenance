@@ -1,0 +1,122 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 667 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You ate that whole pizza the other night, and you sure you don't want another sandwich? (Brendan shakes head \u201cno\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "All right.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "It's gonna be just a bit, OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Am I gonna be at school before school ends?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Probably not. I mean we're at two thirty already, and schools over at what, three? (Brendan nods \u201cyes\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "3:05",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "3:05 yeah. No.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "What time will this be done?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Well, we're pretty, we're pretty much done. We have a couple follow up things ta ask ya, but its pretty much done.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \u201cyes\u201d)Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "......considering er what we had mentioned earlier we would like ta maybe go out ta the property so you can point out some of these things and where some of this stuff was.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \u201cyes\u201d)Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \u201cyes\u201d) OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(long pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens and closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Brendan,",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Go ahead.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4738",
+   "kind": "header"
+  }
+ ],
+ "file": "p-142.png",
+ "cost_usd": 0.0018
+}

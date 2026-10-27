@@ -1,0 +1,132 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 613",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Want somethin' to eat? (Brendan shakes head \u201cno\u201d) You sure?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Ain't hungry.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "No. Anything at all?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(shakes head \u201cno\u201d) mh uh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You all right? (Brendan nods \u201cyes\u201d) OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes) (long pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Hey, Brendan, you need ta use the bathroom or anything? (Brendan shakes head \u201cno\u201d) You sure? (Brendan shakes head \u201cno\u201d) Need anything else?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(shakes head \u201cno\u201d) mh uh",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Sandwich or anything? (Brendan shakes head \u201cno\u201d) Did ya get your soda?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \u201cyes\u201d)Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. We'll be in about two minutes, OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I gotta question though.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Sure.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "How long is this gonna take?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "It shouldn't take a whole lot longer.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Do you think I can get there before one twenty-nine?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Um, probably not.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Oh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What's at one twenty-nine?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Well, I have a project due in sixth hour.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4684",
+   "kind": "header"
+  }
+ ],
+ "file": "p-088.png",
+ "cost_usd": 0.00185
+}

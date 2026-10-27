@@ -1,0 +1,112 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "WIEGERT",
+   "text": "Then what happens after that?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Is she alive yet?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What happens after you were done watching TV for 15 minutes.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I told him I had to leave cuz I had ta call Travis.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Brendan, be honest. You were there when she died and we know that. Don't start lying now. We know you were there. What happened?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "He ain't gonna lie to you, hey we know that OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "We already know, don't lie to us now, OK, come on. What happens next?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You're just hurting yourself if you lie now.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Then he went in, back in there and he stabbed her.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "You were with him? (Brendan nods \u201cyes\u201d) Yes?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Where did he stab her?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the stomach.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What else did he do to her? (pause) He did something else, we know that.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause) What else?",
+   "kind": "note"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "So he tried, she, he tied her up.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What do you mean he tied her up?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "So he could take her out there.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Before or after he stabbed her?",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-053.png",
+ "cost_usd": 0.00177
+}

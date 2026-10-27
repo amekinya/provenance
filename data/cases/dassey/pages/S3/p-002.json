@@ -1,0 +1,82 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT Page 757 File Number Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "mm huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "We just have to get some things on the record, um and you need to tell me if they're true. I was told by your attorney, Mr. Len Kachinsky, that you wanted to talk to us, is that true?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \u201cyes\u201d)",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You need to talk cuz it's being recorded, if you could please.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FAASSBENDER",
+   "text": "OK, ah, I was also told that Mr. Kachinsky spoke to you about this, is that true?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK, ah, Mr. Kachin-Kachinsky also told us that ah no promises were made to you on behalf of the state. Is that true?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK, ah because obviously you're in custody, we're gonna to go through that Miranda Warning again. You remember that?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "OK, I've got a form here I'm gonna use and I'm gonna go through that, if you have any questions, ask me, OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah (nods \u201cyes\u201d).",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You have the right to remain silent, anything you say can and will be used against you in a court of law. You have the right to consult with a lawyer before questioning, and to have your lawyer present with you during questioning. If you cannot afford to hire a lawyer, one will be appointed to represent you a public expense before or during questioning if you so wish. If you decide to answer questions now without a lawyer present, you have the right to stop the questioning and to remain silent at anytime you wish, and the right to ask for and have a lawyer present at anytime you wish including during questioning. Would you like ta read those over?",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-002.png",
+ "cost_usd": 0.00174
+}

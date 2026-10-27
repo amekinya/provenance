@@ -1,0 +1,97 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 481",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "No questions. OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Anytime, I want you to take those cards with ya. Anytime you do, you give us, either of us, a call. ......you to talk.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "I'm gonna, I'm gonna put my cell phone number on here, OK? But you gotta do me a favor. You can't give that ta anybody else except your mom if she wants it. OK? I answer that 24 hours a day, seven days a week, so if it's tonight at 3:00 in the morning and you can't sleep and you need somebody to talk to or if you forgot to tell me something or if you just need someone to talk to, you call me. If it's Saturday night, 8:00 at night needing someone to talk to, you call me. Anytime of the day or night, OK? If you just need somebody to come pick ya up, give you a ride somewhere, get you out of the house, I'd be willing to do that for ya too, OK? That's yours and this is Tom's. Do you have any questions? OK. Should we let you go back to 8th hour class, is that what you wanna do?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What class do you have?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Earth science",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Earth science, what's that about?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "It's about rock and those kinda......",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Do you like that class?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "This is yours. I don't know if you throw it in your locker or whatever, but you're obviously free to take this so again, um, again we're, we're not gonna leave ya high and dry. We'll talk to your mom about this we wanna be there if ya need something. If you feel you need to talk to someone, counseling or anything like that, a counselor, there's nothing wrong with that. Absolutely nothing wrong with that. OK? You let her know and you call us.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Do you feel like you wanna hurt yourself or anything at this time? No? OK.",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-42.png",
+ "cost_usd": 0.00187
+}

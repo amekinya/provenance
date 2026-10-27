@@ -1,0 +1,97 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 792",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. So when I walk out this door right now and I go call your mom and tell her that you've been lying to me, what do you think she's gonna to say? You think she'll be mad at you?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Do you want her mad at you? Then why are you lying? You're gonna tell us the truth now? A simple question. Where is the knife? Where is the knife, Brendan?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the house.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "In whose house?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "What do you mean in the beginning?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "No, I mean where is it now?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the jeep.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Whadda ya mean in the beginning? You mean where you got the knife from? Where did you get the knife from?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the kitchen.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Brendan, I'm gonna tell you what. I just about had enough and I'm, I'm gonna leave and I'm gonna take Mark with me, um, and we're gonna talk and if Mark can convince me to come back in, if that's what he even wants, we'll come back in, to give you a moment to think about. If we come back in, just tell us the truth. We're gonna take you through it if we come back in, you can tell us the truth and we're gonna ask you some tough questions. If you changed your story between, we'll ask you why, cause that's important. OK?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. What he's saying is you got one opportunity left. You understand that? You gonna take that opportunity? Think about it. You got one more chance to tell the truth or we're done. Got it? Do you want a soda or water or anything? (Brendan nods \"no\") One more opportunity if I can convince him to come back.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "note",
+   "text": "(Break)",
+   "kind": "note"
+  },
+  {
+   "speaker": "note",
+   "text": "(door opens and closes)",
+   "kind": "note"
+  }
+ ],
+ "file": "p-037.png",
+ "cost_usd": 0.00182
+}

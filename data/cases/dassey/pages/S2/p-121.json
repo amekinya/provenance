@@ -1,0 +1,122 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955 Page 646 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What did he use to do that with?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Paper towel.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What happened to the paper towel?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "He burnt it.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Can you describe the knife for us?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Well it was like that long.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Big head on it like that.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Big head on it. (Brendan nods \u201cyes\u201d) What kinda, I mean was it like a, a steak knife or like something you\u2019d use for a deer?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Somethin\u2019 like that like a deer.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK, what color was the handle?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Black.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Black. And it was a, could you draw that? You think you could draw the knife?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "(nods \u201cyes\u201d) Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Why don\u2019t you do that, draw me the knife.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(door opens)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Thank you.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(door closes)",
+   "kind": "note"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4717",
+   "kind": "header"
+  }
+ ],
+ "file": "p-121.png",
+ "cost_usd": 0.00174
+}

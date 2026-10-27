@@ -1,0 +1,97 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "WIEGERT",
+   "text": "No?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "And you told me before that he said he did something else to her, you said he tied her up and he stabbed her in the truck. Is that right?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Do you wanna add that to your statement? OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "What did he use to tie her up with, did he say?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Rope",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Rope",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Did he say anything about duct tape?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "....",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "No.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "You told us that he talked to you about not talking and that he threatened you. That would probably be a good thing to add to your statement if you\u2019d like, specifically what he said to you.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "You also told us that he said she was pretty. Do you wanna add that in the statement? Yes or no?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yes.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Brendan, I think you did a real good job about writing. You were, you were a little more detailed about what you saw in the fire and it was getting very difficult to write that, but I think it\u2019s important that you write not to just to tell what us the things that you saw in the fire about her and the clothing. Is that all right?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  }
+ ],
+ "file": "p-32.png",
+ "cost_usd": 0.00166
+}
