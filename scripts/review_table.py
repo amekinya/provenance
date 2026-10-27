@@ -17,9 +17,16 @@ def main() -> None:
     md = [f"# Review table: {rep['case']['title']}", "", f"Headline: {rep['headline']}", "",
           f"Run: {run.get('total_seconds', '?')} s, ${run.get('cost_usd', '?')}, labeler {run.get('labeler', '?')}, "
           f"verifier reasoning {run.get('verifier_reasoning', '?')}, deciding lines not re-checked: {run.get('unverified', '?')}", "",
-          "| Fact | Label | Verdict | First investigator line | First suspect line |", "|---|---|---|---|---|"]
+          "| Fact | Label | Verdict | First investigator line | First suspect line | Note |", "|---|---|---|---|---|---|"]
     for f in rep["facts"]:
-        md.append(f"| {f['fact']['id']} | {f['fact']['label']} | {f['origin_label']} | {cell(f['first_interrogator'])} | {cell(f['first_suspect'])} |".replace("\n", " "))
+        note = f["why"] if f.get("partly_supplied") else ""
+        md.append(f"| {f['fact']['id']} | {f['fact']['label']} | {f['origin_label']} | {cell(f['first_interrogator'])} | {cell(f['first_suspect'])} | {note} |".replace("\n", " "))
+    memo = cd / "memo.json"
+    if memo.exists():
+        import re  # noqa: PLC0415
+        pages = {str(u["page"]) for u in json.loads((cd / "utterances.json").read_text())}
+        cited = set(re.findall(r"p\. ?(\w+)", memo.read_text()))
+        md += ["", f"Memo page citations: {len(cited)} distinct; not in the transcripts: {sorted(cited - pages) or 'none'}"]
     (cd / "review_table.md").write_text("\n".join(md) + "\n")
     print("\n".join(md))
 
