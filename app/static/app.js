@@ -50,6 +50,7 @@
     $("#caseTitle").textContent = rep.case.title;
     $("#caseSub").textContent = `${rep.case.suspect}: ${rep.sessions.filter((s) => s.recorded).length} interviews with public transcripts, ${rep.utterance_count.toLocaleString()} turns of speech, ${rep.facts.length} key details checked`;
     $("#headline").textContent = rep.headline;
+    $("#draftNote").textContent = "Draft for counsel, computed from the record with machine-checked lines: investigator lines are matched by the details' key words in code; the suspect's lines are labeled by Nemotron 3 Ultra and checked against the same key words. Every line a verdict rests on is in the review queue, deciding lines first.";
     renderCounts(rep);
     renderMap(rep);
     renderSessions(rep);
@@ -218,7 +219,8 @@
     const cls = ev.role === "interrogator" ? "inv" : ev.role === "suspect" ? "sus" : "";
     const mark = ev.role === "interrogator" ? "inv" : ev.kind === "assents" ? "agr" : ev.kind === "denies" ? "den" : "sus";
     const first = ev.first ? `<span class="tag">first ${ev.first === "interrogator" ? "investigator mention" : "time he said it"}</span>` : "";
-    const checked = ev.first ? (ev.verified === true ? `<span class="vchk">re-checked by Nemotron 3 Ultra</span>` : ev.verified === null || ev.verified === undefined ? `<span class="vchk no">not re-checked</span>` : "") : "";
+    const checked = ev.by === "key words" ? `<span class="vchk">matched by key words${ev.partial ? " (part of the detail)" : ""}</span>`
+      : ev.first ? (ev.verified === true ? `<span class="vchk">re-checked by Nemotron 3 Ultra</span>` : ev.verified === null || ev.verified === undefined ? `<span class="vchk no">not re-checked</span>` : "") : "";
     const note = ev.kind_note ? `<span class="vchk no">${esc(ev.kind_note)}</span>` : "";
     const quote = ev.sensitive ? `<q class="masked" data-full="${esc(ev.quote)}">Graphic passage hidden</q> <button data-reveal>Show</button>` : `<q>${esc(ev.quote)}</q>`;
     return `<li class="ev ${cls}"><i class="mk ${mark}" aria-hidden="true" style="margin-top:6px"></i>

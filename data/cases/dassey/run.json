@@ -3751,5 +3751,7 @@
    "cost_usd": 0.01451,
    "purpose": "Write the memo"
   }
- ]
+ ],
+ "investigator_side": "key words (code)",
+ "reaudit": "audit recomputed by code from the saved labels, no new labeling"
 }

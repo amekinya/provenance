@@ -26,7 +26,7 @@ from dataclasses import asdict
 
 from app.ai import tasks
 from app.ai.client import CallRecord, LiveModelUnavailable
-from app.engine.ledger import ASSENT, audit, has_terms, load_case, plain, spoken, term_window
+from app.engine.ledger import ASSENT, audit, carries, has_terms, load_case, plain, spoken, term_window
 from scripts.ingest import case_dir
 
 
@@ -152,7 +152,7 @@ def candidate_lines(utts: list[dict], f: dict, before_seq: int) -> list[dict]:
     one of the detail's distinctive stems (in a long record, stems on more than 2% of lines don't count as distinctive)."""
     if f.get("must"):
         order = sorted(utts, key=lambda u: u["seq"])
-        return [u for i, u in enumerate(order) if u["role"] == "interrogator" and u["seq"] < before_seq and has_terms(term_window(order, i), f["must"])]
+        return [u for i, u in enumerate(order) if u["role"] == "interrogator" and u["seq"] < before_seq and carries(order, i, f["must"])]
     stems = detail_stems(f)
     if len(utts) >= 200:
         texts = [plain(u["text"]).lower() for u in utts]
@@ -256,7 +256,7 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
             fid = fl["fact"]["id"]
             p = pos[fs["utterance"]]
             just_before = [u for u in order[max(0, p - 4):p] if u["role"] == "interrogator" and u["session"] == fs["session"] and u["seq"] < limit
-                           and (not fact_of[fid].get("must") or has_terms(term_window(order, pos[u["id"]]), fact_of[fid]["must"]))]
+                           and (not fact_of[fid].get("must") or carries(order, pos[u["id"]], fact_of[fid]["must"]))]
             kw = [u for u in candidate_lines(utts, fact_of[fid], limit) if (u["id"], fid) not in asked][:per_fact]
             pool = {u["id"]: u for u in kw + [u for u in just_before if (u["id"], fid) not in asked]}
             cands = sorted(pool.values(), key=lambda u: u["seq"])
@@ -335,7 +335,8 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
         deciding = set()
         for f in rep["facts"]:
-            for ev in (f["first_interrogator"], f["first_suspect"]):
+            # with key terms, investigator lines are decided by code; only the suspect's lines go to the verifier
+            for ev in ((f["first_suspect"],) if f["fact"].get("must") else (f["first_interrogator"], f["first_suspect"])):
                 if ev:
                     deciding.add((ev["utterance"], f["fact"]["id"]))
         part = {(f["first_interrogator"]["utterance"], f["fact"]["id"]): f["partial_words"] for f in rep["facts"] if f.get("partly_supplied")}
@@ -400,8 +401,9 @@ def check_labels(cfg, utts, facts, mentions, calls: list[CallRecord], rounds: in
     Returns (agreements added, investigator lines found by the safety search, deciding lines left unchecked)."""
     agreed = add_code_assents(utts, mentions)
     unverified = verify_deciding(cfg, utts, facts, mentions, calls, rounds=rounds)
-    searched = search_investigator_first(cfg, utts, facts, mentions, calls)
-    searched += search_partial(cfg, utts, facts, mentions, calls)
+    # Details with key terms: the investigator side is code only (the ledger), so no model search is needed.
+    plain_facts = [f for f in facts if not f.get("must")]
+    searched = search_investigator_first(cfg, utts, plain_facts, mentions, calls) if plain_facts else 0
     if searched:
         unverified = verify_deciding(cfg, utts, facts, mentions, calls, rounds=rounds)
     return agreed, searched, unverified
@@ -413,6 +415,7 @@ def main() -> None:
     ap.add_argument("--chunk", type=int, default=18)
     ap.add_argument("--no-memo", action="store_true")
     ap.add_argument("--reaudit", action="store_true", help="recompute the audit from the saved labels (mentions.json) with the current code; no labeling")
+    ap.add_argument("--memo", action="store_true", help="with --reaudit: also rewrite the memo (one Ultra call)")
     ap.add_argument("--labeler", default="ultra", choices=["ultra", "lightning", "matcher"],
                     help="ultra (default): our diagnostic runs found Lightning missed about half of the suspect's adoptions")
     a = ap.parse_args()
@@ -424,13 +427,25 @@ def main() -> None:
         known = {u["id"] for u in utts}
         text_of = {u["id"]: u["text"] for u in utts}
         stale = [m for m in mentions if m["utterance"] not in known or
-                 (m.get("by") in ("model", "search") and m.get("quote") and not tasks.quote_in(m["quote"][:60], text_of[m["utterance"]])
+                 (m.get("by") in ("model", "search") and m.get("quote") and not tasks.quote_in(m["quote"], text_of[m["utterance"]])
                   and not text_of[m["utterance"]].startswith(m["quote"][:40]))]
         if stale:
             sys.exit(f"{len(stale)} saved labels don't match the current lines (ids moved?); run the full tag step instead")
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
         (cd / "audit.json").write_text(json.dumps(rep, indent=1))
         print("re-audited from saved labels:", rep["headline"])
+        run_file = cd / "run.json"
+        run = json.loads(run_file.read_text()) if run_file.exists() else {}
+        run["investigator_side"] = "key words (code)"
+        run["reaudit"] = "audit recomputed by code from the saved labels, no new labeling"
+        if a.memo:
+            try:
+                (cd / "memo.json").write_text(json.dumps(tasks.write_memo(rep, calls), indent=1))
+                run["memo_cost_usd"] = round(sum(c.cost_usd for c in calls), 4)
+            except LiveModelUnavailable as e:
+                print("memo unavailable:", e)
+                (cd / "memo.json").unlink(missing_ok=True)
+        run_file.write_text(json.dumps(run, indent=1))
         return
     t0 = time.perf_counter()
     failed: list[str] = []

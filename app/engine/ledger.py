@@ -147,6 +147,32 @@ def term_window(order: list, i: int, answers_labeled_question: bool = False) -> 
     return t
 
 
+def _spans(text: str) -> list[str]:
+    """Single sentences and pairs of consecutive sentences: in a long line, key terms must occur close together, so
+    'the vehicle' in one sentence and 'back' three sentences later don't make a match."""
+    sents = [x for x in re.split(r"(?<=[.?!])\s+|\.{3,}", plain(text)) if x.strip()] or [text]
+    return sents + [sents[k] + " " + sents[k + 1] for k in range(len(sents) - 1)]
+
+
+def carries(order: list, i: int, must: list, answers_labeled_question: bool = False) -> bool:
+    """Does line i carry a detail with these key terms? A bare agreement or a short line (8 words or fewer) is read with
+    the 2 lines before it in the same session; an investigator's short line only with investigators' lines (so an
+    investigator never gets credit for the suspect's words). A long line must have the terms within one or two
+    consecutive sentences; a long suspect line answering a labeled question is read with that question."""
+    u = order[i]
+    t = _txt(u)
+    spoken_t = spoken(t)
+    short = len(spoken_t.split()) <= SHORT_WORDS or bool(ASSENT.match(spoken_t))
+    is_inv = _role(u) == "interrogator"
+    prev = [order[k] for k in range(max(0, i - 2), i) if _sess(order[k]) == _sess(u) and (not is_inv or _role(order[k]) == "interrogator")]
+    if short:
+        return has_terms(" ".join([_txt(x) for x in prev] + [t]), must)
+    if answers_labeled_question and not is_inv:
+        q = _txt(order[i - 1])
+        return any(has_terms(q + " " + sp, must) for sp in _spans(t))
+    return any(has_terms(sp, must) for sp in _spans(t))
+
+
 def _role(x) -> str:
     return x.role if hasattr(x, "role") else x["role"]
 
@@ -161,37 +187,80 @@ def is_assent(u: Utterance) -> bool:
     return bool(ASSENT.match(spoken(u.text)) or re.fullmatch(r"\W*\(?\s*(\w+\s+)?nods?[^)]*\)?\W*", plain(u.text).strip(), re.I))
 
 
+PART_WINDOW = 6  # investigator lines this close before his first statement can have supplied part of it
+
+
+def _event(u: Utterance, kind: str, quote: str, verified, by: str = "model") -> dict:
+    return {"utterance": u.id, "seq": u.seq, "session": u.session, "page": u.page, "role": u.role, "speaker": u.speaker,
+            "kind": kind, "quote": quote or u.text[:200], "sensitive": u.sensitive, "verified": verified, "by": by}
+
+
 def fact_ledger(case: Case, fact: Fact) -> dict:
-    """Everything the record says about one fact, in order, and the code's verdict."""
+    """Everything the record says about one fact, in order, and the code's verdict.
+
+    With key terms (`fact.must`) the investigator side is decided by code alone: an investigator line carries the
+    detail when it has a word from every key-term group (a short line is read with the 2 lines before it). No model can
+    remove such a line; model labels on investigator lines are extra evidence only. The suspect side still comes from
+    model labels (Ultra), and code checks the key terms. Without key terms, both sides come from the labels."""
     by_id = {u.id: u for u in case.utterances}
     sessions = {s.id: s for s in case.sessions}
     order = ordered(case)
     pos = {u.id: i for i, u in enumerate(order)}
     ms = sorted((m for m in case.mentions if m.fact == fact.id and m.utterance in by_id and m.verified is not False),
                 key=lambda m: by_id[m.utterance].seq)
-    labeled = {m.utterance for m in ms}
     events = []
+    inv_full: set[str] = set()      # investigator lines carrying every group (code)
+    inv_part: dict[str, list] = {}  # investigator lines carrying some groups (code)
+    if fact.must:
+        for i, u in enumerate(order):
+            if u.role != "interrogator":
+                continue
+            if carries(order, i, fact.must):
+                inv_full.add(u.id)
+            else:
+                gs = [g for g in fact.must if has_terms(u.text, [g])]
+                if gs:
+                    inv_part[u.id] = gs
+    labeled = {m.utterance for m in ms} | inv_full | set(inv_part)
+    model_ev = {}
+    for m in ms:
+        u = by_id[m.utterance]
+        ev = _event(u, m.kind, m.quote, m.verified, m.by)
+        if fact.must and u.role == "interrogator":
+            if u.id not in inv_full:
+                ev["kind_note"] = "the line doesn't contain the detail's key terms; not counted"
+                events.append(ev)
+            else:
+                model_ev[u.id] = ev  # shown on the key-word match below
+            continue
+        if fact.must and not carries(order, pos[u.id], fact.must, answers_labeled(order, pos[u.id], labeled)):
+            ev["kind_note"] = "the line doesn't contain the detail's key terms; not counted"
+        events.append(ev)
+    for uid in inv_full:
+        u = by_id[uid]
+        ev = _event(u, "asks" if "?" in u.text else "asserts", "", None, "key words")
+        if uid in model_ev:
+            ev["model_label"] = model_ev[uid]["kind"]
+        events.append(ev)
+    events.sort(key=lambda e: e["seq"])
+
     first_inv = first_sus = None
     inv_before = 0
     inv_pos: list[int] = []  # where investigators put this fact into the record
-    for m in ms:
-        u = by_id[m.utterance]
-        ev = {"utterance": u.id, "seq": u.seq, "session": u.session, "page": u.page, "role": u.role, "speaker": u.speaker,
-              "kind": m.kind, "quote": m.quote or u.text[:200], "sensitive": u.sensitive, "verified": m.verified}
-        if fact.must and not has_terms(term_window(order, pos[u.id], answers_labeled(order, pos[u.id], labeled)), fact.must):
-            ev["kind_note"] = "the line doesn't contain the detail's key terms; not counted"
-            events.append(ev)
+    for ev in events:
+        if ev.get("kind_note"):
             continue
-        if u.role == "interrogator" and m.kind in ("asserts", "asks"):
+        u = by_id[ev["utterance"]]
+        if u.role == "interrogator" and ev["kind"] in ("asserts", "asks"):
             inv_pos.append(pos[u.id])
             if first_inv is None:
                 first_inv = ev
             if first_sus is None:
                 inv_before += 1
         if u.role == "suspect" and first_sus is None:
-            if m.kind == "asserts":
+            if ev["kind"] == "asserts":
                 first_sus = ev
-            elif m.kind == "assents":
+            elif ev["kind"] == "assents":
                 # A bare "yeah" adopts a detail only if an investigator just put that detail to him (same session,
                 # within the last 3 turns). Otherwise it's not evidence he adopted anything.
                 p = pos[u.id]
@@ -199,11 +268,11 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
                     first_sus = ev
                 else:
                     ev["kind_note"] = "agreement without a question about this detail just before it; not counted"
-        events.append(ev)
 
-    partial = _partly_supplied(fact, ms, by_id, order, pos, first_inv, first_sus)
+    partial = _partly_supplied(fact, order, pos, inv_part, first_inv, first_sus)
     origin, why = _origin(case, fact, first_inv, first_sus, by_id, sessions, partial)
-    if partial and origin == "interrogator_first" and not (first_inv and first_inv["seq"] < first_sus["seq"]):
+    is_part = bool(partial and origin == "interrogator_first" and not (first_inv and first_inv["seq"] < first_sus["seq"]))
+    if is_part:
         first_inv = partial["event"]
     if first_inv:
         first_inv["first"] = "interrogator"
@@ -212,10 +281,9 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
     adopted_by_assent = bool(first_sus and first_sus["kind"] == "assents")
     return {
         "fact": asdict(fact) | {"public_before": fact.public_before.isoformat() if fact.public_before else None},
-        "origin": origin, "origin_label": "Investigators named part of it first" if partial and origin == "interrogator_first" and first_inv is partial["event"]
-        else ORIGINS[origin], "corroboration": CORROBORATION[origin], "why": why,
-        "partly_supplied": bool(partial and origin == "interrogator_first" and first_inv is partial["event"]),
-        "partial_words": partial["investigator_words"] if partial and origin == "interrogator_first" and first_inv is partial["event"] else [],
+        "origin": origin, "origin_label": "Investigators named part of it first" if is_part else ORIGINS[origin],
+        "corroboration": CORROBORATION[origin], "why": why,
+        "partly_supplied": is_part, "partial_words": partial["investigator_words"] if is_part else [],
         "first_interrogator": first_inv, "first_suspect": first_sus,
         "interrogator_mentions_before_suspect": inv_before if first_sus else None,
         "adopted_by_assent": adopted_by_assent,
@@ -224,44 +292,49 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
     }
 
 
-def _partly_supplied(fact: Fact, ms: list, by_id: dict, order: list, pos: dict, first_inv: dict | None, first_sus: dict | None) -> dict | None:
-    """Did investigators name PART of the detail before the suspect stated all of it? For each key-term group, find who
-    said one of its words first: among the lines labeled with this detail before his first full statement (denials
-    excluded, rejected labels excluded), plus the lines his statement is read with. If an investigator was first for any
-    group, the detail was partly supplied. Returns the earliest such investigator line, the words they named first and
-    the words he added, or None."""
+def _partly_supplied(fact: Fact, order: list, pos: dict, inv_part: dict, first_inv: dict | None, first_sus: dict | None) -> dict | None:
+    """Code only. Did investigators name PART of the detail just before he stated all of it? Look at the investigator
+    lines in the 6 lines before his first statement (same session) that carry some key-term groups but not all. A group
+    counts as theirs unless he had already said a word of it himself earlier in that window (an investigator echoing
+    his own word doesn't supply it). Returns the earliest such investigator line, the words they named and the words
+    he named, or None."""
     if not fact.must or not first_sus or (first_inv and first_inv["seq"] < first_sus["seq"]):
         return None
-    lines = {}
-    for m in ms:
-        u = by_id[m.utterance]
-        if u.seq < first_sus["seq"] and m.kind != "denies" and (u.role == "suspect" or m.kind in ("asks", "asserts")):
-            lines[u.id] = u
     p = pos[first_sus["utterance"]]
-    if term_window(order, p, answers_labeled(order, p, {m.utterance for m in ms})) != order[p].text:  # read with the lines before it
-        for k in range(max(0, p - 2), p):
-            if order[k].session == order[p].session:
-                lines.setdefault(order[k].id, order[k])
-    lines[order[p].id] = order[p]
-    ordered_lines = sorted(lines.values(), key=lambda u: u.seq)
-    inv_first_groups, his_groups, earliest_inv = [], [], None
-    for g in fact.must:
-        first = next((u for u in ordered_lines if has_terms(u.text, [g])), None)
-        if first is None:
+    window = [u for u in order[max(0, p - PART_WINDOW):p] if u.session == order[p].session]
+    # where he first said a word of each group himself, anywhere earlier in the record
+    his_first = {}
+    for gi, g in enumerate(fact.must):
+        his_first[gi] = next((x.seq for x in order[:p] if x.role == "suspect" and has_terms(x.text, [g])), None)
+    theirs: list[tuple] = []  # (line, group)
+    for u in window:
+        if u.id not in inv_part:
             continue
-        words = _said(first.text, g)  # every word of this group as it was said in that line
-        if first.role == "interrogator":
-            inv_first_groups += [w for w in words if w not in inv_first_groups]
-            if earliest_inv is None or first.seq < earliest_inv.seq:
-                earliest_inv = first
-        else:
-            his_groups += [w for w in words if w not in his_groups]
-    if not earliest_inv:
+        for g in inv_part[u.id]:
+            gi = fact.must.index(g)
+            if his_first[gi] is None or his_first[gi] > u.seq:  # an investigator echoing his own earlier word doesn't supply it
+                theirs.append((u, g))
+    if not theirs:
         return None
-    u = earliest_inv
+    earliest = min((u for u, _ in theirs), key=lambda u: u.seq)
+    inv_words: list[str] = []
+    for u, g in theirs:
+        inv_words += [w for w in _said(u.text, g) if w not in inv_words]
+    their_groups = [g for _, g in theirs]
+    his_lines = [x for x in window if x.role == "suspect"] + [order[p]]
+    his_words: list[str] = []
+    for g in fact.must:
+        if g in their_groups:
+            continue
+        for x in reversed(his_lines):  # his statement first, then his lines just before it
+            ws = _said(x.text, g)
+            if ws:
+                his_words += [w for w in ws if w not in his_words]
+                break
+    u = earliest
     ev = {"utterance": u.id, "seq": u.seq, "session": u.session, "page": u.page, "role": u.role, "speaker": u.speaker, "kind": "asks",
-          "quote": u.text[:200], "sensitive": u.sensitive, "verified": None, "partial": True}
-    return {"event": ev, "investigator_words": inv_first_groups, "his_words": his_groups}
+          "quote": u.text[:200], "sensitive": u.sensitive, "verified": None, "partial": True, "by": "key words"}
+    return {"event": ev, "investigator_words": inv_words, "his_words": his_words}
 
 
 def _said(text: str, group: list[str]) -> list[str]:

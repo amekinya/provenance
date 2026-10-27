@@ -59,6 +59,7 @@ jobs:
           if [[ "$STEPS_" == *",pageeval,"* ]]; then python -m scripts.page_eval "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",facts,"* ]]; then python -m scripts.facts "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",tag,"* ]]; then python -m scripts.tag "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS_" == *",reaudit,"* ]]; then python -m scripts.tag "$CASE" --reaudit --memo 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",oneprompt,"* ]]; then python -m scripts.one_prompt_case "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           tail -20 logs/pipeline.txt >> "$GITHUB_STEP_SUMMARY"
       - name: Commit results

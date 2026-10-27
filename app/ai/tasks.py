@@ -234,7 +234,9 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None) -> dict:
                                       "Use ONLY the findings given; cite pages as given; never claim the confession is false or that the suspect is "
                                       "innocent; say what the record shows about where details came from. Plain, precise language. For a detail "
                                       "investigators named in part, always state both halves with their pages, e.g. 'Investigators asked about the "
-                                      "fire (p. 441); he named tires and branches (p. 442)'."},
+                                      "fire (p. 441); he named tires and branches (p. 442)'. Open by saying this is a draft for counsel's review, "
+                                      "computed from the record with machine-checked lines (investigator lines matched by key words in code; the "
+                                      "suspect's lines labeled by a model and checked by code), and that borderline suspect-side calls need review."},
         {"role": "user", "content": f"Findings: {json.dumps(brief)[:60000]}\n\nWrite: summary (3-4 sentences), key_points (4-6 bullets, most "
                                     "important first, each with its page cite), limits (2-4 bullets: what this audit can't tell)."}],
         schema=MEMO_SCHEMA, purpose="Write the memo", reasoning=True, max_tokens=5000, calls=calls)
