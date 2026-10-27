@@ -1,194 +1,115 @@
-tagged 38 sentences in 3 chunks: 12 labels kept, 0 dropped (quote not in sentence)
-tagged 44 sentences in 3 chunks: 11 labels kept, 1 dropped (quote not in sentence)
-tagged 42 sentences in 3 chunks: 18 labels kept, 0 dropped (quote not in sentence)
-tagged 39 sentences in 3 chunks: 15 labels kept, 0 dropped (quote not in sentence)
-round 1: 7 deciding labels to check, 7 checked, 0 rejected
-verification done after 1 round(s)
-safety search: 2 earlier investigator lines checked, 2 answered, 1 carry the detail
-verification done after 0 round(s)
-round 1: 8 deciding labels to check, 8 checked, 0 rejected
-verification done after 1 round(s)
-tagged 45 sentences in 3 chunks: 10 labels kept, 1 dropped (quote not in sentence)
-round 1: 3 deciding labels to check, 3 checked, 0 rejected
-verification done after 1 round(s)
-tagged 46 sentences in 3 chunks: 12 labels kept, 0 dropped (quote not in sentence)
-round 1: 9 deciding labels to check, 9 checked, 1 rejected
-round 1: 6 deciding labels to check, 5 checked, 0 rejected
-safety search: 3 earlier investigator lines checked, 3 answered, 2 carry the detail
-verification done after 0 round(s)
-tagged 41 sentences in 3 chunks: 10 labels kept, 1 dropped (quote not in sentence)
-round 1: 6 deciding labels to check, 5 checked, 0 rejected
-round 1: 7 deciding labels to check, 7 checked, 1 rejected
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-safety search: 2 earlier investigator lines checked, 2 answered, 1 carry the detail
-round 1: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-tagged 47 sentences in 3 chunks: 21 labels kept, 3 dropped (quote not in sentence)
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-tagged 42 sentences in 3 chunks: 14 labels kept, 3 dropped (quote not in sentence)
-round 1: 7 deciding labels to check, 7 checked, 0 rejected
-verification done after 1 round(s)
-tagged 46 sentences in 3 chunks: 10 labels kept, 0 dropped (quote not in sentence)
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-round 1: 5 deciding labels to check, 5 checked, 0 rejected
-verification done after 1 round(s)
-tagged 46 sentences in 3 chunks: 16 labels kept, 2 dropped (quote not in sentence)
-round 1: 11 deciding labels to check, 10 checked, 0 rejected
-tagged 45 sentences in 3 chunks: 0 labels kept, 0 dropped (quote not in sentence)
-verification done after 0 round(s)
-tagged 46 sentences in 3 chunks: 8 labels kept, 0 dropped (quote not in sentence)
-round 1: 5 deciding labels to check, 5 checked, 0 rejected
-verification done after 1 round(s)
-tagged 40 sentences in 3 chunks: 18 labels kept, 6 dropped (quote not in sentence)
-round 1: 9 deciding labels to check, 9 checked, 1 rejected
-verification done after 1 round(s)
-round 1: 10 deciding labels to check, 10 checked, 0 rejected
-verification done after 1 round(s)
-safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
-safety search: 2 earlier investigator lines checked, 2 answered, 2 carry the detail
-verification done after 0 round(s)
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-provenance {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.568, 'line_acc': 0.558, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 18, 'suspect->suspect': 21, 'interrogator->interrogator': 16, 'never->never': 17, 'interrogator->never': 21, 'suspect->interrogator': 2}} {'seconds': 276.5, 'cost_usd': 0.9889, 'calls': 100}
-tagged 44 sentences in 3 chunks: 32 labels kept, 6 dropped (quote not in sentence)
-tagged 39 sentences in 3 chunks: 32 labels kept, 0 dropped (quote not in sentence)
+tagged 44 sentences in 3 chunks: 29 labels kept, 1 dropped (quote not in sentence)
+tagged 39 sentences in 3 chunks: 27 labels kept, 1 dropped (quote not in sentence)
 tagged 42 sentences in 3 chunks: 25 labels kept, 0 dropped (quote not in sentence)
-tagged 38 sentences in 3 chunks: 27 labels kept, 0 dropped (quote not in sentence)
-round 1: 14 deciding labels to check, 14 checked, 1 rejected
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
+tagged 38 sentences in 3 chunks: 29 labels kept, 0 dropped (quote not in sentence)
+round 1: 14 deciding labels to check, 14 checked, 4 rejected
+round 1: 14 deciding labels to check, 14 checked, 2 rejected
+round 1: 8 deciding labels to check, 8 checked, 1 rejected
+round 1: 13 deciding labels to check, 13 checked, 4 rejected
+round 2: 2 deciding labels to check, 2 checked, 1 rejected
+verification done after 2 round(s)
+round 2: 3 deciding labels to check, 3 checked, 3 rejected
+round 2: 3 deciding labels to check, 3 checked, 2 rejected
+safety search: 2 earlier investigator lines checked, 2 answered, 1 carry the detail
+verification done after 0 round(s)
+round 3: 2 deciding labels to check, 2 checked, 1 rejected
 1 deciding line(s) not re-checked
-tagged 45 sentences in 3 chunks: 37 labels kept, 0 dropped (quote not in sentence)
-round 1: 8 deciding labels to check, 8 checked, 0 rejected
-verification done after 1 round(s)
-tagged 46 sentences in 3 chunks: 28 labels kept, 0 dropped (quote not in sentence)
-round 1: 12 deciding labels to check, 12 checked, 1 rejected
-verification done after 1 round(s)
-round 1: 13 deciding labels to check, 13 checked, 5 rejected
-round 1: 14 deciding labels to check, 14 checked, 7 rejected
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+tagged 45 sentences in 3 chunks: 30 labels kept, 0 dropped (quote not in sentence)
+round 1: 13 deciding labels to check, 8 checked, 1 rejected
 round 2: 6 deciding labels to check, 5 checked, 1 rejected
-round 2: 7 deciding labels to check, 7 checked, 1 rejected
+round 3: 2 deciding labels to check, 2 checked, 0 rejected
+0 deciding line(s) not re-checked
+safety search: 1 earlier investigator lines checked, 1 answered, 0 carry the detail
+tagged 41 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 10 checked, 2 rejected
+round 2: 4 deciding labels to check, 4 checked, 3 rejected
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
 round 3: 1 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 1 deciding line(s) not re-checked
-round 3: 2 deciding labels to check, 2 checked, 1 rejected
-0 deciding line(s) not re-checked
-round 1: 10 deciding labels to check, 10 checked, 1 rejected
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-tagged 41 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-tagged 47 sentences in 3 chunks: 38 labels kept, 0 dropped (quote not in sentence)
-round 1: 13 deciding labels to check, 13 checked, 2 rejected
-round 1: 12 deciding labels to check, 12 checked, 1 rejected
-round 2: 2 deciding labels to check, 2 checked, 0 rejected
-verification done after 2 round(s)
-tagged 42 sentences in 3 chunks: 41 labels kept, 0 dropped (quote not in sentence)
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
   verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
 round 2: 1 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 1 deciding line(s) not re-checked
+tagged 47 sentences in 3 chunks: 37 labels kept, 0 dropped (quote not in sentence)
+round 1: 13 deciding labels to check, 13 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 42 sentences in 3 chunks: 42 labels kept, 0 dropped (quote not in sentence)
   safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
 safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-round 1: 13 deciding labels to check, 13 checked, 4 rejected
-round 2: 4 deciding labels to check, 4 checked, 0 rejected
-verification done after 2 round(s)
-safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+round 1: 13 deciding labels to check, 8 checked, 3 rejected
+round 2: 8 deciding labels to check, 3 checked, 0 rejected
+round 3: 5 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+5 deciding line(s) not re-checked
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  chunk at X011-019 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+tagged 46 sentences in 3 chunks: 17 labels kept, 0 dropped (quote not in sentence)
+round 1: 8 deciding labels to check, 3 checked, 0 rejected
+round 2: 5 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+5 deciding line(s) not re-checked
+safety search: 4 earlier investigator lines checked, 4 answered, 2 carry the detail
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 4 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+4 deciding line(s) not re-checked
+tagged 46 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 10 deciding labels to check, 10 checked, 4 rejected
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
 tagged 46 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
   verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
+round 2: 4 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-round 1: 10 deciding labels to check, 10 checked, 0 rejected
-verification done after 1 round(s)
-tagged 46 sentences in 3 chunks: 34 labels kept, 0 dropped (quote not in sentence)
-round 1: 12 deciding labels to check, 12 checked, 1 rejected
-round 2: 1 deciding labels to check, 1 checked, 0 rejected
-verification done after 2 round(s)
+4 deciding line(s) not re-checked
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 12 deciding labels to check, 7 checked, 2 rejected
+  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
 tagged 45 sentences in 3 chunks: 31 labels kept, 0 dropped (quote not in sentence)
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-round 1: 12 deciding labels to check, 12 checked, 1 rejected
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+round 1: 9 deciding labels to check, 9 checked, 4 rejected
+round 2: 2 deciding labels to check, 2 checked, 0 rejected
+verification done after 2 round(s)
 safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-tagged 46 sentences in 3 chunks: 36 labels kept, 0 dropped (quote not in sentence)
-round 1: 12 deciding labels to check, 12 checked, 1 rejected
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
+tagged 46 sentences in 3 chunks: 37 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 12 checked, 4 rejected
+round 2: 4 deciding labels to check, 4 checked, 1 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 1 deciding line(s) not re-checked
 tagged 40 sentences in 3 chunks: 27 labels kept, 0 dropped (quote not in sentence)
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-round 1: 13 deciding labels to check, 13 checked, 0 rejected
-verification done after 1 round(s)
+round 1: 13 deciding labels to check, 13 checked, 2 rejected
+round 2: 2 deciding labels to check, 2 checked, 1 rejected
+verification done after 2 round(s)
   verifier failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
+round 2: 6 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
+6 deciding line(s) not re-checked
   safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
 safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
   safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
 safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
   safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
 safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  verifier (reasoning on) failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON; retrying without reasoning
-  safety check failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-provenance_ultra {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.874, 'line_acc': 0.874, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 2, 'suspect->suspect': 36, 'interrogator->interrogator': 31, 'never->never': 16, 'interrogator->never': 6, 'suspect->interrogator': 3, 'never->interrogator': 1}} {'seconds': 589.4, 'cost_usd': 2.7093, 'calls': 167}
+provenance {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.853, 'line_acc': 0.832, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 4, 'suspect->suspect': 36, 'interrogator->interrogator': 28, 'never->never': 17, 'interrogator->never': 9, 'suspect->interrogator': 1}} {'seconds': 157.5, 'cost_usd': 0.7843, 'calls': 141}
 # Provenance benchmark
 
 14 synthetic interrogations (trainval split) written by deepseek-ai/DeepSeek-V4.1-Flash-1017 (the training writer; diagnostic split), 95 details with known first speakers.
 
 | Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
 |---|---|---|---|---|---|
-| Provenance: Lightning labels + code ledger + Ultra check + safety search | 57% | 56% | 0 | 276.5 s | $0.989 |
-| Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search | 87% | 87% | 0 | 589.4 s | $2.709 |
+| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 85% | 83% | 0 | 157.5 s | $0.784 |

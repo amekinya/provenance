@@ -6,86 +6,45 @@
   "provenance": {
    "n_facts": 95,
    "failed_interrogations": 0,
-   "speaker_acc": 0.568,
-   "line_acc": 0.558,
+   "speaker_acc": 0.853,
+   "line_acc": 0.832,
    "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->never": 18,
-    "suspect->suspect": 21,
-    "interrogator->interrogator": 16,
-    "never->never": 17,
-    "interrogator->never": 21,
-    "suspect->interrogator": 2
-   }
-  },
-  "provenance_ultra": {
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.874,
-   "line_acc": 0.874,
-   "investigator_first_called_suspect_first": 0,
-   "confusion": {
-    "suspect->never": 2,
+    "suspect->never": 4,
     "suspect->suspect": 36,
-    "interrogator->interrogator": 31,
-    "never->never": 16,
-    "interrogator->never": 6,
-    "suspect->interrogator": 3,
-    "never->interrogator": 1
+    "interrogator->interrogator": 28,
+    "never->never": 17,
+    "interrogator->never": 9,
+    "suspect->interrogator": 1
    }
   }
  },
  "costs": {
   "provenance": {
-   "seconds": 276.5,
-   "cost_usd": 0.9889,
-   "calls": 100
-  },
-  "provenance_ultra": {
-   "seconds": 589.4,
-   "cost_usd": 2.7093,
-   "calls": 167
+   "seconds": 157.5,
+   "cost_usd": 0.7843,
+   "calls": 141
   }
  },
  "rows": [
   {
-   "method": "Provenance: Lightning labels + code ledger + Ultra check + safety search",
+   "method": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
    "n_facts": 95,
    "failed_interrogations": 0,
-   "speaker_acc": 0.568,
-   "line_acc": 0.558,
+   "speaker_acc": 0.853,
+   "line_acc": 0.832,
    "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->never": 18,
-    "suspect->suspect": 21,
-    "interrogator->interrogator": 16,
-    "never->never": 17,
-    "interrogator->never": 21,
-    "suspect->interrogator": 2
-   },
-   "seconds": 276.5,
-   "cost_usd": 0.9889,
-   "calls": 100
-  },
-  {
-   "method": "Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search",
-   "n_facts": 95,
-   "failed_interrogations": 0,
-   "speaker_acc": 0.874,
-   "line_acc": 0.874,
-   "investigator_first_called_suspect_first": 0,
-   "confusion": {
-    "suspect->never": 2,
+    "suspect->never": 4,
     "suspect->suspect": 36,
-    "interrogator->interrogator": 31,
-    "never->never": 16,
-    "interrogator->never": 6,
-    "suspect->interrogator": 3,
-    "never->interrogator": 1
+    "interrogator->interrogator": 28,
+    "never->never": 17,
+    "interrogator->never": 9,
+    "suspect->interrogator": 1
    },
-   "seconds": 589.4,
-   "cost_usd": 2.7093,
-   "calls": 167
+   "seconds": 157.5,
+   "cost_usd": 0.7843,
+   "calls": 141
   }
  ],
  "note": "14 synthetic interrogations (trainval split) written by deepseek-ai/DeepSeek-V4.1-Flash-1017 (the training writer; diagnostic split), 95 details with known first speakers."

@@ -4,5 +4,4 @@
 
 | Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
 |---|---|---|---|---|---|
-| Provenance: Lightning labels + code ledger + Ultra check + safety search | 57% | 56% | 0 | 276.5 s | $0.989 |
-| Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search | 87% | 87% | 0 | 589.4 s | $2.709 |
+| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 85% | 83% | 0 | 157.5 s | $0.784 |
