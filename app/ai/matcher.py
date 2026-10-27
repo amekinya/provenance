@@ -24,7 +24,16 @@ def score(model: str, pairs: list[tuple[str, str]], calls: list[CallRecord] | No
             r = c.post(settings.matcher_url.rstrip("/") + "/score", headers=headers, json={"model": model, "pairs": [list(p) for p in pairs[i:i + 2048]]})
             if r.status_code != 200:
                 raise LiveModelUnavailable(f"matcher HTTP {r.status_code}: {r.text[:200]}")
-            out += r.json()["scores"]
+            try:
+                d = r.json()
+                sc = [float(x) for x in d["scores"]]
+            except Exception as e:  # noqa: BLE001
+                raise LiveModelUnavailable(f"unexpected reply from the endpoint: {r.text[:120]!r}") from e
+            if len(sc) != len(pairs[i:i + 2048]):
+                raise LiveModelUnavailable("endpoint returned the wrong number of scores")
+            if model != "base-reranker" and d.get("fine_tuned") is False:
+                raise LiveModelUnavailable(f"endpoint answered with the base model, not {model}")
+            out += sc
     if calls is not None:
         # Endpoint time isn't billed per token; record it as a call with GPU-seconds for the ledger.
         calls.append(CallRecord("matcher", f"{model} (Nebius endpoint)", time.perf_counter() - t0, len(pairs), 0, 0, 0.0, "Score sentence-detail pairs"))
