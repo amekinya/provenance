@@ -162,12 +162,15 @@ def candidate_lines(utts: list[dict], f: dict, before_seq: int) -> list[dict]:
 
 def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: int = 15, passes: int = 3) -> int:
     """Safety search. For every detail the suspect stated or agreed to, look for an investigator line BEFORE the earliest
-    known mention that carries it: code finds candidates by the detail's words, earliest first; Ultra checks each one.
+    known mention that carries it: code finds candidates by the detail's words, earliest first, plus the investigator
+    lines just before the suspect's first adoption (a short answer like 'In the garage.' usually echoes the question
+    right before it, whatever its words); Ultra checks each one.
     Confirmed lines are added as verified investigator mentions; rejected ones are kept as rejected so they're not
     asked again. Returns how many investigator mentions were added."""
     by_id = {u["id"]: u for u in utts}
     order = sorted(utts, key=lambda u: u["seq"])
     prev_of = {u["id"]: (order[i - 1]["text"] if i and order[i - 1]["session"] == u["session"] else "") for i, u in enumerate(order)}
+    pos = {u["id"]: i for i, u in enumerate(order)}
     fact_of = {f["id"]: f for f in facts}
     added = 0
     for _ in range(passes):
@@ -181,7 +184,11 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
                 continue
             limit = min(fs["seq"], fi["seq"]) if fi else fs["seq"]
             fid = fl["fact"]["id"]
-            cands = [u for u in candidate_lines(utts, fact_of[fid], limit) if (u["id"], fid) not in asked][:per_fact]
+            p = pos[fs["utterance"]]
+            just_before = [u for u in order[max(0, p - 4):p] if u["role"] == "interrogator" and u["session"] == fs["session"] and u["seq"] < limit]
+            kw = [u for u in candidate_lines(utts, fact_of[fid], limit) if (u["id"], fid) not in asked][:per_fact]
+            pool = {u["id"]: u for u in kw + [u for u in just_before if (u["id"], fid) not in asked]}
+            cands = sorted(pool.values(), key=lambda u: u["seq"])
             items += [{"key": f"{u['id']}|{fid}", "fact_label": fact_of[fid]["label"], "fact_detail": fact_of[fid].get("detail", ""),
                        "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"], "prev": prev_of[u["id"]]} for u in cands]
         if not items:

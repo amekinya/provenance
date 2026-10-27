@@ -41,3 +41,26 @@ def test_verifier_retries_without_reasoning(monkeypatch):
     monkeypatch.setattr(tasks, "chat_json", fake)
     out = tasks.verify([{"key": "a", "fact_label": "x", "fact_detail": "", "speaker": "DET", "text": "t", "prev": ""}], reasoning=True)
     assert out["a"]["carries_detail"] is True
+
+
+def test_search_checks_the_question_right_before_a_short_answer(monkeypatch):
+    from scripts import tag
+
+    utts = [utt(1, "interrogator", "Tell us where she was shot?"), utt(2, "suspect", "Outside."),
+            utt(3, "interrogator", "No, I mean where, in the garage"), utt(4, "suspect", "In the garage.")]
+    facts = [{"id": "F1", "label": "Shot inside the garage", "detail": "", "aliases": []}]
+    mentions = [{"utterance": "U4", "fact": "F1", "kind": "asserts", "quote": "In the garage", "by": "model", "verified": True}]
+    seen = []
+
+    def fake_verify(items, calls=None, reasoning=False):
+        seen.extend(i["key"] for i in items)
+        return {i["key"]: {"key": i["key"], "carries_detail": i["key"].startswith("U3"), "kind": "asserts", "why": ""} for i in items}
+    monkeypatch.setattr(tag.tasks, "verify", fake_verify)
+    cfg = {"id": "t", "title": "t", "suspect": "KID", "sessions": [{"id": "S1", "label": "I", "day": "2020-01-01"}]}
+    for u in utts:
+        u |= {"page": "", "sensitive": False}
+    assert tag.search_investigator_first(cfg, utts, facts, mentions, []) == 1
+    assert "U3|F1" in seen
+    from app.engine.ledger import audit, load_case
+    f = audit(load_case(tag.case_dict(cfg, utts, facts, mentions)))["facts"][0]
+    assert f["origin"] == "interrogator_first"
