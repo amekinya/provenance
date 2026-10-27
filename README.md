@@ -49,9 +49,15 @@ The page also has:
 
 ## Results
 
-_Filled in from `eval/RESULTS.md` after the runs._
+- **Synthetic interrogations with known answers** ([`eval/RESULTS.md`](eval/RESULTS.md)). 29 held-out interrogations (203 details) written by Qwen3 and GLM-5.2, model families different from the training writer; each is kept only if its own labels match the plan we drew in code. Settings (labeler, verifier reasoning) were chosen on the training writer's interviews, never on these.
 
-- **Synthetic interrogations with known answers.** They were written by a model from a different family, and each one is kept only if its own labels match the plan we drew in code. We compare four methods: keyword match, one Ultra prompt per interview, Provenance, and Provenance with our fine-tuned matcher. We report three measures: the right first speaker, the right first line, and the costly error (an investigator-supplied detail credited to the suspect).
+  | Method | Right first speaker | Right first line | Investigator-supplied details credited to the suspect |
+  |---|---|---|---|
+  | Keyword match | 56% | 55% | 3 |
+  | One Nemotron 3 Ultra prompt per interview | 80% | 77% | 2 |
+  | Provenance | 77% | 76% | 1 |
+
+  This is the second run on this test set (the first, before the last two fixes: Provenance 73%, one prompt 82%); every run is listed in `eval/RESULTS.md`. On short 30 to 50 line interviews, a single Ultra prompt is a strong baseline. The real record is 5,755 lines across three recorded sessions, and Provenance cites, and has Ultra re-check, every line a verdict rests on. We tried one Ultra prompt per real session for the 25 Dassey details: for the 3,146-line March 1 session it returned no usable answer (its reasoning ran past 32,000 output tokens twice), so we have no measured comparison on the real record.
 - **The Dassey record.** Three recorded interviews (Feb 27, Mar 1 and May 13, 2006; 305 scanned pages). We check our reading against the details the federal court identified as fed to him.
 
 ## Honest limits
