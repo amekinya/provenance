@@ -1,1 +1,1 @@
-{"case": "dassey", "steps": "tag", "sessions": "", "max_pages": "0", "note": "re-tag with the Ultra labeler, distinctive-content verifier and safety search"}
+{"case": "dassey", "steps": "tag,oneprompt", "sessions": "", "max_pages": "0", "note": "re-tag (Ultra labels, reasoning verifier, safety search) and compare with one Ultra prompt per session"}

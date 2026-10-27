@@ -155,7 +155,7 @@ VERIFY_SCHEMA = {
 }
 
 
-VERIFY_REASONING = os.environ.get("VERIFY_REASONING", "0") == "1"
+VERIFY_REASONING = os.environ.get("VERIFY_REASONING", "1") == "1"  # on: 82% vs 73% on trainval (eval/RESULTS_trainval.md)
 
 
 def verify(items: list[dict], calls: list[CallRecord] | None = None, reasoning: bool | None = None) -> dict[str, dict]:
@@ -163,24 +163,23 @@ def verify(items: list[dict], calls: list[CallRecord] | None = None, reasoning: 
     Reasoning on or off is chosen on the training writer's interrogations (VERIFY_REASONING; see eval/RESULTS_trainval.md).
     A reasoning call that fails is retried without; a failed batch is retried line by line."""
     reasoning = VERIFY_REASONING if reasoning is None else reasoning
-    if not reasoning:
+    if reasoning:
         try:
-            return _verify(items, calls, False)
-        except LiveModelUnavailable:
-            if len(items) == 1:
-                raise
-            out: dict[str, dict] = {}  # one bad reply shouldn't leave a whole batch unchecked: retry item by item
-            for it in items:
-                try:
-                    out.update(_verify([it], calls, False))
-                except LiveModelUnavailable as e:
-                    print(f"  verifier failed on {it['key']}: {str(e)[:100]}")
-            return out
+            return _verify(items, calls, True)
+        except LiveModelUnavailable as e:
+            print(f"  verifier (reasoning on) failed: {str(e)[:140]}; retrying without reasoning")
     try:
-        return _verify(items, calls, True)
-    except LiveModelUnavailable as e:
-        print(f"  verifier (reasoning on) failed: {str(e)[:140]}; retrying without reasoning")
         return _verify(items, calls, False)
+    except LiveModelUnavailable:
+        if len(items) == 1:
+            raise
+    out: dict[str, dict] = {}  # one bad reply shouldn't leave a whole batch unchecked: retry item by item
+    for it in items:
+        try:
+            out.update(_verify([it], calls, False))
+        except LiveModelUnavailable as e:
+            print(f"  verifier failed on {it['key']}: {str(e)[:100]}")
+    return out
 
 
 def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) -> dict[str, dict]:

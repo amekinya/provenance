@@ -1,1 +1,1 @@
-{"synth": "0", "test_synth": "0", "split": "trainval", "n": "14", "methods": "provenance,provenance_vr", "note": "verifier A/B on the training writer: reasoning off vs on, same Ultra labels, sharper distinctive-content rule"}
+{"synth": "0", "test_synth": "0", "split": "test", "n": "40", "methods": "keyword,one_prompt,provenance", "note": "SECOND held-out test run (first: commit 62e80c9), after the denial-of-guilt labeling fix and the reasoning verifier chosen on trainval"}
