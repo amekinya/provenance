@@ -48,3 +48,24 @@ generator: Qwen/Qwen3-30B-A3B-Instruct-2507
   #15 failed: Qwen/Qwen3-30B-A3B-Instruct-2507 returned no valid JSON
 kept 6/20 interrogations; 185 lines; 30 calls
 9583 pairs (pairs, positives) by split: {'train': (6396, 546), 'dev': (1978, 146), 'test': (1209, 143)}
+generator: zai-org/GLM-5.2
+  #3 dropped: F6 planned suspect_first, labels say first=interrogator
+  #2 dropped: F8 planned suspect_first, labels say first=interrogator
+  #8 dropped: F1 planned investigator_first, labels say first=interrogator
+  #6 dropped: F1 planned investigator_first, labels say first=suspect
+  #11 dropped: F3 planned investigator_first, labels say first=interrogator
+  #16 dropped: F2 planned suspect_first, labels say first=interrogator
+  #10 dropped: F2 planned investigator_first, labels say first=interrogator
+  #13 dropped: F1 planned suspect_first, labels say first=interrogator
+  #24 dropped: F4 planned suspect_first, labels say first=interrogator
+  #26 dropped: F5 planned investigator_first, labels say first=interrogator
+  #31 dropped: F1 planned suspect_first, labels say first=interrogator
+  #30 dropped: F1 planned investigator_first, labels say first=suspect
+  #32 dropped: F6 planned suspect_first, labels say first=interrogator
+  #33 dropped: F2 planned investigator_first, labels say first=suspect
+  #38 dropped: F1 planned suspect_first, labels say first=interrogator
+  #23 dropped: F3 planned suspect_first, labels say first=interrogator
+  #29 dropped: F6 planned investigator_first, labels say first=interrogator
+keeping 6 interrogations from other writers
+kept 29/40 interrogations; 1111 lines; 43 calls
+16217 pairs (pairs, positives) by split: {'train': (6396, 546), 'dev': (1978, 146), 'test': (7843, 647)}

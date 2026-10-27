@@ -1,0 +1,119 @@
+keyword {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.537, 'line_acc': 0.516, 'investigator_first_called_suspect_first': 4, 'confusion': {'suspect->suspect': 27, 'suspect->never': 13, 'interrogator->never': 20, 'never->never': 11, 'never->suspect': 2, 'interrogator->interrogator': 13, 'interrogator->suspect': 4, 'never->interrogator': 4, 'suspect->interrogator': 1}} {'seconds': 0.0, 'cost_usd': 0, 'calls': 0}
+one_prompt {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.895, 'line_acc': 0.811, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->suspect': 40, 'interrogator->interrogator': 35, 'never->never': 10, 'never->suspect': 1, 'interrogator->never': 2, 'never->interrogator': 6, 'suspect->interrogator': 1}} {'seconds': 27.3, 'cost_usd': 0.1264, 'calls': 14}
+tagged 38 sentences in 3 chunks: 17 labels kept, 0 dropped (quote not in sentence)
+tagged 42 sentences in 3 chunks: 22 labels kept, 0 dropped (quote not in sentence)
+tagged 44 sentences in 3 chunks: 14 labels kept, 1 dropped (quote not in sentence)
+tagged 39 sentences in 3 chunks: 0 labels kept, 0 dropped (quote not in sentence)
+verification done after 0 round(s)
+round 1: 8 deciding labels to check, 8 checked, 1 rejected
+round 1: 9 deciding labels to check, 9 checked, 1 rejected
+round 1: 8 deciding labels to check, 8 checked, 0 rejected
+verification done after 1 round(s)
+tagged 45 sentences in 3 chunks: 6 labels kept, 1 dropped (quote not in sentence)
+round 1: 4 deciding labels to check, 4 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 15 labels kept, 1 dropped (quote not in sentence)
+round 1: 8 deciding labels to check, 3 checked, 0 rejected
+round 2: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 2 round(s)
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 41 sentences in 3 chunks: 9 labels kept, 1 dropped (quote not in sentence)
+round 1: 4 deciding labels to check, 4 checked, 0 rejected
+verification done after 1 round(s)
+tagged 42 sentences in 3 chunks: 16 labels kept, 1 dropped (quote not in sentence)
+tagged 46 sentences in 3 chunks: 3 labels kept, 4 dropped (quote not in sentence)
+round 1: 10 deciding labels to check, 10 checked, 0 rejected
+verification done after 1 round(s)
+tagged 47 sentences in 3 chunks: 15 labels kept, 1 dropped (quote not in sentence)
+round 1: 10 deciding labels to check, 10 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 9 labels kept, 0 dropped (quote not in sentence)
+round 1: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 1 round(s)
+tagged 45 sentences in 3 chunks: 3 labels kept, 0 dropped (quote not in sentence)
+round 1: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 8 labels kept, 0 dropped (quote not in sentence)
+round 1: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 1 round(s)
+tagged 40 sentences in 3 chunks: 15 labels kept, 4 dropped (quote not in sentence)
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 11 deciding labels to check, 11 checked, 2 rejected
+verification done after 1 round(s)
+round 1: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+provenance_basic {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.568, 'line_acc': 0.526, 'investigator_first_called_suspect_first': 1, 'confusion': {'suspect->never': 14, 'suspect->suspect': 25, 'interrogator->never': 24, 'never->never': 17, 'interrogator->interrogator': 12, 'interrogator->suspect': 1, 'suspect->interrogator': 2}} {'seconds': 98.4, 'cost_usd': 0.309, 'calls': 68}
+tagged 42 sentences in 3 chunks: 23 labels kept, 0 dropped (quote not in sentence)
+tagged 39 sentences in 3 chunks: 13 labels kept, 4 dropped (quote not in sentence)
+tagged 44 sentences in 3 chunks: 14 labels kept, 1 dropped (quote not in sentence)
+round 1: 9 deciding labels to check, 9 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 8 deciding labels to check, 8 checked, 0 rejected
+verification done after 1 round(s)
+tagged 38 sentences in 3 chunks: 28 labels kept, 5 dropped (quote not in sentence)
+tagged 45 sentences in 3 chunks: 6 labels kept, 2 dropped (quote not in sentence)
+round 1: 4 deciding labels to check, 4 checked, 0 rejected
+verification done after 1 round(s)
+round 1: 8 deciding labels to check, 8 checked, 0 rejected
+verification done after 1 round(s)
+tagged 46 sentences in 3 chunks: 8 labels kept, 1 dropped (quote not in sentence)
+round 1: 13 deciding labels to check, 13 checked, 2 rejected
+round 2: 2 deciding labels to check, 2 checked, 0 rejected
+verification done after 2 round(s)
+tagged 41 sentences in 3 chunks: 9 labels kept, 1 dropped (quote not in sentence)
+round 1: 4 deciding labels to check, 4 checked, 0 rejected
+verification done after 1 round(s)
+safety search: 3 earlier investigator lines checked, 3 answered, 1 carry the detail
+verification done after 0 round(s)
+tagged 42 sentences in 3 chunks: 16 labels kept, 1 dropped (quote not in sentence)
+tagged 47 sentences in 3 chunks: 15 labels kept, 1 dropped (quote not in sentence)
+round 1: 10 deciding labels to check, 10 checked, 0 rejected
+verification done after 1 round(s)
+round 1: 10 deciding labels to check, 10 checked, 0 rejected
+verification done after 1 round(s)
+round 1: 6 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+6 deciding line(s) not re-checked
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 46 sentences in 3 chunks: 10 labels kept, 2 dropped (quote not in sentence)
+tagged 46 sentences in 3 chunks: 16 labels kept, 1 dropped (quote not in sentence)
+round 1: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 1 round(s)
+safety search: 2 earlier investigator lines checked, 2 answered, 2 carry the detail
+verification done after 0 round(s)
+tagged 45 sentences in 3 chunks: 2 labels kept, 0 dropped (quote not in sentence)
+round 1: 2 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+2 deciding line(s) not re-checked
+tagged 46 sentences in 3 chunks: 8 labels kept, 0 dropped (quote not in sentence)
+round 1: 5 deciding labels to check, 5 checked, 0 rejected
+verification done after 1 round(s)
+round 1: 7 deciding labels to check, 7 checked, 0 rejected
+verification done after 1 round(s)
+tagged 40 sentences in 3 chunks: 25 labels kept, 0 dropped (quote not in sentence)
+round 1: 13 deciding labels to check, 13 checked, 4 rejected
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 2: 4 deciding labels to check, 4 checked, 3 rejected
+verification done after 2 round(s)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+provenance {'n_facts': 95, 'failed_interrogations': 0, 'speaker_acc': 0.684, 'line_acc': 0.653, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 11, 'suspect->suspect': 30, 'interrogator->never': 19, 'never->never': 17, 'interrogator->interrogator': 18}} {'seconds': 271.2, 'cost_usd': 0.8854, 'calls': 86}
+# Provenance benchmark
+
+14 synthetic interrogations (trainval split) written by deepseek-ai/DeepSeek-V4.1-Flash-1017 (the training writer; diagnostic split), 95 details with known first speakers.
+
+| Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
+|---|---|---|---|---|---|
+| Keyword match (no model) | 54% | 52% | 4 | 0.0 s | $0.000 |
+| Nemotron 3 Ultra, one prompt per interview | 90% | 81% | 0 | 27.3 s | $0.126 |
+| Provenance without code agreements or safety search (ablation) | 57% | 53% | 1 | 98.4 s | $0.309 |
+| Provenance: Lightning labels + code ledger + Ultra check + safety search | 68% | 65% | 0 | 271.2 s | $0.885 |
