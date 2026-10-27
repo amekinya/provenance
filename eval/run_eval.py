@@ -124,13 +124,13 @@ def _inputs(rec):
     return utts, facts
 
 
-def provenance(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+def provenance_lightning(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     utts, facts = _inputs(rec)
     mentions, _ = tag_all(utts, facts, 18, calls)
     return _with_trace(rec, utts, facts, mentions, calls)
 
 
-def provenance_ultra(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+def provenance(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     from app.config import settings  # noqa: PLC0415
 
     utts, facts = _inputs(rec)
@@ -139,7 +139,7 @@ def provenance_ultra(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
 
 
 def provenance_basic(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
-    """Ablation: Lightning labels + Ultra check only (no code agreements, no safety search), as before Oct 27."""
+    """Ablation: Lightning labels + Ultra check only (no code agreements, no safety search), as before Oct 27."""  # noqa: D401
     utts, facts = _inputs(rec)
     mentions, _ = tag_all(utts, facts, 18, calls)
     return _with_trace(rec, utts, facts, mentions, calls, full=False)
@@ -202,7 +202,7 @@ def main() -> None:
         t0 = time.perf_counter()
         fn = {"keyword": lambda r: keyword(r), "one_prompt": lambda r: one_prompt(r, calls), "provenance": lambda r: provenance(r, calls),
               "provenance_basic": lambda r: provenance_basic(r, calls),
-              "provenance_ultra": lambda r: provenance_ultra(r, calls),
+              "provenance_lightning": lambda r: provenance_lightning(r, calls),
               "provenance_matcher": lambda r: provenance_matcher(r, calls)}[m]
 
         def safe(r, fn=fn):
@@ -220,9 +220,9 @@ def main() -> None:
         costs[m] = {"seconds": round(time.perf_counter() - t0, 1), "cost_usd": round(sum(c.cost_usd for c in calls), 4), "calls": len(calls)}
         print(m, results[m], costs[m])
     names = {"keyword": "Keyword match (no model)", "one_prompt": "Nemotron 3 Ultra, one prompt per interview",
-             "provenance": "Provenance: Lightning labels + code ledger + Ultra check + safety search",
+             "provenance": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
+             "provenance_lightning": "Provenance with Nemotron 3.5 Lightning as the labeler (cheaper tier)",
              "provenance_basic": "Provenance without code agreements or safety search (ablation)",
-             "provenance_ultra": "Provenance with Nemotron 3 Ultra as the labeler + code ledger + Ultra check + safety search",
              "provenance_matcher": "Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check"}
     writers = sorted({r["generator"] for r in recs})
     who = " and ".join(writers) + (" (model families different from the training writer)" if a.split == "test" else " (the training writer; diagnostic split)")

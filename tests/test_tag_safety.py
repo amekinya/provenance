@@ -39,5 +39,5 @@ def test_verifier_retries_without_reasoning(monkeypatch):
             raise LiveModelUnavailable("timeout")
         return {"checks": [{"key": "a", "carries_detail": True, "kind": "asks", "why": ""}]}
     monkeypatch.setattr(tasks, "chat_json", fake)
-    out = tasks.verify([{"key": "a", "fact_label": "x", "fact_detail": "", "speaker": "DET", "text": "t", "prev": ""}])
+    out = tasks.verify([{"key": "a", "fact_label": "x", "fact_detail": "", "speaker": "DET", "text": "t", "prev": ""}], reasoning=True)
     assert out["a"]["carries_detail"] is True

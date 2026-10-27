@@ -1,1 +1,1 @@
-{"synth": "0", "test_synth": "0", "split": "trainval", "n": "14", "methods": "provenance,provenance_ultra", "note": "diagnostic re-run after the verifier import fix"}
+{"synth": "0", "test_synth": "0", "split": "trainval", "n": "14", "methods": "provenance", "note": "diagnostic: Ultra labeler, verifier checks distinctive content without reasoning"}

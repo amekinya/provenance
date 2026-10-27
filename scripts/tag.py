@@ -1,6 +1,7 @@
 """Label every sentence with the case details it carries, verify the sentences that decide verdicts, and save the audit.
 
-1. Nemotron 3.5 Lightning tags sentences in parallel chunks (with a few lines of context).
+1. Nemotron 3 Ultra (reasoning off) tags sentences in parallel chunks (with a few lines of context). Lightning is an
+   option; on our diagnostic interrogations it missed about half of the suspect's adoptions.
 2. Code drops any label whose quote isn't really in the sentence, and adds the bare agreements: a suspect's "yeah"
    right after an investigator line carrying a detail adopts that detail.
 3. The ledger (plain code) finds each detail's first investigator mention and first suspect adoption.
@@ -56,7 +57,7 @@ GRAPHIC = re.compile(r"\b(stab\w*|throat|rap(e|ed|ing)|naked|blood\w*|bones?|fle
 
 def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRecord], failed: list[str] | None = None,
             spec=None) -> tuple[list[dict], dict[str, bool]]:
-    """Lightning labels the record in chunks that never cross a session boundary. Chunks that fail twice are listed in
+    """The labeler (Ultra by default) reads the record in chunks that never cross a session boundary. Chunks that fail twice are listed in
     `failed`; their lines keep a code-based graphic flag so nothing graphic shows unmasked."""
     order = sorted(utts, key=lambda u: u["seq"])
     jobs = []
@@ -305,7 +306,8 @@ def main() -> None:
     ap.add_argument("case")
     ap.add_argument("--chunk", type=int, default=18)
     ap.add_argument("--no-memo", action="store_true")
-    ap.add_argument("--labeler", default="lightning", choices=["lightning", "ultra", "matcher"])
+    ap.add_argument("--labeler", default="ultra", choices=["ultra", "lightning", "matcher"],
+                    help="ultra (default): our diagnostic runs found Lightning missed about half of the suspect's adoptions")
     a = ap.parse_args()
     cd = case_dir(a.case)
     cfg, utts, facts = load(a.case)

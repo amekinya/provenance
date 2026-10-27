@@ -150,9 +150,12 @@ VERIFY_SCHEMA = {
 }
 
 
-def verify(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str, dict]:
+def verify(items: list[dict], calls: list[CallRecord] | None = None, reasoning: bool = False) -> dict[str, dict]:
     """items: [{key, fact_label, fact_detail, speaker, text, prev}] -> {key: {carries_detail, kind, why}}.
-    Ultra with reasoning; if that call fails (timeout, cut-off JSON), once more without reasoning."""
+    Ultra without reasoning by default: with reasoning on, about one call in three came back without valid JSON on our
+    diagnostic runs, which cost more and left lines unchecked. If a reasoning call fails, it's retried without."""
+    if not reasoning:
+        return _verify(items, calls, False)
     try:
         return _verify(items, calls, True)
     except LiveModelUnavailable as e:
@@ -165,8 +168,12 @@ def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) 
                        f"Sentence ({i['speaker']}): {i['text']}" for i in items)
     out = chat_json(settings.ultra, [
         {"role": "system", "content": "You double-check labels for a defense corroboration audit. For each item, decide strictly whether the "
-                                      "sentence itself conveys the detail (a question that names it counts; a vague or different topic doesn't; "
-                                      "'yeah' counts as assent only if the previous line carried the detail). Give the kind: asks, asserts, denies, assents."},
+                                      "sentence itself conveys the detail's DISTINCTIVE content: what someone would need inside knowledge to say. "
+                                      "A question that names that content counts. Naming only a general topic, the victim, her car, or a different "
+                                      "aspect doesn't (for 'the car was hidden under branches', 'where was her car?' doesn't count; 'branches' or "
+                                      "'covered it' does). For a detail with several parts, one distinctive part counts. A short answer counts "
+                                      "when, read with the previous line, it supplies the distinctive content. 'Yeah' counts as assent only if the "
+                                      "previous line carried the detail. Give the kind: asks, asserts, denies, assents."},
         {"role": "user", "content": body}],
         schema=VERIFY_SCHEMA, purpose="Verify deciding sentences", reasoning=reasoning, max_tokens=10000 if reasoning else 3000, calls=calls)
     return {c["key"]: c for c in out.get("checks", [])}
