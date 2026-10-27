@@ -13,14 +13,22 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 
 from app.ai import tasks
 from app.ai.client import CallRecord, LiveModelUnavailable
-from app.engine.ledger import audit, load_case
+from app.engine.ledger import ASSENT, audit, load_case, plain, spoken
 from scripts.ingest import case_dir
+
+
+def is_assent_text(text: str) -> bool:
+    t = plain(text)
+    return bool(ASSENT.match(spoken(t)) or re.fullmatch(r"\W*\(?\s*(\w+\s+)?nods?[^)]*\)?\W*(yeah|yes|mm[- ]?huh)?\W*", t.strip(), re.I)
+                or re.match(r"^\W*\((\w+\s+)?nods?[^)]*\)\s*\W*(yeah|yes|mm[- ]?huh|uh[- ]?huh)?\W*$", t.strip(), re.I))
 
 
 def load(cid: str) -> tuple[dict, list[dict], list[dict]]:
@@ -32,21 +40,31 @@ def load(cid: str) -> tuple[dict, list[dict], list[dict]]:
 
 
 def case_dict(cfg: dict, utts: list[dict], facts: list[dict], mentions: list[dict]) -> dict:
-    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted")
+    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted", "prior_statement")
     return {"id": cfg["id"], "title": cfg["title"], "suspect": cfg["suspect"], "notes": cfg.get("notes", []),
             "sessions": [{k: s.get(k, d) for k, d in (("id", ""), ("label", ""), ("day", ""), ("recorded", True), ("source", ""))}
                          for s in cfg["sessions"]],
             "utterances": utts, "facts": [{k: f.get(k) for k in fact_fields if k in f} for f in facts], "mentions": mentions}
 
 
-def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRecord]) -> tuple[list[dict], dict[str, bool]]:
+GRAPHIC = re.compile(r"\b(stab\w*|throat|rap(e|ed|ing)|naked|blood\w*|bones?|flesh|body parts?|skull|toes?|choke\w*|cut (her|off)|shot her|kill\w*)\b", re.I)
+
+
+def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRecord], failed: list[str] | None = None) -> tuple[list[dict], dict[str, bool]]:
+    """Lightning labels the record in chunks that never cross a session boundary. Chunks that fail twice are listed in
+    `failed`; their lines keep a code-based graphic flag so nothing graphic shows unmasked."""
     order = sorted(utts, key=lambda u: u["seq"])
     jobs = []
-    for i in range(0, len(order), chunk):
+    i = 0
+    while i < len(order):
         sess = order[i]["session"]
-        tgt = [u for u in order[i:i + chunk]]
+        j = i
+        while j < len(order) and j - i < chunk and order[j]["session"] == sess:
+            j += 1
+        tgt = order[i:j]
         ctx = [u for u in order[max(0, i - 4):i] if u["session"] == sess]
         jobs.append((tgt, ctx))
+        i = j
 
     def run(job):
         tgt, ctx = job
@@ -59,6 +77,8 @@ def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRec
             except LiveModelUnavailable as e:
                 if attempt == 1:
                     print(f"  chunk at {tgt[0]['id']} failed: {e}")
+                    if failed is not None:
+                        failed.append(tgt[0]["id"])
         return [], local
 
     mentions, graphic = [], {}
@@ -68,9 +88,14 @@ def tag_all(utts: list[dict], facts: list[dict], chunk: int, calls: list[CallRec
         for rows, local in ex.map(run, jobs):
             calls.extend(local)
             for r in rows:
-                graphic[r["id"]] = bool(r.get("graphic"))
+                graphic[r["id"]] = bool(r.get("graphic")) or bool(GRAPHIC.search(text_of.get(r["id"], "")))
                 for m in r["mentions"]:
-                    if m["kind"] != "assents" and not tasks.quote_in(m["quote"], text_of[r["id"]]):
+                    if m["kind"] == "assents":
+                        # an agreement must be a bare agreement or a nod (code check, like the quote check below)
+                        if not is_assent_text(text_of[r["id"]]):
+                            dropped += 1
+                            continue
+                    elif not tasks.quote_in(m["quote"], text_of[r["id"]]):
                         dropped += 1  # code check: the quote isn't in the sentence
                         continue
                     mentions.append({"utterance": r["id"], "fact": m["fact"], "kind": m["kind"], "quote": m["quote"], "by": "model", "verified": None})
@@ -108,7 +133,9 @@ def tag_with_matcher(utts: list[dict], facts: list[dict], calls: list[CallRecord
     return mentions, {}
 
 
-def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds: int = 4) -> None:
+def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds: int = 8) -> int:
+    """Ultra re-reads the lines that decide verdicts; rejected labels are dropped and the ledger re-runs, until every
+    deciding line has been checked or `rounds` is used up. Returns how many deciding lines are still unchecked."""
     by_id = {u["id"]: u for u in utts}
     order = sorted(utts, key=lambda u: u["seq"])
     prev_of = {u["id"]: (order[i - 1]["text"] if i and order[i - 1]["session"] == u["session"] else "") for i, u in enumerate(order)}
@@ -123,7 +150,7 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
         todo = [m for m in mentions if (m["utterance"], m["fact"]) in deciding and m["verified"] is None]
         if not todo:
             print(f"verification done after {rnd} round(s)")
-            return
+            return 0
         items = [{"key": f"{m['utterance']}|{m['fact']}", "fact_label": fact_of[m["fact"]]["label"], "fact_detail": fact_of[m["fact"]].get("detail", ""),
                   "speaker": f"{by_id[m['utterance']]['speaker']} ({by_id[m['utterance']]['role']})", "text": by_id[m["utterance"]]["text"],
                   "prev": prev_of[m["utterance"]]} for m in todo]
@@ -150,7 +177,15 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
             if m["verified"] and r["kind"] != m["kind"]:
                 m["kind"] = r["kind"]
             rejected += not m["verified"]
-        print(f"round {rnd + 1}: checked {len(todo)} deciding labels, rejected {rejected}")
+        got = sum(1 for m in todo if m["verified"] is not None)
+        print(f"round {rnd + 1}: {len(todo)} deciding labels to check, {got} checked, {rejected} rejected")
+        if got == 0:
+            print("  the verifier answered nothing this round; stopping")
+            break
+    rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+    left = sum(1 for f in rep["facts"] for ev in (f["first_interrogator"], f["first_suspect"]) if ev and ev.get("verified") is None)
+    print(f"{left} deciding line(s) not re-checked")
+    return left
 
 
 def main() -> None:
@@ -164,15 +199,20 @@ def main() -> None:
     cfg, utts, facts = load(a.case)
     calls: list[CallRecord] = []
     t0 = time.perf_counter()
+    failed: list[str] = []
     if a.labeler == "matcher":
         mentions, graphic = tag_with_matcher(utts, facts, calls)
     else:
-        mentions, graphic = tag_all(utts, facts, a.chunk, calls)
+        mentions, graphic = tag_all(utts, facts, a.chunk, calls, failed)
+    if not utts:
+        sys.exit("no utterances: run ingest first")
+    if failed and len(failed) > max(1, len(utts) // 400):
+        sys.exit(f"{len(failed)} labeling chunks failed; nothing written. Re-run when the model service is healthy.")
     for u in utts:
-        u["sensitive"] = graphic.get(u["id"], u.get("sensitive", False))
+        u["sensitive"] = graphic.get(u["id"], bool(GRAPHIC.search(u["text"])) or u.get("sensitive", False))
     (cd / "utterances.json").write_text(json.dumps(utts, indent=1))
     t_tag = time.perf_counter() - t0
-    verify_deciding(cfg, utts, facts, mentions, calls)
+    unverified = verify_deciding(cfg, utts, facts, mentions, calls)
     (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
     rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
     (cd / "audit.json").write_text(json.dumps(rep, indent=1))
@@ -187,7 +227,8 @@ def main() -> None:
     for c in calls:
         r = roles.setdefault(c.role, {"model": c.model_id, "calls": 0, "seconds": 0.0, "cost_usd": 0.0})
         r["calls"] += 1; r["seconds"] += c.seconds; r["cost_usd"] += c.cost_usd
-    run = {"tag_seconds": round(t_tag, 1), "total_seconds": round(time.perf_counter() - t0, 1),
+    run = {"labeler": a.labeler, "read_by": "super_vl", "failed_chunks": failed, "unverified": unverified,
+           "tag_seconds": round(t_tag, 1), "total_seconds": round(time.perf_counter() - t0, 1),
            "cost_usd": round(sum(c.cost_usd for c in calls), 4), "by_model": roles,
            "calls": [asdict(c) | {"seconds": round(c.seconds, 2), "cost_usd": round(c.cost_usd, 5)} for c in calls]}
     (cd / "run.json").write_text(json.dumps(run, indent=1))

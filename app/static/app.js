@@ -48,7 +48,7 @@
   // ------------------------------------------------------------ rendering
   function render(rep) {
     $("#caseTitle").textContent = rep.case.title;
-    $("#caseSub").textContent = `${rep.case.suspect}: ${rep.sessions.filter((s) => s.recorded).length} recorded interviews, ${rep.utterance_count.toLocaleString()} turns of speech, ${rep.facts.length} key details checked`;
+    $("#caseSub").textContent = `${rep.case.suspect}: ${rep.sessions.filter((s) => s.recorded).length} interviews with public transcripts, ${rep.utterance_count.toLocaleString()} turns of speech, ${rep.facts.length} key details checked`;
     $("#headline").textContent = rep.headline;
     renderCounts(rep);
     renderMap(rep);
@@ -218,11 +218,13 @@
     const cls = ev.role === "interrogator" ? "inv" : ev.role === "suspect" ? "sus" : "";
     const mark = ev.role === "interrogator" ? "inv" : ev.kind === "assents" ? "agr" : ev.kind === "denies" ? "den" : "sus";
     const first = ev.first ? `<span class="tag">first ${ev.first === "interrogator" ? "investigator mention" : "time he said it"}</span>` : "";
+    const checked = ev.first ? (ev.verified === true ? `<span class="vchk">re-checked by Nemotron 3 Ultra</span>` : ev.verified === null || ev.verified === undefined ? `<span class="vchk no">not re-checked</span>` : "") : "";
+    const note = ev.kind_note ? `<span class="vchk no">${esc(ev.kind_note)}</span>` : "";
     const quote = ev.sensitive ? `<q class="masked" data-full="${esc(ev.quote)}">Graphic passage hidden</q> <button data-reveal>Show</button>` : `<q>${esc(ev.quote)}</q>`;
     return `<li class="ev ${cls}"><i class="mk ${mark}" aria-hidden="true" style="margin-top:6px"></i>
-      <div><span class="who">${esc(ev.speaker)}</span> ${KIND[ev.kind] || esc(ev.kind)}${first}<br>${quote}
+      <div><span class="who">${esc(ev.speaker)}</span> ${KIND[ev.kind] || esc(ev.kind)}${first}${checked}${note}<br>${quote}
         <div><button data-ctx="${esc(ev.utterance)}">Read in context</button></div><div class="ctxbox"></div></div>
-      <span class="cite">${esc(sessionLabel(rep, ev.session).split(", ").slice(0, 2).join(", "))}, p. ${esc(ev.page || "?")}</span></li>`;
+      <span class="cite">${esc(sessionLabel(rep, ev.session).split(", ").slice(0, 2).join(", "))}, ${/^PDF/.test(ev.page || "") ? esc(ev.page) : `p. ${esc(ev.page || "?")}`}</span></li>`;
   }
 
   async function showContext(btn) {
@@ -250,20 +252,23 @@
     $("#memoSec").hidden = !m;
     if (!m) return;
     $("#memo").innerHTML = `<p>${esc(m.summary)}</p><ul>${m.key_points.map((k) => `<li>${esc(k)}</li>`).join("")}</ul>
-      <p class="fine"><b>Limits:</b> ${m.limits.map(esc).join(" ")}</p><p class="fine">Written by Nemotron 3 Ultra from the findings above only.</p>`;
+      <p class="fine"><b>Limits:</b> ${m.limits.map(esc).join(" ")}</p><p class="fine">${m.by === "ultra" || !m.by ? "Written by Nemotron 3 Ultra from the findings above only." : esc(m.by)}</p>`;
   }
 
   function renderHow(rep) {
     const run = rep.run || {};
     const by = run.by_model || {};
     const cost = (role) => (by[role] ? ` (${by[role].calls} calls, $${by[role].cost_usd.toFixed(3)})` : "");
-    $("#steps").innerHTML = `
-      <li><b>Read the scanned transcripts.</b> <span class="m">Nemotron 3.5 Super VL</span> turned each page image into speaker-labeled lines${cost("super_vl")}.</li>
-      <li><b>List the key details.</b> <span class="m">Nemotron 3 Ultra</span> drafted them from the case documents; we reviewed the list. Each has a source.</li>
-      <li><b>Label every sentence.</b> <span class="m">Nemotron 3.5 Lightning</span> marked which details each line carries and how (asks, says, denies, agrees), quoting the words${cost("lightning")}. Code throws out any label whose quote isn't in the line.</li>
-      <li><b>Decide who said it first.</b> Plain code walks the record in order. No model decides this.</li>
-      <li><b>Double-check what decides a verdict.</b> <span class="m">Nemotron 3 Ultra</span> re-reads every first-mention line; rejected ones are dropped and the order re-checked${cost("ultra")}.</li>
-      ${run.total_seconds ? `<li>Whole record: <b>${Math.round(run.total_seconds)} s</b>, <b>$${(run.cost_usd || 0).toFixed(2)}</b> in model costs.</li>` : ""}`;
+    const labeler = run.labeler === "matcher" ? "our fine-tuned matcher (NVIDIA llama-nemotron-rerank-1b-v2 on Nebius)" : "Nemotron 3.5 Lightning";
+    const steps = [];
+    if (by.super_vl || run.read_by === "super_vl") steps.push(`<li><b>Read the scanned transcripts.</b> <span class="m">Nemotron 3.5 Super VL</span> turned each page image into speaker-labeled lines${cost("super_vl")}. Code merged continuation lines, matched speaker names to the case roster and split out the suspect's nods.</li>`);
+    steps.push(`<li><b>List the key details.</b> Each detail, its source and any date it was already public were checked by hand against the court record and news reports.</li>`);
+    if (by.lightning || by.matcher) steps.push(`<li><b>Label every sentence.</b> ${labeler} marked which details each line carries and how (asks, says, denies, agrees)${cost(by.matcher ? "matcher" : "lightning")}. Code throws out any statement label whose quote isn't in the line, and counts a bare "yeah" only right after a question about that detail.</li>`);
+    steps.push(`<li><b>Decide who said it first.</b> Plain code walks the record in order. No model decides this.</li>`);
+    if (by.ultra) steps.push(`<li><b>Double-check what decides a verdict.</b> <span class="m">Nemotron 3 Ultra</span> re-read the first-mention lines; rejected ones were dropped and the order re-checked${cost("ultra")}.${run.unverified ? ` ${run.unverified} deciding line${run.unverified === 1 ? " was" : "s were"} not re-checked and ${run.unverified === 1 ? "is" : "are"} marked.` : ""}</li>`);
+    if (!run.by_model) steps.push(`<li>This case's processing log isn't available, so the steps above describe the method, not this run.</li>`);
+    if (run.total_seconds) steps.push(`<li>Whole record: <b>${Math.round(run.total_seconds)} s</b>, <b>$${(run.cost_usd || 0).toFixed(2)}</b> in model costs.</li>`);
+    $("#steps").innerHTML = steps.join("");
     const ev = rep.eval;
     $("#evalBox").innerHTML = ev && ev.rows ? `<h3 style="margin-top:18px">Measured accuracy</h3><p class="fine">${esc(ev.note || "")}</p>
       <table class="eval"><thead><tr><th>Method</th><th>Right first-mention speaker</th><th>Right line</th></tr></thead><tbody>

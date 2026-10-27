@@ -23,7 +23,7 @@ from app.engine.ledger import audit, load_case
 from scripts.tag import case_dict, tag_all, verify_deciding
 
 ROOT = Path(__file__).resolve().parent.parent
-SYNTH = ROOT / "data" / "synth" / "interrogations.jsonl"
+SYNTH = ROOT / "data" / "synth" / "interrogations_test.jsonl"  # held out: never used to train the matcher
 STOP = set("a an the of to in on at for with and or his her its their was were is be by from that this it he she they".split())
 
 
@@ -112,7 +112,13 @@ def provenance_matcher(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
 def score(golds: list[dict], preds: list[dict]) -> dict:
     n = sp = ln = 0
     conf = {}
+    failed = 0
     for g, p in zip(golds, preds):
+        if p is None:  # the method crashed on this interrogation: every fact counts as wrong
+            failed += 1
+            n += len(g)
+            conf["failed"] = conf.get("failed", 0) + len(g)
+            continue
         for fid, gv in g.items():
             pv = p.get(fid, {"first": "never", "line": None})
             n += 1
@@ -121,7 +127,7 @@ def score(golds: list[dict], preds: list[dict]) -> dict:
             conf[f"{gv['first']}->{pv['first']}"] = conf.get(f"{gv['first']}->{pv['first']}", 0) + 1
     # The costly error for counsel: calling a detail 'suspect said it first' when investigators supplied it.
     false_corrob = conf.get("interrogator->suspect", 0)
-    return {"n_facts": n, "speaker_acc": round(sp / max(n, 1), 3), "line_acc": round(ln / max(n, 1), 3),
+    return {"n_facts": n, "failed_interrogations": failed, "speaker_acc": round(sp / max(n, 1), 3), "line_acc": round(ln / max(n, 1), 3),
             "investigator_first_called_suspect_first": false_corrob, "confusion": conf}
 
 
@@ -144,7 +150,7 @@ def main() -> None:
                 return fn(r)
             except LiveModelUnavailable as e:
                 print(f"  {m} failed on {r['id']}: {e}")
-                return {}
+                return None
         with ThreadPoolExecutor(4 if m != "keyword" else 1) as ex:
             preds = list(ex.map(safe, recs))
         results[m] = score(golds, preds)

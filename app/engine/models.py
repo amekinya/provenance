@@ -14,7 +14,7 @@ class Session:
     id: str
     label: str            # "Feb 27, 2006, Mishicot High School"
     day: date
-    recorded: bool = True  # False for a contact we only know about from later references
+    recorded: bool = True  # False when there's no public transcript (it may still have been taped)
     source: str = ""       # citation, e.g. "Calumet County Sheriff's Dept. transcript, pp. 1-55"
 
 
@@ -39,6 +39,7 @@ class Fact:
     public_before: date | None = None  # reported publicly before the interrogation (so not 'inside knowledge')
     holdback: bool = False             # police say they kept it secret
     planted: bool = False              # a deliberately false detail investigators used as a test
+    prior_statement: str = ""          # a documented earlier statement by the suspect with no public transcript (with source)
 
 
 @dataclass

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import time
 from dataclasses import asdict
@@ -47,7 +48,10 @@ def health():
 @app.get("/api/cases")
 def cases():
     out = []
+    show_test = os.environ.get("SHOW_TEST_CASES") == "1"
     for d in sorted(CASES.iterdir()):
+        if d.name.startswith("_") and not show_test:  # scratch cases built for UI testing are never listed
+            continue
         cfg, rep = _read(d / "case.json"), _read(d / "audit.json")
         if cfg and rep:
             out.append({"id": cfg["id"], "title": cfg["title"], "suspect": cfg["suspect"], "headline": rep["headline"],

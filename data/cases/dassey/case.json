@@ -4,20 +4,51 @@
  "suspect": "Brendan Dassey",
  "suspect_age": 16,
  "roster": {
-  "WIEGERT": "interrogator", "FASSBENDER": "interrogator",
-  "BRENDAN": "suspect", "DASSEY": "suspect"
+  "WIEGERT": "interrogator",
+  "FASSBENDER": "interrogator",
+  "BRENDAN": "suspect",
+  "DASSEY": "suspect"
  },
  "sessions": [
-  {"id": "S1", "label": "Feb 27, 2006, Mishicot High School", "day": "2006-02-27", "pdf": "source/2006-02-27_mishicot_hs.pdf",
-   "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, Mishicot High School, 02/27/06"},
-  {"id": "S1b", "label": "Feb 27, 2006, Two Rivers Police Dept. (transcript not public)", "day": "2006-02-27", "recorded": false,
-   "source": "Referenced in the Mar 1 interview and in the federal habeas decision; no public transcript found"},
-  {"id": "S2", "label": "Mar 1, 2006, Manitowoc County Sheriff's Dept.", "day": "2006-03-01", "pdf": "source/2006-03-01_manitowoc.pdf",
-   "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 03/01/06"},
-  {"id": "S3", "label": "May 13, 2006, Sheboygan County Sheriff's Dept.", "day": "2006-05-13", "pdf": "source/2006-05-13_sheboygan.pdf",
-   "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"}
+  {
+   "id": "S1",
+   "label": "Feb 27, 2006, Mishicot High School",
+   "day": "2006-02-27",
+   "pdf": "source/2006-02-27_mishicot_hs.pdf",
+   "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, Mishicot High School, 02/27/06"
+  },
+  {
+   "id": "S1b",
+   "label": "Feb 27, 2006, Two Rivers Police Dept. (taped; no public transcript)",
+   "day": "2006-02-27",
+   "recorded": false,
+   "source": "Videotaped at the Two Rivers police station (Decision and Order p. 6; Wiegert on Mar 1: \"we reviewed those tapes\"). No public transcript found."
+  },
+  {
+   "id": "S1c",
+   "label": "Feb 27, 2006, evening, with Fassbender (no public transcript)",
+   "day": "2006-02-27",
+   "recorded": false,
+   "source": "Fassbender met Dassey again on the evening of Feb 27 (Decision and Order p. 7, citing ECF 19-19 at 10-11); no public transcript found."
+  },
+  {
+   "id": "S2",
+   "label": "Mar 1, 2006, Manitowoc County Sheriff's Dept.",
+   "day": "2006-03-01",
+   "pdf": "source/2006-03-01_manitowoc.pdf",
+   "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 03/01/06"
+  },
+  {
+   "id": "S3",
+   "label": "May 13, 2006, Sheboygan County Sheriff's Dept.",
+   "day": "2006-05-13",
+   "pdf": "source/2006-05-13_sheboygan.pdf",
+   "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"
+  }
  ],
- "case_documents": ["source/2016-08-12_decision_and_order.pdf"],
+ "case_documents": [
+  "source/2016-08-12_decision_and_order.pdf"
+ ],
  "notes": [
   "Public court records. Transcripts as published at convolutedbrian.com/dassey_confessions_links.html; federal habeas decision (E.D. Wis., Aug 12, 2016) via Northwestern Law's Center on Wrongful Convictions of Youth.",
   "The habeas grant was reversed by the Seventh Circuit en banc (Dec 8, 2017); the U.S. Supreme Court declined review (2018). This audit takes no position on guilt."

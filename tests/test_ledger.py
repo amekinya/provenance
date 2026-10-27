@@ -74,3 +74,39 @@ def test_headline_and_session_stats():
     assert r["headline"].startswith("Of 5 key details KID stated")
     st = {s["session"]: s for s in r["session_stats"]}
     assert st["B"]["questions_that_carry_facts"] == 3 and st["B"]["suspect_minimal_answers"] >= 2
+
+
+def test_speaker_labels_and_nods():
+    from scripts.ingest import _canon, _nod_split
+    roster = {"WIEGERT": "interrogator", "FASSBENDER": "interrogator", "BRENDAN": "suspect", "DASSEY": "suspect"}
+    assert _canon("WEIGERT", roster) == ("WIEGERT", "interrogator")
+    assert _canon("INV. WIEGERT", roster) == ("WIEGERT", "interrogator")
+    assert _canon("BRENDAN DASSEY", roster)[1] == "suspect"
+    assert _nod_split('Her jeep was in the garage wasn’t it? (Brendan nods “yes”)', {"BRENDAN"})[-1][0] == "suspect"
+
+
+def test_bare_yes_without_a_question_is_not_adoption():
+    from app.engine.ledger import audit, load_case
+    d = {"id": "t", "title": "t", "suspect": "Kid", "sessions": [{"id": "S1", "label": "S1", "day": "2020-01-01"}],
+         "utterances": [{"id": "u1", "session": "S1", "seq": 1, "speaker": "DET", "role": "interrogator", "text": "Did he have a knife?"},
+                        {"id": "u2", "session": "S1", "seq": 2, "speaker": "K", "role": "suspect", "text": "No."},
+                        {"id": "u3", "session": "S1", "seq": 3, "speaker": "DET", "role": "interrogator", "text": "What did you eat?"},
+                        {"id": "u4", "session": "S1", "seq": 4, "speaker": "DET", "role": "interrogator", "text": "Pizza?"},
+                        {"id": "u5", "session": "S1", "seq": 5, "speaker": "DET", "role": "interrogator", "text": "Okay."},
+                        {"id": "u6", "session": "S1", "seq": 6, "speaker": "K", "role": "suspect", "text": "Yeah."}],
+         "facts": [{"id": "F1", "label": "A knife"}],
+         "mentions": [{"utterance": "u1", "fact": "F1", "kind": "asks"}, {"utterance": "u6", "fact": "F1", "kind": "assents"}]}
+    f = audit(load_case(d))["facts"][0]
+    assert f["origin"] == "never_adopted"
+
+
+def test_prior_statement_and_curly_apostrophes():
+    from app.engine.ledger import TACTICS, audit, load_case, plain
+    assert TACTICS["minimization"].search(plain("It’s not your fault"))
+    d = {"id": "t", "title": "t", "suspect": "Kid", "sessions": [{"id": "S1", "label": "S1", "day": "2020-01-01"}],
+         "utterances": [{"id": "u1", "session": "S1", "seq": 1, "speaker": "DET", "role": "interrogator",
+                         "text": "Those jeans that Tom talked to you about the other night with the bleach?"},
+                        {"id": "u2", "session": "S1", "seq": 2, "speaker": "K", "role": "suspect", "text": "Yeah, bleach."}],
+         "facts": [{"id": "F1", "label": "Bleach on jeans"}],
+         "mentions": [{"utterance": "u1", "fact": "F1", "kind": "asks"}, {"utterance": "u2", "fact": "F1", "kind": "asserts"}]}
+    assert audit(load_case(d))["facts"][0]["origin"] == "prior_contact"

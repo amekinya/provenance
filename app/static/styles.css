@@ -176,3 +176,5 @@ table.eval td.n { font-family: var(--mono); text-align: right; }
 .evhead { font-size: 14px; margin: 14px 0 6px; }
 .allev { margin-top: 12px; }
 .allev summary { cursor: pointer; font-size: 14px; font-weight: 600; }
+.vchk { font-size: 11px; margin-left: 8px; color: var(--may, #2b6e4f); }
+.vchk.no { color: var(--ink-3); }

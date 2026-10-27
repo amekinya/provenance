@@ -126,10 +126,13 @@ def tag_mentions(targets: list[dict], context: list[dict], facts: list[dict], ca
 
 
 def quote_in(quote: str, text: str) -> bool:
-    """Code check: the model's quote must really be in the sentence (spacing and case ignored)."""
-    norm = lambda x: re.sub(r"[^a-z0-9']+", " ", x.lower()).strip()  # noqa: E731
-    q = norm(quote)
-    return bool(q) and q in norm(text)
+    """Code check: the model's quote must really be in the sentence, as whole words (spacing, case and curly vs straight
+    apostrophes ignored)."""
+    def norm(x: str) -> str:
+        x = x.translate(str.maketrans({"\u2019": "'", "\u2018": "'", "\u201c": '"', "\u201d": '"'})).lower()
+        return " " + re.sub(r"[^a-z0-9']+", " ", x).strip() + " "
+    q = norm(quote).strip()
+    return bool(q) and f" {q} " in norm(text)
 
 
 # ---------------------------------------------------------------------------------------------------------------------

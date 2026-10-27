@@ -8,7 +8,7 @@ import random
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = ROOT / "data" / "synth" / "interrogations.jsonl"
+# reads data/synth/interrogations_trainval.jsonl and interrogations_test.jsonl
 OUT = ROOT / "data" / "synth" / "pairs.jsonl"
 
 
@@ -23,12 +23,16 @@ def passage(prev: dict | None, u: dict) -> str:
 
 
 def main() -> None:
-    recs = [json.loads(x) for x in SRC.read_text().splitlines() if x.strip()]
+    tv = ROOT / "data" / "synth" / "interrogations_trainval.jsonl"
+    te = ROOT / "data" / "synth" / "interrogations_test.jsonl"
+    recs = [json.loads(x) for x in tv.read_text().splitlines() if x.strip()]
+    tests = [json.loads(x) for x in te.read_text().splitlines() if x.strip()] if te.exists() else []
     rng = random.Random(1)
     ids = [r["id"] for r in recs]
     rng.shuffle(ids)
-    n = len(ids)
-    split = {i: ("test" if k < n * 0.15 else "dev" if k < n * 0.3 else "train") for k, i in enumerate(ids)}
+    split = {i: ("dev" if k < len(ids) * 0.2 else "train") for k, i in enumerate(ids)}
+    split |= {r["id"]: "test" for r in tests}  # test interrogations come from a different writer model
+    recs += tests
     rows = []
     for r in recs:
         for k, u in enumerate(r["utterances"]):

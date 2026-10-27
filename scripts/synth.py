@@ -18,7 +18,7 @@ from app.ai.client import CallRecord, LiveModelUnavailable, _get_client, chat_js
 from app.config import ModelSpec
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / "data" / "synth" / "interrogations.jsonl"
+OUT_DIR = ROOT / "data" / "synth"
 PREFERRED = ["deepseek-ai/DeepSeek-V4.1-Flash-1017", "Qwen/Qwen3-30B-A3B-Instruct-2507", "MiniMaxAI/MiniMax-M3", "zai-org/GLM-5.2"]
 CRIMES = ["a convenience-store robbery", "a car break-in at a mall", "a house burglary", "an assault outside a bar", "an arson at a garage",
           "a hit-and-run", "a theft from a warehouse", "a shooting that wounded a store clerk", "a stolen motorcycle", "vandalism at a school",
@@ -44,6 +44,8 @@ SCHEMA = {
 
 def pick_generator(name: str | None) -> ModelSpec:
     ids = {m.id for m in _get_client().models.list().data}
+    if name and name not in ids:  # never fall back silently: train and test writers must differ
+        raise SystemExit(f"Generator {name} isn't available; have: {sorted(ids)[:40]}")
     for mid in ([name] if name else []) + PREFERRED:
         if mid in ids:
             return ModelSpec("generator", mid, 0.5, 1.5)
@@ -108,17 +110,23 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=40)
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--generator", default=None)
+    ap.add_argument("--split", default="trainval", choices=["trainval", "test"])
     a = ap.parse_args()
     gen = pick_generator(a.generator)
     print("generator:", gen.model_id)
-    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_file = OUT_DIR / f"interrogations_{a.split}.jsonl"
     kept, calls = [], []
     with ThreadPoolExecutor(8) as ex:
         for rec, c in ex.map(lambda i: write_one(i, gen, a.seed), range(1, a.n + 1)):
             calls += c
             if rec:
                 kept.append(rec)
-    OUT.write_text("\n".join(json.dumps(r) for r in kept) + "\n")
+    for r in kept:
+        r["split"] = a.split
+        if a.split == "test":
+            r["id"] = "T" + r["id"]
+    out_file.write_text("\n".join(json.dumps(r) for r in kept) + "\n")
     print(f"kept {len(kept)}/{a.n} interrogations; {sum(len(r['utterances']) for r in kept)} lines; {len(calls)} calls")
 
 
