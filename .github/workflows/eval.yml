@@ -50,9 +50,15 @@ jobs:
         run: |
           set -o pipefail
           mkdir -p eval
-          if [ "$SYNTH" != "0" ]; then python -m scripts.synth --n "$SYNTH" --split trainval --generator deepseek-ai/DeepSeek-V4.1-Flash-1017 2>&1 | tee -a eval/synth_log.txt; python -m scripts.synth --n 20 --split test --seed 101 --generator Qwen/Qwen3-30B-A3B-Instruct-2507 2>&1 | tee eval/synth_log.txt; fi
-          python -m eval.run_eval --n "$N" --methods "$METHODS" 2>&1 | tee eval/eval_log.txt
-          cat eval/RESULTS.md >> "$GITHUB_STEP_SUMMARY"
+          if [ "$SYNTH" != "0" ]; then
+            python -m scripts.synth --n "$SYNTH" --split trainval --generator deepseek-ai/DeepSeek-V4.1-Flash-1017 2>&1 | tee -a eval/synth_log.txt
+            python -m scripts.synth --n 20 --split test --seed 101 --generator Qwen/Qwen3-30B-A3B-Instruct-2507 2>&1 | tee -a eval/synth_log.txt
+            python -m scripts.build_pairs 2>&1 | tee -a eval/synth_log.txt
+          fi
+          if [ "$N" != "0" ]; then
+            python -m eval.run_eval --n "$N" --methods "$METHODS" 2>&1 | tee eval/eval_log.txt
+            cat eval/RESULTS.md >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Commit results
         if: always()
         run: |
@@ -60,4 +66,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add eval data/synth 2>/dev/null || true
           git commit -m "Benchmark results" || echo "No changes"
-          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+          for i in 1 2 3 4; do if git pull --rebase -q && git push; then exit 0; fi; sleep 7; done
+          echo "couldn't push the results"; exit 1
