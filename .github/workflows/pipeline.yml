@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       case: { description: "Case id (folder under data/cases)", required: true, default: "dassey" }
-      steps: { description: "Comma list: ingest,pageeval,facts,tag", required: true, default: "ingest,tag" }
+      steps: { description: "Comma list: ingest,pageeval,facts,tag,oneprompt", required: true, default: "ingest,tag" }
       sessions: { description: "Only these sessions for ingest (e.g. S1,S2); blank = all", required: false, default: "" }
       max_pages: { description: "Limit pages per session for a quick test (0 = all)", required: false, default: "0" }
 permissions:
@@ -59,6 +59,7 @@ jobs:
           if [[ "$STEPS_" == *",pageeval,"* ]]; then python -m scripts.page_eval "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",facts,"* ]]; then python -m scripts.facts "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",tag,"* ]]; then python -m scripts.tag "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS_" == *",oneprompt,"* ]]; then python -m scripts.one_prompt_case "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           tail -20 logs/pipeline.txt >> "$GITHUB_STEP_SUMMARY"
       - name: Commit results
         if: always()
