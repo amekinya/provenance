@@ -8,5 +8,9 @@ services:
     envVars:
       - key: NEBIUS_API_KEY
         sync: false
+      - key: ENDPOINT_URL      # our Nebius endpoint (fine-tuned matcher); optional
+        sync: false
+      - key: ENDPOINT_TOKEN
+        sync: false
       - key: DAILY_SPEND_CAP_USD
         value: "2"
