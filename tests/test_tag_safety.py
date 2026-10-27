@@ -54,7 +54,7 @@ def test_search_checks_the_question_right_before_a_short_answer(monkeypatch):
 
     def fake_verify(items, calls=None, reasoning=False):
         seen.extend(i["key"] for i in items)
-        return {i["key"]: {"key": i["key"], "carries_detail": i["key"].startswith("U3"), "kind": "asserts", "why": ""} for i in items}
+        return {i["key"]: {"key": i["key"], "carries_detail": i["key"].startswith("U3"), "kind": "asserts"} for i in items}
     monkeypatch.setattr(tag.tasks, "verify", fake_verify)
     cfg = {"id": "t", "title": "t", "suspect": "KID", "sessions": [{"id": "S1", "label": "I", "day": "2020-01-01"}]}
     for u in utts:
