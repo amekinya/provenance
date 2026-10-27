@@ -70,7 +70,7 @@ def case(cid: str):
         raise HTTPException(404, "Unknown case.")
     run = _read(d / "run.json", {}) or {}
     keep = ("tag_seconds", "total_seconds", "cost_usd", "by_model", "by_step", "labeler", "read_by", "unverified", "safety_search_added",
-            "code_agreements_added", "verifier_reasoning")
+            "code_agreements_added", "verifier_reasoning", "investigator_side", "sense_check_cost_usd", "memo_cost_usd")
     one = _read(d / "one_prompt.json")
     return rep | {"memo": _read(d / "memo.json"), "run": {k: run.get(k) for k in keep},
                   "config": _read(d / "case.json"), "eval": _read(d / "eval.json") or _read(BENCH),
