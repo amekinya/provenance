@@ -9,7 +9,20 @@
    "the RAV4",
    "the truck in the garage"
   ],
-  "source": "Decision and Order, Dassey v. Dittmann (E.D. Wis. Aug 12, 2016), p. 9, citing ECF 19-25 at 24. The vehicle's discovery on the salvage yard was public by Nov 10, 2005 (CNN); its being in the garage was not reported."
+  "source": "Decision and Order, Dassey v. Dittmann (E.D. Wis. Aug 12, 2016), p. 9, citing ECF 19-25 at 24. The vehicle's discovery on the salvage yard was public by Nov 10, 2005 (CNN); its being in the garage was not reported.",
+  "must": [
+   [
+    "car",
+    "vehicle",
+    "rav4",
+    "jeep",
+    "truck",
+    "suv"
+   ],
+   [
+    "garage"
+   ]
+  ]
  },
  {
   "id": "F02",
@@ -19,7 +32,14 @@
    "the knife",
    "a blade"
   ],
-  "source": "Decision and Order p. 9, citing ECF 19-25 at 26."
+  "source": "Decision and Order p. 9, citing ECF 19-25 at 26.",
+  "must": [
+   [
+    "knife",
+    "knives",
+    "blade"
+   ]
+  ]
  },
  {
   "id": "F03",
@@ -30,7 +50,20 @@
    "tied her up",
    "tied up"
   ],
-  "source": "Decision and Order pp. 9-12, citing ECF 19-25 at 26, 54, 56-57."
+  "source": "Decision and Order pp. 9-12, citing ECF 19-25 at 26, 54, 56-57.",
+  "must": [
+   [
+    "tie",
+    "tied",
+    "tying",
+    "bound",
+    "bind"
+   ],
+   [
+    "rope",
+    "ropes"
+   ]
+  ]
  },
  {
   "id": "F04",
@@ -41,7 +74,23 @@
    "in the back of the car",
    "the cargo area"
   ],
-  "source": "Decision and Order pp. 9-10, 14, citing ECF 19-25 at 26, 71-72."
+  "source": "Decision and Order pp. 9-10, 14, citing ECF 19-25 at 26, 71-72.",
+  "must": [
+   [
+    "back",
+    "rear",
+    "cargo",
+    "trunk"
+   ],
+   [
+    "car",
+    "vehicle",
+    "rav4",
+    "jeep",
+    "truck",
+    "suv"
+   ]
+  ]
  },
  {
   "id": "F05",
@@ -53,7 +102,31 @@
    "on the bed",
    "in his bedroom"
   ],
-  "source": "Decision and Order p. 11, citing ECF 19-25 at 42-43."
+  "source": "Decision and Order p. 11, citing ECF 19-25 at 42-43.",
+  "must": [
+   [
+    "handcuff",
+    "handcuffs",
+    "handcuffed",
+    "cuff",
+    "cuffs",
+    "cuffed",
+    "restrain",
+    "restrained",
+    "shackle",
+    "shackled",
+    "chain",
+    "chained",
+    "tie",
+    "tied"
+   ],
+   [
+    "bed",
+    "bedroom",
+    "bedpost",
+    "headboard"
+   ]
+  ]
  },
  {
   "id": "F06",
@@ -63,7 +136,21 @@
    "stabbed her",
    "stomach"
   ],
-  "source": "Decision and Order p. 12, citing ECF 19-25 at 54-55."
+  "source": "Decision and Order p. 12, citing ECF 19-25 at 54-55.",
+  "must": [
+   [
+    "stomach",
+    "belly",
+    "gut",
+    "abdomen"
+   ],
+   [
+    "stab",
+    "stabbed",
+    "knife",
+    "cut"
+   ]
+  ]
  },
  {
   "id": "F07",
@@ -73,7 +160,17 @@
    "choked her",
    "strangled"
   ],
-  "source": "Decision and Order p. 12, citing ECF 19-25 at 55."
+  "source": "Decision and Order p. 12, citing ECF 19-25 at 55.",
+  "must": [
+   [
+    "choke",
+    "choked",
+    "choking",
+    "strangle",
+    "strangled",
+    "strangling"
+   ]
+  ]
  },
  {
   "id": "F08",
@@ -83,7 +180,24 @@
    "cut off her hair",
    "cut her hair"
   ],
-  "source": "Decision and Order p. 13, citing ECF 19-25 at 60."
+  "source": "Decision and Order p. 13, citing ECF 19-25 at 60.",
+  "must": [
+   [
+    "cut",
+    "chop",
+    "chopped",
+    "hack",
+    "hacked",
+    "snip",
+    "trim",
+    "trimmed",
+    "shave",
+    "shaved"
+   ],
+   [
+    "hair"
+   ]
+  ]
  },
  {
   "id": "F09",
@@ -93,7 +207,22 @@
    "cut her throat",
    "her neck"
   ],
-  "source": "Decision and Order p. 13, citing ECF 19-25 at 62."
+  "source": "Decision and Order p. 13, citing ECF 19-25 at 62.",
+  "must": [
+   [
+    "throat",
+    "neck"
+   ],
+   [
+    "cut",
+    "slit",
+    "slash",
+    "slashed",
+    "slice",
+    "sliced",
+    "knife"
+   ]
+  ]
  },
  {
   "id": "F10",
@@ -104,7 +233,20 @@
    "gunshot to the head",
    "shot her"
   ],
-  "source": "Decision and Order pp. 12-13, citing ECF 19-25 at 63. Investigators already knew this from forensic examination of the skull fragments (ECF 19-19 at 85; 19-20 at 27). Not reported publicly before the interviews (not in CNN Nov 10, 2005 or Badger Herald Nov 16, 2005)."
+  "source": "Decision and Order pp. 12-13, citing ECF 19-25 at 63. Investigators already knew this from forensic examination of the skull fragments (ECF 19-19 at 85; 19-20 at 27). Not reported publicly before the interviews (not in CNN Nov 10, 2005 or Badger Herald Nov 16, 2005).",
+  "must": [
+   [
+    "shot",
+    "shoot",
+    "shooting",
+    "shots",
+    "gunshot",
+    "gun"
+   ],
+   [
+    "head"
+   ]
+  ]
  },
  {
   "id": "F11",
@@ -115,7 +257,22 @@
    "his rifle",
    "the gun from the rack"
   ],
-  "source": "Decision and Order p. 14, citing ECF 19-25 at 63-67, 103. Firearms found in Avery's bedroom were reported (Badger Herald, Nov 16, 2005) but not linked to a shooting."
+  "source": "Decision and Order p. 14, citing ECF 19-25 at 63-67, 103. Firearms found in Avery's bedroom were reported (Badger Herald, Nov 16, 2005) but not linked to a shooting.",
+  "must": [
+   [
+    "shot",
+    "shoot",
+    "shooting",
+    "shots",
+    "gunshot",
+    "gun"
+   ],
+   [
+    "22",
+    "rifle",
+    "twenty two"
+   ]
+  ]
  },
  {
   "id": "F12",
@@ -126,7 +283,25 @@
    "on the garage floor",
    "shell casings in the garage"
   ],
-  "source": "Decision and Order pp. 14-15, citing ECF 19-25 at 72-73. Investigators told Dassey they had found shell casings in the garage (ECF 19-25 at 73)."
+  "source": "Decision and Order pp. 14-15, citing ECF 19-25 at 72-73. Investigators told Dassey they had found shell casings in the garage (ECF 19-25 at 73).",
+  "must": [
+   [
+    "shot",
+    "shoot",
+    "shooting",
+    "shots",
+    "gunshot",
+    "shell",
+    "shells",
+    "casing",
+    "casings",
+    "bullet",
+    "bullets"
+   ],
+   [
+    "garage"
+   ]
+  ]
  },
  {
   "id": "F13",
@@ -141,7 +316,31 @@
    "bones in the fire"
   ],
   "public_before": "2005-11-16",
-  "source": "Decision and Order pp. 3, 7, 10, 14. Public: 'human teeth and bones in a burn pit behind Steven Avery's garage' (Badger Herald, Nov 16, 2005); 'an attempt was made to dispose of a body by an incendiary means' (CNN, Nov 10, 2005)."
+  "source": "Decision and Order pp. 3, 7, 10, 14. Public: 'human teeth and bones in a burn pit behind Steven Avery's garage' (Badger Herald, Nov 16, 2005); 'an attempt was made to dispose of a body by an incendiary means' (CNN, Nov 10, 2005).",
+  "must": [
+   [
+    "body",
+    "bones",
+    "bone",
+    "remains",
+    "flesh",
+    "skull",
+    "toes",
+    "fingers",
+    "parts"
+   ],
+   [
+    "burn",
+    "burned",
+    "burnt",
+    "burning",
+    "fire",
+    "bonfire",
+    "pit",
+    "cooked",
+    "cooking"
+   ]
+  ]
  },
  {
   "id": "F14",
@@ -151,7 +350,28 @@
    "tires",
    "branches on the fire"
   ],
-  "source": "Decision and Order p. 14, citing ECF 19-25 at 68-69."
+  "source": "Decision and Order p. 14, citing ECF 19-25 at 68-69.",
+  "must": [
+   [
+    "tire",
+    "tires"
+   ],
+   [
+    "branch",
+    "branches",
+    "brush"
+   ],
+   [
+    "burn",
+    "burned",
+    "burnt",
+    "burning",
+    "fire",
+    "bonfire",
+    "pit",
+    "on top"
+   ]
+  ]
  },
  {
   "id": "F15",
@@ -162,7 +382,25 @@
    "put a hood on it",
    "hid the car"
   ],
-  "source": "Decision and Order pp. 1-2, 15, citing ECF 19-25 at 76-77. That the SUV was found on the property was public (CNN, Nov 10, 2005); how it was covered was not reported there."
+  "source": "Decision and Order pp. 1-2, 15, citing ECF 19-25 at 76-77. That the SUV was found on the property was public (CNN, Nov 10, 2005); how it was covered was not reported there.",
+  "must": [
+   [
+    "hid",
+    "hide",
+    "hidden",
+    "hiding",
+    "cover",
+    "covered",
+    "covering",
+    "under"
+   ],
+   [
+    "branch",
+    "branches",
+    "brush",
+    "hood"
+   ]
+  ]
  },
  {
   "id": "F16",
@@ -174,7 +412,23 @@
    "the plates"
   ],
   "public_before": "2005-11-16",
-  "source": "Decision and Order p. 16, citing ECF 19-25 at 77-78. Public: 'Halbach's license plates were found crumpled in a scrap vehicle at the salvage yard' (Badger Herald, Nov 16, 2005)."
+  "source": "Decision and Order p. 16, citing ECF 19-25 at 77-78. Public: 'Halbach's license plates were found crumpled in a scrap vehicle at the salvage yard' (Badger Herald, Nov 16, 2005).",
+  "must": [
+   [
+    "plate",
+    "plates"
+   ],
+   [
+    "took",
+    "take",
+    "taken",
+    "remove",
+    "removed",
+    "off",
+    "pulled",
+    "unscrewed"
+   ]
+  ]
  },
  {
   "id": "F17",
@@ -185,7 +439,30 @@
    "looked at the engine",
    "the battery"
   ],
-  "source": "Decision and Order p. 16, citing ECF 19-25 at 79-80. Investigators knew the battery had been disconnected (ECF 19-17 at 142); not reported publicly."
+  "source": "Decision and Order p. 16, citing ECF 19-25 at 79-80. Investigators knew the battery had been disconnected (ECF 19-17 at 142); not reported publicly.",
+  "must": [
+   [
+    "hood",
+    "engine",
+    "battery"
+   ],
+   [
+    "raise",
+    "raised",
+    "lift",
+    "lifted",
+    "open",
+    "opened",
+    "pop",
+    "popped",
+    "look",
+    "looked",
+    "disconnect",
+    "disconnected",
+    "unhook",
+    "unhooked"
+   ]
+  ]
  },
  {
   "id": "F18",
@@ -197,7 +474,19 @@
    "in his bedroom"
   ],
   "public_before": "2005-11-10",
-  "source": "Decision and Order pp. 3, 16, citing ECF 19-25 at 78-79. Public: 'the ignition key to Ms. Halbach's car was found in Steven Avery's bedroom' (CNN, Nov 10, 2005)."
+  "source": "Decision and Order pp. 3, 16, citing ECF 19-25 at 78-79. Public: 'the ignition key to Ms. Halbach's car was found in Steven Avery's bedroom' (CNN, Nov 10, 2005).",
+  "must": [
+   [
+    "key",
+    "keys"
+   ],
+   [
+    "bedroom",
+    "room",
+    "dresser",
+    "drawer"
+   ]
+  ]
  },
  {
   "id": "F19",
@@ -209,7 +498,16 @@
    "cleaned the floor"
   ],
   "source": "Decision and Order p. 7 (told to Fassbender in an evening meeting on Feb 27, 2006, ECF 19-19 at 10-11) and p. 16 (ECF 19-25 at 82).",
-  "prior_statement": "on the evening of Feb 27, 2006 he told Fassbender he got bleach on his pants helping clean Avery's garage floor (Decision and Order p. 7, citing ECF 19-19 at 10-11)"
+  "prior_statement": "on the evening of Feb 27, 2006 he told Fassbender he got bleach on his pants helping clean Avery's garage floor (Decision and Order p. 7, citing ECF 19-19 at 10-11)",
+  "must": [
+   [
+    "bleach"
+   ],
+   [
+    "jeans",
+    "pants"
+   ]
+  ]
  },
  {
   "id": "F20",
@@ -220,7 +518,19 @@
    "cleaned up the blood",
    "stain on the floor"
   ],
-  "source": "Decision and Order p. 16, citing ECF 19-25 at 82, 85-86."
+  "source": "Decision and Order p. 16, citing ECF 19-25 at 82, 85-86.",
+  "must": [
+   [
+    "blood",
+    "bloody",
+    "stain",
+    "stained"
+   ],
+   [
+    "floor",
+    "garage"
+   ]
+  ]
  },
  {
   "id": "F21",
@@ -230,7 +540,26 @@
    "the sheets",
    "bedding"
   ],
-  "source": "Decision and Order p. 17, citing ECF 19-25 at 83."
+  "source": "Decision and Order p. 17, citing ECF 19-25 at 83.",
+  "must": [
+   [
+    "sheet",
+    "sheets",
+    "bedsheet",
+    "bedsheets",
+    "bedding",
+    "blanket",
+    "blankets"
+   ],
+   [
+    "burn",
+    "burned",
+    "burnt",
+    "burning",
+    "fire",
+    "bonfire"
+   ]
+  ]
  },
  {
   "id": "F22",
@@ -241,7 +570,25 @@
    "clothing on the fire"
   ],
   "public_before": "2005-11-16",
-  "source": "Decision and Order p. 17, citing ECF 19-25 at 84. Public: 'Burned clothing and a partially burned shovel were found in a barrel near Avery's trailer' (Badger Herald, Nov 16, 2005)."
+  "source": "Decision and Order p. 17, citing ECF 19-25 at 84. Public: 'Burned clothing and a partially burned shovel were found in a barrel near Avery's trailer' (Badger Herald, Nov 16, 2005).",
+  "must": [
+   [
+    "clothes",
+    "clothing",
+    "shirt",
+    "pants",
+    "jeans",
+    "jacket"
+   ],
+   [
+    "burn",
+    "burned",
+    "burnt",
+    "burning",
+    "fire",
+    "bonfire"
+   ]
+  ]
  },
  {
   "id": "F23",
@@ -254,7 +601,25 @@
    "burn barrel",
    "burnt 'em"
   ],
-  "source": "Decision and Order p. 18, citing ECF 19-25 at 96-98. Not in the CNN (Nov 10) or Badger Herald (Nov 16, 2005) reports reviewed."
+  "source": "Decision and Order p. 18, citing ECF 19-25 at 96-98. Not in the CNN (Nov 10) or Badger Herald (Nov 16, 2005) reports reviewed.",
+  "must": [
+   [
+    "phone",
+    "cell",
+    "cellphone",
+    "camera",
+    "purse"
+   ],
+   [
+    "burn",
+    "burned",
+    "burnt",
+    "burning",
+    "fire",
+    "bonfire",
+    "barrel"
+   ]
+  ]
  },
  {
   "id": "F24",
@@ -265,7 +630,26 @@
    "broke up the bones",
    "buried them"
   ],
-  "source": "Decision and Order p. 18, citing ECF 19-25 at 112-13. A partially burned shovel in a barrel was reported (Badger Herald, Nov 16, 2005), not its use on the bones."
+  "source": "Decision and Order p. 18, citing ECF 19-25 at 112-13. A partially burned shovel in a barrel was reported (Badger Herald, Nov 16, 2005), not its use on the bones.",
+  "must": [
+   [
+    "bone",
+    "bones"
+   ],
+   [
+    "break",
+    "broke",
+    "broken",
+    "breaking",
+    "crush",
+    "crushed",
+    "smash",
+    "smashed"
+   ],
+   [
+    "shovel"
+   ]
+  ]
  },
  {
   "id": "F25",
@@ -275,6 +659,17 @@
    "tattoo"
   ],
   "planted": true,
-  "source": "Decision and Order pp. 18-19, citing ECF 19-25 at 138-39 and ECF 19-12 at 45-46 (investigators knew there was no such tattoo; they asked to test whether Dassey was just agreeing)."
+  "source": "Decision and Order pp. 18-19, citing ECF 19-25 at 138-39 and ECF 19-12 at 45-46 (investigators knew there was no such tattoo; they asked to test whether Dassey was just agreeing).",
+  "must": [
+   [
+    "tattoo",
+    "tattoos"
+   ],
+   [
+    "stomach",
+    "belly",
+    "tummy"
+   ]
+  ]
  }
 ]

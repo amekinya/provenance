@@ -66,6 +66,86 @@ def spoken(text: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[(\[][^)\]]*[)\]]", " ", plain(text))).strip()
 
 
+# ---------------------------------------------------------------------------------------------------------------------
+# Key terms. Each fact can carry `must`: groups of words, written from the fact's own wording (never from the transcript
+# lines they would match). A line carries the fact only if it contains one alternate from every group. A bare 'yeah' or a
+# short line (8 words or fewer) is read together with the 2 lines before it in the same session, so 'With the shovel.'
+# answering 'How'd he break up the bones?' counts. Code checks this after the model labels and after the verifier, so
+# it is the last word.
+SHORT_WORDS = 8
+
+
+def _tok(text: str) -> list[str]:
+    return re.findall(r"[a-z0-9]+", plain(text).lower())
+
+
+def _matches(tok: str, alt: str) -> bool:
+    if tok == alt:
+        return True
+    forms = {alt + x for x in ("s", "es", "ed", "d", "ing", "er", "ers")}
+    if len(alt) >= 3 and alt[-1] not in "aeiouwxy":
+        forms |= {alt + alt[-1] + x for x in ("ed", "ing", "er")}  # stab -> stabbed, cut -> cutting
+    if alt.endswith("e"):
+        forms.add(alt[:-1] + "ing")                                  # choke -> choking
+    if alt.endswith("y"):
+        forms |= {alt[:-1] + "ies", alt[:-1] + "ied"}
+    if alt.endswith("f"):
+        forms.add(alt[:-1] + "ves")                                  # knife -> knives
+    if alt.endswith("fe"):
+        forms.add(alt[:-2] + "ves")
+    return tok in forms
+
+
+def has_terms(text: str, must: list) -> bool:
+    """True if the text has at least one alternate from every key-term group (no groups: always true)."""
+    toks = _tok(text)
+    joined = " " + " ".join(toks) + " "
+    for group in must or []:
+        hit = False
+        for alt in group:
+            a = _tok(alt)
+            if len(a) > 1:
+                hit = f" {' '.join(a)} " in joined
+            elif a:
+                hit = any(_matches(t, a[0]) for t in toks)
+            if hit:
+                break
+        if not hit:
+            return False
+    return True
+
+
+_GENERIC = set("a an the of to in on at for with and or his her him its their was were is be by from that this it he she they there "
+               "then them out into onto over under about after before when what who did does had has have not off near found seen "
+               "missing used left put taken given wore wearing got made".split())
+
+
+def derive_must(label: str) -> list[list[str]]:
+    """Key terms made mechanically from a fact label (for facts nobody wrote key terms for): every content word is its
+    own group; plural and simple verb endings are tolerated by the matcher."""
+    return [[w] for w in dict.fromkeys(t for t in _tok(label) if t not in _GENERIC and (len(t) > 2 or t.isdigit()))]
+
+
+def _txt(x) -> str:
+    return x.text if hasattr(x, "text") else x["text"]
+
+
+def _sess(x) -> str:
+    return x.session if hasattr(x, "session") else x["session"]
+
+
+def term_window(order: list, i: int) -> str:
+    """The text a line is judged by for key terms: the line itself, plus the 2 lines before it in the same session when
+    it is a bare agreement or a short line."""
+    u = order[i]
+    t = _txt(u)
+    words = spoken(t).split()
+    if len(words) <= SHORT_WORDS or ASSENT.match(spoken(t)):
+        prev = [order[k] for k in range(max(0, i - 2), i) if _sess(order[k]) == _sess(u)]
+        t = " ".join([_txt(x) for x in prev] + [t])
+    return t
+
+
 def is_assent(u: Utterance) -> bool:
     return bool(ASSENT.match(spoken(u.text)) or re.fullmatch(r"\W*\(?\s*(\w+\s+)?nods?[^)]*\)?\W*", plain(u.text).strip(), re.I))
 
@@ -86,6 +166,10 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
         u = by_id[m.utterance]
         ev = {"utterance": u.id, "seq": u.seq, "session": u.session, "page": u.page, "role": u.role, "speaker": u.speaker,
               "kind": m.kind, "quote": m.quote or u.text[:200], "sensitive": u.sensitive, "verified": m.verified}
+        if fact.must and not has_terms(term_window(order, pos[u.id]), fact.must):
+            ev["kind_note"] = "the line doesn't contain the detail's key terms; not counted"
+            events.append(ev)
+            continue
         if u.role == "interrogator" and m.kind in ("asserts", "asks"):
             inv_pos.append(pos[u.id])
             if first_inv is None:

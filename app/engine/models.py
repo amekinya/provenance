@@ -40,6 +40,7 @@ class Fact:
     holdback: bool = False             # police say they kept it secret
     planted: bool = False              # a deliberately false detail investigators used as a test
     prior_statement: str = ""          # a documented earlier statement by the suspect with no public transcript (with source)
+    must: list = field(default_factory=list)  # key-term groups: a line carries the fact only if it has one alternate from every group
 
 
 @dataclass

@@ -26,7 +26,7 @@ from dataclasses import asdict
 
 from app.ai import tasks
 from app.ai.client import CallRecord, LiveModelUnavailable
-from app.engine.ledger import ASSENT, audit, load_case, plain, spoken
+from app.engine.ledger import ASSENT, audit, has_terms, load_case, plain, spoken, term_window
 from scripts.ingest import case_dir
 
 
@@ -45,7 +45,7 @@ def load(cid: str) -> tuple[dict, list[dict], list[dict]]:
 
 
 def case_dict(cfg: dict, utts: list[dict], facts: list[dict], mentions: list[dict]) -> dict:
-    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted", "prior_statement")
+    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted", "prior_statement", "must")
     return {"id": cfg["id"], "title": cfg["title"], "suspect": cfg["suspect"], "notes": cfg.get("notes", []),
             "sessions": [{k: s.get(k, d) for k, d in (("id", ""), ("label", ""), ("day", ""), ("recorded", True), ("source", ""))}
                          for s in cfg["sessions"]],
@@ -147,8 +147,12 @@ def detail_stems(f: dict) -> list[str]:
 
 
 def candidate_lines(utts: list[dict], f: dict, before_seq: int) -> list[dict]:
-    """Investigator lines before `before_seq` (any session) that contain one of the detail's distinctive stems. In a long
-    record, stems found on more than 2% of lines (names like the suspect's uncle) don't count as distinctive."""
+    """Investigator lines before `before_seq` (any session) that could carry the detail. With key terms (`must`), a line
+    qualifies only if it passes the same key-term check the ledger applies. Without them, a line qualifies if it contains
+    one of the detail's distinctive stems (in a long record, stems on more than 2% of lines don't count as distinctive)."""
+    if f.get("must"):
+        order = sorted(utts, key=lambda u: u["seq"])
+        return [u for i, u in enumerate(order) if u["role"] == "interrogator" and u["seq"] < before_seq and has_terms(term_window(order, i), f["must"])]
     stems = detail_stems(f)
     if len(utts) >= 200:
         texts = [plain(u["text"]).lower() for u in utts]
@@ -177,7 +181,7 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
         asked = {(m["utterance"], m["fact"]) for m in mentions}
         items = []
-        for fl in rep["facts"]:
+        for fl in rep["facts"]:  # noqa: PLR1702
             fs, fi = fl["first_suspect"], fl["first_interrogator"]
             # Public, planted and prior-statement details get their verdict before investigator order is considered.
             if not fs or fl["origin"] in ("public", "planted_adopted") or fl["fact"].get("prior_statement"):
@@ -185,7 +189,8 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
             limit = min(fs["seq"], fi["seq"]) if fi else fs["seq"]
             fid = fl["fact"]["id"]
             p = pos[fs["utterance"]]
-            just_before = [u for u in order[max(0, p - 4):p] if u["role"] == "interrogator" and u["session"] == fs["session"] and u["seq"] < limit]
+            just_before = [u for u in order[max(0, p - 4):p] if u["role"] == "interrogator" and u["session"] == fs["session"] and u["seq"] < limit
+                           and (not fact_of[fid].get("must") or has_terms(term_window(order, pos[u["id"]]), fact_of[fid]["must"]))]
             kw = [u for u in candidate_lines(utts, fact_of[fid], limit) if (u["id"], fid) not in asked][:per_fact]
             pool = {u["id"]: u for u in kw + [u for u in just_before if (u["id"], fid) not in asked]}
             cands = sorted(pool.values(), key=lambda u: u["seq"])
@@ -203,7 +208,7 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
                 print(f"  safety check failed: {str(e)[:140]}")
                 return {}, local
         with ThreadPoolExecutor(4) as ex:
-            for res, local in ex.map(run, [items[i:i + 5] for i in range(0, len(items), 5)]):
+            for res, local in ex.map(run, [items[i:i + 3] for i in range(0, len(items), 3)]):
                 calls.extend(local)
                 results.update(res)
         confirmed = 0
@@ -274,7 +279,7 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
                   "speaker": f"{by_id[m['utterance']]['speaker']} ({by_id[m['utterance']]['role']})", "text": by_id[m["utterance"]]["text"],
                   "prev": prev_of[m["utterance"]]} for m in todo]
         results: dict[str, dict] = {}
-        batches = [items[i:i + 5] for i in range(0, len(items), 5)]
+        batches = [items[i:i + 3] for i in range(0, len(items), 3)]  # small batches keep Ultra's reasoning short enough to finish
 
         def run(b):
             local: list[CallRecord] = []

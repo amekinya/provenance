@@ -110,3 +110,28 @@ def test_prior_statement_and_curly_apostrophes():
          "facts": [{"id": "F1", "label": "Bleach on jeans"}],
          "mentions": [{"utterance": "u1", "fact": "F1", "kind": "asks"}, {"utterance": "u2", "fact": "F1", "kind": "asserts"}]}
     assert audit(load_case(d))["facts"][0]["origin"] == "prior_contact"
+
+
+def test_key_terms_decide_what_counts():
+    from app.engine.ledger import derive_must, has_terms
+    s = [Session("A", "Day 1", date(2006, 3, 1))]
+    u = [
+        Utterance("A1", "A", 1, "DET", "interrogator", "Did you see any hair in the fire?", "1"),
+        Utterance("A2", "A", 2, "KID", "suspect", "No.", "1"),
+        Utterance("A3", "A", 3, "DET", "interrogator", "What else did he do to her head?", "2"),
+        Utterance("A4", "A", 4, "KID", "suspect", "That he cut off her hair.", "2"),
+        Utterance("A5", "A", 5, "DET", "interrogator", "How'd he break up the bones?", "3"),
+        Utterance("A6", "A", 6, "KID", "suspect", "With the shovel.", "3"),
+    ]
+    f = [Fact("F1", "Her hair was cut", must=[["cut", "chop"], ["hair"]]),
+         Fact("F2", "Bones were broken up with a shovel", must=[["bone"], ["break", "broke", "broken"], ["shovel"]])]
+    m = [Mention("A1", "F1", "asks", verified=True), Mention("A4", "F1", "asserts", verified=True),
+         Mention("A5", "F2", "asks", verified=True), Mention("A6", "F2", "asserts", verified=True)]
+    rep = by_fact(audit(Case("t", "T", "KID", s, u, f, m)))
+    # 'any hair in the fire' names hair but not cutting: it doesn't count, so the suspect said it first
+    assert rep["F1"]["origin"] == "suspect_first" and rep["F1"]["first_suspect"]["utterance"] == "A4"
+    assert any(e.get("kind_note", "").startswith("the line doesn't contain") for e in rep["F1"]["events"])
+    # a short answer is read with the question before it: the investigator line lacks 'shovel', the answer has it
+    assert rep["F2"]["first_suspect"]["utterance"] == "A6" and rep["F2"]["first_interrogator"] is None
+    assert has_terms("He stabbed her in the belly", [["stomach", "belly"], ["stab"]]) and not has_terms("he stabbed her", [["stomach"], ["stab"]])
+    assert derive_must("Red hoodie found near back gate") == [["red"], ["hoodie"], ["back"], ["gate"]]
