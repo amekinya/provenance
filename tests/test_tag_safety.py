@@ -28,3 +28,16 @@ def test_candidate_lines_are_earlier_investigator_lines_with_the_details_words()
     utts = [utt(1, "interrogator", "You threw tires and branches on her"), utt(2, "suspect", "We threw some tires on."),
             utt(3, "interrogator", "What happened next?"), utt(4, "interrogator", "More branches?")]
     assert [u["id"] for u in candidate_lines(utts, fact, before_seq=4)] == ["U1"]
+
+
+def test_verifier_retries_without_reasoning(monkeypatch):
+    from app.ai import tasks
+    from app.ai.client import LiveModelUnavailable
+
+    def fake(spec, msgs, schema, **kw):
+        if kw.get("reasoning"):
+            raise LiveModelUnavailable("timeout")
+        return {"checks": [{"key": "a", "carries_detail": True, "kind": "asks", "why": ""}]}
+    monkeypatch.setattr(tasks, "chat_json", fake)
+    out = tasks.verify([{"key": "a", "fact_label": "x", "fact_detail": "", "speaker": "DET", "text": "t", "prev": ""}])
+    assert out["a"]["carries_detail"] is True

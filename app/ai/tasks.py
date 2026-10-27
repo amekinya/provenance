@@ -12,7 +12,7 @@ from __future__ import annotations
 import base64
 import json
 import re
-from app.ai.client import CallRecord, chat_json
+from app.ai.client import CallRecord, chat_json, LiveModelUnavailable
 from app.config import settings
 from app.engine.models import KINDS
 
