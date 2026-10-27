@@ -154,5 +154,7 @@ def chat_json(spec: ModelSpec, messages: list[dict[str, Any]], *, schema: dict[s
         try:
             return _parse_json(text)
         except ValueError:
+            snippet = (text or "").strip().replace("\n", " ")
+            print(f"  [{spec.model_id.split('/')[-1]}] reply wasn't valid JSON ({len(text or '')} chars): {snippet[:90]!r} ... {snippet[-60:]!r}")
             kw["max_tokens"] = int(kw.get("max_tokens", 2048)) * 2
     raise LiveModelUnavailable(f"{spec.model_id} returned no valid JSON")

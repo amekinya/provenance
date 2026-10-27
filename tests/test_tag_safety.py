@@ -64,3 +64,18 @@ def test_search_checks_the_question_right_before_a_short_answer(monkeypatch):
     from app.engine.ledger import audit, load_case
     f = audit(load_case(tag.case_dict(cfg, utts, facts, mentions)))["facts"][0]
     assert f["origin"] == "interrogator_first"
+
+
+def test_verifier_retries_item_by_item_after_a_bad_batch(monkeypatch):
+    from app.ai import tasks
+    from app.ai.client import LiveModelUnavailable
+
+    def fake(spec, msgs, schema, **kw):
+        body = msgs[-1]["content"]
+        if body.count("Detail:") > 1:
+            raise LiveModelUnavailable("no valid JSON")
+        key = body.split("]")[0].strip("[")
+        return {"checks": [{"key": key, "carries_detail": True, "kind": "asks", "why": ""}]}
+    monkeypatch.setattr(tasks, "chat_json", fake)
+    items = [{"key": k, "fact_label": "x", "fact_detail": "", "speaker": "DET", "text": "t", "prev": ""} for k in ("a", "b")]
+    assert set(tasks.verify(items)) == {"a", "b"}

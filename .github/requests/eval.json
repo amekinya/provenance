@@ -1,1 +1,1 @@
-{"synth": "0", "test_synth": "0", "split": "trainval", "n": "14", "methods": "provenance", "note": "diagnostic: Ultra labeler, verifier checks distinctive content without reasoning"}
+{"synth": "0", "test_synth": "0", "split": "test", "n": "40", "methods": "keyword,one_prompt,provenance", "note": "final held-out benchmark: Qwen + GLM test interrogations, once"}

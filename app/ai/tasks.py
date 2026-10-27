@@ -155,7 +155,18 @@ def verify(items: list[dict], calls: list[CallRecord] | None = None, reasoning: 
     Ultra without reasoning by default: with reasoning on, about one call in three came back without valid JSON on our
     diagnostic runs, which cost more and left lines unchecked. If a reasoning call fails, it's retried without."""
     if not reasoning:
-        return _verify(items, calls, False)
+        try:
+            return _verify(items, calls, False)
+        except LiveModelUnavailable:
+            if len(items) == 1:
+                raise
+            out: dict[str, dict] = {}  # one bad reply shouldn't leave a whole batch unchecked: retry item by item
+            for it in items:
+                try:
+                    out.update(_verify([it], calls, False))
+                except LiveModelUnavailable as e:
+                    print(f"  verifier failed on {it['key']}: {str(e)[:100]}")
+            return out
     try:
         return _verify(items, calls, True)
     except LiveModelUnavailable as e:
