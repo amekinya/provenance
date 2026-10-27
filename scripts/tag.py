@@ -342,12 +342,22 @@ def main() -> None:
     ap.add_argument("case")
     ap.add_argument("--chunk", type=int, default=18)
     ap.add_argument("--no-memo", action="store_true")
+    ap.add_argument("--reaudit", action="store_true", help="recompute the audit from the saved labels (mentions.json) with the current code; no labeling")
     ap.add_argument("--labeler", default="ultra", choices=["ultra", "lightning", "matcher"],
                     help="ultra (default): our diagnostic runs found Lightning missed about half of the suspect's adoptions")
     a = ap.parse_args()
     cd = case_dir(a.case)
     cfg, utts, facts = load(a.case)
     calls: list[CallRecord] = []
+    if a.reaudit:
+        mentions = json.loads((cd / "mentions.json").read_text())
+        known = {u["id"] for u in utts}
+        if any(m["utterance"] not in known for m in mentions):
+            sys.exit("mentions.json refers to lines that aren't in utterances.json; run the full tag step instead")
+        rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+        (cd / "audit.json").write_text(json.dumps(rep, indent=1))
+        print("re-audited from saved labels:", rep["headline"])
+        return
     t0 = time.perf_counter()
     failed: list[str] = []
     if a.labeler == "matcher":

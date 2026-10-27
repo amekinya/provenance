@@ -162,8 +162,8 @@ def merge(session_id: str, pages: list[dict], roster: dict[str, str], start_seq:
             name, role = _canon(ln.get("speaker", ""), roster)
             # The reader sometimes marks a whole page's dialogue as "note". A line is a stage direction only when it has
             # no speaker of its own: a roster name, or any other printed name in front of words that aren't in brackets.
-            label = re.sub(r"[^A-Za-z ]", "", ln.get("speaker", "")).strip().lower()
-            spoken = role in ("interrogator", "suspect") or (label not in NOT_SPEAKERS and not text.startswith(("(", "[")))
+            spk_label = re.sub(r"[^A-Za-z ]", "", ln.get("speaker", "")).strip().lower()
+            spoken = role in ("interrogator", "suspect") or (spk_label not in NOT_SPEAKERS and not text.startswith(("(", "[")))
             if ln.get("kind") == "note" and not spoken:
                 text = f"({text.strip('()[] ')})"
                 name, role = "", ""  # a stage direction never starts a new speaker turn
@@ -231,11 +231,13 @@ def main() -> None:
         print("test range only; utterances.json not changed")
         for u in all_utts[:40]:
             print(f"  {u['speaker']:11s} {u['text'][:110]}")
-    elif not want:
-        (cd / "utterances.json").write_text(json.dumps(all_utts, indent=1))
-    else:  # merge into the existing file, replacing only the sessions we re-read
+    else:
         old = json.loads((cd / "utterances.json").read_text()) if (cd / "utterances.json").exists() else []
-        keep = [u for u in old if u["session"] not in want]
+        # A re-read keeps the graphic-content flags the tag step set, for lines whose id and text haven't changed.
+        flagged = {(u["id"], u["text"]) for u in old if u.get("sensitive")}
+        for u in all_utts:
+            u["sensitive"] = u.get("sensitive", False) or (u["id"], u["text"]) in flagged
+        keep = [u for u in old if want and u["session"] not in want]  # with --sessions, only those sessions are replaced
         (cd / "utterances.json").write_text(json.dumps(sorted(keep + all_utts, key=lambda u: u["seq"]), indent=1))
     cost = sum(c.cost_usd for c in calls)
     print(f"model calls this run: {len(calls)}, ${cost:.4f}")
