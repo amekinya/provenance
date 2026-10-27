@@ -1,0 +1,50 @@
+generator: deepseek-ai/DeepSeek-V4.1-Flash-1017
+  #1 dropped: F2 planned investigator_first, labels say first=interrogator
+  #2 dropped: F6 planned suspect_first, labels say first=interrogator
+  #3 dropped: F1 planned investigator_first, labels say first=interrogator
+  #4 dropped: F3 planned investigator_first, labels say first=suspect
+  #5 dropped: F3 planned investigator_first, labels say first=interrogator
+  #16 dropped: F6 planned investigator_first, labels say first=interrogator
+  #15 dropped: F2 planned investigator_first, labels say first=interrogator
+  #17 dropped: F3 planned investigator_first, labels say first=interrogator
+  #19 dropped: F2 planned investigator_first, labels say first=interrogator
+  #20 dropped: F4 planned investigator_first, labels say first=interrogator
+  #21 dropped: F1 planned investigator_first, labels say first=interrogator
+  #22 dropped: F3 planned investigator_first, labels say first=interrogator
+  #24 dropped: F2 planned investigator_first, labels say first=interrogator
+  #25 dropped: F1 planned investigator_first, labels say first=interrogator
+  #32 dropped: F4 planned investigator_first, labels say first=suspect
+  #31 dropped: F1 planned investigator_first, labels say first=interrogator
+  #30 dropped: F1 planned investigator_first, labels say first=interrogator
+  #34 dropped: F1 planned investigator_first, labels say first=interrogator
+  #35 dropped: F4 planned suspect_first, labels say first=interrogator
+  #38 dropped: F1 planned investigator_first, labels say first=interrogator
+  #37 dropped: F1 planned suspect_first, labels say first=interrogator
+  #39 dropped: F1 planned investigator_first, labels say first=interrogator
+  #42 dropped: F1 planned investigator_first, labels say first=interrogator
+  #44 dropped: F2 planned investigator_first, labels say first=suspect
+  #43 dropped: F5 planned investigator_first, labels say first=suspect
+  #50 dropped: F7 planned investigator_first, labels say first=interrogator
+  #51 dropped: F1 planned investigator_first, labels say first=interrogator
+  #54 dropped: F3 planned investigator_first, labels say first=suspect
+  #56 dropped: F1 planned investigator_first, labels say first=interrogator
+  #58 dropped: F1 planned investigator_first, labels say first=interrogator
+  #59 dropped: F2 planned suspect_first, labels say first=interrogator
+kept 29/60 interrogations; 1250 lines; 60 calls
+generator: Qwen/Qwen3-30B-A3B-Instruct-2507
+  #5 dropped: F1 planned investigator_first, labels say first=interrogator
+  #2 dropped: F3 planned suspect_first, labels say first=interrogator
+  #4 dropped: F6 planned investigator_first, labels say first=interrogator
+  #3 dropped: F3 planned investigator_first, labels say first=interrogator
+  #9 dropped: F2 planned suspect_first, labels say first=interrogator
+  #11 dropped: F1 planned suspect_first, labels say first=interrogator
+  #14 dropped: F1 planned investigator_first, labels say first=interrogator
+  #6 dropped: F6 planned investigator_first, labels say first=interrogator
+  #10 dropped: F3 planned investigator_first, labels say first=interrogator
+  #13 dropped: F2 planned suspect_first, labels say first=interrogator
+  #17 dropped: F1 planned investigator_first, labels say first=interrogator
+  #1 failed: Qwen/Qwen3-30B-A3B-Instruct-2507 returned no valid JSON
+  #12 failed: Qwen/Qwen3-30B-A3B-Instruct-2507 returned no valid JSON
+  #15 failed: Qwen/Qwen3-30B-A3B-Instruct-2507 returned no valid JSON
+kept 6/20 interrogations; 185 lines; 30 calls
+9583 pairs (pairs, positives) by split: {'train': (6396, 546), 'dev': (1978, 146), 'test': (1209, 143)}

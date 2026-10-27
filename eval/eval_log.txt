@@ -1,0 +1,36 @@
+keyword {'n_facts': 39, 'failed_interrogations': 0, 'speaker_acc': 0.59, 'line_acc': 0.538, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 3, 'never->never': 4, 'interrogator->never': 10, 'interrogator->interrogator': 11, 'suspect->suspect': 8, 'suspect->interrogator': 2, 'never->interrogator': 1}} {'seconds': 0.0, 'cost_usd': 0, 'calls': 0}
+one_prompt {'n_facts': 39, 'failed_interrogations': 0, 'speaker_acc': 0.128, 'line_acc': 0.128, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 13, 'never->never': 5, 'interrogator->never': 21}} {'seconds': 32.0, 'cost_usd': 0.0617, 'calls': 7}
+tagged 31 sentences in 2 chunks: 10 labels kept, 0 dropped (quote not in sentence)
+tagged 30 sentences in 2 chunks: 18 labels kept, 4 dropped (quote not in sentence)
+tagged 28 sentences in 2 chunks: 15 labels kept, 4 dropped (quote not in sentence)
+tagged 34 sentences in 2 chunks: 9 labels kept, 1 dropped (quote not in sentence)
+round 1: 7 deciding labels to check, 7 checked, 4 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 10 deciding labels to check, 10 checked, 3 rejected
+tagged 33 sentences in 2 chunks: 9 labels kept, 3 dropped (quote not in sentence)
+round 1: 5 deciding labels to check, 5 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 11 deciding labels to check, 11 checked, 1 rejected
+verification done after 1 round(s)
+tagged 29 sentences in 2 chunks: 3 labels kept, 2 dropped (quote not in sentence)
+round 1: 6 deciding labels to check, 6 checked, 0 rejected
+verification done after 1 round(s)
+round 2: 1 deciding labels to check, 1 checked, 1 rejected
+verification done after 2 round(s)
+round 1: 3 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+3 deciding line(s) not re-checked
+provenance {'n_facts': 39, 'failed_interrogations': 0, 'speaker_acc': 0.436, 'line_acc': 0.385, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->suspect': 8, 'never->never': 5, 'interrogator->never': 17, 'interrogator->interrogator': 4, 'suspect->never': 5}} {'seconds': 117.2, 'cost_usd': 0.2885, 'calls': 29}
+# Provenance benchmark
+
+6 synthetic interrogations written by Qwen/Qwen3-30B-A3B-Instruct-2507 (a different model family), 39 details with known first speakers.
+
+| Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
+|---|---|---|---|---|---|
+| Keyword match (no model) | 59% | 54% | 0 | 0.0 s | $0.000 |
+| Nemotron 3 Ultra, one prompt per interview | 13% | 13% | 0 | 32.0 s | $0.062 |
+| Provenance: Lightning labels + code ledger + Ultra check | 44% | 38% | 0 | 117.2 s | $0.288 |
