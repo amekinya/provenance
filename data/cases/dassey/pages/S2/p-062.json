@@ -1,0 +1,127 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 587 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Did he say why he wanted you to do that?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "No. (shakes head \"no\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Which knife did you use?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "The same one he stabbed her with.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASASBENDER",
+   "text": "And how many times did he stab her again?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Once.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Are you sure about that? (Brendan nods \"yes\")",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "So Steve stabs her first and then you cut her neck? (Brendan nods \"yes\") What else happens to her in her head?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "It's extremely, extremely important you tell us this, for us to believe you.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Come on Brendan, what else?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "",
+   "text": "(pause)",
+   "kind": "note"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "We know, we just need you to tell us.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "That's all I can remember.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "All right, I'm just gonna come out and ask you. Who shot her in the head?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "He did.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Then why didn't you tell us that?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Cuz I couldn't think of it.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Now you remember it? (Brendan nods \"yes\") Tell us about that then.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "That he shot her with his .22.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "You were there though?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4658",
+   "kind": "header"
+  }
+ ],
+ "file": "p-062.png",
+ "cost_usd": 0.00183
+}

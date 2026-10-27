@@ -1,0 +1,132 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 588 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Where did this happen?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Outside.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Outside? Before? Tell me when it happened?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "When we brung her outside ta throw her in the fire.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. So let's back up, OK? So I wanna go through this OK. So he stabs her (Brendan nods \"yes\") and chokes her?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "mm huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "And then you do what?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I help tie her up.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK. And then what?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Then we",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "You cut her throat somewhere in there?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT?",
+   "text": "Yes?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Yeah.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "And then what?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Cut off 'er, some of her hair.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "OK.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Then we brung her outside and shot her.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Was she alive when you shot her?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "I don't know.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4659",
+   "kind": "header"
+  }
+ ],
+ "file": "p-063.png",
+ "cost_usd": 0.00641
+}

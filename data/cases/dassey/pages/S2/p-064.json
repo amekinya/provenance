@@ -1,0 +1,122 @@
+{
+ "page_label": "header",
+ "lines": [
+  {
+   "speaker": "header",
+   "text": "CALUMET COUNTY SHERIFF'S DEPARTMENT",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Complaint No. 05-0157-955",
+   "kind": "header"
+  },
+  {
+   "speaker": "header",
+   "text": "Page 589 File Number",
+   "kind": "header"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Where did you shoot her?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the head.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Who shot her?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "He did.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "How many times?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Twice.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "In her body too or where else? (pause) How many times do you shoot her Brendan?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Twice.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "Total? Not just in the head. (pause) Do you shoot her elsewhere? Honestly?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "In the stomach.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "FASSBENDER",
+   "text": "How many times did you shoot her when he handed you the gun?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Zero.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "Where did?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Cuz I couldn't shoot no more.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "What do you mean couldn't shoot no more?",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "Cuz we used to have a cat that was like somethin' was wrong with 'em and we had to shoot 'em because we didn't want to pay for the bills.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "mm huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "BRENDAN",
+   "text": "And my mom told me not to watch when hers nows ex-boyfriend",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "WIEGERT",
+   "text": "mm huh.",
+   "kind": "dialogue"
+  },
+  {
+   "speaker": "header",
+   "text": "STATE4660",
+   "kind": "header"
+  }
+ ],
+ "file": "p-064.png",
+ "cost_usd": 0.00178
+}
