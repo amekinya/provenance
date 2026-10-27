@@ -18766,5 +18766,77 @@
   "quote": "How did he try to hide it, what did he tell you?",
   "by": "search-part",
   "verified": false
+ },
+ {
+  "utterance": "S1-0020",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "We both did.",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0317",
+  "fact": "F02",
+  "kind": "denies",
+  "quote": "In the truck under the seat.",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0344",
+  "fact": "F02",
+  "kind": "denies",
+  "quote": "... under the seat",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S2-1402",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "mm huh. (nods \u201cyes\u201d)",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0026",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "..........some black..........some garbage bag on there.",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0039",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "Well we weren't there for long ............picking up the stuff",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0022",
+  "fact": "F14",
+  "kind": "denies",
+  "quote": "Some branches.....a cabinet and some tires..........",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0491",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "(written statement, read aloud by Wiegert) Is I got off the bus at 3:45 and seen her jeep down at Steven's house. Then I went in my house and played Playstation",
+  "by": "suspect-search",
+  "verified": false
+ },
+ {
+  "utterance": "S1-0493",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "Yes.",
+  "by": "suspect-search",
+  "verified": false
  }
 ]

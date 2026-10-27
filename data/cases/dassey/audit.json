@@ -45,10 +45,10 @@
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"
   }
  ],
- "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 9 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 10 details came from him first in the record.",
+ "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 11 details came from him first in the record.",
  "counts": {
-  "interrogator_first": 9,
-  "suspect_first": 10,
+  "interrogator_first": 8,
+  "suspect_first": 11,
   "prior_contact": 1,
   "public": 4,
   "planted_adopted": 0,
@@ -115,6 +115,50 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-0390",
+     "page": "548",
+     "session": "S2",
+     "quote": "Who's car was in the garage? Tell me the truth.",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-0391",
+     "page": "548",
+     "session": "S2",
+     "quote": "We already know. Just tell us. It's OK.",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-0395",
+     "page": "548",
+     "session": "S2",
+     "quote": "Her jeep was in the ga-garage wasn't it?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [
+    {
+     "utterance": "S1-0296",
+     "page": "458",
+     "session": "S1",
+     "quote": "car...the...jeep"
+    },
+    {
+     "utterance": "S1-0491",
+     "page": "469",
+     "session": "S1",
+     "quote": "seen her jeep down at Steven's house"
+    },
+    {
+     "utterance": "S2-0050",
+     "page": "529",
+     "session": "S2",
+     "quote": "We got five in the garage"
+    }
+   ],
+   "related_statements_total": 9,
    "interrogator_mentions_before_suspect": 3,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -3098,6 +3142,31 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S1-0316",
+     "page": "460",
+     "session": "S1",
+     "quote": "Where's the knife that he used to stab her?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S1-0318",
+     "page": "460",
+     "session": "S1",
+     "quote": "Did he show you that knife?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S1-0343",
+     "page": "461",
+     "session": "S1",
+     "quote": "Where did he say he hid the knife in the car?......crush it.....something specific about that ...",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 5,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -6147,6 +6216,22 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [
+    {
+     "utterance": "S1-0298",
+     "page": "459",
+     "session": "S1",
+     "quote": "tied her up"
+    },
+    {
+     "utterance": "S1-0308",
+     "page": "459",
+     "session": "S1",
+     "quote": "He said he tied her up"
+    }
+   ],
+   "related_statements_total": 2,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -7847,7 +7932,9 @@
     "prior_statement": "",
     "must": [
      [
-      "back",
+      "in the back",
+      "back of",
+      "the back",
       "rear",
       "cargo",
       "trunk"
@@ -7862,24 +7949,25 @@
      ]
     ]
    },
-   "origin": "interrogator_first",
-   "origin_label": "Investigators said it first",
-   "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. 461); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 550).",
+   "origin": "suspect_first",
+   "origin_label": "Suspect said it first",
+   "corroboration": "may_corroborate",
+   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 550), and nothing earlier in the transcripts supplies it.",
    "partly_supplied": false,
    "partial_words": [],
    "first_interrogator": {
-    "utterance": "S1-0338",
-    "seq": 100337,
-    "session": "S1",
-    "page": "461",
+    "utterance": "S2-0429",
+    "seq": 400428,
+    "session": "S2",
+    "page": "550",
     "role": "interrogator",
-    "speaker": "FASSBENDER",
+    "speaker": "WIEGERT",
     "kind": "asks",
-    "quote": "Did you notice anything else, was there a fire burning out in front of the house in the burn barrel? So you see the vehicle, you go inside and you said you played Nintendo and stuff and the next time ",
+    "quote": "She was in the back of the jeep?",
     "sensitive": false,
     "verified": null,
     "by": "key words",
+    "model_label": "asks",
     "first": "interrogator"
    },
    "first_suspect": {
@@ -7896,9 +7984,19 @@
     "by": "model",
     "first": "suspect"
    },
-   "interrogator_mentions_before_suspect": 2,
+   "investigator_lines_before": [],
+   "related_statements": [
+    {
+     "utterance": "S1-0317",
+     "page": "460",
+     "session": "S1",
+     "quote": "In the truck under the seat."
+    }
+   ],
+   "related_statements_total": 1,
+   "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
-   "crossed_sessions": true,
+   "crossed_sessions": false,
    "events": [
     {
      "utterance": "S1-0252",
@@ -8025,33 +8123,6 @@
      "verified": null,
      "by": "model",
      "kind_note": "the line doesn't contain the detail's key terms; not counted"
-    },
-    {
-     "utterance": "S1-0338",
-     "seq": 100337,
-     "session": "S1",
-     "page": "461",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Did you notice anything else, was there a fire burning out in front of the house in the burn barrel? So you see the vehicle, you go inside and you said you played Nintendo and stuff and the next time ",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words",
-     "first": "interrogator"
-    },
-    {
-     "utterance": "S1-0340",
-     "seq": 100339,
-     "session": "S1",
-     "page": "461",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Probably or did he tell you that?",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words"
     },
     {
      "utterance": "S1-0398",
@@ -8247,7 +8318,8 @@
      "sensitive": false,
      "verified": null,
      "by": "key words",
-     "model_label": "asks"
+     "model_label": "asks",
+     "first": "interrogator"
     },
     {
      "utterance": "S2-0430",
@@ -8561,7 +8633,8 @@
      "quote": "we lifted her out of the jeep",
      "sensitive": false,
      "verified": null,
-     "by": "model"
+     "by": "model",
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S2-0593",
@@ -8818,11 +8891,11 @@
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asks",
-     "quote": "So let me just back up again, so you bring her into the garage, you put her in the truck initially?",
+     "quote": "put her in the truck initially",
      "sensitive": false,
      "verified": null,
-     "by": "key words",
-     "model_label": "asks"
+     "by": "model",
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S2-1497",
@@ -8835,7 +8908,8 @@
      "quote": "(nods \u201cyes\u201d) mm huh.",
      "sensitive": false,
      "verified": null,
-     "by": "model"
+     "by": "model",
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S2-1498",
@@ -8845,11 +8919,11 @@
      "role": "interrogator",
      "speaker": "WIEGERT",
      "kind": "asks",
-     "quote": "Then you take her out of the truck?",
+     "quote": "take her out of the truck",
      "sensitive": false,
      "verified": null,
-     "by": "key words",
-     "model_label": "asks"
+     "by": "model",
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S2-1499",
@@ -8864,45 +8938,6 @@
      "verified": null,
      "by": "model",
      "kind_note": "the line doesn't contain the detail's key terms; not counted"
-    },
-    {
-     "utterance": "S2-1563",
-     "seq": 401562,
-     "session": "S2",
-     "page": "602",
-     "role": "interrogator",
-     "speaker": "WIEGERT",
-     "kind": "asks",
-     "quote": "And which way do you walk back?",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words"
-    },
-    {
-     "utterance": "S2-1582",
-     "seq": 401581,
-     "session": "S2",
-     "page": "603",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Go ba, I wanna back ya just a bit, you\u2019re down at the car, and you\u2019re hiding the car, right?",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words"
-    },
-    {
-     "utterance": "S2-1584",
-     "seq": 401583,
-     "session": "S2",
-     "page": "603",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Do you recall him taking the plates off?",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words"
     },
     {
      "utterance": "S2-1729",
@@ -9371,7 +9406,8 @@
      "quote": "puts her inta the jeep",
      "sensitive": true,
      "verified": null,
-     "by": "model"
+     "by": "model",
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S3-0448",
@@ -9574,11 +9610,11 @@
      "role": "interrogator",
      "speaker": "FASSBENDER",
      "kind": "asserts",
-     "quote": "So then he carries, he takes her out of the jeep and puts her back on the floor and decides to take her out to the fire.",
+     "quote": "he takes her out of the jeep",
      "sensitive": false,
      "verified": null,
-     "by": "key words",
-     "model_label": "asserts"
+     "by": "model",
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S3-0530",
@@ -9591,33 +9627,8 @@
      "quote": "Yeah.",
      "sensitive": false,
      "verified": null,
-     "by": "model"
-    },
-    {
-     "utterance": "S3-0531",
-     "seq": 500530,
-     "session": "S3",
-     "page": "785",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "Do you use that creeper thing?",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words"
-    },
-    {
-     "utterance": "S3-0539",
-     "seq": 500538,
-     "session": "S3",
-     "page": "786",
-     "role": "interrogator",
-     "speaker": "FASSBENDER",
-     "kind": "asks",
-     "quote": "The jeep's still in the garage? Her jeep?",
-     "sensitive": false,
-     "verified": null,
-     "by": "key words"
+     "by": "model",
+     "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
      "utterance": "S3-0616",
@@ -9928,6 +9939,16 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [
+    {
+     "utterance": "S2-0786",
+     "page": "566",
+     "session": "S2",
+     "quote": "Well she was handcuffed to a, the thing."
+    }
+   ],
+   "related_statements_total": 1,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -12323,6 +12344,28 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [
+    {
+     "utterance": "S1-0298",
+     "page": "459",
+     "session": "S1",
+     "quote": "stabbed her"
+    },
+    {
+     "utterance": "S1-0308",
+     "page": "459",
+     "session": "S1",
+     "quote": "stabbed her"
+    },
+    {
+     "utterance": "S1-0393",
+     "page": "464",
+     "session": "S1",
+     "quote": "he stabbed her"
+    }
+   ],
+   "related_statements_total": 3,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -14207,6 +14250,9 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -14945,6 +14991,9 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -16122,6 +16171,16 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [
+    {
+     "utterance": "S2-1200",
+     "page": "586",
+     "session": "S2",
+     "quote": "Cut her."
+    }
+   ],
+   "related_statements_total": 1,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -17269,6 +17328,17 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-1234",
+     "page": "587",
+     "session": "S2",
+     "quote": "All right, I'm just gonna come out and ask you. Who shot her in the head?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -19281,6 +19351,9 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -20256,6 +20329,38 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-1329",
+     "page": "591",
+     "session": "S2",
+     "quote": "Take her outside of the garage and shoot her?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-1401",
+     "page": "594",
+     "session": "S2",
+     "quote": "So, you when you carried her out of the house, and you put \u2018er by the garage, and Steve shoots her, then you put her on top of the fire that\u2019s already going?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-1440",
+     "page": "596",
+     "session": "S2",
+     "quote": "No, I mean where, in the garage",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [
+    {
+     "utterance": "S2-1443",
+     "page": "596",
+     "session": "S2",
+     "quote": "In the garage."
+    }
+   ],
+   "related_statements_total": 1,
    "interrogator_mentions_before_suspect": 3,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -21218,6 +21323,50 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S1-0023",
+     "page": "442",
+     "session": "S1",
+     "quote": "mmhuh. Did you see any body parts?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S1-0025",
+     "page": "442",
+     "session": "S1",
+     "quote": "As I said, we're not gonna say you did and we're not gonna say you didn't, we're not here to ... We're here to give you the opportunity to come forward, to talk to us about what you see, encountered o",
+     "by": "key words"
+    },
+    {
+     "utterance": "S1-0027",
+     "page": "442",
+     "session": "S1",
+     "quote": "Uhhm, and what was in the garbage bag?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [
+    {
+     "utterance": "S1-0134",
+     "page": "449",
+     "session": "S1",
+     "quote": "the fire"
+    },
+    {
+     "utterance": "S1-0164",
+     "page": "451",
+     "session": "S1",
+     "quote": "Toes"
+    },
+    {
+     "utterance": "S1-0229",
+     "page": "455",
+     "session": "S1",
+     "quote": "the big pit fire and then we got there and threw it on it"
+    }
+   ],
+   "related_statements_total": 3,
    "interrogator_mentions_before_suspect": 8,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -24487,6 +24636,36 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S1-0217",
+     "page": "454",
+     "session": "S1",
+     "quote": "So you went there at 9:00, you see the branches, the tires, the garbage, it's all on the fire already? Is it burning already?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [
+    {
+     "utterance": "S1-0172",
+     "page": "452",
+     "session": "S1",
+     "quote": "bottom of tires"
+    },
+    {
+     "utterance": "S1-0204",
+     "page": "453",
+     "session": "S1",
+     "quote": "There was like branches"
+    },
+    {
+     "utterance": "S1-0216",
+     "page": "454",
+     "session": "S1",
+     "quote": "Branches, tires, tires, like a garbage bag"
+    }
+   ],
+   "related_statements_total": 3,
    "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -25249,6 +25428,9 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -26638,9 +26820,13 @@
       "taken",
       "remove",
       "removed",
-      "off",
       "pulled",
-      "unscrewed"
+      "unscrewed",
+      "took off",
+      "taken off",
+      "take off",
+      "came off",
+      "plates off"
      ]
     ]
    },
@@ -26679,6 +26865,31 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-1555",
+     "page": "601",
+     "session": "S2",
+     "quote": "With, how's, the license plates were taken off the car, who did that?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-1557",
+     "page": "601",
+     "session": "S2",
+     "quote": "Did you do that?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-1561",
+     "page": "602",
+     "session": "S2",
+     "quote": "Well then why'd you say you don't know? Did Steve take the license plates off the car?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 3,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -27321,6 +27532,17 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-1590",
+     "page": "603",
+     "session": "S2",
+     "quote": "OK. Did he, did he, did he go and look at the engine, did he raise the hood at all or anything like that? To do something to that car?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -27674,6 +27896,9 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -28835,6 +29060,17 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-0011",
+     "page": "527",
+     "session": "S2",
+     "quote": "Um, I just, one question I had for you real quick Brendan is um, those jeans that Tom had talked to you about the other night with the bleach stains on 'em, do you still have those?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -29416,6 +29652,37 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-0366",
+     "page": "547",
+     "session": "S2",
+     "quote": "OK. We're not gonna go any further in this cuz we need to get the truth out now. We know the fire was going. We know that he had already had his altercation with Teresa. We don't believe there's a Mon",
+     "by": "key words"
+    },
+    {
+     "utterance": "S2-0456",
+     "page": "551",
+     "session": "S2",
+     "quote": "Where else in the garage?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [
+    {
+     "utterance": "S1-0567",
+     "page": "475",
+     "session": "S1",
+     "quote": "On the shirt there was a blood on it"
+    },
+    {
+     "utterance": "S2-0457",
+     "page": "551",
+     "session": "S2",
+     "quote": "On the floor."
+    }
+   ],
+   "related_statements_total": 2,
    "interrogator_mentions_before_suspect": 2,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -30716,6 +30983,9 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -31175,6 +31445,38 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S1-0160",
+     "page": "451",
+     "session": "S1",
+     "quote": "It's not your fault. Remember that.",
+     "by": "key words"
+    },
+    {
+     "utterance": "S1-0248",
+     "page": "456",
+     "session": "S1",
+     "quote": "When did he, when did he put the clothes on the fire?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S1-0423",
+     "page": "465",
+     "session": "S1",
+     "quote": "Did he tell you those were her clothes?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [
+    {
+     "utterance": "S1-0113",
+     "page": "448",
+     "session": "S1",
+     "quote": "some clothes like a blue shirt, some pants"
+    }
+   ],
+   "related_statements_total": 1,
    "interrogator_mentions_before_suspect": 4,
    "adopted_by_assent": true,
    "crossed_sessions": false,
@@ -32539,6 +32841,50 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [
+    {
+     "utterance": "S3-1106",
+     "page": "817",
+     "session": "S3",
+     "quote": "At what point did you put her cell phone and camera and purse and stuff in the burn barrel?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S3-1108",
+     "page": "817",
+     "session": "S3",
+     "quote": "OK. Who did?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S3-1141",
+     "page": "819",
+     "session": "S3",
+     "quote": "And the truth is you put her purse and her cell phone and her camera in the burn barrel. That's the truth?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [
+    {
+     "utterance": "S2-1981",
+     "page": "620",
+     "session": "S2",
+     "quote": "He burnt 'em."
+    },
+    {
+     "utterance": "S2-1983",
+     "page": "621",
+     "session": "S2",
+     "quote": "when I passed it there was like like a purse in there and stuff"
+    },
+    {
+     "utterance": "S2-2017",
+     "page": "622",
+     "session": "S2",
+     "quote": "like a cell phone, camera, purse"
+    }
+   ],
+   "related_statements_total": 3,
    "interrogator_mentions_before_suspect": 4,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -33882,6 +34228,28 @@
     "by": "model",
     "first": "suspect"
    },
+   "investigator_lines_before": [],
+   "related_statements": [
+    {
+     "utterance": "S1-0152",
+     "page": "450",
+     "session": "S1",
+     "quote": "He had a shovel"
+    },
+    {
+     "utterance": "S2-2268",
+     "page": "634",
+     "session": "S2",
+     "quote": "Oh the shovel and the rake? (nods \u201cyes\u201d)"
+    },
+    {
+     "utterance": "S2-2308",
+     "page": "636",
+     "session": "S2",
+     "quote": "With the shovel."
+    }
+   ],
+   "related_statements_total": 3,
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
    "crossed_sessions": false,
@@ -34870,6 +35238,17 @@
     "first": "interrogator"
    },
    "first_suspect": null,
+   "investigator_lines_before": [
+    {
+     "utterance": "S2-2865",
+     "page": "662",
+     "session": "S2",
+     "quote": "OK. (pause) We know that Teresa had a, a tattoo on her stomach, do you remember that?",
+     "by": "key words"
+    }
+   ],
+   "related_statements": [],
+   "related_statements_total": 0,
    "interrogator_mentions_before_suspect": null,
    "adopted_by_assent": false,
    "crossed_sessions": false,
