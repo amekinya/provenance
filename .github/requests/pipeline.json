@@ -1,1 +1,1 @@
-{"case": "dassey", "steps": "ingest,pageeval", "sessions": "", "max_pages": "0", "note": "full read of all three transcripts"}
+{"case": "dassey", "steps": "tag", "sessions": "", "max_pages": "0", "note": "tag every sentence (Lightning) and verify deciding lines (Ultra) on the re-merged transcripts"}

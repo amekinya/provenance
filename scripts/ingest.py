@@ -61,6 +61,9 @@ def read_pages(images: list[Path], cache: Path, calls: list[CallRecord]) -> list
 TITLES = r"^(?:INV(?:ESTIGATOR)?|SA|S/A|SPECIAL AGENT|AGENT|DET(?:ECTIVE)?|SGT|SERGEANT|LT|OFFICER|OFC|DEPUTY|DEP|CPT|CAPT|MR|MRS|MS)\.?\s+"
 
 
+NOT_SPEAKERS = {"", "note", "notes", "header", "stage direction", "direction", "narration", "none", "unknown"}
+
+
 def _canon(label: str, roster: dict[str, str]) -> tuple[str, str]:
     """Speaker label as printed -> (canonical name, role). Tolerates titles ('INV. WIEGERT'), full names ('BRENDAN DASSEY'),
     and OCR or typing slips ('WIGERT', 'WEIGERT')."""
@@ -73,7 +76,7 @@ def _canon(label: str, roster: dict[str, str]) -> tuple[str, str]:
         if w in roster:
             return w, roster[w]
     best_name, best_d = None, 99
-    for w in words:
+    for w in [*words, "".join(words)] if len(words) > 1 else words:  # 'FASAS BENDER' is one name split in two
         for r in roster:
             d = _dist(w, r)
             if d < best_d:
@@ -156,13 +159,16 @@ def merge(session_id: str, pages: list[dict], roster: dict[str, str], start_seq:
             if ln.get("kind") == "header" or not ln.get("text", "").strip():
                 continue
             text = ln["text"].strip()
-            if ln.get("kind") == "note":
+            name, role = _canon(ln.get("speaker", ""), roster)
+            # The reader sometimes marks a whole page's dialogue as "note". A line is a stage direction only when it has
+            # no speaker of its own: a roster name, or any other printed name in front of words that aren't in brackets.
+            label = re.sub(r"[^A-Za-z ]", "", ln.get("speaker", "")).strip().lower()
+            spoken = role in ("interrogator", "suspect") or (label not in NOT_SPEAKERS and not text.startswith(("(", "[")))
+            if ln.get("kind") == "note" and not spoken:
                 text = f"({text.strip('()[] ')})"
                 name, role = "", ""  # a stage direction never starts a new speaker turn
-            else:
-                name, role = _canon(ln.get("speaker", ""), roster)
-                if role == "other" and name:
-                    unknown[name] = unknown.get(name, 0) + 1
+            elif role == "other" and name:
+                unknown[name] = unknown.get(name, 0) + 1
             parts = _nod_split(text, suspect_names)
             for k, (who, chunk) in enumerate(parts):
                 if who == "suspect":

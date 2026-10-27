@@ -18,16 +18,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Which run
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_SYNTH: ${{ inputs.synth }}
+          IN_N: ${{ inputs.n }}
+          IN_METHODS: ${{ inputs.methods }}
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            python3 - <<'PY' >> "$GITHUB_ENV"
-          import json
-          d = json.load(open(".github/requests/eval.json"))
-          print(f"SYNTH={d.get('synth', '0')}"); print(f"N={d.get('n', '30')}"); print(f"METHODS={d.get('methods', 'keyword,one_prompt,provenance')}")
+          python3 - <<'PY' >> "$GITHUB_ENV"
+          import json, os, re, sys
+          if os.environ["EVENT"] == "push":
+              d = json.load(open(".github/requests/eval.json"))
+          else:
+              d = {"synth": os.environ["IN_SYNTH"], "n": os.environ["IN_N"], "methods": os.environ["IN_METHODS"]}
+          v = {"SYNTH": str(d.get("synth", "0")), "N": str(d.get("n", "30")), "METHODS": str(d.get("methods", "keyword,one_prompt,provenance"))}
+          ok = {"SYNTH": r"\d+", "N": r"\d+", "METHODS": r"[a-z_,]+"}
+          for k, x in v.items():
+              if not re.fullmatch(ok[k], x):
+                  sys.exit(f"bad value for {k}: {x!r}")
+              print(f"{k}={x}")
           PY
-          else
-            { echo "SYNTH=${{ inputs.synth }}"; echo "N=${{ inputs.n }}"; echo "METHODS=${{ inputs.methods }}"; } >> "$GITHUB_ENV"
-          fi
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -r requirements.txt
