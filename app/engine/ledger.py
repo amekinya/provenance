@@ -134,16 +134,27 @@ def _sess(x) -> str:
     return x.session if hasattr(x, "session") else x["session"]
 
 
-def term_window(order: list, i: int) -> str:
+def term_window(order: list, i: int, answers_labeled_question: bool = False) -> str:
     """The text a line is judged by for key terms: the line itself, plus the 2 lines before it in the same session when
-    it is a bare agreement or a short line."""
+    it is a bare agreement or a short line, or when it answers a question labeled with the same detail (the line just
+    before, by an investigator)."""
     u = order[i]
     t = _txt(u)
     words = spoken(t).split()
-    if len(words) <= SHORT_WORDS or ASSENT.match(spoken(t)):
+    if len(words) <= SHORT_WORDS or ASSENT.match(spoken(t)) or answers_labeled_question:
         prev = [order[k] for k in range(max(0, i - 2), i) if _sess(order[k]) == _sess(u)]
         t = " ".join([_txt(x) for x in prev] + [t])
     return t
+
+
+def _role(x) -> str:
+    return x.role if hasattr(x, "role") else x["role"]
+
+
+def answers_labeled(order: list, i: int, labeled: set) -> bool:
+    """Is this a suspect line answering, on the very next line, an investigator line labeled with the same detail?"""
+    return (i > 0 and _role(order[i]) == "suspect" and _role(order[i - 1]) == "interrogator" and _sess(order[i - 1]) == _sess(order[i])
+            and (order[i - 1].id if hasattr(order[i - 1], "id") else order[i - 1]["id"]) in labeled)
 
 
 def is_assent(u: Utterance) -> bool:
@@ -158,6 +169,7 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
     pos = {u.id: i for i, u in enumerate(order)}
     ms = sorted((m for m in case.mentions if m.fact == fact.id and m.utterance in by_id and m.verified is not False),
                 key=lambda m: by_id[m.utterance].seq)
+    labeled = {m.utterance for m in ms}
     events = []
     first_inv = first_sus = None
     inv_before = 0
@@ -166,7 +178,7 @@ def fact_ledger(case: Case, fact: Fact) -> dict:
         u = by_id[m.utterance]
         ev = {"utterance": u.id, "seq": u.seq, "session": u.session, "page": u.page, "role": u.role, "speaker": u.speaker,
               "kind": m.kind, "quote": m.quote or u.text[:200], "sensitive": u.sensitive, "verified": m.verified}
-        if fact.must and not has_terms(term_window(order, pos[u.id]), fact.must):
+        if fact.must and not has_terms(term_window(order, pos[u.id], answers_labeled(order, pos[u.id], labeled)), fact.must):
             ev["kind_note"] = "the line doesn't contain the detail's key terms; not counted"
             events.append(ev)
             continue
@@ -226,7 +238,7 @@ def _partly_supplied(fact: Fact, ms: list, by_id: dict, order: list, pos: dict, 
         if u.seq < first_sus["seq"] and m.kind != "denies" and (u.role == "suspect" or m.kind in ("asks", "asserts")):
             lines[u.id] = u
     p = pos[first_sus["utterance"]]
-    if term_window(order, p) != order[p].text:  # his statement was read with the lines just before it
+    if term_window(order, p, answers_labeled(order, p, {m.utterance for m in ms})) != order[p].text:  # read with the lines before it
         for k in range(max(0, p - 2), p):
             if order[k].session == order[p].session:
                 lines.setdefault(order[k].id, order[k])
@@ -237,20 +249,32 @@ def _partly_supplied(fact: Fact, ms: list, by_id: dict, order: list, pos: dict, 
         first = next((u for u in ordered_lines if has_terms(u.text, [g])), None)
         if first is None:
             continue
-        alt = next((a for a in g if has_terms(first.text, [[a]])), g[0])
-        word = next((t for t in _tok(first.text) if len(_tok(alt)) == 1 and _matches(t, _tok(alt)[0])), alt)  # the word as said
+        words = _said(first.text, g)  # every word of this group as it was said in that line
         if first.role == "interrogator":
-            inv_first_groups.append(word)
+            inv_first_groups += [w for w in words if w not in inv_first_groups]
             if earliest_inv is None or first.seq < earliest_inv.seq:
                 earliest_inv = first
         else:
-            his_groups.append(word)
+            his_groups += [w for w in words if w not in his_groups]
     if not earliest_inv:
         return None
     u = earliest_inv
     ev = {"utterance": u.id, "seq": u.seq, "session": u.session, "page": u.page, "role": u.role, "speaker": u.speaker, "kind": "asks",
           "quote": u.text[:200], "sensitive": u.sensitive, "verified": None, "partial": True}
     return {"event": ev, "investigator_words": inv_first_groups, "his_words": his_groups}
+
+
+def _said(text: str, group: list[str]) -> list[str]:
+    toks = _tok(text)
+    joined = " " + " ".join(toks) + " "
+    out = []
+    for alt in group:
+        a = _tok(alt)
+        if len(a) > 1 and f" {' '.join(a)} " in joined:
+            out.append(" ".join(a))
+        elif len(a) == 1:
+            out += [t for t in toks if _matches(t, a[0]) and t not in out]
+    return list(dict.fromkeys(out))
 
 
 def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | None, by_id: dict, sessions: dict,
@@ -271,11 +295,11 @@ def _origin(case: Case, fact: Fact, first_inv: dict | None, first_sus: dict | No
         return "prior_contact", (f"The record shows he described this earlier, in a statement with no public transcript: {fact.prior_statement}. "
                                  f"In the transcripts it first appears at {_cite(first_inv if inv_first else first_sus, sessions)}.")
     if not inv_first and partial:
-        inv_words = ", ".join(f"“{w}”" for w in partial["investigator_words"])
-        his = ", ".join(f"“{w}”" for w in partial["his_words"])
-        return "interrogator_first", (f"Investigators named part of this detail first ({inv_words}; {_cite(partial['event'], sessions)}). "
-                                      f"He first stated the whole detail at {_cite(first_sus, sessions)}" + (f", adding {his}" if his else "") + ". "
-                                      "Counted as investigators first: a detail counts as coming from him only if investigators hadn't named any part of it.")
+        inv_words = _and([f"“{w}”" for w in partial["investigator_words"]])
+        his = _and([f"“{w}”" for w in partial["his_words"]])
+        his_half = f"he named {his} ({_cite(first_sus, sessions)})" if his else f"he then stated the whole detail ({_cite(first_sus, sessions)})"
+        return "interrogator_first", (f"Investigators named {inv_words} ({_cite(partial['event'], sessions)}); {his_half}. "
+                                      "Counted as investigators first, because they named part of the detail before he said all of it.")
     if inv_first:
         cue = _prior_cue(case, first_inv)
         if cue:
@@ -295,6 +319,10 @@ def _prior_cue(case: Case, ev: dict, before: int = 2) -> Utterance | None:
     """An investigator line at or just before this event that points to an earlier conversation we can't read."""
     window = [u for u in ordered(case) if u.session == ev["session"] and ev["seq"] - before <= u.seq <= ev["seq"]]
     return next((u for u in reversed(window) if u.role == "interrogator" and PRIOR_CONTACT.search(plain(u.text))), None)
+
+
+def _and(xs: list[str]) -> str:
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1] if xs else ""
 
 
 def _cite(ev: dict, sessions: dict) -> str:

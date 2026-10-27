@@ -190,7 +190,7 @@ def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) 
     def part(i):
         return (f"\nQuestion for this item: does the sentence name {', '.join(repr(w) for w in i['part'])} as part of THIS detail (the same "
                 "object or event, in the same sense)? It need not convey the whole detail; carries_detail answers this question.") if i.get("part") else ""
-    body = "\n\n".join(f"[{i['key']}] Detail: {i['fact_label']} ({i['fact_detail']}){terms(i)}{part(i)}\nPrevious line: {i.get('prev', '')}\n"
+    body = "\n\n".join(f"[{i['key']}] Detail: {i['fact_label']} ({i['fact_detail']}){terms(i)}{part(i)}\nLines before it: {i.get('prev', '')}\n"
                        f"Sentence ({i['speaker']}): {i['text']}" for i in items)
     out = chat_json(settings.ultra, [
         {"role": "system", "content": "You double-check labels for a defense corroboration audit. For each item, decide strictly whether the "
@@ -204,8 +204,9 @@ def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) 
                                       "else. 'Yeah' counts as assent only if the previous line carried the detail. When an item lists key terms, "
                                       "they were written by counsel and define the detail's distinctive content: a line that conveys every key-term "
                                       "group in the detail's sense counts, and degree or extent words in the detail ('until unconscious', 'some of') "
-                                      "are NOT required. Reject only when the words are used in another sense, about a different event or object, or "
-                                      "negated. Give the kind: asks, asserts, denies, assents."},
+                                      "are NOT required. Reject when the words are used in another sense, about a different event or object, "
+                                      "negated, or when the line puts it in a different place or relation than the detail states (near or outside vs "
+                                      "inside, before vs after). Give the kind: asks, asserts, denies, assents."},
         {"role": "user", "content": body}],
         schema=VERIFY_SCHEMA, purpose="Verify deciding sentences", reasoning=reasoning, max_tokens=10000 if reasoning else 3000, calls=calls)
     return {c["key"]: c for c in out.get("checks", [])}
@@ -231,7 +232,9 @@ def write_memo(report: dict, calls: list[CallRecord] | None = None) -> dict:
     return chat_json(settings.ultra, [
         {"role": "system", "content": "You write a short internal memo for defense counsel about a corroboration audit of an interrogation. "
                                       "Use ONLY the findings given; cite pages as given; never claim the confession is false or that the suspect is "
-                                      "innocent; say what the record shows about where details came from. Plain, precise language."},
+                                      "innocent; say what the record shows about where details came from. Plain, precise language. For a detail "
+                                      "investigators named in part, always state both halves with their pages, e.g. 'Investigators asked about the "
+                                      "fire (p. 441); he named tires and branches (p. 442)'."},
         {"role": "user", "content": f"Findings: {json.dumps(brief)[:60000]}\n\nWrite: summary (3-4 sentences), key_points (4-6 bullets, most "
                                     "important first, each with its page cite), limits (2-4 bullets: what this audit can't tell)."}],
         schema=MEMO_SCHEMA, purpose="Write the memo", reasoning=True, max_tokens=5000, calls=calls)

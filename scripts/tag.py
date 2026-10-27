@@ -164,6 +164,72 @@ def candidate_lines(utts: list[dict], f: dict, before_seq: int) -> list[dict]:
     return [u for u in sorted(utts, key=lambda u: u["seq"]) if u["role"] == "interrogator" and u["seq"] < before_seq and rx.search(plain(u["text"]))]
 
 
+def context_before(order: list[dict]) -> dict[str, str]:
+    """The 2 lines before each line in the same session, with who said them: what the verifier reads it with (the same
+    window the key-term check uses)."""
+    out = {}
+    for i, u in enumerate(order):
+        prev = [x for x in order[max(0, i - 2):i] if x["session"] == u["session"]]
+        out[u["id"]] = " / ".join(f"{x['speaker']} ({x['role']}): {x['text'][:400]}" for x in prev)
+    return out
+
+
+def search_partial(cfg, utts, facts, mentions, calls: list[CallRecord], before: int = 6) -> int:
+    """Partial safety search. For a detail the suspect is credited with first, check the investigator lines in the 6
+    lines before his first statement of it (same session) that contain part of its key terms (at least one group): the
+    question he was answering may have named part of it ('How did he try to hide it?'). Ultra checks each one with the
+    part-only question; confirmed lines become investigator mentions, and the ledger then counts the detail as partly
+    supplied. Returns how many were confirmed."""
+    order = sorted(utts, key=lambda u: u["seq"])
+    pos = {u["id"]: i for i, u in enumerate(order)}
+    prev_of = context_before(order)
+    fact_of = {f["id"]: f for f in facts}
+    rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+    asked = {(m["utterance"], m["fact"]) for m in mentions}
+    items = []
+    for fl in rep["facts"]:
+        f = fact_of[fl["fact"]["id"]]
+        fs = fl["first_suspect"]
+        if fl["origin"] != "suspect_first" or not fs or not f.get("must"):
+            continue
+        p = pos[fs["utterance"]]
+        for u in order[max(0, p - before):p]:
+            if u["role"] != "interrogator" or u["session"] != fs["session"] or (u["id"], f["id"]) in asked:
+                continue
+            words = [next(a for a in g if has_terms(u["text"], [[a]])) for g in f["must"] if has_terms(u["text"], [g])]
+            if words:
+                items.append({"key": f"{u['id']}|{f['id']}", "fact_label": f["label"], "fact_detail": f.get("detail", ""),
+                              "must": f["must"], "part": words, "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"],
+                              "prev": prev_of[u["id"]]})
+    if not items:
+        return 0
+    results: dict[str, dict] = {}
+
+    def run(b):
+        local: list[CallRecord] = []
+        try:
+            return tasks.verify(b, local), local
+        except LiveModelUnavailable as e:
+            print(f"  partial check failed: {str(e)[:140]}")
+            return {}, local
+    with ThreadPoolExecutor(4) as ex:
+        for res, local in ex.map(run, [items[i:i + 3] for i in range(0, len(items), 3)]):
+            calls.extend(local)
+            results.update(res)
+    confirmed = 0
+    by_id = {u["id"]: u for u in utts}
+    for it in items:
+        r = results.get(it["key"])
+        if r is None:
+            continue
+        uid, fid = it["key"].split("|")
+        ok = bool(r["carries_detail"])
+        mentions.append({"utterance": uid, "fact": fid, "kind": "asks", "quote": by_id[uid]["text"][:160], "by": "search-part", "verified": ok})
+        confirmed += ok
+    print(f"partial search: {len(items)} investigator lines just before his first statement checked, {confirmed} named part of the detail")
+    return confirmed
+
+
 def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord], per_fact: int = 15, passes: int = 3) -> int:
     """Safety search. For every detail the suspect stated or agreed to, look for an investigator line BEFORE the earliest
     known mention that carries it: code finds candidates by the detail's words, earliest first, plus the investigator
@@ -173,7 +239,7 @@ def search_investigator_first(cfg, utts, facts, mentions, calls: list[CallRecord
     asked again. Returns how many investigator mentions were added."""
     by_id = {u["id"]: u for u in utts}
     order = sorted(utts, key=lambda u: u["seq"])
-    prev_of = {u["id"]: (order[i - 1]["text"] if i and order[i - 1]["session"] == u["session"] else "") for i, u in enumerate(order)}
+    prev_of = context_before(order)
     pos = {u["id"]: i for i, u in enumerate(order)}
     fact_of = {f["id"]: f for f in facts}
     added = 0
@@ -263,7 +329,7 @@ def verify_deciding(cfg, utts, facts, mentions, calls: list[CallRecord], rounds:
     deciding line has been checked or `rounds` is used up. Returns how many deciding lines are still unchecked."""
     by_id = {u["id"]: u for u in utts}
     order = sorted(utts, key=lambda u: u["seq"])
-    prev_of = {u["id"]: (order[i - 1]["text"] if i and order[i - 1]["session"] == u["session"] else "") for i, u in enumerate(order)}
+    prev_of = context_before(order)
     fact_of = {f["id"]: f for f in facts}
     for rnd in range(rounds):
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
@@ -335,6 +401,7 @@ def check_labels(cfg, utts, facts, mentions, calls: list[CallRecord], rounds: in
     agreed = add_code_assents(utts, mentions)
     unverified = verify_deciding(cfg, utts, facts, mentions, calls, rounds=rounds)
     searched = search_investigator_first(cfg, utts, facts, mentions, calls)
+    searched += search_partial(cfg, utts, facts, mentions, calls)
     if searched:
         unverified = verify_deciding(cfg, utts, facts, mentions, calls, rounds=rounds)
     return agreed, searched, unverified

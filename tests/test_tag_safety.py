@@ -79,3 +79,28 @@ def test_verifier_retries_item_by_item_after_a_bad_batch(monkeypatch):
     monkeypatch.setattr(tasks, "chat_json", fake)
     items = [{"key": k, "fact_label": "x", "fact_detail": "", "speaker": "DET", "text": "t", "prev": ""} for k in ("a", "b")]
     assert set(tasks.verify(items)) == {"a", "b"}
+
+
+def test_partial_search_finds_the_question_that_named_part_of_it(monkeypatch):
+    from app.engine.ledger import audit, load_case
+    from scripts import tag
+
+    utts = [utt(1, "interrogator", "How did he try to hide it, what did he tell you?"),
+            utt(2, "suspect", "He tried to cover it with branches, a car hood and some other things.")]
+    for u in utts:
+        u |= {"page": "459", "sensitive": False}
+    facts = [{"id": "F1", "label": "The car was hidden under branches and a hood", "detail": "", "aliases": [],
+              "must": [["hid", "hide", "cover", "covered"], ["branch", "branches", "hood"]]}]
+    mentions = [{"utterance": "U2", "fact": "F1", "kind": "asserts", "quote": "cover it with branches", "by": "model", "verified": True}]
+    cfg = {"id": "t", "title": "t", "suspect": "KID", "sessions": [{"id": "S1", "label": "I", "day": "2020-01-01"}]}
+    assert audit(load_case(tag.case_dict(cfg, utts, facts, mentions)))["facts"][0]["origin"] == "suspect_first"
+    seen = []
+
+    def fake_verify(items, calls=None, reasoning=None):
+        seen.extend((i["key"], tuple(i["part"])) for i in items)
+        return {i["key"]: {"key": i["key"], "carries_detail": True, "kind": "asks"} for i in items}
+    monkeypatch.setattr(tag.tasks, "verify", fake_verify)
+    assert tag.search_partial(cfg, utts, facts, mentions, []) == 1 and seen == [("U1|F1", ("hide",))]
+    f = audit(load_case(tag.case_dict(cfg, utts, facts, mentions)))["facts"][0]
+    assert f["origin"] == "interrogator_first" and f["partly_supplied"]
+    assert f["why"].startswith("Investigators named “hide”") and "he named “branches” and “hood”" in f["why"]
