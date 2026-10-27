@@ -1,2 +1,3 @@
-suspect search: 15 of his lines carry a detail's key terms without a label; 9 answered, 0 are him stating or agreeing to it
-re-audited from saved labels: Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 11 details came from him first in the record.
+stance re-check: 37 of his lines carry a detail's key words but were rejected or never labeled
+stance re-check: 28 answered, 5 are him stating or agreeing
+re-audited from saved labels: Of 24 key details Brendan Dassey stated or agreed to, investigators said 5 first (1 of them in part), 9 were already public, 2 may trace to an earlier statement with no public transcript. 8 details came from him first in the record.

@@ -29,7 +29,9 @@
   "kind": "asserts",
   "quote": "Some branches.....a cabinet and some tires",
   "by": "model",
-  "verified": false
+  "verified": true,
+  "stance": "states",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0023",
@@ -66,10 +68,12 @@
  {
   "utterance": "S1-0026",
   "fact": "F13",
-  "kind": "asserts",
+  "kind": "denies",
   "quote": "some black..........some garbage bag on there",
   "by": "model",
-  "verified": false
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0027",
@@ -957,7 +961,9 @@
   "kind": "asserts",
   "quote": "In the truck under the seat.",
   "by": "model",
-  "verified": false
+  "verified": true,
+  "stance": "states",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0317",
@@ -1573,7 +1579,9 @@
   "kind": "asserts",
   "quote": "I seen the toes before we throw the wood and cabinet on the fire",
   "by": "model",
-  "verified": false
+  "verified": true,
+  "stance": "states",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0491",
@@ -8357,7 +8365,9 @@
   "kind": "asserts",
   "quote": "The burning barrel.",
   "by": "model",
-  "verified": false
+  "verified": true,
+  "stance": "states",
+  "stance_checked": true
  },
  {
   "utterance": "S2-1987",
@@ -18778,10 +18788,12 @@
  {
   "utterance": "S1-0317",
   "fact": "F02",
-  "kind": "denies",
+  "kind": "asserts",
   "quote": "In the truck under the seat.",
   "by": "suspect-search",
-  "verified": false
+  "verified": true,
+  "stance": "states",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0344",
@@ -18794,10 +18806,12 @@
  {
   "utterance": "S2-1402",
   "fact": "F12",
-  "kind": "denies",
+  "kind": "assents",
   "quote": "mm huh. (nods \u201cyes\u201d)",
   "by": "suspect-search",
-  "verified": false
+  "verified": true,
+  "stance": "agrees",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0026",
@@ -18805,7 +18819,9 @@
   "kind": "denies",
   "quote": "..........some black..........some garbage bag on there.",
   "by": "suspect-search",
-  "verified": false
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0039",
@@ -18813,15 +18829,19 @@
   "kind": "denies",
   "quote": "Well we weren't there for long ............picking up the stuff",
   "by": "suspect-search",
-  "verified": false
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0022",
   "fact": "F14",
-  "kind": "denies",
+  "kind": "asserts",
   "quote": "Some branches.....a cabinet and some tires..........",
   "by": "suspect-search",
-  "verified": false
+  "verified": true,
+  "stance": "states",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0491",
@@ -18829,7 +18849,9 @@
   "kind": "denies",
   "quote": "(written statement, read aloud by Wiegert) Is I got off the bus at 3:45 and seen her jeep down at Steven's house. Then I went in my house and played Playstation",
   "by": "suspect-search",
-  "verified": false
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
  },
  {
   "utterance": "S1-0493",
@@ -18837,6 +18859,198 @@
   "kind": "denies",
   "quote": "Yes.",
   "by": "suspect-search",
-  "verified": false
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0317",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "In the truck under the seat.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S2-0351",
+  "fact": "F01",
+  "kind": "denies",
+  "quote": "Into the garage",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0324",
+  "fact": "F02",
+  "kind": "denies",
+  "quote": "He drove it there.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S2-1351",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "Steven.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S2-1353",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "Her.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S2-1369",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "He drives it in there.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S2-1404",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "That, he wanted me ta",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S2-1441",
+  "fact": "F12",
+  "kind": "denies",
+  "quote": "Oh.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0030",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "Well, I would burn the garbage",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0041",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "Yeah.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0043",
+  "fact": "F13",
+  "kind": "denies",
+  "quote": "He had it started..................",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0047",
+  "fact": "F14",
+  "kind": "denies",
+  "quote": "About 10:30",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0152",
+  "fact": "F20",
+  "kind": "denies",
+  "quote": "...He had a shovel, ...",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0493",
+  "fact": "F21",
+  "kind": "denies",
+  "quote": "Yes.",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0140",
+  "fact": "F22",
+  "kind": "denies",
+  "quote": "He said that they were............",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0164",
+  "fact": "F22",
+  "kind": "denies",
+  "quote": "Toes",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0252",
+  "fact": "F22",
+  "kind": "denies",
+  "quote": "Cuz he usually has them back there ....................",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0164",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "Toes",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
+ },
+ {
+  "utterance": "S1-0166",
+  "fact": "F23",
+  "kind": "denies",
+  "quote": "I seen ....",
+  "by": "stance-search",
+  "verified": false,
+  "stance": "other",
+  "stance_checked": true
  }
 ]

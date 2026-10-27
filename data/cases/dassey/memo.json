@@ -1,20 +1,23 @@
 {
- "summary": "This is a draft for counsel's review, computed from the record with machine-checked lines (investigator lines matched by key words in code; the suspect's lines labeled by a model and checked by code). Borderline suspect-side calls need review.\n\nAcross 24 key details Brendan Dassey stated or agreed to, investigators introduced 8 first, 4 were already public, 1 may trace to an earlier unrecorded statement, and 11 came from him first in the record. In the three recorded sessions, investigators spoke 68\u201388% of the words and used repeated fact-carrying questions (366 in S2, 291 in S3) alongside tactics such as \"we already know\" assertions (36 in S2), minimization (16 in S2), and demands for truth (43 in S2). One detail (tattoo on stomach) was raised by investigators but never adopted.",
+ "summary": "This is a draft for counsel's review, computed from the record with machine-checked lines. Of 24 key details, investigators introduced 5 first (one in part), 9 were already public, and 2 may trace to earlier conversations with no public transcript. The remaining 8 details appeared first from the suspect in the available transcripts. Investigators first named a knife, that the victim was shot in the head, and that Avery raised the RAV4's hood; the suspect adopted each after questions that named the detail. The suspect first stated she was tied up with rope, restrained on the bed in Avery's bedroom, and stabbed in the stomach, with no earlier transcript source for those details. Two details\u2014bleach on his jeans from cleaning the garage floor and blood on the garage floor\u2014may originate from an unrecorded evening conversation on February 27, 2006. One detail, a tattoo on her stomach, was raised by investigators but never adopted by the suspect.",
  "key_points": [
-  "Origin breakdown: 8 details interrogator-first, 11 suspect-first in the record, 4 public before the interviews, 1 possibly from an unrecorded prior contact (headline; counts).",
-  "Vehicle in garage: Investigators asked \"Who's car was in the garage?\" and stated \"Her jeep was in the ga-garage wasn't it?\" (p. 548); he agreed (p. 548). Earlier he mentioned \"car...the...jeep\" (p. 458), \"seen her jeep down at Steven's house\" (p. 469), \"We got five in the garage\" (p. 529).",
-  "Knife: Investigators asked \"Where's the knife that he used to stab her?\" and \"Where did he say he hid the knife in the car?\" (p. 460\u2013461); he agreed (p. 463). No earlier suspect statements in the transcripts.",
-  "Shot in head: Investigators asked \"Who shot her in the head?\" (p. 587); he agreed (p. 587).",
-  "Shot inside garage: Investigators asked \"Take her outside of the garage and shoot her?\" (p. 591) and \"where, in the garage\" (p. 596); he said \"In the garage\" (p. 596) and adopted the detail after (p. 597).",
-  "Tires and branches on fire: Investigators said \"you see the branches, the tires, the garbage, it's all on the fire already?\" (p. 454); he agreed (p. 454). Earlier he said \"bottom of tires\" (p. 452), \"branches\" (p. 453), \"Branches, tires, tires, like a garbage bag\" (p. 454).",
-  "Blood on garage floor: Investigators stated \"We know the fire was going... Where else in the garage?\" (p. 547, 551); he adopted at p. 608. Earlier he mentioned blood on shirt (p. 475) and \"On the floor\" (p. 551).",
-  "Phone, camera, purse in burn barrel: Investigators asked \"At what point did you put her cell phone and camera and purse and stuff in the burn barrel?\" (p. 817) and asserted \"the truth is you put her purse and her cell phone and her camera in the burn barrel\" (p. 819); he adopted at p. 835. Earlier he said \"He burnt 'em\" (p. 620) and described purse contents (p. 621\u2013622).",
-  "Tattoo on stomach: Investigators raised it (p. 662); he never stated or agreed to it."
+  "Investigators first: A knife. Investigators first said it (Feb 27, 2006, Mishicot High School, p. 460); the suspect first adopted it after that (Feb 27, 2006, Mishicot High School, p. 460).",
+  "Investigators first: Shot in the head. Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 587); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 587).",
+  "Investigators first: Avery raised the RAV4's hood. Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 603); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 603).",
+  "From him first in the record: She was tied up with rope. The suspect said it first (Feb 27, 2006, Mishicot High School, p. 471), and nothing earlier in the transcripts supplies it.",
+  "From him first in the record: Restrained on the bed in Avery's bedroom. The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 566), and nothing earlier in the transcripts supplies it.",
+  "From him first in the record: Stabbed in the stomach. The suspect said it first (Feb 27, 2006, Mishicot High School, p. 470), and nothing earlier in the transcripts supplies it.",
+  "Reported publicly before the interviews (9): Her body was in the back of the RAV4; Shot with a .22 rifle; Shot inside the garage; Her body was burned in the fire behind the garage; Tires and branches were put on the fire; The RAV4 was hidden in the salvage yard under branches and a car hood; The license plates were removed; The vehicle key was put in Avery's bedroom; Her clothes were burned.",
+  "May trace to an earlier conversation with no public transcript: Bleach on his jeans from cleaning the garage floor. The record shows he described this earlier, in a statement with no public transcript: on the evening of Feb 27, 2006 he told Fassbender he got bleach on his pants helping clean Avery's garage floor (Decision and Order p. 7, citing ECF 19-19 at 10-11). In the transcripts it first appears at Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 527.",
+  "May trace to an earlier conversation with no public transcript: Blood on the garage floor. Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 547), but in words that may refer to something he said earlier with no public transcript (p. 547: \"OK. We're not gonna go any further in this cuz we need to get the truth out now. We know t\").",
+  "Never adopted: A tattoo on her stomach. Investigators raised it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 662), but the suspect never stated or agreed to it."
  ],
  "limits": [
-  "The audit traces only where details appear in the available transcripts; it cannot assess the truthfulness or reliability of any statement.",
-  "The unrecorded evening session with Fassbender (Feb 27, 2006) has no public transcript; any fact-feeding there is not captured.",
-  "The analysis does not evaluate voluntariness, coercion, or the legal admissibility of the statements.",
-  "Machine labeling of suspect lines may miss or misattribute borderline utterances; those calls need human review."
- ]
+  "Draft for counsel's review: investigator lines are matched by key words in code; the suspect's lines were labeled by Nemotron 3 Ultra and checked by code, and borderline calls on his side can change between runs.",
+  "Unrecorded contacts can't be traced; a detail that may come from one is marked unclear, and nothing is said about what happened in them.",
+  "'Already public' relies on the reports the court listed and the news we could date.",
+  "Key terms decide what counts as stating a detail; a reader should check each cited line."
+ ],
+ "by": "summary: Nemotron 3 Ultra (checked by code); points: code",
+ "summary_checks": []
 }
