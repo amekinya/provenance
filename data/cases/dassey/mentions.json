@@ -34,8 +34,8 @@
   "stance_checked": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about branches, a cabinet, and tires being in the fire behind the garage. | In the fire (behind the garage)."
+  "sense_v": 3,
+  "sense_read": "branches and tires in the fire | in the fire"
  },
  {
   "utterance": "S1-0023",
@@ -80,8 +80,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "a garbage bag (black) on the seat | on the seat (\"on there\")"
+  "sense_v": 3,
+  "sense_read": "a garbage bag (described as 'some black' and 'some garbage bag') placed 'on there' \u2014 likely on the seat or in the fire area the interrogator just described | on the seat or in the fire area behind the garage"
  },
  {
   "utterance": "S1-0027",
@@ -420,8 +420,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "He is talking about toes (body parts) that he saw in the fire. | In the fire (behind the garage, per context)."
+  "sense_v": 3,
+  "sense_read": "Halbach's body parts (toes) in the fire behind Avery's garage. | In the fire (burn pit) behind the garage."
  },
  {
   "utterance": "S1-0165",
@@ -872,8 +872,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The RAV4 (the vehicle referred to as 'it'), and the method used to hide/cover it: with branches and a car hood. | Not explicitly located in this line (context implies salvage yard), but the line"
+  "sense_v": 3,
+  "sense_read": "The RAV4 (referred to as 'it') in the salvage yard, and the method used to conceal it. | In the salvage yard (implied by context of hiding the vehicle)."
  },
  {
   "utterance": "S1-0305",
@@ -977,13 +977,13 @@
   "kind": "asserts",
   "quote": "In the truck under the seat.",
   "by": "model",
-  "verified": true,
+  "verified": false,
   "stance": "states",
   "stance_checked": true,
-  "sense": "states",
+  "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the knife used to stab her, placing it in the truck under the seat | in the truck under the seat"
+  "sense_v": 3,
+  "sense_read": "The knife (the one he used to stab her), located in the truck under the seat. | In the truck under the seat."
  },
  {
   "utterance": "S1-0317",
@@ -1103,7 +1103,11 @@
   "kind": "asserts",
   "quote": "under the seat",
   "by": "model",
-  "verified": false
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "Avery's knife, located under the seat in the car. | under the seat (in the car)"
  },
  {
   "utterance": "S1-0344",
@@ -1135,7 +1139,11 @@
   "kind": "denies",
   "quote": "No.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "His line is about whether someone (he) ever told the suspect (Brendan) a specific thing (that), denying that such a statement was made. | It places the event (the telling) as not having occurred."
  },
  {
   "utterance": "S1-0351",
@@ -1228,10 +1236,14 @@
  {
   "utterance": "S1-0376",
   "fact": "F02",
-  "kind": "assents",
+  "kind": "asserts",
   "quote": "Yeah",
   "by": "model",
-  "verified": true
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "The knife Avery used to kill the victim (Teresa Halbach), confirming Avery cut himself on that knife. | On the knife itself."
  },
  {
   "utterance": "S1-0382",
@@ -1498,8 +1510,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line (\"Yeah\") agrees that someone (\"he\") told him the clothes were hers (identification of the clothes). | N/A"
+  "sense_v": 3,
+  "sense_read": "He agrees that someone (\"he\") told him the clothes were Halbach's clothes. | In response to the interrogator asking \"Honestly?\" after the question \"Did he te"
  },
  {
   "utterance": "S1-0428",
@@ -1598,8 +1610,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Steven Avery stabbing Teresa Halbach in the stomach, located in the pit. | In the pit (and the knife placed under the seat in her jeep)."
+  "sense_v": 3,
+  "sense_read": "Halbach being stabbed in the stomach (by Steven Avery, in the pit) | in the pit"
  },
  {
   "utterance": "S1-0491",
@@ -1692,8 +1704,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the item used to tie her up (rope) | as the instrument used for tying"
+  "sense_v": 3,
+  "sense_read": "His line is about the item used to bind Halbach (rope), placing it as the instrument used to tie her up. | The line puts the rope as the means of binding Halbach."
  },
  {
   "utterance": "S1-0513",
@@ -1736,8 +1748,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about agreeing to the interrogator's request to write down what he saw in the fire regarding her and the clothing (the act of writing the statement) | In the written statement he is composing."
+  "sense_v": 3,
+  "sense_read": "His line is about agreeing to include in his written statement what he saw in the fire regarding her clothing (the act of writing the statement). | In the written statement."
  },
  {
   "utterance": "S1-0523",
@@ -2020,8 +2032,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "clothes (a blue shirt and some pants) being put in the fire | in the fire"
+  "sense_v": 3,
+  "sense_read": "Clothes (a blue shirt and some pants) being put in the fire. | In the fire."
  },
  {
   "utterance": "S1-0546",
@@ -2149,11 +2161,11 @@
   "kind": "assents",
   "quote": "Yeah",
   "by": "model",
-  "verified": false,
-  "sense": "other",
+  "verified": true,
+  "sense": "agrees",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The jeans with bleach stains that Tom had asked about previously, confirming he still has them (in his possession). | In his possession (still has them)."
+  "sense_v": 3,
+  "sense_read": "His jeans with bleach stains on them (the ones Tom talked about), confirming they are still in his possession. | In his possession (he still has them)."
  },
  {
   "utterance": "S2-0050",
@@ -2489,11 +2501,11 @@
   "kind": "asserts",
   "quote": "In the garage",
   "by": "model",
-  "verified": true,
-  "sense": "states",
+  "verified": false,
+  "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The Suzuki (jeep/vehicle), placing it in the garage. | In the garage."
+  "sense_v": 3,
+  "sense_read": "The Suzuki (which he identifies as the jeep) was in the garage. | In the garage."
  },
  {
   "utterance": "S2-0387",
@@ -2533,7 +2545,11 @@
   "kind": "asserts",
   "quote": "Her jeep.",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "Teresa Halbach's RAV4 (he calls it 'her jeep'), placed in Steven Avery's garage. | In Avery's garage."
  },
  {
   "utterance": "S2-0395",
@@ -2688,8 +2704,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The victim's body (her), placing it in the back of the Jeep (the RAV4). | In the back of the Jeep."
+  "sense_v": 3,
+  "sense_read": "Halbach's body, placed in the rear cargo area of her vehicle (the RAV4/jeep). | In the back of the jeep."
  },
  {
   "utterance": "S2-0429",
@@ -2844,8 +2860,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The location of blood (implied from previous context) in the garage, placing it on the floor. | On the floor of the garage."
+  "sense_v": 3,
+  "sense_read": "the blood stain (blood), placing it on the garage floor | on the floor of the garage"
  },
  {
   "utterance": "S2-0459",
@@ -3528,8 +3544,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The object the victim was handcuffed to (the bed), placing her restrained on the bed. | On the bed."
+  "sense_v": 3,
+  "sense_read": "The bed (the object Halbach was handcuffed to, located in Avery's bedroom). | Avery's bedroom (implied by context of 'the bed' in the residence)."
  },
  {
   "utterance": "S2-0790",
@@ -3844,8 +3860,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The line is about the suspect describing the action the perpetrator ('he') took against the victim ('her'): choking her. It places this action as an additional  | The line does not specify a physical location for the choking; it states the act"
+  "sense_v": 3,
+  "sense_read": "The line is about Halbach (her) being choked by Avery (he). It places the action as something Avery did to her. | The line does not specify a location for the choking."
  },
  {
   "utterance": "S2-1066",
@@ -4584,8 +4600,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The suspect states that a male third party ('he') cut off the victim's ('her') hair. | The line places the action of cutting the hair with 'he' as the actor and 'her h"
+  "sense_v": 3,
+  "sense_read": "Halbach's hair, stating that \"he\" (Avery) cut it off. | Not specified in this line."
  },
  {
   "utterance": "S2-1176",
@@ -4748,8 +4764,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The victim's throat, placing the cutting action on it. | On her throat."
+  "sense_v": 3,
+  "sense_read": "the cut on Halbach (her), placed on her throat | on her throat"
  },
  {
   "utterance": "S2-1203",
@@ -5002,38 +5018,38 @@
  {
   "utterance": "S2-1235",
   "fact": "F10",
-  "kind": "assents",
+  "kind": "asserts",
   "quote": "He did.",
-  "by": "model",
-  "verified": false,
-  "sense": "other",
-  "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The identity of the person who shot the victim (her) in the head \u2014 a male third party (\u201cHe\u201d). | Attributes the act of shooting her in the head to that male third party."
- },
- {
-  "utterance": "S2-1241",
-  "fact": "F10",
-  "kind": "asserts",
-  "quote": "That he shot her with his .22.",
-  "by": "model",
-  "verified": false,
-  "sense": "other",
-  "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The line is about the suspect (Brendan) shooting the victim ('her') with his .22 caliber firearm. It places the action as an event he performed, but does not sp | No specific bodily location is mentioned for the gunshot wound."
- },
- {
-  "utterance": "S2-1241",
-  "fact": "F11",
-  "kind": "asserts",
-  "quote": "That he shot her with his .22.",
   "by": "model",
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The shooting of the victim (\"her\") by the suspect (\"he\") using the suspect's .22 caliber rifle (\"his .22\"). | Not specified in this line."
+  "sense_v": 3,
+  "sense_read": "The shooting of Halbach in the head, identifying Steven Avery as the shooter. | The line places the action of shooting her in the head on \"He\" (Steven Avery)."
+ },
+ {
+  "utterance": "S2-1241",
+  "fact": "F10",
+  "kind": "asserts",
+  "quote": "That he shot her with his .22.",
+  "by": "model",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "Brendan Dassey stating that he shot Teresa Halbach with his .22 caliber rifle. | The line describes the act of shooting her and the weapon used, but does not spe"
+ },
+ {
+  "utterance": "S2-1241",
+  "fact": "F11",
+  "kind": "asserts",
+  "quote": "That he shot her with his .22.",
+  "by": "model",
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "The shooting of Avery (her) with a .22 rifle that he identifies as his own (Brendan's). | Not specified in this line."
  },
  {
   "utterance": "S2-1243",
@@ -5049,7 +5065,11 @@
   "kind": "assents",
   "quote": "Yeah.",
   "by": "model",
-  "verified": null
+  "verified": false,
+  "sense": "other",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "His line is about Brendan (himself) being present at the scene of the shooting. | At the scene/event where the shooting occurred."
  },
  {
   "utterance": "S2-1247",
@@ -5172,8 +5192,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the location of the gunshot wound on the victim's body (her head) | in the head"
+  "sense_v": 3,
+  "sense_read": "His line is about the location of the gunshot wound on Halbach (the person referred to as 'her' in the question), stating she was shot in the head. | In the head."
  },
  {
   "utterance": "S2-1268",
@@ -5432,8 +5452,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Shooting the victim (her) outside on the side of the garage. | Outside on the side of the garage."
+  "sense_v": 3,
+  "sense_read": "The shooting of the victim (her), placed outside on the side of the garage. | Outside on the side of the garage."
  },
  {
   "utterance": "S2-1329",
@@ -5460,8 +5480,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the shooting of the victim, placing it on the side of the garage (outside) | on the side of the garage / outside"
+  "sense_v": 3,
+  "sense_read": "The shooting of the victim (her), placed on the side of Avery's garage (outside). | On the side of the garage (outside)."
  },
  {
   "utterance": "S2-1335",
@@ -6037,7 +6057,11 @@
   "kind": "asserts",
   "quote": "The .22.",
   "by": "model",
-  "verified": null
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "The gun (Avery's .22 caliber rifle), identifying it as a .22. | Not placed in a location; identified by caliber."
  },
  {
   "utterance": "S2-1418",
@@ -6208,8 +6232,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the shooting (shot), placing it inside the garage | in the garage"
+  "sense_v": 3,
+  "sense_read": "The shooting, placing it inside the garage. | Inside the garage."
  },
  {
   "utterance": "S2-1445",
@@ -7100,8 +7124,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the person who removed the license plates from the car (the vehicle placed there previously) | he places knowledge of who did it as unknown to him (\"I don't know\")"
+  "sense_v": 3,
+  "sense_read": "The person who removed the license plates from the RAV4 (the car Avery put there). | He does not know who that person is."
  },
  {
   "utterance": "S2-1557",
@@ -7120,8 +7144,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about himself (Brendan) removing the license plates from the car. He puts it as not having done it (denial of agency). | He denies being the one who took the plates off."
+  "sense_v": 3,
+  "sense_read": "Himself (Brendan) being the person who took the license plates off the RAV4. | Not applicable (denial of action)."
  },
  {
   "utterance": "S2-1559",
@@ -7140,8 +7164,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Steve (Avery) removing the license plates. | He affirms Steve performed the action of removing the plates."
+  "sense_v": 3,
+  "sense_read": "Steve (Avery) removing the license plates from the RAV4. | The RAV4."
  },
  {
   "utterance": "S2-1561",
@@ -7196,8 +7220,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The vehicle key (it) being put in Avery's room (his room). | In Avery's room (his room)."
+  "sense_v": 3,
+  "sense_read": "The RAV4 key, put by Avery in Avery's bedroom (his room). | In Avery's bedroom (his room)."
  },
  {
   "utterance": "S2-1573",
@@ -7320,8 +7344,8 @@
   "verified": true,
   "sense": "agrees",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Avery raising the hood of the RAV4 (that car) to look at the engine. | At the RAV4 (that car)."
+  "sense_v": 3,
+  "sense_read": "Avery raising the hood/looking at the engine of the RAV4 | affirmed as having happened"
  },
  {
   "utterance": "S2-1595",
@@ -7676,8 +7700,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The bedsheets (taken by 'he'), which he puts outside and states were burnt there. | Outside."
+  "sense_v": 3,
+  "sense_read": "The bedsheets (bedding), stating they were taken outside and burned. | Outside."
  },
  {
   "utterance": "S2-1677",
@@ -7952,8 +7976,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "bleach on his pants from cleaning the garage floor | garage floor"
+  "sense_v": 3,
+  "sense_read": "bleach on his pants during garage cleaning | garage floor"
  },
  {
   "utterance": "S2-1720",
@@ -8364,8 +8388,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about Teresa\u2019s purse (personal effects), and he puts its fate as unknown to him. | He states he does not know what happened to it."
+  "sense_v": 3,
+  "sense_read": "His line is about Teresa Halbach's purse (personal effects) and states he does not know what happened to it (no location given). | no location given"
  },
  {
   "utterance": "S2-1966",
@@ -8384,8 +8408,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about her cell phone and places knowledge of what happened to it with him: he claims he does not know. | He puts the phone's fate as unknown to him."
+  "sense_v": 3,
+  "sense_read": "Her cell phone; he says he does not know what happened to it. | No location mentioned."
  },
  {
   "utterance": "S2-1968",
@@ -8489,11 +8513,11 @@
   "kind": "asserts",
   "quote": "He burnt 'em.",
   "by": "model",
-  "verified": false,
-  "sense": "other",
+  "verified": true,
+  "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the cell phone, camera, and purse (the items previously mentioned) | burned by \"He\" (Steven Avery)"
+  "sense_v": 3,
+  "sense_read": "Halbach's cell phone, camera, and purse (the items just listed by Wiegert), stating that 'He' (a third-party male) burned them. | No specific location mentioned in the line (the detail specifies 'in the burn ba"
  },
  {
   "utterance": "S2-1983",
@@ -8509,13 +8533,13 @@
   "kind": "asserts",
   "quote": "The burning barrel.",
   "by": "model",
-  "verified": true,
+  "verified": false,
   "stance": "states",
   "stance_checked": true,
-  "sense": "states",
+  "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The burning barrel, which he identifies as the object he passed and where the purse was ('in there'). | In the burning barrel."
+  "sense_v": 3,
+  "sense_read": "The burning barrel (the container he passed, which he previously described as having a purse and stuff in it). | Identified as the object he passed."
  },
  {
   "utterance": "S2-1987",
@@ -9710,8 +9734,8 @@
   "verified": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The line is about the perpetrator ('he') using a shovel to break apart bones and burying them right in front of the fire. | Right in front of the fire almost."
+  "sense_v": 3,
+  "sense_read": "The remaining bones (of the victim/her body), which the perpetrator (he) broke up with a shovel and buried right in front of the fire. | Right in front of the fire almost."
  },
  {
   "utterance": "S2-2313",
@@ -11898,8 +11922,8 @@
   "verified": false,
   "sense": "denies",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Teresa's tattoo on her stomach | on her stomach"
+  "sense_v": 3,
+  "sense_read": "Teresa Halbach\u2019s stomach \u2014 he denies she had a tattoo there (or that he remembers one). | On her stomach."
  },
  {
   "utterance": "S2-2867",
@@ -11918,8 +11942,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Teresa's tattoo, stating he does not know where it was located. | Unknown location (he denies knowledge of the specific place)."
+  "sense_v": 3,
+  "sense_read": "The tattoo on Teresa Halbach (the \u201cher\u201d in the prior lines); his line puts its location as unknown (\u201cI don\u2019t know where it was\u201d). | Unknown location (he denies knowing where it was)."
  },
  {
   "utterance": "S2-2887",
@@ -18946,8 +18970,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "putting a vehicle seat on the fire behind the garage | on the fire (behind the garage)"
+  "sense_v": 3,
+  "sense_read": "The vehicle seat (from Teresa Halbach's RAV4/jeep) being placed on the fire behind the garage. | On the fire, behind the garage."
  },
  {
   "utterance": "S1-0317",
@@ -18955,21 +18979,25 @@
   "kind": "asserts",
   "quote": "In the truck under the seat.",
   "by": "suspect-search",
-  "verified": true,
+  "verified": false,
   "stance": "states",
   "stance_checked": true,
-  "sense": "states",
+  "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the knife used to stab her, placing it in the truck under the seat | in the truck under the seat"
+  "sense_v": 3,
+  "sense_read": "The knife (the one he used to stab her), located in the truck under the seat. | In the truck under the seat."
  },
  {
   "utterance": "S1-0344",
   "fact": "F02",
-  "kind": "denies",
+  "kind": "asserts",
   "quote": "... under the seat",
   "by": "suspect-search",
-  "verified": false
+  "verified": true,
+  "sense": "states",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "Avery's knife, located under the seat in the car. | under the seat (in the car)"
  },
  {
   "utterance": "S2-1402",
@@ -18982,8 +19010,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "He agrees (nods yes) that Steve shot her after she was put by the garage. | By the garage (per the question he affirms)."
+  "sense_v": 3,
+  "sense_read": "the shooting of the victim by Steve, placed by the garage | by the garage (near/outside)"
  },
  {
   "utterance": "S1-0026",
@@ -18996,8 +19024,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "a garbage bag (black) on the seat | on the seat (\"on there\")"
+  "sense_v": 3,
+  "sense_read": "a garbage bag (described as 'some black' and 'some garbage bag') placed 'on there' \u2014 likely on the seat or in the fire area the interrogator just described | on the seat or in the fire area behind the garage"
  },
  {
   "utterance": "S1-0039",
@@ -19010,8 +19038,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about him and 'he' (Avery) not being at the location ('there') for a long duration, and them 'picking up the stuff'. | Implicitly at the fire/garage area ('there'), but no explicit location named."
+  "sense_v": 3,
+  "sense_read": "His line is about him and Avery (\"we\") being at the fire behind the garage for a short time (\"weren't there for long\") and picking up stuff. | At the fire behind the garage."
  },
  {
   "utterance": "S1-0022",
@@ -19024,8 +19052,8 @@
   "stance_checked": true,
   "sense": "states",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about branches, a cabinet, and tires being in the fire behind the garage. | In the fire (behind the garage)."
+  "sense_v": 3,
+  "sense_read": "branches and tires in the fire | in the fire"
  },
  {
   "utterance": "S1-0491",
@@ -19038,8 +19066,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His written statement describes the events of the evening: seeing Teresa's jeep at Steven's house, having a fire in the yard with Steven, burning seats, wood, a | At Steven's house / in the yard by the fire / in the pit / under the seat in her"
+  "sense_v": 3,
+  "sense_read": "The statement describes Brendan Dassey's activities on the day in question: arriving home, seeing Teresa Halbach's Jeep at Steven Avery's house, playing video g | Steven Avery's house / yard / fire pit area."
  },
  {
   "utterance": "S1-0493",
@@ -19052,8 +19080,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His written statement (verifying authorship of the document read aloud). | N/A (verification of document, not placement of items)."
+  "sense_v": 3,
+  "sense_read": "His line confirms that the written statement read aloud by the interrogator\u2014which describes seeing a jeep, playing PlayStation, receiving a phone call, having a | He puts the statement as his own account of events at Steven's house and the fir"
  },
  {
   "utterance": "S1-0317",
@@ -19066,8 +19094,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the knife (where it is), placing it in the truck under the seat | in the truck under the seat"
+  "sense_v": 3,
+  "sense_read": "the knife used to stab her, located in the truck under the seat | in the truck under the seat"
  },
  {
   "utterance": "S2-0351",
@@ -19080,8 +19108,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Himself (Brendan) going into the garage. | Into the garage."
+  "sense_v": 3,
+  "sense_read": "Brendan Dassey himself going into Steven Avery's garage. | Inside Steven Avery's garage."
  },
  {
   "utterance": "S1-0324",
@@ -19091,7 +19119,11 @@
   "by": "stance-search",
   "verified": false,
   "stance": "other",
-  "stance_checked": true
+  "stance_checked": true,
+  "sense": "other",
+  "sense_checked": true,
+  "sense_v": 3,
+  "sense_read": "His line is about the jeep (Avery's vehicle) and states that Avery drove it to the location (down there). | The line puts the jeep at the location they are discussing (down there)."
  },
  {
   "utterance": "S2-1351",
@@ -19104,8 +19136,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "a person (Steven Avery), identifying who 'he' refers to in the previous exchange | nowhere (no location mentioned)"
+  "sense_v": 3,
+  "sense_read": "His line identifies the person (Steven Avery) who shot the victim, answering who 'he' refers to in the prior exchange about the shooting. | It does not place the shooting or any object in a location."
  },
  {
   "utterance": "S2-1353",
@@ -19118,8 +19150,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The line identifies the person Steven shoots ('Her'), answering the question of who the victim is. It does not mention a location, vehicle, or the garage. | No location is specified in the line."
+  "sense_v": 3,
+  "sense_read": "His line identifies the victim of the shooting (Steven Avery's target), not the location of the shooting. | The line does not place the victim or the shooting in any location; it only iden"
  },
  {
   "utterance": "S2-1369",
@@ -19132,8 +19164,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the car (how it enters the garage) | in the garage"
+  "sense_v": 3,
+  "sense_read": "The line is about the car (the vehicle mentioned in the lines before) and how it enters the garage; it puts the car inside the garage (\"in there\"). | inside the garage"
  },
  {
   "utterance": "S2-1404",
@@ -19146,8 +19178,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about the reason for putting the body on the fire (\"That\"), stating that Steve wanted him to do it. | It places this motive/instruction with Steve (\"he\") regarding the action of plac"
+  "sense_v": 3,
+  "sense_read": "His line refers to the sequence of events the interrogator just described\u2014carrying her out of the house, putting her by the garage, Steve shooting her, and putt | by the garage (per the question he references)"
  },
  {
   "utterance": "S2-1441",
@@ -19160,8 +19192,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line 'Oh' is a reaction acknowledging the interrogator's clarification that the question meant the location (the garage) rather than the anatomical location | Nowhere; the line is a discourse marker indicating comprehension."
+  "sense_v": 3,
+  "sense_read": "His line \"Oh\" is a verbal acknowledgment showing he understands the interrogator's clarification that the question asks for the scene location (the garage) rath | It does not place the shooting or the victim anywhere."
  },
  {
   "utterance": "S1-0030",
@@ -19174,8 +19206,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "his line is about burning the garbage (trash), not a body or remains, and does not specify a location such as behind the garage | no location specified for the burning"
+  "sense_v": 3,
+  "sense_read": "He says he would burn the garbage (from the garbage bag). | No location specified."
  },
  {
   "utterance": "S1-0041",
@@ -19188,8 +19220,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line agrees that he and Steven were both there and that he was going around with a cart to get stuff. | At the location where they were picking up stuff (implied to be the fire/garage "
+  "sense_v": 3,
+  "sense_read": "He agrees that he and Steven Avery were there (at the fire/garage area) and that he was the one going around with the cart to pick up the stuff. | At the fire/garage area (implied by context)."
  },
  {
   "utterance": "S1-0043",
@@ -19202,8 +19234,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Steven Avery (he) starting the fire (it). | Not specified in this line (implied at the fire location)."
+  "sense_v": 3,
+  "sense_read": "Steven Avery starting the fire (no mention of Halbach's body, the burn pit, or the garage). | Not specified in this line."
  },
  {
   "utterance": "S1-0047",
@@ -19226,8 +19258,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "a shovel (he had it, got it out of the garage) | out of the garage"
+  "sense_v": 3,
+  "sense_read": "The line is about a shovel that 'he' had and got out of the garage. | The line places the shovel as being taken out of the garage."
  },
  {
   "utterance": "S1-0493",
@@ -19240,8 +19272,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "He confirms that the written statement read aloud by Wiegert\u2014which describes dropping seats by the fire, getting wood and a cabinet, and throwing the seat on th | In the written statement he authored."
+  "sense_v": 3,
+  "sense_read": "His written statement (read aloud by Wiegert), confirming it is his. | As his own statement."
  },
  {
   "utterance": "S1-0140",
@@ -19254,8 +19286,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The clothes (referenced as 'those clothes'/'they'), reporting what 'he' (Avery) said about them (origin/state). | In a reported statement by Avery ('He said that they were...')."
+  "sense_v": 3,
+  "sense_read": "The suspect's line is about Halbach's clothes (referenced as 'those clothes' in the question) and reports what 'he' (Avery) said regarding their origin or natur | The line places the clothes as the subject of Avery's reported statement."
  },
  {
   "utterance": "S1-0164",
@@ -19268,8 +19300,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "He is stating that he saw toes (body parts) in the fire. | In the fire."
+  "sense_v": 3,
+  "sense_read": "Toes (body parts) seen in the fire. | In the fire."
  },
  {
   "utterance": "S1-0252",
@@ -19282,8 +19314,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "The line is about the clothes (referenced as 'them') and their usual location ('back there' in the garage), explaining how the suspect knew they were not in tha | In the garage, at the back on the far side (the usual storage spot)."
+  "sense_v": 3,
+  "sense_read": "where Steven Avery usually keeps his clothes in the garage (the usual location of clothes) | in the garage, back there (the far side/back area)"
  },
  {
   "utterance": "S1-0164",
@@ -19296,8 +19328,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "body parts (toes) seen in the fire | in the fire"
+  "sense_v": 3,
+  "sense_read": "Toes (body parts) seen in the fire. | In the fire."
  },
  {
   "utterance": "S1-0166",
@@ -19310,8 +19342,8 @@
   "stance_checked": true,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Body parts the suspect saw (responding to questions about a foot, arm, legs, head, skull). | Not specified in this fragment."
+  "sense_v": 3,
+  "sense_read": "His line is about body parts (head, skull, arms, legs) he saw, continuing his previous answer about seeing toes. | He does not place them in a specific location in this fragment."
  },
  {
   "utterance": "S2-1333",
@@ -19322,8 +19354,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the lighting conditions outside (whether it was dark out) | outside"
+  "sense_v": 3,
+  "sense_read": "His line is about the level of darkness outside (ambient light conditions), not about a shooting, a gun, or the garage. | He places the darkness \"out\" (outside)."
  },
  {
   "utterance": "S2-1343",
@@ -19334,8 +19366,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "carrying the victim to the side of the garage | side of the garage"
+  "sense_v": 3,
+  "sense_read": "His line is about the victim being carried to the side of the garage. | He puts the victim at the side of the garage."
  },
  {
   "utterance": "S2-1349",
@@ -19346,8 +19378,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Steve Avery shooting Teresa Halbach, placed at the side of the garage per the preceding context. | Side of the garage."
+  "sense_v": 3,
+  "sense_read": "His line is about Steve being the one who shot the victim (Teresa Halbach). The preceding context places the victim at the side of the garage when the shooting  | Side of the garage."
  },
  {
   "utterance": "S2-2871",
@@ -19356,10 +19388,10 @@
   "quote": "uh uh (shakes head \u201cno\u201d)",
   "by": "sense-search",
   "verified": false,
-  "sense": "other",
+  "sense": "denies",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Brendan's memory/recall of Teresa's tattoo on her stomach. | In his memory (he denies remembering it)."
+  "sense_v": 3,
+  "sense_read": "Teresa Halbach having a tattoo on her stomach; he denies she had one or that he remembers it. | On Teresa Halbach's stomach."
  },
  {
   "utterance": "S1-0022",
@@ -19370,8 +19402,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "Items he saw in the fire (branches, a cabinet, tires). | In the fire."
+  "sense_v": 3,
+  "sense_read": "Items in the fire behind the garage (branches, a cabinet, tires). | In the fire (behind the garage)."
  },
  {
   "utterance": "S1-0060",
@@ -19382,8 +19414,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "He confirms that the garage he pushed the Suzuki into belongs to Avery (\"His garage\"). | Avery's garage."
+  "sense_v": 3,
+  "sense_read": "The suspect's line confirms that the garage (into which he just said he pushed a vehicle identified by the interrogator as a Suzuki) belongs to Steven Avery. | Avery's garage."
  },
  {
   "utterance": "S1-0277",
@@ -19394,8 +19426,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the time he went out again (answering 'When...') | at night"
+  "sense_v": 3,
+  "sense_read": "the time Brendan went out again (his own action) | at night"
  },
  {
   "utterance": "S2-1237",
@@ -19406,8 +19438,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His line is about his reason for not previously telling the interrogators that 'he' shot her in the head (his inability to think of it at the time). | It places this reason in the past, as an explanation for his prior silence durin"
+  "sense_v": 3,
+  "sense_read": "His line is about his own inability to recall or think of the answer earlier, explaining why he did not previously tell the interrogators who shot her. | It places this mental state (not thinking of it) as the reason for his prior sil"
  },
  {
   "utterance": "S2-0014",
@@ -19418,8 +19450,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "the jeans with bleach stains (referenced by the interrogator as the ones Tom asked about), placing them at his house | at my house"
+  "sense_v": 3,
+  "sense_read": "The jeans with bleach stains (Dassey's jeans), which his line puts at his house. | at my house"
  },
  {
   "utterance": "S2-0016",
@@ -19430,8 +19462,8 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "His knowledge of where the jeans/pants (\"those\"/\"they\") are located inside his house. | Inside his house."
+  "sense_v": 3,
+  "sense_read": "His line is about the jeans (those) and where they are located in his house. | In his house (specific location known to him)."
  },
  {
   "utterance": "S1-0524",
@@ -19442,7 +19474,7 @@
   "verified": false,
   "sense": "other",
   "sense_checked": true,
-  "sense_v": 2,
-  "sense_read": "what another person ('he') said regarding the victim's body (whether it was cut up or put in whole) | in a conversation (he didn't say anything about it)"
+  "sense_v": 3,
+  "sense_read": "what Avery said about cutting up the body or putting it in whole | in a past conversation with Avery"
  }
 ]

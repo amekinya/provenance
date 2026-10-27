@@ -88,39 +88,36 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators named every part of it before he said it, in separate lines: \u201ccar\u201d (Feb 27, 2006, Mishicot High School, p. 449); \u201cgarage\u201d (Feb 27, 2006, Mishicot High School, p. 457). He then said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 548).",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 548); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 548).",
    "partly_supplied": false,
-   "supplied_across_lines": true,
-   "partial_words": [
-    "car",
-    "garage"
-   ],
+   "supplied_across_lines": false,
+   "partial_words": [],
    "first_interrogator": {
-    "utterance": "S1-0121",
-    "seq": 100120,
-    "session": "S1",
-    "page": "449",
+    "utterance": "S2-0390",
+    "seq": 400389,
+    "session": "S2",
+    "page": "548",
     "page_end": "",
     "role": "interrogator",
     "speaker": "FASSBENDER",
-    "quote": "Was her car still in there when you went in there?",
-    "sensitive": false,
     "kind": "asks",
+    "quote": "Who's car was in the garage?",
+    "sensitive": false,
     "verified": null,
-    "partial": true,
     "by": "key words",
+    "model_label": "asks",
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-0386",
-    "seq": 400385,
+    "utterance": "S2-0393",
+    "seq": 400392,
     "session": "S2",
     "page": "548",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "In the garage",
+    "quote": "Her jeep.",
     "sensitive": false,
     "verified": true,
     "by": "model",
@@ -128,21 +125,12 @@
    },
    "investigator_lines_before": [
     {
-     "utterance": "S1-0121",
-     "page": "449",
+     "utterance": "S2-0390",
+     "page": "548",
      "page_end": "",
-     "session": "S1",
+     "session": "S2",
      "speaker": "FASSBENDER",
-     "quote": "Was her car still in there when you went in there?",
-     "by": "key words"
-    },
-    {
-     "utterance": "S1-0274",
-     "page": "457",
-     "page_end": "",
-     "session": "S1",
-     "speaker": "FASSBENDER",
-     "quote": "Was it in his garage later?",
+     "quote": "Who's car was in the garage?",
      "by": "key words"
     }
    ],
@@ -182,9 +170,9 @@
    ],
    "related_statements_total": 7,
    "his_responses": [],
-   "interrogator_mentions_before_suspect": 0,
+   "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": false,
-   "crossed_sessions": true,
+   "crossed_sessions": false,
    "events": [
     {
      "utterance": "S1-0058",
@@ -683,21 +671,6 @@
      "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
-     "utterance": "S2-0386",
-     "seq": 400385,
-     "session": "S2",
-     "page": "548",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "In the garage",
-     "sensitive": false,
-     "verified": true,
-     "by": "model",
-     "first": "suspect"
-    },
-    {
      "utterance": "S2-0387",
      "seq": 400386,
      "session": "S2",
@@ -739,7 +712,8 @@
      "sensitive": false,
      "verified": null,
      "by": "key words",
-     "model_label": "asks"
+     "model_label": "asks",
+     "first": "interrogator"
     },
     {
      "utterance": "S2-0391",
@@ -767,8 +741,9 @@
      "kind": "asserts",
      "quote": "Her jeep.",
      "sensitive": false,
-     "verified": null,
-     "by": "model"
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
     },
     {
      "utterance": "S2-0395",
@@ -3288,7 +3263,7 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. 460); the suspect first adopted it after that (Feb 27, 2006, Mishicot High School, p. 460).",
+   "why": "Investigators first said it (Feb 27, 2006, Mishicot High School, p. 460); the suspect first adopted it after that (Feb 27, 2006, Mishicot High School, p. 461).",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],
@@ -3309,15 +3284,15 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S1-0317",
-    "seq": 100316,
+    "utterance": "S1-0344",
+    "seq": 100343,
     "session": "S1",
-    "page": "460",
+    "page": "461",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "In the truck under the seat.",
+    "quote": "under the seat",
     "sensitive": false,
     "verified": true,
     "by": "model",
@@ -3332,6 +3307,24 @@
      "speaker": "WIEGERT",
      "quote": "Where's the knife that he used to stab her?",
      "by": "key words"
+    },
+    {
+     "utterance": "S1-0318",
+     "page": "460",
+     "page_end": "",
+     "session": "S1",
+     "speaker": "WIEGERT",
+     "quote": "Did he show you that knife?",
+     "by": "key words"
+    },
+    {
+     "utterance": "S1-0343",
+     "page": "461",
+     "page_end": "",
+     "session": "S1",
+     "speaker": "FASSBENDER",
+     "quote": "Where did he say he hid the knife in the car?",
+     "by": "key words"
     }
    ],
    "nearby_prompts": [],
@@ -3341,7 +3334,7 @@
    "related_statements": [],
    "related_statements_total": 0,
    "his_responses": [],
-   "interrogator_mentions_before_suspect": 1,
+   "interrogator_mentions_before_suspect": 3,
    "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
@@ -3360,35 +3353,6 @@
      "by": "key words",
      "model_label": "asks",
      "first": "interrogator"
-    },
-    {
-     "utterance": "S1-0317",
-     "seq": 100316,
-     "session": "S1",
-     "page": "460",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "In the truck under the seat.",
-     "sensitive": false,
-     "verified": true,
-     "by": "model",
-     "first": "suspect"
-    },
-    {
-     "utterance": "S1-0317",
-     "seq": 100316,
-     "session": "S1",
-     "page": "460",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "In the truck under the seat.",
-     "sensitive": false,
-     "verified": true,
-     "by": "suspect-search"
     },
     {
      "utterance": "S1-0318",
@@ -3436,6 +3400,35 @@
      "model_label": "asks"
     },
     {
+     "utterance": "S1-0344",
+     "seq": 100343,
+     "session": "S1",
+     "page": "461",
+     "page_end": "",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "under the seat",
+     "sensitive": false,
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
+    },
+    {
+     "utterance": "S1-0344",
+     "seq": 100343,
+     "session": "S1",
+     "page": "461",
+     "page_end": "",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "... under the seat",
+     "sensitive": false,
+     "verified": true,
+     "by": "suspect-search"
+    },
+    {
      "utterance": "S1-0345",
      "seq": 100344,
      "session": "S1",
@@ -3449,20 +3442,6 @@
      "verified": null,
      "by": "key words",
      "model_label": "asserts"
-    },
-    {
-     "utterance": "S1-0351",
-     "seq": 100350,
-     "session": "S1",
-     "page": "462",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "denies",
-     "quote": "No.",
-     "sensitive": false,
-     "verified": null,
-     "by": "model"
     },
     {
      "utterance": "S1-0361",
@@ -3577,7 +3556,7 @@
      "page_end": "",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "assents",
+     "kind": "asserts",
      "quote": "Yeah",
      "sensitive": false,
      "verified": true,
@@ -18099,7 +18078,7 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 587); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 589).",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 587); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 587).",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],
@@ -18120,16 +18099,16 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-1267",
-    "seq": 401266,
+    "utterance": "S2-1235",
+    "seq": 401234,
     "session": "S2",
-    "page": "589",
+    "page": "587",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "In the head.",
-    "sensitive": false,
+    "quote": "He did.",
+    "sensitive": true,
     "verified": true,
     "by": "model",
     "first": "suspect"
@@ -18147,12 +18126,12 @@
    ],
    "nearby_prompts": [
     {
-     "utterance": "S2-1266",
-     "page": "589",
+     "utterance": "S2-1229",
+     "page": "587",
      "page_end": "",
      "session": "S2",
      "speaker": "WIEGERT",
-     "quote": "Where did you shoot her?"
+     "quote": "What else happens to her in her head?"
     }
    ],
    "earlier_related_mentions": [
@@ -18198,18 +18177,8 @@
     }
    ],
    "label_words_from_investigators": [],
-   "related_statements": [
-    {
-     "utterance": "S2-1263",
-     "page": "588",
-     "page_end": "",
-     "session": "S2",
-     "speaker": "BRENDAN",
-     "quote": "Then we brung her outside and shot her.",
-     "by": "model"
-    }
-   ],
-   "related_statements_total": 1,
+   "related_statements": [],
+   "related_statements_total": 0,
    "his_responses": [],
    "interrogator_mentions_before_suspect": 1,
    "adopted_by_assent": false,
@@ -18290,6 +18259,21 @@
      "by": "key words",
      "model_label": "asks",
      "first": "interrogator"
+    },
+    {
+     "utterance": "S2-1235",
+     "seq": 401234,
+     "session": "S2",
+     "page": "587",
+     "page_end": "",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He did.",
+     "sensitive": true,
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
     },
     {
      "utterance": "S2-1243",
@@ -18378,8 +18362,7 @@
      "quote": "In the head.",
      "sensitive": false,
      "verified": true,
-     "by": "model",
-     "first": "suspect"
+     "by": "model"
     },
     {
      "utterance": "S2-1268",
@@ -20294,22 +20277,22 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators named part of it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators named \u201cshot\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 587); he named \u201c22\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 587). Counted as investigators first, because they named part of the detail before he said all of it. The Decision lists related reports: 11 rifle casings were found in Avery's garage (p. 69); two rifles were recovered from Avery's bedroom (p. 69\u201370). A report the detail could be inferred from isn't a report of it, so the transcript decides.",
+   "why": "Investigators named \u201cshoots\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 594); he named \u201c22\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 595). Counted as investigators first, because they named part of the detail before he said all of it. The Decision lists related reports: 11 rifle casings were found in Avery's garage (p. 69); two rifles were recovered from Avery's bedroom (p. 69\u201370). A report the detail could be inferred from isn't a report of it, so the transcript decides.",
    "partly_supplied": true,
    "supplied_across_lines": false,
    "partial_words": [
-    "shot"
+    "shoots"
    ],
    "first_interrogator": {
-    "utterance": "S2-1234",
-    "seq": 401233,
+    "utterance": "S2-1401",
+    "seq": 401400,
     "session": "S2",
-    "page": "587",
+    "page": "594",
     "page_end": "",
     "role": "interrogator",
     "speaker": "WIEGERT",
-    "quote": "Who shot her in the head?",
-    "sensitive": true,
+    "quote": "So, you when you carried her out of the house, and you put 'er by the garage, and Steve shoots her, then you put her on top of the fire that's already going?",
+    "sensitive": false,
     "kind": "asks",
     "verified": null,
     "partial": true,
@@ -20317,32 +20300,49 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-1241",
-    "seq": 401240,
+    "utterance": "S2-1416",
+    "seq": 401415,
     "session": "S2",
-    "page": "587",
+    "page": "595",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "That he shot her with his .22.",
-    "sensitive": true,
+    "quote": "The .22.",
+    "sensitive": false,
     "verified": true,
     "by": "model",
     "first": "suspect"
    },
    "investigator_lines_before": [
     {
-     "utterance": "S2-1234",
-     "page": "587",
+     "utterance": "S2-1401",
+     "page": "594",
      "page_end": "",
      "session": "S2",
      "speaker": "WIEGERT",
-     "quote": "Who shot her in the head?",
+     "quote": "So, you when you carried her out of the house, and you put 'er by the garage, and Steve shoots her, then you put her on top of the fire that's already going?",
      "by": "key words"
     }
    ],
-   "nearby_prompts": [],
+   "nearby_prompts": [
+    {
+     "utterance": "S2-1409",
+     "page": "595",
+     "page_end": "",
+     "session": "S2",
+     "speaker": "WIEGERT",
+     "quote": "Where did you get the gun from, or where did Steven get the gun from?"
+    },
+    {
+     "utterance": "S2-1415",
+     "page": "595",
+     "page_end": "",
+     "session": "S2",
+     "speaker": "WIEGERT",
+     "quote": "OK, and which gun was it?"
+    }
+   ],
    "earlier_related_mentions": [],
    "court_notes": [],
    "label_words_from_investigators": [],
@@ -20354,49 +20354,20 @@
    "crossed_sessions": false,
    "events": [
     {
-     "utterance": "S2-1234",
-     "seq": 401233,
+     "utterance": "S2-1401",
+     "seq": 401400,
      "session": "S2",
-     "page": "587",
+     "page": "594",
      "page_end": "",
      "role": "interrogator",
      "speaker": "WIEGERT",
-     "quote": "Who shot her in the head?",
-     "sensitive": true,
+     "quote": "So, you when you carried her out of the house, and you put 'er by the garage, and Steve shoots her, then you put her on top of the fire that's already going?",
+     "sensitive": false,
      "kind": "asks",
      "verified": null,
      "partial": true,
      "by": "key words",
      "first": "interrogator"
-    },
-    {
-     "utterance": "S2-1241",
-     "seq": 401240,
-     "session": "S2",
-     "page": "587",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "That he shot her with his .22.",
-     "sensitive": true,
-     "verified": true,
-     "by": "model",
-     "first": "suspect"
-    },
-    {
-     "utterance": "S2-1243",
-     "seq": 401242,
-     "session": "S2",
-     "page": "588",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah.",
-     "sensitive": false,
-     "verified": null,
-     "by": "model"
     },
     {
      "utterance": "S2-1409",
@@ -20499,8 +20470,9 @@
      "kind": "asserts",
      "quote": "The .22.",
      "sensitive": false,
-     "verified": null,
-     "by": "model"
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
     },
     {
      "utterance": "S2-1460",
@@ -30892,15 +30864,15 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-1720",
-    "seq": 401719,
+    "utterance": "S2-0012",
+    "seq": 400011,
     "session": "S2",
-    "page": "609",
+    "page": "527",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
-    "kind": "asserts",
-    "quote": "Then he tried paint thinner and then he went to bleach to get it off and like, he like, probably like, he went like he was spraying it like. I thought he got it on the floor and it splashed up on my pants or somethin'.",
+    "kind": "assents",
+    "quote": "Yeah",
     "sensitive": false,
     "verified": true,
     "by": "model",
@@ -30918,23 +30890,14 @@
     }
    ],
    "nearby_prompts": [],
-   "earlier_related_mentions": [
-    {
-     "utterance": "S2-1659",
-     "page": "606",
-     "page_end": "",
-     "session": "S2",
-     "speaker": "WIEGERT",
-     "quote": "Um, when, when you get the bleach on you, let's talk about that, he thanks you for helping him and then what do you guys do?"
-    }
-   ],
+   "earlier_related_mentions": [],
    "court_notes": [],
    "label_words_from_investigators": [],
    "related_statements": [],
    "related_statements_total": 0,
    "his_responses": [],
    "interrogator_mentions_before_suspect": 1,
-   "adopted_by_assent": false,
+   "adopted_by_assent": true,
    "crossed_sessions": false,
    "events": [
     {
@@ -30952,6 +30915,21 @@
      "by": "key words",
      "model_label": "asks",
      "first": "interrogator"
+    },
+    {
+     "utterance": "S2-0012",
+     "seq": 400011,
+     "session": "S2",
+     "page": "527",
+     "page_end": "",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "assents",
+     "quote": "Yeah",
+     "sensitive": false,
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
     },
     {
      "utterance": "S2-0076",
@@ -31175,8 +31153,7 @@
      "quote": "Then he tried paint thinner and then he went to bleach to get it off and like, he like, probably like, he went like he was spraying it like. I thought he got it on the floor and it splashed up on my pants or somethin'.",
      "sensitive": false,
      "verified": true,
-     "by": "model",
-     "first": "suspect"
+     "by": "model"
     },
     {
      "utterance": "S2-1739",
@@ -34974,7 +34951,7 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators named every part of it before he said it, in separate lines: \u201cphone\u201d, \u201ccell\u201d, \u201ccamera\u201d and \u201cpurse\u201d (Feb 27, 2006, Mishicot High School, p. 474); \u201cburn\u201d and \u201cbarrel\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 619). He then said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 621).",
+   "why": "Investigators named every part of it before he said it, in separate lines: \u201cphone\u201d, \u201ccell\u201d, \u201ccamera\u201d and \u201cpurse\u201d (Feb 27, 2006, Mishicot High School, p. 474); \u201cburn\u201d and \u201cbarrel\u201d (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 619). He then said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 620).",
    "partly_supplied": false,
    "supplied_across_lines": true,
    "partial_words": [
@@ -35002,15 +34979,15 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-1985",
-    "seq": 401984,
+    "utterance": "S2-1981",
+    "seq": 401980,
     "session": "S2",
-    "page": "621",
+    "page": "620",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "The burning barrel.",
+    "quote": "He burnt 'em.",
     "sensitive": false,
     "verified": true,
     "by": "model",
@@ -35037,6 +35014,14 @@
     }
    ],
    "nearby_prompts": [
+    {
+     "utterance": "S2-1970",
+     "page": "620",
+     "page_end": "",
+     "session": "S2",
+     "speaker": "FASSBENDER",
+     "quote": "Do you know whether she had a camera?"
+    },
     {
      "utterance": "S2-1978",
      "page": "620",
@@ -35074,18 +35059,8 @@
    ],
    "court_notes": [],
    "label_words_from_investigators": [],
-   "related_statements": [
-    {
-     "utterance": "S2-1983",
-     "page": "621",
-     "page_end": "",
-     "session": "S2",
-     "speaker": "BRENDAN",
-     "quote": "Because when I passed it there was like like a purse in there and stuff.",
-     "by": "model"
-    }
-   ],
-   "related_statements_total": 1,
+   "related_statements": [],
+   "related_statements_total": 0,
    "his_responses": [],
    "interrogator_mentions_before_suspect": 0,
    "adopted_by_assent": false,
@@ -35422,6 +35397,21 @@
      "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
+     "utterance": "S2-1981",
+     "seq": 401980,
+     "session": "S2",
+     "page": "620",
+     "page_end": "",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "He burnt 'em.",
+     "sensitive": false,
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
+    },
+    {
      "utterance": "S2-1983",
      "seq": 401982,
      "session": "S2",
@@ -35435,21 +35425,6 @@
      "verified": null,
      "by": "model",
      "kind_note": "the line doesn't contain the detail's key terms; not counted"
-    },
-    {
-     "utterance": "S2-1985",
-     "seq": 401984,
-     "session": "S2",
-     "page": "621",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "The burning barrel.",
-     "sensitive": false,
-     "verified": true,
-     "by": "model",
-     "first": "suspect"
     },
     {
      "utterance": "S2-1987",
@@ -37895,5 +37870,5 @@
   }
  ],
  "utterance_count": 5757,
- "mention_count": 2307
+ "mention_count": 2305
 }
