@@ -1,16 +1,29 @@
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11913 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23911 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11836 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (16216 chars): '{   "utterances": [     {       "id": "S2-0595",       "graphic": false,       "mentions":' ... '         {           "fact": "F03",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15693 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (15645 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (31693 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11911 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
   [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
-tagged 5755 sentences in 321 chunks: 2175 labels kept, 34 dropped (quote not in sentence)
-round 1: 50 deciding labels to check, 44 checked, 10 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (36589 chars): 'The user wants me to analyze three items (S1-0538|F03, S1-0538|F04, S1-0543|F15) based on ' ... 't the kind for each. I\'ll write "asserts" for F03, "asserts"'
-round 2: 16 deciding labels to check, 15 checked, 6 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23913 chars): '{   "utterances": [     {       "id": "S2-2575",       "graphic": false,       "mentions":' ... '         {           "fact": "F08",           "kind": "asks"'
+  chunk at S2-2575 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23895 chars): '{   "utterances": [     {       "id": "S3-0181",       "graphic": false,       "mentions":' ... '         {           "fact": "F25",           "kind": "asks"'
+  chunk at S3-0181 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+tagged 5757 sentences in 321 chunks: 2189 labels kept, 39 dropped (quote not in sentence)
+round 1: 50 deciding labels to check, 47 checked, 14 rejected
+round 2: 15 deciding labels to check, 12 checked, 5 rejected
 round 3: 7 deciding labels to check, 6 checked, 2 rejected
-round 4: 3 deciding labels to check, 3 checked, 0 rejected
-verification done after 4 round(s)
-safety search: 9 earlier investigator lines checked, 9 answered, 2 carry the detail
+round 4: 3 deciding labels to check, 3 checked, 2 rejected
+round 5: 2 deciding labels to check, 2 checked, 2 rejected
+round 6: 2 deciding labels to check, 2 checked, 1 rejected
+round 7: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+4 deciding line(s) not re-checked
+safety search: 9 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 6 earlier investigator lines checked, 3 answered, 1 carry the detail
+safety search: 3 earlier investigator lines checked, 0 answered, 0 carry the detail
 verification done after 0 round(s)
-code added 21 bare agreements; the safety search found 2 earlier investigator lines
-Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first, 4 were already public, 1 may trace to an earlier statement with no public transcript. 11 details came from him first in the record.
-done in 275.1s, 357 model calls, $1.8258
+code added 12 bare agreements; the safety search found 1 earlier investigator lines
+Of 24 key details Brendan Dassey stated or agreed to, investigators said 10 first (3 of them in part), 4 were already public, 1 may trace to an earlier statement with no public transcript. 9 details came from him first in the record.
+done in 342.0s, 365 model calls, $1.9433

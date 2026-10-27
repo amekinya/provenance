@@ -1807,7 +1807,7 @@
   "role": "suspect",
   "text": "Like her forehead.",
   "page": "452",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0182",
@@ -1887,7 +1887,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "453",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0190",
@@ -1927,7 +1927,7 @@
   "role": "suspect",
   "text": "Yes.",
   "page": "453",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0194",
@@ -2437,7 +2437,7 @@
   "role": "interrogator",
   "text": "When did you, did you ever see the body again then? What parts did you see this time?",
   "page": "456",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0245",
@@ -3827,7 +3827,7 @@
   "role": "suspect",
   "text": "Yes",
   "page": "463",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0384",
@@ -3837,7 +3837,7 @@
   "role": "interrogator",
   "text": "Tell, just try to go through in your mind exactly what he told you about him cutting himself. Put it in your own words.",
   "page": "464",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0385",
@@ -3937,7 +3937,7 @@
   "role": "interrogator",
   "text": "OK. Had he told you that? Yes or no?",
   "page": "464",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0395",
@@ -3947,7 +3947,7 @@
   "role": "suspect",
   "text": "Yes",
   "page": "464",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0396",
@@ -4907,7 +4907,7 @@
   "role": "suspect",
   "text": "(written statement, read aloud by Wiegert) Is I got off the bus at 3:45 and seen her jeep down at Steven's house. Then I went in my house and played Playstation 2 for three hours and then I eat at 8:00 and I watch TV and then got a phone call from Steven, if I wanted to come over to have a fire and I did and he told me to bring the golf cart and I did. So then we went driving around the yard and got to pick up the stuff around the house. Then we dropped the seats by the fire and went to get the wood and the cabinet and then went back to throw the seat on the fire and then we waited for it to go down and throw on the wood and cabinet. Then I seen the toes before we throw the wood and cabinet on the fire. When we did that he seen me that I seen the toes he told me not to say anything and he told me that he stabbed her in the stomach in the pit and he took the knife and put it under the seat in her jeep.",
   "page": "469",
-  "sensitive": false,
+  "sensitive": true,
   "read_aloud_by": "WIEGERT"
  },
  {
@@ -4948,7 +4948,7 @@
   "role": "suspect",
   "text": ".....Why he stabbed her.",
   "page": "470",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0496",
@@ -5088,7 +5088,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "471",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0510",
@@ -5198,7 +5198,7 @@
   "role": "interrogator",
   "text": "Brendan, I think you did a real good job about writing. You were, you were a little more detailed about what you saw in the fire and it was getting very difficult to write that, but I think it\u2019s important that you write not to just to tell what us the things that you saw in the fire about her and the clothing. Is that all right?",
   "page": "471",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0521",
@@ -5228,7 +5228,7 @@
   "role": "interrogator",
   "text": "Brendan, I just got a question and I think Mark's gonna have some too. We didn't ask this before. Did he say anything about cutting her up or anything like that or did he put her body in there whole.......?",
   "page": "472",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0524",
@@ -5398,7 +5398,7 @@
   "role": "suspect",
   "text": "(written statement, read aloud by Wiegert) He was angry and that's why he did it. He told me he used rope to tie her up in the jeep and that's when he stabbed her. When he told me not to say anything, he threatened me a little bit. He said that she was pretty to him. I seen the fingers and the belly and the forehead in the fire. The body looked like it was together and it was under some tires and branches. He hid the vehicle in the pit back in the tree area.",
   "page": "473",
-  "sensitive": false,
+  "sensitive": true,
   "read_aloud_by": "WIEGERT"
  },
  {
@@ -5419,7 +5419,7 @@
   "role": "interrogator",
   "text": "Then you told us that he put some clothing on there. Can you add what you saw as it relates to that clothing? What you told us. (pause)",
   "page": "473",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S1-0543",
@@ -5490,7 +5490,7 @@
   "role": "suspect",
   "text": "Blood",
   "page": "474",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S1-0550",
@@ -5670,7 +5670,7 @@
   "role": "suspect",
   "text": "(written statement, read aloud by Wiegert) Some clothes in the fire pit that was a blue shirt and some pants. On the shirt there was a blood on it and there was a hole in it in the stomach area and he said it was Teresa's shirt.",
   "page": "475",
-  "sensitive": false,
+  "sensitive": true,
   "read_aloud_by": "WIEGERT"
  },
  {
@@ -13291,7 +13291,7 @@
   "role": "suspect",
   "text": "Like damp.",
   "page": "559",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-0641",
@@ -16521,7 +16521,7 @@
   "role": "interrogator",
   "text": "All right, take a breath Bren, take a breath, that's very hard to admit to. Did he watch?",
   "page": "574",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0964",
@@ -16531,7 +16531,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "574",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0965",
@@ -16541,7 +16541,7 @@
   "role": "interrogator",
   "text": "You said you, tell us what you did, you take your clothes off?",
   "page": "574",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0966",
@@ -16551,7 +16551,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "575",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-0967",
@@ -17391,7 +17391,7 @@
   "role": "suspect",
   "text": "In the stomach.",
   "page": "578",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1051",
@@ -17491,7 +17491,7 @@
   "role": "suspect",
   "text": "Once.",
   "page": "579",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1061",
@@ -17511,7 +17511,7 @@
   "role": "suspect",
   "text": "Right here.",
   "page": "579",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1063",
@@ -18381,7 +18381,7 @@
   "role": "suspect",
   "text": "mm huh. (nods \u201cyes\u201d)",
   "page": "583",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1150",
@@ -18661,7 +18661,7 @@
   "role": "suspect",
   "text": "mm huh.",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1178",
@@ -18671,7 +18671,7 @@
   "role": "interrogator",
   "text": "Why did he do that? Was she alive?",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1179",
@@ -18681,7 +18681,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1180",
@@ -18691,7 +18691,7 @@
   "role": "interrogator",
   "text": "What did he do with the hair?",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1181",
@@ -18701,7 +18701,7 @@
   "role": "suspect",
   "text": "He set it down on the counter.",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1182",
@@ -18711,7 +18711,7 @@
   "role": "interrogator",
   "text": "The counter where?",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1183",
@@ -18721,7 +18721,7 @@
   "role": "suspect",
   "text": "Like a dresser.",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1184",
@@ -18731,7 +18731,7 @@
   "role": "interrogator",
   "text": "What did he use to cut the hair off with?",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1185",
@@ -18741,7 +18741,7 @@
   "role": "suspect",
   "text": "The knife.",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1186",
@@ -18751,7 +18751,7 @@
   "role": "interrogator",
   "text": "Was she alive?",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1187",
@@ -18761,7 +18761,7 @@
   "role": "suspect",
   "text": "(shakes head \"no\")",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1188",
@@ -18771,7 +18771,7 @@
   "role": "interrogator",
   "text": "Did he say why he did that?",
   "page": "585",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1189",
@@ -19181,7 +19181,7 @@
   "role": "interrogator",
   "text": "What else happens to her in her head?",
   "page": "587",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-1230",
@@ -20711,7 +20711,7 @@
   "role": "interrogator",
   "text": "Well who started the fire?",
   "page": "593",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1383",
@@ -20721,7 +20721,7 @@
   "role": "suspect",
   "text": "He did.",
   "page": "593",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1384",
@@ -20731,7 +20731,7 @@
   "role": "interrogator",
   "text": "Who's he?",
   "page": "593",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1385",
@@ -20741,7 +20741,7 @@
   "role": "suspect",
   "text": "Steven.",
   "page": "594",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1386",
@@ -20751,7 +20751,7 @@
   "role": "interrogator",
   "text": "What did he start it with?",
   "page": "594",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1387",
@@ -21281,7 +21281,7 @@
   "role": "suspect",
   "text": "In the head.",
   "page": "596",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1440",
@@ -21921,7 +21921,7 @@
   "role": "suspect",
   "text": "We grab her and we put her in and take her over the fire and throw her on.",
   "page": "599",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-1504",
@@ -29911,7 +29911,7 @@
   "role": "suspect",
   "text": "I don\u2019t know, I didn\u2019t, I didn\u2019t do nothin\u2019 with it.",
   "page": "636",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2303",
@@ -29921,7 +29921,7 @@
   "role": "interrogator",
   "text": "Did Steven do anything with it?",
   "page": "636",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2304",
@@ -29931,7 +29931,7 @@
   "role": "suspect",
   "text": "Yeah, but I don\u2019t know what.",
   "page": "636",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2305",
@@ -29981,7 +29981,7 @@
   "role": "interrogator",
   "text": "Did he take some of her body out of that fire pit?",
   "page": "636",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2310",
@@ -29991,7 +29991,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d) Yeah.",
   "page": "636",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2311",
@@ -30351,7 +30351,7 @@
   "role": "interrogator",
   "text": "that he told you or that you helped him, di-did you help him do any of this?",
   "page": "638",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2347",
@@ -30391,7 +30391,7 @@
   "role": "interrogator",
   "text": "We talked about Monday night about, um, bad smells and stuff, do you remember any smells coming from that fire, after she was put on there?",
   "page": "638",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2351",
@@ -30911,7 +30911,7 @@
   "role": "suspect",
   "text": "(nods \u201cyes\u201d) Yeah.",
   "page": "640",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2403",
@@ -33841,7 +33841,7 @@
   "role": "interrogator",
   "text": "Can you tell me why, i-if Teresa was, was dead when she was in the garage, why you would shoot or, why he would shoot a dead body.",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2696",
@@ -33851,7 +33851,7 @@
   "role": "suspect",
   "text": "I don't know. Probably to make sure she's dead or somethin'.",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2697",
@@ -33871,7 +33871,7 @@
   "role": "suspect",
   "text": "(shakes head \"no\") No.",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2699",
@@ -33881,7 +33881,7 @@
   "role": "interrogator",
   "text": "You're just sayin', yo-your guess is that to make sure was dead.",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2700",
@@ -33891,7 +33891,7 @@
   "role": "suspect",
   "text": "(nods \"yes\") Yeah.",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2701",
@@ -33971,7 +33971,7 @@
   "role": "suspect",
   "text": "(nods \"yes\")",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2709",
@@ -34021,7 +34021,7 @@
   "role": "interrogator",
   "text": "She was screaming a lot or wasn't?",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2714",
@@ -34031,7 +34031,7 @@
   "role": "suspect",
   "text": "She was.",
   "page": "655",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2715",
@@ -34171,7 +34171,7 @@
   "role": "suspect",
   "text": "Like a little bit after that.",
   "page": "656",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S2-2729",
@@ -34741,7 +34741,7 @@
   "role": "suspect",
   "text": "Cuz she was breathing like little bit.",
   "page": "659",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S2-2786",
@@ -41501,7 +41501,7 @@
   "role": "interrogator",
   "text": "We asked you before about the clothes, OK? You\u2019re lying to me when your tellin\u2019 me you don\u2019t know where the bra and panties are. OK. I can tell that. Where are the bra and the panties?",
   "page": "774",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0316",
@@ -41911,7 +41911,7 @@
   "role": "suspect",
   "text": "Ta stop what I was doin'.",
   "page": "776",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0357",
@@ -42931,7 +42931,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "782",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0459",
@@ -42941,7 +42941,7 @@
   "role": "interrogator",
   "text": "You sure? I think you did.",
   "page": "782",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0460",
@@ -42951,7 +42951,7 @@
   "role": "suspect",
   "text": "I never touched the gun.",
   "page": "782",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-0461",
@@ -44601,7 +44601,7 @@
   "role": "suspect",
   "text": "Yeah.",
   "page": "790",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0626",
@@ -44611,7 +44611,7 @@
   "role": "interrogator",
   "text": "Where did that happen?",
   "page": "791",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0627",
@@ -44621,7 +44621,7 @@
   "role": "suspect",
   "text": "In the, in the bedroom.",
   "page": "791",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0628",
@@ -44631,7 +44631,7 @@
   "role": "interrogator",
   "text": "What ya cut the hair off with?",
   "page": "791",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0629",
@@ -44641,7 +44641,7 @@
   "role": "suspect",
   "text": "The knife.",
   "page": "791",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0630",
@@ -44651,7 +44651,7 @@
   "role": "interrogator",
   "text": "The knife you guys found in the garage?",
   "page": "791",
-  "sensitive": false
+  "sensitive": true
  },
  {
   "id": "S3-0631",
@@ -49911,7 +49911,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "820",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-1157",
@@ -49941,7 +49941,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "820",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-1160",
@@ -49961,7 +49961,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "820",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-1162",
@@ -51161,7 +51161,7 @@
   "role": "interrogator",
   "text": "OK. Did you cut any hair off?",
   "page": "826",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-1282",
@@ -51171,7 +51171,7 @@
   "role": "suspect",
   "text": "No.",
   "page": "826",
-  "sensitive": true
+  "sensitive": false
  },
  {
   "id": "S3-1283",

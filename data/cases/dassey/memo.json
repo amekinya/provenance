@@ -1,17 +1,17 @@
 {
- "summary": "Across 24 key details Brendan Dassey stated or agreed to, the record shows investigators introduced 8 first, Dassey introduced 11 first, 4 were already public, and 1 may trace to an earlier unrecorded statement. In multiple instances Dassey adopted details only after investigators mentioned them, sometimes by agreeing to leading questions. Four details appeared in public reports before any interview. One detail raised by investigators (a stomach tattoo) was never adopted. The three recorded sessions show heavy interrogator speaking time and repeated use of \"we already know,\" minimization, and demands for truth.",
+ "summary": "This audit reviewed 24 key details from Brendan Dassey's three recorded interrogations (Feb 27, Mar 1, May 13, 2006). Investigators were the first source for 10 details (three partially), four details were already public, one may trace to an unrecorded statement, and nine details appear first from the suspect in the available record. Multiple details were adopted by the suspect only after leading questions, and interrogation transcripts show high interrogator control and extensive use of fact-carrying questions. Two details evolved across sessions, and one investigator-raised detail was never adopted.",
  "key_points": [
-  "8 of 24 key details were first stated by investigators; Dassey adopted several by agreeing to questions (e.g., vehicle in garage, stabbed in stomach, shot in head, blood on garage floor, Avery raised hood, license plates removed, bleach on jeans) \u2014 see Mar 1, 2006, Manitowoc County Sheriff's Dept., pp. fassbender, wiegert; Feb 27, 2006, Mishicot High School, p. wiegert.",
-  "11 details were first stated by Dassey with no prior mention in transcripts (e.g., tied up with rope, body in RAV4, restrained on bed, hair cut, throat cut, shot with .22 rifle, tires/branches on fire, RAV4 hidden, bedsheets burned, phone/camera/purse burned, bones broken with shovel) \u2014 see Feb 27, 2006, Mishicot High School, p. brendan; Mar 1, 2006, Manitowoc County Sheriff's Dept., p. brendan.",
-  "4 details were publicly reported before any interview (body burned in fire, license plates removed, vehicle key in bedroom, clothes burned) \u2014 see public reports Nov 10\u201316, 2005; Feb 27, 2006, Mishicot High School, pp. fassbender, wiegert; Mar 1, 2006, Manitowoc County Sheriff's Dept., p. wiegert.",
-  "1 detail (bleach on jeans) may trace to an earlier unrecorded statement with Fassbender on the evening of Feb 27, 2006 \u2014 see Decision and Order p. 7, citing ECF 19-19 at 10-11.",
-  "Investigators raised a stomach tattoo but Dassey never stated or agreed to it \u2014 see Mar 1, 2006, Manitowoc County Sheriff's Dept., p. fassbender.",
-  "Interrogation tactics across sessions: 52 \"we already know\" claims, 30 minimization instances, 3 promises, 85 demands for truth; interrogator spoke 68\u201392% of words per session \u2014 see sessions S1, S2, S3."
+  "Investigators introduced 10 of 24 key details first (3 in part), e.g., vehicle in Avery's garage (MCSD p. 548), knife (MHS p. 460), shot in head (MCSD p. 587), shot in garage (MCSD p. 594), phone/camera/purse burned (SCSD p. 817).",
+  "Nine details appear first from the suspect in the record, e.g., tied with rope (MHS p. 471), body in RAV4 (MCSD p. 550), restrained on bed (MCSD p. 566), stabbed in stomach (MHS p. 469), strangled (MCSD p. 579), hair cut (MCSD p. 584), throat cut (MCSD p. 586), RAV4 hidden in salvage yard (MHS p. 459), bedsheets burned (MCSD p. 607).",
+  "Four details were public before interviews: body burned (Nov 16, 2005), license plates removed (Nov 16, 2005), vehicle key in bedroom (Nov 10, 2005), clothes burned (Nov 16, 2005); investigators also mentioned them before the suspect (MHS p. 442, MCSD p. 601, MCSD p. 602, MHS p. 456).",
+  "Seven details were adopted only after agreeing to investigator questions: vehicle in garage (MCSD p. 548), knife (MHS p. 463), license plates (MCSD p. 602), Avery raised hood (MCSD p. 603), bleach on jeans (MCSD p. 527), blood on garage floor (MCSD p. 547), clothes burned (MHS p. 471).",
+  "Interrogation dynamics: interrogator spoke 87.5% of words in first session; 742 fact-carrying questions across sessions; tactics include 'we already know' (52), minimization (30), demand truth (85).",
+  "Two details evolved across sessions: .22 rifle (investigators: 'gun' at MHS p. 464; suspect added '22' at MCSD p. 587) and bones/shovel (investigators: 'bones' at MHS p. 443; suspect added 'break/shovel' at MCSD p. 637). Tattoo on stomach raised but never adopted (MCSD p. 662)."
  ],
  "limits": [
-  "Audit only identifies the sequence of detail appearance in available transcripts; it cannot assess truthfulness, accuracy, or reliability of any statement.",
-  "Does not evaluate whether Dassey\u2019s first-stated details are corroborated by physical evidence or independent witnesses.",
-  "Cannot account for information exchanged in unrecorded sessions (S1b, S1c) where additional details may have been suggested or disclosed.",
-  "Does not address voluntariness, coercion, or legal admissibility of the statements."
+  "Audit limited to public transcripts; unrecorded sessions (Two Rivers PD on Feb 27, evening with Fassbender) not examined.",
+  "Cannot determine truthfulness, independent knowledge, or whether suspect-first details derived from unrecorded suggestions.",
+  "Does not assess voluntariness, coercion, or legal admissibility of statements.",
+  "Origin coding rules (e.g., partial investigator mention counts as investigator-first) may affect detail attribution."
  ]
 }
