@@ -45,10 +45,10 @@
    "source": "Calumet County Sheriff's Dept. transcript, Interview of Brendan Dassey, 05/13/06"
   }
  ],
- "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 8 first (1 of them in part), 5 were already public, 1 may trace to an earlier statement with no public transcript. 10 details came from him first in the record.",
+ "headline": "Of 24 key details Brendan Dassey stated or agreed to, investigators said 9 first (1 of them in part), 5 were already public, 1 may trace to an earlier statement with no public transcript. 9 details came from him first in the record.",
  "counts": {
-  "interrogator_first": 8,
-  "suspect_first": 10,
+  "interrogator_first": 9,
+  "suspect_first": 9,
   "prior_contact": 1,
   "public": 5,
   "planted_adopted": 0,
@@ -28448,7 +28448,7 @@
    "origin": "public",
    "origin_label": "Reported publicly before the interview",
    "corroboration": "cannot_corroborate",
-   "why": "Public: Halbach's license plates were found crumpled in a scrap vehicle at the salvage yard, reported Nov 16, 2005 (Badger Herald). That was before the suspect first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 602). Investigators also mentioned it before he did (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 601).",
+   "why": "Public: Halbach's license plates were found crumpled in a scrap vehicle at the salvage yard, reported Nov 16, 2005 (Badger Herald). That was before the suspect first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 601). Investigators also mentioned it before he did (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 601).",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],
@@ -28469,15 +28469,15 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-1560",
-    "seq": 401559,
+    "utterance": "S2-1556",
+    "seq": 401555,
     "session": "S2",
-    "page": "602",
+    "page": "601",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
     "kind": "asserts",
-    "quote": "Yeah.",
+    "quote": "I don't know.",
     "sensitive": false,
     "verified": true,
     "by": "model",
@@ -28568,6 +28568,21 @@
      "first": "interrogator"
     },
     {
+     "utterance": "S2-1556",
+     "seq": 401555,
+     "session": "S2",
+     "page": "601",
+     "page_end": "",
+     "role": "suspect",
+     "speaker": "BRENDAN",
+     "kind": "asserts",
+     "quote": "I don't know.",
+     "sensitive": false,
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
+    },
+    {
      "utterance": "S2-1557",
      "seq": 401556,
      "session": "S2",
@@ -28609,8 +28624,7 @@
      "quote": "Yeah.",
      "sensitive": false,
      "verified": true,
-     "by": "model",
-     "first": "suspect"
+     "by": "model"
     },
     {
      "utterance": "S2-1561",
@@ -29134,7 +29148,7 @@
    "origin": "interrogator_first",
    "origin_label": "Investigators said it first",
    "corroboration": "cannot_corroborate",
-   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 603); the suspect first adopted it by agreeing to a question (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 603).",
+   "why": "Investigators first said it (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 603); the suspect first adopted it after that (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 603).",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],
@@ -29162,7 +29176,7 @@
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
-    "kind": "assents",
+    "kind": "asserts",
     "quote": "Yeah.",
     "sensitive": false,
     "verified": true,
@@ -29228,7 +29242,7 @@
    "related_statements_total": 0,
    "his_responses": [],
    "interrogator_mentions_before_suspect": 1,
-   "adopted_by_assent": true,
+   "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
     {
@@ -29255,7 +29269,7 @@
      "page_end": "",
      "role": "suspect",
      "speaker": "BRENDAN",
-     "kind": "assents",
+     "kind": "asserts",
      "quote": "Yeah.",
      "sensitive": false,
      "verified": true,
@@ -30864,15 +30878,15 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-0012",
-    "seq": 400011,
+    "utterance": "S2-1720",
+    "seq": 401719,
     "session": "S2",
-    "page": "527",
+    "page": "609",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
-    "kind": "assents",
-    "quote": "Yeah",
+    "kind": "asserts",
+    "quote": "Then he tried paint thinner and then he went to bleach to get it off and like, he like, probably like, he went like he was spraying it like. I thought he got it on the floor and it splashed up on my pants or somethin'.",
     "sensitive": false,
     "verified": true,
     "by": "model",
@@ -30890,14 +30904,23 @@
     }
    ],
    "nearby_prompts": [],
-   "earlier_related_mentions": [],
+   "earlier_related_mentions": [
+    {
+     "utterance": "S2-1659",
+     "page": "606",
+     "page_end": "",
+     "session": "S2",
+     "speaker": "WIEGERT",
+     "quote": "Um, when, when you get the bleach on you, let's talk about that, he thanks you for helping him and then what do you guys do?"
+    }
+   ],
    "court_notes": [],
    "label_words_from_investigators": [],
    "related_statements": [],
    "related_statements_total": 0,
    "his_responses": [],
    "interrogator_mentions_before_suspect": 1,
-   "adopted_by_assent": true,
+   "adopted_by_assent": false,
    "crossed_sessions": false,
    "events": [
     {
@@ -30915,21 +30938,6 @@
      "by": "key words",
      "model_label": "asks",
      "first": "interrogator"
-    },
-    {
-     "utterance": "S2-0012",
-     "seq": 400011,
-     "session": "S2",
-     "page": "527",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah",
-     "sensitive": false,
-     "verified": true,
-     "by": "model",
-     "first": "suspect"
     },
     {
      "utterance": "S2-0076",
@@ -31153,7 +31161,8 @@
      "quote": "Then he tried paint thinner and then he went to bleach to get it off and like, he like, probably like, he went like he was spraying it like. I thought he got it on the floor and it splashed up on my pants or somethin'.",
      "sensitive": false,
      "verified": true,
-     "by": "model"
+     "by": "model",
+     "first": "suspect"
     },
     {
      "utterance": "S2-1739",
@@ -32943,10 +32952,10 @@
     "not_reported": "",
     "court_notes": []
    },
-   "origin": "suspect_first",
-   "origin_label": "Suspect said it first",
-   "corroboration": "may_corroborate",
-   "why": "The suspect said it first (Mar 1, 2006, Manitowoc County Sheriff's Dept., p. 607).",
+   "origin": "interrogator_first",
+   "origin_label": "Investigators said it first",
+   "corroboration": "cannot_corroborate",
+   "why": "Investigators first said it (May 13, 2006, Sheboygan County Sheriff's Dept., p. 844); the suspect first adopted it by agreeing to a question (May 13, 2006, Sheboygan County Sheriff's Dept., p. 844).",
    "partly_supplied": false,
    "supplied_across_lines": false,
    "partial_words": [],
@@ -32967,21 +32976,31 @@
     "first": "interrogator"
    },
    "first_suspect": {
-    "utterance": "S2-1676",
-    "seq": 401675,
-    "session": "S2",
-    "page": "607",
+    "utterance": "S3-1592",
+    "seq": 501591,
+    "session": "S3",
+    "page": "844",
     "page_end": "",
     "role": "suspect",
     "speaker": "BRENDAN",
-    "kind": "asserts",
-    "quote": "He took the, the bedsheets, took 'em outside and he burnt 'em.",
+    "kind": "assents",
+    "quote": "Yeah.",
     "sensitive": false,
     "verified": true,
     "by": "model",
     "first": "suspect"
    },
-   "investigator_lines_before": [],
+   "investigator_lines_before": [
+    {
+     "utterance": "S3-1591",
+     "page": "844",
+     "page_end": "",
+     "session": "S3",
+     "speaker": "FASSBENDER",
+     "quote": "The bed sheets and the bedding, do you know whether or not that was taken off and burned, cuz the first time you said you, you thought it was.",
+     "by": "key words"
+    }
+   ],
    "nearby_prompts": [],
    "earlier_related_mentions": [
     {
@@ -32991,6 +33010,22 @@
      "session": "S1",
      "speaker": "FASSBENDER",
      "quote": "You can just tear that top sheet off and continue on the second"
+    },
+    {
+     "utterance": "S2-1680",
+     "page": "607",
+     "page_end": "",
+     "session": "S2",
+     "speaker": "FASSBENDER",
+     "quote": "W-was there blood on the bedsheets?"
+    },
+    {
+     "utterance": "S2-2470",
+     "page": "643",
+     "page_end": "",
+     "session": "S2",
+     "speaker": "FASSBENDER",
+     "quote": "Do you recall when the sheets were taken off the bed and stuff that the blood had soaked through to the mattress pad at all?"
     }
    ],
    "court_notes": [],
@@ -32998,25 +33033,10 @@
    "related_statements": [],
    "related_statements_total": 0,
    "his_responses": [],
-   "interrogator_mentions_before_suspect": 0,
-   "adopted_by_assent": false,
+   "interrogator_mentions_before_suspect": 1,
+   "adopted_by_assent": true,
    "crossed_sessions": false,
    "events": [
-    {
-     "utterance": "S2-1676",
-     "seq": 401675,
-     "session": "S2",
-     "page": "607",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "He took the, the bedsheets, took 'em outside and he burnt 'em.",
-     "sensitive": false,
-     "verified": true,
-     "by": "model",
-     "first": "suspect"
-    },
     {
      "utterance": "S2-1677",
      "seq": 401676,
@@ -33044,7 +33064,8 @@
      "quote": "(nods \"yes\")",
      "sensitive": false,
      "verified": null,
-     "by": "model"
+     "by": "model",
+     "kind_note": "agreement without a question about this detail just before it; not counted"
     },
     {
      "utterance": "S2-1680",
@@ -33062,20 +33083,6 @@
      "kind_note": "the line doesn't contain the detail's key terms; not counted"
     },
     {
-     "utterance": "S2-1681",
-     "seq": 401680,
-     "session": "S2",
-     "page": "607",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "assents",
-     "quote": "Yeah.",
-     "sensitive": false,
-     "verified": null,
-     "by": "model"
-    },
-    {
      "utterance": "S2-1682",
      "seq": 401681,
      "session": "S2",
@@ -33089,20 +33096,6 @@
      "verified": null,
      "by": "model",
      "kind_note": "the line doesn't contain the detail's key terms; not counted"
-    },
-    {
-     "utterance": "S2-1683",
-     "seq": 401682,
-     "session": "S2",
-     "page": "607",
-     "page_end": "",
-     "role": "suspect",
-     "speaker": "BRENDAN",
-     "kind": "asserts",
-     "quote": "'bout a stain like that big.",
-     "sensitive": false,
-     "verified": null,
-     "by": "model"
     },
     {
      "utterance": "S2-2470",
@@ -33281,8 +33274,9 @@
      "kind": "assents",
      "quote": "Yeah.",
      "sensitive": false,
-     "verified": null,
-     "by": "model"
+     "verified": true,
+     "by": "model",
+     "first": "suspect"
     },
     {
      "utterance": "S3-1593",
@@ -37870,5 +37864,5 @@
   }
  ],
  "utterance_count": 5757,
- "mention_count": 2305
+ "mention_count": 2302
 }
