@@ -45,7 +45,7 @@ def load(cid: str) -> tuple[dict, list[dict], list[dict]]:
 
 
 def case_dict(cfg: dict, utts: list[dict], facts: list[dict], mentions: list[dict]) -> dict:
-    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted", "prior_statement", "must")
+    fact_fields = ("id", "label", "detail", "source", "public_before", "holdback", "planted", "prior_statement", "public_what", "must")
     return {"id": cfg["id"], "title": cfg["title"], "suspect": cfg["suspect"], "notes": cfg.get("notes", []),
             "sessions": [{k: s.get(k, d) for k, d in (("id", ""), ("label", ""), ("day", ""), ("recorded", True), ("source", ""))}
                          for s in cfg["sessions"]],
@@ -205,6 +205,70 @@ def suspect_candidates(cfg, utts, facts, mentions, per_fact: int = 5) -> list[di
                             "speaker": f"{u['speaker']} ({u['role']})", "text": u["text"], "prev": prev_of[u["id"]], "stance": True})
                 n += 1
     return out
+
+
+def recheck_suspect(cfg, utts, facts, mentions, calls: list[CallRecord]) -> int:
+    """Re-ask every suspect-side line that code says carries a detail but that was rejected (or never labeled before his
+    first statement), with the stance question only. Answers are saved on the labels (stance_checked), so later
+    re-audits make no calls. Returns how many lines turned out to be him stating or agreeing."""
+    from app.engine.ledger import answers_labeled  # noqa: PLC0415
+
+    order = sorted(utts, key=lambda u: u["seq"])
+    by_id = {u["id"]: u for u in utts}
+    rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+    first_seq = {f["fact"]["id"]: (f["first_suspect"] or {}).get("seq", float("inf")) for f in rep["facts"]}
+    items, seen = [], set()
+    for f in facts:
+        must = f.get("must")
+        if not must:
+            continue
+        ms = [m for m in mentions if m["fact"] == f["id"]]
+        rejected = {m["utterance"] for m in ms if m.get("verified") is False and not m.get("stance_checked")}
+        live = {m["utterance"] for m in ms if m.get("verified") is not False or m.get("stance_checked")}
+        labeled = {m["utterance"] for m in ms} | {u["id"] for u in order if u["role"] == "interrogator" and any(has_terms(u["text"], [g]) for g in must)}
+        for i, u in enumerate(order):
+            if u["role"] != "suspect" or not re.search(r"[A-Za-z]", spoken(u["text"])):
+                continue
+            todo = u["id"] in rejected or (u["id"] not in live and u["seq"] < first_seq[f["id"]])
+            if not todo or (u["id"], f["id"]) in seen or not carries(order, i, must, answers_labeled(order, i, labeled)):
+                continue
+            seen.add((u["id"], f["id"]))
+            before = " / ".join(f"{x['speaker']}: {x['text'][:300]}" for x in order[max(0, i - 2):i] if x["session"] == u["session"])
+            items.append({"key": f"{u['id']}|{f['id']}", "label": f["label"], "must": must, "before": before, "text": u["text"][:1200]})
+    print(f"stance re-check: {len(items)} of his lines carry a detail's key words but were rejected or never labeled")
+    if not items:
+        return 0
+    results: dict[str, str] = {}
+
+    def run(b):
+        local: list[CallRecord] = []
+        try:
+            return tasks.stance(b, local), local
+        except LiveModelUnavailable as e:
+            print(f"  stance check failed: {str(e)[:140]}")
+            return {}, local
+    with ThreadPoolExecutor(4) as ex:
+        for res, local in ex.map(run, [items[i:i + 4] for i in range(0, len(items), 4)]):
+            calls.extend(local)
+            results.update(res)
+    kinds = {"states": "asserts", "agrees": "assents", "denies": "denies", "other": "denies"}
+    yes = 0
+    for it in items:
+        st = results.get(it["key"])
+        if st is None:
+            continue
+        uid, fid = it["key"].split("|")
+        ok = st in ("states", "agrees")
+        yes += ok
+        hits = [m for m in mentions if m["utterance"] == uid and m["fact"] == fid]
+        if hits:
+            for m in hits:
+                m.update({"verified": ok, "kind": kinds[st] if ok or m["kind"] != "denies" else m["kind"], "stance": st, "stance_checked": True})
+        else:
+            mentions.append({"utterance": uid, "fact": fid, "kind": kinds[st], "quote": by_id[uid]["text"][:160], "by": "stance-search",
+                             "verified": ok, "stance": st, "stance_checked": True})
+    print(f"stance re-check: {sum(1 for i in items if i['key'] in results)} answered, {yes} are him stating or agreeing")
+    return yes
 
 
 def search_suspect(cfg, utts, facts, mentions, calls: list[CallRecord]) -> int:
@@ -485,6 +549,7 @@ def main() -> None:
     ap.add_argument("--no-memo", action="store_true")
     ap.add_argument("--reaudit", action="store_true", help="recompute the audit from the saved labels (mentions.json) with the current code; no labeling")
     ap.add_argument("--memo", action="store_true", help="with --reaudit: also rewrite the memo (one Ultra call)")
+    ap.add_argument("--recheck-suspect", action="store_true", help="with --reaudit: re-ask rejected or unlabeled suspect lines that carry the key words, stance only (a few Ultra calls); saved to mentions.json")
     ap.add_argument("--suspect-search", action="store_true", help="with --reaudit: check his unlabeled lines that carry a detail's key terms (a few Ultra calls); answers are saved to mentions.json")
     ap.add_argument("--labeler", default="ultra", choices=["ultra", "lightning", "matcher"],
                     help="ultra (default): our diagnostic runs found Lightning missed about half of the suspect's adoptions")
@@ -504,6 +569,9 @@ def main() -> None:
         if a.suspect_search:
             search_suspect(cfg, utts, facts, mentions, calls)
             (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
+        if a.recheck_suspect:
+            recheck_suspect(cfg, utts, facts, mentions, calls)
+            (cd / "mentions.json").write_text(json.dumps(mentions, indent=1))
         rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
         (cd / "audit.json").write_text(json.dumps(rep, indent=1))
         print("re-audited from saved labels:", rep["headline"])
@@ -513,7 +581,7 @@ def main() -> None:
         run["reaudit"] = "audit recomputed by code from the saved labels, no new labeling"
         if a.memo:
             try:
-                (cd / "memo.json").write_text(json.dumps(tasks.write_memo(rep, calls), indent=1))
+                (cd / "memo.json").write_text(json.dumps(tasks.write_memo(rep, calls, [u["text"] for u in utts]), indent=1))
                 run["memo_cost_usd"] = round(sum(c.cost_usd for c in calls), 4)
             except LiveModelUnavailable as e:
                 print("memo unavailable:", e)
@@ -543,7 +611,7 @@ def main() -> None:
     print(rep["headline"])
     if not a.no_memo:
         try:
-            memo = tasks.write_memo(rep, calls)
+            memo = tasks.write_memo(rep, calls, [u["text"] for u in utts])
             (cd / "memo.json").write_text(json.dumps(memo, indent=1))
         except LiveModelUnavailable as e:
             print("memo unavailable:", e)

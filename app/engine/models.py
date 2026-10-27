@@ -28,6 +28,8 @@ class Utterance:
     text: str
     page: str = ""        # page as printed in the transcript (for citations)
     sensitive: bool = False  # graphic content: hidden in the UI unless revealed
+    page_end: str = ""    # last printed page when the turn continues onto the next page
+    split: bool = False   # a nod pulled out of an investigator's printed turn (not a turn of its own)
 
 
 @dataclass
@@ -40,6 +42,7 @@ class Fact:
     holdback: bool = False             # police say they kept it secret
     planted: bool = False              # a deliberately false detail investigators used as a test
     prior_statement: str = ""          # a documented earlier statement by the suspect with no public transcript (with source)
+    public_what: str = ""                # what exactly was reported publicly, with its source
     must: list = field(default_factory=list)  # key-term groups: a line carries the fact only if it has one alternate from every group
 
 

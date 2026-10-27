@@ -2,6 +2,9 @@
   const $ = (s, el = document) => el.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const CHIP = { cannot_corroborate: "Can't corroborate", unclear: "Unclear", may_corroborate: "Suspect said it first", not_adopted: "Not adopted" };
+  const pg = (x) => (x && x.page_end && x.page_end !== x.page ? `pp. ${esc(x.page)}\u2013${esc(x.page_end)}` : /^PDF/.test((x && x.page) || "") ? esc(x.page) : `p. ${esc((x && x.page) || "?")}`);
+  const lineList = (xs, n) => xs.slice(0, n).map((x) => `${pg(x)} “${esc((x.quote || "").slice(0, 110))}”${x.by === "key words" ? " (matched by key words)" : ""}`).join("; ");
+
   const ORDER = ["interrogator_first", "planted_adopted", "public", "prior_contact", "suspect_first", "never_adopted", "not_mentioned"];
   const KIND = { asks: "asks", asserts: "says", denies: "denies", assents: "agrees" };
   // Reviewer marks live only in this browser (nothing is sent anywhere).
@@ -85,8 +88,8 @@
         b.classList.add("picked");
         const fi = f.first_interrogator, fs = f.first_suspect;
         li.querySelector(".gans").innerHTML = `<b class="${ok ? "gok" : "gno"}">${ok ? "Right" : "Not quite"}.</b> ` + (truth === "interrogator"
-          ? `Investigators raised it ${f.interrogator_mentions_before_suspect} time${f.interrogator_mentions_before_suspect === 1 ? "" : "s"} first (${esc(sessionLabel(rep, fi.session).split(", ")[0])}, p. ${esc(fi.page)}); he ${fs.kind === "assents" ? "agreed to it" : "said it"} later.`
-          : `He said it first (${esc(sessionLabel(rep, fs.session).split(", ")[0])}, p. ${esc(fs.page)}).`);
+          ? `Investigators raised it ${f.interrogator_mentions_before_suspect} time${f.interrogator_mentions_before_suspect === 1 ? "" : "s"} first (${esc(sessionLabel(rep, fi.session).split(", ")[0])}, ${pg(fi)}); he ${fs.kind === "assents" ? "agreed to it" : "said it"} later.`
+          : `He said it first (${esc(sessionLabel(rep, fs.session).split(", ")[0])}, ${pg(fs)}).`);
         if (answered === picks.length) $("#guessScore").textContent = `You got ${right} of ${picks.length}. Reading the confession alone, it's hard to tell. The map below shows every detail.`;
       });
     });
@@ -101,7 +104,7 @@
 
   function exportCsv(rep) {
     const q = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
-    const at = (ev) => (ev ? `${sessionLabel(rep, ev.session)}, p. ${ev.page || "?"}` : "");
+    const at = (ev) => (ev ? `${sessionLabel(rep, ev.session)}, ${ev.page_end && ev.page_end !== ev.page ? `pp. ${ev.page}\u2013${ev.page_end}` : `p. ${ev.page || "?"}`}` : "");
     const head = ["Detail", "Origin", "Can it corroborate?", "First investigator mention", "Investigator words", "First suspect statement or agreement",
       "Suspect words", "How (states/agrees)", "Investigator mentions before the suspect's", "Source for the detail", "Your review"];
     const rows = rep.facts.map((f) => [f.fact.label, f.origin_label, f.corroboration.replace(/_/g, " "), at(f.first_interrogator),
@@ -152,7 +155,7 @@
       const dots = f.events.map((ev) => {
         const cls = ev.role === "interrogator" ? "inv" : ev.kind === "assents" ? "agr" : ev.kind === "denies" ? "den" : ev.role === "suspect" ? "sus" : "den";
         const first = ev.first ? " first" : "";
-        return `<span class="dot ${cls}${first}" style="left:${pos(ev)}%" title="${esc(ev.speaker)} ${KIND[ev.kind] || ev.kind}: ${esc(ev.sensitive ? "[graphic passage hidden]" : ev.quote)} (p. ${esc(ev.page)})"></span>`;
+        return `<span class="dot ${cls}${first}" style="left:${pos(ev)}%" title="${esc(ev.speaker)} ${KIND[ev.kind] || ev.kind}: ${esc(ev.sensitive ? "[graphic passage hidden]" : ev.quote)} (${pg(ev)})"></span>`;
       }).join("");
       const gap = fi && fs && fi.seq < fs.seq ? `<span class="gapline" style="left:${pos(fi)}%;width:${Math.max(0, pos(fs) - pos(fi))}%"></span>` : "";
       const sb = bands.map((b) => `<span class="sb ${b.recorded ? "" : "unrec"}" style="left:${b.x}%;width:${b.w}%"></span>`).join("");
@@ -185,8 +188,11 @@
       <p class="why">${esc(f.why)}</p>
       ${stats.length ? `<div class="stats">${stats.map((s) => `<span>${s}</span>`).join("")}</div>` : ""}
       ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail.replace(/\.$/, ""))}.${f.fact.source ? ` Source: ${esc(f.fact.source)}` : ""}</p>` : ""}
-      ${(f.investigator_lines_before || []).length ? `<p class="fine"><b>Investigator lines before his first statement</b> (earliest ${f.investigator_lines_before.length}): ${f.investigator_lines_before.map((x) => `p. ${esc(x.page)} “${esc(x.quote.slice(0, 110))}”${x.by === "key words" ? " (matched by key words)" : ""}`).join("; ")}</p>` : ""}
-      ${(f.related_statements || []).length ? `<p class="fine"><b>His related earlier statements</b> (part of the detail${f.related_statements_total > f.related_statements.length ? `; ${f.related_statements_total} in all` : ""}): ${f.related_statements.map((x) => `p. ${esc(x.page)} “${esc(x.quote.slice(0, 110))}”`).join("; ")}</p>` : ""}
+      ${(f.investigator_lines_before || []).length ? `<p class="fine"><b>Investigator lines before his first statement</b> (earliest ${f.investigator_lines_before.length}): ${lineList(f.investigator_lines_before, 3)}</p>` : ""}
+      ${(f.nearby_prompts || []).length ? `<p class="fine"><b>Nearby investigator prompts</b> (within 10 turns before his first statement, naming part of it): ${lineList(f.nearby_prompts, 5)}</p>` : ""}
+      ${(f.label_words_from_investigators || []).map((w) => `<p class="fine"><b>“${esc(w.word)}”</b>, from the detail's wording, came from investigators near his statement: ${lineList(w.lines, 3)}</p>`).join("")}
+      ${(f.related_statements || []).length ? `<p class="fine"><b>His related earlier statements</b> (part of the detail${f.related_statements_total > f.related_statements.length ? `; ${f.related_statements_total} in all` : ""}): ${lineList(f.related_statements, 3)}</p>` : ""}
+      ${(f.his_responses || []).length ? `<p class="fine"><b>What he answered when it was put to him</b>: ${lineList(f.his_responses, 3)}</p>` : ""}
       <h4 class="evhead">The lines that decide it</h4>
       <ol class="evlist">${f.events.map((ev, i) => [ev, i]).filter(([ev]) => ev.first).map(([ev, i]) => evItem(ev, i, rep)).join("") || "<li>No one said it in the recorded interviews.</li>"}</ol>
       <div class="review" role="group" aria-label="Your review of this detail">
@@ -228,7 +234,7 @@
     return `<li class="ev ${cls}"><i class="mk ${mark}" aria-hidden="true" style="margin-top:6px"></i>
       <div><span class="who">${esc(ev.speaker)}</span> ${KIND[ev.kind] || esc(ev.kind)}${first}${checked}${note}<br>${quote}
         <div><button data-ctx="${esc(ev.utterance)}">Read in context</button></div><div class="ctxbox"></div></div>
-      <span class="cite">${esc(sessionLabel(rep, ev.session).split(", ").slice(0, 2).join(", "))}, ${/^PDF/.test(ev.page || "") ? esc(ev.page) : `p. ${esc(ev.page || "?")}`}</span></li>`;
+      <span class="cite">${esc(sessionLabel(rep, ev.session).split(", ").slice(0, 2).join(", "))}, ${pg(ev)}</span></li>`;
   }
 
   async function showContext(btn) {

@@ -156,12 +156,58 @@ def test_read_aloud_statement_becomes_the_suspects_line():
                 "Is that your statement Brendan?)"), u("BRENDAN", "suspect", "Yes.")]
     out = split_read_aloud(inline, "BRENDAN")
     assert [x["role"] for x in out] == ["interrogator", "suspect", "interrogator", "suspect"]
-    assert out[1]["text"].startswith("(written statement, read aloud by Wiegert) Is I got off the bus") and out[1]["page"] == "469"
+    assert out[1]["text"].startswith("(read aloud by Wiegert from Brendan's written statement; printed speaker: WIEGERT) Is I got off the bus") and out[1]["page"] == "469"
     assert out[2]["text"] == "Is that your statement Brendan?"
     nextline = [u("WIEGERT", "interrogator", "Now let me read, this would be page two that you added here."), u("WIEGERT", "interrogator", "I'll read this. Is that okay?"),
                 u("BRENDAN", "suspect", "Yeah."), u("WIEGERT", "interrogator", "He was angry and that's why he did it. He told me he used rope to tie her up in the jeep.")]
     out = split_read_aloud(nextline, "BRENDAN")
-    assert out[3]["role"] == "suspect" and out[3]["text"].startswith("(written statement, read aloud by Wiegert) He was angry")
+    assert out[3]["role"] == "suspect" and out[3]["text"].startswith("(read aloud by Wiegert from Brendan's written statement; printed speaker: WIEGERT) He was angry")
     miranda = [u("WIEGERT", "interrogator", "I'm going to read this form to you, it's your rights."), u("BRENDAN", "suspect", "OK."),
                u("WIEGERT", "interrogator", "You have the right to remain silent and anything you say can be used against you in court.")]
     assert [x["role"] for x in split_read_aloud(miranda, "BRENDAN")] == ["interrogator", "suspect", "interrogator"]
+
+
+def test_prior_contact_cues_follow_one_general_rule():
+    from app.engine.ledger import PRIOR_CONTACT
+    yes = ["I talked to ya the other night and you said nothing about Monte.",
+           "those jeans that Tom had talked to you about the other night",
+           "We talked last er Monday we talked a little about some things a burn barrel out front",
+           "You told me last time that he had a fire going.",
+           "when we spoke to you at the school you said",
+           "The other night you said it was red."]
+    no = ["You told us before that he stabbed her.", "Did you talk to him that night?", "Tell us what you saw in the garage."]
+    assert all(PRIOR_CONTACT.search(t) for t in yes), [t for t in yes if not PRIOR_CONTACT.search(t)]
+    assert not any(PRIOR_CONTACT.search(t) for t in no), [t for t in no if PRIOR_CONTACT.search(t)]
+
+
+def test_echo_borrowed_context_and_turn_window():
+    s = [Session("A", "Day 1", date(2006, 3, 1))]
+    u = [
+        Utterance("A1", "A", 1, "KID", "suspect", "Branches, tires, tires, like a garbage bag.", "1"),
+        Utterance("A2", "A", 2, "DET", "interrogator", "So you see the branches, the tires, it's all on the fire already?", "1"),
+        Utterance("A3", "A", 3, "DET", "interrogator", "We know he hid something under the seat in the truck there.", "2"),
+        Utterance("A4", "A", 4, "DET", "interrogator", "It's not your fault.", "2"),
+        Utterance("A5", "A", 5, "DET", "interrogator", "Who shot her in the head?", "3"),
+        Utterance("A6", "A", 6, "KID", "suspect", "He did.", "3"),
+        Utterance("A7", "A", 7, "DET", "interrogator", "Then why didn't you tell us that?", "3"),
+        Utterance("A8", "A", 8, "KID", "suspect", "Cuz I couldn't think of it.", "3"),
+        Utterance("A9", "A", 9, "DET", "interrogator", "Now you remember it? (Brendan nods)", "3"),
+        Utterance("A10", "A", 10, "KID", "suspect", "(nods)", "3", split=True),
+        Utterance("A11", "A", 11, "DET", "interrogator", "Tell us about that then.", "3"),
+        Utterance("A14", "A", 14, "KID", "suspect", "That he shot her with his .22.", "3"),
+    ]
+    f = [Fact("F1", "Tires and branches on the fire", must=[["tire", "tires"], ["branch", "branches"], ["fire"]]),
+         Fact("F2", "A knife", must=[["knife"]]),
+         Fact("F3", "Shot with a .22 rifle", must=[["shot", "shoot"], ["22", "rifle"]])]
+    m = [Mention("A14", "F3", "asserts", verified=True)]
+    rep = by_fact(audit(Case("t", "T", "KID", s, u, f, m)))
+    # the investigator repeats his tires and branches: an echo, so it only adds 'fire'
+    f1 = rep["F1"]
+    assert f1["first_interrogator"] is None
+    assert any(e.get("kind_note", "").startswith("repeats his words") for e in f1["events"]) or not f1["events"]
+    # 'It's not your fault.' has no key word of its own, so it can't borrow 'knife' from the lines before (there is none anyway)
+    assert rep["F2"]["first_interrogator"] is None
+    # 'Who shot her in the head?' is 6 printed turns before his statement once the split nod isn't counted: in part
+    f3 = rep["F3"]
+    assert f3["origin"] == "interrogator_first" and f3["partly_supplied"] and f3["first_interrogator"]["utterance"] == "A5"
+    assert "“shot”" in f3["why"] and "he named “22”" in f3["why"]

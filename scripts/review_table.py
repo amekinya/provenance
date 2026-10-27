@@ -13,7 +13,8 @@ def main() -> None:
     rep = json.loads((cd / "audit.json").read_text())
     text = {u["id"]: u["text"] for u in json.loads((cd / "utterances.json").read_text())}
     run = json.loads((cd / "run.json").read_text()) if (cd / "run.json").exists() else {}
-    cell = lambda ev: f"{ev['utterance']} (p. {ev.get('page') or '?'}): {' '.join(text[ev['utterance']].split())[:160]}" if ev else "none"  # noqa: E731
+    from app.engine.ledger import pages_of  # noqa: PLC0415
+    cell = lambda ev: f"{ev['utterance']} ({pages_of(ev)}): {' '.join(text[ev['utterance']].split())[:160]}" if ev else "none"  # noqa: E731
     md = [f"# Review table: {rep['case']['title']}", "", f"Headline: {rep['headline']}", "",
           f"Run: {run.get('total_seconds', '?')} s, ${run.get('cost_usd', '?')}, labeler {run.get('labeler', '?')}, "
           f"verifier reasoning {run.get('verifier_reasoning', '?')}, deciding lines not re-checked: {run.get('unverified', '?')}", "",
@@ -21,17 +22,27 @@ def main() -> None:
     for f in rep["facts"]:
         note = f["why"] if f.get("partly_supplied") else ""
         more = [x for x in f.get("investigator_lines_before", []) if not f["first_interrogator"] or x["utterance"] != f["first_interrogator"]["utterance"]]
+        if f.get("supplied_across_lines"):
+            note += f["why"]
         if more:
-            note += (" " if note else "") + "Also before his first statement: " + "; ".join(f"{x['utterance']} (p. {x['page']})" for x in more) + "."
+            note += (" " if note else "") + "Also before his first statement: " + "; ".join(f"{x['utterance']} ({pages_of(x)})" for x in more) + "."
+        if f.get("nearby_prompts"):
+            note += (" " if note else "") + "Nearby investigator prompts: " + "; ".join(
+                f"{x['utterance']} ({pages_of(x)}): {' '.join(x['quote'].split())[:60]}" for x in f["nearby_prompts"]) + "."
+        for w in f.get("label_words_from_investigators", []):
+            note += (" " if note else "") + f"'{w['word']}' came from investigators: " + "; ".join(f"{x['utterance']} ({pages_of(x)})" for x in w["lines"]) + "."
         if f.get("related_statements"):
             note += (" " if note else "") + "His related earlier statements: " + "; ".join(
-                f"{x['utterance']} (p. {x['page']}): {' '.join(x['quote'].split())[:70]}" for x in f["related_statements"]) + "."
+                f"{x['utterance']} ({pages_of(x)}): {' '.join(x['quote'].split())[:70]}" for x in f["related_statements"]) + "."
+        if f.get("his_responses"):
+            note += (" " if note else "") + "His answers when it was put to him: " + "; ".join(
+                f"{x['utterance']} ({pages_of(x)}): {' '.join(x['quote'].split())[:60]}" for x in f["his_responses"]) + "."
         md.append(f"| {f['fact']['id']} | {f['fact']['label']} | {f['origin_label']} | {cell(f['first_interrogator'])} | {cell(f['first_suspect'])} | {note} |".replace("\n", " "))
     memo = cd / "memo.json"
     if memo.exists():
         import re  # noqa: PLC0415
         pages = {str(u["page"]) for u in json.loads((cd / "utterances.json").read_text())}
-        cited = set(re.findall(r"p\. ?(\w+)", memo.read_text()))
+        cited = set(re.findall(r"pp?\. ?(\w+)", memo.read_text())) | set(re.findall(r"pp\. \w+\u2013(\w+)", memo.read_text()))
         md += ["", f"Memo page citations: {len(cited)} distinct; not in the transcripts: {sorted(cited - pages) or 'none'}"]
     (cd / "review_table.md").write_text("\n".join(md) + "\n")
     print("\n".join(md))

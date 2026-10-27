@@ -60,6 +60,7 @@ jobs:
           if [[ "$STEPS_" == *",facts,"* ]]; then python -m scripts.facts "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",tag,"* ]]; then python -m scripts.tag "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",reaudit,"* ]]; then python -m scripts.tag "$CASE" --reaudit --memo 2>&1 | tee -a logs/pipeline.txt; fi
+          if [[ "$STEPS_" == *",recheck,"* ]]; then python -m scripts.tag "$CASE" --reaudit --recheck-suspect --memo 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",suspectsearch,"* ]]; then python -m scripts.tag "$CASE" --reaudit --suspect-search --memo 2>&1 | tee -a logs/pipeline.txt; fi
           if [[ "$STEPS_" == *",oneprompt,"* ]]; then python -m scripts.one_prompt_case "$CASE" 2>&1 | tee -a logs/pipeline.txt; fi
           tail -20 logs/pipeline.txt >> "$GITHUB_STEP_SUMMARY"

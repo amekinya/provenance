@@ -216,38 +216,118 @@ def _verify(items: list[dict], calls: list[CallRecord] | None, reasoning: bool) 
     return {c["key"]: c for c in out.get("checks", [])}
 
 
-# ---------------------------------------------------------------------------------------------------------------------
-# 5. Memo (Ultra), from findings only
-# ---------------------------------------------------------------------------------------------------------------------
-MEMO_SCHEMA = {
+STANCE_SCHEMA = {
     "type": "object",
-    "properties": {"summary": {"type": "string"}, "key_points": {"type": "array", "items": {"type": "string"}},
-                   "limits": {"type": "array", "items": {"type": "string"}}},
-    "required": ["summary", "key_points", "limits"], "additionalProperties": False,
+    "properties": {"checks": {"type": "array", "items": {"type": "object", "properties": {
+        "key": {"type": "string"}, "stance": {"type": "string", "enum": ["states", "agrees", "denies", "other"]}},
+        "required": ["key", "stance"], "additionalProperties": False}}},
+    "required": ["checks"], "additionalProperties": False,
 }
 
 
-def write_memo(report: dict, calls: list[CallRecord] | None = None) -> dict:
-    brief = {"headline": report["headline"], "counts": report["counts"],
-             "facts": [{"label": f["fact"]["label"], "origin": f["origin_label"], "why": f["why"],
-                        "investigator_lines_before_his_first_statement": [f"p. {x['page']}: {x['quote'][:120]}" for x in f.get("investigator_lines_before", [])],
-                        "his_related_earlier_statements": [f"p. {x['page']}: {x['quote'][:120]}" for x in f.get("related_statements", [])],
-                        "investigator_mentions_before_suspect": f["interrogator_mentions_before_suspect"],
-                        "adopted_by_agreeing": f["adopted_by_assent"], "across_sessions": f["crossed_sessions"]} for f in report["facts"]],
-             "sessions": report["session_stats"]}
-    return chat_json(settings.ultra, [
-        {"role": "system", "content": "You write a short internal memo for defense counsel about a corroboration audit of an interrogation. "
-                                      "Use ONLY the findings given; cite pages as given; never claim the confession is false or that the suspect is "
-                                      "innocent; say what the record shows about where details came from. Plain, precise language. For a detail "
-                                      "investigators named in part, always state both halves with their pages, e.g. 'Investigators asked about the "
-                                      "fire (p. 441); he named tires and branches (p. 442)'. Open by saying this is a draft for counsel's review, "
-                                      "computed from the record with machine-checked lines (investigator lines matched by key words in code; the "
-                                      "suspect's lines labeled by a model and checked by code), and that borderline suspect-side calls need review. Say a "
-                                      "detail 'came from him first in the record'; never say he 'volunteered' it. Where findings list several "
-                                      "investigator lines before his first statement, or his related earlier statements, cite them with pages."},
-        {"role": "user", "content": f"Findings: {json.dumps(brief)[:60000]}\n\nWrite: summary (3-4 sentences), key_points (4-6 bullets, most "
-                                    "important first, each with its page cite), limits (2-4 bullets: what this audit can't tell)."}],
-        schema=MEMO_SCHEMA, purpose="Write the memo", reasoning=True, max_tokens=5000, calls=calls)
+def stance(items: list[dict], calls: list[CallRecord] | None = None) -> dict[str, str]:
+    """The suspect side's only model question. Code has already found the detail's key words in his line (or in the
+    question it answers). items: [{key, label, must, before, text}] -> {key: states|agrees|denies|other}. The detail is
+    given by its short label and key words only, never the long description (extra clauses caused wrong rejections)."""
+    body = "\n\n".join(
+        f"[{i['key']}] Detail: {i['label']} (key words: " + " + ".join("(" + " | ".join(g) + ")" for g in i["must"]) + ")"
+        f"\nThe lines just before: {i['before'] or '(none)'}\nHis line: {i['text']}" for i in items)
+    def ask(reasoning: bool) -> dict:
+        return chat_json(settings.ultra, [
+            {"role": "system", "content": "You read lines a suspect said in an interrogation. For each item, answer only: in his line, read with "
+                                          "the question it answers, is he STATING the detail, AGREEING to it, DENYING it, or is it OTHER "
+                                          "(the words are about something else, or he only asks or guesses aloud)? A short answer to a "
+                                          "question about the detail states it ('With the shovel.' to 'How did he break the bones?'). "
+                                          "Don't judge whether it's true or complete."},
+            {"role": "user", "content": body}],
+            schema=STANCE_SCHEMA, purpose="Suspect stance", reasoning=reasoning, max_tokens=8000 if reasoning else 2000, calls=calls)
+    try:
+        out = ask(VERIFY_REASONING)
+    except LiveModelUnavailable as e:
+        print(f"  stance (reasoning on) failed: {str(e)[:120]}; retrying without reasoning")
+        out = ask(False)
+    return {c["key"]: c["stance"] for c in out.get("checks", [])}
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# 5. Memo (Ultra), from findings only
+# ---------------------------------------------------------------------------------------------------------------------
+SUMMARY_SCHEMA = {"type": "object", "properties": {"summary": {"type": "string"}}, "required": ["summary"], "additionalProperties": False}
+BANNED = re.compile(r"\b(fact[- ]feeding|fed (him|to him)|volunteer\w*|repeated\w*)\b", re.I)
+_QUOTE = re.compile(r"[\"\u201c]([^\"\u201d]{4,})[\"\u201d]")
+
+
+def _norm(t: str) -> str:
+    return " ".join(re.sub(r"[^a-z0-9' ]+", " ", t.lower().replace("\u2019", "'")).split())
+
+
+def memo_problems(text: str, lines: list[str]) -> list[str]:
+    """Code checks on model-written memo text: banned wording, and every quotation must be a contiguous part of ONE line
+    of the transcript (never words spliced from different lines or pages)."""
+    probs = [f"uses '{m.group(0)}'" for m in BANNED.finditer(text)]
+    normed = [_norm(x) for x in lines]
+    for q in _QUOTE.findall(text):
+        nq = _norm(q)
+        if nq and not any(nq in x for x in normed):
+            probs.append(f"quotation not found in a single line: {q[:60]!r}")
+    return probs
+
+
+def memo_points(report: dict) -> tuple[list[str], list[str]]:
+    """Key points and limits, written by code with a fixed rule so both directions are always covered: the 3 details
+    investigators said first with the most investigator mentions before his first statement, then the first 3 details
+    that came from him first in the record (in fact-list order), then public and earlier-statement details, then the
+    detail he never adopted. Each point is the ledger's own explanation, with its page citations."""
+    facts = report["facts"]
+    inv = sorted((f for f in facts if f["origin"] == "interrogator_first"),
+                 key=lambda f: (-(f["interrogator_mentions_before_suspect"] or 0), f["fact"]["id"]))[:3]
+    his = [f for f in facts if f["origin"] == "suspect_first"][:3]
+    pts = [f"Investigators first: {f['fact']['label']}. {f['why']}" for f in inv]
+    pts += [f"From him first in the record: {f['fact']['label']}. {f['why']}" for f in his]
+    pub = [f["fact"]["label"] for f in facts if f["origin"] == "public"]
+    if pub:
+        pts.append(f"Reported publicly before the interviews ({len(pub)}): " + "; ".join(pub) + ".")
+    prior = [f for f in facts if f["origin"] == "prior_contact"]
+    pts += [f"May trace to an earlier conversation with no public transcript: {f['fact']['label']}. {f['why']}" for f in prior]
+    never = [f for f in facts if f["origin"] in ("never_adopted",)]
+    pts += [f"Never adopted: {f['fact']['label']}. {f['why']}" for f in never]
+    limits = ["Draft for counsel's review: investigator lines are matched by key words in code; the suspect's lines were labeled by "
+              "Nemotron 3 Ultra and checked by code, and borderline calls on his side can change between runs.",
+              "Unrecorded contacts can't be traced; a detail that may come from one is marked unclear, and nothing is said about what "
+              "happened in them.",
+              "'Already public' relies on the reports the court listed and the news we could date.",
+              "Key terms decide what counts as stating a detail; a reader should check each cited line."]
+    return pts, limits
+
+
+def write_memo(report: dict, calls: list[CallRecord] | None = None, lines: list[str] | None = None) -> dict:
+    """Ultra writes the summary only; code checks it (banned wording, quotations from a single line) and writes the key
+    points and limits itself, so both directions are always covered and every citation is the ledger's."""
+    pts, limits = memo_points(report)
+    brief = {"headline": report["headline"], "counts": report["counts"], "key_points": pts,
+             "sessions": [{k: s[k] for k in ("label", "turns", "interrogator_share_of_words", "questions", "questions_that_carry_facts")}
+                          for s in report["session_stats"]]}
+    msgs = [{"role": "system", "content": "You write the 3-4 sentence summary of a memo for defense counsel about a corroboration audit of an "
+                                          "interrogation. Use ONLY the findings given. Open by saying it is a draft for counsel's review, computed "
+                                          "from the record with machine-checked lines. Cover both directions: details investigators said first and "
+                                          "details that came from him first in the record. Never claim the confession is false or true, never "
+                                          "describe what happened in unrecorded contacts, and don't use the words 'volunteered', 'fact-feeding' "
+                                          "or 'repeated' (say 'questions that named the detail'). Don't quote transcript lines."},
+            {"role": "user", "content": f"Findings: {json.dumps(brief)[:40000]}"}]
+    summary, probs = "", ["not written"]
+    for _ in range(2):
+        out = chat_json(settings.ultra, msgs, schema=SUMMARY_SCHEMA, purpose="Write the memo", reasoning=False, max_tokens=1200, calls=calls)
+        summary = out.get("summary", "").strip()
+        probs = memo_problems(summary, lines or [])
+        if not probs:
+            break
+        msgs.append({"role": "user", "content": f"Rewrite the summary; problems: {probs}"})
+    if probs:  # fall back to a summary written by code from the counts
+        c = report["counts"]
+        summary = (f"Draft for counsel's review, computed from the record with machine-checked lines. {report['headline']} "
+                   f"Investigators said {c['interrogator_first']} details first; {c['suspect_first']} came from him first in the record.")
+    return {"summary": summary, "key_points": pts, "limits": limits, "by": "summary: Nemotron 3 Ultra (checked by code); points: code",
+            "summary_checks": probs}
 
 
 # ---------------------------------------------------------------------------------------------------------------------

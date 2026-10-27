@@ -171,11 +171,13 @@ def split_read_aloud(utts: list[dict], suspect_key: str) -> list[dict]:
                 tail = q.group(1) if q else ""
                 body = body[: q.start()] if q else body
                 before = u["text"][: m.start()].strip()
+                body_start = m.start(1)
+                tail_start = body_start + (q.start(1) if q else len(body))
                 if before:
-                    out.append(u | {"text": before})
-                out.append(_statement(u, body, suspect_key))
+                    out.append(u | {"text": before, "_segs": _span(u, 0, m.start())})
+                out.append(_statement(u, body, suspect_key) | {"_segs": _span(u, body_start, tail_start)})
                 if tail:
-                    out.append(u | {"text": tail})
+                    out.append(u | {"text": tail, "_segs": _span(u, tail_start, len(u["text"]))})
                 pending = None
                 continue
             out.append(u)
@@ -193,9 +195,17 @@ def split_read_aloud(utts: list[dict], suspect_key: str) -> list[dict]:
     return out
 
 
+def _span(u: dict, start: int, end: int) -> list:
+    """The page segments of u's text between two character offsets (for a turn split in two)."""
+    segs = u.get("_segs") or [[0, u["page"]]]
+    first = max((sg for sg in segs if sg[0] <= start), key=lambda sg: sg[0])
+    return [[0, first[1]]] + [[sg[0] - start, sg[1]] for sg in segs if start < sg[0] < end]
+
+
 def _statement(u: dict, body: str, suspect_key: str) -> dict:
     reader = u["speaker"].title()
-    return u | {"speaker": suspect_key, "role": "suspect", "text": f"(written statement, read aloud by {reader}) {body.strip()}",
+    return u | {"speaker": suspect_key, "role": "suspect",
+                "text": f"(read aloud by {reader} from {suspect_key.title()}'s written statement; printed speaker: {u['speaker']}) {body.strip()}",
                 "read_aloud_by": u["speaker"]}
 
 
@@ -227,10 +237,13 @@ def merge(session_id: str, pages: list[dict], roster: dict[str, str], start_seq:
             for k, (who, chunk) in enumerate(parts):
                 if who == "suspect":
                     utts.append({"id": "", "session": session_id, "seq": 0, "speaker": suspect_key, "role": "suspect", "text": chunk,
-                                 "page": str(label), "sensitive": False, "from_note": True})
+                                 "page": str(label), "sensitive": False, "from_note": True, "_segs": [[0, str(label)]]})
                     continue
                 if k == 0 and not name and utts:
-                    utts[-1]["text"] = (utts[-1]["text"] + " " + chunk).strip()
+                    prev = utts[-1]
+                    if prev["_segs"][-1][1] != str(label):  # the turn continues onto the next printed page
+                        prev["_segs"].append([len(prev["text"]) + 1, str(label)])
+                    prev["text"] = (prev["text"] + " " + chunk).strip()
                     continue
                 if k > 0 and parts[k - 1][0] == "suspect":  # words after a nod belong to whoever was speaking
                     spk = next((u for u in reversed(utts) if not u.get("from_note")), None)
@@ -238,12 +251,15 @@ def merge(session_id: str, pages: list[dict], roster: dict[str, str], start_seq:
                 else:
                     nm, rl = (name, role) if name else ("UNKNOWN", "other")
                 utts.append({"id": "", "session": session_id, "seq": 0, "speaker": nm, "role": rl, "text": chunk,
-                             "page": str(label), "sensitive": False})
+                             "page": str(label), "sensitive": False, "_segs": [[0, str(label)]]})
     utts = split_read_aloud(utts, suspect_key)
     for i, u in enumerate(utts):
         u["id"] = f"{session_id}-{i + 1:04d}"
         u["seq"] = start_seq + i
-        u.pop("from_note", None)
+        segs = u.pop("_segs", None) or [[0, u["page"]]]
+        u["page"], u["page_end"] = segs[0][1], (segs[-1][1] if segs[-1][1] != segs[0][1] else "")
+        if u.pop("from_note", None):
+            u["split"] = True  # a nod pulled out of the investigator's printed turn: not a turn of its own
     if unknown:
         print(f"  {session_id}: labels not in the roster (role 'other'): {dict(sorted(unknown.items(), key=lambda x: -x[1])[:10])}")
     return utts
@@ -292,7 +308,9 @@ def main() -> None:
         flagged = {(u["id"], u["text"]) for u in old if u.get("sensitive")}
         flagged_long = {(u["session"], u["text"]) for u in old if u.get("sensitive") and len(u["text"].split()) >= 8}  # ids can shift
         for u in all_utts:
-            u["sensitive"] = u.get("sensitive", False) or (u["id"], u["text"]) in flagged or (u["session"], u["text"]) in flagged_long
+            body = re.sub(r"^\([^)]*\)\s*", "", u["text"]) if u.get("read_aloud_by") else None  # the note before a read-aloud statement may change
+            u["sensitive"] = (u.get("sensitive", False) or (u["id"], u["text"]) in flagged or (u["session"], u["text"]) in flagged_long
+                              or (body is not None and any(i == u["id"] and re.sub(r"^\([^)]*\)\s*", "", t) == body for i, t in flagged)))
         keep = [u for u in old if want and u["session"] not in want]  # with --sessions, only those sessions are replaced
         (cd / "utterances.json").write_text(json.dumps(sorted(keep + all_utts, key=lambda u: u["seq"]), indent=1))
     cost = sum(c.cost_usd for c in calls)
