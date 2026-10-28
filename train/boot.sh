@@ -10,8 +10,19 @@ case "${ROLE:-train}" in
   train)
     get train_checker.py /tmp/train.py
     pip install -q --no-cache-dir "transformers>=5.21" accelerate safetensors
-    export OUT_DIR=${OUT_DIR:-/models}
-    exec python /tmp/train.py ;;
+    # The bucket mount can't rename or overwrite files (safetensors saves to a temp file, then renames it), so train to
+    # local disk and copy the finished model into a fresh folder <name>@<time>; DONE is written last.
+    BUCKET=${OUT_DIR:-/models}
+    export OUT_DIR=/tmp/out
+    set +e; python /tmp/train.py; rc=$?; set -e
+    if [ -d "/tmp/out/${NAME}" ]; then
+      dest="${BUCKET}/${NAME}@$(date -u +%Y%m%d-%H%M%S)"
+      mkdir -p "$dest"
+      cp -r "/tmp/out/${NAME}/." "$dest/"
+      if [ "$rc" = 0 ]; then echo "finished $(date -u)" > "$dest/DONE"; fi
+      echo "copied to $dest:"; ls -la "$dest"
+    fi
+    exit "$rc" ;;
   serve)
     get server.py /tmp/server.py
     pip install -q --no-cache-dir "transformers>=5.21" accelerate safetensors fastapi "uvicorn[standard]" soundfile librosa

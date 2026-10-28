@@ -47,6 +47,19 @@ _lock = threading.Lock()
 NAMES = set(filter(None, os.environ.get("MODEL_NAMES", "faithful-checker,provenance-matcher,secondlook-matcher,base-reranker").split(",")))
 
 
+def model_dir(name: str) -> Path | None:
+    """Where a fine-tuned model lives. The bucket mount can't rename or overwrite files, so each training run copies its
+    finished model into a fresh folder <name>@<time> and writes DONE last; the newest finished folder wins. A plain
+    <name> folder with weights (older layout) is the fallback."""
+    runs = sorted(p for p in MODELS_DIR.glob(f"{name}@*") if (p / "DONE").exists() and (p / "config.json").exists())
+    if runs:
+        return runs[-1]
+    plain = MODELS_DIR / name
+    if (plain / "config.json").exists() and any(plain.glob("*.safetensors")):
+        return plain
+    return None
+
+
 def reranker(name: str):
     """Load a reranker once (thread-safe). Only names on the allow-list; only 'base-reranker' means the untuned model.
     A fine-tuned name whose weights are missing is an error, never a silent fallback to the base model."""
@@ -57,10 +70,10 @@ def reranker(name: str):
             return _rerankers[name]
         from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-        path = MODELS_DIR / name
+        path = model_dir(name)
         if name == "base-reranker":
             src = BASE_RERANKER
-        elif (path / "config.json").exists():
+        elif path is not None:
             src = str(path)
         else:
             raise HTTPException(503, f"Fine-tuned weights for {name!r} aren't in {MODELS_DIR} yet")
@@ -98,7 +111,7 @@ def _preload() -> None:
 def health():
     return {"device": DEVICE, "gpu": torch.cuda.get_device_name(0) if DEVICE == "cuda" else None,
             "asr_loaded": _asr is not None, "rerankers": {k: v[2] for k, v in _rerankers.items()},
-            "available": sorted(p.name for p in MODELS_DIR.glob("*") if (p / "config.json").exists()) if MODELS_DIR.exists() else []}
+            "available": {n: model_dir(n).name for n in sorted(NAMES) if n != "base-reranker" and model_dir(n)} if MODELS_DIR.exists() else {}}
 
 
 @app.get("/metrics/{name}")
@@ -106,7 +119,8 @@ def metrics(name: str):
     """The training job's report (metrics.json next to the weights), so results can be published without bucket access."""
     if name not in NAMES or name == "base-reranker":
         raise HTTPException(404, "unknown model")
-    f = MODELS_DIR / name / "metrics.json"
+    d = model_dir(name)
+    f = d / "metrics.json" if d else MODELS_DIR / name / "metrics.json"
     if not f.exists():
         raise HTTPException(404, "no training report yet")
     return json.loads(f.read_text())
