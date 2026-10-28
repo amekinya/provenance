@@ -162,11 +162,19 @@ def provenance_basic(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     return _with_trace(rec, utts, facts, mentions, calls, full=False)
 
 
+def _matcher_threshold() -> float:
+    """The matcher's decision threshold, chosen on the dev split by the training job (eval/training.json); 0.5 if absent."""
+    try:
+        return float(json.loads((ROOT / "eval" / "training.json").read_text())["threshold"])
+    except Exception:  # noqa: BLE001
+        return 0.5
+
+
 def provenance_matcher(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     from scripts.tag import tag_with_matcher  # noqa: PLC0415
 
     utts, facts = _inputs(rec)
-    mentions, _ = tag_with_matcher(utts, facts, calls)
+    mentions, _ = tag_with_matcher(utts, facts, calls, threshold=_matcher_threshold())
     return _with_trace(rec, utts, facts, mentions, calls)
 
 
