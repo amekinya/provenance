@@ -6,7 +6,7 @@ A confession is treated as reliable when the suspect knows things only the culpr
 
 Checking this by hand means reading hundreds of transcript pages, sometimes for weeks. Provenance does it in minutes, with a page citation for every claim.
 
-Live demo: _link after deploy_. Built for the Nebius × NVIDIA Global AI Hackathon (Best Apps and Agents).
+**Live demo: [provenance-2401.onrender.com](https://provenance-2401.onrender.com)** (free hosting: the first visit after a quiet spell can take about a minute to wake up). Built for the Nebius × NVIDIA Global AI Hackathon (Best Apps and Agents).
 
 **What this is not.** It doesn't decide guilt or whether a confession is true. It shows where each detail first appears in the record, with citations, so defense counsel, innocence organizations and courts can check. Dassey's conviction was upheld by the Seventh Circuit en banc (2017), and the U.S. Supreme Court declined review (2018). This project takes no position on the case.
 
