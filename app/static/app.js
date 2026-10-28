@@ -2,6 +2,12 @@
   const $ = (s, el = document) => el.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const CHIP = { cannot_corroborate: "Can't corroborate", unclear: "Unclear", may_corroborate: "Suspect said it first", not_adopted: "Not adopted" };
+  // Plain labels by where the detail came from (the chip a reader sees on each row).
+  const ORIGIN_CHIP = { interrogator_first: ["Investigators first", "cannot_corroborate"], planted_adopted: ["Investigators first", "cannot_corroborate"],
+    public: ["Already public", "public"], prior_contact: ["Earlier talk?", "unclear"], suspect_first: ["He said it first", "may_corroborate"],
+    never_adopted: ["Never adopted", "not_adopted"], not_mentioned: ["Never said", "not_adopted"] };
+  const chipOf = (f, who) => { const [t, c] = ORIGIN_CHIP[f.origin] || [CHIP[f.corroboration], f.corroboration];
+    return `<span class="chip ${c}">${esc(who ? t.replace(/^He /, `${who} `) : t)}</span>`; };
   const pg = (x) => (x && x.page_end && x.page_end !== x.page ? `pp. ${esc(x.page)}\u2013${esc(x.page_end)}` : /^PDF/.test((x && x.page) || "") ? esc(x.page) : `p. ${esc((x && x.page) || "?")}`);
   const lineList = (xs, n) => xs.slice(0, n).map((x) => `${pg(x)} ${x.read_aloud ? `[${esc(x.read_aloud)}] ` : ""}“${esc((x.quote || "").slice(0, 110))}”${x.by === "key words" ? " (matched by key words)" : ""}`).join("; ");
 
@@ -50,8 +56,8 @@
 
   // ------------------------------------------------------------ rendering
   function render(rep) {
-    $("#caseTitle").textContent = rep.case.title;
-    $("#caseSub").textContent = `${rep.case.suspect}: ${rep.sessions.filter((s) => s.recorded).length} interviews with public transcripts, ${rep.utterance_count.toLocaleString()} turns of speech, ${rep.facts.length} key details checked`;
+    const adopted = rep.facts.filter((f) => !["never_adopted", "not_mentioned"].includes(f.origin)).length;
+    $("#caseLine").innerHTML = `<b>${esc(rep.case.title)}.</b> ${rep.sessions.filter((s) => s.recorded).length} recorded interviews, ${rep.utterance_count.toLocaleString()} lines. Of the ${adopted} key details ${esc(rep.case.suspect.split(" ")[0])} stated or agreed to:`;
     $("#headline").textContent = rep.headline;
     $("#draftNote").textContent = "Draft for counsel, computed from the record with machine-checked lines: investigator lines are matched by the details' key words in code; the suspect's lines are labeled by Nemotron 3 Ultra and checked against the same key words. Every line a verdict rests on is in the review queue, deciding lines first.";
     renderCounts(rep);
@@ -120,6 +126,16 @@
 
   function renderCounts(rep) {
     const c = rep.counts;
+    const inPart = rep.facts.filter((f) => f.origin === "interrogator_first" && f.partly_supplied).length;
+    const who = esc(rep.case.suspect.split(" ")[0]);
+    const tiles = [["t-inv", c.interrogator_first + c.planted_adopted, "Investigators said it first", inPart ? `${inPart} of them in part` : ""],
+      ["t-pub", c.public, "Already in the news before he said it", ""],
+      ["t-unc", c.prior_contact, "May come from an earlier, unrecorded talk", ""],
+      ["t-sus", c.suspect_first, `${who} said it first`, ""]];
+    $("#tiles").innerHTML = tiles.map(([cls, n, lab, sm]) => `<div class="tile ${cls}"><b>${n}</b><span>${lab}</span>${sm ? `<small>${sm}</small>` : ""}</div>`).join("");
+    const never = c.never_adopted + c.not_mentioned;
+    $("#tileNote").textContent = `Only the details ${rep.case.suspect.split(" ")[0]} said first could show he knew something about the crime; Provenance doesn't decide whether he did.${never ? ` ${never} other detail${never === 1 ? " was" : "s were"} put to him and never adopted.` : ""} Click any detail below to see the lines.`;
+    if (!$("#countbar")) return;
     const parts = [["c-inv", c.interrogator_first + c.planted_adopted, "investigators first"], ["c-pub", c.public, "already public"],
       ["c-unc", c.prior_contact, "unclear"], ["c-sus", c.suspect_first, "suspect first"], ["c-never", c.never_adopted + c.not_mentioned, "not adopted"]];
     const total = parts.reduce((a, p) => a + p[1], 0) || 1;
@@ -159,10 +175,10 @@
       }).join("");
       const gap = fi && fs && fi.seq < fs.seq ? `<span class="gapline" style="left:${pos(fi)}%;width:${Math.max(0, pos(fs) - pos(fi))}%"></span>` : "";
       const sb = bands.map((b) => `<span class="sb ${b.recorded ? "" : "unrec"}" style="left:${b.x}%;width:${b.w}%"></span>`).join("");
-      const label = `${f.fact.label}: ${CHIP[f.corroboration]}. ${f.origin_label}.`;
+      const label = `${f.fact.label}: ${(ORIGIN_CHIP[f.origin] || [CHIP[f.corroboration]])[0]}. ${f.origin_label}.`;
       const rv = reviewOf(rep, f.fact.id);
       return `<div class="frow" role="row" tabindex="0" data-i="${i}" data-fid="${esc(f.fact.id)}" aria-label="${esc(label)}">
-        <div class="flabel" role="cell"><b>${esc(f.fact.label)}</b><span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span><span class="rvmark">${rv ? (rv.status === "ok" ? "checked" : "re-check") : ""}</span></div>
+        <div class="flabel" role="cell"><b>${esc(f.fact.label)}</b>${chipOf(f)}<span class="rvmark">${rv ? (rv.status === "ok" ? "checked" : "re-check") : ""}</span></div>
         <div class="track" role="cell">${sb}${gap}${dots}</div></div>`;
     }).join("");
     const map = $("#map");
@@ -185,7 +201,7 @@
     if (f.crossed_sessions) stats.push("Supplied in an <b>earlier interview</b>");
     if (f.fact.public_before) stats.push(`Public since <b>${esc(f.fact.public_before)}</b>`);
     if (f.origin !== "public" && (f.fact.reports || []).length) stats.push("<b>Partly public</b>");
-    d.innerHTML = `<h3>${esc(f.fact.label)} <span class="chip ${f.corroboration}">${CHIP[f.corroboration]}</span></h3>
+    d.innerHTML = `<h3>${esc(f.fact.label)} ${chipOf(f)}</h3>
       <p class="why">${esc(f.why)}</p>
       ${stats.length ? `<div class="stats">${stats.map((s) => `<span>${s}</span>`).join("")}</div>` : ""}
       ${f.fact.detail ? `<p class="fine">What counts as stating it: ${esc(f.fact.detail.replace(/\.$/, ""))}.${f.fact.source ? ` Source: ${esc(f.fact.source)}` : ""}</p>` : ""}

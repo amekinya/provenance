@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Provenance: who said it first?</title>
-<meta name="description" content="A corroboration audit of police interrogations: which crime details the suspect said first, and which investigators supplied.">
+<meta name="description" content="Who said it first? Provenance reads an interrogation record and shows, detail by detail, whether the suspect or the investigators said it first, with page citations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
@@ -23,60 +23,70 @@
 
 <main class="wrap" id="main">
   <section class="hero" id="hero">
-    <p class="kicker">A corroboration audit of a police interrogation</p>
     <h1 id="caseTitle">Who said it first?</h1>
-    <p class="sub" id="caseSub">A confession is treated as proof when it contains details "only the perpetrator could know." Provenance checks the record: for every key detail, did the suspect say it first, or did investigators?</p>
-    <p class="headline" id="headline" aria-live="polite"></p>
-    <p class="fine" id="draftNote"></p>
-    <div class="countbar" id="countbar" aria-label="How the details break down"></div>
-    <p class="guard"><strong>What this is not:</strong> it doesn't decide guilt or whether a confession is true. It shows where each detail first appears in the record, with page citations, so counsel can check.</p>
+    <p class="lede">A confession sounds convincing when the suspect knows details “only the culprit could know.” Yet in 24 of 26 DNA exonerations with a false confession, the confession still held accurate crime-scene details (Garrett, 2015). An innocent person had to learn them somewhere.</p>
+    <p class="lede"><b>Provenance reads the whole interrogation record and shows, detail by detail, whether the suspect said it first or the investigators did, with the page to check.</b></p>
+    <p class="caseline" id="caseLine"></p>
+    <div class="tiles" id="tiles" aria-live="polite"></div>
+    <p class="sr-only" id="headline"></p>
+    <p class="fine tilenote" id="tileNote"></p>
   </section>
 
   <section class="guess" id="guessSec" hidden aria-labelledby="guessH">
-    <h2 id="guessH">Before you look: who said it first?</h2>
-    <p class="fine">Each of these details was in the confession. For each one, guess whether the investigators or the suspect put it into the record first.</p>
+    <h2 id="guessH">Try it yourself: who said it first?</h2>
+    <p class="fine">Each of these was in the confession. Guess, then see what the record shows.</p>
     <ol class="guesslist" id="guessList"></ol>
     <p class="guessscore" id="guessScore" aria-live="polite"></p>
   </section>
 
   <section class="mapsec" aria-labelledby="mapH">
     <div class="sec-head">
-      <h2 id="mapH">Where each detail came from</h2>
+      <h2 id="mapH">Every detail, across the interviews</h2>
       <div class="legend" aria-hidden="true">
-        <span><i class="mk inv"></i>Investigator says or asks it</span>
-        <span><i class="mk sus"></i>Suspect states it</span>
-        <span><i class="mk agr"></i>Suspect agrees ("yeah")</span>
+        <span><i class="mk inv"></i>Investigators mention it</span>
+        <span><i class="mk sus"></i>He says it</span>
+        <span><i class="mk agr"></i>He agrees (“yeah”)</span>
         <span><i class="mk first"></i>First time</span>
       </div>
     </div>
     <div class="map" id="map" role="table" aria-label="Detail-by-detail timeline across the interviews"></div>
-    <p class="fine">Each row is one detail. Time runs left to right through the interviews. Rows are sorted with details investigators said first at the top. Select a row to read the exact lines.</p>
-    <p class="fine"><button type="button" class="ghost" id="csvBtn">Download the citation table (CSV)</button> One row per detail, with the first investigator line and the first suspect line, each with its session and page, ready to check against the transcript or attach to a motion.</p>
-    <p class="fine" id="reviewCount" aria-live="polite"></p>
+    <p class="fine">Time runs left to right. <b>Click any row</b> to read the exact lines and pages.</p>
   </section>
 
   <section class="detail" id="detail" hidden aria-live="polite"></section>
 
-  <section class="sessions" aria-labelledby="sessH">
-    <h2 id="sessH">How the interviews ran</h2>
-    <p class="fine">Counted by code from the transcript. Tactics follow the categories in Kassin et al., "Police-Induced Confessions" (2010).</p>
-    <div class="cards" id="sessionCards"></div>
-  </section>
-
-  <section class="memo" id="memoSec" hidden aria-labelledby="memoH">
-    <h2 id="memoH">Memo for counsel</h2>
-    <div id="memo"></div>
-  </section>
-
-  <section class="how" aria-labelledby="howH">
-    <h2 id="howH">How this was worked out</h2>
-    <ol class="steps" id="steps"></ol>
-    <div id="evalBox"></div>
+  <section class="more" aria-label="More">
+    <details class="fold" id="memoSec" hidden>
+      <summary><span>For lawyers</span> Draft memo, citation table and your review</summary>
+      <div class="foldbody">
+        <div id="memo"></div>
+        <p class="fine"><button type="button" class="ghost" id="csvBtn">Download the citation table (CSV)</button> One row per detail: the first investigator line and his first statement, each with session and page.</p>
+        <p class="fine" id="reviewCount" aria-live="polite"></p>
+      </div>
+    </details>
+    <details class="fold">
+      <summary><span>The interviews</span> How much investigators talked, and the tactics they used</summary>
+      <div class="foldbody">
+        <p class="fine">Counted by code from the transcript. Tactics follow Kassin et al., “Police-Induced Confessions” (2010).</p>
+        <div class="cards" id="sessionCards"></div>
+      </div>
+    </details>
+    <details class="fold">
+      <summary><span>How it works</span> Models read the transcript; plain code decides</summary>
+      <div class="foldbody">
+        <p class="fine" id="draftNote"></p>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </details>
+    <details class="fold">
+      <summary><span>How accurate is it?</span> Tested on interviews where the right answers are known</summary>
+      <div class="foldbody"><div id="evalBox"></div></div>
+    </details>
   </section>
 
   <section class="try" id="try" aria-labelledby="tryH">
-    <h2 id="tryH">Try it on a transcript</h2>
-    <p class="fine">Paste lines like <code>DET: Where were you?</code> and <code>SUSPECT: At home.</code>, then list the key details, one per line. Runs live on NVIDIA Nemotron models; nothing is stored.</p>
+    <h2 id="tryH">Try it on your own transcript</h2>
+    <p class="fine">Paste lines like <code>DET: Where were you?</code> and <code>SUSPECT: At home.</code>, list the key details, and run it. Runs live on NVIDIA Nemotron; nothing is stored.</p>
     <form id="tryForm" class="tryform">
       <label>Transcript<textarea name="transcript" rows="10" required></textarea></label>
       <div class="row2">
@@ -94,7 +104,7 @@
 </main>
 
 <footer class="wrap foot">
-  <p>Provenance uses public court records. It is decision support for defense counsel and innocence organizations, not legal advice. Graphic passages are hidden unless you choose to show them.</p>
+  <p>A draft for lawyers to check, not a verdict on guilt or on whether a confession is true. Built from public court records; graphic passages are hidden unless you choose to show them. Not legal advice.</p>
   <p>Built with NVIDIA Nemotron on Nebius Token Factory and Nebius AI Cloud. <a href="https://github.com/amekinya/provenance">Source and method</a></p>
 </footer>
 <script src="/static/app.js"></script>
