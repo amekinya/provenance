@@ -23,36 +23,50 @@
   "one_prompt": {
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.798,
-   "line_acc": 0.768,
-   "investigator_first_called_suspect_first": 2,
+   "speaker_acc": 0.818,
+   "line_acc": 0.788,
+   "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->suspect": 55,
-    "never->never": 12,
-    "interrogator->interrogator": 95,
-    "interrogator->never": 9,
-    "suspect->never": 2,
+    "suspect->suspect": 56,
+    "never->never": 16,
+    "interrogator->interrogator": 94,
+    "interrogator->never": 12,
+    "never->interrogator": 17,
     "suspect->interrogator": 6,
-    "never->interrogator": 21,
-    "interrogator->suspect": 2,
-    "never->suspect": 1
+    "never->suspect": 1,
+    "suspect->never": 1
    }
   },
   "provenance": {
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.773,
-   "line_acc": 0.759,
-   "investigator_first_called_suspect_first": 1,
+   "speaker_acc": 0.709,
+   "line_acc": 0.695,
+   "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->suspect": 47,
+    "suspect->suspect": 38,
     "never->never": 33,
-    "interrogator->interrogator": 77,
-    "suspect->never": 7,
+    "interrogator->never": 33,
+    "interrogator->interrogator": 73,
+    "suspect->never": 16,
     "suspect->interrogator": 9,
-    "interrogator->never": 28,
-    "never->interrogator": 1,
-    "interrogator->suspect": 1
+    "never->interrogator": 1
+   }
+  },
+  "provenance_matcher": {
+   "n_facts": 203,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.709,
+   "line_acc": 0.69,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->never": 19,
+    "never->never": 33,
+    "interrogator->never": 35,
+    "interrogator->interrogator": 71,
+    "suspect->suspect": 40,
+    "suspect->interrogator": 4,
+    "never->interrogator": 1
    }
   }
  },
@@ -63,14 +77,19 @@
    "calls": 0
   },
   "one_prompt": {
-   "seconds": 53.9,
-   "cost_usd": 0.2468,
+   "seconds": 67.8,
+   "cost_usd": 0.2338,
    "calls": 29
   },
   "provenance": {
-   "seconds": 541.7,
-   "cost_usd": 2.2643,
-   "calls": 252
+   "seconds": 643.7,
+   "cost_usd": 2.3654,
+   "calls": 342
+  },
+  "provenance_matcher": {
+   "seconds": 373.7,
+   "cost_usd": 1.6516,
+   "calls": 281
   }
  },
  "rows": [
@@ -99,47 +118,65 @@
    "method": "Nemotron 3 Ultra, one prompt per interview",
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.798,
-   "line_acc": 0.768,
-   "investigator_first_called_suspect_first": 2,
+   "speaker_acc": 0.818,
+   "line_acc": 0.788,
+   "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->suspect": 55,
-    "never->never": 12,
-    "interrogator->interrogator": 95,
-    "interrogator->never": 9,
-    "suspect->never": 2,
+    "suspect->suspect": 56,
+    "never->never": 16,
+    "interrogator->interrogator": 94,
+    "interrogator->never": 12,
+    "never->interrogator": 17,
     "suspect->interrogator": 6,
-    "never->interrogator": 21,
-    "interrogator->suspect": 2,
-    "never->suspect": 1
+    "never->suspect": 1,
+    "suspect->never": 1
    },
-   "seconds": 53.9,
-   "cost_usd": 0.2468,
+   "seconds": 67.8,
+   "cost_usd": 0.2338,
    "calls": 29
   },
   {
    "method": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
    "n_facts": 203,
    "failed_interrogations": 0,
-   "speaker_acc": 0.773,
-   "line_acc": 0.759,
-   "investigator_first_called_suspect_first": 1,
+   "speaker_acc": 0.709,
+   "line_acc": 0.695,
+   "investigator_first_called_suspect_first": 0,
    "confusion": {
-    "suspect->suspect": 47,
+    "suspect->suspect": 38,
     "never->never": 33,
-    "interrogator->interrogator": 77,
-    "suspect->never": 7,
+    "interrogator->never": 33,
+    "interrogator->interrogator": 73,
+    "suspect->never": 16,
     "suspect->interrogator": 9,
-    "interrogator->never": 28,
-    "never->interrogator": 1,
-    "interrogator->suspect": 1
+    "never->interrogator": 1
    },
-   "seconds": 541.7,
-   "cost_usd": 2.2643,
-   "calls": 252
+   "seconds": 643.7,
+   "cost_usd": 2.3654,
+   "calls": 342
+  },
+  {
+   "method": "Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check",
+   "n_facts": 203,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.709,
+   "line_acc": 0.69,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->never": 19,
+    "never->never": 33,
+    "interrogator->never": 35,
+    "interrogator->interrogator": 71,
+    "suspect->suspect": 40,
+    "suspect->interrogator": 4,
+    "never->interrogator": 1
+   },
+   "seconds": 373.7,
+   "cost_usd": 1.6516,
+   "calls": 281
   }
  ],
- "note": "29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers. This is the third run on held-out test data and the second on this 29-interrogation set, after the denial-of-guilt labeling fix and the reasoning verifier chosen on the training writer's interviews.",
+ "note": "29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers.",
  "history": [
   {
    "generated": "2026-10-27 00:50 UTC",
@@ -196,9 +233,37 @@
      "cost_usd": 1.9795
     }
    ]
+  },
+  {
+   "generated": "2026-10-27 02:15 UTC",
+   "commit": "ab42836",
+   "note": "29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers. This is the third run on held-out test data and the second on this 29-interrogation set, after the denial-of-guilt labeling fix and the reasoning verifier chosen on the training writer's interviews.",
+   "rows": [
+    {
+     "method": "Keyword match (no model)",
+     "speaker_acc": 0.562,
+     "line_acc": 0.547,
+     "investigator_first_called_suspect_first": 3,
+     "cost_usd": 0
+    },
+    {
+     "method": "Nemotron 3 Ultra, one prompt per interview",
+     "speaker_acc": 0.798,
+     "line_acc": 0.768,
+     "investigator_first_called_suspect_first": 2,
+     "cost_usd": 0.2468
+    },
+    {
+     "method": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
+     "speaker_acc": 0.773,
+     "line_acc": 0.759,
+     "investigator_first_called_suspect_first": 1,
+     "cost_usd": 2.2643
+    }
+   ]
   }
  ],
- "run_number": 3,
- "commit": "ab42836",
- "generated": "2026-10-27 02:15 UTC"
+ "run_number": 4,
+ "generated": "2026-10-28 02:06 UTC",
+ "commit": "d5689e5"
 }

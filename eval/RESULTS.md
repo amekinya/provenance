@@ -1,15 +1,20 @@
 # Provenance benchmark
 
-29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers. This is the third run on held-out test data and the second on this 29-interrogation set, after the denial-of-guilt labeling fix and the reasoning verifier chosen on the training writer's interviews.
+29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers.
 
 | Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
 |---|---|---|---|---|---|
 | Keyword match (no model) | 56% | 55% | 3 | 0.1 s | $0.000 |
-| Nemotron 3 Ultra, one prompt per interview | 80% | 77% | 2 | 53.9 s | $0.247 |
-| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 77% | 76% | 1 | 541.7 s | $2.264 |
+| Nemotron 3 Ultra, one prompt per interview | 82% | 79% | 0 | 67.8 s | $0.234 |
+| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 71% | 70% | 0 | 643.7 s | $2.365 |
+| Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check | 71% | 69% | 0 | 373.7 s | $1.652 |
 
-This is test run 3. Earlier runs on the held-out test, newest first:
+This is test run 4. Earlier runs on the held-out test, newest first:
 
+- 2026-10-27 02:15 UTC (ab42836): 29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers. This is the third run on held-out test data and the second on this 29-interrogation set, after the denial-of-guilt labeling fix and the reasoning verifier chosen on the training writer's interviews.
+  - Keyword match (no model): 56% right first speaker, 55% right line, 3 investigator-supplied credited to the suspect
+  - Nemotron 3 Ultra, one prompt per interview: 80% right first speaker, 77% right line, 2 investigator-supplied credited to the suspect
+  - Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search: 77% right first speaker, 76% right line, 1 investigator-supplied credited to the suspect
 - 2026-10-27 01:45 UTC (62e80c9): First run on the 29-interrogation test set: Ultra labels, verifier without reasoning.
   - Keyword match (no model): 56% right first speaker, 55% right line, 3 investigator-supplied credited to the suspect
   - Nemotron 3 Ultra, one prompt per interview: 82% right first speaker, 75% right line, 1 investigator-supplied credited to the suspect

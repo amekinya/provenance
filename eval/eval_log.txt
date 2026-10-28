@@ -1,190 +1,416 @@
 keyword: verifier reasoning on
 keyword {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.562, 'line_acc': 0.547, 'investigator_first_called_suspect_first': 3, 'confusion': {'suspect->never': 15, 'never->never': 27, 'interrogator->never': 58, 'interrogator->interrogator': 45, 'suspect->suspect': 42, 'suspect->interrogator': 6, 'never->interrogator': 7, 'interrogator->suspect': 3}} {'seconds': 0.1, 'cost_usd': 0, 'calls': 0}
 one_prompt: verifier reasoning on
-one_prompt {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.798, 'line_acc': 0.768, 'investigator_first_called_suspect_first': 2, 'confusion': {'suspect->suspect': 55, 'never->never': 12, 'interrogator->interrogator': 95, 'interrogator->never': 9, 'suspect->never': 2, 'suspect->interrogator': 6, 'never->interrogator': 21, 'interrogator->suspect': 2, 'never->suspect': 1}} {'seconds': 53.9, 'cost_usd': 0.2468, 'calls': 29}
+one_prompt {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.818, 'line_acc': 0.788, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->suspect': 56, 'never->never': 16, 'interrogator->interrogator': 94, 'interrogator->never': 12, 'never->interrogator': 17, 'suspect->interrogator': 6, 'never->suspect': 1, 'suspect->never': 1}} {'seconds': 67.8, 'cost_usd': 0.2338, 'calls': 29}
 provenance: verifier reasoning on
+tagged 30 sentences in 2 chunks: 25 labels kept, 1 dropped (quote not in sentence)
 tagged 28 sentences in 2 chunks: 28 labels kept, 1 dropped (quote not in sentence)
-tagged 34 sentences in 2 chunks: 39 labels kept, 1 dropped (quote not in sentence)
-tagged 30 sentences in 2 chunks: 28 labels kept, 1 dropped (quote not in sentence)
-tagged 31 sentences in 2 chunks: 32 labels kept, 1 dropped (quote not in sentence)
-round 1: 13 deciding labels to check, 10 checked, 1 rejected
-round 1: 10 deciding labels to check, 10 checked, 0 rejected
-verification done after 1 round(s)
-round 2: 4 deciding labels to check, 4 checked, 0 rejected
+tagged 31 sentences in 2 chunks: 31 labels kept, 0 dropped (quote not in sentence)
+tagged 34 sentences in 2 chunks: 41 labels kept, 1 dropped (quote not in sentence)
+round 1: 11 deciding labels to check, 9 checked, 4 rejected
+round 2: 6 deciding labels to check, 6 checked, 0 rejected
 verification done after 2 round(s)
-round 1: 15 deciding labels to check, 14 checked, 2 rejected
-round 1: 11 deciding labels to check, 10 checked, 2 rejected
-round 2: 3 deciding labels to check, 3 checked, 0 rejected
-verification done after 2 round(s)
-round 2: 4 deciding labels to check, 4 checked, 0 rejected
-verification done after 2 round(s)
-safety search: 6 earlier investigator lines checked, 5 answered, 0 carry the detail
-safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
-safety search: 4 earlier investigator lines checked, 4 answered, 0 carry the detail
-tagged 33 sentences in 2 chunks: 37 labels kept, 0 dropped (quote not in sentence)
-tagged 29 sentences in 2 chunks: 26 labels kept, 2 dropped (quote not in sentence)
-safety search: 12 earlier investigator lines checked, 12 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-tagged 44 sentences in 3 chunks: 42 labels kept, 1 dropped (quote not in sentence)
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
-round 1: 11 deciding labels to check, 5 checked, 2 rejected
-round 2: 8 deciding labels to check, 8 checked, 1 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
-round 1: 11 deciding labels to check, 10 checked, 3 rejected
-round 3: 2 deciding labels to check, 2 checked, 0 rejected
-0 deciding line(s) not re-checked
-round 1: 14 deciding labels to check, 14 checked, 4 rejected
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
-round 2: 3 deciding labels to check, 3 checked, 0 rejected
-verification done after 2 round(s)
-round 2: 4 deciding labels to check, 4 checked, 0 rejected
-verification done after 2 round(s)
-safety search: 4 earlier investigator lines checked, 4 answered, 0 carry the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
-  chunk at X001-001 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-tagged 46 sentences in 3 chunks: 25 labels kept, 0 dropped (quote not in sentence)
-tagged 48 sentences in 3 chunks: 46 labels kept, 1 dropped (quote not in sentence)
-safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
-tagged 29 sentences in 2 chunks: 21 labels kept, 0 dropped (quote not in sentence)
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (42064 chars): 'The user wants me to analyze each item and determine if the sentence conveys the distincti' ... 'f those four. The decision about distinctive content is part'
-round 1: 8 deciding labels to check, 8 checked, 0 rejected
-verification done after 1 round(s)
-tagged 32 sentences in 2 chunks: 21 labels kept, 0 dropped (quote not in sentence)
-round 1: 10 deciding labels to check, 10 checked, 0 rejected
-verification done after 1 round(s)
-round 1: 11 deciding labels to check, 10 checked, 0 rejected
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (40993 chars): 'The user wants me to analyze each numbered item and determine if the sentence conveys the ' ... "d for each.  I'll make a judgment:  - X007-003: asserts - X0"
-tagged 43 sentences in 3 chunks: 45 labels kept, 1 dropped (quote not in sentence)
-safety search: 6 earlier investigator lines checked, 5 answered, 0 carry the detail
-safety search: 7 earlier investigator lines checked, 7 answered, 5 carry the detail
-verification done after 0 round(s)
-round 1: 14 deciding labels to check, 9 checked, 1 rejected
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-round 1: 10 deciding labels to check, 10 checked, 3 rejected
-tagged 32 sentences in 2 chunks: 27 labels kept, 2 dropped (quote not in sentence)
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-tagged 48 sentences in 3 chunks: 42 labels kept, 1 dropped (quote not in sentence)
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-round 2: 7 deciding labels to check, 7 checked, 1 rejected
-verification done after 2 round(s)
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-round 1: 11 deciding labels to check, 10 checked, 2 rejected
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-round 1: 15 deciding labels to check, 15 checked, 1 rejected
-tagged 38 sentences in 3 chunks: 31 labels kept, 0 dropped (quote not in sentence)
-round 2: 2 deciding labels to check, 2 checked, 2 rejected
-verification done after 2 round(s)
-safety search: 4 earlier investigator lines checked, 4 answered, 0 carry the detail
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-tagged 43 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
-round 1: 14 deciding labels to check, 14 checked, 1 rejected
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-round 1: 13 deciding labels to check, 13 checked, 0 rejected
-verification done after 1 round(s)
-safety search: 6 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
-tagged 55 sentences in 4 chunks: 32 labels kept, 1 dropped (quote not in sentence)
-round 1: 15 deciding labels to check, 15 checked, 1 rejected
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-safety search: 6 earlier investigator lines checked, 5 answered, 0 carry the detail
-safety search: 6 earlier investigator lines checked, 5 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 4 earlier investigator lines checked, 4 answered, 0 carry the detail
-tagged 37 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-tagged 38 sentences in 3 chunks: 24 labels kept, 0 dropped (quote not in sentence)
-round 1: 15 deciding labels to check, 15 checked, 0 rejected
-verification done after 1 round(s)
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11986 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (36418 chars): 'The user wants me to analyze each numbered item and determine if the sentence itself conve' ... 'sts only four kinds.  Wait, the prompt says: "For each item,'
-safety search: 4 earlier investigator lines checked, 4 answered, 0 carry the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23986 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
-safety search: 10 earlier investigator lines checked, 10 answered, 0 carry the detail
-tagged 40 sentences in 3 chunks: 29 labels kept, 1 dropped (quote not in sentence)
-tagged 24 sentences in 2 chunks: 22 labels kept, 0 dropped (quote not in sentence)
-tagged 36 sentences in 2 chunks: 22 labels kept, 0 dropped (quote not in sentence)
-round 1: 15 deciding labels to check, 15 checked, 0 rejected
-verification done after 1 round(s)
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (41201 chars): 'The user wants me to analyze each numbered item and determine if the sentence conveys the ' ... "r to know if it's relevant. But the output is the kind. I'll"
-round 1: 9 deciding labels to check, 9 checked, 1 rejected
-round 1: 12 deciding labels to check, 12 checked, 1 rejected
-verification done after 1 round(s)
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
-1 deciding line(s) not re-checked
-safety search: 13 earlier investigator lines checked, 13 answered, 0 carry the detail
-tagged 47 sentences in 3 chunks: 38 labels kept, 1 dropped (quote not in sentence)
+round 1: 15 deciding labels to check, 15 checked, 8 rejected
+round 1: 10 deciding labels to check, 9 checked, 2 rejected
+safety search: 5 earlier investigator lines checked, 2 answered, 0 carry the detail
+round 2: 4 deciding labels to check, 3 checked, 0 rejected
+round 1: 14 deciding labels to check, 5 checked, 0 rejected
 safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
-tagged 36 sentences in 2 chunks: 26 labels kept, 0 dropped (quote not in sentence)
-safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
-round 1: 11 deciding labels to check, 10 checked, 2 rejected
-round 2: 1 deciding labels to check, 0 checked, 0 rejected
-  the verifier answered nothing this round; stopping
+round 2: 6 deciding labels to check, 6 checked, 4 rejected
+tagged 33 sentences in 2 chunks: 34 labels kept, 0 dropped (quote not in sentence)
+round 3: 2 deciding labels to check, 2 checked, 2 rejected
 1 deciding line(s) not re-checked
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11987 chars): '{   "utterances": [     {       "id": "X035-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F6",           "kind": "asks"'
-tagged 48 sentences in 3 chunks: 30 labels kept, 7 dropped (quote not in sentence)
-round 1: 13 deciding labels to check, 13 checked, 1 rejected
-verification done after 1 round(s)
-round 1: 12 deciding labels to check, 12 checked, 0 rejected
-verification done after 1 round(s)
-safety search: 8 earlier investigator lines checked, 3 answered, 0 carry the detail
-safety search: 9 earlier investigator lines checked, 9 answered, 0 carry the detail
-safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
-round 1: 11 deciding labels to check, 10 checked, 2 rejected
-tagged 36 sentences in 2 chunks: 31 labels kept, 0 dropped (quote not in sentence)
-tagged 44 sentences in 3 chunks: 34 labels kept, 0 dropped (quote not in sentence)
-round 1: 14 deciding labels to check, 14 checked, 1 rejected
-verification done after 1 round(s)
-safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
-tagged 35 sentences in 2 chunks: 32 labels kept, 0 dropped (quote not in sentence)
-round 1: 12 deciding labels to check, 12 checked, 1 rejected
-verification done after 1 round(s)
-safety search: 8 earlier investigator lines checked, 7 answered, 0 carry the detail
-safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (43526 chars): 'The user wants me to analyze each sentence to determine if it conveys the distinctive cont' ... "ent's relation to the detail, and if it doesn't relate, it's"
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X040-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
-round 1: 10 deciding labels to check, 10 checked, 2 rejected
-round 2: 3 deciding labels to check, 3 checked, 1 rejected
-round 2: 2 deciding labels to check, 2 checked, 0 rejected
-verification done after 2 round(s)
-safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
-safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 2: 9 deciding labels to check, 6 checked, 1 rejected
 round 3: 1 deciding labels to check, 0 checked, 0 rejected
   the verifier answered nothing this round; stopping
 1 deciding line(s) not re-checked
-  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23972 chars): '{   "utterances": [     {       "id": "X040-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
+round 3: 4 deciding labels to check, 3 checked, 0 rejected
+1 deciding line(s) not re-checked
+round 1: 11 deciding labels to check, 11 checked, 4 rejected
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 2: 4 deciding labels to check, 3 checked, 1 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (6308 chars): '{ "checks"' ... '{ "checks"'
+tagged 29 sentences in 2 chunks: 25 labels kept, 1 dropped (quote not in sentence)
+safety search: 7 earlier investigator lines checked, 6 answered, 0 carry the detail
 safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+round 3: 2 deciding labels to check, 2 checked, 2 rejected
+1 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
+round 1: 11 deciding labels to check, 8 checked, 4 rejected
+tagged 44 sentences in 3 chunks: 41 labels kept, 1 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+round 1: 14 deciding labels to check, 14 checked, 4 rejected
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X001-001",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+tagged 46 sentences in 3 chunks: 40 labels kept, 0 dropped (quote not in sentence)
+round 2: 3 deciding labels to check, 3 checked, 1 rejected
+verification done after 2 round(s)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 5 earlier investigator lines checked, 3 answered, 0 carry the detail
+round 2: 7 deciding labels to check, 6 checked, 2 rejected
+round 1: 10 deciding labels to check, 9 checked, 0 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 3: 2 deciding labels to check, 2 checked, 2 rejected
+1 deciding line(s) not re-checked
+tagged 48 sentences in 3 chunks: 46 labels kept, 1 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 29 sentences in 2 chunks: 23 labels kept, 0 dropped (quote not in sentence)
+safety search: 4 earlier investigator lines checked, 3 answered, 1 carry the detail
+round 1: 8 deciding labels to check, 8 checked, 0 rejected
+verification done after 1 round(s)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 32 sentences in 2 chunks: 22 labels kept, 0 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (43238 chars): "The detail is about the store manager's keycard being used to unlock the security door at " ... "s. If it doesn't convey, you don't give a kind. But the user"
+round 1: 11 deciding labels to check, 6 checked, 2 rejected
+round 1: 12 deciding labels to check, 9 checked, 1 rejected
+round 1: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 43 sentences in 3 chunks: 45 labels kept, 1 dropped (quote not in sentence)
+round 2: 6 deciding labels to check, 6 checked, 2 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 2: 3 deciding labels to check, 3 checked, 1 rejected
+verification done after 2 round(s)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 32 sentences in 2 chunks: 27 labels kept, 0 dropped (quote not in sentence)
+safety search: 5 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+round 1: 14 deciding labels to check, 14 checked, 1 rejected
+verification done after 1 round(s)
+round 1: 11 deciding labels to check, 11 checked, 5 rejected
+tagged 48 sentences in 3 chunks: 39 labels kept, 1 dropped (quote not in sentence)
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 38 sentences in 3 chunks: 31 labels kept, 0 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 14 deciding labels to check, 11 checked, 0 rejected
+round 2: 3 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+3 deciding line(s) not re-checked
+tagged 43 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+round 1: 15 deciding labels to check, 12 checked, 1 rejected
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 55 sentences in 4 chunks: 34 labels kept, 1 dropped (quote not in sentence)
+safety search: 6 earlier investigator lines checked, 6 answered, 0 carry the detail
+tagged 37 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 15 deciding labels to check, 15 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+round 2: 4 deciding labels to check, 3 checked, 2 rejected
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 10 earlier investigator lines checked, 9 answered, 0 carry the detail
+round 1: 15 deciding labels to check, 15 checked, 1 rejected
+verification done after 1 round(s)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 3: 2 deciding labels to check, 2 checked, 2 rejected
+0 deciding line(s) not re-checked
+tagged 38 sentences in 3 chunks: 24 labels kept, 0 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 24 sentences in 2 chunks: 23 labels kept, 0 dropped (quote not in sentence)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11987 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+safety search: 6 earlier investigator lines checked, 6 answered, 0 carry the detail
+tagged 36 sentences in 2 chunks: 25 labels kept, 0 dropped (quote not in sentence)
+round 1: 10 deciding labels to check, 9 checked, 3 rejected
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+verification done after 1 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23986 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+round 2: 3 deciding labels to check, 3 checked, 2 rejected
+verification done after 2 round(s)
+safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11986 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
+tagged 47 sentences in 3 chunks: 36 labels kept, 1 dropped (quote not in sentence)
+round 1: 15 deciding labels to check, 15 checked, 6 rejected
+round 1: 12 deciding labels to check, 12 checked, 2 rejected
+round 2: 2 deciding labels to check, 2 checked, 2 rejected
+verification done after 2 round(s)
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11987 chars): '{   "utterances": [     {       "id": "X034-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23987 chars): '{   "utterances": [     {       "id": "X022-037",       "graphic": false,       "mentions"' ... '[         {           "fact": "F1",           "kind": "asks"'
+  chunk at X022-037 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
+tagged 40 sentences in 3 chunks: 26 labels kept, 0 dropped (quote not in sentence)
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23987 chars): '{   "utterances": [     {       "id": "X034-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
+safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
+tagged 36 sentences in 2 chunks: 27 labels kept, 0 dropped (quote not in sentence)
+tagged 48 sentences in 3 chunks: 25 labels kept, 7 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 36 sentences in 2 chunks: 28 labels kept, 2 dropped (quote not in sentence)
+round 1: 9 deciding labels to check, 9 checked, 1 rejected
+verification done after 1 round(s)
+round 1: 12 deciding labels to check, 12 checked, 3 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+tagged 44 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+round 1: 11 deciding labels to check, 11 checked, 2 rejected
+round 1: 14 deciding labels to check, 14 checked, 1 rejected
+verification done after 1 round(s)
+safety search: 8 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 8 earlier investigator lines checked, 6 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+round 1: 12 deciding labels to check, 12 checked, 3 rejected
+safety search: 5 earlier investigator lines checked, 3 answered, 0 carry the detail
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+tagged 35 sentences in 2 chunks: 32 labels kept, 0 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 2: 2 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+2 deciding line(s) not re-checked
   [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X040-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
+round 1: 10 deciding labels to check, 9 checked, 2 rejected
 safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+round 2: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 2 round(s)
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23972 chars): '{   "utterances": [     {       "id": "X040-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (11972 chars): '{   "utterances": [     {       "id": "X040-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
   [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (23972 chars): '{   "utterances": [     {       "id": "X040-019",       "graphic": false,       "mentions"' ... '[         {           "fact": "F4",           "kind": "asks"'
   chunk at X040-019 failed: nvidia/Nemotron-3-Ultra-550b-a55b returned no valid JSON
-tagged 47 sentences in 3 chunks: 21 labels kept, 0 dropped (quote not in sentence)
-round 1: 6 deciding labels to check, 5 checked, 0 rejected
-round 2: 2 deciding labels to check, 2 checked, 0 rejected
-verification done after 2 round(s)
+tagged 47 sentences in 3 chunks: 20 labels kept, 0 dropped (quote not in sentence)
+round 1: 6 deciding labels to check, 6 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
 safety search: 2 earlier investigator lines checked, 2 answered, 1 carry the detail
 safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
 safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
 verification done after 0 round(s)
-provenance {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.773, 'line_acc': 0.759, 'investigator_first_called_suspect_first': 1, 'confusion': {'suspect->suspect': 47, 'never->never': 33, 'interrogator->interrogator': 77, 'suspect->never': 7, 'suspect->interrogator': 9, 'interrogator->never': 28, 'never->interrogator': 1, 'interrogator->suspect': 1}} {'seconds': 541.7, 'cost_usd': 2.2643, 'calls': 252}
+provenance {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.709, 'line_acc': 0.695, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->suspect': 38, 'never->never': 33, 'interrogator->never': 33, 'interrogator->interrogator': 73, 'suspect->never': 16, 'suspect->interrogator': 9, 'never->interrogator': 1}} {'seconds': 643.7, 'cost_usd': 2.3654, 'calls': 342}
+provenance_matcher: verifier reasoning on
+matcher scored 180 pairs; 14 above 0.85
+matcher scored 168 pairs; 18 above 0.85
+matcher scored 217 pairs; 25 above 0.85
+matcher scored 272 pairs; 24 above 0.85
+round 1: 14 deciding labels to check, 11 checked, 2 rejected
+round 1: 11 deciding labels to check, 9 checked, 2 rejected
+round 2: 4 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+4 deciding line(s) not re-checked
+round 1: 9 deciding labels to check, 6 checked, 2 rejected
+round 1: 15 deciding labels to check, 15 checked, 8 rejected
+safety search: 6 earlier investigator lines checked, 6 answered, 0 carry the detail
+matcher scored 198 pairs; 23 above 0.85
+round 2: 3 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+3 deciding line(s) not re-checked
+round 2: 2 deciding labels to check, 2 checked, 2 rejected
+verification done after 2 round(s)
+round 2: 3 deciding labels to check, 3 checked, 1 rejected
+verification done after 2 round(s)
+round 1: 11 deciding labels to check, 6 checked, 0 rejected
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+matcher scored 174 pairs; 12 above 0.85
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+matcher scored 276 pairs; 31 above 0.85
+round 2: 6 deciding labels to check, 6 checked, 2 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 352 pairs; 30 above 0.85
+round 1: 10 deciding labels to check, 9 checked, 2 rejected
+round 2: 2 deciding labels to check, 2 checked, 1 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 5 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 288 pairs; 29 above 0.85
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 174 pairs; 14 above 0.85
+round 1: 10 deciding labels to check, 9 checked, 5 rejected
+round 1: 9 deciding labels to check, 9 checked, 2 rejected
+round 1: 15 deciding labels to check, 15 checked, 2 rejected
+round 2: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 2 round(s)
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+matcher scored 192 pairs; 11 above 0.85
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+matcher scored 344 pairs; 36 above 0.85
+round 1: 11 deciding labels to check, 11 checked, 3 rejected
+verification done after 1 round(s)
+matcher scored 192 pairs; 21 above 0.85
+round 2: 2 deciding labels to check, 2 checked, 2 rejected
+verification done after 2 round(s)
+safety search: 5 earlier investigator lines checked, 3 answered, 0 carry the detail
+round 1: 16 deciding labels to check, 12 checked, 1 rejected
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 384 pairs; 29 above 0.85
+round 1: 10 deciding labels to check, 9 checked, 0 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 10 deciding labels to check, 9 checked, 3 rejected
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 14 deciding labels to check, 14 checked, 0 rejected
+verification done after 1 round(s)
+round 2: 4 deciding labels to check, 3 checked, 2 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 2: 6 deciding labels to check, 6 checked, 2 rejected
+matcher scored 304 pairs; 21 above 0.85
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 14 deciding labels to check, 14 checked, 1 rejected
+verification done after 1 round(s)
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 7 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 301 pairs; 25 above 0.85
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 6 earlier investigator lines checked, 6 answered, 0 carry the detail
+matcher scored 440 pairs; 23 above 0.85
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 296 pairs; 25 above 0.85
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 228 pairs; 15 above 0.85
+round 1: 15 deciding labels to check, 15 checked, 0 rejected
+verification done after 1 round(s)
+round 1: 14 deciding labels to check, 14 checked, 4 rejected
+round 1: 14 deciding labels to check, 14 checked, 2 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 11 earlier investigator lines checked, 9 answered, 0 carry the detail
+round 1: 9 deciding labels to check, 6 checked, 1 rejected
+round 2: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 2 round(s)
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+matcher scored 240 pairs; 22 above 0.85
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+matcher scored 192 pairs; 15 above 0.85
+round 2: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 2 round(s)
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 8 earlier investigator lines checked, 5 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 11 deciding labels to check, 11 checked, 2 rejected
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+matcher scored 288 pairs; 16 above 0.85
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+matcher scored 376 pairs; 25 above 0.85
+round 1: 13 deciding labels to check, 12 checked, 4 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 5 earlier investigator lines checked, 5 answered, 0 carry the detail
+matcher scored 252 pairs; 15 above 0.85
+safety search: 6 earlier investigator lines checked, 6 answered, 0 carry the detail
+matcher scored 336 pairs; 23 above 0.85
+round 1: 14 deciding labels to check, 14 checked, 3 rejected
+round 1: 10 deciding labels to check, 9 checked, 0 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 15 deciding labels to check, 12 checked, 3 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 2: 4 deciding labels to check, 3 checked, 1 rejected
+round 1: 13 deciding labels to check, 12 checked, 1 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+matcher scored 288 pairs; 21 above 0.85
+round 2: 4 deciding labels to check, 3 checked, 1 rejected
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 352 pairs; 24 above 0.85
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+matcher scored 210 pairs; 19 above 0.85
+round 1: 14 deciding labels to check, 11 checked, 1 rejected
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+matcher scored 329 pairs; 21 above 0.85
+round 1: 14 deciding labels to check, 11 checked, 1 rejected
+round 1: 11 deciding labels to check, 9 checked, 1 rejected
+round 2: 4 deciding labels to check, 3 checked, 0 rejected
+round 2: 2 deciding labels to check, 2 checked, 0 rejected
+verification done after 2 round(s)
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 2: 4 deciding labels to check, 3 checked, 0 rejected
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+round 1: 12 deciding labels to check, 12 checked, 3 rejected
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 2: 2 deciding labels to check, 2 checked, 2 rejected
+verification done after 2 round(s)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 8 earlier investigator lines checked, 8 answered, 0 carry the detail
+safety search: 3 earlier investigator lines checked, 3 answered, 0 carry the detail
+provenance_matcher {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.709, 'line_acc': 0.69, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->never': 19, 'never->never': 33, 'interrogator->never': 35, 'interrogator->interrogator': 71, 'suspect->suspect': 40, 'suspect->interrogator': 4, 'never->interrogator': 1}} {'seconds': 373.7, 'cost_usd': 1.6516, 'calls': 281}
 # Provenance benchmark
 
 29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers.
@@ -192,5 +418,21 @@ provenance {'n_facts': 203, 'failed_interrogations': 0, 'speaker_acc': 0.773, 'l
 | Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
 |---|---|---|---|---|---|
 | Keyword match (no model) | 56% | 55% | 3 | 0.1 s | $0.000 |
-| Nemotron 3 Ultra, one prompt per interview | 80% | 77% | 2 | 53.9 s | $0.247 |
-| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 77% | 76% | 1 | 541.7 s | $2.264 |
+| Nemotron 3 Ultra, one prompt per interview | 82% | 79% | 0 | 67.8 s | $0.234 |
+| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 71% | 70% | 0 | 643.7 s | $2.365 |
+| Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check | 71% | 69% | 0 | 373.7 s | $1.652 |
+
+This is test run 4. Earlier runs on the held-out test, newest first:
+
+- 2026-10-27 02:15 UTC (ab42836): 29 synthetic interrogations (test split) written by Qwen/Qwen3-30B-A3B-Instruct-2507 and zai-org/GLM-5.2 (model families different from the training writer), 203 details with known first speakers. This is the third run on held-out test data and the second on this 29-interrogation set, after the denial-of-guilt labeling fix and the reasoning verifier chosen on the training writer's interviews.
+  - Keyword match (no model): 56% right first speaker, 55% right line, 3 investigator-supplied credited to the suspect
+  - Nemotron 3 Ultra, one prompt per interview: 80% right first speaker, 77% right line, 2 investigator-supplied credited to the suspect
+  - Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search: 77% right first speaker, 76% right line, 1 investigator-supplied credited to the suspect
+- 2026-10-27 01:45 UTC (62e80c9): First run on the 29-interrogation test set: Ultra labels, verifier without reasoning.
+  - Keyword match (no model): 56% right first speaker, 55% right line, 3 investigator-supplied credited to the suspect
+  - Nemotron 3 Ultra, one prompt per interview: 82% right first speaker, 75% right line, 1 investigator-supplied credited to the suspect
+  - Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search: 73% right first speaker, 69% right line, 1 investigator-supplied credited to the suspect
+- 2026-10-27 00:50 UTC (a787286): Before the fixes: 6 Qwen-written test interrogations (39 details); the one-prompt baseline then asked a different question than the gold labels.
+  - Keyword match (no model): 59% right first speaker, 54% right line, 0 investigator-supplied credited to the suspect
+  - Nemotron 3 Ultra, one prompt per interview: 13% right first speaker, 13% right line, 0 investigator-supplied credited to the suspect
+  - Provenance: Lightning labels + code ledger + Ultra check: 44% right first speaker, 38% right line, 0 investigator-supplied credited to the suspect
