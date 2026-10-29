@@ -162,6 +162,56 @@ def provenance_basic(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
     return _with_trace(rec, utts, facts, mentions, calls, full=False)
 
 
+KEY_TERMS: dict[str, dict] = {}  # rec id -> {fact id: must}, drafted by Ultra from the detail's wording (scripts/draft_key_terms.py)
+
+
+def _key_terms(split: str) -> dict[str, dict]:
+    f = SYNTH_DIR / ("key_terms_test.json" if split == "test" else "key_terms_trainval.json")
+    return json.loads(f.read_text()) if f.exists() else {}
+
+
+def _kt_facts(rec, facts):
+    kt = KEY_TERMS.get(rec["id"])
+    if kt is None:
+        raise LiveModelUnavailable(f"no drafted key words for {rec['id']} (run scripts.draft_key_terms)")
+    return [f | ({"must": kt[f["id"]]} if kt.get(f["id"]) else {}) for f in facts]
+
+
+def kt_pipeline(cfg, utts, facts, mentions, calls) -> None:
+    """The pipeline the Dassey audit runs with key words: code agreements, Ultra's check of his deciding lines (the
+    investigator side is code), the safety search only for details without key words, then the suspect-side search and
+    the sense check of his lines that carry the key words."""
+    from scripts.tag import check_labels, search_suspect, sense_check  # noqa: PLC0415
+
+    check_labels(cfg, utts, facts, mentions, calls, rounds=3)
+    search_suspect(cfg, utts, facts, mentions, calls)
+    sense_check(cfg, utts, facts, mentions, calls, rounds=3)
+
+
+def provenance_kt(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+    """Same Ultra labels as `provenance`, with key words drafted by Ultra from each detail's wording (never the transcript)."""
+    utts, facts = _inputs(rec)
+    mentions = _ultra_labels(rec, utts, facts, calls)
+    facts = _kt_facts(rec, facts)
+    kt_pipeline(_cfg(rec), utts, facts, mentions, calls)
+    TRACE[rec["id"]] = [{k: m.get(k) for k in ("utterance", "fact", "kind", "quote", "by", "verified")} for m in mentions]
+    return predict_from_report(audit(load_case(case_dict(_cfg(rec), utts, facts, mentions))))
+
+
+def private_mode(rec: dict, calls: list[CallRecord]) -> dict[str, dict]:
+    """Private mode: nothing goes to an outside AI service. Our fine-tuned matcher (on the user's own Nebius endpoint)
+    labels the lines, code adds bare agreements, the ledger decides; no Ultra check, no safety search."""
+    from scripts.tag import add_code_assents, tag_with_matcher  # noqa: PLC0415
+
+    utts, facts = _inputs(rec)
+    if KEY_TERMS:
+        facts = _kt_facts(rec, facts)
+    mentions, _ = tag_with_matcher(utts, facts, calls, threshold=_matcher_threshold())
+    add_code_assents(utts, mentions)
+    TRACE[rec["id"]] = [{k: m.get(k) for k in ("utterance", "fact", "kind", "quote", "by", "verified")} for m in mentions]
+    return predict_from_report(audit(load_case(case_dict(_cfg(rec), utts, facts, mentions))))
+
+
 def _matcher_threshold() -> float:
     """The matcher's decision threshold, chosen on the dev split by the training job (eval/training.json); 0.5 if absent."""
     try:
@@ -234,7 +284,9 @@ def main() -> None:
               "provenance_basic": lambda r: provenance_basic(r, calls),
               "provenance_lightning": lambda r: provenance_lightning(r, calls),
               "provenance_vr": lambda r: provenance_vr(r, calls),
-              "provenance_matcher": lambda r: provenance_matcher(r, calls)}[m]
+              "provenance_matcher": lambda r: provenance_matcher(r, calls),
+              "provenance_kt": lambda r: provenance_kt(r, calls), "private": lambda r: private_mode(r, calls),
+              "private_kt": lambda r: private_mode(r, calls)}[m]
 
         def safe(r, fn=fn):
             try:
@@ -243,6 +295,9 @@ def main() -> None:
                 print(f"  {m} failed on {r['id']}: {e}")
                 return None
         TRACE.clear()
+        KEY_TERMS.clear()  # only the key-word methods see drafted key words
+        if m in ("provenance_kt", "private_kt"):
+            KEY_TERMS.update(_key_terms(a.split))
         _t.VERIFY_REASONING = True if m == "provenance_vr" else VERIFY_DEFAULT
         print(f"{m}: verifier reasoning {'on' if _t.VERIFY_REASONING else 'off'}")
         with ThreadPoolExecutor(4 if m != "keyword" else 1) as ex:
@@ -257,7 +312,10 @@ def main() -> None:
              "provenance_lightning": "Provenance with Nemotron 3.5 Lightning as the labeler (cheaper tier)",
              "provenance_vr": "Provenance, verifier with reasoning on (same labels; cost excludes labeling)",
              "provenance_basic": "Provenance without code agreements or safety search (ablation)",
-             "provenance_matcher": "Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check"}
+             "provenance_matcher": "Provenance with our fine-tuned matcher (Nebius) + code ledger + Ultra check",
+             "provenance_kt": "Provenance with key words drafted by Nemotron 3 Ultra (same labels; code decides the investigator side)",
+             "private": "Private mode: our fine-tuned matcher + code only (no outside AI service)",
+             "private_kt": "Private mode with drafted key words (matcher + code; key words drafted beforehand)"}
     writers = sorted({r["generator"] for r in recs})
     who = " and ".join(writers) + (" (model families different from the training writer)" if a.split == "test" else " (the training writer; diagnostic split)")
     out = {"split": a.split, "n_interrogations": len(recs), "generator": ", ".join(writers), "results": results, "costs": costs,

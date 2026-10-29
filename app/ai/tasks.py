@@ -80,6 +80,77 @@ def draft_facts(case_text: str, calls: list[CallRecord] | None = None, limit: in
 
 
 # ---------------------------------------------------------------------------------------------------------------------
+# 2b. Key-term drafter (Ultra): each detail's key words, drafted from the detail's own wording only (never the transcript),
+#     for counsel to review. Code normalizes them; the ledger then uses them exactly like hand-written ones.
+# ---------------------------------------------------------------------------------------------------------------------
+KEYTERMS_SCHEMA = {
+    "type": "object",
+    "properties": {"details": {"type": "array", "items": {"type": "object", "properties": {
+        "id": {"type": "string"},
+        "groups": {"type": "array", "items": {"type": "array", "items": {"type": "string"}},
+                   "description": "one group per component that makes the detail specific; each group lists alternates"}},
+        "required": ["id", "groups"], "additionalProperties": False}}},
+    "required": ["details"], "additionalProperties": False,
+}
+
+KEYTERMS_PROMPT = (
+    "You write key words for a corroboration audit of a police interrogation. For each crime detail, give the groups of "
+    "words a sentence must contain to state that detail. Rules:\n"
+    "- One group per component that makes the detail specific: what was done, to what or whom, with what, or where. Use only "
+    "the components needed to tell this detail apart from the other details in the list; usually 1 to 3 groups.\n"
+    "- Each group lists alternates: synonyms, everyday and slang words, and short forms a detective or a suspect would "
+    "actually say (e.g. for a car: car, vehicle, suv, jeep, truck). Single words or phrases of at most 3 words. Base forms are "
+    "enough: plurals and -ed/-ing endings are matched automatically.\n"
+    "- No degree or intensity words ('until unconscious', 'badly'), no times or names unless the time or name is the detail, "
+    "and no generic words that most sentences contain (see, have, get, thing).\n"
+    "- back, up, down, in, out, on and off may appear only inside a phrase ('in the back', 'took off').\n"
+    "- Work only from the detail's own wording below. You are not shown any transcript."
+)
+
+_KT_LONE = {"back", "up", "down", "in", "out", "on", "off"}
+_KT_GENERIC = set("a an the of to in on at for with and or his her him its their was were is be by from that this it he she they there "
+                  "then them out into onto over under about after before when what who did does had has have not off near found "
+                  "seen see saw get got thing things something stuff one".split())
+
+
+def normalize_must(groups) -> list[list[str]]:
+    """Code's check of drafted (or typed) key terms: lowercase words and short phrases, no lone function words, no generic
+    words, no duplicates, at most 4 groups of at most 15 alternates. Returns [] when nothing usable is left."""
+    out: list[list[str]] = []
+    for g in (groups or [])[:6]:
+        alts: list[str] = []
+        for a in (g or [])[:30]:
+            a = re.sub(r"[^a-z0-9' ]+", " ", str(a).lower().replace("\u2019", "'")).strip()
+            a = re.sub(r"\s+", " ", a)
+            if not a or len(a.split()) > 3 or len(a) > 40:
+                continue
+            if len(a.split()) == 1 and (a in _KT_LONE or a in _KT_GENERIC or (len(a) < 2 and not a.isdigit())):
+                continue
+            if a not in alts:
+                alts.append(a)
+        if alts:
+            out.append(alts[:15])
+    return out[:4]
+
+
+def draft_key_terms(facts: list[dict], calls: list[CallRecord] | None = None) -> dict[str, list[list[str]]]:
+    """-> {fact id: must}. One call per fact list, so groups can be distinctive against the other details."""
+    lst = "\n".join(f"{f['id']}: {f['label']}" + (f" ({f['detail']})" if f.get("detail") else "") for f in facts)
+    out = chat_json(settings.ultra, [{"role": "system", "content": KEYTERMS_PROMPT},
+                                     {"role": "user", "content": f"Details:\n{lst}\n\nReturn key-word groups for every detail id."}],
+                    schema=KEYTERMS_SCHEMA, purpose="Draft key words", reasoning=False, max_tokens=4000, temperature=0.0, calls=calls)
+    ids = {f["id"] for f in facts}
+    res = {}
+    for d in out.get("details", []):
+        fid = str(d.get("id", "")).strip()
+        m = re.match(r"^(F\d+)\b", fid)
+        fid = m.group(1) if m else fid
+        if fid in ids:
+            res[fid] = normalize_must(d.get("groups"))
+    return res
+
+
+# ---------------------------------------------------------------------------------------------------------------------
 # 3. Sentence tagger (Lightning) — the model reads; it doesn't decide origins
 # ---------------------------------------------------------------------------------------------------------------------
 TAG_SCHEMA = {

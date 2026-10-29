@@ -37,9 +37,10 @@ jobs:
           v = {"SYNTH": str(d.get("synth", "0")), "N": str(d.get("n", "30")), "METHODS": str(d.get("methods", "keyword,one_prompt,provenance")),
                "TEST_SYNTH": str(d.get("test_synth", "0")), "TEST_GENERATOR": str(d.get("test_generator", "Qwen/Qwen3-30B-A3B-Instruct-2507")),
                "TEST_SEED": str(d.get("test_seed", "101")), "APPEND_TEST": str(d.get("append_test", "0")), "SPLIT": str(d.get("split", "test")),
-               "REPORT": str(d.get("report", "0"))}
+               "REPORT": str(d.get("report", "0")), "DRAFT_KT": str(d.get("draft_kt", ""))}
           ok = {"SYNTH": r"\d+", "N": r"\d+", "METHODS": r"[a-z_,]+", "TEST_SYNTH": r"\d+", "TEST_GENERATOR": r"[A-Za-z0-9._/-]+",
-                "TEST_SEED": r"\d+", "APPEND_TEST": r"[01]", "SPLIT": r"test|dev|train|trainval", "REPORT": r"[01]"}
+                "TEST_SEED": r"\d+", "APPEND_TEST": r"[01]", "SPLIT": r"test|dev|train|trainval", "REPORT": r"[01]",
+                "DRAFT_KT": r"|trainval|test"}
           for k, x in v.items():
               if not re.fullmatch(ok[k], x):
                   sys.exit(f"bad value for {k}: {x!r}")
@@ -66,6 +67,7 @@ jobs:
           fi
           if [ "$SYNTH" != "0" ] || [ "$TEST_SYNTH" != "0" ]; then python -m scripts.build_pairs 2>&1 | tee -a eval/synth_log.txt; fi
           if [ "$REPORT" = "1" ]; then python train/report.py provenance-matcher eval/training.json 2>&1 | tee eval/report_log.txt; fi
+          if [ -n "$DRAFT_KT" ]; then python -m scripts.draft_key_terms --file "$DRAFT_KT" 2>&1 | tee eval/key_terms_log.txt; fi
           if [ "$N" != "0" ]; then
             SUF=$([ "$SPLIT" = "test" ] || echo "_$SPLIT")
             python -m eval.run_eval --split "$SPLIT" --n "$N" --methods "$METHODS" 2>&1 | tee "eval/eval_log$SUF.txt"
