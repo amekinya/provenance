@@ -65,3 +65,12 @@ def test_numbered_speaker_names_from_the_recording_step_parse_as_their_roles():
                             "SUSPECT", "DET 1, DET 2")
     assert [(u["speaker"], u["role"]) for u in utts] == [
         ("DET 1", "interrogator"), ("SUSPECT", "suspect"), ("DET 2", "interrogator"), ("OTHER 1", "other"), ("SUSPECT", "suspect")]
+
+
+def test_a_long_reason_is_cut_at_a_word():
+    from app.ai.speech import _short
+
+    out = _short("Identifies as Detective Rowe, controls the interview flow, asks accusatory questions, sets the timeline, "
+                 "and closes the recording. He is the one leading the interview throughout.")
+    assert out.endswith("…") and len(out) <= 141 and not out[:-1].endswith(" ")
+    assert _short("Asks questions.") == "Asks questions."

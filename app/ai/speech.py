@@ -99,6 +99,12 @@ ROLE_SCHEMA = {"type": "object", "properties": {"speakers": {"type": "array", "i
     "required": ["speakers"], "additionalProperties": False}
 
 
+def _short(text: str, limit: int = 140) -> str:
+    """A model's reason, cut at a word boundary."""
+    text = " ".join(str(text).split())
+    return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
 def propose_roles(turns: list[dict], calls: list[CallRecord] | None = None) -> dict:
     """Nemotron 3.5 Lightning proposes each speaker's role from what they say; code checks the reply and falls back to
     a simple rule. -> {"by": "lightning"|"code", "roles": {speaker: {"role", "why"}}}"""
@@ -120,7 +126,7 @@ def propose_roles(turns: list[dict], calls: list[CallRecord] | None = None) -> d
     except LiveModelUnavailable:
         return fallback
     known = {s["speaker"] for s in summary}
-    roles = {x["speaker"].strip().upper(): {"role": x["role"], "why": x["why"][:120]} for x in out.get("speakers", [])
+    roles = {x["speaker"].strip().upper(): {"role": x["role"], "why": _short(x["why"])} for x in out.get("speakers", [])
              if x.get("speaker", "").strip().upper() in known}
     if set(roles) != known or sum(r["role"] == "suspect" for r in roles.values()) != 1:
         return fallback  # a proposal that misses a speaker, or names no suspect or two, isn't used

@@ -116,6 +116,8 @@ If the endpoint is off, the page says "Speech recognition needs our Nebius endpo
 
 On CPU, 2.5 minutes took 21 s to transcribe and 6 s to diarize; a GPU is much faster. Nine minutes of real speech took 12 s to diarize on CPU.
 
+**Same audit from the recording as from the script** (`python -m scripts.audio_audit_compare [--name hard]`, [`audit_compare.json`](eval/audio_test/audit_compare.json)). We ran the live audit twice per recording with the same 6 facts: once on the script, and once on the transcript from the recording, with speakers named the way the "Who is who?" step names them. Every fact got the same origin and corroboration, 6 of 6 on both recordings, with identical counts. The four runs cost $0.32 of Token Factory. Nemotron 3.5 Lightning, given the recording transcripts, named the roles correctly on both, including the two investigators in the 3-voice recording.
+
 **What we found, and what we changed.** On the first runs, Parakeet sometimes returned nothing for several seconds of clear synthetic speech, or for a whole chunk. With the same audio it gave 0, 19 or 36 words depending on half a second of padding. A NeMo-style greedy decoding loop we wrote over the same encoder gave the same output as transformers' `generate`, so this comes from the model's encoder output on these inputs, not from the decoding code. Three changes:
 - **Chunk length and padding.** These were chosen on a separate dev recording: Faithful's voiced turns, 3.4 minutes. 16 s chunks had 5.9% word error and 28 s chunks 6.3%.
 - **Noise floor.** A noise floor at −80 dBFS is added, because the synthetic audio has exact digital silence between turns (22% of the test clip). Real microphones never produce that, but noise gates and some call recorders do.

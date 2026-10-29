@@ -1,0 +1,115 @@
+{
+ "facts_with_same_origin_and_corroboration": "6/6",
+ "same_counts": true,
+ "differences": [],
+ "speaker_names_used": {
+  "SPEAKER 1": "DET 1",
+  "SPEAKER 2": "SUSPECT"
+ },
+ "runs": {
+  "script": {
+   "headline": "Of 4 key details SUSPECT stated or agreed to, investigators said 2 first. 2 details came from him first in the record.",
+   "counts": {
+    "interrogator_first": 2,
+    "suspect_first": 2,
+    "prior_contact": 0,
+    "public": 0,
+    "planted_adopted": 0,
+    "never_adopted": 2,
+    "not_mentioned": 0
+   },
+   "facts": {
+    "The back door was pried open with a crowbar": {
+     "origin": "never_adopted",
+     "corroboration": "not_adopted",
+     "first_suspect_quote": "",
+     "first_investigator_quote": "We know the back door was pried open with a crowbar."
+    },
+    "The alarm wire was cut": {
+     "origin": "suspect_first",
+     "corroboration": "may_corroborate",
+     "first_suspect_quote": "Maybe somebody cut the wire. That's what people do, right? You cut the alarm wire first.",
+     "first_investigator_quote": "Nobody told you about the alarm wire."
+    },
+    "A gray backpack": {
+     "origin": "interrogator_first",
+     "corroboration": "cannot_corroborate",
+     "first_suspect_quote": "I have a gray backpack. Everybody has a gray backpack.",
+     "first_investigator_quote": "And the camera across the street shows a man carrying a gray backpack."
+    },
+    "Around two in the morning": {
+     "origin": "suspect_first",
+     "corroboration": "may_corroborate",
+     "first_suspect_quote": "It was around two in the morning, I think.",
+     "first_investigator_quote": ""
+    },
+    "The cash drawer was left open": {
+     "origin": "never_adopted",
+     "corroboration": "not_adopted",
+     "first_suspect_quote": "",
+     "first_investigator_quote": "The cash drawer was left open. Did you open the cash drawer?"
+    },
+    "A white pickup truck": {
+     "origin": "interrogator_first",
+     "corroboration": "cannot_corroborate",
+     "first_suspect_quote": "Yeah, I do. But lots of people have white trucks.",
+     "first_investigator_quote": "A neighbor saw a white pickup truck parked behind the store. You drive a white pickup, don"
+    }
+   },
+   "cost_usd": 0.0844,
+   "seconds": 46.5
+  },
+  "recording": {
+   "headline": "Of 4 key details SUSPECT stated or agreed to, investigators said 2 first. 2 details came from him first in the record.",
+   "counts": {
+    "interrogator_first": 2,
+    "suspect_first": 2,
+    "prior_contact": 0,
+    "public": 0,
+    "planted_adopted": 0,
+    "never_adopted": 2,
+    "not_mentioned": 0
+   },
+   "facts": {
+    "The back door was pried open with a crowbar": {
+     "origin": "never_adopted",
+     "corroboration": "not_adopted",
+     "first_suspect_quote": "",
+     "first_investigator_quote": "the back door was pried open with a crowbar"
+    },
+    "The alarm wire was cut": {
+     "origin": "suspect_first",
+     "corroboration": "may_corroborate",
+     "first_suspect_quote": "Maybe somebody cut the wire. That's what people do, right? You cut the alarm wire first.",
+     "first_investigator_quote": ""
+    },
+    "A gray backpack": {
+     "origin": "interrogator_first",
+     "corroboration": "cannot_corroborate",
+     "first_suspect_quote": "I have a grey backpack. Everybody has a grey backpack.",
+     "first_investigator_quote": "And the camera across the street shows a man carrying a grey backpack."
+    },
+    "Around two in the morning": {
+     "origin": "suspect_first",
+     "corroboration": "may_corroborate",
+     "first_suspect_quote": "it was around two in the morning",
+     "first_investigator_quote": ""
+    },
+    "The cash drawer was left open": {
+     "origin": "never_adopted",
+     "corroboration": "not_adopted",
+     "first_suspect_quote": "",
+     "first_investigator_quote": "The cash drawer was left open. Did you open the cash drawer?"
+    },
+    "A white pickup truck": {
+     "origin": "interrogator_first",
+     "corroboration": "cannot_corroborate",
+     "first_suspect_quote": "Yeah, I do, but lots of people have white trucks.",
+     "first_investigator_quote": "A neighbor saw a white pickup truck parked behind the store. You drive a white pickup, don"
+    }
+   },
+   "cost_usd": 0.0597,
+   "seconds": 28.9
+  }
+ }
+}
