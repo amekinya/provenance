@@ -46,9 +46,10 @@ def health():
             "matcher": bool(settings.matcher_url), "draft_key_words": KT_DRAFT}
 
 
-# Drafted key words are offered in the Try form only if they measured at least as well as no key words on the dev slice
-# (eval/RESULTS_dev.md); hand-written key words can always be typed.
-KT_DRAFT = os.environ.get("KEYWORD_DRAFTING", "1") == "1"
+# Drafted key words are offered in the Try form only if they measure at least as well as no key words on the dev slice.
+# They didn't (eval/RESULTS_dev.md, Oct 29: 61% vs 84% right first speaker), so drafting is off by default; hand-written
+# key words can always be typed. KEYWORD_DRAFTING=1 turns the button back on.
+KT_DRAFT = os.environ.get("KEYWORD_DRAFTING", "0") == "1"
 
 
 @app.get("/api/cases")
