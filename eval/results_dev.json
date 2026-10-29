@@ -1,0 +1,94 @@
+{
+ "split": "dev",
+ "n_interrogations": 6,
+ "generator": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+ "results": {
+  "provenance": {
+   "n_facts": 44,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.841,
+   "line_acc": 0.795,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->suspect": 12,
+    "suspect->interrogator": 2,
+    "never->never": 9,
+    "interrogator->interrogator": 16,
+    "interrogator->never": 4,
+    "never->interrogator": 1
+   }
+  },
+  "provenance_kt": {
+   "n_facts": 44,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.614,
+   "line_acc": 0.614,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->suspect": 8,
+    "never->never": 8,
+    "interrogator->interrogator": 11,
+    "interrogator->never": 9,
+    "suspect->never": 5,
+    "suspect->interrogator": 1,
+    "never->interrogator": 2
+   }
+  }
+ },
+ "costs": {
+  "provenance": {
+   "seconds": 114.5,
+   "cost_usd": 0.4847,
+   "calls": 81
+  },
+  "provenance_kt": {
+   "seconds": 154.5,
+   "cost_usd": 0.5057,
+   "calls": 106
+  }
+ },
+ "rows": [
+  {
+   "method": "Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search",
+   "n_facts": 44,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.841,
+   "line_acc": 0.795,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->suspect": 12,
+    "suspect->interrogator": 2,
+    "never->never": 9,
+    "interrogator->interrogator": 16,
+    "interrogator->never": 4,
+    "never->interrogator": 1
+   },
+   "seconds": 114.5,
+   "cost_usd": 0.4847,
+   "calls": 81
+  },
+  {
+   "method": "Provenance with key words drafted by Nemotron 3 Ultra (same labels; code decides the investigator side)",
+   "n_facts": 44,
+   "failed_interrogations": 0,
+   "speaker_acc": 0.614,
+   "line_acc": 0.614,
+   "investigator_first_called_suspect_first": 0,
+   "confusion": {
+    "suspect->suspect": 8,
+    "never->never": 8,
+    "interrogator->interrogator": 11,
+    "interrogator->never": 9,
+    "suspect->never": 5,
+    "suspect->interrogator": 1,
+    "never->interrogator": 2
+   },
+   "seconds": 154.5,
+   "cost_usd": 0.5057,
+   "calls": 106
+  }
+ ],
+ "note": "6 synthetic interrogations (dev split) written by deepseek-ai/DeepSeek-V4.1-Flash-1017 (the training writer; diagnostic split), 44 details with known first speakers.",
+ "generated": "2026-10-29 02:21 UTC",
+ "commit": "bf05978"
+}

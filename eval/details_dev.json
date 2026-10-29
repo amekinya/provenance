@@ -1,0 +1,7238 @@
+{
+ "recs": {
+  "X007": {
+   "facts": [
+    {
+     "id": "F1",
+     "label": "yellow crowbar",
+     "detail": "A yellow-painted crowbar used to pry the car door"
+    },
+    {
+     "id": "F2",
+     "label": "north parking deck",
+     "detail": "The break-in occurred on the north parking deck of the mall"
+    },
+    {
+     "id": "F3",
+     "label": "black backpack",
+     "detail": "A black backpack taken from the car"
+    },
+    {
+     "id": "F4",
+     "label": "blue sedan",
+     "detail": "The suspect's vehicle is a blue sedan"
+    },
+    {
+     "id": "F5",
+     "label": "about 9:15 p.m.",
+     "detail": "The break-in happened around 9:15 p.m."
+    },
+    {
+     "id": "F6",
+     "label": "gray hoodie",
+     "detail": "The suspect wore a gray hoodie"
+    },
+    {
+     "id": "F7",
+     "label": "passenger-side window",
+     "detail": "The passenger-side window was smashed"
+    },
+    {
+     "id": "F8",
+     "label": "cut on left hand",
+     "detail": "The suspect has a small cut on his left hand"
+    }
+   ],
+   "plan": [
+    {
+     "id": "F1",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F2",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F3",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F4",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F5",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F6",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F7",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F8",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    }
+   ],
+   "utterances": [
+    {
+     "id": "X007-001",
+     "role": "interrogator",
+     "text": "Thanks for coming in. Have a seat. Can I get you anything before we start?",
+     "carries": []
+    },
+    {
+     "id": "X007-002",
+     "role": "suspect",
+     "text": "I'm good. What's this about?",
+     "carries": []
+    },
+    {
+     "id": "X007-003",
+     "role": "interrogator",
+     "text": "Just a conversation about Tuesday night at the mall. You were there, right?",
+     "carries": []
+    },
+    {
+     "id": "X007-004",
+     "role": "suspect",
+     "text": "Yeah, I was around. I didn't do anything, though. I had that yellow crowbar in my trunk from helping my uncle move a fence, but that's it.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X007-005",
+     "role": "interrogator",
+     "text": "A yellow crowbar. Okay. Where's that crowbar now?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-006",
+     "role": "suspect",
+     "text": "In my trunk, like I said. You can look.",
+     "carries": []
+    },
+    {
+     "id": "X007-007",
+     "role": "interrogator",
+     "text": "We'll get to that. Walk me through where you parked.",
+     "carries": []
+    },
+    {
+     "id": "X007-008",
+     "role": "suspect",
+     "text": "Up on the north parking deck, near the stairwell. That's where I always park.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X007-009",
+     "role": "interrogator",
+     "text": "The north deck. Anyone with you up there?",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-010",
+     "role": "suspect",
+     "text": "No, just me. I was in and out pretty quick.",
+     "carries": []
+    },
+    {
+     "id": "X007-011",
+     "role": "interrogator",
+     "text": "What did you take from the car?",
+     "carries": []
+    },
+    {
+     "id": "X007-012",
+     "role": "suspect",
+     "text": "I didn't take anything. I don't know anything about a black backpack, if that's what you're getting at.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X007-013",
+     "role": "interrogator",
+     "text": "So you're saying you never handled a black backpack from that vehicle?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-014",
+     "role": "suspect",
+     "text": "Never touched it. Don't know what you're talking about.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X007-015",
+     "role": "interrogator",
+     "text": "Fair enough. What were you driving that night?",
+     "carries": []
+    },
+    {
+     "id": "X007-016",
+     "role": "suspect",
+     "text": "My car. Nothing special.",
+     "carries": []
+    },
+    {
+     "id": "X007-017",
+     "role": "interrogator",
+     "text": "Is it the blue sedan out front with the dented rear bumper?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-018",
+     "role": "suspect",
+     "text": "Yeah. That's mine.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X007-019",
+     "role": "interrogator",
+     "text": "Okay. And what time did you get to the mall?",
+     "carries": []
+    },
+    {
+     "id": "X007-020",
+     "role": "suspect",
+     "text": "I don't know, sometime after dinner.",
+     "carries": []
+    },
+    {
+     "id": "X007-021",
+     "role": "interrogator",
+     "text": "Our timeline puts the break-in at about 9:15 p.m. Does that line up with when you were up there?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X007-022",
+     "role": "suspect",
+     "text": "Yeah, around a quarter after nine sounds about right. I was heading back to my car about then.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X007-023",
+     "role": "interrogator",
+     "text": "What were you wearing?",
+     "carries": []
+    },
+    {
+     "id": "X007-024",
+     "role": "suspect",
+     "text": "Just a gray hoodie and jeans. It was chilly.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X007-025",
+     "role": "interrogator",
+     "text": "A gray hoodie. Was the hood up?",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-026",
+     "role": "suspect",
+     "text": "Yeah, it was up. Like I said, cold.",
+     "carries": []
+    },
+    {
+     "id": "X007-027",
+     "role": "interrogator",
+     "text": "Let's talk about the car that was broken into. Which window was damaged?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-028",
+     "role": "suspect",
+     "text": "I wouldn't know. I wasn't near any car.",
+     "carries": []
+    },
+    {
+     "id": "X007-029",
+     "role": "interrogator",
+     "text": "We found glass under the passenger-side window. You're saying that wasn't you?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X007-030",
+     "role": "suspect",
+     "text": "Yeah, that wasn't me.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X007-031",
+     "role": "interrogator",
+     "text": "Okay. One more thing. How'd you get that mark on your hand?",
+     "carries": []
+    },
+    {
+     "id": "X007-032",
+     "role": "suspect",
+     "text": "What mark?",
+     "carries": []
+    },
+    {
+     "id": "X007-033",
+     "role": "interrogator",
+     "text": "The small cut on your left hand. Looks fresh.",
+     "carries": [
+      {
+       "fact": "F8",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-034",
+     "role": "suspect",
+     "text": "Oh, that. It's just a cut on my left hand from working on my car. Slipped with a wrench.",
+     "carries": [
+      {
+       "fact": "F8",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X007-035",
+     "role": "interrogator",
+     "text": "Working on the blue sedan?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X007-036",
+     "role": "suspect",
+     "text": "Yeah.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X007-037",
+     "role": "interrogator",
+     "text": "Alright. I'm going to step out for a minute. Sit tight.",
+     "carries": []
+    },
+    {
+     "id": "X007-038",
+     "role": "suspect",
+     "text": "Can I get some water?",
+     "carries": []
+    },
+    {
+     "id": "X007-039",
+     "role": "interrogator",
+     "text": "I'll have someone bring you a cup.",
+     "carries": []
+    }
+   ]
+  },
+  "X023": {
+   "facts": [
+    {
+     "id": "F1",
+     "label": "blue baseball cap with a frayed brim",
+     "detail": "A blue baseball cap with a frayed brim."
+    },
+    {
+     "id": "F2",
+     "label": "Maple Street parking garage, level 3",
+     "detail": "The third level of the Maple Street parking garage."
+    },
+    {
+     "id": "F3",
+     "label": "a red folding pocketknife",
+     "detail": "A red folding pocketknife."
+    },
+    {
+     "id": "F4",
+     "label": "a black hooded sweatshirt",
+     "detail": "A black hooded sweatshirt."
+    },
+    {
+     "id": "F5",
+     "label": "a white panel van",
+     "detail": "A white panel van."
+    },
+    {
+     "id": "F6",
+     "label": "around 9:40 p.m.",
+     "detail": "Around 9:40 on the night in question."
+    },
+    {
+     "id": "F7",
+     "label": "a scrape on the left forearm",
+     "detail": "A scrape on the left forearm."
+    }
+   ],
+   "plan": [
+    {
+     "id": "F1",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F2",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F3",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F4",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F5",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F6",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F7",
+     "origin": "never",
+     "adoption": ""
+    }
+   ],
+   "utterances": [
+    {
+     "id": "X023-001",
+     "role": "interrogator",
+     "text": "Thanks for coming in. You're not under arrest. You can leave whenever you want. Just help me sort out a timeline.",
+     "carries": []
+    },
+    {
+     "id": "X023-002",
+     "role": "suspect",
+     "text": "Yeah, fine. I got work at six, so.",
+     "carries": []
+    },
+    {
+     "id": "X023-003",
+     "role": "interrogator",
+     "text": "Shouldn't take long. Where were you Thursday evening?",
+     "carries": []
+    },
+    {
+     "id": "X023-004",
+     "role": "suspect",
+     "text": "Around, you know. I had my blue cap on, the one with the frayed edge on the brim, so I was mostly just keeping the sun out of my eyes before it got dark.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-005",
+     "role": "interrogator",
+     "text": "The blue cap with the worn brim. Do you wear that one a lot?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-006",
+     "role": "suspect",
+     "text": "It's just a hat. Keeps the glare off.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-007",
+     "role": "interrogator",
+     "text": "Fair enough. Go on.",
+     "carries": []
+    },
+    {
+     "id": "X023-008",
+     "role": "suspect",
+     "text": "I ended up over by the Maple Street garage. Up on the third level, where it's quieter. I park my bike up there sometimes.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-009",
+     "role": "interrogator",
+     "text": "Third level of the Maple Street structure. What time was that?",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-010",
+     "role": "suspect",
+     "text": "I don't know, sometime after eight. I wasn't clocking it.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-011",
+     "role": "interrogator",
+     "text": "Okay. Anyone with you?",
+     "carries": []
+    },
+    {
+     "id": "X023-012",
+     "role": "suspect",
+     "text": "No. I had my red folder \u2014 the little pocketknife, red handle \u2014 I keep it for cutting zip ties and junk. I was messing with it, opening and closing it, bored.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-013",
+     "role": "interrogator",
+     "text": "The red folding knife. Where is it now?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-014",
+     "role": "suspect",
+     "text": "In my kitchen drawer, probably. It's not a big deal, it's a tool.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-015",
+     "role": "interrogator",
+     "text": "Did you see anyone else up there?",
+     "carries": []
+    },
+    {
+     "id": "X023-016",
+     "role": "suspect",
+     "text": "Maybe. I don't really remember.",
+     "carries": []
+    },
+    {
+     "id": "X023-017",
+     "role": "interrogator",
+     "text": "Were you wearing a black hooded sweatshirt that night?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-018",
+     "role": "suspect",
+     "text": "No. I don't own one of those.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X023-019",
+     "role": "interrogator",
+     "text": "You're sure? Dark hoodie, pulled up?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-020",
+     "role": "suspect",
+     "text": "I said no. I don't know anything about a hoodie.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X023-021",
+     "role": "interrogator",
+     "text": "Alright. Did you notice a white panel van parked on that level?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-022",
+     "role": "suspect",
+     "text": "Yeah.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X023-023",
+     "role": "interrogator",
+     "text": "The white van \u2014 was it there when you got up there?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-024",
+     "role": "suspect",
+     "text": "Yeah, it was there.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X023-025",
+     "role": "interrogator",
+     "text": "Okay. Let's talk about the bike itself.",
+     "carries": []
+    },
+    {
+     "id": "X023-026",
+     "role": "suspect",
+     "text": "I wasn't near it. I was up there around 9:40, maybe a little after, but I didn't touch anybody's bike.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-027",
+     "role": "interrogator",
+     "text": "9:40 p.m. \u2014 how do you know it was that specific time?",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-028",
+     "role": "suspect",
+     "text": "I checked my phone for the time because I was thinking about heading out. That's it.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-029",
+     "role": "interrogator",
+     "text": "Did you get any scrapes or cuts that night? Anything on your arms?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-030",
+     "role": "suspect",
+     "text": "No. Nothing like that.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X023-031",
+     "role": "interrogator",
+     "text": "A scrape on the left forearm \u2014 nothing at all?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-032",
+     "role": "suspect",
+     "text": "I don't know what you're talking about. No scrape.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X023-033",
+     "role": "interrogator",
+     "text": "Let's back up. You said you were messing with the red knife. Did you leave it up there?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-034",
+     "role": "suspect",
+     "text": "No, I told you, it's at home.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-035",
+     "role": "interrogator",
+     "text": "And the cap with the frayed brim \u2014 you had it on the whole time?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-036",
+     "role": "suspect",
+     "text": "Most of the time. It was on my head, yeah.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-037",
+     "role": "interrogator",
+     "text": "You mentioned the third level. Did you go down to any other level?",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-038",
+     "role": "suspect",
+     "text": "Just the third one. I stayed up there.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-039",
+     "role": "interrogator",
+     "text": "One more time \u2014 the white van. You're sure it was a panel van?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X023-040",
+     "role": "suspect",
+     "text": "Yeah.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X023-041",
+     "role": "interrogator",
+     "text": "And you're telling me you never saw a black hooded sweatshirt on anyone up there.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-042",
+     "role": "suspect",
+     "text": "I never saw one. I already said that.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X023-043",
+     "role": "interrogator",
+     "text": "You also said no injuries. Nothing on your left arm.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X023-044",
+     "role": "suspect",
+     "text": "Nothing. My arm's fine.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X023-045",
+     "role": "interrogator",
+     "text": "Alright. I'm going to write this up. You're free to go for now, but stay reachable.",
+     "carries": []
+    },
+    {
+     "id": "X023-046",
+     "role": "suspect",
+     "text": "Yeah. Whatever.",
+     "carries": []
+    }
+   ]
+  },
+  "X026": {
+   "facts": [
+    {
+     "id": "F1",
+     "label": "spray paint",
+     "detail": "a can of blue spray paint"
+    },
+    {
+     "id": "F2",
+     "label": "location",
+     "detail": "the east gymnasium doors"
+    },
+    {
+     "id": "F3",
+     "label": "time",
+     "detail": "11:40 p.m."
+    },
+    {
+     "id": "F4",
+     "label": "clothing",
+     "detail": "a red hooded sweatshirt"
+    },
+    {
+     "id": "F5",
+     "label": "vehicle",
+     "detail": "a silver hatchback"
+    },
+    {
+     "id": "F6",
+     "label": "injury",
+     "detail": "a cut on the left hand"
+    }
+   ],
+   "plan": [
+    {
+     "id": "F1",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F2",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F3",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F4",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F5",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F6",
+     "origin": "never",
+     "adoption": ""
+    }
+   ],
+   "utterances": [
+    {
+     "id": "X026-001",
+     "role": "interrogator",
+     "text": "Thanks for coming in, Mr. Halloran. Can I get you something to drink?",
+     "carries": []
+    },
+    {
+     "id": "X026-002",
+     "role": "suspect",
+     "text": "I'm fine. What's this about? Am I in some kind of trouble?",
+     "carries": []
+    },
+    {
+     "id": "X026-003",
+     "role": "interrogator",
+     "text": "That depends on the conversation. You know the high school off Cedar?",
+     "carries": []
+    },
+    {
+     "id": "X026-004",
+     "role": "suspect",
+     "text": "Sure, everybody does. Look, I already told the guy at the front desk, I don't even know why I'm here.",
+     "carries": []
+    },
+    {
+     "id": "X026-005",
+     "role": "interrogator",
+     "text": "Just routine. There was some damage done over the weekend. Walk me through Friday night.",
+     "carries": []
+    },
+    {
+     "id": "X026-006",
+     "role": "suspect",
+     "text": "Friday I was mostly at my cousin's place. We watched a game, ordered food. Nothing exciting.",
+     "carries": []
+    },
+    {
+     "id": "X026-007",
+     "role": "interrogator",
+     "text": "And you stayed there the whole night?",
+     "carries": []
+    },
+    {
+     "id": "X026-008",
+     "role": "suspect",
+     "text": "Pretty much. I mean, I ran out for a bit because we needed stuff, but I came right back.",
+     "carries": []
+    },
+    {
+     "id": "X026-009",
+     "role": "interrogator",
+     "text": "What kind of stuff?",
+     "carries": []
+    },
+    {
+     "id": "X026-010",
+     "role": "suspect",
+     "text": "Snacks, soda. And I had to grab a can of blue spray paint for my cousin's project, he's doing this poster thing for his shop class.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X026-011",
+     "role": "interrogator",
+     "text": "A can of spray paint. Where'd you buy that?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-012",
+     "role": "suspect",
+     "text": "The hardware place on Fifth. Paid cash, I think. Why, is that a problem?",
+     "carries": []
+    },
+    {
+     "id": "X026-013",
+     "role": "interrogator",
+     "text": "Not necessarily. Did you end up anywhere near the school that night?",
+     "carries": []
+    },
+    {
+     "id": "X026-014",
+     "role": "suspect",
+     "text": "Not really. Well \u2014 I cut through the lot behind the school because the light's better, but I didn't stop. I went past the east gymnasium doors and kept going.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X026-015",
+     "role": "interrogator",
+     "text": "The east gym doors. So you were right there by that entrance?",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-016",
+     "role": "suspect",
+     "text": "By the doors, yeah, but just walking. I didn't touch anything.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X026-017",
+     "role": "interrogator",
+     "text": "Okay. Let's talk about timing. Do you have any idea what time that would've been?",
+     "carries": []
+    },
+    {
+     "id": "X026-018",
+     "role": "suspect",
+     "text": "Honestly, no clue. Late, I guess.",
+     "carries": []
+    },
+    {
+     "id": "X026-019",
+     "role": "interrogator",
+     "text": "Our cameras put someone at that entrance at about 11:40 p.m. Does that line up with when you walked through?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X026-020",
+     "role": "suspect",
+     "text": "I couldn't tell you. I wasn't checking my phone.",
+     "carries": []
+    },
+    {
+     "id": "X026-021",
+     "role": "interrogator",
+     "text": "The footage shows activity right around 11:40. Twenty to midnight. That mean anything to you?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-022",
+     "role": "suspect",
+     "text": "I mean, twenty to midnight, sure, that could've been when I was cutting through. But that doesn't mean I did anything.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X026-023",
+     "role": "interrogator",
+     "text": "Fair enough. Now, the person on the footage is wearing something with a hood. A red hooded sweatshirt. Do you own one?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-024",
+     "role": "suspect",
+     "text": "A red hoodie? No. I don't wear red, man. Never have.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X026-025",
+     "role": "interrogator",
+     "text": "You sure? Not even one in the back of a closet somewhere?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-026",
+     "role": "suspect",
+     "text": "I'm telling you, that's not mine. I don't know anything about a red sweatshirt.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X026-027",
+     "role": "interrogator",
+     "text": "Alright. How'd you get to your cousin's that night? Did you drive?",
+     "carries": []
+    },
+    {
+     "id": "X026-028",
+     "role": "suspect",
+     "text": "I borrowed my roommate's car. Well, not borrowed exactly, he lets me use it.",
+     "carries": []
+    },
+    {
+     "id": "X026-029",
+     "role": "interrogator",
+     "text": "What kind of car is that?",
+     "carries": []
+    },
+    {
+     "id": "X026-030",
+     "role": "suspect",
+     "text": "It's a little four-door. Dark colored, I think. I don't pay much attention to that stuff.",
+     "carries": []
+    },
+    {
+     "id": "X026-031",
+     "role": "interrogator",
+     "text": "We've got a witness who saw a silver hatchback leaving that lot around the same time. Any chance that was you?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-032",
+     "role": "suspect",
+     "text": "A silver hatchback? No, that's not the car I had. I don't know whose that is.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X026-033",
+     "role": "interrogator",
+     "text": "You're certain? Silver, hatchback, small.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-034",
+     "role": "suspect",
+     "text": "I already said no. I can't help you with that one.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X026-035",
+     "role": "interrogator",
+     "text": "Let's go back to you walking through. Did you have both hands free? Carry anything?",
+     "carries": []
+    },
+    {
+     "id": "X026-036",
+     "role": "suspect",
+     "text": "Just the bag from the store. That's it.",
+     "carries": []
+    },
+    {
+     "id": "X026-037",
+     "role": "interrogator",
+     "text": "I ask because the person on the footage has a mark on one hand. A cut on the left hand. You've got a bandage there yourself.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X026-038",
+     "role": "suspect",
+     "text": "This? I got that moving furniture. Sliced it on a bracket. Nothing to do with anything.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X026-039",
+     "role": "interrogator",
+     "text": "So you'd say that cut has nothing to do with Friday night at the school?",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X026-040",
+     "role": "suspect",
+     "text": "Correct. I don't know anything about a cut on anybody's hand except my own.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X026-041",
+     "role": "interrogator",
+     "text": "Okay. Let me lay it out. We've got damage to a set of doors, we've got a time, and we've got a description. I'd like to clear this up tonight.",
+     "carries": []
+    },
+    {
+     "id": "X026-042",
+     "role": "suspect",
+     "text": "Then clear it up with somebody else, because I've told you everything I know.",
+     "carries": []
+    },
+    {
+     "id": "X026-043",
+     "role": "interrogator",
+     "text": "One more time, from the top. Friday night. The store. The walk through the lot.",
+     "carries": []
+    },
+    {
+     "id": "X026-044",
+     "role": "suspect",
+     "text": "Same story as before. I bought what I bought, I walked where I walked, and I went home. That's it.",
+     "carries": []
+    },
+    {
+     "id": "X026-045",
+     "role": "interrogator",
+     "text": "Alright, Mr. Halloran. I'm going to have you write all of that down for me, and we'll go from there.",
+     "carries": []
+    }
+   ]
+  },
+  "X036": {
+   "facts": [
+    {
+     "id": "F1",
+     "label": "weapon",
+     "detail": "a black folding knife with a chipped tip"
+    },
+    {
+     "id": "F2",
+     "label": "location",
+     "detail": "the QuickStop on Delaney Avenue"
+    },
+    {
+     "id": "F3",
+     "label": "object",
+     "detail": "a grey cash tray from the register"
+    },
+    {
+     "id": "F4",
+     "label": "clothing",
+     "detail": "a dark green hooded sweatshirt"
+    },
+    {
+     "id": "F5",
+     "label": "vehicle",
+     "detail": "a silver sedan with a dented rear bumper"
+    },
+    {
+     "id": "F6",
+     "label": "time",
+     "detail": "just after 11:40 p.m."
+    },
+    {
+     "id": "F7",
+     "label": "injury",
+     "detail": "a scraped elbow from the fall"
+    }
+   ],
+   "plan": [
+    {
+     "id": "F1",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F2",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F3",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F4",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F5",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F6",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F7",
+     "origin": "suspect_first",
+     "adoption": ""
+    }
+   ],
+   "utterances": [
+    {
+     "id": "X036-001",
+     "role": "interrogator",
+     "text": "Thanks for coming in, Mr. Harrow. Can I get you anything before we start?",
+     "carries": []
+    },
+    {
+     "id": "X036-002",
+     "role": "suspect",
+     "text": "No, I'm good. Let's just get this over with.",
+     "carries": []
+    },
+    {
+     "id": "X036-003",
+     "role": "interrogator",
+     "text": "Fair enough. You know why you're here?",
+     "carries": []
+    },
+    {
+     "id": "X036-004",
+     "role": "suspect",
+     "text": "Something about a store thing, I guess. I don't know.",
+     "carries": []
+    },
+    {
+     "id": "X036-005",
+     "role": "interrogator",
+     "text": "Let's start with where you were last night.",
+     "carries": []
+    },
+    {
+     "id": "X036-006",
+     "role": "suspect",
+     "text": "I was out walking, clearing my head. That's it.",
+     "carries": []
+    },
+    {
+     "id": "X036-007",
+     "role": "interrogator",
+     "text": "Walking where?",
+     "carries": []
+    },
+    {
+     "id": "X036-008",
+     "role": "suspect",
+     "text": "Around. Look, I had a knife on me, okay? A little black folding one. I always carry it for work.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-009",
+     "role": "interrogator",
+     "text": "A folding knife. Can you describe it a bit more?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-010",
+     "role": "suspect",
+     "text": "Nothing special. The tip's chipped off it. Been like that for months.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-011",
+     "role": "interrogator",
+     "text": "Where's that knife now?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-012",
+     "role": "suspect",
+     "text": "At home. In a drawer. I didn't do anything with it.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X036-013",
+     "role": "interrogator",
+     "text": "Okay. Let's talk about the QuickStop on Delaney Avenue.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-014",
+     "role": "suspect",
+     "text": "What about it?",
+     "carries": []
+    },
+    {
+     "id": "X036-015",
+     "role": "interrogator",
+     "text": "Were you near that store last night?",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-016",
+     "role": "suspect",
+     "text": "Yeah. I walked past it.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X036-017",
+     "role": "interrogator",
+     "text": "And inside, did you see a grey cash tray behind the counter?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-018",
+     "role": "suspect",
+     "text": "I wasn't really looking at the counter.",
+     "carries": []
+    },
+    {
+     "id": "X036-019",
+     "role": "interrogator",
+     "text": "The clerk says the tray from the register was taken. The grey one.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-020",
+     "role": "suspect",
+     "text": "Look, I saw a grey tray thing sitting there, but I didn't take it.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-021",
+     "role": "interrogator",
+     "text": "What were you wearing that night?",
+     "carries": []
+    },
+    {
+     "id": "X036-022",
+     "role": "suspect",
+     "text": "Just normal clothes.",
+     "carries": []
+    },
+    {
+     "id": "X036-023",
+     "role": "interrogator",
+     "text": "A witness mentioned a dark green hooded sweatshirt. Was that you?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-024",
+     "role": "suspect",
+     "text": "Yeah, that was me.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X036-025",
+     "role": "interrogator",
+     "text": "Where's that sweatshirt now?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-026",
+     "role": "suspect",
+     "text": "In my car, probably. I don't remember.",
+     "carries": []
+    },
+    {
+     "id": "X036-027",
+     "role": "interrogator",
+     "text": "Let's go back to the walking. Did you drive at all that night?",
+     "carries": []
+    },
+    {
+     "id": "X036-028",
+     "role": "suspect",
+     "text": "I drove earlier, then parked. It's a silver sedan, older model. Bumper's dented in the back.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-029",
+     "role": "interrogator",
+     "text": "A silver sedan with a dented rear bumper. Where's that parked now?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-030",
+     "role": "suspect",
+     "text": "Out front of my place. You can check it.",
+     "carries": []
+    },
+    {
+     "id": "X036-031",
+     "role": "interrogator",
+     "text": "We will. What time did you head out last night?",
+     "carries": []
+    },
+    {
+     "id": "X036-032",
+     "role": "suspect",
+     "text": "It was just after 11:40 at night, I know that much. I looked at my phone.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-033",
+     "role": "interrogator",
+     "text": "Just after 11:40. And how long were you out?",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-034",
+     "role": "suspect",
+     "text": "Maybe half an hour. I wasn't keeping track.",
+     "carries": []
+    },
+    {
+     "id": "X036-035",
+     "role": "interrogator",
+     "text": "Anything happen while you were out? Any reason you'd be hurt?",
+     "carries": []
+    },
+    {
+     "id": "X036-036",
+     "role": "suspect",
+     "text": "I tripped on a curb, scraped my elbow a bit. That's all.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-037",
+     "role": "interrogator",
+     "text": "A scraped elbow. Which one?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X036-038",
+     "role": "suspect",
+     "text": "Left one. It's barely anything.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-039",
+     "role": "interrogator",
+     "text": "Okay. Let me ask you again about that store.",
+     "carries": []
+    },
+    {
+     "id": "X036-040",
+     "role": "suspect",
+     "text": "I already told you, I just walked past.",
+     "carries": []
+    },
+    {
+     "id": "X036-041",
+     "role": "interrogator",
+     "text": "Did you go inside?",
+     "carries": []
+    },
+    {
+     "id": "X036-042",
+     "role": "suspect",
+     "text": "No. I kept walking.",
+     "carries": []
+    },
+    {
+     "id": "X036-043",
+     "role": "interrogator",
+     "text": "The clerk described someone in a green hoodie coming in and taking the tray.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asserts"
+      },
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X036-044",
+     "role": "suspect",
+     "text": "That's not me. I wasn't in there.",
+     "carries": []
+    },
+    {
+     "id": "X036-045",
+     "role": "interrogator",
+     "text": "We're going to hold you for a bit while we check a few things. That okay?",
+     "carries": []
+    },
+    {
+     "id": "X036-046",
+     "role": "suspect",
+     "text": "Whatever. I've got nothing to hide.",
+     "carries": []
+    }
+   ]
+  },
+  "X049": {
+   "facts": [
+    {
+     "id": "F1",
+     "label": "a red plastic gas can found beside the unit door",
+     "detail": "red plastic gas can beside the unit door"
+    },
+    {
+     "id": "F2",
+     "label": "a padlock cut with bolt cutters",
+     "detail": "padlock cut with bolt cutters"
+    },
+    {
+     "id": "F3",
+     "label": "a burn on the suspect's right forearm",
+     "detail": "burn on right forearm"
+    },
+    {
+     "id": "F4",
+     "label": "the fire started at 11:40 p.m.",
+     "detail": "fire started at 11:40 p.m."
+    },
+    {
+     "id": "F5",
+     "label": "a blue pickup truck seen leaving the lot",
+     "detail": "blue pickup truck leaving the lot"
+    },
+    {
+     "id": "F6",
+     "label": "a gray hooded sweatshirt worn by the person at the gate",
+     "detail": "gray hooded sweatshirt at the gate"
+    },
+    {
+     "id": "F7",
+     "label": "a key taped under the office mailbox",
+     "detail": "key taped under office mailbox"
+    },
+    {
+     "id": "F8",
+     "label": "a black duffel bag carried into the unit",
+     "detail": "black duffel bag carried into the unit"
+    }
+   ],
+   "plan": [
+    {
+     "id": "F1",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F2",
+     "origin": "suspect_first",
+     "adoption": ""
+    },
+    {
+     "id": "F3",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F4",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F5",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F6",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F7",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F8",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    }
+   ],
+   "utterances": [
+    {
+     "id": "X049-001",
+     "role": "interrogator",
+     "text": "Thanks for coming in. Can I get you something to drink before we start?",
+     "carries": []
+    },
+    {
+     "id": "X049-002",
+     "role": "suspect",
+     "text": "I'm fine. Let's just get this over with.",
+     "carries": []
+    },
+    {
+     "id": "X049-003",
+     "role": "interrogator",
+     "text": "You understand this is being recorded, right?",
+     "carries": []
+    },
+    {
+     "id": "X049-004",
+     "role": "suspect",
+     "text": "Yeah, you said that already.",
+     "carries": []
+    },
+    {
+     "id": "X049-005",
+     "role": "interrogator",
+     "text": "Where were you on the night of the fourteenth?",
+     "carries": []
+    },
+    {
+     "id": "X049-006",
+     "role": "suspect",
+     "text": "Home. Watching TV, mostly.",
+     "carries": []
+    },
+    {
+     "id": "X049-007",
+     "role": "interrogator",
+     "text": "Anyone who can confirm that?",
+     "carries": []
+    },
+    {
+     "id": "X049-008",
+     "role": "suspect",
+     "text": "My roommate was in and out. I don't keep a log.",
+     "carries": []
+    },
+    {
+     "id": "X049-009",
+     "role": "interrogator",
+     "text": "Fair enough. Let's talk about the storage facility on Route 9.",
+     "carries": []
+    },
+    {
+     "id": "X049-010",
+     "role": "suspect",
+     "text": "What about it?",
+     "carries": []
+    },
+    {
+     "id": "X049-011",
+     "role": "interrogator",
+     "text": "Do you rent a unit there?",
+     "carries": []
+    },
+    {
+     "id": "X049-012",
+     "role": "suspect",
+     "text": "I did. Unit 214. Paid up through the end of the month.",
+     "carries": []
+    },
+    {
+     "id": "X049-013",
+     "role": "interrogator",
+     "text": "When we processed the scene, we found a red plastic gas can sitting right beside the unit door. You ever see that before?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-014",
+     "role": "suspect",
+     "text": "Yeah. I mean, I've seen it now that you say it.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X049-015",
+     "role": "interrogator",
+     "text": "Did you keep any flammables in your unit?",
+     "carries": []
+    },
+    {
+     "id": "X049-016",
+     "role": "suspect",
+     "text": "No. Just furniture and old paperwork.",
+     "carries": []
+    },
+    {
+     "id": "X049-017",
+     "role": "interrogator",
+     "text": "Okay. Walk me through the last time you were out there.",
+     "carries": []
+    },
+    {
+     "id": "X049-018",
+     "role": "suspect",
+     "text": "It was a couple days before. I had to get in, but my key wasn't working, so I cut the padlock with bolt cutters I had in the truck.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X049-019",
+     "role": "interrogator",
+     "text": "You cut the lock yourself?",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-020",
+     "role": "suspect",
+     "text": "Yeah. Management knew I was having trouble with it. I was going to replace it.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X049-021",
+     "role": "interrogator",
+     "text": "Did anyone help you with that?",
+     "carries": []
+    },
+    {
+     "id": "X049-022",
+     "role": "suspect",
+     "text": "No, just me.",
+     "carries": []
+    },
+    {
+     "id": "X049-023",
+     "role": "interrogator",
+     "text": "Let's talk about the night of the fire. What time did it start?",
+     "carries": []
+    },
+    {
+     "id": "X049-024",
+     "role": "suspect",
+     "text": "I wouldn't know. I wasn't there.",
+     "carries": []
+    },
+    {
+     "id": "X049-025",
+     "role": "interrogator",
+     "text": "Records show the alarm came in at 11:40 p.m. Does that fit anything you remember?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X049-026",
+     "role": "suspect",
+     "text": "Eleven forty at night. No, I was already in bed by then.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X049-027",
+     "role": "interrogator",
+     "text": "A neighbor reported a blue pickup truck leaving the lot right around then. You drive a blue pickup, don't you?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-028",
+     "role": "suspect",
+     "text": "A blue pickup, yeah. Half the county drives one.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X049-029",
+     "role": "interrogator",
+     "text": "Was that you leaving the lot?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-030",
+     "role": "suspect",
+     "text": "No. I told you, I was home.",
+     "carries": []
+    },
+    {
+     "id": "X049-031",
+     "role": "interrogator",
+     "text": "The gate camera caught someone in a gray hooded sweatshirt around that time. Do you own a gray hoodie?",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-032",
+     "role": "suspect",
+     "text": "Yeah, I've got a gray hoodie somewhere.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X049-033",
+     "role": "interrogator",
+     "text": "Was it you on that camera?",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-034",
+     "role": "suspect",
+     "text": "I don't know anything about a camera.",
+     "carries": []
+    },
+    {
+     "id": "X049-035",
+     "role": "interrogator",
+     "text": "We also found a key taped under the office mailbox. Any idea how that got there?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-036",
+     "role": "suspect",
+     "text": "No idea. I never touched anything like that.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X049-037",
+     "role": "interrogator",
+     "text": "You're sure? Not even to get into the office?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-038",
+     "role": "suspect",
+     "text": "I said I don't know about any key.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X049-039",
+     "role": "interrogator",
+     "text": "Let's go back to your unit. What did you carry in the last time you were there?",
+     "carries": []
+    },
+    {
+     "id": "X049-040",
+     "role": "suspect",
+     "text": "Just some boxes. Nothing special.",
+     "carries": []
+    },
+    {
+     "id": "X049-041",
+     "role": "interrogator",
+     "text": "A witness says they saw a black duffel bag going into unit 214. Was that yours?",
+     "carries": [
+      {
+       "fact": "F8",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-042",
+     "role": "suspect",
+     "text": "A black duffel bag. Yeah, I had one of those with me.",
+     "carries": [
+      {
+       "fact": "F8",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X049-043",
+     "role": "interrogator",
+     "text": "What was in it?",
+     "carries": []
+    },
+    {
+     "id": "X049-044",
+     "role": "suspect",
+     "text": "Clothes. Tools. Nothing worth burning.",
+     "carries": []
+    },
+    {
+     "id": "X049-045",
+     "role": "interrogator",
+     "text": "One more thing. Roll up your sleeves for me.",
+     "carries": []
+    },
+    {
+     "id": "X049-046",
+     "role": "suspect",
+     "text": "Why?",
+     "carries": []
+    },
+    {
+     "id": "X049-047",
+     "role": "interrogator",
+     "text": "I'm asking about the burn on your right forearm. How'd you get that?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X049-048",
+     "role": "suspect",
+     "text": "I don't have a burn. And I'm not rolling up anything.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X049-049",
+     "role": "interrogator",
+     "text": "It's visible in the photo from the gate camera.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X049-050",
+     "role": "suspect",
+     "text": "I don't know what you're talking about.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X049-051",
+     "role": "interrogator",
+     "text": "Okay. Let's take a break, and then we'll go through it again.",
+     "carries": []
+    }
+   ]
+  },
+  "X055": {
+   "facts": [
+    {
+     "id": "F1",
+     "label": "glass cutter with a suction-cup grip",
+     "detail": "A glass cutter with a suction-cup grip was used on the display case."
+    },
+    {
+     "id": "F2",
+     "label": "blue sedan",
+     "detail": "A blue sedan was parked in the alley behind the store."
+    },
+    {
+     "id": "F3",
+     "label": "11:40 p.m.",
+     "detail": "The alarm was disabled at 11:40 p.m."
+    },
+    {
+     "id": "F4",
+     "label": "gray hooded sweatshirt",
+     "detail": "The suspect wore a gray hooded sweatshirt."
+    },
+    {
+     "id": "F5",
+     "label": "canvas duffel bag",
+     "detail": "A canvas duffel bag was carried out of the store."
+    },
+    {
+     "id": "F6",
+     "label": "lock-pick set",
+     "detail": "A lock-pick set was found near the back door."
+    },
+    {
+     "id": "F7",
+     "label": "velvet ring tray",
+     "detail": "A velvet ring tray was taken from the case."
+    },
+    {
+     "id": "F8",
+     "label": "cut on the left hand",
+     "detail": "The suspect had a cut on the left hand."
+    }
+   ],
+   "plan": [
+    {
+     "id": "F1",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F2",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F3",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F4",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F5",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    },
+    {
+     "id": "F6",
+     "origin": "never",
+     "adoption": ""
+    },
+    {
+     "id": "F7",
+     "origin": "investigator_first",
+     "adoption": "repeats it in his own words"
+    },
+    {
+     "id": "F8",
+     "origin": "investigator_first",
+     "adoption": "just agrees ('yeah')"
+    }
+   ],
+   "utterances": [
+    {
+     "id": "X055-001",
+     "role": "interrogator",
+     "text": "Thanks for coming in. You're not under arrest. You can leave whenever you want. Coffee?",
+     "carries": []
+    },
+    {
+     "id": "X055-002",
+     "role": "suspect",
+     "text": "I'm good. What's this about?",
+     "carries": []
+    },
+    {
+     "id": "X055-003",
+     "role": "interrogator",
+     "text": "The jewelry store on Fenwick. Someone got in through the display case. We found a glass cutter with a suction-cup grip on the floor.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X055-004",
+     "role": "suspect",
+     "text": "A glass cutter? I wouldn't know anything about that.",
+     "carries": []
+    },
+    {
+     "id": "X055-005",
+     "role": "interrogator",
+     "text": "Where were you Tuesday night?",
+     "carries": []
+    },
+    {
+     "id": "X055-006",
+     "role": "suspect",
+     "text": "Home. Watched a game. Fell asleep on the couch.",
+     "carries": []
+    },
+    {
+     "id": "X055-007",
+     "role": "interrogator",
+     "text": "Anyone who can back that up?",
+     "carries": []
+    },
+    {
+     "id": "X055-008",
+     "role": "suspect",
+     "text": "My roommate was in and out. I don't know exactly.",
+     "carries": []
+    },
+    {
+     "id": "X055-009",
+     "role": "interrogator",
+     "text": "A neighbor saw a blue sedan parked in the alley behind the store that night. That ring a bell?",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-010",
+     "role": "suspect",
+     "text": "No. I don't know anything about a car in an alley.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X055-011",
+     "role": "interrogator",
+     "text": "Fair enough. Let's talk about the timing. The alarm was disabled at 11:40 p.m. Does that sound like a window you'd be awake for?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-012",
+     "role": "suspect",
+     "text": "I mean, I was up. But that doesn't mean anything.",
+     "carries": []
+    },
+    {
+     "id": "X055-013",
+     "role": "interrogator",
+     "text": "The camera across the street caught someone walking up. Gray hooded sweatshirt, hood up. Sound familiar?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-014",
+     "role": "suspect",
+     "text": "Lots of people own gray hoodies.",
+     "carries": []
+    },
+    {
+     "id": "X055-015",
+     "role": "interrogator",
+     "text": "Sure. But this one was carrying a canvas duffel bag when they came out. That's a pretty specific look.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X055-016",
+     "role": "suspect",
+     "text": "I don't carry a bag like that. Not my thing.",
+     "carries": []
+    },
+    {
+     "id": "X055-017",
+     "role": "interrogator",
+     "text": "Let's step back. How do you know the store owner again?",
+     "carries": []
+    },
+    {
+     "id": "X055-018",
+     "role": "suspect",
+     "text": "I bought a watch there once. That's it.",
+     "carries": []
+    },
+    {
+     "id": "X055-019",
+     "role": "interrogator",
+     "text": "We found a lock-pick set near the back door. Any reason your prints would be on something like that?",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-020",
+     "role": "suspect",
+     "text": "No. I've never used anything like that. I don't know where that came from.",
+     "carries": [
+      {
+       "fact": "F6",
+       "kind": "denies"
+      }
+     ]
+    },
+    {
+     "id": "X055-021",
+     "role": "interrogator",
+     "text": "Okay. Let's talk about what was taken. A velvet ring tray came up missing from the case. You ever see something like that in the store?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-022",
+     "role": "suspect",
+     "text": "A velvet tray? I mean, maybe on a shelf. I wasn't really looking.",
+     "carries": []
+    },
+    {
+     "id": "X055-023",
+     "role": "interrogator",
+     "text": "The person on the camera had a cut on the left hand. Bleeding a little. You've got a bandage there yourself.",
+     "carries": [
+      {
+       "fact": "F8",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X055-024",
+     "role": "suspect",
+     "text": "I cut myself in the kitchen. It happens.",
+     "carries": []
+    },
+    {
+     "id": "X055-025",
+     "role": "interrogator",
+     "text": "When was that?",
+     "carries": []
+    },
+    {
+     "id": "X055-026",
+     "role": "suspect",
+     "text": "Couple days ago. Making dinner.",
+     "carries": []
+    },
+    {
+     "id": "X055-027",
+     "role": "interrogator",
+     "text": "So you're telling me you were home, you don't know about the car, and you never touched a lock-pick set.",
+     "carries": [
+      {
+       "fact": "F2",
+       "kind": "asserts"
+      },
+      {
+       "fact": "F6",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X055-028",
+     "role": "suspect",
+     "text": "That's right.",
+     "carries": []
+    },
+    {
+     "id": "X055-029",
+     "role": "interrogator",
+     "text": "Let's go back to that glass cutter with the suction-cup grip. You said you didn't know anything about it. Where would someone get one of those?",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-030",
+     "role": "suspect",
+     "text": "A hardware store, I guess. The kind with the little suction cup on it. I've seen them at the hardware store.",
+     "carries": [
+      {
+       "fact": "F1",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X055-031",
+     "role": "interrogator",
+     "text": "Right. And the alarm going down at 11:40 p.m. \u2014 that's a strange time to be doing anything, isn't it?",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-032",
+     "role": "suspect",
+     "text": "Yeah. Strange.",
+     "carries": [
+      {
+       "fact": "F3",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X055-033",
+     "role": "interrogator",
+     "text": "And the gray hooded sweatshirt \u2014 you said lots of people own them. Did you own one?",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-034",
+     "role": "suspect",
+     "text": "I had a gray hooded sweatshirt. I think I still do somewhere.",
+     "carries": [
+      {
+       "fact": "F4",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X055-035",
+     "role": "interrogator",
+     "text": "And the canvas duffel bag \u2014 you said that's not your thing. But you've seen one around?",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-036",
+     "role": "suspect",
+     "text": "Yeah. Sure.",
+     "carries": [
+      {
+       "fact": "F5",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X055-037",
+     "role": "interrogator",
+     "text": "The velvet ring tray \u2014 you said maybe on a shelf. Do you remember seeing it in the case?",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-038",
+     "role": "suspect",
+     "text": "I remember a velvet ring tray in the case, yeah. Near the front.",
+     "carries": [
+      {
+       "fact": "F7",
+       "kind": "asserts"
+      }
+     ]
+    },
+    {
+     "id": "X055-039",
+     "role": "interrogator",
+     "text": "And the cut on the left hand \u2014 you said you cut yourself in the kitchen. That's your story?",
+     "carries": [
+      {
+       "fact": "F8",
+       "kind": "asks"
+      }
+     ]
+    },
+    {
+     "id": "X055-040",
+     "role": "suspect",
+     "text": "Yeah. That's my story.",
+     "carries": [
+      {
+       "fact": "F8",
+       "kind": "assents"
+      }
+     ]
+    },
+    {
+     "id": "X055-041",
+     "role": "interrogator",
+     "text": "Okay. I'm going to step out for a minute. Sit tight.",
+     "carries": []
+    },
+    {
+     "id": "X055-042",
+     "role": "suspect",
+     "text": "Can I get some water?",
+     "carries": []
+    },
+    {
+     "id": "X055-043",
+     "role": "interrogator",
+     "text": "I'll have someone bring it.",
+     "carries": []
+    }
+   ]
+  }
+ },
+ "methods": {
+  "provenance": [
+   {
+    "id": "X007",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X007-003",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Tuesday night at the mall",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-004",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I had that yellow crowbar in my trunk from helping my uncle move a fence, but that's it.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-004",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Yeah, I was around.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-005",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "A yellow crowbar. Okay. Where's that crowbar now?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-006",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "In my trunk, like I said. You can look.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-007",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Walk me through where you parked.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-008",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Up on the north parking deck, near the stairwell. That's where I always park.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-009",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "The north deck. Anyone with you up there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-010",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "No, just me. I was in and out pretty quick.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-011",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "What did you take from the car?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-012",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I didn't take anything. I don't know anything about a black backpack, if that's what you're getting at.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-013",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "So you're saying you never handled a black backpack from that vehicle?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-014",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Never touched it. Don't know what you're talking about.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-015",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "What were you driving that night?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-016",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "My car. Nothing special.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-017",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Is it the blue sedan out front with the dented rear bumper?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-018",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Yeah. That's mine.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-021",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Our timeline puts the break-in at about 9:15 p.m. Does that line up with when you were up there?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-022",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah, around a quarter after nine sounds about right. I was heading back to my car about then.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-024",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Just a gray hoodie and jeans. It was chilly.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-025",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "A gray hoodie. Was the hood up?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-026",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Yeah, it was up. Like I said, cold.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-027",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Let's talk about the car that was broken into. Which window was damaged?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-028",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "I wouldn't know. I wasn't near any car.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-029",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "We found glass under the passenger-side window. You're saying that wasn't you?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-030",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "Yeah, that wasn't me.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-031",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "Okay. One more thing. How'd you get that mark on your hand?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-032",
+      "fact": "F8",
+      "kind": "denies",
+      "quote": "What mark?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-033",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "The small cut on your left hand. Looks fresh.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-034",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "Oh, that. It's just a cut on my left hand from working on my car. Slipped with a wrench.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-035",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Working on the blue sedan?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-036",
+      "fact": "F4",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-001",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Thanks for coming in. Have a seat. Can I get you anything before we start?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-003",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Just a conversation about Tuesday night at the mall. You were there, right?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-005",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "A yellow crowbar. Okay. Where's that crowbar now?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-019",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Okay. And what time did you get to the mall?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-021",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "Our timeline puts the break-in at about 9:15 p.m. Does that line up with when you were up there?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-023",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "What were you wearing?",
+      "by": "search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X007-004"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X007-004"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X007-008"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X007-007"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-017"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X007-017"
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-021"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X007-021"
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "suspect",
+       "line": "X007-024"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X007-024"
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-027"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F8": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-033"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X007-031"
+      }
+     }
+    }
+   },
+   {
+    "id": "X023",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X023-004",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I had my blue cap on, the one with the frayed edge on the brim",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-005",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "The blue cap with the worn brim. Do you wear that one a lot?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-008",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "I ended up over by the Maple Street garage. Up on the third level, where it's quieter.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-009",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Third level of the Maple Street structure. What time was that?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-012",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "I had my red folder \u2014 the little pocketknife, red handle \u2014 I keep it for cutting zip ties and junk. I was messing with it, opening and closing it, bored.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-013",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "The red folding knife. Where is it now?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-017",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Were you wearing a black hooded sweatshirt that night?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-018",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "No. I don't own one of those.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-019",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Dark hoodie, pulled up?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-020",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I said no. I don't know anything about a hoodie.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-021",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Did you notice a white panel van parked on that level?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-022",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-023",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "The white van \u2014 was it there when you got up there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-024",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Yeah, it was there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-026",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "I was up there around 9:40, maybe a little after",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-027",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "9:40 p.m. \u2014 how do you know it was that specific time?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-028",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "I checked my phone for the time because I was thinking about heading out.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-029",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Did you get any scrapes or cuts that night? Anything on your arms?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X023-030",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "No. Nothing like that.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-031",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "A scrape on the left forearm \u2014 nothing at all?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-032",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "I don't know what you're talking about. No scrape.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-033",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "You said you were messing with the red knife. Did you leave it up there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-034",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "No, I told you, it's at home.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-035",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "And the cap with the frayed brim \u2014 you had it on the whole time?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-036",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "Most of the time. It was on my head, yeah.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-037",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "You mentioned the third level. Did you go down to any other level?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-038",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Just the third one. I stayed up there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-039",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "One more time \u2014 the white van. You're sure it was a panel van?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-040",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-041",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "And you're telling me you never saw a black hooded sweatshirt on anyone up there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-042",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I never saw one. I already said that.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-043",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "You also said no injuries. Nothing on your left arm.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-044",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "Nothing. My arm's fine.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-001",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Thanks for coming in. You're not under arrest. You can leave whenever you want. Just help me sort out a timeline.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-003",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Shouldn't take long. Where were you Thursday evening?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-005",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "The blue cap with the worn brim. Do you wear that one a lot?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-007",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Fair enough. Go on.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-009",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Third level of the Maple Street structure. What time was that?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-011",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Okay. Anyone with you?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-019",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "You're sure? Dark hoodie, pulled up?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-023",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "The white van \u2014 was it there when you got up there?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-025",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "Okay. Let's talk about the bike itself.",
+      "by": "search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-004"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X023-004"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-008"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X023-008"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-012"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X023-012"
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X023-021"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X023-021"
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-026"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X023-026"
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     }
+    }
+   },
+   {
+    "id": "X026",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X026-010",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "a can of blue spray paint",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-011",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "A can of spray paint",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-013",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "near the school that night",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-014",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "I cut through the lot behind the school because the light's better, but I didn't stop. I went past the east gymnasium doors and kept going.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-015",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "The east gym doors. So you were right there by that entrance?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-016",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "By the doors, yeah, but just walking. I didn't touch anything.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-017",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Do you have any idea what time that would've been?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-018",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Honestly, no clue. Late, I guess.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-019",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Our cameras put someone at that entrance at about 11:40 p.m. Does that line up with when you walked through?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-019",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Our cameras put someone at that entrance at about 11:40 p.m. Does that line up with when you walked through?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-020",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I couldn't tell you. I wasn't checking my phone.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-021",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "The footage shows activity right around 11:40. Twenty to midnight.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-022",
+      "fact": "F3",
+      "kind": "assents",
+      "quote": "I mean, twenty to midnight, sure, that could've been when I was cutting through.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-023",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Now, the person on the footage is wearing something with a hood. A red hooded sweatshirt. Do you own one?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-024",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "A red hoodie? No. I don't wear red, man. Never have.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-025",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "You sure? Not even one in the back of a closet somewhere?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-026",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I'm telling you, that's not mine. I don't know anything about a red sweatshirt.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-030",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "It's a little four-door. Dark colored, I think. I don't pay much attention to that stuff.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-031",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "We've got a witness who saw a silver hatchback leaving that lot around the same time. Any chance that was you?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-032",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "A silver hatchback? No, that's not the car I had. I don't know whose that is.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-033",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "You're certain? Silver, hatchback, small.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-034",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "I already said no. I can't help you with that one.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-037",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "A cut on the left hand.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-038",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "I got that moving furniture. Sliced it on a bracket.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-039",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "that cut has nothing to do with Friday night at the school",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-040",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "I don't know anything about a cut on anybody's hand except my own.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-041",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "damage to a set of doors",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-041",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "a time",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-007",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "And you stayed there the whole night?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X026-009",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "What kind of stuff?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X026-011",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "A can of spray paint. Where'd you buy that?",
+      "by": "search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X026-010"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X026-010"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X026-014"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X026-014"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X026-019"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X026-019"
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X026-037"
+      }
+     }
+    }
+   },
+   {
+    "id": "X036",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X036-008",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I had a knife on me, okay? A little black folding one.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X036-009",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "A folding knife. Can you describe it a bit more?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X036-010",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "The tip's chipped off it. Been like that for months.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-011",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Where's that knife now?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X036-012",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "At home. In a drawer. I didn't do anything with it.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-013",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Let's talk about the QuickStop on Delaney Avenue.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-014",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "What about it?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-015",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Were you near that store last night?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-016",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Yeah. I walked past it.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X036-017",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "And inside, did you see a grey cash tray behind the counter?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-018",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I wasn't really looking at the counter.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-019",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "The grey one.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-020",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "I saw a grey tray thing sitting there",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-023",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "A witness mentioned a dark green hooded sweatshirt. Was that you?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-024",
+      "fact": "F4",
+      "kind": "assents",
+      "quote": "Yeah, that was me.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-025",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Where's that sweatshirt now?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-026",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "In my car, probably. I don't remember.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-028",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "It's a silver sedan, older model. Bumper's dented in the back.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-029",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "A silver sedan with a dented rear bumper. Where's that parked now?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-030",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Out front of my place. You can check it.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-031",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "What time did you head out last night?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X036-032",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "It was just after 11:40 at night, I know that much. I looked at my phone.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-033",
+      "fact": "F6",
+      "kind": "assents",
+      "quote": "Just after 11:40. And how long were you out?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-035",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Anything happen while you were out? Any reason you'd be hurt?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-036",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "I tripped on a curb, scraped my elbow a bit. That's all.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-037",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Which one?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-038",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "Left one. It's barely anything.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-043",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "The clerk described someone in a green hoodie coming in and taking the tray.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-043",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "The clerk described someone in a green hoodie coming in and taking the tray.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-043",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "The clerk described someone in a green hoodie coming in and taking the tray.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-044",
+      "fact": "F2",
+      "kind": "denies",
+      "quote": "That's not me. I wasn't in there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-044",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "That's not me. I wasn't in there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-044",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "That's not me. I wasn't in there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-007",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Walking where?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-021",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "What were you wearing that night?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-025",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Where's that sweatshirt now?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-027",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Let's go back to the walking. Did you drive at all that night?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-029",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "A silver sedan with a dented rear bumper. Where's that parked now?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-033",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Just after 11:40. And how long were you out?",
+      "by": "search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-008"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X036-010"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X036-013"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X036-017"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X036-017"
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X036-023"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X036-023"
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-028"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X036-028"
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-032"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X036-032"
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-036"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X036-035"
+      }
+     }
+    }
+   },
+   {
+    "id": "X049",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X049-013",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "we found a red plastic gas can sitting right beside the unit door",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-014",
+      "fact": "F1",
+      "kind": "assents",
+      "quote": "I've seen it now that you say it",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-018",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "I cut the padlock with bolt cutters I had in the truck",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-019",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "You cut the lock yourself?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-021",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Did anyone help you with that?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-022",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "No, just me.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-023",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "What time did it start?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-024",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I wouldn't know. I wasn't there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-025",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Records show the alarm came in at 11:40 p.m. Does that fit anything you remember?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-026",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Eleven forty at night. No, I was already in bed by then.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-027",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "A neighbor reported a blue pickup truck leaving the lot right around then. You drive a blue pickup, don't you?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-028",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "A blue pickup, yeah. Half the county drives one.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-029",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Was that you leaving the lot?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-030",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "No. I told you, I was home.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-031",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "The gate camera caught someone in a gray hooded sweatshirt around that time. Do you own a gray hoodie?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-032",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Yeah, I've got a gray hoodie somewhere.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-033",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "Was it you on that camera?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-034",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "I don't know anything about a camera.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-035",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "We also found a key taped under the office mailbox. Any idea how that got there?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-036",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "No idea. I never touched anything like that.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-038",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "I said I don't know about any key.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-040",
+      "fact": "F8",
+      "kind": "denies",
+      "quote": "Just some boxes. Nothing special.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-041",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "A witness says they saw a black duffel bag going into unit 214. Was that yours?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-042",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "A black duffel bag. Yeah, I had one of those with me.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-047",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "I'm asking about the burn on your right forearm. How'd you get that?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-048",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I don't have a burn. And I'm not rolling up anything.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-049",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "It's visible in the photo from the gate camera.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-050",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I don't know what you're talking about.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-015",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Did you keep any flammables in your unit?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X049-017",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Okay. Walk me through the last time you were out there.",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X049-001",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Thanks for coming in. Can I get you something to drink before we start?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X049-011",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "Do you rent a unit there?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X049-013",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "When we processed the scene, we found a red plastic gas can sitting right beside the unit door. You ever see that before?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X049-015",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "Did you keep any flammables in your unit?",
+      "by": "search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-013"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X049-013"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X049-018"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X049-018"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-025"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X049-025"
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-027"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-031"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F8": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-041"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X049-041"
+      }
+     }
+    }
+   },
+   {
+    "id": "X055",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X055-003",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "We found a glass cutter with a suction-cup grip on the floor.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-004",
+      "fact": "F1",
+      "kind": "denies",
+      "quote": "A glass cutter? I wouldn't know anything about that.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-009",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "A neighbor saw a blue sedan parked in the alley behind the store that night.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-010",
+      "fact": "F2",
+      "kind": "denies",
+      "quote": "No. I don't know anything about a car in an alley.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-011",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "The alarm was disabled at 11:40 p.m.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-012",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "I mean, I was up.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-013",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Gray hooded sweatshirt, hood up.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-014",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "Lots of people own gray hoodies.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-015",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "this one was carrying a canvas duffel bag when they came out",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-016",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "I don't carry a bag like that. Not my thing.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-019",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "We found a lock-pick set near the back door. Any reason your prints would be on something like that?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-020",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "No. I've never used anything like that. I don't know where that came from.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-021",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "A velvet ring tray came up missing from the case. You ever see something like that in the store?",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-022",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "A velvet tray? I mean, maybe on a shelf. I wasn't really looking.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-023",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "The person on the camera had a cut on the left hand. Bleeding a little. You've got a bandage there yourself.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-024",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "I cut myself in the kitchen. It happens.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-027",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "you never touched a lock-pick set",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-028",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "That's right.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-029",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Let's go back to that glass cutter with the suction-cup grip. You said you didn't know anything about it. Where would someone get one of those?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-030",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "A hardware store, I guess. The kind with the little suction cup on it. I've seen them at the hardware store.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-031",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "And the alarm going down at 11:40 p.m. \u2014 that's a strange time to be doing anything, isn't it?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-032",
+      "fact": "F3",
+      "kind": "assents",
+      "quote": "Yeah. Strange.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-033",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "And the gray hooded sweatshirt \u2014 you said lots of people own them. Did you own one?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-034",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "I had a gray hooded sweatshirt. I think I still do somewhere.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-035",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "And the canvas duffel bag \u2014 you said that's not your thing. But you've seen one around?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-036",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah. Sure.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-037",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "The velvet ring tray \u2014 you said maybe on a shelf. Do you remember seeing it in the case?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-038",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "I remember a velvet ring tray in the case, yeah. Near the front.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-039",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "And the cut on the left hand \u2014 you said you cut yourself in the kitchen. That's your story?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-040",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "Yeah. That's my story.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-009",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "A neighbor saw a blue sedan parked in the alley behind the store that night. That ring a bell?",
+      "by": "search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-003",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "The jewelry store on Fenwick. Someone got in through the display case. We found a glass cutter with a suction-cup grip on the floor.",
+      "by": "search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-003"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-003"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-011"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-011"
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-013"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-013"
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-015"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-015"
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-021"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-021"
+      }
+     },
+     "F8": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-023"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-023"
+      }
+     }
+    }
+   }
+  ],
+  "provenance_kt": [
+   {
+    "id": "X007",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X007-003",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Tuesday night at the mall",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-004",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I had that yellow crowbar in my trunk from helping my uncle move a fence, but that's it.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-004",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Yeah, I was around.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-005",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "A yellow crowbar. Okay. Where's that crowbar now?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-006",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "In my trunk, like I said. You can look.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-007",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Walk me through where you parked.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-008",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Up on the north parking deck, near the stairwell. That's where I always park.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-009",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "The north deck. Anyone with you up there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-010",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "No, just me. I was in and out pretty quick.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-011",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "What did you take from the car?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-012",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I didn't take anything. I don't know anything about a black backpack, if that's what you're getting at.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-013",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "So you're saying you never handled a black backpack from that vehicle?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-014",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Never touched it. Don't know what you're talking about.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-015",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "What were you driving that night?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-016",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "My car. Nothing special.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-017",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Is it the blue sedan out front with the dented rear bumper?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-018",
+      "fact": "F4",
+      "kind": "assents",
+      "quote": "Yeah. That's mine.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-021",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Our timeline puts the break-in at about 9:15 p.m. Does that line up with when you were up there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-022",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Yeah, around a quarter after nine sounds about right. I was heading back to my car about then.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-024",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Just a gray hoodie and jeans. It was chilly.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X007-025",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "A gray hoodie. Was the hood up?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-026",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Yeah, it was up. Like I said, cold.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-027",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Let's talk about the car that was broken into. Which window was damaged?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-028",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "I wouldn't know. I wasn't near any car.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-029",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "We found glass under the passenger-side window. You're saying that wasn't you?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-030",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "Yeah, that wasn't me.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X007-031",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "Okay. One more thing. How'd you get that mark on your hand?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-032",
+      "fact": "F8",
+      "kind": "denies",
+      "quote": "What mark?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-033",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "The small cut on your left hand. Looks fresh.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-034",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "Oh, that. It's just a cut on my left hand from working on my car. Slipped with a wrench.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-035",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Working on the blue sedan?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-036",
+      "fact": "F4",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X007-016",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "My car. Nothing special.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-018",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Yeah. That's mine.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X007-032",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "What mark?",
+      "by": "suspect-search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X007-004"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X007-004"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X007-008"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X007-008"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-017"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X007-017"
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-021"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "suspect",
+       "line": "X007-024"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X007-024"
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-027"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F8": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X007-033"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     }
+    }
+   },
+   {
+    "id": "X023",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X023-004",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I had my blue cap on, the one with the frayed edge on the brim",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-005",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "The blue cap with the worn brim. Do you wear that one a lot?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-008",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "I ended up over by the Maple Street garage. Up on the third level, where it's quieter.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-009",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Third level of the Maple Street structure. What time was that?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-012",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "I had my red folder \u2014 the little pocketknife, red handle \u2014 I keep it for cutting zip ties and junk. I was messing with it, opening and closing it, bored.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-013",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "The red folding knife. Where is it now?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-017",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Were you wearing a black hooded sweatshirt that night?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-018",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "No. I don't own one of those.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X023-019",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Dark hoodie, pulled up?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-020",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I said no. I don't know anything about a hoodie.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-021",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Did you notice a white panel van parked on that level?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-022",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-023",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "The white van \u2014 was it there when you got up there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-024",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Yeah, it was there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-026",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "I was up there around 9:40, maybe a little after",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X023-027",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "9:40 p.m. \u2014 how do you know it was that specific time?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-028",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "I checked my phone for the time because I was thinking about heading out.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-029",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Did you get any scrapes or cuts that night? Anything on your arms?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-030",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "No. Nothing like that.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-031",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "A scrape on the left forearm \u2014 nothing at all?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-032",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "I don't know what you're talking about. No scrape.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X023-033",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "You said you were messing with the red knife. Did you leave it up there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-034",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "No, I told you, it's at home.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-035",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "And the cap with the frayed brim \u2014 you had it on the whole time?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-036",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "Most of the time. It was on my head, yeah.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-037",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "You mentioned the third level. Did you go down to any other level?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-038",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Just the third one. I stayed up there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-039",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "One more time \u2014 the white van. You're sure it was a panel van?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-040",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-041",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "And you're telling me you never saw a black hooded sweatshirt on anyone up there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-042",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I never saw one. I already said that.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X023-043",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "You also said no injuries. Nothing on your left arm.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-044",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "Nothing. My arm's fine.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X023-006",
+      "fact": "F1",
+      "kind": "assents",
+      "quote": "It's just a hat. Keeps the glare off.",
+      "by": "suspect-search",
+      "verified": true
+     },
+     {
+      "utterance": "X023-022",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "Yeah.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-044",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "Nothing. My arm's fine.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-046",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "Yeah. Whatever.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X023-034",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "No, I told you, it's at home.",
+      "by": "suspect-search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-004"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-008"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X023-008"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-012"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X023-012"
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X023-021"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X023-021"
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "suspect",
+       "line": "X023-026"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X023-026"
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     }
+    }
+   },
+   {
+    "id": "X026",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X026-010",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "a can of blue spray paint",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-011",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "A can of spray paint",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-013",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "near the school that night",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-014",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "I cut through the lot behind the school because the light's better, but I didn't stop. I went past the east gymnasium doors and kept going.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-015",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "The east gym doors. So you were right there by that entrance?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-016",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "By the doors, yeah, but just walking. I didn't touch anything.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-017",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Do you have any idea what time that would've been?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-018",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Honestly, no clue. Late, I guess.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-019",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "Our cameras put someone at that entrance at about 11:40 p.m. Does that line up with when you walked through?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-019",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Our cameras put someone at that entrance at about 11:40 p.m. Does that line up with when you walked through?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-020",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I couldn't tell you. I wasn't checking my phone.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-021",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "The footage shows activity right around 11:40. Twenty to midnight.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-022",
+      "fact": "F3",
+      "kind": "assents",
+      "quote": "I mean, twenty to midnight, sure, that could've been when I was cutting through.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-023",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Now, the person on the footage is wearing something with a hood. A red hooded sweatshirt. Do you own one?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-024",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "A red hoodie? No. I don't wear red, man. Never have.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-025",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "You sure? Not even one in the back of a closet somewhere?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-026",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I'm telling you, that's not mine. I don't know anything about a red sweatshirt.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-030",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "It's a little four-door. Dark colored, I think. I don't pay much attention to that stuff.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-031",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "We've got a witness who saw a silver hatchback leaving that lot around the same time. Any chance that was you?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-032",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "A silver hatchback? No, that's not the car I had. I don't know whose that is.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-033",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "You're certain? Silver, hatchback, small.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-034",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "I already said no. I can't help you with that one.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X026-037",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "A cut on the left hand.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-038",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "I got that moving furniture. Sliced it on a bracket.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X026-039",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "that cut has nothing to do with Friday night at the school",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-040",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "I don't know anything about a cut on anybody's hand except my own.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-041",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "damage to a set of doors",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-041",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "a time",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X026-036",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "Just the bag from the store. That's it.",
+      "by": "sense-search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X026-010"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X026-001"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X026-014"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X026-014"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X026-019"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X026-019"
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X026-037"
+      }
+     }
+    }
+   },
+   {
+    "id": "X036",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X036-008",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "I had a knife on me, okay? A little black folding one.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-009",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "A folding knife. Can you describe it a bit more?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-010",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "The tip's chipped off it. Been like that for months.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-011",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Where's that knife now?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-012",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "At home. In a drawer. I didn't do anything with it.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-013",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Let's talk about the QuickStop on Delaney Avenue.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-014",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "What about it?",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X036-015",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Were you near that store last night?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-016",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Yeah. I walked past it.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X036-017",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "And inside, did you see a grey cash tray behind the counter?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-018",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I wasn't really looking at the counter.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-019",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "The grey one.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-020",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "I saw a grey tray thing sitting there",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-023",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "A witness mentioned a dark green hooded sweatshirt. Was that you?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-024",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Yeah, that was me.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-025",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Where's that sweatshirt now?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-026",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "In my car, probably. I don't remember.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-028",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "It's a silver sedan, older model. Bumper's dented in the back.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-029",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "A silver sedan with a dented rear bumper. Where's that parked now?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-030",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "Out front of my place. You can check it.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X036-031",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "What time did you head out last night?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-032",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "It was just after 11:40 at night, I know that much. I looked at my phone.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-033",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "Just after 11:40. And how long were you out?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-035",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Anything happen while you were out? Any reason you'd be hurt?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-036",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "I tripped on a curb, scraped my elbow a bit. That's all.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-037",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "Which one?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-038",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "Left one. It's barely anything.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-043",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "The clerk described someone in a green hoodie coming in and taking the tray.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-043",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "The clerk described someone in a green hoodie coming in and taking the tray.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-043",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "The clerk described someone in a green hoodie coming in and taking the tray.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-044",
+      "fact": "F2",
+      "kind": "denies",
+      "quote": "That's not me. I wasn't in there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-044",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "That's not me. I wasn't in there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-044",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "That's not me. I wasn't in there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X036-016",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "Yeah. I walked past it.",
+      "by": "suspect-search",
+      "verified": true
+     },
+     {
+      "utterance": "X036-018",
+      "fact": "F2",
+      "kind": "denies",
+      "quote": "I wasn't really looking at the counter.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-022",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Just normal clothes.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X036-034",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "Maybe half an hour. I wasn't keeping track.",
+      "by": "sense-search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-008"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X036-013"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X036-013"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X036-017"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X036-023"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-028"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-032"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "suspect",
+       "line": "X036-036"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     }
+    }
+   },
+   {
+    "id": "X049",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X049-013",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "we found a red plastic gas can sitting right beside the unit door",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-014",
+      "fact": "F1",
+      "kind": "assents",
+      "quote": "I've seen it now that you say it",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-018",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "I cut the padlock with bolt cutters I had in the truck",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X049-019",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "You cut the lock yourself?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-021",
+      "fact": "F2",
+      "kind": "asks",
+      "quote": "Did anyone help you with that?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-022",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "No, just me.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-023",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "What time did it start?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-024",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I wouldn't know. I wasn't there.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-025",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "Records show the alarm came in at 11:40 p.m. Does that fit anything you remember?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-026",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Eleven forty at night. No, I was already in bed by then.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-027",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "A neighbor reported a blue pickup truck leaving the lot right around then. You drive a blue pickup, don't you?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-028",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "A blue pickup, yeah. Half the county drives one.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-029",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "Was that you leaving the lot?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-030",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "No. I told you, I was home.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-031",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "The gate camera caught someone in a gray hooded sweatshirt around that time. Do you own a gray hoodie?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-032",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "Yeah, I've got a gray hoodie somewhere.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-033",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "Was it you on that camera?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-034",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "I don't know anything about a camera.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-035",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "We also found a key taped under the office mailbox. Any idea how that got there?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-036",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "No idea. I never touched anything like that.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-038",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "I said I don't know about any key.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-040",
+      "fact": "F8",
+      "kind": "denies",
+      "quote": "Just some boxes. Nothing special.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-041",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "A witness says they saw a black duffel bag going into unit 214. Was that yours?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-042",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "A black duffel bag. Yeah, I had one of those with me.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-047",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "I'm asking about the burn on your right forearm. How'd you get that?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-048",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I don't have a burn. And I'm not rolling up anything.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-049",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "It's visible in the photo from the gate camera.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X049-050",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I don't know what you're talking about.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X049-040",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "Just some boxes. Nothing special.",
+      "by": "sense-search",
+      "verified": false
+     },
+     {
+      "utterance": "X049-032",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "Yeah, I've got a gray hoodie somewhere.",
+      "by": "sense-search",
+      "verified": false
+     },
+     {
+      "utterance": "X049-036",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "No idea. I never touched anything like that.",
+      "by": "sense-search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-013"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X049-013"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "suspect",
+       "line": "X049-018"
+      },
+      "pred": {
+       "first": "suspect",
+       "line": "X049-018"
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-025"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-027"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-031"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F8": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X049-041"
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     }
+    }
+   },
+   {
+    "id": "X055",
+    "failed": false,
+    "labels": [
+     {
+      "utterance": "X055-003",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "We found a glass cutter with a suction-cup grip on the floor.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-004",
+      "fact": "F1",
+      "kind": "denies",
+      "quote": "A glass cutter? I wouldn't know anything about that.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-009",
+      "fact": "F2",
+      "kind": "asserts",
+      "quote": "A neighbor saw a blue sedan parked in the alley behind the store that night.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-010",
+      "fact": "F2",
+      "kind": "denies",
+      "quote": "No. I don't know anything about a car in an alley.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-011",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "The alarm was disabled at 11:40 p.m.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-012",
+      "fact": "F3",
+      "kind": "asserts",
+      "quote": "I mean, I was up.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-013",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "Gray hooded sweatshirt, hood up.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-014",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "Lots of people own gray hoodies.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-015",
+      "fact": "F5",
+      "kind": "asserts",
+      "quote": "this one was carrying a canvas duffel bag when they came out",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-016",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "I don't carry a bag like that. Not my thing.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-019",
+      "fact": "F6",
+      "kind": "asks",
+      "quote": "We found a lock-pick set near the back door. Any reason your prints would be on something like that?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-020",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "No. I've never used anything like that. I don't know where that came from.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-021",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "A velvet ring tray came up missing from the case. You ever see something like that in the store?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-022",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "A velvet tray? I mean, maybe on a shelf. I wasn't really looking.",
+      "by": "model",
+      "verified": false
+     },
+     {
+      "utterance": "X055-023",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "The person on the camera had a cut on the left hand. Bleeding a little. You've got a bandage there yourself.",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-024",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "I cut myself in the kitchen. It happens.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-027",
+      "fact": "F6",
+      "kind": "asserts",
+      "quote": "you never touched a lock-pick set",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-028",
+      "fact": "F6",
+      "kind": "assents",
+      "quote": "That's right.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-029",
+      "fact": "F1",
+      "kind": "asks",
+      "quote": "Let's go back to that glass cutter with the suction-cup grip. You said you didn't know anything about it. Where would someone get one of those?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-030",
+      "fact": "F1",
+      "kind": "asserts",
+      "quote": "A hardware store, I guess. The kind with the little suction cup on it. I've seen them at the hardware store.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-031",
+      "fact": "F3",
+      "kind": "asks",
+      "quote": "And the alarm going down at 11:40 p.m. \u2014 that's a strange time to be doing anything, isn't it?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-032",
+      "fact": "F3",
+      "kind": "assents",
+      "quote": "Yeah. Strange.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-033",
+      "fact": "F4",
+      "kind": "asks",
+      "quote": "And the gray hooded sweatshirt \u2014 you said lots of people own them. Did you own one?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-034",
+      "fact": "F4",
+      "kind": "asserts",
+      "quote": "I had a gray hooded sweatshirt. I think I still do somewhere.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-035",
+      "fact": "F5",
+      "kind": "asks",
+      "quote": "And the canvas duffel bag \u2014 you said that's not your thing. But you've seen one around?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-036",
+      "fact": "F5",
+      "kind": "assents",
+      "quote": "Yeah. Sure.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-037",
+      "fact": "F7",
+      "kind": "asks",
+      "quote": "The velvet ring tray \u2014 you said maybe on a shelf. Do you remember seeing it in the case?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-038",
+      "fact": "F7",
+      "kind": "asserts",
+      "quote": "I remember a velvet ring tray in the case, yeah. Near the front.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-039",
+      "fact": "F8",
+      "kind": "asks",
+      "quote": "And the cut on the left hand \u2014 you said you cut yourself in the kitchen. That's your story?",
+      "by": "model",
+      "verified": null
+     },
+     {
+      "utterance": "X055-040",
+      "fact": "F8",
+      "kind": "assents",
+      "quote": "Yeah. That's my story.",
+      "by": "model",
+      "verified": true
+     },
+     {
+      "utterance": "X055-014",
+      "fact": "F2",
+      "kind": "denies",
+      "quote": "Lots of people own gray hoodies.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-012",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "I mean, I was up. But that doesn't mean anything.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-014",
+      "fact": "F3",
+      "kind": "denies",
+      "quote": "Lots of people own gray hoodies.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-018",
+      "fact": "F4",
+      "kind": "denies",
+      "quote": "I bought a watch there once. That's it.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-018",
+      "fact": "F5",
+      "kind": "denies",
+      "quote": "I bought a watch there once. That's it.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-024",
+      "fact": "F6",
+      "kind": "denies",
+      "quote": "I cut myself in the kitchen. It happens.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-024",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "I cut myself in the kitchen. It happens.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-026",
+      "fact": "F7",
+      "kind": "denies",
+      "quote": "Couple days ago. Making dinner.",
+      "by": "suspect-search",
+      "verified": false
+     },
+     {
+      "utterance": "X055-024",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "I cut myself in the kitchen. It happens.",
+      "by": "suspect-search",
+      "verified": true
+     },
+     {
+      "utterance": "X055-026",
+      "fact": "F8",
+      "kind": "asserts",
+      "quote": "Couple days ago. Making dinner.",
+      "by": "sense-search",
+      "verified": true
+     },
+     {
+      "utterance": "X055-028",
+      "fact": "F8",
+      "kind": "denies",
+      "quote": "That's right.",
+      "by": "sense-search",
+      "verified": false
+     }
+    ],
+    "facts": {
+     "F1": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-003"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-003"
+      }
+     },
+     "F2": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "never",
+       "line": null
+      }
+     },
+     "F3": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-011"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-011"
+      }
+     },
+     "F4": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-013"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-013"
+      }
+     },
+     "F5": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-015"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-015"
+      }
+     },
+     "F6": {
+      "gold": {
+       "first": "never",
+       "line": null
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-019"
+      }
+     },
+     "F7": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-021"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-021"
+      }
+     },
+     "F8": {
+      "gold": {
+       "first": "interrogator",
+       "line": "X055-023"
+      },
+      "pred": {
+       "first": "interrogator",
+       "line": "X055-023"
+      }
+     }
+    }
+   }
+  ]
+ }
+}

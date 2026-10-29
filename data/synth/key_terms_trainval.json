@@ -1,0 +1,2853 @@
+{
+ "X006": {
+  "F1": [
+   [
+    "red"
+   ],
+   [
+    "plastic"
+   ],
+   [
+    "fuel can",
+    "gas can",
+    "jerry can",
+    "jerrican",
+    "gasoline can",
+    "petrol can"
+   ]
+  ],
+  "F2": [
+   [
+    "rear"
+   ],
+   [
+    "service door",
+    "service entrance",
+    "overhead door",
+    "roll up door",
+    "garage door",
+    "bay door"
+   ]
+  ],
+  "F3": [
+   [
+    "gray",
+    "grey"
+   ],
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded pullover"
+   ]
+  ],
+  "F4": [
+   [
+    "11 40",
+    "1140",
+    "twenty to twelve",
+    "twenty til twelve"
+   ]
+  ],
+  "F5": [
+   [
+    "blue"
+   ],
+   [
+    "hatchback",
+    "hatch"
+   ]
+  ],
+  "F6": [
+   [
+    "burn",
+    "burned",
+    "burnt"
+   ],
+   [
+    "right forearm",
+    "right lower arm"
+   ]
+  ],
+  "F7": [
+   [
+    "bus depot",
+    "bus station",
+    "bus terminal",
+    "depot"
+   ],
+   [
+    "mill street",
+    "mill st"
+   ]
+  ]
+ },
+ "X007": {
+  "F1": [
+   [
+    "yellow crowbar",
+    "yellow pry bar",
+    "yellow jimmy",
+    "yellow wrecking bar"
+   ]
+  ],
+  "F2": [
+   [
+    "north parking deck",
+    "north parking garage",
+    "north parking structure",
+    "north parking ramp",
+    "north deck",
+    "north garage",
+    "north structure",
+    "north ramp"
+   ]
+  ],
+  "F3": [
+   [
+    "black backpack",
+    "black pack",
+    "black knapsack",
+    "black rucksack",
+    "black bookbag",
+    "black daypack"
+   ]
+  ],
+  "F4": [
+   [
+    "blue sedan",
+    "blue 4 door",
+    "blue four door",
+    "blue saloon"
+   ]
+  ],
+  "F5": [
+   [
+    "9 15 pm",
+    "21 15",
+    "9 15 night",
+    "9 15 evening",
+    "2115",
+    "2115 hours"
+   ]
+  ],
+  "F6": [
+   [
+    "gray hoodie",
+    "grey hoodie",
+    "gray hooded sweatshirt",
+    "grey hooded sweatshirt",
+    "gray hoody",
+    "grey hoody"
+   ]
+  ],
+  "F7": [
+   [
+    "passenger side window",
+    "passenger window",
+    "right window",
+    "right side window",
+    "right front window",
+    "passenger door window",
+    "right door window"
+   ]
+  ],
+  "F8": [
+   [
+    "cut left hand",
+    "laceration left hand",
+    "slice left hand",
+    "gash left hand",
+    "nick left hand",
+    "cut on left",
+    "laceration on left",
+    "slice on left",
+    "gash on left",
+    "nick on left"
+   ]
+  ]
+ },
+ "X008": {
+  "F1": [
+   [
+    "broken beer bottle",
+    "broken bottle",
+    "bottle",
+    "glass",
+    "shard",
+    "shards"
+   ]
+  ],
+  "F2": [
+   [
+    "alley",
+    "alleyway"
+   ],
+   [
+    "blue lantern",
+    "blue lantern bar",
+    "the bar"
+   ]
+  ],
+  "F3": [
+   [
+    "red canvas jacket",
+    "red jacket",
+    "canvas jacket",
+    "jacket"
+   ]
+  ],
+  "F4": [
+   [
+    "silver hatchback",
+    "hatchback",
+    "silver car",
+    "car",
+    "vehicle",
+    "auto"
+   ]
+  ],
+  "F5": [
+   [
+    "1 40",
+    "1 40 am",
+    "140"
+   ]
+  ],
+  "F6": [
+   [
+    "cut",
+    "laceration",
+    "slash",
+    "gash",
+    "slice"
+   ],
+   [
+    "forearm",
+    "arm",
+    "lower arm"
+   ]
+  ]
+ },
+ "X009": {
+  "F1": [
+   [
+    "silver",
+    "sil"
+   ],
+   [
+    "2011"
+   ],
+   [
+    "honda civic",
+    "civic"
+   ],
+   [
+    "sedan"
+   ]
+  ],
+  "F2": [
+   [
+    "crosswalk"
+   ],
+   [
+    "maple",
+    "maple st",
+    "maple street"
+   ],
+   [
+    "third",
+    "third st",
+    "third street",
+    "3rd",
+    "3rd st",
+    "3rd street"
+   ],
+   [
+    "intersection",
+    "corner",
+    "intersect"
+   ]
+  ],
+  "F3": [
+   [
+    "9 40",
+    "940",
+    "nine forty"
+   ],
+   [
+    "pm",
+    "p m",
+    "night"
+   ],
+   [
+    "friday",
+    "fri"
+   ],
+   [
+    "14th",
+    "14"
+   ]
+  ],
+  "F4": [
+   [
+    "bright orange",
+    "orange"
+   ],
+   [
+    "rain jacket",
+    "raincoat",
+    "poncho",
+    "slicker",
+    "shell"
+   ],
+   [
+    "reflective stripe",
+    "reflective strip",
+    "reflector stripe",
+    "reflector strip",
+    "hi vis stripe",
+    "high vis stripe",
+    "visibility stripe"
+   ]
+  ],
+  "F5": [
+   [
+    "cracked"
+   ],
+   [
+    "side mirror housing",
+    "mirror housing",
+    "mirror casing",
+    "mirror cover",
+    "side mirror assembly",
+    "mirror assembly",
+    "wing mirror housing",
+    "wing mirror casing"
+   ],
+   [
+    "left",
+    "driver side",
+    "drivers side",
+    "driver's side"
+   ],
+   [
+    "left at scene",
+    "left on scene",
+    "found at scene",
+    "found on scene",
+    "at scene",
+    "on scene"
+   ]
+  ],
+  "F6": [
+   [
+    "broken left wrist",
+    "fractured left wrist",
+    "left wrist fracture",
+    "left wrist broken",
+    "broken wrist left",
+    "fractured wrist left"
+   ],
+   [
+    "bruised ribs",
+    "rib bruise",
+    "rib bruises",
+    "bruised rib",
+    "rib contusion",
+    "rib contusions",
+    "chest bruise",
+    "chest bruises",
+    "bruised chest"
+   ]
+  ],
+  "F7": [
+   [
+    "burner phone",
+    "burner",
+    "burn phone",
+    "disposable phone",
+    "throwaway phone",
+    "prepaid phone",
+    "trap phone"
+   ],
+   [
+    "body shop",
+    "bodyshop",
+    "auto body",
+    "auto body shop",
+    "collision shop",
+    "collision center",
+    "repair shop",
+    "garage"
+   ]
+  ]
+ },
+ "X010": {
+  "F1": [
+   [
+    "blue"
+   ],
+   [
+    "cargo van",
+    "van",
+    "truck"
+   ],
+   [
+    "dented rear door",
+    "dented back door",
+    "damaged rear door",
+    "damaged back door",
+    "dented door",
+    "damaged door"
+   ]
+  ],
+  "F2": [
+   [
+    "folding knife",
+    "folder",
+    "pocket knife",
+    "folding blade"
+   ],
+   [
+    "chipped blade",
+    "chipped edge",
+    "damaged blade",
+    "nick in blade",
+    "nick in edge"
+   ]
+  ],
+  "F3": [
+   [
+    "parking garage",
+    "parking structure",
+    "garage",
+    "parkade"
+   ],
+   [
+    "mercer street",
+    "mercer st",
+    "mercer"
+   ]
+  ],
+  "F4": [
+   [
+    "red milk crate",
+    "red plastic crate",
+    "milk crate",
+    "plastic milk crate"
+   ],
+   [
+    "used as step",
+    "step",
+    "stepping stool",
+    "stool"
+   ]
+  ],
+  "F5": [
+   [
+    "gray",
+    "grey"
+   ],
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded sweat",
+    "hooded pullover"
+   ]
+  ],
+  "F6": [
+   [
+    "after 2 am",
+    "2 a m",
+    "2 am"
+   ],
+   [
+    "tuesday"
+   ]
+  ],
+  "F7": [
+   [
+    "fresh scrape",
+    "new scrape",
+    "recent scrape",
+    "fresh abrasion",
+    "new abrasion"
+   ],
+   [
+    "right forearm",
+    "right lower arm"
+   ]
+  ]
+ },
+ "X011": {
+  "F1": [
+   [
+    "black"
+   ],
+   [
+    "canvas"
+   ],
+   [
+    "duffel bag",
+    "duffel",
+    "bag",
+    "holdall",
+    "kitbag",
+    "gym bag",
+    "sports bag"
+   ]
+  ],
+  "F2": [
+   [
+    "kitchen window",
+    "kitchen win"
+   ],
+   [
+    "rear"
+   ]
+  ],
+  "F3": [
+   [
+    "silver"
+   ],
+   [
+    "crowbar",
+    "crow bar",
+    "pry bar",
+    "wrecking bar",
+    "jimmy",
+    "jemmy",
+    "gooseneck"
+   ]
+  ],
+  "F4": [
+   [
+    "blue"
+   ],
+   [
+    "ford fiesta",
+    "fiesta",
+    "ford"
+   ]
+  ],
+  "F5": [
+   [
+    "11 40",
+    "eleven forty",
+    "eleven four zero"
+   ],
+   [
+    "pm",
+    "p m",
+    "night"
+   ]
+  ],
+  "F6": [
+   [
+    "cut",
+    "laceration",
+    "slice",
+    "gash",
+    "slash",
+    "nick"
+   ],
+   [
+    "left hand",
+    "left palm",
+    "left fingers",
+    "lh"
+   ]
+  ]
+ },
+ "X012": {
+  "F1": [
+   [
+    "folding pocketknife",
+    "pocketknife",
+    "folder",
+    "knife",
+    "blade"
+   ],
+   [
+    "chipped black handle",
+    "chipped handle",
+    "black handle",
+    "damaged handle"
+   ],
+   [
+    "pry",
+    "prize",
+    "jimmy",
+    "force",
+    "pop",
+    "lever open"
+   ],
+   [
+    "rear stockroom door",
+    "back stockroom door",
+    "stockroom door",
+    "rear door",
+    "back door"
+   ]
+  ],
+  "F2": [
+   [
+    "rear stockroom door",
+    "back stockroom door",
+    "stockroom door",
+    "rear door",
+    "back door"
+   ],
+   [
+    "pharmacy",
+    "drugstore",
+    "chemist"
+   ],
+   [
+    "cedar lane",
+    "cedar ln"
+   ],
+   [
+    "alley",
+    "alleyway",
+    "back alley"
+   ]
+  ],
+  "F3": [
+   [
+    "blue plastic tote",
+    "blue tote",
+    "plastic tote",
+    "tote bag",
+    "tote",
+    "bin",
+    "container"
+   ],
+   [
+    "shelves",
+    "shelf",
+    "rack",
+    "racking"
+   ],
+   [
+    "allergy medicine",
+    "allergy meds",
+    "allergy medication",
+    "antihistamine",
+    "allergy pills",
+    "allergy boxes"
+   ],
+   [
+    "boxes",
+    "box",
+    "cartons",
+    "packs",
+    "packages"
+   ]
+  ],
+  "F4": [
+   [
+    "gray hooded sweatshirt",
+    "grey hooded sweatshirt",
+    "gray hoodie",
+    "grey hoodie",
+    "gray sweatshirt",
+    "grey sweatshirt"
+   ],
+   [
+    "torn left cuff",
+    "ripped left cuff",
+    "torn cuff",
+    "ripped cuff",
+    "frayed left cuff",
+    "damaged left cuff"
+   ]
+  ],
+  "F5": [
+   [
+    "silver hatchback",
+    "silver car",
+    "hatchback",
+    "hatch"
+   ],
+   [
+    "dented passenger door",
+    "dented door",
+    "damaged passenger door",
+    "dinged passenger door"
+   ],
+   [
+    "parked",
+    "sitting",
+    "stopped"
+   ],
+   [
+    "cedar lane",
+    "cedar ln"
+   ]
+  ],
+  "F6": [
+   [
+    "1 a m",
+    "1 am",
+    "0100",
+    "01 00",
+    "one a m",
+    "one am"
+   ],
+   [
+    "just after",
+    "past",
+    "shortly after"
+   ],
+   [
+    "alarm log",
+    "alarm record",
+    "alarm system",
+    "alarm"
+   ],
+   [
+    "door sensor",
+    "door contact",
+    "sensor",
+    "contact"
+   ]
+  ]
+ },
+ "X013": {
+  "F1": [
+   [
+    "folding box cutter",
+    "box cutter",
+    "folding knife",
+    "utility knife",
+    "razor knife",
+    "stanley knife"
+   ],
+   [
+    "blue handle",
+    "blue handled"
+   ]
+  ],
+  "F2": [
+   [
+    "service corridor",
+    "back corridor",
+    "service hallway",
+    "back hallway",
+    "alleyway",
+    "back alley"
+   ],
+   [
+    "belcourt arcade",
+    "belcourt",
+    "the arcade"
+   ]
+  ],
+  "F3": [
+   [
+    "velvet display tray",
+    "black display tray",
+    "velvet tray",
+    "display tray"
+   ]
+  ],
+  "F4": [
+   [
+    "gray hooded sweatshirt",
+    "grey hooded sweatshirt",
+    "gray hoodie",
+    "grey hoodie",
+    "gray sweatshirt",
+    "grey sweatshirt"
+   ],
+   [
+    "hood up",
+    "hood on",
+    "wearing hood",
+    "hooded up"
+   ]
+  ],
+  "F5": [
+   [
+    "silver hatchback",
+    "silver car",
+    "silver vehicle",
+    "gray hatchback",
+    "grey hatchback"
+   ],
+   [
+    "dented rear bumper",
+    "dented back bumper",
+    "damaged rear bumper",
+    "bent rear bumper",
+    "smashed rear bumper",
+    "dented bumper"
+   ]
+  ],
+  "F6": [
+   [
+    "9 15",
+    "9 15 pm",
+    "21 15",
+    "nine fifteen"
+   ],
+   [
+    "just after",
+    "past",
+    "shortly after",
+    "right after"
+   ]
+  ],
+  "F7": [
+   [
+    "small cut",
+    "little cut",
+    "minor cut",
+    "slice",
+    "nick",
+    "paper cut"
+   ],
+   [
+    "left thumb",
+    "left hand thumb"
+   ]
+  ],
+  "F8": [
+   [
+    "pawn ticket",
+    "pawn slip",
+    "pawn receipt",
+    "ticket"
+   ],
+   [
+    "halberd loans",
+    "halberd loan",
+    "halberd"
+   ]
+  ]
+ },
+ "X014": {
+  "F1": [
+   [
+    "pry bar",
+    "prybar",
+    "crowbar",
+    "flat bar",
+    "jimmy",
+    "jemmy"
+   ],
+   [
+    "rear door",
+    "back door",
+    "backdoor"
+   ],
+   [
+    "blue paint",
+    "blue end",
+    "painted end"
+   ]
+  ],
+  "F2": [
+   [
+    "mantel clock",
+    "mantle clock",
+    "shelf clock",
+    "brass clock",
+    "small clock"
+   ]
+  ],
+  "F3": [
+   [
+    "kitchen window",
+    "kitchen win"
+   ],
+   [
+    "back of house",
+    "rear of house",
+    "backyard window",
+    "rear window"
+   ]
+  ],
+  "F4": [
+   [
+    "dark green",
+    "deep green"
+   ],
+   [
+    "hatchback",
+    "hatch"
+   ]
+  ],
+  "F5": [
+   [
+    "2 a m",
+    "2 am",
+    "0200",
+    "02 00",
+    "two a m",
+    "two am"
+   ],
+   [
+    "shortly after",
+    "just after",
+    "right after"
+   ]
+  ],
+  "F6": [
+   [
+    "white running shoes",
+    "white runners",
+    "white trainers",
+    "white sneakers",
+    "white kicks"
+   ],
+   [
+    "red logo",
+    "red swoosh",
+    "red mark",
+    "red symbol"
+   ]
+  ],
+  "F7": [
+   [
+    "scrape",
+    "scratch",
+    "abrasion",
+    "graze"
+   ],
+   [
+    "left forearm",
+    "left arm",
+    "l forearm"
+   ]
+  ]
+ },
+ "X018": {
+  "F1": [
+   [
+    "loading dock keycard",
+    "dock keycard",
+    "keycard",
+    "access card",
+    "badge",
+    "fob",
+    "card"
+   ]
+  ],
+  "F2": [
+   [
+    "green ford transit",
+    "green transit van",
+    "green transit",
+    "green van"
+   ]
+  ],
+  "F3": [
+   [
+    "alarm",
+    "alarm system",
+    "security system"
+   ],
+   [
+    "disabled",
+    "turned off",
+    "shut off",
+    "cut",
+    "killed",
+    "deactivated",
+    "bypassed",
+    "silenced"
+   ],
+   [
+    "11 40",
+    "11 40 pm",
+    "23 40"
+   ]
+  ],
+  "F4": [
+   [
+    "blue hooded sweatshirt",
+    "blue hoodie",
+    "blue sweatshirt",
+    "blue pullover"
+   ]
+  ],
+  "F5": [
+   [
+    "power tool pallet",
+    "cordless tool pallet"
+   ],
+   [
+    "cordless power tools",
+    "cordless tools",
+    "power tools",
+    "drills",
+    "drivers",
+    "saws",
+    "battery tools"
+   ]
+  ],
+  "F6": [
+   [
+    "cut fence",
+    "cut the fence"
+   ],
+   [
+    "rear lot",
+    "back lot",
+    "rear fence",
+    "back fence"
+   ]
+  ]
+ },
+ "X023": {
+  "F1": [
+   [
+    "blue"
+   ],
+   [
+    "baseball cap",
+    "ball cap",
+    "cap",
+    "hat"
+   ],
+   [
+    "frayed brim",
+    "frayed bill",
+    "worn brim",
+    "tattered brim"
+   ]
+  ],
+  "F2": [
+   [
+    "maple street"
+   ],
+   [
+    "parking garage",
+    "parking structure",
+    "garage",
+    "ramp"
+   ],
+   [
+    "level 3",
+    "third level",
+    "floor 3",
+    "third floor",
+    "3rd floor"
+   ]
+  ],
+  "F3": [
+   [
+    "red"
+   ],
+   [
+    "folding pocketknife",
+    "folding knife",
+    "folder",
+    "pocketknife"
+   ]
+  ],
+  "F4": [
+   [
+    "black"
+   ],
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded sweat"
+   ]
+  ],
+  "F5": [
+   [
+    "white"
+   ],
+   [
+    "panel van",
+    "panel truck",
+    "box van",
+    "cargo van"
+   ]
+  ],
+  "F6": [
+   [
+    "9 40",
+    "9 40 pm",
+    "twenty to ten",
+    "twenty till ten"
+   ]
+  ],
+  "F7": [
+   [
+    "scrape",
+    "abrasion",
+    "graze",
+    "scratch"
+   ],
+   [
+    "left forearm",
+    "left lower arm"
+   ]
+  ]
+ },
+ "X026": {
+  "F1": [
+   [
+    "spray paint",
+    "spray",
+    "can",
+    "aerosol"
+   ],
+   [
+    "blue"
+   ]
+  ],
+  "F2": [
+   [
+    "east gymnasium doors",
+    "east gym doors",
+    "east gymnasium door",
+    "east gym door"
+   ]
+  ],
+  "F3": [
+   [
+    "11 40 pm",
+    "11 40",
+    "23 40"
+   ]
+  ],
+  "F4": [
+   [
+    "red hooded sweatshirt",
+    "red hoodie",
+    "red sweatshirt"
+   ]
+  ],
+  "F5": [
+   [
+    "silver hatchback",
+    "silver car",
+    "silver vehicle"
+   ]
+  ],
+  "F6": [
+   [
+    "cut",
+    "laceration",
+    "slice",
+    "gash"
+   ],
+   [
+    "left hand",
+    "left palm",
+    "left fingers"
+   ]
+  ]
+ },
+ "X027": {
+  "F1": [
+   [
+    "blue"
+   ],
+   [
+    "tarpaulin",
+    "tarp",
+    "cover"
+   ]
+  ],
+  "F2": [
+   [
+    "storage locker",
+    "locker",
+    "storage unit",
+    "unit"
+   ],
+   [
+    "cannery row",
+    "cannery"
+   ]
+  ],
+  "F3": [
+   [
+    "angle grinder",
+    "grinder",
+    "cutter",
+    "disc cutter"
+   ]
+  ],
+  "F4": [
+   [
+    "grey",
+    "gray"
+   ],
+   [
+    "hoodie",
+    "hooded sweatshirt",
+    "hoody",
+    "sweatshirt"
+   ]
+  ],
+  "F5": [
+   [
+    "2 40",
+    "2 40 am",
+    "02 40"
+   ]
+  ],
+  "F6": [
+   [
+    "red"
+   ],
+   [
+    "hatchback",
+    "hatch"
+   ]
+  ],
+  "F7": [
+   [
+    "scratch",
+    "scrape",
+    "mark",
+    "abrasion"
+   ],
+   [
+    "paint"
+   ],
+   [
+    "forearm",
+    "arm",
+    "lower arm"
+   ]
+  ]
+ },
+ "X028": {
+  "F1": [
+   [
+    "blue"
+   ],
+   [
+    "baseball cap",
+    "ball cap",
+    "cap",
+    "hat"
+   ],
+   [
+    "torn brim",
+    "ripped brim",
+    "torn bill",
+    "ripped bill",
+    "damaged brim",
+    "frayed brim"
+   ]
+  ],
+  "F2": [
+   [
+    "storage unit",
+    "unit",
+    "locker"
+   ],
+   [
+    "14",
+    "fourteen",
+    "number 14",
+    "no 14"
+   ],
+   [
+    "ridgeline self storage",
+    "ridgeline storage",
+    "ridgeline"
+   ]
+  ],
+  "F3": [
+   [
+    "bolt cutters",
+    "bolt cutter",
+    "cutters",
+    "heavy cutters"
+   ],
+   [
+    "orange handles",
+    "orange handle",
+    "orange grips",
+    "orange grip"
+   ]
+  ],
+  "F4": [
+   [
+    "silver"
+   ],
+   [
+    "honda civic",
+    "civic",
+    "honda"
+   ]
+  ],
+  "F5": [
+   [
+    "text message",
+    "text",
+    "txt",
+    "sms",
+    "message"
+   ],
+   [
+    "11 42 pm",
+    "11 42",
+    "23 42"
+   ]
+  ],
+  "F6": [
+   [
+    "black"
+   ],
+   [
+    "duffel bag",
+    "duffel",
+    "duffle bag",
+    "duffle",
+    "gym bag"
+   ]
+  ],
+  "F7": [
+   [
+    "scrape",
+    "scrapes",
+    "abrasion",
+    "graze",
+    "scratch"
+   ],
+   [
+    "left forearm",
+    "left arm",
+    "l forearm"
+   ]
+  ]
+ },
+ "X029": {
+  "F1": [
+   [
+    "silver",
+    "grey",
+    "gray"
+   ],
+   [
+    "sedan",
+    "car",
+    "vehicle",
+    "four door",
+    "4 door"
+   ]
+  ],
+  "F2": [
+   [
+    "maple",
+    "maple ave",
+    "maple avenue"
+   ],
+   [
+    "third",
+    "third st",
+    "third street"
+   ]
+  ],
+  "F3": [
+   [
+    "cracked",
+    "broken",
+    "busted",
+    "shattered",
+    "smashed"
+   ],
+   [
+    "headlight",
+    "headlamp",
+    "light"
+   ],
+   [
+    "right",
+    "passenger",
+    "passenger side"
+   ]
+  ],
+  "F4": [
+   [
+    "dent",
+    "ding",
+    "crush",
+    "crease"
+   ],
+   [
+    "rear door",
+    "back door",
+    "passenger rear door"
+   ]
+  ],
+  "F5": [
+   [
+    "9 40",
+    "9 40 pm",
+    "21 40",
+    "twenty one forty"
+   ]
+  ],
+  "F6": [
+   [
+    "sprained",
+    "twisted",
+    "wrenched"
+   ],
+   [
+    "wrist"
+   ]
+  ]
+ },
+ "X033": {
+  "F1": [
+   [
+    "silver",
+    "chrome",
+    "stainless",
+    "nickel"
+   ],
+   [
+    "revolver",
+    "wheel gun",
+    "six shooter",
+    "snub nose",
+    "snubby"
+   ],
+   [
+    "black grip",
+    "dark grip",
+    "black handle",
+    "dark handle",
+    "black stock",
+    "dark stock"
+   ]
+  ],
+  "F2": [
+   [
+    "corner",
+    "intersection"
+   ],
+   [
+    "5th",
+    "fifth"
+   ],
+   [
+    "maple"
+   ]
+  ],
+  "F3": [
+   [
+    "blue"
+   ],
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded sweat",
+    "hooded pullover"
+   ]
+  ],
+  "F4": [
+   [
+    "red"
+   ],
+   [
+    "duffel bag",
+    "duffel",
+    "duffle bag",
+    "duffle",
+    "gym bag"
+   ]
+  ],
+  "F5": [
+   [
+    "9 40",
+    "nine forty"
+   ],
+   [
+    "pm",
+    "p m",
+    "night"
+   ]
+  ],
+  "F6": [
+   [
+    "wound",
+    "shot",
+    "bullet wound",
+    "gunshot",
+    "gsw",
+    "hit"
+   ],
+   [
+    "clerk",
+    "cashier",
+    "employee",
+    "worker",
+    "teller"
+   ],
+   [
+    "left shoulder",
+    "left side shoulder"
+   ]
+  ],
+  "F7": [
+   [
+    "gray",
+    "grey"
+   ],
+   [
+    "sedan",
+    "car",
+    "four door"
+   ]
+  ],
+  "F8": [
+   [
+    "name tag",
+    "nametag",
+    "name badge",
+    "badge",
+    "id badge",
+    "tag"
+   ]
+  ]
+ },
+ "X036": {
+  "F1": [
+   [
+    "black folding knife",
+    "black folder",
+    "black pocket knife",
+    "dark folding knife",
+    "dark folder"
+   ],
+   [
+    "chipped tip",
+    "chipped point",
+    "chipped blade",
+    "damaged tip",
+    "broken tip"
+   ]
+  ],
+  "F2": [
+   [
+    "quickstop",
+    "quick stop"
+   ],
+   [
+    "delaney avenue",
+    "delaney ave",
+    "delaney"
+   ]
+  ],
+  "F3": [
+   [
+    "grey cash tray",
+    "gray cash tray",
+    "grey register tray",
+    "gray register tray"
+   ],
+   [
+    "from the register",
+    "off the register",
+    "from register",
+    "register tray"
+   ]
+  ],
+  "F4": [
+   [
+    "dark green hoodie",
+    "dark green sweatshirt",
+    "dark green pullover"
+   ]
+  ],
+  "F5": [
+   [
+    "silver sedan",
+    "silver car",
+    "silver four door"
+   ],
+   [
+    "dented rear bumper",
+    "dented back bumper",
+    "damaged rear bumper",
+    "dented trunk"
+   ]
+  ],
+  "F6": [
+   [
+    "11 40 pm",
+    "1140",
+    "twenty three forty"
+   ],
+   [
+    "just after",
+    "right after",
+    "shortly after"
+   ]
+  ],
+  "F7": [
+   [
+    "scraped elbow",
+    "scrape elbow",
+    "skinned elbow",
+    "abraded elbow"
+   ],
+   [
+    "from the fall",
+    "from fall",
+    "from falling",
+    "when fell",
+    "from the drop"
+   ]
+  ]
+ },
+ "X040": {
+  "F1": [
+   [
+    "vehicle",
+    "car",
+    "auto",
+    "sedan",
+    "four door",
+    "4 door"
+   ],
+   [
+    "silver",
+    "grey",
+    "gray"
+   ],
+   [
+    "dented",
+    "dent",
+    "dinged",
+    "caved",
+    "caved in",
+    "smashed",
+    "crumpled"
+   ],
+   [
+    "passenger",
+    "passenger side",
+    "right",
+    "right side",
+    "front right",
+    "front passenger"
+   ]
+  ],
+  "F2": [
+   [
+    "crosswalk",
+    "crossing",
+    "cross walk"
+   ],
+   [
+    "vine",
+    "vine st",
+    "vine street",
+    "vine ave",
+    "vine avenue"
+   ],
+   [
+    "ferris",
+    "ferris theater",
+    "ferris theatre",
+    "old ferris",
+    "theater",
+    "theatre"
+   ]
+  ],
+  "F3": [
+   [
+    "9 40",
+    "9 40pm",
+    "9 40 pm",
+    "twenty to ten",
+    "twenty til ten",
+    "twenty till ten"
+   ],
+   [
+    "friday",
+    "fri"
+   ],
+   [
+    "14th",
+    "14",
+    "the 14th",
+    "the fourteenth"
+   ]
+  ],
+  "F4": [
+   [
+    "turn signal",
+    "blinker",
+    "indicator",
+    "signal",
+    "turn"
+   ],
+   [
+    "lens",
+    "cover",
+    "housing",
+    "piece",
+    "fragment",
+    "shard",
+    "glass",
+    "plastic"
+   ],
+   [
+    "cracked",
+    "broke",
+    "broken",
+    "shattered",
+    "smashed",
+    "damaged"
+   ],
+   [
+    "amber",
+    "orange",
+    "yellow",
+    "yellow orange"
+   ]
+  ],
+  "F5": [
+   [
+    "rain jacket",
+    "raincoat",
+    "rain coat",
+    "shell",
+    "windbreaker",
+    "jacket",
+    "coat"
+   ],
+   [
+    "navy",
+    "navy blue",
+    "dark blue",
+    "midnight"
+   ],
+   [
+    "zipper",
+    "zip",
+    "pull",
+    "tab",
+    "tag",
+    "slider",
+    "zip pull"
+   ],
+   [
+    "broken",
+    "broke",
+    "snapped",
+    "missing",
+    "ripped",
+    "torn"
+   ]
+  ],
+  "F6": [
+   [
+    "forearm",
+    "lower arm",
+    "arm"
+   ],
+   [
+    "left"
+   ],
+   [
+    "bruised",
+    "bruise",
+    "contusion",
+    "black and blue",
+    "mark"
+   ],
+   [
+    "palm",
+    "hand",
+    "palm of hand"
+   ]
+  ]
+ },
+ "X041": {
+  "F1": [
+   [
+    "folding pocket knife",
+    "folding knife",
+    "pocket knife",
+    "folder"
+   ],
+   [
+    "chipped blade",
+    "chipped",
+    "damaged blade",
+    "nicked blade"
+   ]
+  ],
+  "F2": [
+   [
+    "self storage facility",
+    "storage facility",
+    "storage unit",
+    "self storage"
+   ],
+   [
+    "marlow road",
+    "marlow rd"
+   ],
+   [
+    "unit 214",
+    "214"
+   ]
+  ],
+  "F3": [
+   [
+    "red fuel can",
+    "red gas can",
+    "red petrol can",
+    "red jerry can",
+    "red jerrican"
+   ]
+  ],
+  "F4": [
+   [
+    "gray hoodie",
+    "grey hoodie",
+    "gray hoody",
+    "grey hoody"
+   ],
+   [
+    "torn left cuff",
+    "ripped left cuff",
+    "torn cuff",
+    "ripped cuff"
+   ]
+  ],
+  "F5": [
+   [
+    "blue panel van",
+    "dark blue van",
+    "panel van"
+   ],
+   [
+    "no rear plate",
+    "missing rear plate",
+    "no back plate",
+    "missing back plate"
+   ]
+  ],
+  "F6": [
+   [
+    "11 40 pm",
+    "1140 pm",
+    "2340"
+   ],
+   [
+    "tuesday"
+   ]
+  ],
+  "F7": [
+   [
+    "scraped left forearm",
+    "scrape left forearm",
+    "abrasion left forearm",
+    "graze left forearm"
+   ],
+   [
+    "left forearm",
+    "left arm"
+   ]
+  ]
+ },
+ "X045": {
+  "F1": [
+   [
+    "red"
+   ],
+   [
+    "plastic"
+   ],
+   [
+    "fuel can",
+    "gas can",
+    "jerry can",
+    "jerrican",
+    "gasoline can",
+    "petrol can"
+   ]
+  ],
+  "F2": [
+   [
+    "blue"
+   ],
+   [
+    "cargo van",
+    "van",
+    "box van",
+    "panel van",
+    "delivery van",
+    "work van"
+   ]
+  ],
+  "F3": [
+   [
+    "pry bar",
+    "prybar",
+    "crowbar",
+    "wrecking bar",
+    "jimmy",
+    "jemmy",
+    "pry tool"
+   ]
+  ],
+  "F4": [
+   [
+    "smell",
+    "odor",
+    "scent",
+    "whiff"
+   ],
+   [
+    "accelerant",
+    "accelerant fluid",
+    "lighter fluid",
+    "charcoal lighter fluid",
+    "grill lighter fluid",
+    "petroleum distillate",
+    "petroleum ether"
+   ]
+  ],
+  "F5": [
+   [
+    "gray",
+    "grey"
+   ],
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded pullover",
+    "hooded sweat shirt"
+   ]
+  ],
+  "F6": [
+   [
+    "11 40",
+    "11 40 pm",
+    "1140",
+    "23 40",
+    "2340"
+   ]
+  ]
+ },
+ "X046": {
+  "F1": [
+   [
+    "red"
+   ],
+   [
+    "spray paint",
+    "spraypaint",
+    "spray can",
+    "aerosol paint",
+    "rattle can"
+   ]
+  ],
+  "F2": [
+   [
+    "east"
+   ],
+   [
+    "gymnasium",
+    "gym",
+    "gym door",
+    "gym entrance"
+   ]
+  ],
+  "F3": [
+   [
+    "black"
+   ],
+   [
+    "hoodie",
+    "hoody",
+    "hooded sweatshirt"
+   ],
+   [
+    "torn cuff",
+    "ripped cuff",
+    "frayed cuff"
+   ]
+  ],
+  "F4": [
+   [
+    "10 40",
+    "10 40 pm",
+    "ten forty"
+   ]
+  ],
+  "F5": [
+   [
+    "silver"
+   ],
+   [
+    "hatchback",
+    "hatch"
+   ]
+  ],
+  "F6": [
+   [
+    "paint"
+   ],
+   [
+    "right shoe",
+    "right foot"
+   ]
+  ]
+ },
+ "X047": {
+  "F1": [
+   [
+    "display case",
+    "display",
+    "case",
+    "glass case",
+    "showcase",
+    "jewelry case",
+    "counter case"
+   ],
+   [
+    "halloway",
+    "finch",
+    "halloway finch",
+    "halloway and finch",
+    "jewelers",
+    "jeweler",
+    "jewelry store",
+    "store"
+   ]
+  ],
+  "F2": [
+   [
+    "pry bar",
+    "prybar",
+    "crowbar",
+    "pry tool",
+    "jimmy",
+    "jemmy",
+    "wrecking bar",
+    "small pry bar",
+    "little pry bar",
+    "mini pry bar"
+   ]
+  ],
+  "F3": [
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded sweat",
+    "sweatshirt",
+    "hooded pullover",
+    "pullover"
+   ],
+   [
+    "navy blue",
+    "navy",
+    "dark blue",
+    "midnight blue"
+   ]
+  ],
+  "F4": [
+   [
+    "silver sedan",
+    "silver car",
+    "silver vehicle",
+    "silver auto",
+    "grey sedan",
+    "gray sedan",
+    "silver 4 door",
+    "silver four door"
+   ]
+  ],
+  "F5": [
+   [
+    "9 40",
+    "9 40 pm",
+    "21 40",
+    "nine forty",
+    "nine forty pm",
+    "twenty one forty"
+   ]
+  ],
+  "F6": [
+   [
+    "cut",
+    "laceration",
+    "slice",
+    "gash",
+    "nick",
+    "scratch",
+    "abrasion"
+   ],
+   [
+    "left hand",
+    "left palm",
+    "left fingers",
+    "left thumb",
+    "left wrist",
+    "l hand"
+   ]
+  ]
+ },
+ "X048": {
+  "F1": [
+   [
+    "glass breaking tool",
+    "glass breaker",
+    "window punch",
+    "center punch",
+    "spring punch"
+   ],
+   [
+    "front seat",
+    "front passenger seat",
+    "passenger seat"
+   ]
+  ],
+  "F2": [
+   [
+    "northgate mall",
+    "northgate"
+   ],
+   [
+    "parking structure",
+    "parking garage",
+    "parking deck",
+    "garage",
+    "structure"
+   ],
+   [
+    "level 3",
+    "third level",
+    "floor 3",
+    "3rd floor",
+    "level three"
+   ]
+  ],
+  "F3": [
+   [
+    "green hooded sweatshirt",
+    "green hoodie",
+    "green sweatshirt",
+    "green pullover"
+   ],
+   [
+    "ripped pocket",
+    "torn pocket",
+    "ripped pouch",
+    "torn pouch"
+   ]
+  ],
+  "F4": [
+   [
+    "blue duffel bag",
+    "blue duffel",
+    "blue gym bag",
+    "blue sports bag"
+   ],
+   [
+    "back seat",
+    "rear seat",
+    "backseat"
+   ]
+  ],
+  "F5": [
+   [
+    "passenger side window",
+    "passenger window",
+    "right window",
+    "right side window"
+   ],
+   [
+    "shattered",
+    "broken",
+    "busted",
+    "smashed",
+    "cracked"
+   ]
+  ],
+  "F6": [
+   [
+    "keys",
+    "key set",
+    "set of keys"
+   ],
+   [
+    "red plastic tag",
+    "red tag",
+    "plastic tag"
+   ],
+   [
+    "near the scene",
+    "near scene",
+    "by the scene",
+    "close to scene",
+    "at the scene"
+   ]
+  ]
+ },
+ "X049": {
+  "F1": [
+   [
+    "red",
+    "plastic",
+    "gas can",
+    "gascan",
+    "jerry can",
+    "jerrycan",
+    "fuel can",
+    "fuelcan",
+    "gas jug",
+    "gasjug"
+   ],
+   [
+    "beside",
+    "next to",
+    "alongside",
+    "against"
+   ],
+   [
+    "unit door",
+    "door",
+    "unit entrance",
+    "storage door",
+    "locker door",
+    "bay door"
+   ]
+  ],
+  "F2": [
+   [
+    "padlock",
+    "lock",
+    "combo lock",
+    "combination lock",
+    "key lock"
+   ],
+   [
+    "cut",
+    "cut off",
+    "snipped",
+    "clipped",
+    "sheared",
+    "severed",
+    "chopped"
+   ],
+   [
+    "bolt cutters",
+    "bolt cutter",
+    "cutters",
+    "bolt croppers",
+    "cropper",
+    "heavy cutters",
+    "big cutters"
+   ]
+  ],
+  "F3": [
+   [
+    "burn",
+    "burn mark",
+    "burn injury",
+    "scald",
+    "blister",
+    "brand"
+   ],
+   [
+    "right forearm",
+    "right arm",
+    "r forearm",
+    "r arm",
+    "forearm",
+    "lower arm"
+   ]
+  ],
+  "F4": [
+   [
+    "fire",
+    "blaze",
+    "flames"
+   ],
+   [
+    "started",
+    "began",
+    "ignited",
+    "sparked",
+    "kicked off",
+    "got going"
+   ],
+   [
+    "11 40 pm",
+    "11 40",
+    "23 40",
+    "twenty three forty",
+    "eleven forty pm"
+   ]
+  ],
+  "F5": [
+   [
+    "blue pickup",
+    "blue pickup truck",
+    "blue truck",
+    "blue pick up"
+   ],
+   [
+    "leaving",
+    "left",
+    "exiting",
+    "exited",
+    "pulling out",
+    "pulled out",
+    "driving off",
+    "drove off",
+    "taking off",
+    "took off"
+   ]
+  ],
+  "F6": [
+   [
+    "gray hooded sweatshirt",
+    "grey hooded sweatshirt",
+    "gray hoodie",
+    "grey hoodie",
+    "gray sweatshirt",
+    "grey sweatshirt",
+    "gray hooded",
+    "grey hooded"
+   ],
+   [
+    "gate",
+    "front gate",
+    "main gate",
+    "entry gate",
+    "entrance gate"
+   ]
+  ],
+  "F7": [
+   [
+    "key",
+    "door key",
+    "unit key",
+    "lock key"
+   ],
+   [
+    "taped",
+    "taped up",
+    "duct taped",
+    "taped on",
+    "stuck",
+    "stuck on",
+    "affixed"
+   ],
+   [
+    "office mailbox",
+    "mailbox",
+    "office box",
+    "mail box"
+   ]
+  ],
+  "F8": [
+   [
+    "black duffel",
+    "black duffel bag",
+    "black duffle",
+    "black duffle bag",
+    "dark duffel",
+    "dark duffel bag"
+   ],
+   [
+    "carried into",
+    "carried in",
+    "brought into",
+    "brought in",
+    "took into",
+    "took in",
+    "lugged into",
+    "lugged in",
+    "hauled into",
+    "hauled in"
+   ]
+  ]
+ },
+ "X052": {
+  "F1": [
+   [
+    "heavy glass ashtray",
+    "heavy ashtray",
+    "glass ashtray",
+    "ashtray"
+   ],
+   [
+    "bar patio",
+    "patio"
+   ]
+  ],
+  "F2": [
+   [
+    "alley behind",
+    "alley back"
+   ],
+   [
+    "blue lantern tavern",
+    "blue lantern",
+    "the tavern"
+   ],
+   [
+    "verrill street",
+    "verrill st"
+   ]
+  ],
+  "F3": [
+   [
+    "dark green hoodie",
+    "green hooded sweatshirt",
+    "green hoodie",
+    "dark green sweatshirt"
+   ],
+   [
+    "torn left cuff",
+    "ripped left cuff",
+    "torn cuff left",
+    "left cuff torn"
+   ]
+  ],
+  "F4": [
+   [
+    "silver hatchback",
+    "silver car",
+    "hatchback"
+   ],
+   [
+    "side street",
+    "side road"
+   ]
+  ],
+  "F5": [
+   [
+    "1 40",
+    "1 40 am",
+    "140 am",
+    "one forty am"
+   ]
+  ],
+  "F6": [
+   [
+    "cut left eyebrow",
+    "cut above eyebrow"
+   ]
+  ]
+ },
+ "X053": {
+  "F1": [
+   [
+    "pry bar",
+    "crowbar",
+    "jimmy",
+    "prybar",
+    "wrecking bar"
+   ],
+   [
+    "bent",
+    "twisted",
+    "curved",
+    "kinked"
+   ],
+   [
+    "blue"
+   ],
+   [
+    "yellow tape",
+    "yellow duct tape",
+    "taped handle"
+   ]
+  ],
+  "F2": [
+   [
+    "rear service door",
+    "back service door",
+    "rear door",
+    "back door",
+    "service door",
+    "loading door",
+    "bay door"
+   ],
+   [
+    "ridgeway auto repair",
+    "ridgeway auto",
+    "ridgeway garage",
+    "ridgeway's"
+   ],
+   [
+    "mill street",
+    "mill st"
+   ]
+  ],
+  "F3": [
+   [
+    "2 40",
+    "2 40 am",
+    "02 40",
+    "0240"
+   ],
+   [
+    "fire night"
+   ]
+  ],
+  "F4": [
+   [
+    "dark green",
+    "deep green",
+    "forest green"
+   ],
+   [
+    "pickup",
+    "pickup truck",
+    "pick up",
+    "truck"
+   ],
+   [
+    "missing front plate",
+    "no front plate",
+    "no front tag",
+    "front plate missing"
+   ]
+  ],
+  "F5": [
+   [
+    "gray",
+    "grey"
+   ],
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded sweat",
+    "hooded pullover"
+   ],
+   [
+    "torn left cuff",
+    "ripped left cuff",
+    "torn cuff left",
+    "left cuff torn",
+    "frayed left cuff"
+   ]
+  ],
+  "F6": [
+   [
+    "small burn",
+    "minor burn",
+    "slight burn",
+    "little burn"
+   ],
+   [
+    "right hand back"
+   ]
+  ],
+  "F7": [
+   [
+    "red gas can",
+    "red fuel can",
+    "red jerry can",
+    "red jerrican"
+   ],
+   [
+    "left near dumpster",
+    "left by dumpster",
+    "placed near dumpster",
+    "put near dumpster",
+    "dumped near dumpster",
+    "near the dumpster",
+    "by the dumpster"
+   ]
+  ]
+ },
+ "X055": {
+  "F1": [
+   [
+    "glass cutter",
+    "glasscutter",
+    "cutter"
+   ],
+   [
+    "suction cup",
+    "suctioncup",
+    "cup grip",
+    "vacuum grip",
+    "suction handle"
+   ]
+  ],
+  "F2": [
+   [
+    "blue"
+   ],
+   [
+    "sedan",
+    "car",
+    "vehicle",
+    "auto"
+   ]
+  ],
+  "F3": [
+   [
+    "11 40",
+    "11 40 pm",
+    "1140"
+   ]
+  ],
+  "F4": [
+   [
+    "gray",
+    "grey"
+   ],
+   [
+    "hooded sweatshirt",
+    "hoodie",
+    "hooded pullover"
+   ]
+  ],
+  "F5": [
+   [
+    "canvas duffel",
+    "canvas duffel bag",
+    "duffel bag",
+    "duffel",
+    "canvas bag"
+   ]
+  ],
+  "F6": [
+   [
+    "lock pick",
+    "lockpick",
+    "pick set",
+    "lockpick set",
+    "picks"
+   ]
+  ],
+  "F7": [
+   [
+    "velvet ring tray",
+    "velvet tray",
+    "ring tray",
+    "jewelry tray",
+    "velvet ring box"
+   ]
+  ],
+  "F8": [
+   [
+    "cut",
+    "laceration",
+    "slice",
+    "gash",
+    "wound"
+   ],
+   [
+    "left hand",
+    "lefthand"
+   ]
+  ]
+ },
+ "X057": {
+  "F1": [
+   [
+    "snub nosed",
+    "snub nose",
+    "snubnose"
+   ],
+   [
+    "38",
+    "38 caliber",
+    "38 cal"
+   ],
+   [
+    "revolver",
+    "rev",
+    "wheel gun",
+    "six shooter"
+   ],
+   [
+    "taped grip",
+    "tape grip",
+    "taped handle",
+    "tape handle",
+    "grip tape",
+    "handle tape"
+   ]
+  ],
+  "F2": [
+   [
+    "back stockroom",
+    "rear stockroom",
+    "back room",
+    "stockroom"
+   ],
+   [
+    "corner mart",
+    "corner market"
+   ],
+   [
+    "delaney avenue",
+    "delaney ave",
+    "delaney"
+   ]
+  ],
+  "F3": [
+   [
+    "cash bag",
+    "money bag",
+    "bank bag",
+    "deposit bag"
+   ],
+   [
+    "blue canvas",
+    "blue canvass"
+   ],
+   [
+    "broken zipper pull",
+    "busted zipper pull",
+    "broken zip pull",
+    "busted zip pull",
+    "missing zipper pull",
+    "missing zip pull",
+    "zipper pull broken",
+    "zip pull broken",
+    "zipper pull busted",
+    "zip pull busted"
+   ]
+  ],
+  "F4": [
+   [
+    "gray hoodie",
+    "grey hoodie",
+    "gray hoody",
+    "grey hoody"
+   ],
+   [
+    "tear left cuff",
+    "ripped left cuff",
+    "rip left cuff",
+    "torn left cuff",
+    "hole left cuff"
+   ]
+  ],
+  "F5": [
+   [
+    "matte black",
+    "flat black"
+   ],
+   [
+    "hatchback",
+    "hatch"
+   ],
+   [
+    "missing front hubcap",
+    "no front hubcap",
+    "missing hubcap",
+    "no hubcap",
+    "front hubcap missing",
+    "front hubcap gone",
+    "hubcap missing",
+    "hubcap gone"
+   ]
+  ],
+  "F6": [
+   [
+    "after 9 40",
+    "after 940",
+    "past 9 40",
+    "past 940",
+    "9 41",
+    "941"
+   ],
+   [
+    "lottery machine off",
+    "lotto machine off",
+    "lottery machine stopped",
+    "lotto machine stopped",
+    "lottery terminal off"
+   ]
+  ]
+ },
+ "X060": {
+  "F1": [
+   [
+    "folding pocket knife",
+    "folding knife",
+    "pocket knife",
+    "folder"
+   ],
+   [
+    "blue handle",
+    "blue handled"
+   ],
+   [
+    "clipped to belt",
+    "clipped on belt",
+    "belt clip",
+    "clipped"
+   ]
+  ],
+  "F2": [
+   [
+    "north parking deck",
+    "north parking garage",
+    "north parkade"
+   ],
+   [
+    "stairwell",
+    "stairs",
+    "stairway"
+   ],
+   [
+    "level 4",
+    "fourth level",
+    "floor 4",
+    "4th floor"
+   ]
+  ],
+  "F3": [
+   [
+    "grey hardshell suitcase",
+    "gray hardshell suitcase",
+    "hard shell suitcase",
+    "hardshell suitcase",
+    "hard case"
+   ],
+   [
+    "taken from trunk",
+    "from trunk",
+    "out of trunk",
+    "removed from trunk",
+    "took from trunk"
+   ]
+  ],
+  "F4": [
+   [
+    "bright orange hoodie",
+    "orange hooded sweatshirt",
+    "orange hoodie"
+   ]
+  ],
+  "F5": [
+   [
+    "dark green pickup",
+    "green pickup truck",
+    "green pickup"
+   ],
+   [
+    "dented rear bumper",
+    "dented back bumper",
+    "damaged rear bumper",
+    "dented bumper"
+   ]
+  ],
+  "F6": []
+ }
+}

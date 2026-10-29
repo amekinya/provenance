@@ -1,0 +1,95 @@
+provenance: verifier reasoning on
+tagged 45 sentences in 3 chunks: 28 labels kept, 0 dropped (quote not in sentence)
+tagged 46 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+tagged 39 sentences in 3 chunks: 32 labels kept, 0 dropped (quote not in sentence)
+tagged 46 sentences in 3 chunks: 33 labels kept, 0 dropped (quote not in sentence)
+round 1: 12 deciding labels to check, 12 checked, 1 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+round 1: 10 deciding labels to check, 9 checked, 3 rejected
+round 2: 3 deciding labels to check, 3 checked, 0 rejected
+verification done after 2 round(s)
+safety search: 9 earlier investigator lines checked, 9 answered, 0 carry the detail
+safety search: 4 earlier investigator lines checked, 3 answered, 0 carry the detail
+round 1: 14 deciding labels to check, 12 checked, 6 rejected
+tagged 51 sentences in 3 chunks: 28 labels kept, 1 dropped (quote not in sentence)
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 1: 14 deciding labels to check, 12 checked, 4 rejected
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+tagged 43 sentences in 3 chunks: 30 labels kept, 0 dropped (quote not in sentence)
+round 1: 14 deciding labels to check, 14 checked, 4 rejected
+round 2: 5 deciding labels to check, 3 checked, 1 rejected
+round 3: 2 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+2 deciding line(s) not re-checked
+round 2: 8 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+8 deciding line(s) not re-checked
+round 2: 2 deciding labels to check, 2 checked, 1 rejected
+verification done after 2 round(s)
+round 1: 15 deciding labels to check, 12 checked, 2 rejected
+safety search: 6 earlier investigator lines checked, 6 answered, 0 carry the detail
+safety search: 10 earlier investigator lines checked, 6 answered, 0 carry the detail
+round 2: 5 deciding labels to check, 5 checked, 2 rejected
+safety search: 7 earlier investigator lines checked, 6 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 1 earlier investigator lines checked, 0 answered, 0 carry the detail
+round 3: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+1 deciding line(s) not re-checked
+safety search: 2 earlier investigator lines checked, 2 answered, 0 carry the detail
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+safety search: 4 earlier investigator lines checked, 0 answered, 0 carry the detail
+provenance {'n_facts': 44, 'failed_interrogations': 0, 'speaker_acc': 0.841, 'line_acc': 0.795, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->suspect': 12, 'suspect->interrogator': 2, 'never->never': 9, 'interrogator->interrogator': 16, 'interrogator->never': 4, 'never->interrogator': 1}} {'seconds': 114.5, 'cost_usd': 0.4847, 'calls': 81}
+provenance_kt: verifier reasoning on
+round 1: 4 deciding labels to check, 3 checked, 0 rejected
+round 1: 4 deciding labels to check, 3 checked, 0 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+4 deciding line(s) not re-checked
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+3 deciding line(s) not re-checked
+round 1: 2 deciding labels to check, 2 checked, 2 rejected
+verification done after 1 round(s)
+suspect search: 3 of his lines carry a detail's key terms without a label; 3 answered, 0 are him stating or agreeing to it
+sense check round 1: 10 of his lines
+suspect search: 5 of his lines carry a detail's key terms without a label; 3 answered, 0 are him stating or agreeing to it
+sense check round 1: 6 of his lines
+round 1: 4 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+9 deciding line(s) not re-checked
+sense check: 10 lines answered
+suspect search: 1 of his lines carry a detail's key terms without a label; 0 answered, 0 are him stating or agreeing to it
+sense check round 1: 10 of his lines
+sense check: 6 lines answered
+sense check: 10 lines answered
+suspect search: 5 of his lines carry a detail's key terms without a label; 5 answered, 0 are him stating or agreeing to it
+sense check round 1: 12 of his lines
+sense check: 12 lines answered
+round 1: 4 deciding labels to check, 3 checked, 0 rejected
+round 2: 1 deciding labels to check, 0 checked, 0 rejected
+  the verifier answered nothing this round; stopping
+6 deciding line(s) not re-checked
+suspect search: 1 of his lines carry a detail's key terms without a label; 0 answered, 0 are him stating or agreeing to it
+sense check round 1: 9 of his lines
+  [Nemotron-3-Ultra-550b-a55b] reply wasn't valid JSON (42119 chars): 'The user wants me to analyze three separate items (X055-028, X055-030, X055-034) and for e' ... 'ee if item 2 counts as "asserts" under a generous reading. "'
+sense check round 2: 4 of his lines
+sense check: 13 lines answered
+round 1: 7 deciding labels to check, 3 checked, 0 rejected
+round 2: 4 deciding labels to check, 3 checked, 2 rejected
+round 3: 4 deciding labels to check, 3 checked, 0 rejected
+9 deciding line(s) not re-checked
+suspect search: 11 of his lines carry a detail's key terms without a label; 9 answered, 0 are him stating or agreeing to it
+sense check round 1: 24 of his lines
+sense check: 24 lines answered
+provenance_kt {'n_facts': 44, 'failed_interrogations': 0, 'speaker_acc': 0.614, 'line_acc': 0.614, 'investigator_first_called_suspect_first': 0, 'confusion': {'suspect->suspect': 8, 'never->never': 8, 'interrogator->interrogator': 11, 'interrogator->never': 9, 'suspect->never': 5, 'suspect->interrogator': 1, 'never->interrogator': 2}} {'seconds': 154.5, 'cost_usd': 0.5057, 'calls': 106}
+# Provenance benchmark
+
+6 synthetic interrogations (dev split) written by deepseek-ai/DeepSeek-V4.1-Flash-1017 (the training writer; diagnostic split), 44 details with known first speakers.
+
+| Method | Right first speaker | Right first line | Investigator-supplied details wrongly credited to the suspect | Time | Cost |
+|---|---|---|---|---|---|
+| Provenance: Nemotron 3 Ultra labels + code ledger + Ultra check + safety search | 84% | 80% | 0 | 114.5 s | $0.485 |
+| Provenance with key words drafted by Nemotron 3 Ultra (same labels; code decides the investigator side) | 61% | 61% | 0 | 154.5 s | $0.506 |
