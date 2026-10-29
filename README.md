@@ -72,6 +72,24 @@ Each detail in a case's fact list carries `must`: groups of words that make it s
 
 How the key terms are written: from each detail's own wording and the court's description only, one group per component that makes the detail specific (what was done, to what, with what, or where), with synonyms and the case's own words for things (Dassey calls the RAV4 "the jeep"). Degree words ("until unconscious") and things every line about the crime shares (her, Avery) aren't groups. They are never written by looking at which transcript lines would match, because that would fit the answer. In the product, counsel writes them with the fact list. For the synthetic benchmark there is no such field, and deriving groups mechanically from each label (every content word its own group) halved accuracy on the training writer's interviews (82% to 41%) because the writers vary the wording on purpose, so the benchmark doesn't use key terms.
 
+### Confidential files: private mode
+
+Defense files can't go to an outside AI service without proper agreements. Private mode keeps every step on infrastructure the user controls:
+
+| Step | Normal mode | Private mode |
+|---|---|---|
+| Read the lines and label which details each carries | Nemotron 3 Ultra on Nebius Token Factory | **Our fine-tuned matcher** (NVIDIA `llama-nemotron-rerank-1b-v2`, fine-tuned on Nebius), on a Nebius Serverless Endpoint **in the user's own Nebius project**, or self-hosted |
+| Bare "yeah" answers, key-word check, who said it first | Code | Code |
+| Re-check the deciding lines | Nemotron 3 Ultra | Not run |
+| Draft key words | Nemotron 3 Ultra (optional) | **Not available**: type them by hand, or draft them with a model you host yourself |
+| Memo | Nemotron 3 Ultra summary + code points | Code only |
+
+Every model in private mode is open: the matcher's weights are ours to deploy anywhere, and the base model is NVIDIA's open `llama-nemotron-rerank-1b-v2`. Token Factory is not called at all. (For normal mode, Nebius says Token Factory offers zero-retention inference in EU or US datacenters and holds SOC 2 Type II, HIPAA, ISO 27001 and ISO 27799 certifications, per its [launch announcement](https://nebius.com/newsroom/nebius-launches-nebius-token-factory-to-deliver-production-ai-inference-at-scale); a firm should still confirm the terms for its own files.)
+
+How accurate it is: recomputed from the saved matcher labels of test run 4 with no new model calls ([`eval/private_from_saved.py`](eval/private_from_saved.py), [`eval/private_mode.json`](eval/private_mode.json)), private mode got **83% right first speaker, 82% right first line, and credited 0 investigator-supplied details to the suspect** on the 29 held-out interrogations. The same labels with Nemotron 3 Ultra's check on top got 71%, because on these synthetic interviews the check rejected more correct matcher labels than wrong ones. That comparison comes from the test set, so we haven't changed the main pipeline because of it; it should be confirmed on the training writer's interviews first. On the Dassey record, private mode hasn't been run.
+
+In the app: the Try section has a **Private mode** switch. It needs `ENDPOINT_URL` (the matcher endpoint); without it the switch explains that and stays off. The public demo server doesn't keep the endpoint running.
+
 ## Results
 
 - **Synthetic interrogations with known answers** ([`eval/RESULTS.md`](eval/RESULTS.md)). 29 held-out interrogations (203 details) written by Qwen3 and GLM-5.2, model families different from the training writer; each is kept only if its own labels match the plan we drew in code. Settings (labeler, verifier reasoning) were chosen on the training writer's interviews, never on these.
@@ -94,6 +112,7 @@ How the key terms are written: from each detail's own wording and the court's de
 - The labels come from models and can be wrong. Every claim in the UI links to the exact line so a person can check it.
 - Borderline model calls can change between runs (even at temperature 0), so verdicts that rest on the suspect's lines are for review, not conclusions. The investigator side doesn't move: with key terms, code alone decides which investigator lines carry a detail, and it errs toward crediting investigators (a common word like "back" can match a line about something else).
 - The suspect-side check reads only the lines around his answer. When the transcript uses one of the detail's own words for a different thing, it can't tell them apart. On Mar 1 he calls Avery's Suzuki "the jeep" (p. 548), and "jeep" is a key word for her RAV4. So "In the garage", said about the Suzuki, is counted as his first statement that her vehicle was in the garage, instead of "Her jeep." a few lines later. Giving the model the fact list's longer description fixed that line, but caused four wrong calls elsewhere, so it isn't used. The verdict (investigators first) is the same either way.
+- **Not yet validated by independent false-confession experts.** The [validation protocol](docs/validation_protocol.md) sets out the study: two blind expert coders, Cohen's kappa between them and against Provenance, and the safety metric (investigator-supplied details called "suspect first"). The citation table export already has the blank expert columns.
 - Graphic passages are hidden unless the reader chooses to show them.
 
 ## Run it
@@ -107,7 +126,8 @@ uvicorn app.main:app --port 7860
 |---|---|
 | Nothing | The sample cases |
 | `NEBIUS_API_KEY` | Live analysis of a pasted transcript |
-| `ENDPOINT_URL` and `ENDPOINT_TOKEN` | Our Nebius endpoint |
+| `ENDPOINT_URL` and `ENDPOINT_TOKEN` | Our Nebius endpoint: the fine-tuned matcher, and private mode in the Try section |
+| `KEYWORD_DRAFTING=0` | Hides "Draft key words with Nemotron" (hand-written key words still work) |
 
 GitHub Actions has two workflows:
 - **Run case pipeline:** ingest, facts, tag.

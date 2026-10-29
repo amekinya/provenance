@@ -60,7 +60,7 @@
       <summary><span>For lawyers</span> Draft memo, citation table and your review</summary>
       <div class="foldbody">
         <div id="memo"></div>
-        <p class="fine"><button type="button" class="ghost" id="csvBtn">Download the citation table (CSV)</button> One row per detail: the first investigator line and his first statement, each with session and page.</p>
+        <p class="fine"><button type="button" class="ghost" id="csvBtn">Download the citation table (CSV)</button> One row per detail: the first investigator line and his first statement, each with session and page, plus blank columns for two independent expert reviewers (<a href="https://github.com/amekinya/provenance/blob/main/docs/validation_protocol.md">validation protocol</a>).</p>
         <p class="fine" id="reviewCount" aria-live="polite"></p>
       </div>
     </details>
@@ -90,10 +90,18 @@
     <form id="tryForm" class="tryform">
       <label>Transcript<textarea name="transcript" rows="10" required></textarea></label>
       <div class="row2">
-        <label>Key details, one per line<textarea name="facts" rows="6" required></textarea></label>
+        <div class="col">
+          <label>Key details, one per line<textarea name="facts" rows="6" required></textarea></label>
+          <label>Key words for each detail (optional), one line per detail in the same order
+            <textarea name="keywords" rows="4" placeholder="cut/chop + hair&#10;knife/blade"></textarea></label>
+          <p class="fine kwhelp"><button type="button" class="ghost" id="kwBtn" hidden>Draft key words with Nemotron</button>
+            <span id="kwNote">Words joined by <b>+</b> must all appear in a line; <b>/</b> separates alternatives. With key words, code alone decides which investigator lines carry a detail.</span></p>
+        </div>
         <div class="col">
           <label>Suspect's speaker label<input name="suspect" placeholder="e.g. SUSPECT or JORDAN"></label>
           <label>Investigators' labels<input name="interrogators" placeholder="e.g. DET, SGT MILLER"></label>
+          <label class="check"><input type="checkbox" name="private" id="privateBox"> Private mode
+            <span class="fine" id="privateNote">Only our fine-tuned matcher, on a Nebius endpoint in your own project, plus code. Nothing goes to an outside AI service.</span></label>
           <button type="button" class="ghost" id="sampleBtn">Fill in a short example</button>
           <button type="submit" class="primary" id="tryBtn">Run the audit</button>
         </div>
@@ -104,6 +112,7 @@
 </main>
 
 <footer class="wrap foot">
+  <p>Not yet validated by independent false-confession experts; see the <a href="https://github.com/amekinya/provenance/blob/main/docs/validation_protocol.md">validation protocol</a>.</p>
   <p>A draft for lawyers to check, not a verdict on guilt or on whether a confession is true. Built from public court records; graphic passages are hidden unless you choose to show them. Not legal advice.</p>
   <p>Built with NVIDIA Nemotron on Nebius Token Factory and Nebius AI Cloud. <a href="https://github.com/amekinya/provenance">Source and method</a></p>
 </footer>

@@ -37,6 +37,27 @@
     route(cases);
     $("#sampleBtn").onclick = fillSample;
     $("#tryForm").onsubmit = runTry;
+    $("#kwBtn").onclick = draftKeyWords;
+    let health = {};
+    try { health = await (await fetch("/api/health")).json(); } catch (e) { /* offline */ }
+    $("#kwBtn").hidden = !health.draft_key_words || !health.live_models;
+    if (!health.matcher) {
+      $("#privateBox").disabled = true;
+      $("#privateNote").textContent = "Needs your own matcher endpoint (ENDPOINT_URL); this demo server doesn't have one switched on. Nothing would go to an outside AI service.";
+    }
+  }
+
+  async function draftKeyWords() {
+    const f = $("#tryForm"), btn = $("#kwBtn");
+    btn.disabled = true; btn.textContent = "Drafting…";
+    try {
+      const r = await fetch("/api/keywords", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ facts: f.facts.value }) });
+      const data = await r.json();
+      if (!r.ok) throw new Error(data.detail || "Couldn't draft key words.");
+      f.keywords.value = data.key_words.join("\n");
+      $("#kwNote").innerHTML = `Drafted by Nemotron 3 Ultra from your wording only (not the transcript). <b>Edit them before running</b>: a word that's too common, or a missing synonym, changes what counts.`;
+    } catch (err) { $("#kwNote").textContent = err.message; }
+    finally { btn.disabled = false; btn.textContent = "Draft key words with Nemotron"; }
   }
   function shortTitle(c) { return c.suspect ? `${c.suspect.split(" ").slice(-1)[0]} case` : c.title; }
   function route(cases) {
@@ -108,15 +129,20 @@
     void r;
   }
 
+  // Blank columns so the citation table doubles as the expert worksheet in docs/validation_protocol.md.
+  const EXPERT_COLS = ["Expert A: first said by (investigators / suspect / already public / unrecorded contact / never adopted)",
+    "Expert A: first line (session, page)", "Expert A: notes", "Expert B: first said by", "Expert B: first line (session, page)",
+    "Expert B: notes", "Consensus: first said by", "Consensus: first line"];
   function exportCsv(rep) {
     const q = (v) => `"${String(v ?? "").replace(/"/g, '""')}"`;
     const at = (ev) => (ev ? `${sessionLabel(rep, ev.session)}, ${ev.page_end && ev.page_end !== ev.page ? `pp. ${ev.page}\u2013${ev.page_end}` : `p. ${ev.page || "?"}`}` : "");
     const head = ["Detail", "Origin", "Can it corroborate?", "First investigator mention", "Investigator words", "First suspect statement or agreement",
-      "Suspect words", "How (states/agrees)", "Investigator mentions before the suspect's", "Source for the detail", "Your review"];
+      "Suspect words", "How (states/agrees)", "Investigator mentions before the suspect's", "Source for the detail", "Your review", ...EXPERT_COLS];
     const rows = rep.facts.map((f) => [f.fact.label, f.origin_label, f.corroboration.replace(/_/g, " "), at(f.first_interrogator),
       (f.first_interrogator || {}).quote, at(f.first_suspect), (f.first_suspect || {}).quote, (f.first_suspect || {}).kind,
       f.interrogator_mentions_before_suspect, f.fact.source,
-      (() => { const v = reviewOf(rep, f.fact.id); return v ? `${v.status === "ok" ? "checked" : "re-check"} ${v.at}` : ""; })()]);
+      (() => { const v = reviewOf(rep, f.fact.id); return v ? `${v.status === "ok" ? "checked" : "re-check"} ${v.at}` : ""; })(),
+      ...EXPERT_COLS.map(() => "")]);
     const csv = [head, ...rows].map((r) => r.map(q).join(",")).join("\r\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" }));
@@ -326,16 +352,17 @@
   async function runTry(e) {
     e.preventDefault();
     const f = e.target, btn = $("#tryBtn"), out = $("#tryOut");
-    btn.disabled = true; btn.textContent = "Running on Nemotron…"; out.innerHTML = "";
+    btn.disabled = true; btn.textContent = f.private.checked ? "Running privately…" : "Running on Nemotron…"; out.innerHTML = "";
     try {
       const r = await fetch("/api/analyze", { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ transcript: f.transcript.value, facts: f.facts.value, suspect: f.suspect.value, interrogators: f.interrogators.value }) });
+        body: JSON.stringify({ transcript: f.transcript.value, facts: f.facts.value, suspect: f.suspect.value, interrogators: f.interrogators.value,
+          key_words: f.keywords.value.split("\n").slice(0, 20), private: f.private.checked }) });
       const data = await r.json();
       if (!r.ok) throw new Error(data.detail || "Something went wrong.");
       const utts = data.utterances;
       current = { report: data, lines: async (uid) => { const i = utts.findIndex((u) => u.id === uid); return { lines: utts.slice(Math.max(0, i - 4), i + 3), focus: uid }; } };
       render(Object.assign(data, { memo: null, eval: null }));
-      out.innerHTML = `<p class="fine">Done in ${data.run.total_seconds} s for $${data.run.cost_usd.toFixed(3)}. Results are shown above.</p>`;
+      out.innerHTML = `<p class="fine">Done in ${data.run.total_seconds} s${data.run.private ? " in private mode (no outside AI service)" : ` for $${data.run.cost_usd.toFixed(3)}`}. Results are shown above.</p>`;
       $("#hero").scrollIntoView({ block: "start" });
     } catch (err) { out.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
     finally { btn.disabled = false; btn.textContent = "Run the audit"; }

@@ -1,0 +1,37 @@
+{
+ "split": "test",
+ "method": "Private mode: fine-tuned matcher labels + code (no outside AI service)",
+ "computed_from": "eval/details_test.json, provenance_matcher labels of run 4 (2026-10-28 02:06 UTC, commit d5689e5), no new model calls",
+ "result": {
+  "n_facts": 203,
+  "failed_interrogations": 0,
+  "speaker_acc": 0.833,
+  "line_acc": 0.818,
+  "investigator_first_called_suspect_first": 0,
+  "confusion": {
+   "suspect->interrogator": 5,
+   "never->never": 28,
+   "interrogator->interrogator": 92,
+   "suspect->suspect": 49,
+   "suspect->never": 9,
+   "interrogator->never": 14,
+   "never->interrogator": 6
+  }
+ },
+ "same_run_with_ultra_check": {
+  "n_facts": 203,
+  "failed_interrogations": 0,
+  "speaker_acc": 0.709,
+  "line_acc": 0.69,
+  "investigator_first_called_suspect_first": 0,
+  "confusion": {
+   "suspect->never": 19,
+   "never->never": 33,
+   "interrogator->never": 35,
+   "interrogator->interrogator": 71,
+   "suspect->suspect": 40,
+   "suspect->interrogator": 4,
+   "never->interrogator": 1
+  }
+ }
+}
