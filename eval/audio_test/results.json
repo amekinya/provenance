@@ -1,0 +1,35 @@
+{
+ "audio_seconds": 151.18,
+ "script_turns": 28,
+ "script_words": 300,
+ "speakers_in_script": 2,
+ "speakers_found": 2,
+ "turns_found": 28,
+ "word_error_rate": 0.01,
+ "speaker_attribution": 1.0,
+ "script_turns_kept_whole": "28/28",
+ "speaker_mapping": {
+  "SPEAKER 1": "DET",
+  "SPEAKER 2": "SUSPECT"
+ },
+ "wall_seconds_cpu": 22.2,
+ "endpoint_seconds_cpu": {
+  "asr": 21.391,
+  "diarize": 6.374
+ },
+ "models": {
+  "speech_recognition": "nvidia/parakeet-tdt-0.6b-v3",
+  "diarization": "nvidia/Nemotron-3-Diarization"
+ },
+ "roles_by_code": {
+  "SPEAKER 1": {
+   "role": "investigator",
+   "why": "asks questions in 57% of turns"
+  },
+  "SPEAKER 2": {
+   "role": "suspect",
+   "why": "asks the fewest questions"
+  }
+ },
+ "note": "Synthetic voices (Kokoro-82M), two speakers, no background noise: an easy case. Real interrogation audio (one room microphone, cross-talk, a poor recording) will do worse; this checks that the path works end to end."
+}

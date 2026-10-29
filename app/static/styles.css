@@ -214,3 +214,19 @@ table.eval td.n { font-family: var(--mono); text-align: right; }
 label.check { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: baseline; font-weight: 600; }
 label.check input { width: auto; }
 label.check .fine { flex-basis: 100%; font-weight: 400; margin: 0; }
+
+/* start from a recording */
+.rec { margin: 0 0 14px; }
+.recrow { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 6px 0 4px; }
+.filebtn { position: relative; display: inline-flex; align-items: center; }
+.filebtn input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+.filebtn:focus-within { outline: 3px solid var(--focus); outline-offset: 2px; }
+.recstatus { font-weight: 600; color: var(--ink-2); }
+.rech { font: 700 18px var(--serif); margin: 14px 0 4px; }
+.spklist { list-style: none; padding: 0; margin: 8px 0 14px; display: grid; gap: 10px; }
+.spklist li { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; background: var(--bg); display: grid; gap: 6px; }
+.spklist .spkhead { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.spklist q { color: var(--ink-2); font-size: 14px; }
+.spklist label { display: flex; gap: 8px; align-items: center; font-weight: 600; font-size: 14px; }
+.spklist select { font: 15px var(--sans); padding: 8px 10px; border: 1px solid #c9c6bc; border-radius: 6px; min-height: 40px; }
+.spklist .sugg { font-size: 13px; color: var(--ink-3); }

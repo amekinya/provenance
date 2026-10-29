@@ -1,0 +1,173 @@
+{
+ "audio_seconds": 129.03,
+ "turns": [
+  {
+   "speaker": "DET1",
+   "text": "Okay, Calvin. This is Detective Rowe. We're recording this, and you're free to leave at any time. Do you understand?",
+   "start": 0.5,
+   "end": 8.25
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "Yeah, I understand.",
+   "start": 8.91,
+   "end": 10.835
+  },
+  {
+   "speaker": "DET1",
+   "text": "Tell me where you were last Thursday night.",
+   "start": 11.383,
+   "end": 14.334
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "I was home most of the night. Then I went out for a drive because I couldn't sleep.",
+   "start": 15.207,
+   "end": 20.082
+  },
+  {
+   "speaker": "DET2",
+   "text": "Where did you drive?",
+   "start": 20.579,
+   "end": 22.529
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "Just around town. Down Harbor Street, past the marina.",
+   "start": 23.327,
+   "end": 27.302
+  },
+  {
+   "speaker": "DET2",
+   "text": "Harbor Street. That's where the pharmacy is. Somebody broke into it that night.",
+   "start": 27.99,
+   "end": 32.915
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "I heard about that. I don't know anything about it.",
+   "start": 33.402,
+   "end": 36.627
+  },
+  {
+   "speaker": "DET1",
+   "text": "What time were you out driving?",
+   "start": 37.407,
+   "end": 39.857
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "Late. It was around two in the morning, I think.",
+   "start": 40.331,
+   "end": 43.406
+  },
+  {
+   "speaker": "DET1",
+   "text": "We know the back door was pried open with a crowbar. Do you own a crowbar, Calvin?",
+   "start": 44.138,
+   "end": 49.763
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "Yeah.",
+   "start": 50.259,
+   "end": 51.484
+  },
+  {
+   "speaker": "DET2",
+   "text": "Where is it now?",
+   "start": 51.993,
+   "end": 53.893
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "In my garage, I guess. I use it for work.",
+   "start": 54.619,
+   "end": 57.769
+  },
+  {
+   "speaker": "DET2",
+   "text": "The pharmacy has an alarm. It never went off. Why do you think that is?",
+   "start": 58.756,
+   "end": 63.456
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "Maybe somebody cut the wire. That's what people do, right? You cut the alarm wire first.",
+   "start": 63.986,
+   "end": 69.461
+  },
+  {
+   "speaker": "DET1",
+   "text": "That's an interesting thing to say. Nobody told you about the alarm wire.",
+   "start": 70.056,
+   "end": 75.431
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "I'm just guessing. I watch a lot of crime shows.",
+   "start": 76.289,
+   "end": 79.739
+  },
+  {
+   "speaker": "DET1",
+   "text": "A neighbor saw a white pickup truck parked behind the store. You drive a white pickup, don't you?",
+   "start": 80.805,
+   "end": 87.205
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "Yeah, I do. But lots of people have white trucks.",
+   "start": 88.03,
+   "end": 91.48
+  },
+  {
+   "speaker": "DET2",
+   "text": "And the camera across the street shows a man carrying a gray backpack.",
+   "start": 92.188,
+   "end": 96.913
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "I have a gray backpack. Everybody has a gray backpack.",
+   "start": 97.998,
+   "end": 101.898
+  },
+  {
+   "speaker": "DET2",
+   "text": "The cash drawer was left open. Did you open the cash drawer?",
+   "start": 102.378,
+   "end": 106.703
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "No. I never touched any drawer. I wasn't in there.",
+   "start": 107.711,
+   "end": 111.186
+  },
+  {
+   "speaker": "DET1",
+   "text": "Calvin, it will go a lot easier if you're honest with me.",
+   "start": 111.824,
+   "end": 115.724
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "I am being honest. I drove around and I went home.",
+   "start": 116.268,
+   "end": 120.018
+  },
+  {
+   "speaker": "DET1",
+   "text": "Okay. We'll take a break here. It's three fifteen in the afternoon.",
+   "start": 120.544,
+   "end": 125.444
+  },
+  {
+   "speaker": "SUSPECT",
+   "text": "Can I get some water?",
+   "start": 126.095,
+   "end": 128.045
+  }
+ ]
+}

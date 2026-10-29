@@ -8,12 +8,12 @@ import time
 from dataclasses import asdict
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
-from app.ai import tasks
+from app.ai import speech, tasks
 from app.ai.client import CallRecord, LiveModelUnavailable, ledger
 from app.config import settings
 from app.engine.ledger import audit, load_case
@@ -43,7 +43,8 @@ def index():
 def health():
     return {"live_models": settings.live_models, "spend_remaining_today": round(ledger.remaining(), 4),
             "models": {s.role: s.model_id for s in (settings.lightning, settings.super_vl, settings.ultra)},
-            "matcher": bool(settings.matcher_url), "draft_key_words": KT_DRAFT}
+            "matcher": bool(settings.matcher_url), "draft_key_words": KT_DRAFT,
+            "speech": speech.available()}
 
 
 # Drafted key words are offered in the Try form only if they measure at least as well as no key words on the dev slice.
@@ -144,7 +145,7 @@ def draft_key_words(body: KeyWordsIn):
             "cost_usd": round(sum(c.cost_usd for c in calls), 4), "model": settings.ultra.model_id}
 
 
-LINE = re.compile(r"^\s*([A-Z][A-Za-z .'\-]{0,30}?)\s*:\s*(.+)$")
+LINE = re.compile(r"^\s*([A-Z][A-Za-z0-9 .'\-]{0,30}?)\s*:\s*(.+)$")  # "DET:", "OFFICER 2:", "SPEAKER 1:"
 
 
 def parse_transcript(text: str, suspect: str, interrogators: str) -> list[dict]:
@@ -236,3 +237,59 @@ def analyze_private(utts: list[dict], facts: list[dict], body: AnalyzeIn):
                                                            "investigator_side": "key words (code)" if any(f.get("must") for f in facts) else "",
                                                            "by_step": by_step(calls), "total_seconds": round(time.perf_counter() - t0, 1),
                                                            "cost_usd": 0.0, "calls": [asdict(c) | {"cost_usd": 0.0} for c in calls]}})
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Start from a recording: NVIDIA Parakeet + Nemotron-3-Diarization on our Nebius endpoint, then the user confirms speakers
+# ---------------------------------------------------------------------------------------------------------------------
+MAX_UPLOAD_BYTES = 200 * 1024 * 1024
+
+
+@app.post("/api/transcribe")
+def transcribe_recording(file: UploadFile = File(...)):
+    """An audio or video file -> numbered speaker turns plus a proposed role for each speaker. Nothing is stored: the
+    upload is kept in a temporary file only while this request runs."""
+    import tempfile  # noqa: PLC0415
+
+    if not speech.available():
+        raise HTTPException(503, speech.OFF)
+    calls: list[CallRecord] = []
+    t0 = time.perf_counter()
+    suffix = Path(file.filename or "upload").suffix[:8]
+    with tempfile.NamedTemporaryFile(suffix=suffix) as tmp:
+        size = 0
+        while chunk := file.file.read(1 << 20):
+            size += len(chunk)
+            if size > MAX_UPLOAD_BYTES:
+                raise HTTPException(413, "That file is over 200 MB. Upload the audio only, or a shorter clip.")
+            tmp.write(chunk)
+        tmp.flush()
+        try:
+            audio, seconds = speech.to_audio(Path(tmp.name))
+        except ValueError as e:
+            raise HTTPException(400, str(e)) from e
+        except LiveModelUnavailable as e:
+            raise HTTPException(503, str(e)) from e
+    try:
+        out = speech.transcribe(audio, calls)
+    except LiveModelUnavailable as e:
+        raise HTTPException(503, str(e)) from e
+    if not out["turns"]:
+        raise HTTPException(422, "No speech was found in that recording.")
+    roles = speech.propose_roles(out["turns"], calls)
+    return out | {"roles": roles, "recording_seconds": round(seconds, 1), "total_seconds": round(time.perf_counter() - t0, 1),
+                  "cost_usd": round(sum(c.cost_usd for c in calls), 4)}
+
+
+class RolesIn(BaseModel):
+    turns: list[dict] = Field(..., max_length=4000)
+
+
+@app.post("/api/speaker_roles")
+def speaker_roles(body: RolesIn):
+    """Propose roles for already-transcribed speaker turns ({"speaker", "text"}); used to re-check a proposal."""
+    turns = [{"speaker": str(t.get("speaker", ""))[:20].upper(), "text": str(t.get("text", ""))[:2000]} for t in body.turns]
+    turns = [t for t in turns if t["speaker"] and t["text"]]
+    if not turns:
+        raise HTTPException(400, "Send turns like {\"speaker\": \"SPEAKER 1\", \"text\": \"...\"}.")
+    return speech.propose_roles(turns)

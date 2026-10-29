@@ -87,6 +87,25 @@
   <section class="try" id="try" aria-labelledby="tryH">
     <h2 id="tryH">Try it on your own transcript</h2>
     <p class="fine">Paste lines like <code>DET: Where were you?</code> and <code>SUSPECT: At home.</code>, list the key details, and run it. Runs live on NVIDIA Nemotron; nothing is stored.</p>
+    <details class="fold rec" id="recBox">
+      <summary><span>Start from a recording</span> Audio or video of the interview, up to 30 minutes</summary>
+      <div class="foldbody">
+        <p class="fine">NVIDIA Parakeet writes down the words and NVIDIA Nemotron-3-Diarization tells the voices apart, on our Nebius GPU. You confirm who is who, then the transcript goes into the form below. Nothing is stored.</p>
+        <div class="recrow">
+          <label class="ghost filebtn">Choose a recording<input type="file" id="recFile" accept="audio/*,video/*"></label>
+          <button type="button" class="ghost" id="recSample">Use our test recording</button>
+          <button type="button" class="primary" id="recBtn" disabled>Transcribe</button>
+        </div>
+        <p class="fine" id="recName"></p>
+        <p class="fine recstatus" id="recStatus" aria-live="polite"></p>
+        <div id="recSpeakers" hidden>
+          <h3 class="rech">Who is who?</h3>
+          <p class="fine" id="recWho"></p>
+          <ol class="spklist" id="spkList"></ol>
+          <button type="button" class="primary" id="recUse">Use this transcript</button>
+        </div>
+      </div>
+    </details>
     <form id="tryForm" class="tryform">
       <label>Transcript<textarea name="transcript" rows="10" required></textarea></label>
       <div class="row2">

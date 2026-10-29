@@ -36,6 +36,7 @@
     window.addEventListener("hashchange", () => route(cases));
     route(cases);
     $("#sampleBtn").onclick = fillSample;
+    setupRecording();
     $("#tryForm").onsubmit = runTry;
     $("#kwBtn").onclick = draftKeyWords;
     let health = {};
@@ -366,6 +367,66 @@
       $("#hero").scrollIntoView({ block: "start" });
     } catch (err) { out.innerHTML = `<p class="err">${esc(err.message)}</p>`; }
     finally { btn.disabled = false; btn.textContent = "Run the audit"; }
+  }
+
+  // ------------------------------------------------------------ start from a recording
+  function setupRecording() {
+    let file = null, result = null;
+    const status = (t) => { $("#recStatus").textContent = t; };
+    const pick = (f, label) => { file = f; result = null; $("#recSpeakers").hidden = true; $("#recName").textContent = f ? `${label || f.name} (${(f.size / 1048576).toFixed(1)} MB)` : ""; $("#recBtn").disabled = !f; status(""); };
+    $("#recFile").onchange = (e) => pick(e.target.files[0]);
+    $("#recSample").onclick = async () => {
+      status("Loading the test recording…");
+      try { const b = await (await fetch("/static/samples/test_interrogation.mp3")).blob(); pick(new File([b], "test_interrogation.mp3", { type: "audio/mpeg" }), "Our test recording: a 2.5-minute invented interview, two synthetic voices"); }
+      catch (_) { status("Couldn't load the test recording."); }
+    };
+    $("#recBtn").onclick = async () => {
+      if (!file) return;
+      const btn = $("#recBtn"); btn.disabled = true; $("#recSpeakers").hidden = true;
+      status("Uploading and transcribing on our Nebius GPU. A 30-minute recording takes about a minute…");
+      try {
+        const fd = new FormData(); fd.append("file", file);
+        const r = await fetch("/api/transcribe", { method: "POST", body: fd });
+        const data = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Something went wrong.");
+        result = data;
+        renderSpeakers(data);
+        status(`Done: ${data.turns.length} turns from ${data.speakers.length} voices in ${Math.round(data.recording_seconds / 6) / 10} minutes of audio (${data.total_seconds} s).`);
+      } catch (err) { status(err.message); }
+      finally { btn.disabled = !file; }
+    };
+    $("#recUse").onclick = () => {
+      if (!result) return;
+      const roles = {};
+      document.querySelectorAll("#spkList select").forEach((sel) => (roles[sel.dataset.spk] = sel.value));
+      const vals = Object.values(roles);
+      if (vals.filter((v) => v === "suspect").length !== 1 || !vals.includes("investigator")) {
+        status("Mark exactly one speaker as the suspect and at least one as an investigator."); return;
+      }
+      const names = {}; let inv = 0, oth = 0;
+      result.speakers.forEach((s) => { const r = roles[s.speaker]; names[s.speaker] = r === "suspect" ? "SUSPECT" : r === "investigator" ? `DET ${++inv}` : `OTHER ${++oth}`; });
+      const f = $("#tryForm");
+      f.transcript.value = result.turns.map((t) => `${names[t.speaker]}: ${t.text}`).join("\n");
+      f.suspect.value = "SUSPECT";
+      f.interrogators.value = Object.values(names).filter((n) => n.startsWith("DET")).join(", ");
+      status("The transcript is in the form below. Check it, list the key details, then run the audit.");
+      f.facts.focus();
+    };
+  }
+
+  function renderSpeakers(data) {
+    const by = (data.roles && data.roles.by) || "code";
+    const roles = (data.roles && data.roles.roles) || {};
+    $("#recWho").textContent = by === "lightning" ? "Nemotron 3.5 Lightning suggested a role for each voice from what they say. Check each one." : "Suggested from who asks the questions. Check each one.";
+    const label = { investigator: "Investigator", suspect: "Suspect", other: "Someone else" };
+    $("#spkList").innerHTML = data.speakers.map((s) => {
+      const r = roles[s.speaker] || { role: "other", why: "" };
+      return `<li><div class="spkhead"><b>${esc(s.speaker)}</b><span class="fine">${s.turns} turns, ${s.words} words, questions in ${Math.round(100 * s.questions / Math.max(1, s.turns))}% of turns</span></div>
+        ${s.samples.slice(0, 2).map((q) => `<q>${esc(q)}</q>`).join("")}
+        <label>Role <select data-spk="${esc(s.speaker)}" aria-label="Role of ${esc(s.speaker)}">${Object.entries(label).map(([v, t]) => `<option value="${v}"${v === r.role ? " selected" : ""}>${t}</option>`).join("")}</select></label>
+        ${r.why ? `<span class="sugg">Suggested: ${esc(label[r.role])} (${esc(r.why)})</span>` : ""}</li>`;
+    }).join("");
+    $("#recSpeakers").hidden = false;
   }
 
   boot();

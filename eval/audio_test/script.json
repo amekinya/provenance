@@ -1,0 +1,42 @@
+{
+ "title": "Synthetic test interrogation (invented people and events)",
+ "voices": {"DET": "af_nicole", "SUSPECT": "am_adam"},
+ "facts": [
+  {"id": "F1", "label": "The back door was pried open with a crowbar", "expected_first": "interrogator"},
+  {"id": "F2", "label": "The alarm wire was cut", "expected_first": "suspect"},
+  {"id": "F3", "label": "A gray backpack", "expected_first": "interrogator"},
+  {"id": "F4", "label": "Around two in the morning", "expected_first": "suspect"},
+  {"id": "F5", "label": "The cash drawer was left open", "expected_first": "never"},
+  {"id": "F6", "label": "A white pickup truck", "expected_first": "interrogator"}
+ ],
+ "turns": [
+  ["DET", "Okay, Calvin. This is Detective Rowe. We're recording this, and you're free to leave at any time. Do you understand?"],
+  ["SUSPECT", "Yeah, I understand."],
+  ["DET", "Tell me where you were last Thursday night."],
+  ["SUSPECT", "I was home most of the night. Then I went out for a drive because I couldn't sleep."],
+  ["DET", "Where did you drive?"],
+  ["SUSPECT", "Just around town. Down Harbor Street, past the marina."],
+  ["DET", "Harbor Street. That's where the pharmacy is. Somebody broke into it that night."],
+  ["SUSPECT", "I heard about that. I don't know anything about it."],
+  ["DET", "What time were you out driving?"],
+  ["SUSPECT", "Late. It was around two in the morning, I think."],
+  ["DET", "We know the back door was pried open with a crowbar. Do you own a crowbar, Calvin?"],
+  ["SUSPECT", "Yeah."],
+  ["DET", "Where is it now?"],
+  ["SUSPECT", "In my garage, I guess. I use it for work."],
+  ["DET", "The pharmacy has an alarm. It never went off. Why do you think that is?"],
+  ["SUSPECT", "Maybe somebody cut the wire. That's what people do, right? You cut the alarm wire first."],
+  ["DET", "That's an interesting thing to say. Nobody told you about the alarm wire."],
+  ["SUSPECT", "I'm just guessing. I watch a lot of crime shows."],
+  ["DET", "A neighbor saw a white pickup truck parked behind the store. You drive a white pickup, don't you?"],
+  ["SUSPECT", "Yeah, I do. But lots of people have white trucks."],
+  ["DET", "And the camera across the street shows a man carrying a gray backpack."],
+  ["SUSPECT", "I have a gray backpack. Everybody has a gray backpack."],
+  ["DET", "The cash drawer was left open. Did you open the cash drawer?"],
+  ["SUSPECT", "No. I never touched any drawer. I wasn't in there."],
+  ["DET", "Calvin, it will go a lot easier if you're honest with me."],
+  ["SUSPECT", "I am being honest. I drove around and I went home."],
+  ["DET", "Okay. We'll take a break here. It's three fifteen in the afternoon."],
+  ["SUSPECT", "Can I get some water?"]
+ ]
+}

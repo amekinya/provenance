@@ -92,6 +92,39 @@ How accurate it is: recomputed from the saved matcher labels of test run 4 with 
 
 In the app: the Try section has a **Private mode** switch. It needs `ENDPOINT_URL` (the matcher endpoint); without it the switch explains that and stays off. The public demo server doesn't keep the endpoint running.
 
+## Start from a recording
+
+In **Try it on your own transcript**, "Start from a recording" takes an audio or video file of an interview (up to 30 minutes and 200 MB) and fills the transcript box. Nothing is stored. The upload sits in a temporary file only while the request runs.
+
+| Step | What runs | Where |
+|---|---|---|
+| 1. Get the sound | ffmpeg takes the audio track from any audio or video file and makes it 16 kHz mono | The app |
+| 2. Words with times | NVIDIA **Parakeet TDT 0.6B v3** transcribes in about 16 s chunks, each cut at the quietest moment nearby and padded with half a second of silence. Code then re-transcribes any stretch of clear voice that came back without words (below) | **Nebius Serverless Endpoint** (`/asr` with `timestamps`) |
+| 3. Who spoke when | NVIDIA **Nemotron-3-Diarization** (up to 8 speakers, numbered in order of first appearance), run at the same time as step 2 | **Nebius Serverless Endpoint** (`/diarize`) |
+| 4. Turns | Plain code gives each word the speaker whose segment overlaps it most. Each sentence goes to the speaker who holds most of its time, so a word at a turn boundary doesn't split it. Consecutive sentences by one speaker become a turn: "SPEAKER 1: ..." | The app |
+| 5. Who is who | **Nemotron 3.5 Lightning** proposes which speaker is the suspect and which are investigators, from what they say. Code rejects a proposal that skips a speaker or doesn't name exactly one suspect, and then falls back to a rule: the speaker asking the most questions is an investigator, and the one asking the fewest is the suspect. **The user confirms or changes each speaker** (Investigator / Suspect / Other), seeing sample lines | Nebius Token Factory |
+| 6. Audit | "Use this transcript" puts the turns in the form as SUSPECT / DET 1 / OTHER 1. It stays editable, and the usual audit runs | As above |
+
+If the endpoint is off, the page says "Speech recognition needs our Nebius endpoint, which is off right now. You can still paste a transcript." It never shows a made-up transcript. The diarizer (0.4 GB) loads when the endpoint starts, next to Parakeet.
+
+**Measured** ([`eval/audio_test/`](eval/audio_test), `python -m scripts.audio_eval [--name hard]`). The test recordings are scripted interrogations (invented people and events) voiced with Kokoro-82M (`scripts/make_test_audio.py`), so every word, speaker and turn time is known. All runs were on CPU with the exact server code the endpoint runs.
+
+| Recording | Voices | Word error rate | Words given to the right speaker | Script turns kept whole | Roles proposed by the fallback rule |
+|---|---|---|---|---|---|
+| `interrogation.mp3`, 2.5 min, 28 turns, 300 words | Investigator (female), suspect (male) | 1.0% (all 3 errors are "grey" for "gray") | 100% | 28/28 | Right |
+| `interrogation_hard.mp3`, 2.2 min, 28 turns, 300 words | Two investigators and the suspect, all male | 2.7% (3× "grey", "3:15" for "three fifteen", one swapped pair of words) | 100% (3 speakers found) | 28/28 | Right |
+
+On CPU, 2.5 minutes took 21 s to transcribe and 6 s to diarize; a GPU is much faster. Nine minutes of real speech took 12 s to diarize on CPU.
+
+**What we found, and what we changed.** On the first runs, Parakeet sometimes returned nothing for several seconds of clear synthetic speech, or for a whole chunk. With the same audio it gave 0, 19 or 36 words depending on half a second of padding. A NeMo-style greedy decoding loop we wrote over the same encoder gave the same output as transformers' `generate`, so this comes from the model's encoder output on these inputs, not from the decoding code. Three changes:
+- **Chunk length and padding.** These were chosen on a separate dev recording: Faithful's voiced turns, 3.4 minutes. 16 s chunks had 5.9% word error and 28 s chunks 6.3%.
+- **Noise floor.** A noise floor at −80 dBFS is added, because the synthetic audio has exact digital silence between turns (22% of the test clip). Real microphones never produce that, but noise gates and some call recorders do.
+- **Re-transcription.** Two safety nets re-transcribe a chunk, or a stretch of voice, that came back without words.
+
+On the dev recording and on 9 minutes of real read speech (LibriSpeech, 73 utterances), word error didn't change (6.1% and 3.7%), and the safety nets never fired. On real speech, no chunk was ever dropped, even without these changes. Before them, the test clip's word error ranged from 3.0% to 18.3% depending on chunk length, all of it from dropped stretches (the real-speech check used the 73 LibriSpeech utterances in `hf-internal-testing/librispeech_asr_dummy`). A 30-second video cut from the test clip (H.264/AAC) still loses its last sentence, which the cut ends mid-word.
+
+**Limits.** These are clean synthetic voices with no noise, an easy case. A real interview room recording (one microphone, people talking over each other, a poor recording) will do worse, and we haven't measured that. Speakers talking at the same time get one speaker per sentence. The role proposal is only a proposal: the user decides.
+
 ## Results
 
 - **Synthetic interrogations with known answers** ([`eval/RESULTS.md`](eval/RESULTS.md)). 29 held-out interrogations (203 details) written by Qwen3 and GLM-5.2, model families different from the training writer; each is kept only if its own labels match the plan we drew in code. Settings (labeler, verifier reasoning) were chosen on the training writer's interviews, never on these.
@@ -128,7 +161,7 @@ uvicorn app.main:app --port 7860
 |---|---|
 | Nothing | The sample cases |
 | `NEBIUS_API_KEY` | Live analysis of a pasted transcript |
-| `ENDPOINT_URL` and `ENDPOINT_TOKEN` | Our Nebius endpoint: the fine-tuned matcher, and private mode in the Try section |
+| `ENDPOINT_URL` and `ENDPOINT_TOKEN` | Our Nebius endpoint: the fine-tuned matcher, private mode in the Try section, and starting from a recording (also needs ffmpeg, which the Dockerfile installs) |
 | `KEYWORD_DRAFTING=0` | Hides "Draft key words with Nemotron" (hand-written key words still work) |
 
 GitHub Actions has two workflows:

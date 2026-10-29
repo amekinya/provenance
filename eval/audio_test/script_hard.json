@@ -1,0 +1,154 @@
+{
+ "title": "Harder variant: three male voices (two detectives and the suspect), same words",
+ "voices": {
+  "DET1": "am_michael",
+  "DET2": "am_echo",
+  "SUSPECT": "am_adam"
+ },
+ "facts": [
+  {
+   "id": "F1",
+   "label": "The back door was pried open with a crowbar",
+   "expected_first": "interrogator"
+  },
+  {
+   "id": "F2",
+   "label": "The alarm wire was cut",
+   "expected_first": "suspect"
+  },
+  {
+   "id": "F3",
+   "label": "A gray backpack",
+   "expected_first": "interrogator"
+  },
+  {
+   "id": "F4",
+   "label": "Around two in the morning",
+   "expected_first": "suspect"
+  },
+  {
+   "id": "F5",
+   "label": "The cash drawer was left open",
+   "expected_first": "never"
+  },
+  {
+   "id": "F6",
+   "label": "A white pickup truck",
+   "expected_first": "interrogator"
+  }
+ ],
+ "turns": [
+  [
+   "DET1",
+   "Okay, Calvin. This is Detective Rowe. We're recording this, and you're free to leave at any time. Do you understand?"
+  ],
+  [
+   "SUSPECT",
+   "Yeah, I understand."
+  ],
+  [
+   "DET1",
+   "Tell me where you were last Thursday night."
+  ],
+  [
+   "SUSPECT",
+   "I was home most of the night. Then I went out for a drive because I couldn't sleep."
+  ],
+  [
+   "DET2",
+   "Where did you drive?"
+  ],
+  [
+   "SUSPECT",
+   "Just around town. Down Harbor Street, past the marina."
+  ],
+  [
+   "DET2",
+   "Harbor Street. That's where the pharmacy is. Somebody broke into it that night."
+  ],
+  [
+   "SUSPECT",
+   "I heard about that. I don't know anything about it."
+  ],
+  [
+   "DET1",
+   "What time were you out driving?"
+  ],
+  [
+   "SUSPECT",
+   "Late. It was around two in the morning, I think."
+  ],
+  [
+   "DET1",
+   "We know the back door was pried open with a crowbar. Do you own a crowbar, Calvin?"
+  ],
+  [
+   "SUSPECT",
+   "Yeah."
+  ],
+  [
+   "DET2",
+   "Where is it now?"
+  ],
+  [
+   "SUSPECT",
+   "In my garage, I guess. I use it for work."
+  ],
+  [
+   "DET2",
+   "The pharmacy has an alarm. It never went off. Why do you think that is?"
+  ],
+  [
+   "SUSPECT",
+   "Maybe somebody cut the wire. That's what people do, right? You cut the alarm wire first."
+  ],
+  [
+   "DET1",
+   "That's an interesting thing to say. Nobody told you about the alarm wire."
+  ],
+  [
+   "SUSPECT",
+   "I'm just guessing. I watch a lot of crime shows."
+  ],
+  [
+   "DET1",
+   "A neighbor saw a white pickup truck parked behind the store. You drive a white pickup, don't you?"
+  ],
+  [
+   "SUSPECT",
+   "Yeah, I do. But lots of people have white trucks."
+  ],
+  [
+   "DET2",
+   "And the camera across the street shows a man carrying a gray backpack."
+  ],
+  [
+   "SUSPECT",
+   "I have a gray backpack. Everybody has a gray backpack."
+  ],
+  [
+   "DET2",
+   "The cash drawer was left open. Did you open the cash drawer?"
+  ],
+  [
+   "SUSPECT",
+   "No. I never touched any drawer. I wasn't in there."
+  ],
+  [
+   "DET1",
+   "Calvin, it will go a lot easier if you're honest with me."
+  ],
+  [
+   "SUSPECT",
+   "I am being honest. I drove around and I went home."
+  ],
+  [
+   "DET1",
+   "Okay. We'll take a break here. It's three fifteen in the afternoon."
+  ],
+  [
+   "SUSPECT",
+   "Can I get some water?"
+  ]
+ ]
+}
