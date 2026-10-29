@@ -43,7 +43,12 @@ def index():
 def health():
     return {"live_models": settings.live_models, "spend_remaining_today": round(ledger.remaining(), 4),
             "models": {s.role: s.model_id for s in (settings.lightning, settings.super_vl, settings.ultra)},
-            "matcher": bool(settings.matcher_url)}
+            "matcher": bool(settings.matcher_url), "draft_key_words": KT_DRAFT}
+
+
+# Drafted key words are offered in the Try form only if they measured at least as well as no key words on the dev slice
+# (eval/RESULTS_dev.md); hand-written key words can always be typed.
+KT_DRAFT = os.environ.get("KEYWORD_DRAFTING", "1") == "1"
 
 
 @app.get("/api/cases")
@@ -100,6 +105,42 @@ class AnalyzeIn(BaseModel):
     facts: str = Field(..., max_length=6_000)
     suspect: str = Field("", max_length=80)
     interrogators: str = Field("", max_length=200)
+    # One line per detail, in the same order: 'cut/chop/hack + hair' (groups joined by +, alternates by / or ,). Optional.
+    key_words: list[str] = Field(default_factory=list, max_length=20)
+    private: bool = False  # our fine-tuned matcher on your own endpoint + code only; nothing goes to an outside AI service
+
+
+def parse_key_words(line: str) -> list[list[str]]:
+    from app.ai.tasks import normalize_must  # noqa: PLC0415
+
+    return normalize_must([re.split(r"\s*[/,|]\s*", g) for g in re.split(r"\s*\+\s*", line or "") if g.strip()])
+
+
+def key_words_text(must: list[list[str]]) -> str:
+    return " + ".join("/".join(g) for g in must)
+
+
+class KeyWordsIn(BaseModel):
+    facts: str = Field(..., max_length=6_000)
+
+
+@app.post("/api/keywords")
+def draft_key_words(body: KeyWordsIn):
+    """Nemotron 3 Ultra drafts each detail's key words from its wording only; the user edits them before running."""
+    labels = [x.strip(" -•\t") for x in body.facts.splitlines() if x.strip()][:20]
+    if not labels:
+        raise HTTPException(400, "List the key crime details, one per line.")
+    if not KT_DRAFT:
+        raise HTTPException(404, "Drafted key words are switched off; type them by hand.")
+    if not settings.live_models or ledger.remaining() <= 0.05:
+        raise HTTPException(503, "Drafting isn't available right now; you can type key words by hand.")
+    calls: list[CallRecord] = []
+    try:
+        kt = tasks.draft_key_terms([{"id": f"F{i:02d}", "label": lab, "detail": ""} for i, lab in enumerate(labels, 1)], calls)
+    except LiveModelUnavailable as e:
+        raise HTTPException(503, f"The model service isn't available right now ({e}).") from e
+    return {"key_words": [key_words_text(kt.get(f"F{i:02d}", [])) for i in range(1, len(labels) + 1)],
+            "cost_usd": round(sum(c.cost_usd for c in calls), 4), "model": settings.ultra.model_id}
 
 
 LINE = re.compile(r"^\s*([A-Z][A-Za-z .'\-]{0,30}?)\s*:\s*(.+)$")
@@ -140,6 +181,12 @@ def analyze(body: AnalyzeIn):
              for i, ln in enumerate([x for x in body.facts.splitlines() if x.strip()][:20], 1)]
     if not facts:
         raise HTTPException(400, "List the key crime details, one per line.")
+    for f, kw in zip(facts, body.key_words):
+        must = parse_key_words(kw)
+        if must:
+            f["must"] = must
+    if body.private:
+        return analyze_private(utts, facts, body)
     if not settings.live_models or ledger.remaining() <= 0.05:
         raise HTTPException(503, "Live analysis isn't available right now. The sample cases still work.")
     cfg = {"id": "yours", "title": "Your transcript", "suspect": body.suspect or "Suspect",
@@ -151,11 +198,40 @@ def analyze(body: AnalyzeIn):
         for u in utts:
             u["sensitive"] = graphic.get(u["id"], False)
         agreed, searched, unverified = check_labels(cfg, utts, facts, mentions, calls, rounds=3)
+        if any(f.get("must") for f in facts):  # with key words: the suspect-side search and sense check, as in the case audits
+            from scripts.tag import search_suspect, sense_check  # noqa: PLC0415
+            search_suspect(cfg, utts, facts, mentions, calls)
+            sense_check(cfg, utts, facts, mentions, calls, rounds=3)
     except LiveModelUnavailable as e:
         raise HTTPException(503, f"The model service isn't available right now ({e}).") from e
     rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
     return JSONResponse(rep | {"utterances": utts, "run": {"labeler": "ultra", "unverified": unverified, "safety_search_added": searched,
+                                                           "investigator_side": "key words (code)" if any(f.get("must") for f in facts) else "",
                                                            "code_agreements_added": agreed, "by_step": by_step(calls),
                                                            "total_seconds": round(time.perf_counter() - t0, 1),
                                                            "cost_usd": round(sum(c.cost_usd for c in calls), 4),
                                                            "calls": [asdict(c) | {"cost_usd": round(c.cost_usd, 5)} for c in calls]}})
+
+
+def analyze_private(utts: list[dict], facts: list[dict], body: AnalyzeIn):
+    """Private mode: our fine-tuned matcher (on a Nebius endpoint in the user's own project) labels the lines, code adds
+    bare agreements and the ledger decides. No Token Factory call, so nothing leaves the user's infrastructure."""
+    from scripts.tag import add_code_assents, by_step, case_dict, tag_with_matcher  # noqa: PLC0415
+
+    if not settings.matcher_url:
+        raise HTTPException(503, "Private mode needs your own matcher endpoint (ENDPOINT_URL); it isn't configured on this server.")
+    cfg = {"id": "yours", "title": "Your transcript", "suspect": body.suspect or "Suspect",
+           "sessions": [{"id": "S1", "label": "Your transcript", "day": "2000-01-01"}], "notes": []}
+    calls: list[CallRecord] = []
+    t0 = time.perf_counter()
+    th = (_read(ROOT / "eval" / "training.json", {}) or {}).get("threshold", 0.5)
+    try:
+        mentions, _ = tag_with_matcher(utts, facts, calls, threshold=float(th))
+    except LiveModelUnavailable as e:
+        raise HTTPException(503, f"Your matcher endpoint isn't reachable right now ({e}).") from e
+    agreed = add_code_assents(utts, mentions)
+    rep = audit(load_case(case_dict(cfg, utts, facts, mentions)))
+    return JSONResponse(rep | {"utterances": utts, "run": {"labeler": "matcher", "private": True, "unverified": 0, "code_agreements_added": agreed,
+                                                           "investigator_side": "key words (code)" if any(f.get("must") for f in facts) else "",
+                                                           "by_step": by_step(calls), "total_seconds": round(time.perf_counter() - t0, 1),
+                                                           "cost_usd": 0.0, "calls": [asdict(c) | {"cost_usd": 0.0} for c in calls]}})
